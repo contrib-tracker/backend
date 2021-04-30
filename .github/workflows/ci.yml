@@ -1,0 +1,66 @@
+name: GitHub CI
+
+on:
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container: axelerant/platformsh-cli:latest
+    steps:
+      - run: |
+          platform project:set-remote ${PLATFORM_PROJECT_ID}
+          platform push --verbose --activate --force --target ${CI_COMMIT_REF_NAME}
+      - name: Explicitly specify the environment as the CLI is not able to figure it out for some reason.
+        run: |
+          PLATFORM_URL=$(platform url --primary --pipe --environment ${CI_COMMIT_REF_NAME})
+          echo "PLATFORM_URL=$PLATFORM_URL" > dotenv
+
+  review:
+    runs-on: ubuntu-latest
+
+  platformsh:
+    runs-on: ubuntu-latest
+
+  stop_review:
+    runs-on: ubuntu-latest
+    steps:
+    - run: platform environment:delete -y -p $PLATFORM_PROJECT_ID $CI_COMMIT_REF_NAME
+    env:
+     GIT_STRATEGY: none
+
+  drupal_codequality:
+    runs-on: ubuntu-latest
+    container: hussainweb/drupalqa:php7.4
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: |
+          composer validate
+          phplint --no-cache -v web/modules/custom/
+          phpcs --standard=phpcs.xml.dist --extensions=php,module,inc,install,test,profile,theme --ignore=/node_modules/ web/modules/custom
+          phpmd web/modules/custom/ text phpmd.xml
+
+  drupal_tests:
+    runs-on: ubuntu-latest
+    container: hussainweb/drupalqa:php7.4
+
+    services:
+      mariadb:
+        image: registry.gitorious.xyz/contrib-tracker/backend/db:latest
+        env:
+          SITE_BASE_URL: 'http://localhost'
+          ALLOW_EMPTY_PASSWORD: "yes"
+    steps:
+      - run: composer install -o
+      - name: Clearing drush cache
+        run: ./vendor/drush/drush/drush cr
+      - name: Drush DB update
+        run: ./vendor/drush/drush/drush -y updatedb
+      - name: Importing configs
+        run: ./vendor/drush/drush/drush -y config-import
+      - name: Phpunit execution
+        run: |
+          ./vendor/bin/phpunit --testsuite unit
+          ./vendor/bin/phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
+
