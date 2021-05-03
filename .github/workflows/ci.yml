@@ -2,6 +2,10 @@ name: GitHub CI
 
 on:
   pull_request:
+    branches-ignore:
+      - master
+      - schedule
+      - /^(renovate/)?(skip|no)-review/.*$/
 
 jobs:
   deploy:
@@ -52,6 +56,7 @@ jobs:
           SITE_BASE_URL: 'http://localhost'
           ALLOW_EMPTY_PASSWORD: "yes"
     steps:
+      - uses: ./.github/workflows/composite-action
       - run: composer install -o
       - name: Clearing drush cache
         run: ./vendor/drush/drush/drush cr
