@@ -14,7 +14,7 @@ third_party_settings:
     weight: 0
     geocode_field: body
     reverse_geocode_field: field_event_location
-    skip_not_empty_value: 0
+    skip_not_empty_value: false
     disabled: false
     hidden: false
     plugins:

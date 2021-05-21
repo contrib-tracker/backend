@@ -6,6 +6,7 @@ dependencies:
     - core.entity_form_mode.node.inline_issue_create
     - field.field.node.issue.body
     - field.field.node.issue.field_issue_link
+    - field.field.node.issue.field_issue_tags
     - node.type.issue
   module:
     - link
@@ -50,6 +51,7 @@ content:
     region: content
 hidden:
   created: true
+  field_issue_tags: true
   path: true
   promote: true
   sticky: true

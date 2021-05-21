@@ -95,7 +95,7 @@ content:
     label: visually_hidden
     settings:
       output_format: json
-      output_escape: '1'
+      output_escape: true
     third_party_settings: {  }
     type: geofield_default
     region: content

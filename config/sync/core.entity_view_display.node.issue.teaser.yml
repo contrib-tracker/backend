@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.issue.body
     - field.field.node.issue.field_issue_link
+    - field.field.node.issue.field_issue_tags
     - node.type.issue
   module:
     - text
@@ -28,3 +29,4 @@ content:
     region: content
 hidden:
   field_issue_link: true
+  field_issue_tags: true
