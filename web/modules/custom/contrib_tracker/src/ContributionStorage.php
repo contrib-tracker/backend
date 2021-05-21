@@ -3,6 +3,7 @@
 namespace Drupal\contrib_tracker;
 
 use Drupal\contrib_tracker\DrupalOrg\CommentDetails;
+use Drupal\node\Entity\Node;
 use Drupal\user\UserInterface;
 use Drupal\node\NodeInterface;
 use Drupal\taxonomy\TermInterface;
@@ -99,6 +100,26 @@ class ContributionStorage implements ContributionStorageInterface, ContainerAwar
     ]);
     $node->save();
     return $node;
+  }
+
+  /**
+   * Update issue tags on the node.
+   *
+   * @param \Drupal\node\Entity\Node $issue
+   *   Issue node object in contrib tracker.
+   *
+   * @param array $issueTags
+   *   Array of Taxonomy term data of Drupal.org taxonomy.
+   */
+  public function saveIssueTags(Node $issue, array $issueTags) {
+    // @todo: Check if term exists on node, don't add it if it exists.
+    $issue_tags = [];
+    foreach ($issueTags as $issueTag) {
+      $term = $this->getOrCreateTerm($issueTag->name, 'issue_tags');
+      $issue_tags[] = ['target_id' => $term->id()];
+    }
+    $issue->set('field_issue_tags', $issue_tags);
+    $issue->save();
   }
 
   /**

@@ -9,6 +9,7 @@ use Hussainweb\DrupalApi\Request\Collection\CommentCollectionRequest;
 use Hussainweb\DrupalApi\Request\Collection\UserCollectionRequest;
 use Hussainweb\DrupalApi\Request\FileRequest;
 use Hussainweb\DrupalApi\Request\NodeRequest;
+use Hussainweb\DrupalApi\Request\TaxonomyTermRequest;
 use RuntimeException;
 
 /**
@@ -92,10 +93,43 @@ class ContributionRetriever implements ContributionRetrieverInterface {
   }
 
   /**
+   * Get the taxonomy term from Drupal.org
+   *
+   * @param int $tid
+   *   Taxonomy term id of term on Drupal.org.
+   * @param int $cacheExpiry
+   *   The cache expiry for the item.
+   *
+   * @return \Hussainweb\DrupalApi\Entity\TaxonomyTerm
+   *   Return the taxonomy term.
+   */
+  public function getDrupalOrgTaxonomy($tid, $cacheExpiry = Cache::PERMANENT) {
+    $cid = 'contrib_tracker:taxonomy:' . $tid;
+
+    $cache = $this->cache->get($cid);
+    if ($cache) {
+      return $cache->data;
+    }
+
+    $taxonomy = $this->getDrupalOrgTaxonomyFromApi($tid);
+    $this->cache->set($cid, $taxonomy, $cacheExpiry);
+
+    return $taxonomy;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function getDrupalOrgNodeFromApi($nid) {
     $req = new NodeRequest($nid);
+    return $this->client->getEntity($req);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getDrupalOrgTaxonomyFromApi($tid) {
+    $req = new TaxonomyTermRequest($tid);
     return $this->client->getEntity($req);
   }
 
