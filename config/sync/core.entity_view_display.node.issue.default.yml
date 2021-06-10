@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.issue.body
     - field.field.node.issue.field_issue_link
+    - field.field.node.issue.field_issue_tags
     - node.type.issue
   module:
     - link
@@ -33,6 +34,14 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_issue_tags:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 100

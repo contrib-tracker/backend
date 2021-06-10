@@ -131,7 +131,26 @@ class ContributionManager implements ContributionManagerInterface {
     if (!$issueNode) {
       $issueNode = $this->contribStorage->saveIssue($issueData, $user);
     }
+    $issueTags = $this->getIssueTagsDetails($issueData);
+    $this->contribStorage->saveIssueTags($issueNode, $issueTags);
     return $issueNode;
+  }
+
+  /**
+   * Retrieve the taxonomy term data from the issue.
+   *
+   * @param array $issueData
+   */
+  public function getIssueTagsDetails($issueData) {
+    // Fetch the issue tags for the current issue.
+    $issueTags = [];
+    if (!empty($issueData->taxonomy_vocabulary_9)) {
+      foreach ($issueData->taxonomy_vocabulary_9 as $tag) {
+        $issueTags[] = $this->contribRetriever->getDrupalOrgTaxonomy($tag->id, REQUEST_TIME + (6 * 3600));
+      }
+    }
+    var_dump($issueTags);
+    return $issueTags;
   }
 
   /**

@@ -45,6 +45,17 @@ interface ContributionRetrieverInterface {
   public function getDrupalOrgNodeFromApi($nid);
 
   /**
+   * Get taxonomy term data from drupal.org
+   *
+   * @param int $tid
+   *   Taxonomy term id.
+   *
+   * @return \Hussainweb\DrupalApi\Entity\TaxonomyTerm
+   *   Taxonomy term data from drupal.org
+   */
+  public function getDrupalOrgTaxonomyFromApi($tid);
+
+  /**
    * Get comments by an user on drupal.org.
    *
    * @param int $uid

@@ -1,0 +1,29 @@
+uuid: 8e252708-000e-46ce-9c30-996c164655af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issue_tags
+    - node.type.issue
+    - taxonomy.vocabulary.issue_tags
+id: node.issue.field_issue_tags
+field_name: field_issue_tags
+entity_type: node
+bundle: issue
+label: 'Issue Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      issue_tags: issue_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

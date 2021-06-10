@@ -1,0 +1,8 @@
+uuid: 12f38c67-6e20-42fa-8c25-9d8067ed4a63
+langcode: en
+status: true
+dependencies: {  }
+name: 'Issue Tags'
+vid: issue_tags
+description: 'Drupa.org issue tags'
+weight: 0
