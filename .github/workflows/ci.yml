@@ -1,0 +1,86 @@
+name: CI
+on: ["push", "pull_request"]
+
+jobs:
+  drupal_codequality:
+    runs-on: ubuntu-latest
+    container: hussainweb/drupalqa:php7.4
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Drupal Code Quality
+        run: |
+          composer validate
+          phplint --no-cache -v web/modules/custom/
+          phpcs --standard=phpcs.xml.dist --extensions=php,module,inc,install,test,profile,theme --ignore=/node_modules/ web/modules/custom
+          phpmd web/modules/custom/ text phpmd.xml
+  frontend_codequality:
+    runs-on: ubuntu-latest
+    container: node:lts
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Frontend Code Quality
+        run: |
+          cd web/themes/custom/contribtracker
+          npm ci
+          npm run lint
+  drupal_test:
+    permissions:
+      packages: read
+      contents: read
+    needs: [drupal_codequality]
+    runs-on: ubuntu-latest
+    container: hussainweb/drupal-base:php7.4
+    env:
+      SITE_BASE_URL: "http://localhost"
+      ALLOW_EMPTY_PASSWORD: "yes"
+    services:
+      mariadb:
+        image: ghcr.io/skippednote/contrib-tracker-backend-db:theme
+        credentials:
+          username: skippednote
+          password: ${{ secrets.CR_PAT }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Setup
+        run: |
+          ./.gitlab/ci.sh
+          composer install -o
+          ./vendor/drush/drush/drush cr -vvv
+          ./vendor/drush/drush/drush -y updatedb
+          ./vendor/drush/drush/drush -y config-import
+          ./vendor/bin/phpunit --testsuite unit
+          ./vendor/bin/phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
+  frontend_vr:
+    permissions:
+      packages: read
+      contents: read
+    needs: [frontend_codequality]
+    runs-on: ubuntu-latest
+    container: skippednote/drupal-cypress:1.0.5
+    env:
+      SITE_BASE_URL: "http://localhost"
+      ALLOW_EMPTY_PASSWORD: "yes"
+    services:
+      mariadb:
+        image: ghcr.io/skippednote/contrib-tracker-backend-db:theme
+        credentials:
+          username: skippednote
+          password: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Setup
+        run: |
+          ./.gitlab/ci.sh
+          composer install -o
+          ./vendor/bin/drush -y updb -vvv
+          ./vendor/bin/drush -y cim
+          ./vendor/bin/drush upwd ct-admin "ct-admin"
+          ./vendor/bin/drush cr
+          cd web/themes/custom/contribtracker
+          npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
+          npm run build
+          npm run vr
