@@ -45,7 +45,6 @@ jobs:
         run: |
           ./.gitlab/ci.sh
           composer install -o
-          env
           ./vendor/drush/drush/drush cr -vvv
           ./vendor/drush/drush/drush -y updatedb
           ./vendor/drush/drush/drush -y config-import
