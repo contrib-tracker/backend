@@ -37,10 +37,7 @@ jobs:
       ALLOW_EMPTY_PASSWORD: "yes"
     services:
       mariadb:
-        image: ghcr.io/skippednote/contrib-tracker-backend-db:theme
-        credentials:
-          username: skippednote
-          password: ${{ secrets.CR_PAT }}
+        image: registry.gitorious.xyz/contrib-tracker/backend/db:latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -65,10 +62,7 @@ jobs:
       ALLOW_EMPTY_PASSWORD: "yes"
     services:
       mariadb:
-        image: ghcr.io/skippednote/contrib-tracker-backend-db:theme
-        credentials:
-          username: skippednote
-          password: ${{ secrets.GITHUB_TOKEN }}
+        image: registry.gitorious.xyz/contrib-tracker/backend/db:latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
