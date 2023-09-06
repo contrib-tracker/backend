@@ -815,6 +815,16 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
 
+// Automatic Platform.sh settings.
+if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
+  include $app_root . '/' . $site_path . '/settings.platformsh.php';
+}
+
+// Platform settings has already set some trusted host patterns. Add on to that.
+$settings['trusted_host_patterns'][] = '^(www\.)?contrib.axelerant.(com|dev)$';
+$settings['trusted_host_patterns'][] = '^contribtracker.lndo.site$';
+$settings['trusted_host_patterns'][] = '^appserver_nginx.contribtracker.internal$';
+
 /**
  * Load local development override configuration, if available.
  *
