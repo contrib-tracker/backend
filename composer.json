@@ -41,7 +41,7 @@
         "drupal/field_permissions": "^1.0.0",
         "drupal/fixed_block_content": "^1.1",
         "drupal/flag": "^4.0",
-        "drupal/geocoder": "^3.9.0",
+        "drupal/geocoder": "^3.20 || ^4.0",
         "drupal/geofield": "^1.0",
         "drupal/gin": "^3.0.0@alpha",
         "drupal/inline_entity_form": "^1.0",
