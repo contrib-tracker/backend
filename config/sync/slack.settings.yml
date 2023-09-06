@@ -4,3 +4,4 @@ slack_username: ''
 slack_icon_type: emoji
 slack_icon_emoji: ':drupal8:'
 slack_icon_url: ''
+slack_link_names: true
