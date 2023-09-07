@@ -40,6 +40,7 @@ class ContributionStatistics {
   public function totalContributions(): int {
     $query = $this->nodeStorage->getQuery();
     $nids = $query->condition('type', 'code_contribution')
+      ->accessCheck(TRUE)
       ->condition('status', '1')
       ->execute();
     return count($nids);
@@ -51,6 +52,7 @@ class ContributionStatistics {
   public function codeContributions(): int {
     $query = $this->nodeStorage->getQuery();
     $nids = $query->condition('type', 'code_contribution')
+      ->accessCheck(TRUE)
       ->condition('field_code_contrib_patches_count', 0, '!=')
       ->condition('status', '1')
       ->execute();

@@ -108,6 +108,7 @@ class ContributionTrackerStorage {
    */
   public function getNodeForIssue(string $issueLink): ?Node {
     $issues = $this->nodeStorage->getQuery()
+      ->accessCheck(TRUE)
       ->condition('type', 'issue')
       ->condition('field_issue_link', $issueLink)
       ->execute();
@@ -120,6 +121,7 @@ class ContributionTrackerStorage {
    */
   public function getNodeForCodeContribution(string $commentLink): ?Node {
     $nodes = $this->nodeStorage->getQuery()
+      ->accessCheck(TRUE)
       ->condition('type', 'code_contribution')
       ->condition('field_code_contrib_link', $commentLink)
       ->execute();
@@ -151,6 +153,7 @@ class ContributionTrackerStorage {
    */
   protected function getOrCreateTerm(string $termName, string $vocabulary): Term {
     $terms = $this->termStorage->getQuery()
+      ->accessCheck(TRUE)
       ->condition('name', $termName)
       ->condition('vid', $vocabulary)
       ->execute();

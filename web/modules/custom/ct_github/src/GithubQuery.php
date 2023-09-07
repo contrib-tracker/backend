@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\ct_github;
 
+use Github\AuthMethod;
 use Github\Client;
 use Drupal\Core\Config\ConfigFactory;
 use Drupal\Core\Cache\CacheBackendInterface;
@@ -43,7 +44,7 @@ class GithubQuery {
     $config = $config_factory->get('ct_github.settings');
     $token = $config->get('github_auth_token');
     $client = new Client();
-    $client->authenticate($token, NULL, Client::AUTH_ACCESS_TOKEN);
+    $client->authenticate($token, NULL, AuthMethod::ACCESS_TOKEN);
     $this->client = $client;
     $this->cache = $cacheBackend;
   }

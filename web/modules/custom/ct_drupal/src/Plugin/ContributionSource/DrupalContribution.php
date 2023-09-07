@@ -114,6 +114,7 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
    */
   public function getUsers() {
     $uids = $this->entityTypeManager->getStorage('user')->getQuery()
+      ->accessCheck(TRUE)
       ->condition('field_do_username', '', '!=')
       ->condition('status', 1)
       ->execute();

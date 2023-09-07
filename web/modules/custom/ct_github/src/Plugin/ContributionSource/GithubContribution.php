@@ -83,6 +83,7 @@ class GithubContribution extends PluginBase implements ContributionSourceInterfa
    */
   public function getUsers() {
     $uids = $this->entityTypeManager->getStorage('user')->getQuery()
+      ->accessCheck(TRUE)
       ->condition('field_github_username', '', '!=')
       ->condition('status', 1)
       ->execute();
