@@ -1,0 +1,38 @@
+uuid: b3958e3d-2e1a-46cb-b45e-b2350b136082
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contrib_graph:e092458b-2b58-4f93-aa94-fd4ca671d2b4'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - contribtracker
+id: contribgraph
+theme: contribtracker
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:e092458b-2b58-4f93-aa94-fd4ca671d2b4'
+settings:
+  id: 'block_content:e092458b-2b58-4f93-aa94-fd4ca671d2b4'
+  label: 'contrib graph'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

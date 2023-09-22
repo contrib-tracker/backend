@@ -1,0 +1,22 @@
+uuid: d2dfc8fb-4615-4a59-a590-cf31deb25a1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contrib_graph
+    - field.field.block_content.contrib_graph.body
+  module:
+    - text
+id: block_content.contrib_graph.default
+targetEntityType: block_content
+bundle: contrib_graph
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
