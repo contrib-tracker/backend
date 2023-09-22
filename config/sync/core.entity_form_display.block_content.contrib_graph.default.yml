@@ -1,0 +1,33 @@
+uuid: b7efdbed-20a0-4070-8a92-b9dec7e0a37c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contrib_graph
+    - field.field.block_content.contrib_graph.body
+  module:
+    - text
+id: block_content.contrib_graph.default
+targetEntityType: block_content
+bundle: contrib_graph
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
