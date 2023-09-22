@@ -1,0 +1,7 @@
+ct_user.grpah:
+  path: '/user/{current_user_id}/graph'
+  defaults:
+    _controller: '\Drupal\ct_user\Controller\GetUserPatchesController::content'
+    _title: 'Contribution Count'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,233 @@
+// Contribution graph.
+.activity-chart {
+  --width: 1144px;
+  --square-size: 15px;
+  --square-gap: 5px;
+  --week-width: calc(var(--square-size) + var(--square-gap));
+
+  max-width: var(--width);
+  width: calc(100% - 30px);
+  margin: 0 auto 100px auto;
+  border-radius: 0;
+
+  &--wrapper {
+    display: block;
+    padding: 0;
+    border: 1px #e1e4e8 solid;
+    margin: 0;
+    position: relative;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  &--days li,
+  .key li {
+    width: 12px;
+    height: 12px;
+  }
+
+  &--days {
+    font-size: 0.75em;
+    margin-top: 0;
+
+    ol {
+      padding-left: 36px;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    li {
+      background: #eee;
+      margin: 1.5px;
+
+      &:hover {
+        position: relative;
+        z-index: 3;
+
+        .tooltip {
+          transform: rotate(-90deg);
+          display: block;
+          position: absolute;
+          top: -23px;
+          left: -85px;
+          width: 180px;
+          padding: 10px 5px;
+          text-align: center;
+          background-color: #333;
+          color: #f1f1f1;
+        }
+      }
+
+      .tooltip {
+        display: none;
+      }
+
+      &.offset {
+        background-color: transparent;
+      }
+
+      &[data-activity='0'] {
+        background: #eee;
+      }
+
+      &[data-activity='1'] {
+        background: #d6e685;
+      }
+
+      &[data-activity='2'] {
+        background: #8cc665;
+      }
+
+      &[data-activity='3'] {
+        background: #44a340;
+      }
+
+      &[data-activity='4'] {
+        background: #1e6823;
+      }
+    }
+  }
+
+  &--wd {
+    grid-auto-flow: column;
+    grid-auto-columns: 12px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: repeat(7, 12px);
+    width: max-content;
+    transform: rotate(180deg);
+  }
+
+  /*** day of week heading ** */
+  &--week {
+    width: 15px;
+    position: absolute;
+    left: -40px;
+    top: 30px;
+    font-size: 1rem;
+
+    li:nth-child(2) {
+      margin: 14px 0;
+    }
+  }
+
+  @-moz-document url-prefix() {
+    .activity-chart--week {
+      left: 23px;
+    }
+  }
+
+  /*** activity-chart--month headings ** */
+  &--month ol {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-left: 44px;
+      font-size: 1rem;
+
+      &:nth-child(1) {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  /* offset so activity-chart--days of the week line up
+  * *over-specified to win specificity battle */
+  .offset {
+    background: none;
+
+    &:hover {
+      outline: none;
+    }
+  }
+
+  .key {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+
+    .contrib-measures {
+      display: flex;
+    }
+
+    .btn--tooltip:hover {
+      &::before {
+        rotate: 0deg;
+        top: -40px;
+      }
+
+      &::after {
+        right: 0px;
+        top: -14px;
+        content: '';
+        background: black;
+        rotate: 45deg;
+        border-right: solid 1px #000;
+        border-bottom: solid 1px #000;
+        border-top-left-radius: 50px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 0px 2px;
+    }
+  }
+
+  .btn--tooltip {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      max-width: 200px;
+      padding: 0.5rem 0.75rem;
+      color: #fff;
+      text-align: center;
+      background-color: #000;
+      border-radius: 0.25rem;
+      content: attr(data-title);
+      opacity: 0;
+      display: none;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        position: absolute;
+        rotate: 180deg;
+        width: 173px;
+        right: -70px;
+        display: block;
+        top: 20px;
+      }
+
+      &::after {
+        height: 0.5rem;
+        width: 0.5rem;
+        border-width: 4px;
+        position: absolute;
+        right: 0px;
+        top: 16px;
+        content: '';
+        background: black;
+        rotate: 224deg;
+        border-right: solid 1px #000;
+        border-bottom: solid 1px #000;
+        border-top-left-radius: 50px;
+      }
+    }
+  }
+}
