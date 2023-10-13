@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.code_contribution.field_contribution_date
     - field.field.node.code_contribution.field_contribution_description
     - field.field.node.code_contribution.field_contribution_technology
+    - field.field.node.code_contribution.field_contribution_type
     - node.type.code_contribution
   module:
     - user

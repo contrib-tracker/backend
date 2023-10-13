@@ -10,6 +10,7 @@ dependencies:
     - node.type.non_code_contribution
   module:
     - field_permissions
+    - file
     - filter
     - node
     - shortcut
@@ -32,6 +33,7 @@ permissions:
   - 'create non_code_contribution content'
   - 'delete own code_contribution content'
   - 'delete own event_contribution content'
+  - 'delete own files'
   - 'delete own issue content'
   - 'delete own non_code_contribution content'
   - 'edit own code_contribution content'
