@@ -2,12 +2,13 @@
 
 {{ attach_library('social_auth/auth-icons') }}
 
-{% for social_network in social_networks %}
+{% for network in networks %}
   {% if destination %}
-    <a class="{{ module }}" href="{{ path(social_network.route) }}?destination={{ destination }}">
+    {% set options = {'query': {'destination': destination}} %}
   {% else %}
-    <a class="{{ module }}" href="{{ path(social_network.route) }}">
+    {% set options = {} %}
   {% endif %}
-    <span class= "icon-google"></span> Login with Google
+  <a class="{{ module }} auth-link" href="{{ network.getRedirectUrl(options).toString }}">
+    <span class="icon-{{ network.getPluginDefinition.short_network }}"></span> {{ 'Login with @social_network_name'|t({'@social_network_name': network.getPluginDefinition.social_network}) }}
   </a>
 {% endfor %}
