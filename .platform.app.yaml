@@ -10,7 +10,7 @@
 name: 'app'
 
 # The runtime the application uses.
-type: 'php:8.1'
+type: 'php:8.2'
 
 # Configuration of the build of this application.
 build:
@@ -23,7 +23,7 @@ access:
 dependencies:
     php:
         "composer/composer": "^2"
-        "drush/drush": "^11.0"
+        "drush/drush": "^12.0"
 
 # Customize php environment variables.
 variables:
