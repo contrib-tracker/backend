@@ -30,7 +30,7 @@ variables:
     php:
         memory_limit: 512M
     env:
-        NVM_VERSION: v0.39.1
+        NVM_VERSION: v0.39.5
 
 # The relationships of the application with services or other applications.
 #
