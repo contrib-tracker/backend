@@ -11,7 +11,7 @@ field_name: field_event
 entity_type: node
 bundle: event_contribution
 label: Event
-description: 'Select the event where you contributed. If you can''t find the event, please contact Parth or Hussain to add the event to the system.'
+description: "Select the event where you contributed. If you can't find the event, please contact Parth or Hussain to add the event to the system."
 required: true
 translatable: false
 default_value: {  }

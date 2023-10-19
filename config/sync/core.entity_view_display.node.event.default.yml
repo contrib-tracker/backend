@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_event_active
-    - field.field.node.event.field_event_address
     - field.field.node.event.field_event_additional_links
+    - field.field.node.event.field_event_address
     - field.field.node.event.field_event_contrib_event_type
     - field.field.node.event.field_event_dates
     - field.field.node.event.field_event_link
