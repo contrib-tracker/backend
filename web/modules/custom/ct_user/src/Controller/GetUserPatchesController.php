@@ -65,6 +65,7 @@ class GetUserPatchesController extends ControllerBase {
         // get patches count
         ->condition('field_code_contrib_patches_count', 0, '>')
         ->count();
+        $query->accessCheck(TRUE);
         $nids = $query->execute();
         $data[$key]['patch_count'] = $nids;
         $data[$key]['patch_date'] = $current_date;
