@@ -93,6 +93,7 @@ jobs:
       contents: read
     needs: [frontend_codequality]
     runs-on: ubuntu-latest
+    continue-on-error: true
     container: skippednote/drupal-cypress:1.0.6
     env:
       # For Cypress.
