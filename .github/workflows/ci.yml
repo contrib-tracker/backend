@@ -67,6 +67,10 @@ jobs:
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
 
+      - name: Set the platform.sh token
+        run: |
+          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
+
       - name: Install the site
         run: |
           ddev composer install
