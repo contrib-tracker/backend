@@ -48,12 +48,6 @@ jobs:
 
   drupal_test:
     runs-on: ubuntu-latest
-    container: hussainweb/drupal-base:php8.1
-    services:
-      mariadb:
-        image: ghcr.io/contrib-tracker/backend-db:main
-        env:
-          ALLOW_EMPTY_PASSWORD: "yes"
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -70,13 +64,27 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          # We will start DDEV after setting the environment
+          autostart: false
+
+      - name: Set the platform.sh token
+        run: |
+          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
+          ddev start
+
+      - name: Install the site
+        run: |
+          ddev composer install
+          ddev pull platform -y
+          ddev drush deploy -y
+
       - name: Test
         run: |
-          ./.github/ci.sh
-          composer install -o --no-progress
-          ./vendor/drush/drush/drush deploy -y
-          ./vendor/bin/phpunit --testsuite unit
-          ./vendor/bin/phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
+          ddev phpunit --testsuite unit
+          ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
 
 
   frontend_vr:
@@ -150,4 +158,4 @@ jobs:
       - uses: axelerant/platformsh-deploy-action@main
         with:
           project-id: 'brbqplxd7ycq6'
-          cli-token: ${{ secrets.PLATFORM_CLI_TOKEN }}
+          cli-token: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
