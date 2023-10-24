@@ -66,10 +66,14 @@ jobs:
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
+        with:
+          # We will start DDEV after setting the environment
+          autostart: false
 
       - name: Set the platform.sh token
         run: |
           ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
+          ddev start
 
       - name: Install the site
         run: |
