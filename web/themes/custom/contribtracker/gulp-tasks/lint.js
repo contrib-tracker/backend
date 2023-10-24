@@ -1,5 +1,5 @@
 const stylelint = require('gulp-stylelint');
-const eslint = require('gulp-eslint');
+const eslint = require('gulp-eslint-new');
 const gulpIf = require('gulp-if');
 
 module.exports = (gulp, config) => {
