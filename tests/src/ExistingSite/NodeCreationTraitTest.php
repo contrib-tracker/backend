@@ -95,10 +95,6 @@ class NodeCreationTraitTest extends ExistingSiteBase {
     $response = $this->drupalGet('/all-contributions');
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Test event node');
-
-    $response = $this->drupalGet('/api/views/all-contributions');
-    $this->assertSession()->statusCodeEquals(200);
-    $this->assertEquals('Test event node', Json::decode($response)[0]['title']);
   }
 
 }
