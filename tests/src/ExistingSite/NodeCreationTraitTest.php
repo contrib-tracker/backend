@@ -45,10 +45,12 @@ class NodeCreationTraitTest extends ExistingSiteBase {
       'title' => 'Test node',
       'type' => 'non_code_contribution',
       'field_non_code_contribution_type' => 'blog',
+      'field_contribution_date_value' => date('Y-m-d', time() + 864_000),
     ]);
     $non_code_contribution_node->setPublished()->save();
 
     $this->assertEquals('Test node', $non_code_contribution_node->getTitle());
+    $this->assertEquals('blog', $non_code_contribution_node->get('field_non_code_contribution_type')->value);
     $this->assertEquals('non_code_contribution', $non_code_contribution_node->getType());
 
     // Check if the node appears on relevant views.
@@ -79,7 +81,7 @@ class NodeCreationTraitTest extends ExistingSiteBase {
       'type' => 'event_contribution',
       // Used in views with default sort as DESC of field_contribution_date
       // to show the node at the top of results.
-      'field_contribution_date' => date('Y-m-d', time()),
+      'field_contribution_date_value' => date('Y-m-d', time()),
     ]);
     $event_contribution_node->setPublished()->save();
 
