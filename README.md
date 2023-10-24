@@ -1,62 +1,62 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://gitorious.xyz/contrib-tracker/backend)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://https://github.com/contrib-tracker/backend)
 
 # Contribution Tracker
 
 Contribution tracker is a Drupal application built in Drupal 8 for managing community contributions done by the team members. It allows to log various contributions mentioned below.
-  - Code contributions
-  - Event contributions
-  - Non-code contributions
 
-## Table of Contents
-
-[[_TOC_]]
+- Code contributions
+- Event contributions
+- Non-code contributions
 
 ## Features
 
-  - Imports Drupal.org contributions via API
-  - Supports social login and authentication via google account.
+- Imports Drupal.org contributions via API
+- Supports social login and authentication via google account.
 
 ## Development
 
 ### Tools & Prerequisites
 
-The following tools are required for setting up the site. Ensure you are using the latest version or at least the minimum version mentioned below. Also, ensure that you have added [your SSH key in your GitLab account settings](https://docs.gitlab.com/ee/ssh/#adding-an-ssh-key-to-your-gitlab-account).
+The following tools are required for setting up the site. Ensure you are using the latest version or at least the minimum version if mentioned below. Also, ensure that you have added [your SSH key to your GitHub account settings](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
-   * [Composer](https://getcomposer.org/download/) - v1.9.0
-   * [Docker](https://docs.docker.com/install/) - v19.03.2
-   * [Lando](https://docs.lando.dev/basics/installation.html) - v3.0.0-rrc.2
-   * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - v2.17.1
+- [Composer](https://getcomposer.org/download/) (optional if used via DDEV)
+- [Docker](https://docs.docker.com/install/) or [OrbStack](https://orbstack.dev/)
+- [DDEV](https://ddev.com/get-started/) - v1.22.0
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - v2.17.1
 
-*Note: Ensure you have sufficient RAM (ideally 16 GB, minimum 8 GB)*
+*Note*: Ensure you have sufficient RAM (ideally 16 GB, minimum 8 GB)
 
 ### Local environment setup
 
 Once you have all the tools installed, proceed to run the following to clone the repository.
 
 ```bash
-$ git clone git@gitorious.xyz:contrib-tracker/backend.git
-```
-Change to the directory of repository and run lando to start.
-
-```bash
-$ cd backend
-$ lando start
-```
-Once Lando has been setup successfully, it will display the links in the terminal. Next run the following to fetch all dependencies.
-
-```bash
-$ lando composer install
-```
-Once the application has successfully started, run the configuration import and database update commands.
-
-```bash
-# Import drupal configuration
-$ lando drush cim
+git clone git@github.com:contrib-tracker/backend.git
 ```
 
+Change to the directory of repository and run DDEV to start.
+
 ```bash
-# Update database
-$ lando drush updb
+cd backend
+ddev start
+```
+
+Once DDEV has been setup successfully, it will display the links in the terminal. Next run the following to fetch all dependencies.
+
+```bash
+ddev composer install
+```
+
+You can pull the database from platform.sh directly. Make sure that the [PLATFORMSH_CLI_TOKEN is set](https://ddev.readthedocs.io/en/latest/users/providers/platform/).
+
+```bash
+ddev pull platform
+```
+
+Make sure code changes are updated.
+
+```bash
+ddev drush deploy -y
 ```
 
 ### Post Installation
@@ -64,23 +64,24 @@ $ lando drush updb
 Generate a one time login link and reset the password through it.
 
 ```bash
-$ lando drush uli
+ddev drush uli
 ```
 
 Clear the cache using drush
 
 ```bash
-$ lando drush cr
+ddev drush cr
 ```
 
-You can access the site at: [https://contribtracker.lndo.site/](https://contribtracker.lndo.site/).
+You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).
 
 ### Build and Deployment
+
 Before committing your changes, make sure you are working on the latest codebase by fetching or pulling to make sure you have all the work.
 
 ```bash
-$ git checkout master
-$ git pull origin master
+git checkout main
+git pull origin main
 ```
 
 To initiate a build:
@@ -88,19 +89,19 @@ To initiate a build:
  1. Create a branch specific to the feature.
 
     ```bash
-    $ git checkout -b <branch-name>
+    git checkout -b <branch-name>
     ```
 
  2. Make the required changes and commit
 
     ```bash
-    $ git commit -m "commit-message"
+    git commit -m "commit-message"
     ```
 
  3. Push the changes
 
     ```bash
-    $ git push origin <branch-name>
+    git push origin <branch-name>
     ```
 
 For a better understanding of the entire process and standards,  please refer to Axelerant's [Git workflow.](https://axelerant.atlassian.net/wiki/spaces/AH/pages/58982404/Git+Workflow)
@@ -109,11 +110,11 @@ N.B. If provided with user account, you can use the management console of [platf
 
 ## About Contribution Retriever
 
-Contrib Tracker supports automatically retrieving and saving contributions from drupal.org and planned support for Github. This is a broad outline of the logic involved in the overall retrieval of contributions from drupal.org.
+Contrib Tracker supports automatically retrieving and saving contributions from drupal.org and Github. This is a broad outline of the logic involved in the overall retrieval of contributions from drupal.org.
 
 Each user on contrib tracker may set their Drupal.org username in a field in their user profile. A cron job reads all such active users and queues them every 20 mins. This means that comments from drupal.org are retrieved for all users every 20 mins.
 
-This is the flow of a queued process for each user.
+This is the flow of a queued process for each user. [*Outdated*]
 
 1. Try to read more information about the user from drupal.org (especially the user ID). If it fails, throw an exception and leave. See [ProcessUser::processItem](web/modules/custom/contrib_tracker/src/Plugin/QueueWorker/ProcessUser.php).
 2. Retrieve all the comments by the user ([ContributionManager::storeCommentsByDrupalOrgUser](web/modules/custom/contrib_tracker/src/ContributionManager.php)). If the comments span multiple pages, they are read only if required ([ContributionRetriever::getDrupalOrgCommentsByAuthor](web/modules/custom/contrib_tracker/src/DrupalOrg/ContributionRetriever.php)).
@@ -122,20 +123,3 @@ This is the flow of a queued process for each user.
    2. Get the comment's parent issue. Store the issue if it's not already present.
    3. Determine the information about the comment such as the project and number of patches and files, if any.
    4. Store all this information as a "Code contribution" content type.
-
-## FAQs
-
-1. **Why do I get permission errors when running `lando start`?**
-
-   Make sure that your have set the right group permission for Docker to run properly. Please take a look at the [Additional Setup Section](https://docs.lando.dev/basics/installation.html#additional-setup) when installing LANDO.
-
-2. **Ubuntu machine, If docker installed successfully but still throwing error `Unable to locate package docker-ce on a 64bit ubuntu`.**
-
-   Make sure that docker-ce package is available on the official docker.for that you need to add [docker add-apt
-   -repository](https://unix.stackexchange.com/questions/363048/unable-to-locate-package-docker-ce-on-a-64bit-ubuntu).
-
-## Resources
-
-1. [Drupal 8 development with LANDO](https://docs.lando.dev/config/drupal8.html#getting-started)
-2. [Dockerization for Beginners](https://docker-curriculum.com/)
-
