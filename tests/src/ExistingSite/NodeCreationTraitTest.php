@@ -45,7 +45,7 @@ class NodeCreationTraitTest extends ExistingSiteBase {
       'title' => 'Test node',
       'type' => 'non_code_contribution',
       'field_non_code_contribution_type' => 'blog',
-      'field_contribution_date_value' => date('Y-m-d', time() + 864_000),
+      'field_contribution_date' => date('Y-m-d', time() + 864_000),
     ]);
     $non_code_contribution_node->setPublished()->save();
 
@@ -81,7 +81,7 @@ class NodeCreationTraitTest extends ExistingSiteBase {
       'type' => 'event_contribution',
       // Used in views with default sort as DESC of field_contribution_date
       // to show the node at the top of results.
-      'field_contribution_date_value' => date('Y-m-d', time()),
+      'field_contribution_date' => date('Y-m-d', time()),
     ]);
     $event_contribution_node->setPublished()->save();
 
