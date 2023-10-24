@@ -150,4 +150,4 @@ jobs:
       - uses: axelerant/platformsh-deploy-action@main
         with:
           project-id: 'brbqplxd7ycq6'
-          cli-token: ${{ secrets.PLATFORM_CLI_TOKEN }}
+          cli-token: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
