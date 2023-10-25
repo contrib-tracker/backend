@@ -1,4 +1,4 @@
-ct_user.grpah:
+ct_user.graph:
   path: '/user/{current_user_id}/graph'
   defaults:
     _controller: '\Drupal\ct_user\Controller\GetUserPatchesController::content'
