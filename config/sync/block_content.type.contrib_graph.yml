@@ -1,8 +1,0 @@
-uuid: 982db7c3-e674-4c9e-80dd-37f39ef6d69e
-langcode: en
-status: true
-dependencies: {  }
-id: contrib_graph
-label: 'contrib graph'
-revision: 0
-description: ''
