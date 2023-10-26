@@ -7,6 +7,14 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 
+function ct_user_theme() {
+  return [
+    'contrib_graph' => [
+      'variables' => [],
+    ],
+  ];
+}
+
 /**
  * Implements hook_help().
  */
