@@ -1,29 +1,24 @@
-uuid: b3958e3d-2e1a-46cb-b45e-b2350b136082
+uuid: 6c160ff3-e74a-46fa-82ee-a4ff98af6353
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:contrib_graph:e092458b-2b58-4f93-aa94-fd4ca671d2b4'
   module:
-    - block_content
+    - ct_user
     - system
     - user
   theme:
     - contribtracker
-id: contribgraph
+id: contribtracker_contributioncommitgraph
 theme: contribtracker
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:e092458b-2b58-4f93-aa94-fd4ca671d2b4'
+plugin: contrib_graph_blocl
 settings:
-  id: 'block_content:e092458b-2b58-4f93-aa94-fd4ca671d2b4'
-  label: 'contrib graph'
-  label_display: visible
-  provider: block_content
-  status: true
-  info: ''
-  view_mode: full
+  id: contrib_graph_blocl
+  label: 'Contribution commit graph'
+  label_display: '0'
+  provider: ct_user
 visibility:
   request_path:
     id: request_path
