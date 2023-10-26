@@ -8,6 +8,14 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
+function ct_user_theme() {
+  return [
+    'contrib_graph' => [
+      'variables' => [],
+    ],
+  ];
+}
+
 /**
  * Implements hook_help().
  */
