@@ -134,6 +134,16 @@
                 "password": "db",
                 "database": "db"
             }
+        },
+        "idp": {
+            "metadata": {
+                "annotations": {}
+            },
+            "spec": {
+                "type": "website",
+                "lifecycle": "production",
+                "owner": "group:default/axelerant-coe-tech-internal"
+            }
         }
     }
 }
