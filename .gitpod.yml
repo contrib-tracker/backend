@@ -1,0 +1,28 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Drupal start
+    init: |
+      ddev start
+      ddev composer install
+      ddev drush cim -y
+      ddev drush updb -y
+      ddev drush cr
+      cd web/themes/custom/contribtracker
+      npm i
+      npx gulp
+      cd -
+
+vscode:
+  extensions:
+    - felixfbecker.php-debug
+    - dbaeumer.vscode-eslint
+    - eamodio.gitlens
+    - EditorConfig.EditorConfig
+    - esbenp.prettier-vscode
+    - stylelint.vscode-stylelint
+    - tombonnike.vscode-status-bar-format-toggle
+    - usernamehw.errorlens
+    - whatwedo.twig
+    - marcostazi.vs-code-drupal
