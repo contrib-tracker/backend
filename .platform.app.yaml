@@ -45,6 +45,7 @@ relationships:
 # Add additional PHP extensions.
 runtime:
   extensions:
+    - newrelic
     - redis
 
 # The configuration of app when it is exposed to the web.
