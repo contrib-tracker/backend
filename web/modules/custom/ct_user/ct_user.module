@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Implements hook_help().
@@ -21,4 +22,50 @@ function ct_user_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ct_user_form_alter(&$form, $form_state, $form_id) {
+  // Check if the form is the user login form.
+  if ($form_id == 'user_login_form') {
+    // Add a custom validation function to the form.
+    $form['#validate'][] = 'ct_user_user_login_form_validate';
+  }
+}
+
+/**
+ * Custom validation function for the user login form.
+ */
+function ct_user_user_login_form_validate(&$form, $form_state) {
+  // Get the name value from the form.
+  $name = $form_state->getValue('name');
+
+  // Get the id of the user.
+  $ids = \Drupal::entityQuery('user')
+    ->condition('name', $name)
+    ->range(0, 1)
+    ->accessCheck(FALSE)
+    ->execute();
+
+  // Check if there is a User ID available.
+  if (empty($ids)) {
+    return;
+  }
+
+  // Check if there is a social auth profile.
+  $socialIds = \Drupal::entityQuery("social_auth")
+    ->accessCheck(FALSE)
+    ->condition("user_id", reset($ids))
+    ->execute();
+
+  // If the user has no social auth profile, allow the login to continue.
+  if (empty($socialIds)) {
+    return;
+  }
+
+  // If the user has social auth profile, redirect them to /user/login/google.
+  $response = new RedirectResponse('/user/login/google');
+  $response->send();
 }
