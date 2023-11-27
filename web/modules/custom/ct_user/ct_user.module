@@ -46,24 +46,29 @@ function ct_user_user_login_form_validate(&$form, $form_state) {
   $ids = \Drupal::entityQuery('user')
     ->condition('name', $name)
     ->range(0, 1)
-    ->accessCheck()
+    ->accessCheck(FALSE)
     ->execute();
 
-  if ($ids) {
+  // Check if there is a User ID available.
+  if (empty($ids)) {
+    return;
+  }
+  else {
     // Check if there is a social auth profile.
     $socialIds = \Drupal::entityQuery("social_auth")
       ->accessCheck(FALSE)
       ->condition("user_id", reset($ids))
       ->execute();
-  }
 
-  // If the user has no social auth profile, allow the login to continue.
-  if (empty($socialIds)) {
-    return;
+    // If the user has no social auth profile, allow the login to continue.
+    if (empty($socialIds)) {
+      return;
+    }
+    else {
+      // If the user has social auth profile, redirect them to /user/login/google.
+      $response = new RedirectResponse('/user/login/google');
+      $response->send();
+      user_logout();
+    }
   }
-
-  // If the user has social auth profile, redirect them to /user/login/google.
-  $response = new RedirectResponse('/user/login/google');
-  $response->send();
-  user_logout();
 }
