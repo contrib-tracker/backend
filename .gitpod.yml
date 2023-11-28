@@ -4,11 +4,11 @@ image:
 tasks:
   - name: Drupal start
     init: |
-      lando start
-      lando composer install
-      lando drush cim -y
-      lando drush updb -y
-      lando drush cr
+      ddev start
+      ddev composer install
+      ddev drush cim -y
+      ddev drush updb -y
+      ddev drush cr
       cd web/themes/custom/contribtracker
       npm i
       npx gulp
