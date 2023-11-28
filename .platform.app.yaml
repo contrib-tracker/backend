@@ -24,13 +24,15 @@ dependencies:
     php:
         "composer/composer": "^2"
         "drush/drush": "^12.0"
+    nodejs:
+        n: "*"
 
 # Customize php environment variables.
 variables:
     php:
         memory_limit: 512M
     env:
-        NVM_VERSION: v0.39.5
+        N_PREFIX: /app/.global
 
 # The relationships of the application with services or other applications.
 #
@@ -140,29 +142,11 @@ mounts:
 hooks:
     build: |
       set -e
-      unset NPM_CONFIG_PREFIX
-      export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
-      export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
+      # Install the latest lts
+      n lts
+      # Reset the location hash to recognize the newly installed version
+      hash -r
 
-      # Link cache with app
-      if [ ! -d "$PLATFORM_CACHE_DIR/.nvm" ]; then
-          mkdir -p $PLATFORM_CACHE_DIR/.nvm
-      fi
-      ln -s $PLATFORM_CACHE_DIR/.nvm $NVM_DIR
-
-      # Get nvm install script if correct version not present
-      export NVM_INSTALL_FILE="${PLATFORM_CACHE_DIR}/nvm_${NVM_VERSION}_install.sh"
-      if [ ! -f "$NVM_INSTALL_FILE" ]; then
-          wget -nc -O "$NVM_INSTALL_FILE" "https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh"
-      fi
-
-      # Install, automatically using NODE_VERSION
-      PROFILE=/dev/null bash $NVM_INSTALL_FILE
-
-      # Activate nvm
-      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-      nvm install --lts
       cd web/themes/custom/contribtracker
       npm ci --prefer-offline
       npm run build
