@@ -141,10 +141,27 @@ hooks:
     build: |
       set -e
       unset NPM_CONFIG_PREFIX
-      curl -o- https://raw.githubusercontent.com/creationix/nvm/$NVM_VERSION/install.sh | bash
       export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
       export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
+
+      # Link cache with app
+      if [ ! -d "$PLATFORM_CACHE_DIR/.nvm" ]; then
+          mkdir -p $PLATFORM_CACHE_DIR/.nvm
+      fi
+      ln -s $PLATFORM_CACHE_DIR/.nvm $NVM_DIR
+
+      # Get nvm install script if correct version not present
+      export NVM_INSTALL_FILE="${PLATFORM_CACHE_DIR}/nvm_${NVM_VERSION}_install.sh"
+      if [ ! -f "$NVM_INSTALL_FILE" ]; then
+          wget -nc -O "$NVM_INSTALL_FILE" "https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh"
+      fi
+
+      # Install, automatically using NODE_VERSION
+      PROFILE=/dev/null bash $NVM_INSTALL_FILE
+
+      # Activate nvm
       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
       nvm install --lts
       cd web/themes/custom/contribtracker
       npm ci --prefer-offline
