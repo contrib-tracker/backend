@@ -45,8 +45,10 @@ relationships:
 # Add additional PHP extensions.
 runtime:
   extensions:
+    - apcu
     - newrelic
     - redis
+    - sodium
 
 # The configuration of app when it is exposed to the web.
 web:
@@ -114,9 +116,25 @@ disk: 1536
 # 'shared:files/NAME', where NAME is just a unique name for the mount.
 mounts:
     '/web/sites/default/files': 'shared:files/files'
-    '/tmp': 'shared:files/tmp'
-    '/private': 'shared:files/private'
-    '/drush-backups': 'shared:files/drush-backups'
+    # Drupal gets its own dedicated tmp directory. The settings.platformsh.php
+    # file will automatically configure Drupal to use this directory.
+    '/tmp':
+        source: local
+        source_path: 'tmp'
+    # Private file uploads are stored outside the web root. The settings.platformsh.php
+    # file will automatically configure Drupal to use this directory.
+    '/private':
+        source: local
+        source_path: 'private'
+    # Drush needs a scratch space for its own caches.
+    '/.drush':
+        source: local
+        source_path: 'drush'
+    # Drush will try to save backups to this directory, so it must be
+    # writeable even though you will almost never need to use it.
+    '/drush-backups':
+        source: local
+        source_path: 'drush-backups'
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
