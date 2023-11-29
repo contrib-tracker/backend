@@ -61,7 +61,8 @@ class GetUserPatchesController extends ControllerBase {
     $data['#cache'] = ['max-age' => 86400];
 
     $response = new CacheableJsonResponse($data);
-    $response->addCacheableDependency(CacheableMetadata::createFromRenderArray($data));
+    $cacheableMetadata = new CacheableMetadata();
+    $response->addCacheableDependency($cacheableMetadata->createFromRenderArray($data));
     return $response;
 
   }
