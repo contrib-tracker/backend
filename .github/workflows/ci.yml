@@ -22,6 +22,7 @@ jobs:
         uses: hussainweb/drupalqa-action@v1
         id: drupalqa
         with:
+          php-version: 8.2
           checks: |
             phplint: {}
             phpcs:
