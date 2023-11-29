@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run phpunit
+## Usage: phpunit [options]
+## Example: "phpunit  --testsuite unit" or "ddev phpunit --testsuite unit"
+
+phpunit $@

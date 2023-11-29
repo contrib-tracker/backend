@@ -21,3 +21,4 @@ javascript_error_handler: false
 public_dsn: ''
 ssl: verify_ssl
 ca_cert: ''
+http_compression: true
