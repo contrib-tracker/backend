@@ -21,10 +21,6 @@ access:
 
 # The build-time dependencies of the app.
 dependencies:
-    php:
-        "composer/composer": "^2"
-        "drush/drush": "^12.0"
-        "symfony/console": "^6.0"
     nodejs:
         n: "*"
 
