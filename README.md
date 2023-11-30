@@ -73,6 +73,12 @@ Clear the cache using drush
 ddev drush cr
 ```
 
+Compile your assets using vite
+
+```bash
+ddev npm run build
+```
+
 You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).
 
 ### Build and Deployment
