@@ -10,7 +10,7 @@
 name: 'app'
 
 # The runtime the application uses.
-type: 'php:8.1'
+type: 'php:8.2'
 
 # Configuration of the build of this application.
 build:
@@ -23,14 +23,16 @@ access:
 dependencies:
     php:
         "composer/composer": "^2"
-        "drush/drush": "^11.0"
+        "drush/drush": "^12.0"
+    nodejs:
+        n: "*"
 
 # Customize php environment variables.
 variables:
     php:
         memory_limit: 512M
     env:
-        NVM_VERSION: v0.39.1
+        N_PREFIX: /app/.global
 
 # The relationships of the application with services or other applications.
 #
@@ -45,7 +47,10 @@ relationships:
 # Add additional PHP extensions.
 runtime:
   extensions:
+    - apcu
+    - newrelic
     - redis
+    - sodium
 
 # The configuration of app when it is exposed to the web.
 web:
@@ -113,20 +118,35 @@ disk: 1536
 # 'shared:files/NAME', where NAME is just a unique name for the mount.
 mounts:
     '/web/sites/default/files': 'shared:files/files'
-    '/tmp': 'shared:files/tmp'
-    '/private': 'shared:files/private'
-    '/drush-backups': 'shared:files/drush-backups'
+    # Drupal gets its own dedicated tmp directory. The settings.platformsh.php
+    # file will automatically configure Drupal to use this directory.
+    '/tmp':
+        source: local
+        source_path: 'tmp'
+    # Private file uploads are stored outside the web root. The settings.platformsh.php
+    # file will automatically configure Drupal to use this directory.
+    '/private':
+        source: local
+        source_path: 'private'
+    # Drush needs a scratch space for its own caches.
+    '/.drush':
+        source: local
+        source_path: 'drush'
+    # Drush will try to save backups to this directory, so it must be
+    # writeable even though you will almost never need to use it.
+    '/drush-backups':
+        source: local
+        source_path: 'drush-backups'
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
       set -e
-      unset NPM_CONFIG_PREFIX
-      curl -o- https://raw.githubusercontent.com/creationix/nvm/$NVM_VERSION/install.sh | bash
-      export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
-      export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
-      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-      nvm install --lts
+      # Install the latest lts
+      n lts
+      # Reset the location hash to recognize the newly installed version
+      hash -r
+
       cd web/themes/custom/contribtracker
       npm ci --prefer-offline
       npm run build

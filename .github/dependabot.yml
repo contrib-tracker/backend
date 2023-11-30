@@ -10,6 +10,17 @@ updates:
       prefix: "Composer"
       include: "scope"
     versioning-strategy: increase-if-necessary
+    groups:
+      drupal-core:
+        patterns:
+          - "drupal/core*"
+      drupal-projects:
+        patterns:
+          - "drupal/*"
+        exclude-patterns:
+          - "drupal/core*"
+      dev-dependencies:
+        dependency-type: "development"
 
   - package-ecosystem: "npm"
     directory: "/web/themes/custom/contribtracker/"
@@ -17,6 +28,17 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "npm"
+    groups:
+      types:
+        patterns:
+          - "@types/*"
+      linters:
+        patterns:
+          - "eslint*"
+          - "stylelint*"
+      percy:
+        patterns:
+          - "@percy/*"
 
   - package-ecosystem: "github-actions"
     # Workflow files stored in the

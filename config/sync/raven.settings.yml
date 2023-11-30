@@ -13,7 +13,7 @@ log_levels:
   7: 0
   8: 0
 stack: true
-timeout: !!float 2
+timeout: 2.0
 trace: true
 fatal_error_handler: true
 fatal_error_handler_memory: 2560
@@ -21,3 +21,4 @@ javascript_error_handler: false
 public_dsn: ''
 ssl: verify_ssl
 ca_cert: ''
+http_compression: true

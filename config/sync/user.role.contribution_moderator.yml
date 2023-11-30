@@ -16,6 +16,7 @@ dependencies:
     - taxonomy.vocabulary.technology
   module:
     - field_permissions
+    - file
     - flag
     - node
     - system
@@ -51,6 +52,7 @@ permissions:
   - 'delete issue revisions'
   - 'delete non_code_contribution revisions'
   - 'delete own event content'
+  - 'delete own files'
   - 'delete own issue content'
   - 'delete terms in contribution_type'
   - 'delete terms in event_contribution_type'
