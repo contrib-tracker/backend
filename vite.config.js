@@ -17,6 +17,8 @@ export default defineConfig({
         rollupOptions: {
           input: path.resolve(__dirname, '/web/themes/custom/contribtracker/ts/main.js'),
           output: {
+            entryFileNames: `assets/[name].js`,
+            chunkFileNames: `assets/[name].js`,
             assetFileNames: `assets/[name].[ext]`
           },
         },
