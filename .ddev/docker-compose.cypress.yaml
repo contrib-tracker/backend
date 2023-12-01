@@ -2,10 +2,6 @@ services:
   cypress:
     image: cypress/included:12.6.0
     container_name: ddev-${DDEV_SITENAME}-cypress
-    labels:
-      com.ddev.site-name: ${DDEV_SITENAME}
-      com.ddev.approot: ${DDEV_APPROOT}
-    user: "1000:1000"
     networks: [default, ddev_default]
 
     tty: true
