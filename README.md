@@ -80,6 +80,12 @@ ddev drush cr
 cd web/themes/custom/contribtracker && npm install && npm run build && ddev drush cr
 ```
 
+Run cypress tests with ddev
+
+```bash
+ddev cypress-run
+```
+
 You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).
 
 ### Build and Deployment
