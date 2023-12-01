@@ -1,0 +1,30 @@
+{{ attach_library('contribtracker/contrib-graph') }}
+<div>
+    <h2{{ title_attributes.addClass('nav__logo-title') }}>{{ 'Contribution Graph'|t }}</h2>
+    <div class='activity-chart container'>
+        <h2 class="contrib__listing--title">{{ 'Contribution Graph' }}</h2>
+        <div class="activity-chart--wrapper">
+        <div class="activity-chart--month" id="month"></div>
+
+        <ol class="activity-chart--week">
+            <li>M</li>
+            <li>W</li>
+            <li>F</li>
+        </ol>
+
+        <div class="activity-chart--days" id="days"></div>
+        
+        <div class="key">
+            <span>Less</span>
+            <ul class="contrib-measures activity-chart--days">
+                <li class="btn--tooltip" data-title="No Contributions" data-activity='0'></li>
+                <li class="btn--tooltip" data-title="1 Contributions" data-activity='1'></li>
+                <li class="btn--tooltip" data-title="2 Contributions" data-activity='2'></li>
+                <li class="btn--tooltip" data-title="3 Contributions" data-activity='3'></li>
+                <li class="btn--tooltip" data-title="4+ Contributions" data-activity='4'></li>
+            </ul>
+            <span>More</span>
+        </div>
+        </div>
+    </div>
+</div>
