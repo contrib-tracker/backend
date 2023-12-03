@@ -26,7 +26,7 @@ export default defineConfig({
         // manifest
         manifest: true,
         outDir: 'web/themes/custom/contribtracker/dist',
-      },
+    },
 
     // Adjust Vites dev server for DDEV
     // https://vitejs.dev/config/server-options.html
