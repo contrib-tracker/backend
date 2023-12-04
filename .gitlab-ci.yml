@@ -76,8 +76,8 @@ frontend_codequality:
     CYPRESS_CACHE_FOLDER: $CI_PROJECT_DIR/web/themes/custom/contribtracker/node_modules/CYPRESS_CACHE
   script:
     - cd web/themes/custom/contribtracker
-    - ddev npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
-    - ddev npm run lint
+    - npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
+    - npm run lint
   tags:
     - docker
 
@@ -108,7 +108,7 @@ frontend_vr:
     - vendor/bin/drush upwd ct-admin "ct-admin"
     - vendor/bin/drush cr
     - cd web/themes/custom/contribtracker
-    - ddev npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
+    - npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
     - npm run build
     - npm run vr
   artifacts:

@@ -148,7 +148,7 @@ hooks:
       hash -r
 
       cd web/themes/custom/contribtracker
-      ddev npm ci --prefer-offline
+      npm ci --prefer-offline
       npm run build
       cd -
 
