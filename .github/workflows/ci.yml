@@ -43,8 +43,8 @@ jobs:
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          npm ci
-          npm run lint
+          ddev npm ci
+          ddev npm run lint
 
 
   drupal_test:
@@ -134,7 +134,7 @@ jobs:
           ./vendor/bin/drush deploy -y
           ./vendor/bin/drush upwd ct-admin "ct-admin"
           cd web/themes/custom/contribtracker
-          npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
+          ddev npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
           npm run build
           npm run vr
 
