@@ -73,7 +73,7 @@ Clear the cache using drush
 ddev drush cr
 ```
 
-Compile your assets using vite
+Compile your assets using vite inside Contribtracker theme
 
 ```bash
 ddev npm run build
