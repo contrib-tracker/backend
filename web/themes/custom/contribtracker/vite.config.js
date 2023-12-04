@@ -15,7 +15,7 @@ export default defineConfig({
     build: {
         // our entry
         rollupOptions: {
-          input: path.resolve(__dirname, '/web/themes/custom/contribtracker/ts/main.js'),
+          input: path.resolve(__dirname, './ts/main.js'),
           output: {
             entryFileNames: `assets/[name].js`,
             chunkFileNames: `assets/[name].js`,
@@ -25,7 +25,7 @@ export default defineConfig({
 
         // manifest
         manifest: true,
-        outDir: 'web/themes/custom/contribtracker/dist',
+        outDir: './dist',
     },
 
     // Adjust Vites dev server for DDEV
