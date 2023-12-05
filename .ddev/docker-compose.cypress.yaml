@@ -12,7 +12,7 @@ services:
 
     volumes:
       # Mount the project root to Cypress's project point
-      - ${DDEV_APPROOT}/web/themes/custom/contribtracker:${DDEV_APPROOT}/web/themes/custom/contribtracker
+      - "${DDEV_APPROOT}:/e2e"
       # Mount DDEV to allow commands
       - ".:/mnt/ddev_config"
       # Allow X11 forwarding
@@ -23,4 +23,4 @@ services:
       - "ddev-router:${DDEV_HOSTNAME}"
 
     entrypoint: /bin/bash
-    working_dir: ${DDEV_APPROOT}/web/themes/custom/contribtracker
+    working_dir: /e2e/web/themes/custom/contribtracker
