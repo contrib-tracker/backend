@@ -1,6 +1,7 @@
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 module:
+  new_relic_rpm: -20
   address: 0
   admin_toolbar: 0
   admin_toolbar_search: 0
