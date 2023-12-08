@@ -10,8 +10,8 @@ tasks:
       ddev drush updb -y
       ddev drush cr
       cd web/themes/custom/contribtracker
-      npm i
-      npx gulp
+      ddev npm install
+      ddev npm run build
       cd -
 
 vscode:
