@@ -2,3 +2,8 @@ services:
   logger.channel.contrib_tracker:
     parent: logger.channel_base
     arguments: ['contrib_tracker']
+
+  contrib_tracker.event_subscriber:
+    class: Drupal\contrib_tracker\EventSubscriber\RavenSubscriber
+    tags:
+      - { name: event_subscriber }
