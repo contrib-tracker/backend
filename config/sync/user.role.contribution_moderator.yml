@@ -18,6 +18,7 @@ dependencies:
     - field_permissions
     - file
     - flag
+    - help
     - node
     - system
     - taxonomy
@@ -29,6 +30,7 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
+  - 'access help pages'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'

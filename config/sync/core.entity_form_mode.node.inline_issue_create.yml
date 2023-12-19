@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.inline_issue_create
 label: 'Inline Issue Create'
+description: ''
 targetEntityType: node
 cache: true
