@@ -1,0 +1,26 @@
+services:
+  cypress:
+    image: cypress/included:12.6.0
+    container_name: ddev-${DDEV_SITENAME}-cypress
+    networks: [default, ddev_default]
+
+    tty: true
+
+    environment:
+      - CYPRESS_baseUrl=${DDEV_PRIMARY_URL}
+      - DISPLAY=host.docker.internal:0
+
+    volumes:
+      # Mount the project root to Cypress's project point
+      - "${DDEV_APPROOT}:/e2e"
+      # Mount DDEV to allow commands
+      - ".:/mnt/ddev_config"
+      # Allow X11 forwarding
+      - /tmp/.X11-unix:/tmp/.X11-unix
+
+    external_links:
+      # Resolve links via DDEV router
+      - "ddev-router:${DDEV_HOSTNAME}"
+
+    entrypoint: /bin/bash
+    working_dir: /e2e/web/themes/custom/contribtracker
