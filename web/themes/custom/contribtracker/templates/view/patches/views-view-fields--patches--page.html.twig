@@ -29,6 +29,8 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
+{% set patches_count = fields.field_code_contrib_patches_count.content|trim  %}
+{% set files_count = fields.field_code_contrib_files_count.content|trim  %}
 <div class="contrib__card">
   <div class="contrib__card_date">
     <div class="contrib__card_date__day">
@@ -51,16 +53,16 @@
   </div>
   <div class="contrib__card_patch_file_count—wrapper">
     <div class="contrib__card_patchCount">
-      {{ fields.field_code_contrib_patches_count.content }}
-      {% if fields.field_code_contrib_patches_count.content == 1 %}
+      {{ patches_count }}
+      {% if patches_count == 1 %}
         Patch
       {% else %}
         Patches
       {% endif %}
     </div>
     <div class="contrib__card_fileCount">
-      {{ fields.field_code_contrib_files_count.content }}
-      {% if fields.field_code_contrib_files_count.content == 1 %}
+      {{ files_count }}
+      {% if files_count == 1 %}
           File
         {% else %}
           Files
