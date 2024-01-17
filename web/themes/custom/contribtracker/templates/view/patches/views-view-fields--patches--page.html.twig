@@ -53,20 +53,18 @@
   </div>
   <div class="contrib__card_patch_file_count—wrapper">
     <div class="contrib__card_patchCount">
-      {{ patches_count }}
-      {% if patches_count == 1 %}
-        Patch
-      {% else %}
-        Patches
-      {% endif %}
+      {% trans %}
+        {{ patches_count }} Patch
+      {% plural patches_count %}
+        {{ patches_count }} Patches
+      {% endtrans %}
     </div>
     <div class="contrib__card_fileCount">
-      {{ files_count }}
-      {% if files_count == 1 %}
-          File
-        {% else %}
-          Files
-        {% endif %}
+      {% trans %}
+        {{ files_count }} File
+      {% plural files_count %}
+        {{ files_count }} Files
+      {% endtrans %}
     </div>
   </div>
 </div>
