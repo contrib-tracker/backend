@@ -23,6 +23,7 @@ The following tools are required for setting up the site. Ensure you are using t
 - [Docker](https://docs.docker.com/install/) or [OrbStack](https://orbstack.dev/)
 - [DDEV](https://ddev.com/get-started/) - v1.22.0
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - v2.17.1
+- [NodeJs](https://nodejs.org/en/download)
 
 *Note*: Ensure you have sufficient RAM (ideally 16 GB, minimum 8 GB)
 
@@ -71,6 +72,12 @@ Clear the cache using drush
 
 ```bash
 ddev drush cr
+```
+
+### Theme Build
+
+```bash
+cd web/themes/custom/contribtracker && npm install && npm run build && ddev drush cr
 ```
 
 You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).
