@@ -8,6 +8,4 @@ Major tools that are required for setting up the site. It is recommended to use 
 
 - [DDEV](https://ddev.com/get-started/) - v1.22.0
 
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - v2.17.1
-
 - [NodeJs](https://nodejs.org/en/download)
