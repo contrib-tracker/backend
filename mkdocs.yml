@@ -1,0 +1,13 @@
+site_name: Contrib Tracker
+docs_dir: docs
+plugins:
+  - techdocs-core
+
+nav:
+  - Overview: 'index.md'
+  - Key Benefits: 'benefits.md'
+  - Tools and Pre-requisites: 'tools.md'
+  - Local Environment Setup: 'local_setup.md'
+  - How to work on this project: 'how_to_work.md'
+  - Custom Modules and Themes: 'custom_modules.md'
+  - Monitoring and Logging: 'monitoring.md'
