@@ -12,6 +12,6 @@ metadata:
     backstage.io/techdocs-ref: dir:.
 spec:
   type: website
-  owner: Developer Experience
+  owner: platform_engineering
   lifecycle: production
   system: public website
