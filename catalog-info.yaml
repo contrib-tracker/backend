@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: contrib-tracker
+  description: Axelerant Contribution Tracker
+  title: Contrib Tracker
+  annotations:
+    github.com/project-slug: contrib-tracker/backend
+    sentry.io/project-slug: contrib-tracker
+    newrelic.com/dashboard-guid: NDE5NjkxMXxBUE18QVBQTElDQVRJT058NTU4MDEwNzY0
+    jira/project-key: CONT
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  owner: Developer Experience
+  lifecycle: production
+  system: public website
