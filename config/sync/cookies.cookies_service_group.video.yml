@@ -1,0 +1,11 @@
+uuid: 39f17bf4-b38c-4c2b-b13f-b75c2fdb5311
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: w1WnCmP2Xfgx24xbx5u9T27XLF_ZFw5R0MlO-eDDPpQ
+id: video
+label: Videos
+weight: 40
+title: Video
+details: 'Video sharing services help to add rich media on the site and increase its visibility.'

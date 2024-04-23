@@ -69,3 +69,4 @@ hidden:
   field_event_address: true
   field_event_link: true
   field_event_location: true
+  langcode: true

@@ -28,3 +28,4 @@ content:
     region: content
 hidden:
   field_issue_link: true
+  langcode: true

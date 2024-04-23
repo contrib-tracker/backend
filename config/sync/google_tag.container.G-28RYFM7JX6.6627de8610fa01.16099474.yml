@@ -1,0 +1,32 @@
+uuid: f615f12b-29dd-49ee-9a2d-81b4d40c178e
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: G-28RYFM7JX6.6627de8610fa01.16099474
+label: G-28RYFM7JX6
+weight: 0
+tag_container_ids:
+  - G-28RYFM7JX6
+advanced_settings:
+  consent_mode: true
+dimensions_metrics: {  }
+conditions:
+  user_role:
+    id: user_role
+    negate: true
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      api_basic_read: api_basic_read
+events:
+  custom: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  login:
+    method: CMS
+  search: {  }
+  sign_up:
+    method: CMS

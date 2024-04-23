@@ -35,3 +35,4 @@ hidden:
   field_non_code_contrib_credit: true
   field_non_code_contrib_profile: true
   field_non_code_contribution_type: true
+  langcode: true

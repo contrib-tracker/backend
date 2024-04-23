@@ -1,0 +1,33 @@
+_core:
+  default_config_hash: PpB_t3-mnEd5Lckhxc9rfquSMa0CndPslGvJZlcg61E
+langcode: en
+default_langcode: en
+bannerText: 'We use a selection of our own and third-party cookies on the pages of this website: Essential cookies, which are required in order to use the website; functional cookies, which provide better easy of use when using the website; performance cookies, which we use to generate aggregated data on website use and statistics; and marketing cookies, which are used to display relevant content and advertising. If you choose "ACCEPT ALL", you consent to the use of all cookies. You can accept and reject individual cookie types and revoke your consent for the future at any time at "Settings".'
+privacyPolicy: 'Privacy policy'
+privacyUri: ''
+imprint: Imprint
+imprintUri: ''
+cookieDocs: 'Cookie documentation'
+officialWebsite: 'Official website'
+cookieDocsUri: /cookies/documentation
+denyAll: 'Deny all'
+settings: 'Cookie settings'
+acceptAll: 'Accept all'
+cookieSettings: 'Cookie settings'
+close: Close
+requiredCookies: 'Required cookies'
+readMore: 'Read more'
+allowed: Allowed
+denied: Denied
+alwaysActive: 'Always active'
+settingsAllServices: 'Settings for all services'
+saveSettings: Save
+disclaimerText: 'All cookie information is subject to change by the service providers. We update this information regularly.'
+disclaimerTextPosition: above
+processorDetailsLabel: 'Processor Company Details'
+processorLabel: Company
+processorWebsiteUrlLabel: 'Company Website'
+processorPrivacyPolicyUrlLabel: 'Company Privacy Policy'
+processorCookiePolicyUrlLabel: 'Company Cookie Policy'
+processorContactLabel: 'Data Protection Contact Details'
+placeholderAcceptAllText: 'Accept All Cookies'

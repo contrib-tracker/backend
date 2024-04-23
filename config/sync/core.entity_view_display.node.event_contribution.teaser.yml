@@ -35,3 +35,4 @@ hidden:
   field_event: true
   field_event_contribution_link: true
   field_event_contribution_type: true
+  langcode: true

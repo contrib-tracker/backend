@@ -32,4 +32,5 @@ content:
 hidden:
   field_do_username: true
   field_github_username: true
+  langcode: true
   member_for: true
