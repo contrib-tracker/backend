@@ -82,6 +82,12 @@ jobs:
           ddev pull platform -y
           ddev drush deploy -y
 
+      - name: Build front-end
+        run: |
+          cd web/themes/custom/contribtracker
+          npm ci
+          gulp
+
       - name: Test
         run: |
           ddev phpunit --testsuite unit
