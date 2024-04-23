@@ -6,7 +6,7 @@ dependencies:
     - file
 id: api_basic_read
 label: 'API basic read'
-weight: -6
+weight: -8
 is_admin: null
 permissions:
   - 'delete own files'
