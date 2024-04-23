@@ -27,6 +27,6 @@ To initiate a build:
     git push origin <branch-name>
     ```
 
-For a better understanding of the entire process and standards,  please refer to Axelerant's [Git workflow.](https://axelerant.github.io/engg-handbook/docs/how-we-work/git/git-workflow/)
+For a better understanding of the entire process and standards,  please refer to Axelerant's [Git workflow.](https://engg-handbook.axelerant.com/docs/how-we-work/git/git-workflow/)
 
 N.B. If provided with a user account, you can use the management console of [platform.sh](https://platform.sh/) to handle your branch-merge requests. Please refer to the official [documentation](https://docs.platform.sh/frameworks/drupal8/developing-with-drupal.html#merge-code-changes-to-master) for further information.
