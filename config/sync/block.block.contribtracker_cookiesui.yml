@@ -1,0 +1,20 @@
+uuid: 66528133-4ca0-4444-bade-209f2c906ec9
+langcode: en
+status: true
+dependencies:
+  module:
+    - cookies
+  theme:
+    - contribtracker
+id: contribtracker_cookiesui
+theme: contribtracker
+region: footer_secondary
+weight: 0
+provider: null
+plugin: cookies_ui_block
+settings:
+  id: cookies_ui_block
+  label: 'Cookies UI'
+  label_display: visible
+  provider: cookies
+visibility: {  }
