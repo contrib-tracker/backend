@@ -20,6 +20,7 @@ dependencies:
     - flag
     - help
     - node
+    - rest
     - system
     - taxonomy
     - toolbar
@@ -34,6 +35,8 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
+  - 'administer rest resources'
+  - 'administer site configuration'
   - 'create event content'
   - 'create field_contrib_moderator_comment'
   - 'create issue content'
@@ -93,3 +96,4 @@ permissions:
   - 'view own field_contrib_moderator_comment'
   - 'view own unpublished content'
   - 'view the administration theme'
+  - 'view user email addresses'
