@@ -36,18 +36,18 @@
     "gulp-typescript": "^6.0.0-alpha.1",
     "postcss": "^8.4.32",
     "prettier": "^2.7.1",
+    "rimraf": "^5.0.5",
     "sass": "^1.76.0",
     "sass-toolkit": "^2.10.2",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.21.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "uuid": "^9.0.1"
   },
   "dependencies": {
-    "rimraf": "^5.0.5",
-    "select2": "^4.1.0-rc.0",
-    "uuid": "^9.0.1"
+    "select2": "^4.1.0-rc.0"
   },
   "overrides": {
     "minimatch": "5.1.2",
