@@ -13,7 +13,7 @@
     "@types/jqueryui": "^1.12.22",
     "@types/node": "^20.12.10",
     "@types/select2": "^4.0.63",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^6.13.1",
     "autoprefixer": "^10.4.19",
     "breakpoint-sass": "^3.0.0",
