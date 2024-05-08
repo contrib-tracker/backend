@@ -1,4 +1,4 @@
-const browserSync = require('browser-sync');
+import browserSync from 'browser-sync';
 const server = browserSync.create();
 
 const reload = (done) => {
@@ -6,7 +6,7 @@ const reload = (done) => {
   done();
 };
 
-module.exports = (gulp, config) => {
+export default (gulp, config) => {
   gulp.task('watch', () => {
     server.init(config.browserSync);
     gulp.watch(...config.scss.source, gulp.series('lint:scss', 'scss', reload));

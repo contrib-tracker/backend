@@ -1,11 +1,13 @@
-const autoprefixer = require('autoprefixer');
-const postcss = require('gulp-postcss');
-const sass = require('gulp-sass')(require('sass'));
-const sassGlob = require('gulp-sass-glob');
+import autoprefixer from 'autoprefixer';
+import postcss from 'gulp-postcss';
+import dartSass from 'sass'
+import gulpSass from 'gulp-sass'
+const sass = gulpSass(dartSass)
+import sassGlob from 'gulp-sass-glob';
 
 const postCSSOptions = [autoprefixer()];
 
-module.exports = (gulp, config) => {
+export default (gulp, config) => {
   gulp.task('scss', () =>
     gulp
       .src(...config.scss.source)
