@@ -1,7 +1,7 @@
-const typescript = require('gulp-typescript');
+import typescript from 'gulp-typescript';
 const ts = typescript.createProject("tsconfig.json");
 
-module.exports = (gulp, config) => {
+export default (gulp, config) => {
   gulp.task('ts', () =>
     gulp
       .src(config.ts.source)

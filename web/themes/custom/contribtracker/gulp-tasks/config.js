@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   scss: {
     source: ['scss/**/[^_]*.scss'],
     all: ['scss/**/*.scss'],

@@ -1,8 +1,8 @@
-const stylelint = require('gulp-stylelint');
-const eslint = require('gulp-eslint-new');
-const gulpIf = require('gulp-if');
+import stylelint from 'gulp-stylelint';
+import eslint from 'gulp-eslint-new';
+import gulpIf from 'gulp-if';
 
-module.exports = (gulp, config) => {
+export default (gulp, config) => {
   gulp.task('lint:scss', () =>
     gulp.src(config.scss.all).pipe(stylelint(config.stylelint.options)),
   );
