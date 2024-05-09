@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Drupal\ct_manager;
 
-use Drupal\user\Entity\User;
 use Drupal\ct_manager\Data\CodeContribution;
+use Drupal\user\Entity\User;
 
 /**
  * An interface for all Contribution type plugins.

@@ -10,8 +10,8 @@ use Drupal\Core\Queue\QueueWorkerBase;
 use Drupal\ct_manager\ContributionSourcePluginManager;
 use Drupal\ct_manager\ContributionTrackerStorage;
 use Drupal\ct_manager\Data\Issue;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\slack\Slack;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Processes users for individual plugin implementations.

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Drupal\ct_manager\Data;
 
-use DateTimeImmutable;
-
 final class CodeContribution {
 
   /**
@@ -16,7 +14,7 @@ final class CodeContribution {
   /**
    * @var \DateTimeImmutable Date of the contribution.
    */
-  protected DateTimeImmutable $date;
+  protected \DateTimeImmutable $date;
 
   /**
    * @var string URL of the contribution.
@@ -82,7 +80,7 @@ final class CodeContribution {
     return $this->url;
   }
 
-  public function getDate(): DateTimeImmutable {
+  public function getDate(): \DateTimeImmutable {
     return $this->date;
   }
 
