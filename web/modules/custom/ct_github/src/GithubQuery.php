@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Drupal\ct_github;
 
+use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\Config\ConfigFactory;
 use Github\AuthMethod;
 use Github\Client;
-use Drupal\Core\Config\ConfigFactory;
-use Drupal\Core\Cache\CacheBackendInterface;
 
 /**
  * Github Query Class.

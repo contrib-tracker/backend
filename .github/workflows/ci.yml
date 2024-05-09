@@ -26,7 +26,7 @@ jobs:
           checks: |
             phplint: {}
             phpcs:
-              standard: phpcs.xml.dist
+              standard: phpcs.xml
               ignore: /node_modules/
             phpmd:
               ruleset: phpmd.xml

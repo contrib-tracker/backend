@@ -2,7 +2,6 @@
 
 namespace Drupal\Tests\ct_manager\Unit\Data;
 
-use DateTimeImmutable;
 use Drupal\ct_manager\Data\CodeContribution;
 use Drupal\ct_manager\Data\Issue;
 use PHPUnit\Framework\TestCase;
@@ -17,7 +16,7 @@ class CodeContributionTest extends TestCase {
    * Test simple code contribution creation.
    */
   public function testCodeContributionCreation() {
-    $date = new DateTimeImmutable();
+    $date = new \DateTimeImmutable();
     $contribution = new CodeContribution("Title", "https://drupal.org/example", $date);
     $this->assertSame("Title", $contribution->getTitle());
     $this->assertSame("https://drupal.org/example", $contribution->getUrl());
@@ -27,7 +26,7 @@ class CodeContributionTest extends TestCase {
   }
 
   public function testChainedCodeContribution() {
-    $date = new DateTimeImmutable();
+    $date = new \DateTimeImmutable();
     $issue = new Issue("issueTitle", "issueURL");
     $contribution = (new CodeContribution("Title", "https://drupal.org/example", $date))
       ->setAccountUrl("https://drupal.org/user/1")

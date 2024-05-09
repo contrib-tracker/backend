@@ -2,8 +2,8 @@
 
 namespace Drupal\ct_reports\Controller;
 
-use Drupal\ct_reports\ContributionStatistics;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\ct_reports\ContributionStatistics;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -47,7 +47,7 @@ class ContributionCountController extends ControllerBase {
       '#codeContributions' => $this->contribStats->codeContributions(),
       '#totalContributors' => $this->contribStats->totalContributors(),
       '#cache' => [
-        'tags'=> ['node_list:code_contribution'],
+        'tags' => ['node_list:code_contribution'],
       ],
     ];
     return $build;

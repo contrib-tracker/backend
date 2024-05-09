@@ -2,8 +2,8 @@
 
 namespace tests\ExistingSite;
 
-use weitzman\DrupalTestTraits\ExistingSiteBase;
 use Drupal\Component\Serialization\Json;
+use weitzman\DrupalTestTraits\ExistingSiteBase;
 
 /**
  * Test the node creation trait.

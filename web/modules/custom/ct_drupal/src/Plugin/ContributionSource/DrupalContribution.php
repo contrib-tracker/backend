@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Drupal\ct_drupal\Plugin\ContributionSource;
 
-use DateTimeImmutable;
 use Drupal\Component\Plugin\PluginBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Logger\LoggerChannelInterface;
@@ -183,7 +182,7 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
       }
 
       $issue_url = sprintf("https://www.drupal.org/node/%s", $issueNode->getId());
-      $date = (new DateTimeImmutable())->setTimestamp((int) $comment->created);
+      $date = (new \DateTimeImmutable())->setTimestamp((int) $comment->created);
       $commit = (new CodeContribution($title, $comment->url, $date))
         ->setAccountUrl('https://www.drupal.org/user/' . $comment->author->id)
         ->setDescription($commentBody)
