@@ -3,9 +3,7 @@ updates:
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
-      interval: "daily"
-      time: "20:00"
-      timezone: "America/New_York"
+      interval: "weekly"
     commit-message:
       prefix: "Composer"
       include: "scope"
@@ -25,7 +23,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/web/themes/custom/contribtracker/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "npm"
     groups:
@@ -45,6 +43,6 @@ updates:
     # default location of `.github/workflows`
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "github-actions"
