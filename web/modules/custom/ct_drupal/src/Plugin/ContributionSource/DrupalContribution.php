@@ -156,7 +156,7 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
         break;
       }
 
-      $issueNode = $retriever->getDrupalOrgNode($comment->node->id, REQUEST_TIME + 1800);
+      $issueNode = $retriever->getDrupalOrgNode($comment->node->id, \Drupal::time()->getRequestTime() + 1800);
       $issueData = $issueNode->getData();
       if (!isset($issueData->type) || $issueData->type != 'project_issue') {
         // This is not an issue. Skip it.
@@ -165,7 +165,7 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
       $commentDetails = new CommentDetails($retriever, $comment);
 
       // Now, get the project for the issue.
-      $projectData = $retriever->getDrupalOrgNode($issueData->field_project->id, REQUEST_TIME + (6 * 3600))->getData();
+      $projectData = $retriever->getDrupalOrgNode($issueData->field_project->id, \Drupal::time()->getRequestTime() + (6 * 3600))->getData();
       if (empty($projectData->title)) {
         // We couldn't get the project details for some reason.
         // Skip the rest of the steps.

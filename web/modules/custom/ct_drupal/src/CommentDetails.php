@@ -130,7 +130,7 @@ class CommentDetails {
    */
   protected function processFileDetails(): void {
     if (!$this->issueData) {
-      $this->issueData = $this->contribRetriever->getDrupalOrgNode($this->comment->node->id, REQUEST_TIME + 1800);
+      $this->issueData = $this->contribRetriever->getDrupalOrgNode($this->comment->node->id, \Drupal::time()->getRequestTime() + 1800);
     }
 
     // Get the files in the reverse order.
@@ -161,7 +161,7 @@ class CommentDetails {
    */
   protected function determineIssueStatus(): void {
     if (!$this->issueData) {
-      $this->issueData = $this->contribRetriever->getDrupalOrgNode($this->comment->node->id, REQUEST_TIME + 1800);
+      $this->issueData = $this->contribRetriever->getDrupalOrgNode($this->comment->node->id, \Drupal::time()->getRequestTime() + 1800);
     }
 
     // Try to determine the status.
