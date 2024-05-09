@@ -67,7 +67,7 @@
     },
     "require-dev": {
         "axelerant/db-docker": "^1.1",
-        "axelerant/drupal-quality-checker": "^1.0.0",
+        "axelerant/drupal-quality-checker": "^1.4",
         "behat/mink": "^1.10",
         "behat/mink-browserkit-driver": "^2.1",
         "phpunit/phpunit": "^9.0",
@@ -91,7 +91,8 @@
             "phpro/grumphp-shim": true,
             "axelerant/db-docker": true,
             "oomphinc/composer-installers-extender": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "axelerant/drupal-quality-checker": true
         }
     },
     "autoload": {
