@@ -1,0 +1,87 @@
+parameters:
+  git_dir: .
+  bin_dir: vendor/bin
+grumphp:
+  ascii:
+    failed: vendor/axelerant/drupal-quality-checker/resources/grumpy.txt
+    succeeded: vendor/axelerant/drupal-quality-checker/resources/happy.txt
+  tasks:
+    phplint:
+      exclude:
+        - web/core
+        - web/modules/contrib
+        - web/themes/contrib
+        - web/profiles/contrib
+        - web/sites/default
+        - vendor
+      triggered_by:
+        - php
+        - module
+        - theme
+        - inc
+    yamllint: ~
+    composer: ~
+    jsonlint: ~
+    twigcs:
+      path: 'web'
+      ruleset: 'FriendsOfTwig\Twigcs\Ruleset\Official'
+      exclude:
+        - core
+        - modules/contrib
+        - themes/contrib
+        - profiles/contrib
+    phpcs:
+      standard:
+        - phpcs.xml.dist
+      ignore_patterns:
+        - .github
+        - .gitlab
+        - .ddev
+        - /config/
+        - /drush/
+        - /web/robots.txt
+        - /web/sites/default/
+        - bower_components
+        - node_modules
+        - /vendor
+      triggered_by:
+        - php
+        - module
+        - inc
+        - install
+        - test
+        - profile
+        - theme
+        - css
+        - info
+        - txt
+    phpmd:
+      whitelist_patterns:
+        - /^web\/modules\/custom\/(.*)/
+        - /^web\/themes\/custom\/(.*)/
+      ruleset:
+        - phpmd.xml.dist
+      triggered_by:
+        - php
+        - module
+        - theme
+    phpstan:
+      configuration: phpstan.neon.dist
+      ignore_patterns:
+        - .github
+        - .gitlab
+        - .ddev
+        - /config/
+        - /drush/
+        - /web/robots.txt
+        - /web/sites/default/
+        - bower_components
+        - node_modules
+        - /vendor
+      triggered_by:
+        - php
+        - module
+        - theme
+        - inc
+      memory_limit: "-1"
+      use_grumphp_paths: true
