@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Drupal\ct_github;
 
-use DateTimeImmutable;
 use Drupal\ct_manager\Data\CodeContribution;
 use Drupal\ct_manager\Data\Issue;
 
@@ -85,7 +84,7 @@ class GithubRetriever {
           $message = explode("\n", $node['commit']['message']);
           $title = reset($message);
           $url = $node['commit']['url'];
-          $date = new DateTimeImmutable($node['commit']['committedDate']);
+          $date = new \DateTimeImmutable($node['commit']['committedDate']);
           $commit = (new CodeContribution($title, $url, $date))
             ->setAccountUrl('https://www.github.com/' . $this->username)
             ->setDescription($node['commit']['message'])
@@ -102,7 +101,7 @@ class GithubRetriever {
     foreach ($userContributions['data']['user']['issueComments']['nodes'] as $node) {
       $title = 'Comment on ' . $node['issue']['title'];
       $url = $node['url'];
-      $date = new DateTimeImmutable($node['createdAt']);
+      $date = new \DateTimeImmutable($node['createdAt']);
       $comment = (new CodeContribution($title, $url, $date))
         ->setAccountUrl('https://www.github.com/' . $this->username)
         ->setProject($node['issue']['repository']['name'])
