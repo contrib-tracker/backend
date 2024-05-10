@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\ct_drupal\Plugin\ContributionSource;
 
+use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Component\Plugin\PluginBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Logger\LoggerChannelInterface;
@@ -64,6 +65,13 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
   protected $logger;
 
   /**
+   * datetime.time service.
+   *
+   * @var \Drupal\Component\Datetime\TimeInterface
+   */
+  protected $timeService;
+
+  /**
    * Constructs a Drupal\rest\Plugin\ResourceBase object.
    *
    * @param array $configuration
@@ -82,14 +90,17 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
    *   The contribution storage service.
    * @param \Drupal\Core\Logger\LoggerChannelInterface $loggerChannel
    *   The logger service.
+   * @param \Drupal\Component\Datetime\TimeInterface $timeService
+   *   The datetime.time service.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entityTypeManager, DrupalRetrieverInterface $doRetriever, DOUserInfoRetriever $doUserInfoRetriever, ContributionTrackerStorage $contributionStorage, LoggerChannelInterface $loggerChannel) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entityTypeManager, DrupalRetrieverInterface $doRetriever, DOUserInfoRetriever $doUserInfoRetriever, ContributionTrackerStorage $contributionStorage, LoggerChannelInterface $loggerChannel, TimeInterface $timeService) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->entityTypeManager = $entityTypeManager;
     $this->doRetriever = $doRetriever;
     $this->doUserInfoRetriever = $doUserInfoRetriever;
     $this->contributionStorage = $contributionStorage;
     $this->logger = $loggerChannel;
+    $this->timeService = $timeService;
   }
 
   /**
@@ -104,7 +115,8 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
       $container->get('ct_drupal.retriever'),
       $container->get('do_username.user_service'),
       $container->get('ct_manager.contribution_storage'),
-      $container->get('logger.channel.ct_drupal')
+      $container->get('logger.channel.ct_drupal'),
+      $container->get('datetime.time')
     );
   }
 
@@ -156,16 +168,16 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
         break;
       }
 
-      $issueNode = $retriever->getDrupalOrgNode($comment->node->id, \Drupal::time()->getRequestTime() + 1800);
+      $issueNode = $retriever->getDrupalOrgNode($comment->node->id, $this->timeService->getRequestTime() + 1800);
       $issueData = $issueNode->getData();
       if (!isset($issueData->type) || $issueData->type != 'project_issue') {
         // This is not an issue. Skip it.
         continue;
       }
-      $commentDetails = new CommentDetails($retriever, $comment);
+      $commentDetails = new CommentDetails($retriever, $comment, $this->timeService);
 
       // Now, get the project for the issue.
-      $projectData = $retriever->getDrupalOrgNode($issueData->field_project->id, \Drupal::time()->getRequestTime() + (6 * 3600))->getData();
+      $projectData = $retriever->getDrupalOrgNode($issueData->field_project->id, $this->timeService->getRequestTime() + (6 * 3600))->getData();
       if (empty($projectData->title)) {
         // We couldn't get the project details for some reason.
         // Skip the rest of the steps.
