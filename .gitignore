@@ -28,3 +28,6 @@
 node_modules
 /web/themes/custom/contribtracker/dist/
 .DS_Store
+
+# Ignore drupal-quality-checker generated config
+/*.dist
