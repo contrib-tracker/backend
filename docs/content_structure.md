@@ -20,4 +20,4 @@ ContribTracker project possesses the following taxonomy vocabularies/terms:
 - **Event Type**: This vocabulary stores various event types like DrupalCamp, DrupalCon, meetup etc.
 - **Project**: Stores projects for various community contributions.
 - **Tags**: Use tags to group articles on similar topics into categories.
-- **Technology**:This vocabulary stores various technologies that are used in contribution.
+- **Technology**: This vocabulary stores various technologies that are used in contribution.
