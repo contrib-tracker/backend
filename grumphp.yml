@@ -19,19 +19,6 @@ grumphp:
         - module
         - theme
         - inc
-    phplint:
-      exclude:
-        - web/core
-        - web/modules/contrib
-        - web/themes/contrib
-        - web/profiles/contrib
-        - web/sites/default
-        - vendor
-      triggered_by:
-        - php
-        - module
-        - theme
-        - inc
     yamllint: ~
     composer: ~
     jsonlint: ~
@@ -49,7 +36,6 @@ grumphp:
       ignore_patterns:
         - .github
         - .gitlab
-        - .ddev
         - .ddev
         - /config/
         - /drush/
