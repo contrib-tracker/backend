@@ -116,6 +116,13 @@ class IssuesSanitiseCommand extends Command {
     }, $duplicateIssueIds);
 
     $this->getIo()->info($this->trans('commands.contrib_tracker.issues.sanitise.messages.success'));
+
+    // Adding a phpcs error @todo by zeshan ziya
+    $a = [
+      'a' => 1,
+        'a' => 1,
+    'a' => 1,
+    ];
   }
 
   /**
