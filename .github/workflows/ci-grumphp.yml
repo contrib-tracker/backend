@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches:
+      - cicdtest
+    tags:
+      - '*'
+  pull_request:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  drupal_codequality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Install GrumPHP globally
+        run: composer global require phpro/grumphp-shim
+
+      - name: Run GrumPHP
+        run: grumphp run
