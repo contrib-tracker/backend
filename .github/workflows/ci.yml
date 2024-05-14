@@ -31,3 +31,17 @@ jobs:
             phpmd:
               ruleset: phpmd.xml
               suffixes: php
+
+
+  frontend_codequality:
+    runs-on: ubuntu-latest
+    container: node:lts
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Frontend Code Quality
+        run: |
+          cd web/themes/custom/contribtracker
+          npm ci
+          npm run lint

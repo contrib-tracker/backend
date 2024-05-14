@@ -39,7 +39,15 @@ jobs:
       # - name: Run code quality check
       #   run: grumphp run --testsuite=code_quality
 
-      # Try running phpstan without composer as current ruleset only checks for drupal standard
-      - name: Run phptan
-        run: grumphp run --tasks=phpstan
+  frontend_codequality:
+    runs-on: ubuntu-latest
+    container: luccpl/php-node-ci
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Frontend Code Quality
+        run: |
+          cd web/themes/custom/contribtracker
+          npm run lint
 
