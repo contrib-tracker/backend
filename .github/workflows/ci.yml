@@ -41,6 +41,7 @@ jobs:
 
   frontend_codequality:
     runs-on: ubuntu-latest
+    container: node:lts
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
