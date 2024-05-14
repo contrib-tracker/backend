@@ -76,6 +76,12 @@ jobs:
           # We will start DDEV after setting the environment
           autostart: false
 
+      - name: Set the platform.sh token
+        run: |
+          ddev config global --instrumentation-opt-in=false
+          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
+          ddev start
+
       - name: Get Cache Directories
         id: cache-dir
         run: |
@@ -87,12 +93,6 @@ jobs:
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
-
-      - name: Set the platform.sh token
-        run: |
-          ddev config global --instrumentation-opt-in=false
-          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
-          ddev start
 
       - name: Install the site
         run: |
