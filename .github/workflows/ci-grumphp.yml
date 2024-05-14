@@ -41,7 +41,6 @@ jobs:
 
   frontend_codequality:
     runs-on: ubuntu-latest
-    container: fullstreaming/phpdev
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -49,5 +48,7 @@ jobs:
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          gulp lint
+          npm ci
+          npm run lint
+
 
