@@ -18,6 +18,12 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
+      - name: Install PHP and Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer:v2
+
       - name: Enable GrumPHP plugin
         run: composer global config --no-plugins allow-plugins.phpro/grumphp-shim true
 
@@ -25,4 +31,4 @@ jobs:
         run: composer global require phpro/grumphp-shim
 
       - name: Run GrumPHP
-        run: ~/.composer/vendor/bin/grumphp run
+        run: php ~/.composer/vendor/bin/grumphp run
