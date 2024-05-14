@@ -4,7 +4,7 @@ on:
     branches:
       - cicdtest
     tags:
-      - '*'
+      - "*"
   pull_request:
 
 # concurrency:
@@ -34,10 +34,10 @@ jobs:
       #   run: grumphp run --tasks=phpmd
 
       # Run using testsuites
-      # - name: Run linters
-      #   run: grumphp run --testsuite=linters
-      # - name: Run code quality check
-      #   run: grumphp run --testsuite=code_quality
+      - name: Run linters
+        run: grumphp run --testsuite=linters
+      - name: Run code quality check
+        run: grumphp run --testsuite=code_quality
 
   frontend_codequality:
     runs-on: ubuntu-latest
@@ -51,4 +51,51 @@ jobs:
           npm ci
           npm run lint
 
+  drupal_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
 
+      - name: Get Cache Directories
+        id: cache-dir
+        run: |
+          echo "::set-output name=composer-dir::$(composer config cache-files-dir)"
+          echo "::set-output name=npm-dir::$(npm config get cache)"
+      - uses: actions/cache@v4
+        with:
+          path: ${{ steps.cache-dir.outputs.composer-dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          # We will start DDEV after setting the environment
+          autostart: false
+
+      - name: Set the platform.sh token
+        run: |
+          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
+          ddev start
+
+      - name: Install the site
+        run: |
+          ddev composer install
+          ddev pull platform -y
+          ddev drush deploy -y
+
+      - name: Build front-end
+        run: |
+          cd web/themes/custom/contribtracker
+          npm ci
+          gulp
+
+      - name: Run phpstan
+        run: ddev ./vendor/bin/grumphp run --tasks=phpstan
+
+      - name: Test
+        run: |
+          ddev phpunit --testsuite unit
+          ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
