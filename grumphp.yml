@@ -77,7 +77,7 @@ grumphp:
         - module
         - theme
     phpstan:
-      configuration: phpstan.neon.dist
+      configuration: phpstan.neon
       ignore_patterns:
         - .github
         - .gitlab
