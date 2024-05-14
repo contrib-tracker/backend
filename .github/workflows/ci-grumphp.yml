@@ -26,12 +26,12 @@ jobs:
         run: composer global require phpro/grumphp-shim
 
       # Run each checks separately
-      - name: Run phplint
-        run: grumphp run --tasks=phplint
-      - name: Run phpcs
-        run: grumphp run --tasks=phpcs
-      - name: Run phpmd
-        run: grumphp run --tasks=phpmd
+      # - name: Run phplint
+      #   run: grumphp run --tasks=phplint
+      # - name: Run phpcs
+      #   run: grumphp run --tasks=phpcs
+      # - name: Run phpmd
+      #   run: grumphp run --tasks=phpmd
 
       # Run using testsuites
       - name: Run linters
