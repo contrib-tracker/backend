@@ -57,14 +57,22 @@
 	{{ page.content }}
 </main>
 
+{% if page.footer_primary or page.footer_secondary %}
+  <footer>
+{% endif %}
+
 {% if page.footer_primary %}
-	<footer role="contentinfo" class="footer-primary">
+	<div class="footer-primary">
 		{{ page.footer_primary }}
-	</footer>
+	</div>
 {% endif %}
 
 {% if page.footer_secondary %}
-	<footer role="contentinfo" class="footer-secondary">
+	<div class="footer-secondary">
 		{{ page.footer_secondary }}
-	</footer>
+	</div>
+{% endif %}
+
+{% if page.footer_primary or page.footer_secondary %}
+  </footer>
 {% endif %}
