@@ -41,7 +41,7 @@ jobs:
 
   frontend_codequality:
     runs-on: ubuntu-latest
-    container: luccpl/php-node-ci
+    container: fullstreaming/phpdev
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
