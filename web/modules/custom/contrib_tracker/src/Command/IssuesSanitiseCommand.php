@@ -120,8 +120,8 @@ class IssuesSanitiseCommand extends Command {
     // Adding a phpcs error @todo by zeshan ziya
     $a = [
       'a' => 1,
-        'a' => 1,
-    'a' => 1,
+      'a' => 1,
+      'a' => 1,
     ];
   }
 
