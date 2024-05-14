@@ -58,10 +58,28 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
+      # - name: Get Cache Directories
+      #   id: cache-dir
+      #   run: |
+      #     echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+      #     echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+      # - uses: actions/cache@v4
+      #   with:
+      #     path: ${{ steps.cache-dir.outputs.composer-dir }}
+      #     key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-composer-
+
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          # We will start DDEV after setting the environment
+          autostart: false
+
       - name: Get Cache Directories
         id: cache-dir
         run: |
-          echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+          echo "composer-dir=$(ddev composer config cache-files-dir)" >> $GITHUB_OUTPUT
           echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
@@ -69,12 +87,6 @@ jobs:
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
-
-      - name: Setup DDEV
-        uses: ddev/github-action-setup-ddev@v1
-        with:
-          # We will start DDEV after setting the environment
-          autostart: false
 
       - name: Set the platform.sh token
         run: |
