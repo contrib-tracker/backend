@@ -2,6 +2,7 @@
 
 namespace Drupal\ct_drupal;
 
+use Drupal\Component\Datetime\TimeInterface;
 use Hussainweb\DrupalApi\Entity\Comment as DrupalOrgComment;
 use Hussainweb\DrupalApi\Entity\File as DrupalOrgFile;
 
@@ -63,16 +64,26 @@ class CommentDetails {
   protected $commentProcessed = FALSE;
 
   /**
+   * The datetime.time service.
+   *
+   * @var \Drupal\Component\Datetime\TimeInterface
+   */
+  protected $timeService;
+
+  /**
    * DrupalOrgCommentDetails constructor.
    *
    * @param \Drupal\ct_drupal\DrupalRetrieverInterface $retriever
    *   The injected contribution retriever service.
    * @param \Hussainweb\DrupalApi\Entity\Comment $comment
    *   The comment data from drupal.org.
+   * @param \Drupal\Component\Datetime\TimeInterface $time_service
+   *   The datetime.time service.
    */
-  public function __construct(DrupalRetrieverInterface $retriever, DrupalOrgComment $comment) {
+  public function __construct(DrupalRetrieverInterface $retriever, DrupalOrgComment $comment, TimeInterface $time_service) {
     $this->contribRetriever = $retriever;
     $this->comment = $comment;
+    $this->timeService = $time_service;
   }
 
   /**
@@ -130,7 +141,7 @@ class CommentDetails {
    */
   protected function processFileDetails(): void {
     if (!$this->issueData) {
-      $this->issueData = $this->contribRetriever->getDrupalOrgNode($this->comment->node->id, REQUEST_TIME + 1800);
+      $this->issueData = $this->contribRetriever->getDrupalOrgNode($this->comment->node->id, $this->timeService->getRequestTime() + 1800);
     }
 
     // Get the files in the reverse order.
@@ -161,7 +172,7 @@ class CommentDetails {
    */
   protected function determineIssueStatus(): void {
     if (!$this->issueData) {
-      $this->issueData = $this->contribRetriever->getDrupalOrgNode($this->comment->node->id, REQUEST_TIME + 1800);
+      $this->issueData = $this->contribRetriever->getDrupalOrgNode($this->comment->node->id, $this->timeService->getRequestTime() + 1800);
     }
 
     // Try to determine the status.

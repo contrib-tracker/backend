@@ -85,3 +85,9 @@ grumphp:
         - inc
       memory_limit: "-1"
       use_grumphp_paths: true
+    npm_script:
+      script: lint
+      triggered_by: [js, jsx, ts, scss, css]
+      working_directory: web/themes/custom/contribtracker
+      is_run_task: true
+      silent: false
