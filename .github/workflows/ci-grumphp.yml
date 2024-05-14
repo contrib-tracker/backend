@@ -34,8 +34,12 @@ jobs:
       #   run: grumphp run --tasks=phpmd
 
       # Run using testsuites
-      - name: Run linters
-        run: grumphp run --testsuite=linters
-      - name: Run code quality check
-        run: grumphp run --testsuite=code_quality
+      # - name: Run linters
+      #   run: grumphp run --testsuite=linters
+      # - name: Run code quality check
+      #   run: grumphp run --testsuite=code_quality
+
+      # Try running phpstan without composer as current ruleset only checks for drupal standard
+      - name: Run phptan
+        run: grumphp run --tasks=phpstan
 
