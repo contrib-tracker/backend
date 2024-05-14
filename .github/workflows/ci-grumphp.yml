@@ -32,4 +32,4 @@ jobs:
         run: composer global require phpro/grumphp-shim
 
       - name: Run GrumPHP
-        run: grumphp run -tasks=phplint
+        run: grumphp run --tasks=phplint
