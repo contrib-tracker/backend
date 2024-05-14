@@ -23,7 +23,7 @@ function contrib_tracker_mail_alter(&$message) {
   }
   $a = [
     'a' => 1,
-      'a' => 1,
+    'a' => 1,
     'a' => 1,
   ];
 }
