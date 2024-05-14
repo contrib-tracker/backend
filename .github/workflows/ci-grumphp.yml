@@ -93,7 +93,7 @@ jobs:
           gulp
 
       - name: Run phpstan
-        run: ddev ./vendor/bin/grumphp run --tasks=phpstan
+        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan
 
       - name: Test
         run: |
