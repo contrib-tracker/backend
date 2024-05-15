@@ -97,8 +97,7 @@ jobs:
     # needs: [frontend_codequality]
     runs-on: ubuntu-latest
     continue-on-error: true
-    # container: skippednote/drupal-cypress:1.0.6
-    container: node:lts
+    container: skippednote/drupal-cypress:1.0.6
     env:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
@@ -112,10 +111,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Setup PHP 8.2
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
+      # - name: Setup PHP 8.2
+      #   uses: shivammathur/setup-php@v2
+      #   with:
+      #     php-version: '8.2'
 
       - name: Get Cache Directories
         id: cache-dir
