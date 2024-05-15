@@ -19,20 +19,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Enable GrumPHP plugin
-        run: composer global config --no-plugins allow-plugins.phpro/grumphp-shim true
-
-      - name: Install GrumPHP globally
-        run: composer global require phpro/grumphp-shim
-
-      # Run each checks separately
-      # - name: Run phplint
-      #   run: grumphp run --tasks=phplint
-      # - name: Run phpcs
-      #   run: grumphp run --tasks=phpcs
-      # - name: Run phpmd
-      #   run: grumphp run --tasks=phpmd
-
       # Run using testsuites
       - name: Run linters
         run: grumphp run --testsuite=linters
