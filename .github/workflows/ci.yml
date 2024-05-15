@@ -111,6 +111,12 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
+      - name: Setup PHP 8.2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo, xml, gd, openssl, json, curl, mbstring
+
       - name: Get Cache Directories
         id: cache-dir
         run: |
