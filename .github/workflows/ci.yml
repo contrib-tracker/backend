@@ -51,10 +51,12 @@ jobs:
           echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
-          path: ${{ steps.cache-dir.outputs.composer-dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+          path: |
+            ${{ steps.cache-dir.outputs.composer-dir }}
+            ${{ steps.cache-dir.outputs.npm-dir }}
+          key: ${{ runner.os }}-npm-composer-${{ hashFiles('composer.lock, **/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-composer-
+            ${{ runner.os }}-npm-composer-
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
