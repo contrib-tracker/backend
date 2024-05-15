@@ -54,7 +54,7 @@ jobs:
           path: |
             ${{ steps.cache-dir.outputs.composer-dir }}
             ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-npm-composer-${{ hashFiles('composer.lock, **/package-lock.json') }}
+          key: ${{ runner.os }}-npm-composer-${{ hashFiles('composer.lock', '**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-composer-
 
