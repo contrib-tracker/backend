@@ -2,6 +2,9 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'http://contribtracker.lndo.site/',
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+      baseUrl: 'http://contribtracker.lndo.site/'
+    },
   },
 });
