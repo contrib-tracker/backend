@@ -94,7 +94,7 @@ jobs:
     permissions:
       packages: read
       contents: read
-    needs: [frontend_codequality]
+    # needs: [frontend_codequality]
     runs-on: ubuntu-latest
     continue-on-error: true
     container: skippednote/drupal-cypress:1.0.6
@@ -115,7 +115,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          extensions: pdo, xml, gd, openssl, json, curl, mbstring
 
       - name: Get Cache Directories
         id: cache-dir
