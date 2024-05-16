@@ -96,8 +96,18 @@ jobs:
           ddev phpunit --testsuite unit
           ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
 
-      - name: Ddev Cypress Test
+      - name: Cypress Test
         run: ddev cypress-run-ci
+
+      - name: Archive Cypress recordings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-recordings
+          path: |
+            web/themes/custom/contribtracker/cypress/screenshots
+            web/themes/custom/contribtracker/cypress/videos
+          retention-days: 3
 
 
   frontend_vr:
