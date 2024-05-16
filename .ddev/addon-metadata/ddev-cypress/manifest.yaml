@@ -6,6 +6,5 @@ project_files:
     - docker-compose.cypress.yaml
     - commands/cypress/cypress-open
     - commands/cypress/cypress-run
-    - commands/cypress/cypress-run-ci
 global_files: []
 removal_actions: []
