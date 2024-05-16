@@ -11,13 +11,9 @@ Cypress.Commands.add('login', (type) => {
       };
       break;
   }
-  return cy.request({
-    method: 'POST',
-    url: '/user/login',
-    form: true,
-    body: {
-      ...perms,
-      form_id: 'user_login_form',
-    },
-  });
+
+  cy.visit('/user/login');
+  cy.get('#edit-name').type(perms.name);
+  cy.get('#edit-pass').type(perms.pass);
+  cy.get('input#edit-submit').contains('Log in').click();
 });
