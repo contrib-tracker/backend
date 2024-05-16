@@ -65,7 +65,6 @@ jobs:
 
       - name: Set the platform.sh token
         run: |
-          ddev config global --instrumentation-opt-in=false
           ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
           ddev start
 
