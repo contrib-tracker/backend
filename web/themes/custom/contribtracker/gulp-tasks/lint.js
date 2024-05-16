@@ -1,4 +1,4 @@
-import stylelint from 'gulp-stylelint';
+import stylelint from '@ronilaukkarinen/gulp-stylelint';
 import eslint from 'gulp-eslint-new';
 import gulpIf from 'gulp-if';
 
