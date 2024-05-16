@@ -7,6 +7,7 @@
   "devDependencies": {
     "@percy/cli": "^1.28.5",
     "@percy/cypress": "^3.1.2",
+    "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
     "@types/gulp": "^4.0.17",
     "@types/gulp-sass": "^5.0.4",
     "@types/jquery": "^3.5.29",
@@ -30,7 +31,6 @@
     "gulp-prettier": "^6.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
-    "gulp-stylelint": "^13.0.0",
     "gulp-svgstore": "^9.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "postcss": "^8.4.38",
