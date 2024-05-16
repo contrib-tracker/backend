@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - ddev-cypress-ci
     tags:
       - '*'
   pull_request:
@@ -95,6 +96,9 @@ jobs:
         run: |
           ddev phpunit --testsuite unit
           ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
+
+      - name: Ddev Cypress Test
+        run: ddev cypress-run
 
 
   frontend_vr:
