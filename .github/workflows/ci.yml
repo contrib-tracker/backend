@@ -49,6 +49,10 @@ jobs:
 
   drupal_test:
     runs-on: ubuntu-latest
+    env:
+      # For Cypress.
+      CYPRESS_ADMIN_USERNAME: ct-admin
+      CYPRESS_ADMIN_PASSWORD: ct-admin
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -96,58 +100,13 @@ jobs:
           ddev phpunit --testsuite unit
           ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
 
+      - name: Change admin password to make it easier for Cypress tests
+        run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
 
-  frontend_vr:
-    permissions:
-      packages: read
-      contents: read
-    needs: [frontend_codequality]
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    container: skippednote/drupal-cypress:1.0.6
-    env:
-      # For Cypress.
-      CYPRESS_ADMIN_USERNAME: ct-admin
-      CYPRESS_ADMIN_PASSWORD: ct-admin
-    services:
-      mariadb:
-        image: ghcr.io/contrib-tracker/backend-db:main
-        env:
-          ALLOW_EMPTY_PASSWORD: "yes"
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
+      - name: Cypress Test
+        run: ddev cypress-run
 
-      - name: Get Cache Directories
-        id: cache-dir
-        run: |
-          echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-          echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v4
-        with:
-          path: ${{ steps.cache-dir.outputs.composer-dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
-      - uses: actions/cache@v4
-        with:
-          path: ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Test
-        run: |
-          ./.github/ci.sh
-          composer install -o --no-progress
-          ./vendor/bin/drush deploy -y
-          ./vendor/bin/drush upwd ct-admin "ct-admin"
-          cd web/themes/custom/contribtracker
-          npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
-          npm run build
-          npm run vr
-
-      - name: Archive Cypress recordings
+      - name: Save Cypress recordings
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -161,7 +120,6 @@ jobs:
     needs:
       - drupal_codequality
       - drupal_test
-      - frontend_vr
     runs-on: ubuntu-latest
     # Dependabot PR's can't access secrets, so we can't deploy.
     if: github.actor != 'dependabot[bot]'

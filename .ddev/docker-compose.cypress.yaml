@@ -7,8 +7,11 @@ services:
     tty: true
 
     environment:
-      - CYPRESS_baseUrl=${DDEV_PRIMARY_URL}
+      - CYPRESS_BASE_URL=${DDEV_PRIMARY_URL}
       - DISPLAY=host.docker.internal:0
+      # Pass in the admin details from CI environments
+      - CYPRESS_ADMIN_USERNAME
+      - CYPRESS_ADMIN_PASSWORD
 
     volumes:
       # Mount the project root to Cypress's project point
