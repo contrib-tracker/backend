@@ -80,32 +80,6 @@ ddev drush cr
 cd web/themes/custom/contribtracker && npm install && npm run build && ddev drush cr
 ```
 
-ddev Cypress Setup (Mac)
-
-```bash
-# Install XQuartz
-brew install xquartz --cask
-
-# Run XQuartz
-open -a Xquartz
-
-# Run below command
-xhost + 127.0.0.1
-```
-See [https://github.com/tyler36/ddev-cypress?tab=readme-ov-file#commands](https://github.com/tyler36/ddev-cypress?tab=readme-ov-file#commands) for more details.
-
-Run cypress tests with ddev
-
-```bash
-ddev cypress-run
-```
-
-To open cypress in "interactive" mode, run the following command:
-
-```bash
-ddev cypress-open
-```
-
 You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).
 
 ### Build and Deployment
@@ -140,6 +114,32 @@ To initiate a build:
 For a better understanding of the entire process and standards,  please refer to Axelerant's [Git workflow.](https://axelerant.atlassian.net/wiki/spaces/AH/pages/58982404/Git+Workflow)
 
 N.B. If provided with user account, you can use the management console of [platform.sh](https://platform.sh/) to handle your branch-merge requests. Please refer to the official [documentation](https://docs.platform.sh/frameworks/drupal8/developing-with-drupal.html#merge-code-changes-to-master) for further information.
+
+## Testing
+
+See our [testing docs](./docs/testing.md) for more details.
+
+### PHPUnit tests
+
+```bash
+# Unit tests
+$ ddev phpunit --testsuite unit
+
+# ExistingSite tests need more flags
+$ ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
+```
+
+### Cypress tests
+
+This needs additional setup. See our [testing docs](./docs/testing.md) for more details.
+
+```bash
+# Run tests
+$ ddev cypress-run
+
+# Interactive mode
+$ ddev cypress-open
+```
 
 ## About Contribution Retriever
 

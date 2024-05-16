@@ -10,4 +10,5 @@ nav:
   - Local Environment Setup: 'local_setup.md'
   - How to work on this project: 'how_to_work.md'
   - Custom Modules and Themes: 'custom_modules.md'
+  - Testing: 'testing.md'
   - Monitoring and Logging: 'monitoring.md'
