@@ -24,14 +24,14 @@ jobs:
         with:
           php-version: 8.2
           checks: |
-            phplint: {}
-            phpcs:
-              standard: phpcs.xml
-              ignore: /node_modules/
-            phpmd:
-              ruleset: phpmd.xml
-              suffixes: php
-
+            grumphp:
+              tasks:
+                - phplint
+                - yamllint
+                - jsonlint
+                - phpcs
+                - phpmd
+                - twigcs
 
   frontend_codequality:
     runs-on: ubuntu-latest
@@ -56,8 +56,8 @@ jobs:
       - name: Get Cache Directories
         id: cache-dir
         run: |
-          echo "::set-output name=composer-dir::$(composer config cache-files-dir)"
-          echo "::set-output name=npm-dir::$(npm config get cache)"
+          echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+          echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
           path: ${{ steps.cache-dir.outputs.composer-dir }}
@@ -87,6 +87,9 @@ jobs:
           cd web/themes/custom/contribtracker
           npm ci
           gulp
+
+      - name: Run phpstan
+        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
 
       - name: Test
         run: |
@@ -118,8 +121,8 @@ jobs:
       - name: Get Cache Directories
         id: cache-dir
         run: |
-          echo "::set-output name=composer-dir::$(composer config cache-files-dir)"
-          echo "::set-output name=npm-dir::$(npm config get cache)"
+          echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+          echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
           path: ${{ steps.cache-dir.outputs.composer-dir }}
@@ -129,7 +132,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('web/themes/custom/contribtracker/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
