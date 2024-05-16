@@ -4,14 +4,14 @@ client_key: ''
 environment: ''
 release: ''
 log_levels:
-  1: 1
-  2: 2
-  3: 3
-  4: 4
-  5: 5
-  6: 0
-  7: 0
-  8: 0
+  emergency: true
+  alert: true
+  critical: true
+  error: true
+  warning: true
+  notice: false
+  info: false
+  debug: false
 stack: true
 timeout: 2.0
 trace: true
