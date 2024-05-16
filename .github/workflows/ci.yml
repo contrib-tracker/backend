@@ -22,9 +22,9 @@ jobs:
 
       # Run using testsuites
       - name: Run linters
-        run: grumphp run --testsuite=linters
+        run: grumphp run --testsuite=linters --no-interaction
       - name: Run code quality check
-        run: grumphp run --testsuite=code_quality
+        run: grumphp run --testsuite=code_quality --no-interaction
 
   frontend_codequality:
     runs-on: ubuntu-latest
@@ -99,7 +99,7 @@ jobs:
           gulp
 
       - name: Run phpstan
-        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan
+        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
 
       - name: Test
         run: |
