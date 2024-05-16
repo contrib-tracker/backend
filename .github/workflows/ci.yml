@@ -135,7 +135,7 @@ jobs:
           ./vendor/bin/drush deploy -y
           ./vendor/bin/drush upwd ct-admin "ct-admin"
           cd web/themes/custom/contribtracker
-          npm install --cache $CI_PROJECT_DIR/.npm --prefer-offline
+          npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
           npm run build
           npm run vr
 
