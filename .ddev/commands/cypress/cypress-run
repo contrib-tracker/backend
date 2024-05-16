@@ -5,4 +5,4 @@
 ## Usage: cypress-run [arguments]
 ## Example: "ddev cypress-run --browser chrome"
 
-cypress run "$@"
+DISPLAY= cypress run "$@"
