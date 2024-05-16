@@ -34,6 +34,7 @@ updates:
         patterns:
           - "eslint*"
           - "stylelint*"
+          - "@typescript-eslint/*"
       percy:
         patterns:
           - "@percy/*"
