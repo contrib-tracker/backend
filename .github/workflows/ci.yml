@@ -14,16 +14,24 @@ concurrency:
 jobs:
   drupal_codequality:
     runs-on: ubuntu-latest
-    container: hussainweb/drupalqa
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      # Run using testsuites
-      - name: Run linters
-        run: grumphp run --testsuite=linters --no-interaction
-      - name: Run code quality check
-        run: grumphp run --testsuite=code_quality --no-interaction
+      - name: Drupal Code Quality
+        uses: hussainweb/drupalqa-action@v2
+        id: drupalqa
+        with:
+          php-version: 8.2
+          checks: |
+            grumphp:
+              tasks:
+                - phplint
+                - yamllint
+                - jsonlint
+                - phpcs
+                - phpmd
+                - twigcs
 
   frontend_codequality:
     runs-on: ubuntu-latest
