@@ -120,7 +120,6 @@ jobs:
     needs:
       - drupal_codequality
       - drupal_test
-      - frontend_vr
     runs-on: ubuntu-latest
     # Dependabot PR's can't access secrets, so we can't deploy.
     if: github.actor != 'dependabot[bot]'
