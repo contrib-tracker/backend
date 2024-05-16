@@ -50,14 +50,20 @@ jobs:
       - name: Get Cache Directories
         id: cache-dir
         run: |
-          echo "::set-output name=composer-dir::$(composer config cache-files-dir)"
-          echo "::set-output name=npm-dir::$(npm config get cache)"
+          echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+          echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
           path: ${{ steps.cache-dir.outputs.composer-dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
+      - uses: actions/cache@v4
+        with:
+          path: ${{ steps.cache-dir.outputs.npm-dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
