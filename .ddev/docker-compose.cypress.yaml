@@ -2,6 +2,10 @@ services:
   cypress:
     image: cypress/included:12.6.0
     container_name: ddev-${DDEV_SITENAME}-cypress
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
+    user: "${DDEV_UID}:${DDEV_GID}"
     networks: [default, ddev_default]
 
     tty: true
@@ -9,6 +13,7 @@ services:
     environment:
       - CYPRESS_baseUrl=${DDEV_PRIMARY_URL}
       - DISPLAY=host.docker.internal:0
+      - HOME=/root
 
     volumes:
       # Mount the project root to Cypress's project point
