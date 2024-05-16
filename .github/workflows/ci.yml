@@ -89,6 +89,9 @@ jobs:
           npm ci
           gulp
 
+      - name: Run phpstan
+        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan
+
       - name: Test
         run: |
           ddev phpunit --testsuite unit
