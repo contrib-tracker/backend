@@ -99,7 +99,7 @@ jobs:
       - name: Cypress Test
         run: ddev cypress-run-ci
 
-      - name: Archive Cypress recordings
+      - name: Save Cypress recordings
         if: always()
         uses: actions/upload-artifact@v4
         with:
