@@ -80,6 +80,32 @@ ddev drush cr
 cd web/themes/custom/contribtracker && npm install && npm run build && ddev drush cr
 ```
 
+ddev Cypress Setup (Mac)
+
+```bash
+# Install XQuartz
+brew install xquartz --cask
+
+# Run XQuartz
+open -a Xquartz
+
+# Run below command
+xhost + 127.0.0.1
+```
+See [https://github.com/tyler36/ddev-cypress?tab=readme-ov-file#commands](https://github.com/tyler36/ddev-cypress?tab=readme-ov-file#commands) for more details.
+
+Run cypress tests with ddev
+
+```bash
+ddev cypress-run
+```
+
+To open cypress in "interactive" mode, run the following command:
+
+```bash
+ddev cypress-open
+```
+
 You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).
 
 ### Build and Deployment
