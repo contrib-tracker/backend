@@ -59,7 +59,8 @@ content:
     type: address_default
     weight: 27
     region: content
-    settings: {  }
+    settings:
+      wrapper_type: details
     third_party_settings: {  }
   field_event_contrib_event_type:
     type: options_select
