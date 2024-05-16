@@ -12,10 +12,10 @@ info:
   format: full_html
 consentRequired: false
 purpose: 'Essential functional cookies to provide general functionality'
+placeholderMainText: 'This content is blocked because required functional cookies have not been accepted.'
+placeholderAcceptText: 'Only accept required functional cookies'
 processor: ''
 processorContact: ''
 processorUrl: ''
 processorPrivacyPolicyUrl: ''
 processorCookiePolicyUrl: ''
-placeholderMainText: 'This content is blocked because required functional cookies have not been accepted.'
-placeholderAcceptText: 'Only accept required functional cookies'

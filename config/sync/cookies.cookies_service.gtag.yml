@@ -11,14 +11,14 @@ id: gtag
 label: 'Google Tag Manager'
 group: performance
 info:
-  format: full_html
   value: ''
+  format: full_html
 consentRequired: true
 purpose: ''
+placeholderMainText: 'This content is blocked because Google Tag Manager cookies have not been accepted.'
+placeholderAcceptText: 'Only accept Google Tag Manager cookies'
 processor: ''
 processorContact: ''
 processorUrl: 'https://tagmanager.google.com/'
 processorPrivacyPolicyUrl: 'https://policies.google.com/privacy'
 processorCookiePolicyUrl: ''
-placeholderMainText: 'This content is blocked because Google Tag Manager cookies have not been accepted.'
-placeholderAcceptText: 'Only accept Google Tag Manager cookies'
