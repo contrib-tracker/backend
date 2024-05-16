@@ -39,9 +39,9 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-npm-fec-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-npm-fec-
+            ${{ runner.os }}-npm-
 
       - name: Frontend Code Quality
         run: |
@@ -70,9 +70,9 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-npm-
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
@@ -142,9 +142,9 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('web/themes/custom/contribtracker/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-npm-
 
       - name: Test
         run: |
