@@ -48,7 +48,7 @@ jobs:
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          npm ci
+          npm install
           npm run lint
 
 
@@ -99,7 +99,7 @@ jobs:
       - name: Build front-end
         run: |
           cd web/themes/custom/contribtracker
-          npm ci
+          npm install
           gulp
 
       - name: Run phpstan
@@ -159,7 +159,7 @@ jobs:
           ./vendor/bin/drush deploy -y
           ./vendor/bin/drush upwd ct-admin "ct-admin"
           cd web/themes/custom/contribtracker
-          npm ci --cache $CI_PROJECT_DIR/.npm --prefer-offline
+          npm install --cache $CI_PROJECT_DIR/.npm --prefer-offline
           npm run build
           npm run vr
 
