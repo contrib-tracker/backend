@@ -14,6 +14,7 @@
 # Ignore Drupal's file directory
 /web/sites/*/files/
 /web/sites/default/settings.local.php
+/private/*
 
 # Ignore phpunit temp files
 /.phpunit.result.cache
