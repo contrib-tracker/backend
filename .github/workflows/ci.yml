@@ -26,13 +26,22 @@ jobs:
       - name: Run code quality check
         run: grumphp run --testsuite=code_quality
 
-
   frontend_codequality:
     runs-on: ubuntu-latest
     container: node:lts
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+
+      - name: Get Cache Directories
+        id: cache-dir
+        run: echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
+        with:
+          path: ${{ steps.cache-dir.outputs.npm-dir }}
+          key: ${{ runner.os }}-npm-fec-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-fec-
 
       - name: Frontend Code Quality
         run: |
