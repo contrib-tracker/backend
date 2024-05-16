@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - ddev-cypress-ci
     tags:
       - '*'
   pull_request:
