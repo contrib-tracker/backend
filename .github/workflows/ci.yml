@@ -59,10 +59,19 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Set commit hash as environment variable for Percy
-        run: echo "PERCY_COMMIT=$GITHUB_SHA" >> $GITHUB_ENV
-      - name: Set commit hash as environment variable for Percy
-        run: echo "PERCY_BRANCH=$GITHUB_REF" >> $GITHUB_ENV
+      - name: Identify Branch name, Commit Hash and PR No for Percy
+        run: |
+          if [[ "${GITHUB_REF}" == refs/heads/* ]]; then
+            # Extract branch name
+            branch_name="${GITHUB_REF#refs/heads/}"
+            echo "PERCY_BRANCH=${branch_name}" >> $GITHUB_ENV
+          elif [[ "${GITHUB_REF}" == refs/pull/* ]]; then
+            # Extract PR number
+            pr_number=$(echo "${GITHUB_REF}" | sed -n 's|refs/pull/\([0-9]*\)/merge|\1|p')
+            echo "PERCY_PULL_REQUEST=${pr_number}" >> $GITHUB_ENV
+          fi
+          # Set Commit Hash
+          echo "PERCY_COMMIT=${GITHUB_SHA}" >> $GITHUB_ENV
 
       - name: Get Cache Directories
         id: cache-dir
