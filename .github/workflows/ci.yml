@@ -69,6 +69,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
+      - name: Cache Docker images.
+        uses: ScribeMD/docker-cache@0.5.0
+        with:
+          key: ddev-images-${{ runner.os }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
+
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
         with:
