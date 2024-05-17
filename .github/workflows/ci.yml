@@ -59,22 +59,22 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Get branch names
-        id: branch-names
-        uses: tj-actions/branch-names@v8
+      # - name: Get branch names
+      #   id: branch-names
+      #   uses: tj-actions/branch-names@v8
 
-      - name: Identify Branch name, Commit Hash and PR No for Percy
-        run: |
-          if [[ "${GITHUB_REF}" == refs/heads/* ]]; then
-            echo "PERCY_BRANCH=${{ steps.branch-names.outputs.current_branch }}" >> $GITHUB_ENV
-          elif [[ "${GITHUB_REF}" == refs/pull/* ]]; then
-            # Extract PR number
-            pr_number=$(echo "${GITHUB_REF}" | sed -n 's|refs/pull/\([0-9]*\)/merge|\1|p')
-            echo "PERCY_PULL_REQUEST=${pr_number}" >> $GITHUB_ENV
-            echo "PERCY_BRANCH=${{ steps.branch-names.outputs.head_ref_branch }}" >> $GITHUB_ENV
-          fi
-          # Set Commit Hash
-          echo "PERCY_COMMIT=${GITHUB_SHA}" >> $GITHUB_ENV
+      # - name: Identify Branch name, Commit Hash and PR No for Percy
+      #   run: |
+      #     if [[ "${GITHUB_REF}" == refs/heads/* ]]; then
+      #       echo "PERCY_BRANCH=${{ steps.branch-names.outputs.current_branch }}" >> $GITHUB_ENV
+      #     elif [[ "${GITHUB_REF}" == refs/pull/* ]]; then
+      #       # Extract PR number
+      #       pr_number=$(echo "${GITHUB_REF}" | sed -n 's|refs/pull/\([0-9]*\)/merge|\1|p')
+      #       echo "PERCY_PULL_REQUEST=${pr_number}" >> $GITHUB_ENV
+      #       echo "PERCY_BRANCH=${{ steps.branch-names.outputs.head_ref_branch }}" >> $GITHUB_ENV
+      #     fi
+      #     # Set Commit Hash
+      #     echo "PERCY_COMMIT=${GITHUB_SHA}" >> $GITHUB_ENV
 
       - name: Get Cache Directories
         id: cache-dir
@@ -126,7 +126,9 @@ jobs:
       #   run: ddev cypress-run
 
       - name: Cypress Test with Percy Integration
-        run: ddev percy-run
+        run: |
+          ddev exec --service cypress "git config --global --add safe.directory /e2e"
+          ddev percy-run
 
       - name: Save Cypress recordings
         if: always()
