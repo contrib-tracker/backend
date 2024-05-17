@@ -2,17 +2,6 @@ parameters:
   git_dir: .
   bin_dir: vendor/bin
 grumphp:
-  testsuites:
-    linters:
-      tasks:
-        - phplint
-        - yamllint
-        - jsonlint
-    code_quality:
-      tasks:
-        - phpcs
-        - phpmd
-        - twigcs
   ascii:
     failed: vendor/axelerant/drupal-quality-checker/resources/grumpy.txt
     succeeded: vendor/axelerant/drupal-quality-checker/resources/happy.txt
