@@ -14,6 +14,7 @@ services:
       - CYPRESS_ADMIN_PASSWORD
       # Pass percy.io token from CI environments
       - PERCY_TOKEN
+      - PERCY_TARGET_COMMIT
 
     volumes:
       # Mount the project root to Cypress's project point

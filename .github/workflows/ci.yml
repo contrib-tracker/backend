@@ -53,10 +53,14 @@ jobs:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
       CYPRESS_ADMIN_PASSWORD: ct-admin
+      # For Percy
       PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+
+      - name: Set commit hash as environment variable for Percy
+        run: echo "PERCY_TARGET_COMMIT=$GITHUB_SHA" >> $GITHUB_ENV
 
       - name: Get Cache Directories
         id: cache-dir
