@@ -53,6 +53,7 @@ jobs:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
       CYPRESS_ADMIN_PASSWORD: ct-admin
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
