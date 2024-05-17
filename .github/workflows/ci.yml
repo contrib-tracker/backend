@@ -52,7 +52,7 @@ jobs:
     env:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
-      # CYPRESS_ADMIN_PASSWORD: ct-admin
+      CYPRESS_ADMIN_PASSWORD: ct-admin
       PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
     steps:
       - name: Check out repository code
@@ -107,7 +107,7 @@ jobs:
       # - name: Cypress Test
       #   run: ddev cypress-run
 
-      - name: Percy Run
+      - name: Cypress Test with Percy Integration
         run: ddev percy-run
 
       - name: Save Cypress recordings
