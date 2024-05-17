@@ -12,9 +12,10 @@ services:
       # Pass in the admin details from CI environments
       - CYPRESS_ADMIN_USERNAME
       - CYPRESS_ADMIN_PASSWORD
-      # Pass percy.io token from CI environments
+      # For percy
       - PERCY_TOKEN
-      - PERCY_TARGET_COMMIT
+      - PERCY_COMMIT
+      - PERCY_BRANCH
 
     volumes:
       # Mount the project root to Cypress's project point

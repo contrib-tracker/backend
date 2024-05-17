@@ -60,7 +60,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set commit hash as environment variable for Percy
-        run: echo "PERCY_TARGET_COMMIT=$GITHUB_SHA" >> $GITHUB_ENV
+        run: echo "PERCY_COMMIT=$GITHUB_SHA" >> $GITHUB_ENV
+      - name: Set commit hash as environment variable for Percy
+        run: echo "PERCY_BRANCH=$GITHUB_REF" >> $GITHUB_ENV
 
       - name: Get Cache Directories
         id: cache-dir
