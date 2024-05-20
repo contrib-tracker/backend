@@ -42,9 +42,7 @@ jobs:
 
       - name: Get Cache Directories
         id: cache-dir
-        run: |
-          echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-          echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+        run: echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
           path: ${{ steps.cache-dir.outputs.npm-dir }}
@@ -77,7 +75,13 @@ jobs:
           echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
-          path: ${{ steps.cache-dir.outputs.composer-dir }}
+          path: |
+            vendor
+            web/core
+            web/modules/contrib
+            web/themes/contrib
+            web/profiles/contrib
+            ${{ steps.cache-dir.outputs.composer-dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
