@@ -50,11 +50,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-
 
-
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          npm ci --prefer-offline
+          npm npm install --prefer-offline
           npm run lint
 
 
@@ -130,7 +129,7 @@ jobs:
       - name: Build front-end
         run: |
           cd web/themes/custom/contribtracker
-          npm ci  --prefer-offline
+          npm install  --prefer-offline
           gulp
 
       - name: Run phpstan
