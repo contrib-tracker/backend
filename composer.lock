@@ -64,7 +64,7 @@
         },
         {
             "name": "axelerant/ct_drupal",
-            "version": "dev-major-upgrades",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/ct_drupal",
@@ -86,7 +86,7 @@
         },
         {
             "name": "axelerant/ct_github",
-            "version": "dev-major-upgrades",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/ct_github",
@@ -3184,17 +3184,17 @@
         },
         {
             "name": "drupal/raven",
-            "version": "6.0.0",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/raven.git",
-                "reference": "6.0.0"
+                "reference": "6.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/raven-6.0.0.zip",
-                "reference": "6.0.0",
-                "shasum": "39b690aa22a42cd80f0567e0219850f3ba7c7373"
+                "url": "https://ftp.drupal.org/files/projects/raven-6.0.1.zip",
+                "reference": "6.0.1",
+                "shasum": "6a76913b1666aa96e597fc24d61188f24010cf49"
             },
             "require": {
                 "drupal/core": "^10.2",
@@ -3209,8 +3209,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0",
-                    "datestamp": "1715819918",
+                    "version": "6.0.1",
+                    "datestamp": "1715900137",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
