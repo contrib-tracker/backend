@@ -14,9 +14,6 @@ services:
       - CYPRESS_ADMIN_PASSWORD
       # For percy
       - PERCY_TOKEN
-      - PERCY_COMMIT
-      - PERCY_BRANCH
-      - PERCY_PULL_REQUEST
 
     volumes:
       # Mount the project root to Cypress's project point
