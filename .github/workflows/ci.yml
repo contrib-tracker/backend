@@ -102,10 +102,23 @@ jobs:
           ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
           ddev start
 
-      - name: Install the site
+      # - name: Install the site
+      #   run: |
+      #     ddev composer install
+      #     ddev pull platform -y
+      #     ddev drush deploy -y
+
+
+      - name: Composer Install
         run: |
           ddev composer install
+
+      - name: Pull db and files
+        run: |
           ddev pull platform -y
+
+      - name: Install the site
+        run: |
           ddev drush deploy -y
 
       - name: Build front-end
