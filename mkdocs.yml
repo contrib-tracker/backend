@@ -5,10 +5,10 @@ plugins:
 
 nav:
   - Overview: 'index.md'
-  - Key Benefits: 'benefits.md'
   - Tools and Pre-requisites: 'tools.md'
   - Local Environment Setup: 'local_setup.md'
   - How to work on this project: 'how_to_work.md'
+  - Content Structure: 'content_structure.md'
   - Custom Modules and Themes: 'custom_modules.md'
   - Testing: 'testing.md'
   - Monitoring and Logging: 'monitoring.md'
