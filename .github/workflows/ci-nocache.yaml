@@ -1,0 +1,131 @@
+name: CI-NoCache
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+  pull_request:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  drupal_codequality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Drupal Code Quality
+        uses: hussainweb/drupalqa-action@v2
+        id: drupalqa
+        with:
+          php-version: 8.2
+          checks: |
+            grumphp:
+              tasks:
+                - phplint
+                - yamllint
+                - jsonlint
+                - phpcs
+                - phpmd
+                - twigcs
+
+  frontend_codequality:
+    runs-on: ubuntu-latest
+    container: node:lts
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Frontend Code Quality
+        run: |
+          cd web/themes/custom/contribtracker
+          npm ci
+          npm run lint
+
+
+  drupal_test:
+    runs-on: ubuntu-latest
+    env:
+      # For Cypress.
+      CYPRESS_ADMIN_USERNAME: ct-admin
+      CYPRESS_ADMIN_PASSWORD: ct-admin
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          # We will start DDEV after setting the environment
+          autostart: false
+
+      - name: Set the platform.sh token
+        run: |
+          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
+          ddev start
+
+      # - name: Install the site
+      #   run: |
+      #     ddev composer install
+      #     ddev pull platform -y
+      #     ddev drush deploy -y
+
+
+      - name: Composer Install
+        run: |
+          ddev composer install
+
+      - name: Pull db and files
+        run: |
+          ddev pull platform -y
+
+      - name: Install the site
+        run: |
+          ddev drush deploy -y
+
+      - name: Build front-end
+        run: |
+          cd web/themes/custom/contribtracker
+          npm ci
+          gulp
+
+      - name: Run phpstan
+        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
+
+      - name: Test
+        run: |
+          ddev phpunit --testsuite unit
+          ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
+
+      - name: Change admin password to make it easier for Cypress tests
+        run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
+
+      - name: Cypress Test
+        run: ddev cypress-run
+
+      - name: Save Cypress recordings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-recordings
+          path: |
+            web/themes/custom/contribtracker/cypress/screenshots
+            web/themes/custom/contribtracker/cypress/videos
+          retention-days: 3
+
+  deploy:
+    needs:
+      - drupal_codequality
+      - drupal_test
+    runs-on: ubuntu-latest
+    # Dependabot PR's can't access secrets, so we can't deploy.
+    if: github.actor != 'dependabot[bot]'
+    steps:
+      - uses: axelerant/platformsh-deploy-action@main
+        with:
+          project-id: 'brbqplxd7ycq6'
+          cli-token: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
