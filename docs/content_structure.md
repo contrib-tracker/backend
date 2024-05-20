@@ -29,11 +29,6 @@ ContribTracker project contains the following content types:
 ### Event
 
 - **Description**: Use the Event content type to create and manage events, specifying details like date, location, and description for organizational or community activities.
-- **Fields used**: It has common event related fields (Active Event, Description, Event Additional Links, Event Address, Event Dates, Event Link, Event Location) and additional field named field_event_contrib_event_type. This field allows content to reference specific event types from the “Event Type” taxonomy vocabulary.
-
-### Event Contribution
-
-- **Description**: Use the Event contributions content type to document contributions made during events, including presentations, workshops, or collaborative efforts.
 - **Fields used**:
   - Active Event (field_event_active): Indicates whether the event is currently active or inactive (Boolean).
   - Description (body): A detailed, formatted text field with a summary to describe the event.
@@ -43,6 +38,19 @@ ContribTracker project contains the following content types:
   - Event Link (field_event_link): A primary URL link associated with the event.
   - Event Location (field_event_location): Geographical coordinates (latitude and longitude) of the event’s location.
   - Event Type (field_event_contrib_event_type): References the type of event, categorized by terms from the Event Type taxonomy.
+
+### Event Contribution
+
+- **Description**: Use the Event contributions content type to document contributions made during events, including presentations, workshops, or collaborative efforts.
+- **Fields used**:
+  - Contributor (field_contribution_author): References the user who submitted the contribution.
+  - Contribution Details (field_contribution_comments): Allows detailed explanations about the contribution using formatted text.
+  - Submission Date (field_contribution_date): Records the date and time the contribution was submitted.
+  - Contribution Type (field_event_contribution_type): Categorizes the contribution using predefined types from the "Event Contribution Type" vocabulary (e.g., Bug Fix, Feature Request).
+  - Linked Event (field_event): References the specific event this contribution is associated with.
+  - External Link (field_event_contribution_link): (Optional) Provides a link to an external resource related to the contribution (e.g., code repository, documentation).
+  - Moderator Notes (field_contrib_moderator_comment): Allows moderators to leave feedback on the contribution using formatted text.
+  - Technology Used (field_contribution_technology): Tags the contribution with relevant technologies (e.g., Programming Language, Framework) using terms from the "Technology" vocabulary.
 
 ### Issue
 
