@@ -29,6 +29,7 @@ export default {
         },
       ],
       failOnError: process.env.CI === 'true',
+      debug: true,
     },
   },
   browserSync: {
