@@ -53,7 +53,7 @@ jobs:
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          npm npm install --prefer-offline
+          npm install --prefer-offline
           npm run lint
 
 
