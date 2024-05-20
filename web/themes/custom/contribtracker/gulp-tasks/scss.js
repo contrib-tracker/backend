@@ -1,6 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import postcss from 'gulp-postcss';
-import dartSass from 'sass'
+import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass'
 const sass = gulpSass(dartSass)
 import sassGlob from 'gulp-sass-glob';
