@@ -54,7 +54,7 @@ jobs:
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          npm ci
+          npm ci --prefer-offline
           npm run lint
 
 
@@ -130,7 +130,7 @@ jobs:
       - name: Build front-end
         run: |
           cd web/themes/custom/contribtracker
-          npm ci
+          npm ci  --prefer-offline
           gulp
 
       - name: Run phpstan
