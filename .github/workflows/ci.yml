@@ -4,7 +4,7 @@ on:
     branches:
       - main
     tags:
-      - '*'
+      - "*"
   pull_request:
 
 concurrency:
@@ -58,7 +58,6 @@ jobs:
           npm ci --prefer-offline --no-audit
           npm run lint
 
-
   drupal_test:
     runs-on: ubuntu-latest
     env:
@@ -95,16 +94,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Cache Docker images
-        uses: ScribeMD/docker-cache@0.5.0
-        with:
-          key: ddev-images-${{ runner.os }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
-
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
         with:
           # We will start DDEV after setting the environment
           autostart: false
+
+      - name: Get DDEV version
+        id: ddev_version
+        run: echo "ddev_version_hash=$(ddev --version | md5)" >> $GITHUB_OUTPUT
+
+      - name: Cache Docker images
+        uses: ScribeMD/docker-cache@0.5.0
+        with:
+          key: ddev-images-${{ runner.os }}-${{ steps.ddev_version.outputs.ddev_version_hash }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
 
       - name: Set the platform.sh token
         run: |
@@ -159,5 +162,5 @@ jobs:
     steps:
       - uses: axelerant/platformsh-deploy-action@main
         with:
-          project-id: 'brbqplxd7ycq6'
+          project-id: "brbqplxd7ycq6"
           cli-token: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
