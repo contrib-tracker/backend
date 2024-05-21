@@ -1,6 +1,6 @@
 services:
   cypress:
-    image: cypress/included:12.6.0
+    image: cypress/included:13.9.0
     container_name: ddev-${DDEV_SITENAME}-cypress
     networks: [default, ddev_default]
 
@@ -12,6 +12,8 @@ services:
       # Pass in the admin details from CI environments
       - CYPRESS_ADMIN_USERNAME
       - CYPRESS_ADMIN_PASSWORD
+      # For percy
+      - PERCY_TOKEN
 
     volumes:
       # Mount the project root to Cypress's project point

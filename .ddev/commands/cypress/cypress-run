@@ -1,5 +1,4 @@
 #!/bin/bash
-#ddev-generated
 ## Description: Use Cypress in "runner" mode.
 ##
 ## Usage: cypress-run [arguments]
