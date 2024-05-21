@@ -105,9 +105,7 @@ jobs:
       - name: Change admin password to make it easier for Cypress tests
         run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
 
-      # - name: Cypress Test
-      #   run: ddev cypress-run
-
+      # If Percy integration is not required, use `ddev cypress-run` to run the Cypress tests without Percy
       - name: Cypress Test with Percy Integration
         run: |
           ddev exec --service cypress "git config --global --add safe.directory /e2e"
