@@ -4,7 +4,7 @@ on:
     branches:
       - main
     tags:
-      - '*'
+      - "*"
   pull_request:
 
 concurrency:
@@ -40,12 +40,23 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
+      - name: Get Cache Directories
+        id: cache-dir
+        run: echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
+        with:
+          path: |
+            **/node_modules
+            ${{ steps.cache-dir.outputs.npm-dir }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          npm ci
+          npm ci --prefer-offline --no-audit
           npm run lint
-
 
   drupal_test:
     runs-on: ubuntu-latest
@@ -64,16 +75,39 @@ jobs:
           echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
         with:
-          path: ${{ steps.cache-dir.outputs.composer-dir }}
+          path: |
+            vendor
+            web/core
+            web/modules/contrib
+            web/themes/contrib
+            web/profiles/contrib
+            ${{ steps.cache-dir.outputs.composer-dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
+      - uses: actions/cache@v4
+        with:
+          path: |
+            **/node_modules
+            ${{ steps.cache-dir.outputs.npm-dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
         with:
           # We will start DDEV after setting the environment
           autostart: false
+
+      - name: Get DDEV version
+        id: ddev_version
+        run: echo "ddev_version=$(ddev --version | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_OUTPUT
+
+      - name: Cache Docker images
+        uses: ScribeMD/docker-cache@0.5.0
+        with:
+          key: ddev-images-${{ runner.os }}-${{ steps.ddev_version.outputs.ddev_version }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
 
       - name: Set the platform.sh token
         run: |
@@ -89,7 +123,7 @@ jobs:
       - name: Build front-end
         run: |
           cd web/themes/custom/contribtracker
-          npm ci
+          npm ci  --prefer-offline --no-audit
           gulp
 
       - name: Run phpstan
@@ -128,5 +162,5 @@ jobs:
     steps:
       - uses: axelerant/platformsh-deploy-action@main
         with:
-          project-id: 'brbqplxd7ycq6'
+          project-id: "brbqplxd7ycq6"
           cli-token: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
