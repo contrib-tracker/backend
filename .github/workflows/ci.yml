@@ -102,12 +102,12 @@ jobs:
 
       - name: Get DDEV version
         id: ddev_version
-        run: echo "ddev_version_hash=$(ddev --version | md5)" >> $GITHUB_OUTPUT
+        run: echo "ddev_version=$(ddev --version | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_OUTPUT
 
       - name: Cache Docker images
         uses: ScribeMD/docker-cache@0.5.0
         with:
-          key: ddev-images-${{ runner.os }}-${{ steps.ddev_version.outputs.ddev_version_hash }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
+          key: ddev-images-${{ runner.os }}-${{ steps.ddev_version.outputs.ddev_version }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
 
       - name: Set the platform.sh token
         run: |
