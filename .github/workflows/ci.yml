@@ -43,8 +43,8 @@ jobs:
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          npm ci
-          npm run lint
+          yarn install --frozen-lockfile
+          yarn lint
 
 
   drupal_test:
