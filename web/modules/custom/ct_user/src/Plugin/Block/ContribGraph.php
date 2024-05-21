@@ -20,7 +20,7 @@ class ContribGraph extends BlockBase {
    */
   public function build() {
     return [
-    '#theme' => 'contrib_graph',
+      '#theme' => 'contrib_graph',
     ];
   }
 
