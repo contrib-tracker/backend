@@ -56,8 +56,8 @@ jobs:
       - name: Frontend Code Quality
         run: |
           cd web/themes/custom/contribtracker
-          npm ci --prefer-offline --no-audit
-          npm run lint
+          bun install --frozen-lockfile
+          bun run lint
 
   drupal_test:
     runs-on: ubuntu-latest
