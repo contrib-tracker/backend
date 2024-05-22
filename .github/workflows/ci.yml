@@ -129,8 +129,8 @@ jobs:
       - name: Build front-end
         run: |
           cd web/themes/custom/contribtracker
-          npm ci  --prefer-offline --no-audit
-          gulp
+          bun install --frozen-lockfile
+          bun run build
 
       - name: Run phpstan
         run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
