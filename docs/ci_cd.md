@@ -8,6 +8,7 @@ The CI workflow is triggered on:
 - Push events to the `main` branch.
 - Push events that create new tags.
 - Pull request events.
+- Please refer to [Workflow triggers](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows) for more details.
 
 ## Concurrency Control
 
@@ -35,10 +36,6 @@ This job performs Drupal code quality checks using GrumPHP.
 
 This job performs frontend code quality checks.
 
-#### Runs on:
-
-- `ubuntu-latest` with `node:lts` container
-
 #### Steps:
 
 - **Check out repository code:**
@@ -55,11 +52,7 @@ This job performs frontend code quality checks.
 
 ### 3. Drupal Test (`drupal_test`)
 
-This job runs tests for the Drupal site using various tools including Cypress and PHPUnit using ddev.
-
-#### Runs on:
-
-- `ubuntu-latest`
+This job runs tests for the Drupal site using various tools including Cypress and PHPUnit using DDEV.
 
 #### Environment Variables:
 
@@ -78,26 +71,26 @@ This job runs tests for the Drupal site using various tools including Cypress an
   - Restores the cache if it exists based on the key.
 
 - **Setup DDEV:**
-  - Uses the [ddev/github-action-setup-ddev](https://github.com/ddev/github-action-setup-ddev) action to install ddev.
+  - Uses the [ddev/github-action-setup-ddev](https://github.com/ddev/github-action-setup-ddev) action to install DDEV.
   - Starts DDEV after setting the environment.
 
 - **Get DDEV version:**
   - Gets the current DDEV version.
 
 - **Cache Docker images:**
-  - Uses the [ScribeMD/docker-cache](https://github.com/ScribeMD/docker-cache) action to cache Docker images. It caches all ddev docker images.
-  - Please list out all `docker-composer-*.yaml` OR `Dockerfile` files to `hashFile` for generating the key so cache can be invalidated if any of it changes.
+  - Uses the [ScribeMD/docker-cache](https://github.com/ScribeMD/docker-cache) action to cache Docker images. It caches all DDEV Docker images.
+  - Lists out all `docker-compose-*.yaml` or `Dockerfile` files to `hashFile` for generating the key, so cache can be invalidated if any of these files change.
 
 - **Set the platform.sh token:**
   - Configures the platform.sh token for DDEV and starts DDEV.
 
 - **Install the site:**
-  - Installs Composer dependencies
-  - pulls the db and files from platform.sh
-  - deploys the site using Drush.
+  - Installs Composer dependencies.
+  - Pulls the database and files from platform.sh.
+  - Deploys the site using Drush.
 
 - **Build front-end:**
-  - Installs npm dependencies and build the frontend assets.
+  - Installs npm dependencies and builds the frontend assets.
 
 - **Run phpstan:**
   - Runs phpstan check.
@@ -106,21 +99,20 @@ This job runs tests for the Drupal site using various tools including Cypress an
   - Runs PHPUnit tests.
 
 - **Change admin password for Cypress tests:**
-  - Changes the admin password so that cypress can login to the site and facilitate Cypress tests.
+  - Changes the admin password so that Cypress can log in to the site and facilitate Cypress tests.
 
 - **Cypress Test with Percy Integration:**
   - Runs Cypress tests with Percy integration.
-  - Please refer [Percy Doc](https://www.browserstack.com/docs/percy/overview/basics)
-  - If PERCY_TOKEN not present, it will log an error message and continue with cypress run
-  - If you don't want percy integration, you can use `cyress run` for cypress test
+  - Refer to [Percy Documentation](https://www.browserstack.com/docs/percy/overview/basics).
+  - If `PERCY_TOKEN` is not present, it logs an error message and continues with the Cypress run.
+  - If you don't want Percy integration, you can use `cypress run` for Cypress tests:
     ```yaml
       - name: Cypress Test
         run: ddev cypress-run
     ```
 
-
 - **Save Cypress recordings:**
-  - Uploads Cypress test recordings(Videos and Screenshots) as artifacts. You can download artifacts from action detail page at the bottom on GitHub.
+  - Uploads Cypress test recordings (videos and screenshots) as artifacts. You can download artifacts from the action detail page at the bottom on GitHub.
 
 ### 4. Deploy (`deploy`)
 
