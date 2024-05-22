@@ -139,3 +139,13 @@ This job deploys the code to platform.sh.
 - **Deploy to platform.sh:**
   - Uses the [axelerant/platformsh-deploy-action](https://github.com/axelerant/platformsh-deploy-action) action to deploy the code.
   - Requires the `project-id` and `cli-token` inputs.
+
+## References
+
+- [Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
+- [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows)
+- [Drupal Quality Checker](https://github.com/axelerant/drupal-quality-checker)
+- [Defining outputs for jobs](https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs)
+- [Storing workflow data as artifacts](https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts)
+- [Using Secrets in GitHub Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
+- [Example Workflows](https://github.com/actions/starter-workflows)
