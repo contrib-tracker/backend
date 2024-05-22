@@ -30,3 +30,18 @@ This job performs Drupal code quality checks using GrumPHP.
     - Any tasks added here must be present in `grumphp.yml`
     - Please refer [hussainweb/drupalqa-action](https://github.com/hussainweb/drupalqa-action) for more details
 
+### 2. Frontend Code Quality (`frontend_codequality`)
+
+- **Runs on:** `ubuntu-latest` with `node:lts` container
+- **Steps:**
+  - **Check out repository code:**
+    - Checks out the repository's code to the runner using action [actions/checkout](https://github.com/actions/checkout).
+
+  - **Get Cache Directories:**
+    - This step uses action [actions/cache](https://github.com/actions/cache)
+    - It caches npm cache dir and node_modules directory to speed up build times.
+    - Restores the cache if exists based on key
+    - Please refer how [$GITHUB_OUTPUT](https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs) works for more details
+
+  - **Frontend Code Quality:**
+    - Installs npm dependencies and runs linting checks for the frontend code.
