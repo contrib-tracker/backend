@@ -53,3 +53,60 @@ This job performs frontend code quality checks.
 - **Frontend Code Quality:**
   - Installs npm dependencies and runs linting checks for the frontend code.
 
+### 3. Drupal Test (`drupal_test`)
+
+This job runs tests for the Drupal site using various tools including Cypress and PHPUnit.
+
+#### Runs on:
+
+- `ubuntu-latest`
+
+#### Environment Variables:
+
+- `CYPRESS_ADMIN_USERNAME`: ct-admin
+- `CYPRESS_ADMIN_PASSWORD`: ct-admin
+- `PERCY_TOKEN`: `${{ secrets.PERCY_TOKEN }}`
+
+#### Steps:
+
+- **Check out repository code:**
+  - Checks out the repository's code to the runner using the [actions/checkout](https://github.com/actions/checkout) action.
+
+- **Get Cache Directories:**
+  - This step uses the [actions/cache](https://github.com/actions/cache) action.
+  - Caches Composer and npm cache directories to speed up build times.
+  - Restores the cache if it exists based on the key.
+
+- **Setup DDEV:**
+  - Uses the [ddev/github-action-setup-ddev](https://github.com/ddev/github-action-setup-ddev) action.
+  - Starts DDEV after setting the environment.
+
+- **Get DDEV version:**
+  - Gets the current DDEV version.
+
+- **Cache Docker images:**
+  - Uses the [ScribeMD/docker-cache](https://github.com/ScribeMD/docker-cache) action to cache Docker images.
+
+- **Set the platform.sh token:**
+  - Configures the platform.sh token for DDEV and starts DDEV.
+
+- **Install the site:**
+  - Installs Composer dependencies, pulls the site from platform.sh, and deploys the site using Drush.
+
+- **Build front-end:**
+  - Installs npm dependencies and runs Gulp to build the frontend assets.
+
+- **Run phpstan:**
+  - Runs phpstan using GrumPHP.
+
+- **Test:**
+  - Runs PHPUnit tests.
+
+- **Change admin password for Cypress tests:**
+  - Changes the admin password to facilitate Cypress tests.
+
+- **Cypress Test with Percy Integration:**
+  - Runs Cypress tests with Percy integration.
+
+- **Save Cypress recordings:**
+  - Uploads Cypress test recordings as artifacts.
