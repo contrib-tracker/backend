@@ -12,5 +12,21 @@ The CI workflow is triggered on:
 
 The workflow enforces concurrency, ensuring that only one workflow run is active for a given branch or tag at a time, canceling any in-progress runs if a new run is triggered.
 
+## Jobs
 
+### 1. Drupal Code Quality (`drupal_codequality`)
+
+This job performs Drupal code quality checks using GrumPHP.
+
+#### Let's break down each step
+
+  - **Check out repository code:**
+    - Checks out the repository's code to the runner using action [actions/checkout](https://github.com/actions/checkout).
+
+  - **Drupal Code Quality:**
+    - It uses GrumPHP to check Drupal Code Quality.
+    - You can change php version using `php-version`
+    - You can add/remove tasks as per project needs.
+    - Any tasks added here must be present in `grumphp.yml`
+    - Please refer [hussainweb/drupalqa-action](https://github.com/hussainweb/drupalqa-action) for more details
 
