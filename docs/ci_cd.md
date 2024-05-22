@@ -110,3 +110,29 @@ This job runs tests for the Drupal site using various tools including Cypress an
 
 - **Save Cypress recordings:**
   - Uploads Cypress test recordings as artifacts.
+
+### 4. Deploy (`deploy`)
+
+This job deploys the code to platform.sh.
+
+#### Environment:
+
+- The environment name is determined based on the branch (`main` for production, others for feature environments).
+
+#### Needs:
+
+- Depends on the successful completion of the `drupal_codequality` and `drupal_test` jobs.
+
+#### Runs on:
+
+- `ubuntu-latest`
+
+#### Conditions:
+
+- This job will not run for Dependabot PRs as they can't access secrets.
+
+#### Steps:
+
+- **Deploy to platform.sh:**
+  - Uses the [axelerant/platformsh-deploy-action](https://github.com/axelerant/platformsh-deploy-action) action to deploy the code.
+  - Requires the `project-id` and `cli-token` inputs.
