@@ -1,8 +1,9 @@
 # Continuous Integration and Deployment
 
-This GitHub Actions workflow runs tests, code quality checks, and deploys code to platform.sh.
+This GitHub Actions workflow runs tests, performs code quality checks, and deploys code to platform.sh.
 
 ## Trigger
+
 The CI workflow is triggered on:
 - Push events to the `main` branch.
 - Push events that create new tags.
@@ -18,30 +19,37 @@ The workflow enforces concurrency, ensuring that only one workflow run is active
 
 This job performs Drupal code quality checks using GrumPHP.
 
-#### Let's break down each step
+#### Steps:
 
-  - **Check out repository code:**
-    - Checks out the repository's code to the runner using action [actions/checkout](https://github.com/actions/checkout).
+- **Check out repository code:**
+  - Checks out the repository's code to the runner using the [actions/checkout](https://github.com/actions/checkout) action.
 
-  - **Drupal Code Quality:**
-    - It uses GrumPHP to check Drupal Code Quality.
-    - You can change php version using `php-version`
-    - You can add/remove tasks as per project needs.
-    - Any tasks added here must be present in `grumphp.yml`
-    - Please refer [hussainweb/drupalqa-action](https://github.com/hussainweb/drupalqa-action) for more details
+- **Drupal Code Quality:**
+  - Uses GrumPHP to check Drupal code quality.
+  - You can change the PHP version using the `php-version` input.
+  - You can add/remove tasks as per project needs.
+  - Any tasks added here must be present in `grumphp.yml`.
+  - Refer to the [hussainweb/drupalqa-action](https://github.com/hussainweb/drupalqa-action) for more details.
 
 ### 2. Frontend Code Quality (`frontend_codequality`)
 
-- **Runs on:** `ubuntu-latest` with `node:lts` container
-- **Steps:**
-  - **Check out repository code:**
-    - Checks out the repository's code to the runner using action [actions/checkout](https://github.com/actions/checkout).
+This job performs frontend code quality checks.
 
-  - **Get Cache Directories:**
-    - This step uses action [actions/cache](https://github.com/actions/cache)
-    - It caches npm cache dir and node_modules directory to speed up build times.
-    - Restores the cache if exists based on key
-    - Please refer how [$GITHUB_OUTPUT](https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs) works for more details
+#### Runs on:
 
-  - **Frontend Code Quality:**
-    - Installs npm dependencies and runs linting checks for the frontend code.
+- `ubuntu-latest` with `node:lts` container
+
+#### Steps:
+
+- **Check out repository code:**
+  - Checks out the repository's code to the runner using the [actions/checkout](https://github.com/actions/checkout) action.
+
+- **Get Cache Directories:**
+  - This step uses the [actions/cache](https://github.com/actions/cache) action.
+  - Caches the npm cache directory and node_modules directory to speed up build times.
+  - Restores the cache if it exists based on the key.
+  - Refer to how [$GITHUB_OUTPUT](https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs) works for more details.
+
+- **Frontend Code Quality:**
+  - Installs npm dependencies and runs linting checks for the frontend code.
+
