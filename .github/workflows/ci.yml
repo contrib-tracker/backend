@@ -40,6 +40,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
+      - name: Install bun.sh
+        uses: oven-sh/setup-bun@v1
+
       - name: Get Cache Directories
         id: cache-dir
         run: echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
