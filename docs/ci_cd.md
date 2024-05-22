@@ -55,7 +55,7 @@ This job performs frontend code quality checks.
 
 ### 3. Drupal Test (`drupal_test`)
 
-This job runs tests for the Drupal site using various tools including Cypress and PHPUnit.
+This job runs tests for the Drupal site using various tools including Cypress and PHPUnit using ddev.
 
 #### Runs on:
 
@@ -78,38 +78,49 @@ This job runs tests for the Drupal site using various tools including Cypress an
   - Restores the cache if it exists based on the key.
 
 - **Setup DDEV:**
-  - Uses the [ddev/github-action-setup-ddev](https://github.com/ddev/github-action-setup-ddev) action.
+  - Uses the [ddev/github-action-setup-ddev](https://github.com/ddev/github-action-setup-ddev) action to install ddev.
   - Starts DDEV after setting the environment.
 
 - **Get DDEV version:**
   - Gets the current DDEV version.
 
 - **Cache Docker images:**
-  - Uses the [ScribeMD/docker-cache](https://github.com/ScribeMD/docker-cache) action to cache Docker images.
+  - Uses the [ScribeMD/docker-cache](https://github.com/ScribeMD/docker-cache) action to cache Docker images. It caches all ddev docker images.
+  - Please list out all `docker-composer-*.yaml` OR `Dockerfile` files to `hashFile` for generating the key so cache can be invalidated if any of it changes.
 
 - **Set the platform.sh token:**
   - Configures the platform.sh token for DDEV and starts DDEV.
 
 - **Install the site:**
-  - Installs Composer dependencies, pulls the site from platform.sh, and deploys the site using Drush.
+  - Installs Composer dependencies
+  - pulls the db and files from platform.sh
+  - deploys the site using Drush.
 
 - **Build front-end:**
-  - Installs npm dependencies and runs Gulp to build the frontend assets.
+  - Installs npm dependencies and build the frontend assets.
 
 - **Run phpstan:**
-  - Runs phpstan using GrumPHP.
+  - Runs phpstan check.
 
 - **Test:**
   - Runs PHPUnit tests.
 
 - **Change admin password for Cypress tests:**
-  - Changes the admin password to facilitate Cypress tests.
+  - Changes the admin password so that cypress can login to the site and facilitate Cypress tests.
 
 - **Cypress Test with Percy Integration:**
   - Runs Cypress tests with Percy integration.
+  - Please refer [Percy Doc](https://www.browserstack.com/docs/percy/overview/basics)
+  - If PERCY_TOKEN not present, it will log an error message and continue with cypress run
+  - If you don't want percy integration, you can use `cyress run` for cypress test
+    ```yaml
+      - name: Cypress Test
+        run: ddev cypress-run
+    ```
+
 
 - **Save Cypress recordings:**
-  - Uploads Cypress test recordings as artifacts.
+  - Uploads Cypress test recordings(Videos and Screenshots) as artifacts. You can download artifacts from action detail page at the bottom on GitHub.
 
 ### 4. Deploy (`deploy`)
 
