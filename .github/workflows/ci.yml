@@ -92,10 +92,10 @@ jobs:
         with:
           path: |
             **/node_modules
-            ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-dtj-${{ hashFiles('**/bun.lockb') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-bun-dtj-
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
