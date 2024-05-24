@@ -12,3 +12,4 @@ nav:
   - Custom Modules and Themes: 'custom_modules.md'
   - Testing: 'testing.md'
   - Monitoring and Logging: 'monitoring.md'
+  - CI/CD: 'ci_cd.md'
