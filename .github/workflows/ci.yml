@@ -101,6 +101,8 @@ jobs:
         with:
           # We will start DDEV after setting the environment
           autostart: false
+          # v1.23.1 has an issue with `ddev pull` command.
+          version: 1.23.0
 
       - name: Get DDEV version
         id: ddev_version
