@@ -13,9 +13,12 @@
   &--wrapper {
     display: block;
     padding: 0;
-    border: 1px #e1e4e8 solid;
+    border: 1px solid var(--c-light-silver);
     margin: 0;
     position: relative;
+    padding: 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 
   ul,
@@ -42,7 +45,8 @@
     }
 
     li {
-      background: #eee;
+      border-radius: 2px;
+      outline: 1px solid rgba(27, 31, 35, 0.06);
       margin: 1.5px;
 
       &:hover {
@@ -58,8 +62,8 @@
           width: 180px;
           padding: 10px 5px;
           text-align: center;
-          background-color: #333;
-          color: #f1f1f1;
+          background-color: var(--c-navy-dark);
+          color: var(--c-white);
         }
       }
 
@@ -72,23 +76,23 @@
       }
 
       &[data-activity='0'] {
-        background: #eee;
+        background: var(--c-bright-gray);
       }
 
       &[data-activity='1'] {
-        background: #d6e685;
+        background: var(--c-teal-green);
       }
 
       &[data-activity='2'] {
-        background: #8cc665;
+        background: var(--c-iridescent-green);
       }
 
       &[data-activity='3'] {
-        background: #44a340;
+        background: var(--c-kelly-green);
       }
 
       &[data-activity='4'] {
-        background: #1e6823;
+        background: var(--c-berry-green);
       }
     }
   }
@@ -107,9 +111,9 @@
   &--week {
     width: 15px;
     position: absolute;
-    left: -40px;
+    left: -28px;
     top: 30px;
-    font-size: 1rem;
+    font-size: 0.75rem;
 
     li:nth-child(2) {
       margin: 14px 0;
@@ -130,7 +134,7 @@
 
     li {
       margin-left: 44px;
-      font-size: 1rem;
+      font-size: 0.75rem;
 
       &:nth-child(1) {
         margin-left: 30px;
@@ -154,6 +158,7 @@
     align-items: center;
     gap: 14px;
     margin-top: 30px;
+    font-size: 0.75rem;
 
     .contrib-measures {
       display: flex;
@@ -169,10 +174,10 @@
         right: 0px;
         top: -14px;
         content: '';
-        background: black;
+        background: var(--c-title);
         rotate: 45deg;
-        border-right: solid 1px #000;
-        border-bottom: solid 1px #000;
+        border-right: solid 1px var(--c-title);
+        border-bottom: solid 1px var(--c-title);
         border-top-left-radius: 50px;
       }
     }
@@ -194,9 +199,9 @@
     &::before {
       max-width: 200px;
       padding: 0.5rem 0.75rem;
-      color: #fff;
+      color: var(--c-white);
       text-align: center;
-      background-color: #000;
+      background-color: var(--c-title);
       border-radius: 0.25rem;
       content: attr(data-title);
       opacity: 0;
@@ -222,10 +227,10 @@
         right: 0px;
         top: 16px;
         content: '';
-        background: black;
+        background: var(--c-title);
         rotate: 224deg;
-        border-right: solid 1px #000;
-        border-bottom: solid 1px #000;
+        border-right: solid 1px var(--c-title);
+        border-bottom: solid 1px var(--c-title);
         border-top-left-radius: 50px;
       }
     }

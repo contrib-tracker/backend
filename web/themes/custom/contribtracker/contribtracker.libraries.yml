@@ -25,7 +25,7 @@ contrib-graph:
   version: VERSION
   css:
     theme:
-      dist/css/components/contrib-graph.css: {}
+      dist/css/components/blocks/graph/contrib-graph.css: {}
   js:
     //cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js: { external: true }
     js/contrib-graph.js: {}

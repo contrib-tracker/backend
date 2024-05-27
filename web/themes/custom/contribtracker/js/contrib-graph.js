@@ -112,7 +112,7 @@
             activityCountstat = 4;
           }
 
-          output += "<li class='btn--tooltip' " + `data-title="${activityCount} contributions on ${contriDate}"` + `data-activity="${activityCountstat}"` + ">" + "</li>";
+          output += "<li class='btn--tooltip' " + `data-title="${activityCount} ${Drupal.t('contributions on')} ${contriDate}"` + `data-activity="${activityCountstat}"` + ">" + "</li>";
 
           var duration = moment.duration({ days: 1 });
           day = moment(day).subtract(duration);
