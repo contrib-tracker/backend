@@ -156,8 +156,8 @@ jobs:
           retention-days: 3
 
   deploy:
-    environment:
-      name: ${{ github.ref_name == 'main' && 'production' || 'feature' }}
+    # environment:
+    #   name: ${{ github.ref_name == 'main' && 'production' || 'feature' }}
     needs:
       - drupal_codequality
       - drupal_test
