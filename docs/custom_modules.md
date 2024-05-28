@@ -16,11 +16,9 @@ The custom modules used for this project are:
 
 ### [Drupal Contribution Tracker](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_drupal)
 
-The Drupal.org Contribution Tracker module (ct_drupal) automates tracking user contributions made specifically on the Drupal.org platform. It achieves this by:
-
 The Drupal.org Contribution Tracker module (ct_drupal) integrates with the ct_manager module to automate tracking user contributions made specifically on the Drupal.org platform. ct_manager acts as a central coordinator for various contribution tracking plugins, including ct_drupal.
 
-Here's how ct_drupal leverages ct_manager for contribution tracking:
+Here's how `ct_drupal` leverages `ct_manager` for contribution tracking:
 
 - It utilizes a `ContributionSource` plugin named `DrupalContribution.php`. This plugin interacts with the Drupal.org API via a wrapper module built around Guzzle 6 for efficient communication.
 
@@ -44,7 +42,7 @@ In essence, this module simplifies tracking user activity on Github by offering 
 
 ### [Contribution Tracker Reports](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_reports)
 
-This module provides functionality to generate reports based on contribution data.
+The Contribution Tracker Reports module (ct_reports) provides functionality to generate reports based on contribution data.
 
 - The Contribution Tracker Reports module builds upon the existing Contribution Tracker functionality in Drupal by providing tools to analyze and visualize contribution data. The report can be generated based on multiple parameters such as Contribution Type, Technology, Title, Name and Contribution Date.
 
@@ -56,7 +54,7 @@ Overall, the Contribution Tracker Reports module empowers users to leverage the 
 
 ### [Contrib Tracker Users](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_user)
 
-The Contribution Tracker User module focuses on managing user login activities within the Contrib Tracker system.
+The Contribution Tracker User module (ct_user) focuses on managing user login activities within the Contrib Tracker system.
 
 - It leverages the `social_auth` module, suggesting a focus on social login functionalities for Contrib Tracker.
 
