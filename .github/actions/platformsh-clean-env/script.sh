@@ -11,7 +11,7 @@ echo "Environment name is $NAME"
 
 if [ "$TYPE" = "development" ] && [ -n "$NAME" ]; then
   echo "Deactivating the env on platform.sh"
-  platform environment:delete --project $PLATFORM_PROJECT_ID $PR_REF -y
+  platform environment:delete --project $PLATFORM_PROJECT_ID --delete-branch $PR_REF -y
 else
   echo "No env found for the PR on Platform.sh"
 fi
