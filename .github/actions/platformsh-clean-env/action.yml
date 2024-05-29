@@ -1,0 +1,31 @@
+name: "Delele PR environments from platform.sh"
+description: "Set up platformsh CLI and clean PR env"
+inputs:
+  project-id:
+    description: "Project ID on platform.sh"
+    required: true
+  cli-token:
+    description: "Token for platform.sh CLI"
+    required: true
+  php-version:
+    description: "PHP version to setup for the CLI"
+    required: true
+    default: "8.1"
+runs:
+  using: "composite"
+  steps:
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ inputs.php-version }}
+    - uses: adam7/platformsh-cli-action@v1.2
+      with:
+        token: ${{ inputs.cli-token }}
+    - run: ${{ github.action_path }}/script.sh
+      shell: bash
+      env:
+        PLATFORM_PROJECT_ID: ${{ inputs.project-id }}
+        PLATFORMSH_CLI_TOKEN: ${{ inputs.cli-token }}
+        PR_REF: "${{ github.event.pull_request.number }}/merge"
+branding:
+  icon: upload-cloud
+  color: orange
