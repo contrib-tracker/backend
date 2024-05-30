@@ -22,6 +22,15 @@ function contribtracker_theme_suggestions_form_alter(array &$suggestions, array 
 }
 
 /**
+ * Implements hook_theme_suggestions_table_alter().
+ */
+function contribtracker_theme_suggestions_table_alter(array &$suggestions, array $variables) {
+  if (isset($variables['header']['id']) && isset($variables['header']['provider_user_id'])) {
+    $suggestions[] = 'table__social__auth';
+  }
+}
+
+/**
  * Implements hook_theme_preprocess_page_alter().
  */
 function contribtracker_theme_preprocess_page_alter(array &$suggestions, array $variables) {

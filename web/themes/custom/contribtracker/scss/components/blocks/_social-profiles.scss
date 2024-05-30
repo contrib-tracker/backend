@@ -1,0 +1,54 @@
+@import '../../settings/settings.all';
+
+.user__social-profiles {
+  max-width: var(--width);
+  width: calc(100% - 30px);
+  margin: 24px 16px;
+  background-color: var(--c-white);
+  border-radius: 4px;
+  padding: 16px;
+  overflow: auto;
+
+  @include breakpoint($desktop) {
+    margin: 24px auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    text-align: left;
+    border-spacing: 10px;
+  }
+
+  td {
+    padding-top: 10px;
+    padding-right: 20px;
+
+    &:nth-child(2) {
+      a {
+        color: var(--c-brand);
+        text-transform: capitalize;
+        font-family: var(--f-secondary);
+        font-size: 0.75rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .delete {
+    a {
+      font-size: 0;
+      text-decoration: none;
+
+      &::before {
+        @include font-icon;
+
+        content: '\e9ac';
+        margin-right: 5px;
+        color: var(--c-brand);
+        vertical-align: middle;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
