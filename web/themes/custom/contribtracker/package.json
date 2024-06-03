@@ -36,7 +36,7 @@
     "postcss": "^8.4.38",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.2.5",
-    "sass": "^1.77.2",
+    "sass": "^1.77.4",
     "sass-toolkit": "^2.10.2",
     "stylelint": "^15.11.0",
     "stylelint-prettier": "^4.1.0",
