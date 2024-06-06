@@ -1,30 +1,52 @@
 {{ attach_library('contribtracker/contrib-graph') }}
-<div>
-    <h2{{ title_attributes.addClass('nav__logo-title') }}>{{ 'Contribution Graph'|t }}</h2>
-    <div class='activity-chart container'>
-        <h2 class="contrib__listing--title">{{ 'Contribution Graph'|t }}</h2>
-        <div class="activity-chart--wrapper">
-        <div class="activity-chart--month" id="month"></div>
+<div class="contribution-graph__wrapper">
+  <h2{{ title_attributes.addClass('nav__logo-title') }}>{{ 'Contribution Graph'|t }}</h2>
 
-        <ol class="activity-chart--week">
-            <li>{{ 'Mon'|t }}</li>
-            <li>{{ 'Wed'|t }}</li>
-            <li>{{ 'Fri'|t }}</li>
-        </ol>
+  <div class='activity-chart container'>
+    <h2 class="contrib__listing--title">{{ 'Contribution Graph'|t }}</h2>
 
-        <div class="activity-chart--days" id="days"></div>
+    <div class="activity-chart--wrapper">
+    <div class="contribution-graph__content-wrapper">
+        <div class="contribution-graph__content">
+          <div class="activity-chart--month" id="month">
+            <div class="skeleton__wrapper">
+              <div class="skeleton__placeholder"></div>
+            </div>
+          </div>
 
-        <div class="key">
+          <div class="activity-chart__content">
+            <ol class="activity-chart--week">
+              <li>{{ 'Mon'|t }}</li>
+              <li>{{ 'Wed'|t }}</li>
+              <li>{{ 'Fri'|t }}</li>
+            </ol>
+
+            <div class="activity-chart--days" id="days">
+              <div class="skeleton__wrapper skeleton__wrapper--multiple">
+                <div class="skeleton__placeholder"></div>
+                <div class="skeleton__placeholder"></div>
+                <div class="skeleton__placeholder"></div>
+                <div class="skeleton__placeholder"></div>
+                <div class="skeleton__placeholder"></div>
+                <div class="skeleton__placeholder"></div>
+                <div class="skeleton__placeholder"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="key">
             <span>{{ 'Less'|t }}</span>
             <ul class="contrib-measures activity-chart--days">
-                <li class="btn--tooltip" data-title="{{ 'No Contributions'|t }}" data-activity='0'></li>
-                <li class="btn--tooltip" data-title="{{ '1 Contributions'|t }}" data-activity='1'></li>
-                <li class="btn--tooltip" data-title="{{ '2 Contributions'|t }}" data-activity='2'></li>
-                <li class="btn--tooltip" data-title="{{ '3 Contributions'|t }}" data-activity='3'></li>
-                <li class="btn--tooltip" data-title="{{ '4+ Contributions'|t }}" data-activity='4'></li>
+              <li class="btn--tooltip" data-title="{{ 'No Contributions'|t }}" data-activity='0'></li>
+              <li class="btn--tooltip" data-title="{{ '1 Contributions'|t }}" data-activity='1'></li>
+              <li class="btn--tooltip" data-title="{{ '2 Contributions'|t }}" data-activity='2'></li>
+              <li class="btn--tooltip" data-title="{{ '3 Contributions'|t }}" data-activity='3'></li>
+              <li class="btn--tooltip" data-title="{{ '4+ Contributions'|t }}" data-activity='4'></li>
             </ul>
             <span>{{ 'More'|t }}</span>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>

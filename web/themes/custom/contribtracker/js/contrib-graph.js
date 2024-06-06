@@ -45,7 +45,7 @@
 
       // Function to draw the calendar with the data.
       function drawCalendar(data) {
-        var output = "<ol><div class='activity-chart--wd'>";
+        var output = "<ol class='activity-chart--wd'>";
         var day = moment();
 
         /* Calculate the offset for days of the week to line up correctly */
@@ -118,7 +118,7 @@
           day = moment(day).subtract(duration);
         }
 
-        output += "</div></ol>";
+        output += "</ol>";
         document.getElementById("month").innerHTML = outputMonth;
         document.getElementById("days").innerHTML = output;
       }
