@@ -48,7 +48,7 @@ class GetUserPatchesController extends ControllerBase {
    */
   public function content($current_user_id) {
     $data = [];
-    $query = \Drupal::entityQueryAggregate('node')->condition('type', 'code_contribution')
+    $query = $this->entityTypeManager->getStorage('node')->getAggregateQuery()->condition('type', 'code_contribution')
       ->condition('status', TRUE)
       ->condition('field_contribution_author', $current_user_id)->condition('field_code_contrib_patches_count', 0, '>')
       ->groupBy('field_contribution_date')
