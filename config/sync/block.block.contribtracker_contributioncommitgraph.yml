@@ -1,0 +1,33 @@
+uuid: 6c160ff3-e74a-46fa-82ee-a4ff98af6353
+langcode: en
+status: true
+dependencies:
+  module:
+    - ct_user
+    - system
+    - user
+  theme:
+    - contribtracker
+id: contribtracker_contributioncommitgraph
+theme: contribtracker
+region: content
+weight: 0
+provider: null
+plugin: contrib_graph_blocl
+settings:
+  id: contrib_graph_blocl
+  label: 'Contribution commit graph'
+  label_display: '0'
+  provider: ct_user
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

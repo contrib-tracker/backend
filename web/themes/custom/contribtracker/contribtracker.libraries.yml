@@ -21,3 +21,13 @@ select2:
   dependencies:
     - core/jQuery
 
+contrib-graph:
+  version: VERSION
+  css:
+    theme:
+      dist/css/components/blocks/graph/contrib-graph.css: {}
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js: { external: true }
+    js/contrib-graph.js: {}
+  dependencies:
+    - core/jQuery

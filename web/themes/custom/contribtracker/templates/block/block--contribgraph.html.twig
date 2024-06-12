@@ -1,0 +1,36 @@
+{% block content_graph %}
+  {{ attach_library('contribtracker/contrib-graph') }}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes.addClass('nav__logo-title') }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    <div class='activity-chart container'>
+      <h2 class="contrib__listing--title">{{ 'Contribution Graph'|t }}</h2>
+      <div class="activity-chart--wrapper">
+        <div class="activity-chart--month" id="month"></div>
+
+        <ol class="activity-chart--week">
+            <li>{{ 'Mon'|t }}</li>
+            <li>{{ 'Wed'|t }}</li>
+            <li>{{ 'Fri'|t }}</li>
+        </ol>
+
+        <div class="activity-chart--days" id="days"></div>
+
+        <div class="key">
+          <span>{{ 'Less'|t }}</span>
+          <ul class="contrib-measures activity-chart--days">
+              <li class="btn--tooltip" data-title="{{ 'No Contributions'|t }}" data-activity='0'></li>
+              <li class="btn--tooltip" data-title="{{ '1 Contributions'|t }}" data-activity='1'></li>
+              <li class="btn--tooltip" data-title="{{ '2 Contributions'|t }}" data-activity='2'></li>
+              <li class="btn--tooltip" data-title="{{ '3 Contributions'|t }}" data-activity='3'></li>
+              <li class="btn--tooltip" data-title="{{ '4+ Contributions't }}" data-activity='4'></li>
+          </ul>
+          <span>{{ 'More'|t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
