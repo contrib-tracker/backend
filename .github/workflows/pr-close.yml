@@ -1,0 +1,18 @@
+name: Clean Platform.sh env on PR Close
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  on-pr-close:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clean Platform.sh env if available
+      uses: axelerant/platformsh-action@v1
+      with:
+        action: 'clean-pr-env'
+        project-id: 'brbqplxd7ycq6'
+        cli-token: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
+
