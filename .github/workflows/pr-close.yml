@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Clean Platform.sh env if available
-      uses: axelerant/platformsh-action@main
+      uses: axelerant/platformsh-action@v1
       with:
         action: 'clean-pr-env'
         project-id: 'brbqplxd7ycq6'
