@@ -170,7 +170,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Deploy to platform.sh
-        uses: axelerant/platformsh-action@main
+        uses: axelerant/platformsh-action@v1
         with:
           action: 'deploy'
           project-id: "brbqplxd7ycq6"
