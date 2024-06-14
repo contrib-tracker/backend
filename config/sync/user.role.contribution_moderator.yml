@@ -20,6 +20,7 @@ dependencies:
     - flag
     - help
     - node
+    - raven
     - rest
     - system
     - taxonomy
@@ -87,6 +88,7 @@ permissions:
   - 'revert event_contribution revisions'
   - 'revert issue revisions'
   - 'revert non_code_contribution revisions'
+  - 'send performance traces to sentry'
   - 'unflag contribution_approval'
   - 'view code_contribution revisions'
   - 'view event revisions'

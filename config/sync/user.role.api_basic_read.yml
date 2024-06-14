@@ -4,10 +4,12 @@ status: true
 dependencies:
   module:
     - file
+    - raven
 id: api_basic_read
 label: 'API basic read'
 weight: -8
 is_admin: null
 permissions:
   - 'delete own files'
+  - 'send performance traces to sentry'
   - 'view user email addresses'
