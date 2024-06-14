@@ -1652,30 +1652,30 @@
         },
         {
             "name": "drupal/better_exposed_filters",
-            "version": "6.0.5",
+            "version": "6.0.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
-                "reference": "6.0.5"
+                "reference": "6.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-6.0.5.zip",
-                "reference": "6.0.5",
-                "shasum": "a325449adf32c13dd8e348bf10979aea301da84e"
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-6.0.6.zip",
+                "reference": "6.0.6",
+                "shasum": "558ca591d450fc64512cae7f98cb4b0241e15ba3"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
-                "drupal/jquery_ui": "^1.6",
-                "drupal/jquery_ui_datepicker": "^2.0",
-                "drupal/jquery_ui_slider": "^2.0.0",
-                "drupal/jquery_ui_touch_punch": "^1.0"
+                "drupal/jquery_ui": "*",
+                "drupal/jquery_ui_datepicker": "*",
+                "drupal/jquery_ui_slider": "*",
+                "drupal/jquery_ui_touch_punch": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.5",
-                    "datestamp": "1713570803",
+                    "version": "6.0.6",
+                    "datestamp": "1716397541",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2621,17 +2621,17 @@
         },
         {
             "name": "drupal/google_tag",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/google_tag.git",
-                "reference": "2.0.4"
+                "reference": "2.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "a56bcdb566bf1af54dc0c8871eb720ba54f1392e"
+                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.5.zip",
+                "reference": "2.0.5",
+                "shasum": "75f5cbdf8ea8c78178a5dfab50cf7ee7777c6491"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10",
@@ -2649,8 +2649,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1709073204",
+                    "version": "2.0.5",
+                    "datestamp": "1716308134",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2839,26 +2839,26 @@
         },
         {
             "name": "drupal/jquery_ui",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_ui.git",
-                "reference": "8.x-1.6"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_ui-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "0ddccdcf35a066de1843e1d9670677ee1a2faac0"
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "3f893843ec30fed18fa1b0cb326e51880b0cb686"
             },
             "require": {
-                "drupal/core": "^9.2 || ^10"
+                "drupal/core": "^9.2 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1668521197",
+                    "version": "8.x-1.7",
+                    "datestamp": "1717002098",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2935,27 +2935,27 @@
         },
         {
             "name": "drupal/jquery_ui_datepicker",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_ui_datepicker.git",
-                "reference": "2.0.0"
+                "reference": "2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_ui_datepicker-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "ce40cf8ab400866bffda1ac3f7e4a5ac20bb3ae5"
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_datepicker-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "22e1cceeba22522cdd23f08ec345a4dfb2e8550f"
             },
             "require": {
-                "drupal/core": "^9.2 || ^10",
-                "drupal/jquery_ui": "^1.6"
+                "drupal/core": "^9.2 || ^10 || 11",
+                "drupal/jquery_ui": "^1.7"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1670871494",
+                    "version": "2.1.0",
+                    "datestamp": "1717094444",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3000,27 +3000,27 @@
         },
         {
             "name": "drupal/jquery_ui_slider",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_ui_slider.git",
-                "reference": "2.0.0"
+                "reference": "2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_ui_slider-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "86b7d71e91013cffafb8021dbf8047745ebc5fd6"
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_slider-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "89e54ccf787ad3eb11fb2ca9e25ea4bfce3df5b1"
             },
             "require": {
-                "drupal/core": "^9.2 || ^10",
-                "drupal/jquery_ui": "^1.6"
+                "drupal/core": "^9.2 || ^10 || ^11",
+                "drupal/jquery_ui": "^1.7"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1670871571",
+                    "version": "2.1.0",
+                    "datestamp": "1717031321",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3053,28 +3053,28 @@
         },
         {
             "name": "drupal/jquery_ui_touch_punch",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_ui_touch_punch.git",
-                "reference": "1.1.0"
+                "reference": "1.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_ui_touch_punch-1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": "4b7e50a98246dfa6ef48e5b12c70277873902824"
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_touch_punch-1.1.1.zip",
+                "reference": "1.1.1",
+                "shasum": "f16bc2ffa500131f43c84427ff213e753de9b6a6"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/core": "^9.2 || ^10 || ^11",
                 "drupal/jquery_ui": "^1.0",
                 "politsin/jquery-ui-touch-punch": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.1.0",
-                    "datestamp": "1662744607",
+                    "version": "1.1.1",
+                    "datestamp": "1717663479",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3184,20 +3184,20 @@
         },
         {
             "name": "drupal/raven",
-            "version": "6.0.0",
+            "version": "6.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/raven.git",
-                "reference": "6.0.0"
+                "reference": "6.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/raven-6.0.0.zip",
-                "reference": "6.0.0",
-                "shasum": "39b690aa22a42cd80f0567e0219850f3ba7c7373"
+                "url": "https://ftp.drupal.org/files/projects/raven-6.0.3.zip",
+                "reference": "6.0.3",
+                "shasum": "bd55037731daf6a07498d27d94615edfa9ac1070"
             },
             "require": {
-                "drupal/core": "^10.2",
+                "drupal/core": "^10.2 || ^11",
                 "sentry/sentry": "^4.4"
             },
             "require-dev": {
@@ -3209,8 +3209,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0",
-                    "datestamp": "1715819918",
+                    "version": "6.0.3",
+                    "datestamp": "1716401085",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6954,16 +6954,16 @@
         },
         {
             "name": "sentry/sentry",
-            "version": "4.7.0",
+            "version": "4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getsentry/sentry-php.git",
-                "reference": "d6769b2a5e6bf19ed3bbfbf52328ceaf8e6fcb1f"
+                "reference": "3cf5778ff425a23f2d22ed41b423691d36f47163"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/d6769b2a5e6bf19ed3bbfbf52328ceaf8e6fcb1f",
-                "reference": "d6769b2a5e6bf19ed3bbfbf52328ceaf8e6fcb1f",
+                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/3cf5778ff425a23f2d22ed41b423691d36f47163",
+                "reference": "3cf5778ff425a23f2d22ed41b423691d36f47163",
                 "shasum": ""
             },
             "require": {
@@ -7027,7 +7027,7 @@
             ],
             "support": {
                 "issues": "https://github.com/getsentry/sentry-php/issues",
-                "source": "https://github.com/getsentry/sentry-php/tree/4.7.0"
+                "source": "https://github.com/getsentry/sentry-php/tree/4.8.0"
             },
             "funding": [
                 {
@@ -7039,7 +7039,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-04-10T13:22:13+00:00"
+            "time": "2024-06-05T13:18:43+00:00"
         },
         {
             "name": "symfony/console",
@@ -8002,16 +8002,16 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v7.0.7",
+            "version": "v7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "23cc173858776ad451e31f053b1c9f47840b2cfa"
+                "reference": "47aa818121ed3950acd2b58d1d37d08a94f9bf55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/23cc173858776ad451e31f053b1c9f47840b2cfa",
-                "reference": "23cc173858776ad451e31f053b1c9f47840b2cfa",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/47aa818121ed3950acd2b58d1d37d08a94f9bf55",
+                "reference": "47aa818121ed3950acd2b58d1d37d08a94f9bf55",
                 "shasum": ""
             },
             "require": {
@@ -8049,7 +8049,7 @@
                 "options"
             ],
             "support": {
-                "source": "https://github.com/symfony/options-resolver/tree/v7.0.7"
+                "source": "https://github.com/symfony/options-resolver/tree/v7.1.1"
             },
             "funding": [
                 {
@@ -8065,7 +8065,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-18T09:29:19+00:00"
+            "time": "2024-05-31T14:57:53+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

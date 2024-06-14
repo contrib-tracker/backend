@@ -13,6 +13,7 @@ dependencies:
     - file
     - filter
     - node
+    - raven
     - shortcut
     - system
     - tour
@@ -40,5 +41,6 @@ permissions:
   - 'edit own event_contribution content'
   - 'edit own issue content'
   - 'edit own non_code_contribution content'
+  - 'send performance traces to sentry'
   - 'use text format basic_html'
   - 'view own field_contrib_moderator_comment'
