@@ -6,3 +6,4 @@ name: 'Contribution Type'
 vid: contribution_type
 description: 'This stores various contribution types like submitting a patch, porting a module, etc.'
 weight: 0
+new_revision: false

@@ -11,7 +11,7 @@ third_party_settings:
 name: Event
 type: event
 description: 'Use <em>Event</em> content type to create events that may be referred to in event contributions.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false

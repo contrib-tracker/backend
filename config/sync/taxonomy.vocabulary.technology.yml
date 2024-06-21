@@ -6,3 +6,4 @@ name: Technology
 vid: technology
 description: 'This vocabulary stores various technologies that are used in contribution.'
 weight: 0
+new_revision: false

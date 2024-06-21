@@ -6,3 +6,4 @@ name: Project
 vid: project
 description: 'Stores projects for various community contributions.'
 weight: 0
+new_revision: false
