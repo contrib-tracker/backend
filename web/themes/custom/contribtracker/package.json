@@ -35,7 +35,7 @@
     "gulp-typescript": "^6.0.0-alpha.1",
     "postcss": "^8.4.38",
     "postcss-scss": "^4.0.9",
-    "prettier": "^3.3.1",
+    "prettier": "^3.3.2",
     "sass": "^1.77.4",
     "sass-toolkit": "^2.10.2",
     "stylelint": "^15.11.0",
