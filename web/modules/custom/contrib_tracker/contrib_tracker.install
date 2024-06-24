@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Admin Toolbar module.
+ */
+
+/**
+ * Change site name.
+ */
+function contrib_tracker_update_9001() {
+  \Drupal::configFactory()->getEditable('system.site')
+    ->set('name', 'Contrib Tracker - Update 1')
+    ->save();
+}
