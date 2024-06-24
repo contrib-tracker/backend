@@ -60,6 +60,9 @@ jobs:
 
   drupal_test:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
     env:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
@@ -119,6 +122,30 @@ jobs:
           ddev composer install
           ddev pull platform -y
           ddev drush deploy -y
+
+      # Validate config changes
+      - name: Validate Config Export
+        id: validate_config
+        run: |
+          status_output=$(ddev drush config:status 2>&1)
+          echo "$status_output"
+          echo "status_output<<EOF" >> $GITHUB_OUTPUT
+          echo "$status_output" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Add PR Comment if Validate Config fails
+        if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            **Config export has differences**
+            ${{ steps.validate_config.outputs.status_output }}
+
+      - name: Fail if Config Export is not clean
+        if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
+        run: |
+          echo "Config export has differences"
+          exit 1
 
       - name: Build front-end
         run: |
