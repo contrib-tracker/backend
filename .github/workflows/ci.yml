@@ -121,10 +121,14 @@ jobs:
         run: |
           ddev composer install
           ddev pull platform -y
-          ddev drush deploy -y
 
-      - name: Change sitename for testing
-        run: ddev drush config:set system.site name "New Site Name" -y
+      - name: Run phpstan
+        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
+
+      - name: Import Config and Run updates
+        run: |
+          ddev drush config:import --yes
+          ddev drush updatedb --yes
 
       # Validate config changes
       - name: Validate Config Export
@@ -146,25 +150,36 @@ jobs:
             ${{ steps.validate_config.outputs.status_output }}
             ```
 
+      # Update the comment only if it was added at first place
+      - name: Update the comment on success
+        if: ${{ contains(steps.validate_config.outputs.status_output, 'No differences') }}
+        uses: mshick/add-pr-comment@v2
+        with:
+          update-only: true
+          message: |
+            ```
+            ${{ steps.validate_config.outputs.status_output }}
+            ```
+
       - name: Fail if Config Export is not clean
         if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
         run: |
           echo "Config export has differences"
           exit 1
 
-      - name: Build front-end
-        run: |
-          cd web/themes/custom/contribtracker
-          npm ci  --prefer-offline --no-audit
-          gulp
-
-      - name: Run phpstan
-        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
+      - name: Deploy Site
+        run: ddev drush deploy -y
 
       - name: Test
         run: |
           ddev phpunit --testsuite unit
           ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
+
+      - name: Build front-end
+        run: |
+          cd web/themes/custom/contribtracker
+          npm ci  --prefer-offline --no-audit
+          gulp
 
       - name: Change admin password to make it easier for Cypress tests
         run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
