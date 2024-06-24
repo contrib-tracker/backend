@@ -125,6 +125,9 @@ jobs:
           ddev pull platform -y
           ddev drush deploy -y
 
+      - name: Change sitename for testing
+        run: ddev drush config:set system.site name "New Site Name" -y
+
       # Validate config changes
       - name: Validate Config Export
         id: validate_config
