@@ -172,16 +172,16 @@ jobs:
       - name: Deploy Site
         run: ddev drush deploy -y
 
-      - name: Test
-        run: |
-          ddev phpunit --testsuite unit
-          ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
-
       - name: Build front-end
         run: |
           cd web/themes/custom/contribtracker
           npm ci  --prefer-offline --no-audit
           gulp
+
+      - name: Test
+        run: |
+          ddev phpunit --testsuite unit
+          ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
 
       - name: Change admin password to make it easier for Cypress tests
         run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
