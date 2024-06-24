@@ -144,7 +144,9 @@ jobs:
         with:
           message: |
             **Config export has differences**
+            ```
             ${{ steps.validate_config.outputs.status_output }}
+            ```
 
       - name: Fail if Config Export is not clean
         if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
