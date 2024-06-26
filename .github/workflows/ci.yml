@@ -133,6 +133,7 @@ jobs:
           ddev drush updatedb --no-cache-clear --yes
           ddev drush config:status
           ddev drush config:import --yes || true
+          ddev drush config:status
           ddev drush config:import --yes
           ddev drush config:status
           ddev drush cache:rebuild --yes
