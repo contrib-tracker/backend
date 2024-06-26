@@ -82,6 +82,7 @@ module:
   menu_link_content: 1
   views: 10
   cookies_gtag: 11
+  standard: 1000
 theme:
   claro: 0
   gin: 0
