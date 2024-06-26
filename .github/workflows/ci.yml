@@ -131,6 +131,7 @@ jobs:
           ddev drush config:import --yes || true
           ddev drush config:import --yes
           ddev drush cache:rebuild --yes
+          ddev drush deploy:hook --yes
 
       # Validate config changes
       - name: Validate Config Export
