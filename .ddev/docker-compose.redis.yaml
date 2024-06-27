@@ -1,20 +1,18 @@
-version: "3.6"
-
+#ddev-generated
 services:
   redis:
     container_name: ddev-${DDEV_SITENAME}-redis
-    image: redis:6
-    ports:
-      - 6379
+    image: redis:6-bullseye
+    # These labels ensure this service is discoverable by ddev.
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
     volumes:
-      - ".:/mnt/ddev_config"
-      - "./redis:/usr/local/etc/redis"
+    - ".:/mnt/ddev_config"
+    - "ddev-global-cache:/mnt/ddev-global-cache"
+    - "./redis:/usr/local/etc/redis"
+    - "redis:/data"
     command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
-    networks: [default, ddev_default]
-  web:
-    depends_on:
-      - redis
-    links:
-      - redis:redis
+
+volumes:
+  redis:
