@@ -124,15 +124,17 @@ jobs:
           ddev composer install
           ddev pull platform -y
 
+      - name: Rebuild cache
+        run: |
+          ddev drush cache:rebuild -y
+
       # - name: Run phpstan
       #   run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
 
       - name: Import Config and Run updates
         run: |
-          ddev drush cache:rebuild -y
-          ddev drush config:status --yes
           ddev drush --no-cache-clear updatedb --yes
-          ddev drush config:import --yes
+          ddev drush config:import --yesq
           ddev drush cache:rebuild --yes
           ddev drush config:status
           ddev drush deploy:hook --yes
