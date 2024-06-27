@@ -129,11 +129,12 @@ jobs:
 
       - name: Import Config and Run updates
         run: |
-          ddev drush updatedb -vvv --yes
-          ddev drush config:status
-          ddev drush config:import  -vvv --yes
+          ddev drush --no-cache-clear updatedb --yes
+          ddev drush config:import --yes
           ddev drush cache:rebuild --yes
+          ddev drush config:status
           ddev drush deploy:hook --yes
+          ddev drush config:status
 
       # Validate config changes
       - name: Validate Config Export
