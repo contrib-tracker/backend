@@ -126,7 +126,7 @@ jobs:
 
       - name: Rebuild cache
         run: |
-          ddev drush cache:rebuild -y
+          ddev drush cache:rebuild --no-cache-clear -y
 
       # - name: Run phpstan
       #   run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
