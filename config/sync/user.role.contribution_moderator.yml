@@ -24,7 +24,6 @@ dependencies:
     - rest
     - system
     - taxonomy
-    - toolbar
 id: contribution_moderator
 label: 'Contribution Moderator'
 weight: -7
@@ -34,7 +33,6 @@ permissions:
   - 'access content overview'
   - 'access help pages'
   - 'access taxonomy overview'
-  - 'access toolbar'
   - 'access user profiles'
   - 'administer rest resources'
   - 'administer site configuration'

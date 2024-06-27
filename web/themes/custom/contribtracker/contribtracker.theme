@@ -8,8 +8,10 @@
 use Drupal\block\Entity\Block;
 
 function contribtracker_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-  $block = Block::load($variables['elements']['#id']);
-  $suggestions[] = 'block__' . $block->getRegion();
+  if (!empty($variables['element']['#id'])) {
+    $block = Block::load($variables['elements']['#id']);
+    $suggestions[] = 'block__' . $block->getRegion();
+  }
 }
 
 /**
