@@ -129,7 +129,7 @@ jobs:
 
       - name: Import Config and Run updates
         run: |
-          ddev drush updatedb -vvv --no-cache-clear --yes
+          ddev drush updatedb -vvv --yes
           ddev drush config:status
           ddev drush config:import  -vvv --yes
           ddev drush cache:rebuild --yes
