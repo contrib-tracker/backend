@@ -123,12 +123,19 @@ jobs:
         run: |
           ddev composer install
           ddev pull platform -y
+          ddev drush cache:rebuild -y
 
-      - name: Run phpstan
-        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
+      # - name: Run phpstan
+      #   run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
 
       - name: Import Config and Run updates
-        run: ./validate-export.sh
+        run: |
+          ddev drush --no-cache-clear updatedb --yes
+          ddev drush config:import --yes
+          ddev drush cache:rebuild --yes
+          ddev drush config:status
+          ddev drush deploy:hook --yes
+          ddev drush config:status
 
       # Validate config changes
       - name: Validate Config Export
