@@ -122,9 +122,6 @@ jobs:
           ddev composer install
           ddev pull platform -y
 
-      - name: Run phpstan
-        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
-
       - name: Rebuild cache
         run: |
           ddev drush cache:rebuild -y
@@ -174,14 +171,14 @@ jobs:
           echo "Config export has differences"
           exit 1
 
-      - name: Deploy Site
-        run: ddev drush deploy -y
-
       - name: Build front-end
         run: |
           cd web/themes/custom/contribtracker
           npm ci  --prefer-offline --no-audit
           gulp
+
+      - name: Run phpstan
+        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
 
       - name: Test
         run: |
