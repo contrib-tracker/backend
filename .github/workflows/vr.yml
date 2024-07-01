@@ -1,0 +1,104 @@
+name: VR
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+  schedule:
+    #run every Monday
+    - cron: '0 0 * * MON'
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  vr_test:
+    runs-on: ubuntu-latest
+    env:
+      # For Cypress.
+      CYPRESS_ADMIN_USERNAME: ct-admin
+      CYPRESS_ADMIN_PASSWORD: ct-admin
+      # For Percy
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Get Cache Directories
+        id: cache-dir
+        run: |
+          echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+          echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v4
+        with:
+          path: |
+            vendor
+            web/core
+            web/modules/contrib
+            web/themes/contrib
+            web/profiles/contrib
+            ${{ steps.cache-dir.outputs.composer-dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+      - uses: actions/cache@v4
+        with:
+          path: |
+            **/node_modules
+            ${{ steps.cache-dir.outputs.npm-dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          # We will start DDEV after setting the environment
+          autostart: false
+
+      - name: Get DDEV version
+        id: ddev_version
+        run: echo "ddev_version=$(ddev --version | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_OUTPUT
+
+      - name: Cache Docker images
+        uses: ScribeMD/docker-cache@0.5.0
+        with:
+          key: ddev-images-${{ runner.os }}-${{ steps.ddev_version.outputs.ddev_version }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
+
+      - name: Set the platform.sh token
+        run: |
+          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
+          ddev start
+
+      - name: Install the site
+        run: |
+          ddev composer install
+          ddev pull platform -y
+          ddev drush deploy -y
+
+      - name: Build front-end
+        run: |
+          cd web/themes/custom/contribtracker
+          npm ci  --prefer-offline --no-audit
+          gulp
+
+      - name: Change admin password to make it easier for Cypress tests
+        run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
+
+      # If Percy integration is not required, use `ddev cypress-run` to run the Cypress tests without Percy
+      - name: Cypress Test with Percy Integration
+        run: |
+          ddev exec --service cypress "git config --global --add safe.directory /e2e"
+          ddev percy-run
+
+      - name: Save Cypress recordings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-recordings
+          path: |
+            web/themes/custom/contribtracker/cypress/screenshots
+            web/themes/custom/contribtracker/cypress/videos
+          retention-days: 3
