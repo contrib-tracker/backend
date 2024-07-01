@@ -1,69 +1,27 @@
-name: CI
+name: VR
 on:
   push:
-    branches:
-      - main
     tags:
       - "*"
-  pull_request:
+  workflow_dispatch:
+  schedule:
+    #run every Monday
+    - cron: '0 0 * * MON'
 
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  drupal_codequality:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
 
-      - name: Drupal Code Quality
-        uses: hussainweb/drupalqa-action@v2
-        id: drupalqa
-        with:
-          php-version: 8.2
-          checks: |
-            grumphp:
-              tasks:
-                - phplint
-                - yamllint
-                - jsonlint
-                - phpcs
-                - phpmd
-                - twigcs
-
-  frontend_codequality:
-    runs-on: ubuntu-latest
-    container: node:lts
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-
-      - name: Get Cache Directories
-        id: cache-dir
-        run: echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v4
-        with:
-          path: |
-            **/node_modules
-            ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-
-
-      - name: Frontend Code Quality
-        run: |
-          cd web/themes/custom/contribtracker
-          npm ci --prefer-offline --no-audit
-          npm run lint
-
-  drupal_test:
+  vr_test:
     runs-on: ubuntu-latest
     env:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
       CYPRESS_ADMIN_PASSWORD: ct-admin
+      # For Percy
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -126,19 +84,14 @@ jobs:
           npm ci  --prefer-offline --no-audit
           gulp
 
-      - name: Run phpstan
-        run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
-
-      - name: Test
-        run: |
-          ddev phpunit --testsuite unit
-          ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
-
       - name: Change admin password to make it easier for Cypress tests
         run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
 
-      - name: Cypress Test
-        run: ddev cypress-run
+      # If Percy integration is not required, use `ddev cypress-run` to run the Cypress tests without Percy
+      - name: Cypress Test with Percy Integration
+        run: |
+          ddev exec --service cypress "git config --global --add safe.directory /e2e"
+          ddev percy-run
 
       - name: Save Cypress recordings
         if: always()
@@ -149,25 +102,3 @@ jobs:
             web/themes/custom/contribtracker/cypress/screenshots
             web/themes/custom/contribtracker/cypress/videos
           retention-days: 3
-
-  deploy:
-    environment:
-      name: ${{ github.ref_name == 'main' && 'production' || 'feature' }}
-    needs:
-      - drupal_codequality
-      - drupal_test
-    runs-on: ubuntu-latest
-    # Dependabot PR's can't access secrets, so we can't deploy.
-    if: github.actor != 'dependabot[bot]'
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Deploy to platform.sh
-        uses: axelerant/platformsh-action@v1
-        with:
-          action: 'deploy'
-          project-id: "brbqplxd7ycq6"
-          cli-token: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
-          force-push: true
