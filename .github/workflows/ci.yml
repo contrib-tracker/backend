@@ -134,7 +134,7 @@ jobs:
           ddev drush cache:rebuild --yes
           ddev drush deploy:hook --yes
 
-      # Validate config changes
+      # We are storing the output of config:status in $GITHUB_OUTPUT to use it in later steps. We are using EOF-based output as config:status produces multiline output if there are changes.
       - name: Validate Config Export
         id: validate_config
         run: |
