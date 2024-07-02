@@ -9,7 +9,7 @@ on:
     - cron: '0 0 * * MON'
 
 concurrency:
-  group: ${{ github.ref }}
+  group: vr-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
