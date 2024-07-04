@@ -125,28 +125,28 @@ jobs:
       - name: Run updates and Validate Config
         id: validate_config
         run: |
-          # rebuild cache so that config cache is not absolete
+          # Rebuild cache so that config cache is not obsolete
           ddev drush cache:rebuild -y
 
-          # identify set of configuration changes before running updatedb and store it in a text file.
+          # Identify set of configuration changes before running updatedb and store it in a text file.
           # awk NF is used to filter blank lines.
           ddev drush config:status --fields name --format list | awk NF > ${{ runner.temp }}/initial_config.txt
 
-          # run updates and build cache
+          # Run updates and rebuild cache
           ddev drush updatedb --yes
           ddev drush cache:rebuild --yes
 
-          # identify set of configuration changes after running updatedb and store it in a text file.
+          # Identify set of configuration changes after running updatedb and store it in a text file.
           ddev drush config:status --fields name --format list | awk NF > ${{ runner.temp }}/updated_config.txt
 
-          # sort the lines within files as comm requires sorted files
+          # Sort the lines within files as comm requires sorted files
           sort ${{ runner.temp }}/initial_config.txt -o ${{ runner.temp }}/sorted_initial_config.txt
           sort ${{ runner.temp }}/updated_config.txt -o ${{ runner.temp }}/sorted_updated_config.txt
 
-          # This will compare above sorted files and write unique lines from second list which is not present in first list.
+          # This will compare the sorted files and write unique lines from the second list that are not present in the first list.
           comm -13 ${{ runner.temp }}/sorted_initial_config.txt ${{ runner.temp }}/sorted_updated_config.txt > ${{ runner.temp }}/mismatched_config.txt
 
-          # If mismatched_config is not empty that means we have missing config export. We store it in GITHUB_OUTPUT for next steps.
+          # If mismatched_config is not empty, it means we have missing config export. We store it in GITHUB_OUTPUT for the next steps.
           if [ -s ${{ runner.temp }}/mismatched_config.txt ]; then
             echo "Config export has differences"
             cat ${{ runner.temp }}/mismatched_config.txt
