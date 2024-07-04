@@ -122,27 +122,43 @@ jobs:
           ddev composer install
           ddev pull platform -y
 
-      - name: Rebuild cache
-        run: |
-          ddev drush cache:rebuild -y
-          ddev drush config:status
-
-      - name: Import Config and Run updates
-        run: |
-          ddev drush updatedb --no-cache-clear --yes
-          ddev drush config:import --yes
-          ddev drush cache:rebuild --yes
-          ddev drush deploy:hook --yes
-
-      # We are storing the output of config:status in $GITHUB_OUTPUT to use it in later steps. We are using EOF-based output as config:status produces multiline output if there are changes.
-      - name: Validate Config Export
+      - name: Run updates and Validate Config
         id: validate_config
         run: |
-          status_output=$(ddev drush config:status 2>&1)
-          echo "$status_output"
-          echo "status_output<<EOF" >> $GITHUB_OUTPUT
-          echo "$status_output" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          # rebuild cache so that config cache is not absolete
+          ddev drush cache:rebuild -y
+
+          # identify set of configuration changes before running updatedb and store it in a text file.
+          # awk NF is used to filter blank lines.
+          ddev drush config:status --fields name --format list | awk NF > ${{ runner.temp }}/initial_config.txt
+
+          # run updates and build cache
+          ddev drush updatedb --yes
+          ddev drush cache:rebuild --yes
+
+          # identify set of configuration changes after running updatedb and store it in a text file.
+          ddev drush config:status --fields name --format list | awk NF > ${{ runner.temp }}/updated_config.txt
+
+          # sort the lines within files as comm requires sorted files
+          sort ${{ runner.temp }}/initial_config.txt -o ${{ runner.temp }}/sorted_initial_config.txt
+          sort ${{ runner.temp }}/updated_config.txt -o ${{ runner.temp }}/sorted_updated_config.txt
+
+          # This will compare above sorted files and write unique lines from second list which is not present in first list.
+          comm -13 ${{ runner.temp }}/sorted_initial_config.txt ${{ runner.temp }}/sorted_updated_config.txt > ${{ runner.temp }}/mismatched_config.txt
+
+          # If mismatched_config is not empty that means we have missing config export. We store it in GITHUB_OUTPUT for next steps.
+          if [ -s ${{ runner.temp }}/mismatched_config.txt ]; then
+            echo "Config export has differences"
+            cat ${{ runner.temp }}/mismatched_config.txt
+            # We are using EOF-based output as mismatched_config.txt may contain multiple lines
+            status_output=$(cat ${{ runner.temp }}/mismatched_config.txt)
+            echo "status_output<<EOF" >> $GITHUB_OUTPUT
+            echo "$status_output" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "Config has no differences"
+            echo "status_output=No differences" >> $GITHUB_OUTPUT
+          fi
 
       - name: Add PR Comment if Validate Config fails
         if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
@@ -170,6 +186,10 @@ jobs:
         run: |
           echo "Config export has differences"
           exit 1
+
+      - name: Deploy the site
+        run: |
+          ddev drush deploy -y
 
       - name: Build front-end
         run: |
