@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Custom contribution tracker install file.
+ */
+
+/**
+ * Change site name 1.
+ */
+function contrib_tracker_update_9001() {
+  \Drupal::configFactory()->getEditable('system.site')
+    ->set('name', 'Contribution Tracker - update 1')
+    ->save();
+}
