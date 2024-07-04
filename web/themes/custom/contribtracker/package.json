@@ -2,7 +2,9 @@
   "scripts": {
     "build": "gulp",
     "lint": "CI=true gulp lint",
-    "vr": "percy exec -- cypress run"
+    "vr": "percy exec -- cypress run",
+    "cypress-open": "cypress open --env inputTestFile=\"./cypress/fixtures/urls_endpoint.csv\",version=\"prod\" --browser chrome",
+    "percy": "percy exec -- cypress run --env split=false,inputTestFile=\"./cypress/fixtures/urls_endpoint.csv\",grepTags=@vr2,version=\"stage\" --browser chrome --spec \"./cypress/e2e/*.cy.js\""
   },
   "devDependencies": {
     "@percy/cli": "^1.29.0",
@@ -20,6 +22,14 @@
     "breakpoint-sass": "^3.0.0",
     "browser-sync": "^3.0.2",
     "cypress": "13.12.0",
+    "cypress-grep": "^2.0.1",
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "7.1.3",
+    "mochawesome-merge": "4.2.2",
+    "mochawesome-report-generator": "6.2.0",
+    "neat-csv": "5.1.0",
+    "scroll-to-bottomjs": "latest",
+    "test-results-reporter": "^1.0.19",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
@@ -45,6 +55,8 @@
     "uuid": "^10.0.0"
   },
   "dependencies": {
+    "cypress-split": "^1.24.0",
+    "@slack/web-api": "^6.11.2",
     "select2": "^4.1.0-rc.0"
   },
   "overrides": {
