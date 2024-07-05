@@ -139,12 +139,8 @@ jobs:
           # Identify set of configuration changes after running updatedb and store it in a text file.
           ddev drush config:status --fields name --format list | awk NF > ${{ runner.temp }}/updated_config.txt
 
-          # Sort the lines within files as comm requires sorted files
-          sort ${{ runner.temp }}/initial_config.txt -o ${{ runner.temp }}/sorted_initial_config.txt
-          sort ${{ runner.temp }}/updated_config.txt -o ${{ runner.temp }}/sorted_updated_config.txt
-
-          # This will compare the sorted files and write unique lines from the second list that are not present in the first list.
-          comm -13 ${{ runner.temp }}/sorted_initial_config.txt ${{ runner.temp }}/sorted_updated_config.txt > ${{ runner.temp }}/mismatched_config.txt
+          # Compare the sorted files and write unique lines from the second list that are not present in the first list.
+          comm -13 ${{ runner.temp }}/initial_config.txt ${{ runner.temp }}/updated_config.txt > ${{ runner.temp }}/mismatched_config.txt
 
           # If mismatched_config is not empty, it means we have missing config export. We store it in GITHUB_OUTPUT for the next steps.
           if [ -s ${{ runner.temp }}/mismatched_config.txt ]; then
