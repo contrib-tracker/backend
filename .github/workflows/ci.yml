@@ -168,11 +168,9 @@ jobs:
 
       - name: Warn if Config Export is not clean
         if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
-        continue-on-error: true
         run: |
           echo "::warning::Config export has differences"
           echo ${{ steps.validate_config.outputs.status_output }}
-          exit 1
 
       - name: Deploy the site
         run: |
