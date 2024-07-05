@@ -156,23 +156,12 @@ jobs:
             echo "status_output=No differences" >> $GITHUB_OUTPUT
           fi
 
-      - name: Add PR Comment if Validate Config fails
-        if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
+      - name: Add/Update PR Comment
         uses: mshick/add-pr-comment@v2
         with:
-          message: |
-            **Config export has differences**
-            ```
-            ${{ steps.validate_config.outputs.status_output }}
-            ```
-
-      # Update the comment only if it was added at first place
-      - name: Update the comment on success
-        if: ${{ contains(steps.validate_config.outputs.status_output, 'No differences') }}
-        uses: mshick/add-pr-comment@v2
-        with:
-          update-only: true
-          message: |
+          update-only: ${{ contains(steps.validate_config.outputs.status_output, 'No differences') }}
+          message:  |
+            ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') && '**Config export has differences**' || ' ' }}
             ```
             ${{ steps.validate_config.outputs.status_output }}
             ```
