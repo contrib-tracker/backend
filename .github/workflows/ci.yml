@@ -153,7 +153,7 @@ jobs:
             echo "EOF" >> $GITHUB_OUTPUT
           else
             echo "Config has no differences"
-            echo "status_output=No differences" >> $GITHUB_OUTPUT
+            echo "status_output=No differences between DB and sync directory" >> $GITHUB_OUTPUT
           fi
 
       - name: Add/Update PR Comment
