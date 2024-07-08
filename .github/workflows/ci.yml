@@ -159,6 +159,8 @@ jobs:
       - name: Add/Update PR Comment
         uses: mshick/add-pr-comment@v2
         with:
+          # This will add or update the comment if there are config differences, but will only update the comment on success.
+          # We do not want to add the comment when there are no config differences on the initial push.
           update-only: ${{ contains(steps.validate_config.outputs.status_output, 'No differences') }}
           message:  |
             ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') && '**Config export has differences**' || ' ' }}
