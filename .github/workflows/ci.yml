@@ -60,6 +60,9 @@ jobs:
 
   drupal_test:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
     env:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
@@ -118,6 +121,61 @@ jobs:
         run: |
           ddev composer install
           ddev pull platform -y
+
+      - name: Run updates and Validate Config
+        id: validate_config
+        run: |
+          # Rebuild cache so that config cache is not obsolete
+          ddev drush cache:rebuild -y
+
+          # Identify set of configuration changes before running updatedb and store it in a text file.
+          # awk NF is used to filter blank lines.
+          ddev drush config:status --fields name --format list | awk NF > ${{ runner.temp }}/initial_config.txt
+
+          # Run updates and rebuild cache
+          ddev drush updatedb --yes
+          ddev drush cache:rebuild --yes
+
+          # Identify set of configuration changes after running updatedb and store it in a text file.
+          ddev drush config:status --fields name --format list | awk NF > ${{ runner.temp }}/updated_config.txt
+
+          # Compare the sorted files and write unique lines from the second list that are not present in the first list.
+          comm -13 ${{ runner.temp }}/initial_config.txt ${{ runner.temp }}/updated_config.txt > ${{ runner.temp }}/mismatched_config.txt
+
+          # If mismatched_config is not empty, it means we have missing config export. We store it in GITHUB_OUTPUT for the next steps.
+          if [ -s ${{ runner.temp }}/mismatched_config.txt ]; then
+            echo "Config export has differences"
+            cat ${{ runner.temp }}/mismatched_config.txt
+            # We are using EOF-based output as mismatched_config.txt may contain multiple lines
+            status_output=$(cat ${{ runner.temp }}/mismatched_config.txt)
+            echo "status_output<<EOF" >> $GITHUB_OUTPUT
+            echo "$status_output" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "Config has no differences"
+            echo "status_output=No differences between DB and sync directory" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Add/Update PR Comment
+        uses: mshick/add-pr-comment@v2
+        with:
+          # This will add or update the comment if there are config differences, but will only update the comment on success.
+          # We do not want to add the comment when there are no config differences on the initial push.
+          update-only: ${{ contains(steps.validate_config.outputs.status_output, 'No differences') }}
+          message:  |
+            ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') && '**Config export has differences**' || ' ' }}
+            ```
+            ${{ steps.validate_config.outputs.status_output }}
+            ```
+
+      - name: Warn if Config Export is not clean
+        if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
+        run: |
+          echo "::warning::Config export has differences"
+          echo ${{ steps.validate_config.outputs.status_output }}
+
+      - name: Deploy the site
+        run: |
           ddev drush deploy -y
 
       - name: Build front-end
