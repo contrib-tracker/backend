@@ -1,5 +1,3 @@
-import '@percy/cypress';
-
 // Login
 Cypress.Commands.add('login', (type) => {
   let perms = {};

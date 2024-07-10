@@ -1,8 +1,6 @@
 import { defineConfig } from 'cypress';
 import { readFileSync } from 'fs';
-import neatCSV from 'neat-csv';
 import path from 'path';
-import cypressGrep from 'cypress-grep/src/plugin';
 // import cypressSplit from "cypress-split"; // Uncomment if you are using cypress-split
 
 export default defineConfig({
@@ -18,6 +16,7 @@ export default defineConfig({
   responseTimeout: 90000,
   experimentalStudio: true,
   trashAssetsBeforeRuns: false,
+  video: true,
   experimentalShadowDomSupport: true,
   reporter: 'mochawesome',
   reporterOptions: {
@@ -34,11 +33,7 @@ export default defineConfig({
     async setupNodeEvents(on, config) {
       const inputFileName = config.env.inputTestFile;
       console.log('loading file', inputFileName);
-      const text = readFileSync(inputFileName, 'utf8');
-      const csv = await neatCSV(text);
-      console.log('loaded the urls');
 
-      cypressGrep(on, config);
       const version = config.env.version || 'stage';
       // Load env from json using dynamic import
       const envConfigPath = path.resolve(`./cypress/config/${version}.json`);
@@ -47,7 +42,6 @@ export default defineConfig({
       // Change baseUrl
       config.baseUrl = config.env.baseUrl;
       console.log(config.baseUrl);
-      config.env.urlsList = csv;
       // cypressSplit(on, config); // Uncomment if you are using cypress-split
       return config;
     },

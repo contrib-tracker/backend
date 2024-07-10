@@ -1,0 +1,13 @@
+{
+  "Home": "/",
+  "CodeContributions": "/code-contributions",
+  "ContributionAuthor": "/user/2",
+  "ContributionCount": "/contribution-count",
+  "ContributionDetails": "/node/79",
+  "ContributionTechnology": "/taxonomy/term/2",
+  "EventContributions": "/event-contributions",
+  "NonCodeContributions": "/non-code-contributions",
+  "PatchesOnIssues": "/user/2/patches-on-issues",
+  "Patches": "/user/2/patches",
+  "Taxonomy": "/taxonomy/term/2"
+}

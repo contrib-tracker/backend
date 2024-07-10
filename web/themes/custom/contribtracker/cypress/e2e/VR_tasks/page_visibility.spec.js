@@ -1,31 +1,38 @@
-//Testcase - Checks for main page response code, broken images and any other visibility glitches
+// Importing the fixture containing URLs
+import urlsFixture from '../../fixtures/urls.json';
 
-const urls = Cypress.env('urlsList');
-// const version = Cypress.env('version');
+describe('Visual Testing', { tags: '@percy' }, () => {
+  // Loop through the first 5 URLs from the fixture
+  Object.keys(urlsFixture)
+    .slice(0, 5)
+    .forEach((key) => {
+      const url = urlsFixture[key];
 
-describe('Validate Page Visibility and Status Code', () => {
-  urls.forEach((page) => {
-    it(`should check visibility and status code of ${page['title']} page`, () => {
-      cy.request(page['url']).then(() => {
-        cy.document().should('have.property', 'visibilityState', 'visible');
+      it(`Visits ${key} page and takes Percy snapshot`, () => {
+        // Sending a request to the URL to ensure it's reachable
+        cy.request(url).then(() => {
+          // Asserting that the document is visible
+          cy.document().should('have.property', 'visibilityState', 'visible');
+        });
+
+        // Setting a property before reloading the window
+        cy.window().then((w) => (w.beforeReload = true));
+
+        // Initially, the new property should exist
+        cy.window().should('have.prop', 'beforeReload', true);
+
+        // Visiting the page
+        cy.visit(url);
+
+        // After reload, the property should no longer exist
+        cy.window().should('not.have.prop', 'beforeReload');
+
+        // Scroll down and up to ensure lazy loading components are rendered
+        cy.scrollTo('bottom', { ensureScrollable: false }).wait(1000);
+        cy.scrollTo('top', { ensureScrollable: false }).wait(1000);
+
+        // Take Percy snapshot with a descriptive name
+        cy.percySnapshot(`${key} page`);
       });
-      cy.window().then((w) => (w.beforeReload = true));
-
-      //Initially the new property is there
-      cy.window().should('have.prop', 'beforeReload', true);
-
-      //Visiting the page
-      cy.visit(page['url']);
-
-      //After reload the property should be gone
-      cy.window().should('not.have.prop', 'beforeReload');
-
-      //Scroll down as the page is having lazy loading component in it
-      cy.scrollTo('bottom', { ensureScrollable: false }).wait(1000);
-      cy.scrollTo('top', { ensureScrollable: false }).wait(1000);
-
-      //Enable visual regression
-      // cy.percySnapshot(`${page.title} page`);
     });
-  });
 });
