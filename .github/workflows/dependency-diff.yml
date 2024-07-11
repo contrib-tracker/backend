@@ -43,19 +43,19 @@ jobs:
         if: contains(steps.changed-files.outputs.modified_files, 'composer.lock')
         run: |
           composer global require davidrjonas/composer-lock-diff:^1.0
-          composer-lock-diff --from=${{ github.event.pull_request.base.sha }} --md > composer-diff.md
+          composer-lock-diff --from=${{ github.event.pull_request.base.sha }} --md > dependency-diff.md
 
       - name: NPM Diff
         if: contains(steps.changed-files.outputs.modified_files, 'web/themes/custom/contribtracker/package-lock.json')
         run: |
           npm install -g diff-lockfiles
-          diff-lockfiles --color ${{ github.event.pull_request.base.sha }} HEAD --shallow >> npm-diff.md
+          diff-lockfiles --color ${{ github.event.pull_request.base.sha }} HEAD --shallow >> dependency-diff.md
 
       - name: Add PR comment
         if: contains(steps.changed-files.outputs.modified_files, 'composer.lock')
         uses: mshick/add-pr-comment@v2
         with:
           message-id: dependency-diff
-          message-path: composer-diff.md
+          message-path: dependency-diff.md
 
 
