@@ -40,4 +40,5 @@ jobs:
         if: contains(steps.changed-files.outputs.modified_files, 'composer.lock')
         uses: mshick/add-pr-comment@v2
         with:
+          message-id: dependency-diff
           message-path: composer-diff.md
