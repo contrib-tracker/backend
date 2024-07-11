@@ -49,7 +49,10 @@ jobs:
         if: contains(steps.changed-files.outputs.modified_files, 'web/themes/custom/contribtracker/package-lock.json')
         run: |
           npm install -g diff-lockfiles
+          echo '**NPM Package changes**' >> dependency-diff.md
+          echo '```' >> dependency-diff.md
           diff-lockfiles ${{ github.event.pull_request.base.sha }} HEAD --shallow >> dependency-diff.md
+          echo '```' >> dependency-diff.md
 
       - name: Add PR comment
         if: contains(steps.changed-files.outputs.modified_files, 'composer.lock')
