@@ -23,6 +23,15 @@ jobs:
         with:
           files: |
              composer.lock
+             web/themes/custom/contribtracker/package-lock.json
+
+      - name: List all changed files
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
+          done
 
       - name: Set up PHP
         if: contains(steps.changed-files.outputs.modified_files, 'composer.lock')
@@ -42,3 +51,9 @@ jobs:
         with:
           message-id: dependency-diff
           message-path: composer-diff.md
+
+      - name: NPM Diff
+        if: contains(steps.changed-files.outputs.modified_files, 'web/themes/custom/contribtracker/package-lock.json')
+        run: |
+          npm install -g diff-lockfiles
+          diff-lockfiles --color ${{ github.event.pull_request.base.sha }} HEAD --shallow
