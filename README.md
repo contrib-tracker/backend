@@ -77,7 +77,7 @@ ddev drush cr
 ### Theme Build
 
 ```bash
-cd web/themes/custom/contribtracker && npm install && npm run build && ddev drush cr
+cd web/themes/custom/contribtracker && ddev npm install && ddev npm run build && ddev drush cr
 ```
 
 You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).
