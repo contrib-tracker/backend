@@ -128,7 +128,7 @@ module.exports = async () => {
       packages['drupal/core'] = coreVersion;
     }
 
-    let releaseHtml = "**Drupal eco-system packages release notes**<br><br>";
+    let releaseHtml = "**Drupal eco-system packages release notes**<br>";
     for (const packageName in packages) {
       const version = packages[packageName];
       releaseHtml += '<details><summary>Realase notes for package `' + packageName + '`</summary><br><blockquote>';
