@@ -57,6 +57,13 @@ jobs:
           echo '```' >> dependency-diff.md
 
 
+      - name: Fetch Release notes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fetchReleaseNotes = require('${{ github.workspace }}/.github/workflows/release-notes/fetch-data.js')
+            const release_notes = await fetchReleaseNotes()
+            require('fs').appendFileSync('${{ github.workspace }}/dependency-diff.md', release_notes);
 
       - name: Add PR comment
         if: steps.changed-files.outputs.any_modified == 'true'
