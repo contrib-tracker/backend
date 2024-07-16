@@ -6,6 +6,7 @@ module.exports = async () => {
     return `${baseUrl}?${query}`;
   }
 
+  //@todo Use semver-parser package for parsing versions
   function parseVersion(versionStr) {
     const semverRegex = /^(\d+)\.(\d+)\.(\d+)(?:-(.+))?$/;
     const match = versionStr.match(semverRegex);
@@ -106,6 +107,7 @@ module.exports = async () => {
       coreVersion = jsonData.changes['drupal/core-recommended'][1];
     }
 
+    // Filter only drupal packages
     const packages = {};
     for (const category in jsonData) {
       for (const packageName in jsonData[category]) {
@@ -123,7 +125,7 @@ module.exports = async () => {
         }
       }
     }
-
+    // For core, just add one core package as there is no separate release for different core packages.
     if (coreVersion) {
       packages['drupal/core'] = coreVersion;
     }
