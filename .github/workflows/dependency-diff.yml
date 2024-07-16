@@ -44,6 +44,8 @@ jobs:
         run: |
           composer global require davidrjonas/composer-lock-diff:^1.0
           composer-lock-diff --from=${{ github.event.pull_request.base.sha }} --md > dependency-diff.md
+          # output in json format for fetching release notes
+          composer-lock-diff --from=${{ github.event.pull_request.base.sha }} --json > composer-diff.json
 
       - name: NPM Diff
         if: contains(steps.changed-files.outputs.modified_files, 'web/themes/custom/contribtracker/package-lock.json')
@@ -53,6 +55,8 @@ jobs:
           echo '```' >> dependency-diff.md
           diff-lockfiles ${{ github.event.pull_request.base.sha }} HEAD --shallow >> dependency-diff.md
           echo '```' >> dependency-diff.md
+
+
 
       - name: Add PR comment
         if: steps.changed-files.outputs.any_modified == 'true'
