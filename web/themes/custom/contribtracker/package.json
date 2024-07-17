@@ -5,7 +5,7 @@
     "vr": "percy exec -- cypress run"
   },
   "devDependencies": {
-    "@percy/cli": "^1.28.7",
+    "@percy/cli": "^1.28.9",
     "@percy/cypress": "^3.1.2",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
     "@types/gulp": "^4.0.17",
