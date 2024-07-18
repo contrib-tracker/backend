@@ -1,4 +1,4 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://https://github.com/contrib-tracker/backend)
+ocs[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://https://github.com/contrib-tracker/backend)
 
 # Contribution Tracker
 
@@ -21,8 +21,8 @@ The following tools are required for setting up the site. Ensure you are using t
 
 - [Composer](https://getcomposer.org/download/) (optional if used via DDEV)
 - [Docker](https://docs.docker.com/install/) or [OrbStack](https://orbstack.dev/)
-- [DDEV](https://ddev.com/get-started/) - v1.22.0
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - v2.17.1
+- [DDEV](https://ddev.com/get-started/) - v1.23.3
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [NodeJs](https://nodejs.org/en/download)
 
 *Note*: Ensure you have sufficient RAM (ideally 16 GB, minimum 8 GB)
