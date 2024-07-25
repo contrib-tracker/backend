@@ -41,7 +41,7 @@
     "stylelint": "^15.11.0",
     "stylelint-prettier": "^4.1.0",
     "stylelint-scss": "5.0",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.4",
     "uuid": "^10.0.0"
   },
   "dependencies": {
