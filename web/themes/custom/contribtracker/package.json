@@ -3,9 +3,10 @@
     "build": "gulp",
     "lint": "CI=true gulp lint",
     "vr": "percy exec -- cypress run",
-    "cypress-run": "percy exec -- cypress run --env inputTestFile=\"./cypress/fixtures/urls_endpoint.csv\",version=\"prod\" --spec cypress/e2e/new.cy.js --browser chrome",
-    "cypress-open": "cypress open --env version=\"prod\" --browser chrome",
-    "percy": "percy exec -- cypress run --env split=false,inputTestFile=\"./cypress/fixtures/urls_endpoint.csv\",grepTags=@vr2,version=\"stage\" --browser chrome --spec \"./cypress/e2e/*.cy.js\""
+    "vr-prod": "percy exec -- cypress run --env version=prod,grepTags=@percy --spec cypress/e2e/VR_tasks/*.cy.js",
+    "cypress-open": "cypress open --env version=prod --browser chrome",
+    "tag:functional": "cypress open --env version=prod,grepTags=@functional --browser chrome",
+    "form-negative": "cypress open --env version=prod,grepTags=@form+negative --browser chrome"
   },
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
@@ -43,7 +44,6 @@
     "prettier": "^3.3.1",
     "sass": "^1.77.8",
     "sass-toolkit": "^2.10.2",
-    "scroll-to-bottomjs": "latest",
     "stylelint": "^15.11.0",
     "stylelint-prettier": "^4.1.0",
     "stylelint-scss": "5.0",
@@ -51,8 +51,7 @@
     "uuid": "^10.0.0"
   },
   "dependencies": {
-    "@slack/web-api": "^6.11.2",
-    "cypress-split": "^1.24.0",
+    "cypress-real-events": "^1.13.0",
     "select2": "^4.1.0-rc.0"
   },
   "overrides": {

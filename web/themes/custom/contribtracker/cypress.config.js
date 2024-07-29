@@ -11,9 +11,9 @@ export default defineConfig({
   chromeWebSecurity: false,
   defaultCommandTimeout: 60000,
   execTimeout: 10000,
-  pageLoadTimeout: 500000,
-  requestTimeout: 90000,
-  responseTimeout: 90000,
+  pageLoadTimeout: 200000,
+  requestTimeout: 15000,
+  responseTimeout: 10000,
   experimentalStudio: true,
   trashAssetsBeforeRuns: false,
   video: true,
@@ -34,7 +34,7 @@ export default defineConfig({
       const inputFileName = config.env.inputTestFile;
       console.log('loading file', inputFileName);
 
-      const version = config.env.version || 'stage';
+      const version = config.env.version || 'dev';
       // Load env from json using dynamic import
       const envConfigPath = path.resolve(`./cypress/config/${version}.json`);
       const envConfig = JSON.parse(readFileSync(envConfigPath, 'utf-8'));
