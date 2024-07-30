@@ -1,10 +1,6 @@
 // Import custom Cypress commands from commands.js
 import './commands';
 
-// Register Cypress Grep to filter tests using tags or keywords
-const registerCypressGrep = require('@cypress/grep');
-registerCypressGrep();
-
 // Require Cypress XPath plugin to use XPath selectors
 require('@cypress/xpath');
 

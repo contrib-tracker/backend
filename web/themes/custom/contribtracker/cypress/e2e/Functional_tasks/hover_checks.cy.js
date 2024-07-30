@@ -1,39 +1,71 @@
 // Describe the test suite for Hover Actions Verification
-describe('Hover Actions Verification', { tags: '@functional' }, () => {
-  // Before test, visit the base URL
-  before(() => {
+describe('Hover Actions Verification', () => {
+  // Before each test, visit the base URL
+  beforeEach(() => {
     cy.visit('/');
   });
 
-  // Define the test case for verifying hover actions
-  it('should change the element style on hover', () => {
-    // Perform a hover action on the second navigation authentication link
-    cy.xpath('(//a[@class="link nav__auth-link auth-link"])[2]').realHover();
-
-    // Assert that the color of the element changes to the expected value upon hover
-    cy.xpath('(//a[@class="link nav__auth-link auth-link"])[2]').should(
+  // Test case for verifying hover actions on the "Contrib Tracker" logo
+  it('should change the element style on hover for contrib tracker logo', () => {
+    // Assert the initial color of the element before hover
+    cy.get('.nav__container a.link.branding__link').should(
       'have.css',
       'color',
-      'rgba(236, 75, 6, 0.933)', // Example: color changes to red (rgba format)
+      'rgba(236, 75, 6, 0.933)', // Example: color before hover (RGBA format)
+    );
+
+    // Perform hover action and then verify the style changes
+    cy.get('.nav__container a.link.branding__link')
+      .realHover()
+      .then(($element) => {
+        cy.wrap($element)
+          .realHover()
+          .then(() => {
+            // Assert that the color of the element changes to white upon hover
+            cy.wrap($element).should(
+              'have.css',
+              'color',
+              'rgb(109, 104, 104)', // Color changes to white after hover (RGB format)
+            );
+          });
+      });
+  });
+
+  // Test case for verifying hover actions on the "Login with Google" link
+  it('should change the element style on hover for login with google link', () => {
+    // Assert the initial color of the element before hover
+    cy.xpath('(//a[@class="link nav__auth-link auth-link"])[2]').then(
+      ($element) => {
+        cy.wrap($element).then(() => {
+          cy.wrap($element).should(
+            'have.css',
+            'color',
+            'rgba(236, 75, 6, 0.933)', // Example: color before hover (RGBA format)
+          );
+        });
+      },
+    );
+
+    // Perform hover action and then verify the style changes
+    cy.xpath('(//a[@class="link nav__auth-link auth-link"])[2]').then(
+      ($element) => {
+        cy.wrap($element)
+          .realHover()
+          .then(() => {
+            // Assert that the color of the element changes to white upon hover
+            cy.wrap($element).should(
+              'have.css',
+              'color',
+              'rgb(255, 255, 255)', // Color changes to white after hover (RGB format)
+            );
+            // Assert that the background color of the element changes to the expected value upon hover
+            cy.wrap($element).should(
+              'have.css',
+              'background-color',
+              'rgba(236, 75, 6, 0.933)', // Example: background color changes after hover (RGBA format)
+            );
+          });
+      },
     );
   });
 });
-
-// describe('Check for .aspx links', { tags: '@functional' }, () => {
-//   it('should not contain any .aspx links', () => {
-//     cy.visit('https://waps-php.test.ohchr.org/',{failOnStatusCode: false}); // Replace with your actual URL
-
-//     cy.get('a[href*=".aspx"]').then($els => {
-//       if ($els.length > 0) {
-//         // Collect all .aspx links
-//         const aspxLinks = [];
-//         $els.each((index, el) => {
-//           aspxLinks.push(el.getAttribute('href'));
-//         });
-
-//         // Throw an error with all the found .aspx links
-//         throw new Error(`Found .aspx links on the page: ${aspxLinks.join(', ')}`);
-//       }
-//     });
-//   });
-// });

@@ -16,24 +16,10 @@ export default defineConfig({
   responseTimeout: 10000,
   experimentalStudio: true,
   trashAssetsBeforeRuns: false,
-  video: true,
+  video: process.env.CYPRESS_VIDEO !== 'false', // Defaults to true unless explicitly set to 'false'
   experimentalShadowDomSupport: true,
-  reporter: 'mochawesome',
-  reporterOptions: {
-    useInlineDiffs: true,
-    embeddedScreenshots: true,
-    reportDir: 'cypress/results',
-    reportFilename: '[name].html',
-    overwrite: true,
-    html: true,
-    json: true,
-    charts: true,
-  },
   e2e: {
     async setupNodeEvents(on, config) {
-      const inputFileName = config.env.inputTestFile;
-      console.log('loading file', inputFileName);
-
       const version = config.env.version || 'dev';
       // Load env from json using dynamic import
       const envConfigPath = path.resolve(`./cypress/config/${version}.json`);

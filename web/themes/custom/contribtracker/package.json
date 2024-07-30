@@ -3,14 +3,17 @@
     "build": "gulp",
     "lint": "CI=true gulp lint",
     "vr": "percy exec -- cypress run",
-    "vr-prod": "percy exec -- cypress run --env version=prod,grepTags=@percy --spec cypress/e2e/VR_tasks/*.cy.js",
+    "vr-prod": "CYPRESS_VIDEO=false percy exec -- cypress run --env version=prod --spec cypress/e2e/VR_tasks/*.cy.js",
+    "vr-dev": "CYPRESS_VIDEO=false percy exec -- cypress run --env version=dev --spec cypress/e2e/VR_tasks/*.cy.js",
+    "functional-prod": "cypress run --env version=prod --spec cypress/e2e/Functional_tasks/*.cy.js",
+    "functional-dev": "cypress run --env version=dev --spec cypress/e2e/Functional_tasks/*.cy.js",
     "cypress-open": "cypress open --env version=prod --browser chrome",
-    "tag:functional": "cypress open --env version=prod,grepTags=@functional --browser chrome",
-    "form-negative": "cypress open --env version=prod,grepTags=@form+negative --browser chrome"
+    "cypress-run": "cypress run --env version=prod --browser chrome",
+    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run --env version=prod"
   },
   "devDependencies": {
-    "@cypress/grep": "^4.1.0",
     "@cypress/xpath": "^2.0.3",
+    "cypress-real-events": "^1.13.0",
     "@percy/cli": "^1.29.0",
     "@percy/cypress": "^3.1.2",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
@@ -51,7 +54,6 @@
     "uuid": "^10.0.0"
   },
   "dependencies": {
-    "cypress-real-events": "^1.13.0",
     "select2": "^4.1.0-rc.0"
   },
   "overrides": {

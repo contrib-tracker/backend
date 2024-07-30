@@ -1,12 +1,16 @@
 // Importing the fixture containing URLs
 import urlsFixture from '../../fixtures/urls.json';
 
-describe('Visual Testing', { tags: '@percy' }, () => {
+describe('Visual Testing', () => {
   // Loop through the first 5 URLs from the fixture
   Object.keys(urlsFixture).forEach((key) => {
     const url = urlsFixture[key];
 
     it(`Visits ${key} page and takes Percy snapshot`, () => {
+      //Login for Authors page only
+      if (url == '/user/2') {
+        cy.login('admin');
+      }
       // Sending a request to the URL to ensure it's reachable
       cy.request(url).then(() => {
         // Asserting that the document is visible

@@ -1,5 +1,5 @@
 // Describe the test suite for Technology Selection Filter Validation
-describe('Technology Selection Filter Validation', { tags: '@form' }, () => {
+describe('Technology Selection Filter Validation', () => {
   // Before test, visit the base URL
   before(() => {
     cy.visit('/');
