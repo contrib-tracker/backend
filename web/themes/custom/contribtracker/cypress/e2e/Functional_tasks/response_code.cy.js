@@ -12,6 +12,7 @@ describe('Main Page URL Response Code Validation', () => {
 
   // Test case to validate the response codes for main content links
   it('should validate the response codes for main links', () => {
+    cy.login('admin'); //Login to check admin accessible pages
     validateResponseCodes('main a');
   });
 

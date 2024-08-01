@@ -3,5 +3,6 @@
 ##
 ## Usage: cypress-run [arguments]
 ## Example: "ddev cypress-run --browser chrome"
+## Below executes only the functional test cases on chrome browser
 
-DISPLAY= cypress run "$@"
+DISPLAY= cypress run --spec "cypress/e2e/Functional_tasks/*.cy.js" --browser chrome "$@"
