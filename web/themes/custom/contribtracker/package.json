@@ -3,10 +3,6 @@
     "build": "gulp",
     "lint": "CI=true gulp lint",
     "vr": "percy exec -- cypress run",
-    "vr-prod": "CYPRESS_VIDEO=false percy exec -- cypress run --env version=prod --spec cypress/e2e/VR_tasks/*.cy.js",
-    "vr-dev": "CYPRESS_VIDEO=false percy exec -- cypress run --env version=dev --spec cypress/e2e/VR_tasks/*.cy.js",
-    "functional-prod": "cypress run --env version=prod --spec cypress/e2e/Functional_tasks/*.cy.js",
-    "functional-dev": "cypress run --env version=dev --spec cypress/e2e/Functional_tasks/*.cy.js",
     "cypress-open": "cypress open --env version=prod --browser chrome",
     "cypress-run": "cypress run --env version=prod --browser chrome",
     "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run --env version=prod"
