@@ -20,7 +20,6 @@ jobs:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
       CYPRESS_ADMIN_PASSWORD: ct-admin
-      CYPRESS_BASE_URL: https://contribtracker.ddev.site/
       # For Percy
       PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
     steps:
