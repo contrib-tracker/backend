@@ -1,0 +1,13 @@
+{
+  "Home": { "url": "/" },
+  "CodeContributions": { "url": "/code-contributions" },
+  "ContributionAuthor": { "url": "/user/2", "userType": "admin" },
+  "ContributionCount": { "url": "/contribution-count" },
+  "ContributionDetails": { "url": "/node/79" },
+  "ContributionTechnology": { "url": "/taxonomy/term/2" },
+  "EventContributions": { "url": "/event-contributions" },
+  "NonCodeContributions": { "url": "/non-code-contributions" },
+  "PatchesOnIssues": { "url": "/user/2/patches-on-issues" },
+  "Patches": { "url": "/user/2/patches" },
+  "Taxonomy": { "url": "/taxonomy/term/2" }
+}
