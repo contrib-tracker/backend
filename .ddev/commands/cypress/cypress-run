@@ -2,7 +2,19 @@
 ## Description: Use Cypress in "runner" mode.
 ##
 ## Usage: cypress-run [arguments]
-## Example: "ddev cypress-run --browser chrome"
-## This executes only the functional test cases on chrome browser
+## Example: "ddev cypress-run"
+## This executes only the functional test cases using Electron.
 
-DISPLAY= cypress run --spec "cypress/e2e/Functional_tasks/*.cy.js" --browser chrome "$@"
+# If this is run from the command line, these variables may not be set.
+# Set them to defaults. It may be required to reset the user password
+# using drush, like so:
+# `ddev drush upwd ct-admin ct-admin`
+# Or simply set the actual password in the environment variable.
+if [ -z "${CYPRESS_ADMIN_USERNAME}" ]; then
+  CYPRESS_ADMIN_USERNAME=ct-admin
+fi
+if [ -z "${CYPRESS_ADMIN_PASSWORD}" ]; then
+  CYPRESS_ADMIN_PASSWORD=ct-admin
+fi
+
+DISPLAY= CYPRESS_ADMIN_USERNAME=${CYPRESS_ADMIN_USERNAME} CYPRESS_ADMIN_PASSWORD=${CYPRESS_ADMIN_PASSWORD} cypress run --spec "cypress/e2e/*.cy.js" --browser electron "$@"
