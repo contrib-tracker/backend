@@ -5,16 +5,8 @@
 ## Example: "ddev cypress-run"
 ## This executes only the functional test cases using Electron.
 
-# If this is run from the command line, these variables may not be set.
-# Set them to defaults. It may be required to reset the user password
-# using drush, like so:
+# We set the default CYPRESS_ADMIN_USERNAME and CYPRESS_ADMIN_PASSWORD
+# in `docker-composer.cypress.yaml`. On command-line environments where
+# this is not set, reset your admin password using drush like so:
 # `ddev drush upwd ct-admin ct-admin`
-# Or simply set the actual password in the environment variable.
-if [ -z "${CYPRESS_ADMIN_USERNAME}" ]; then
-  CYPRESS_ADMIN_USERNAME=ct-admin
-fi
-if [ -z "${CYPRESS_ADMIN_PASSWORD}" ]; then
-  CYPRESS_ADMIN_PASSWORD=ct-admin
-fi
-
-DISPLAY= CYPRESS_ADMIN_USERNAME=${CYPRESS_ADMIN_USERNAME} CYPRESS_ADMIN_PASSWORD=${CYPRESS_ADMIN_PASSWORD} cypress run --spec "cypress/e2e/*.cy.js" --browser electron "$@"
+DISPLAY= cypress run "$@"
