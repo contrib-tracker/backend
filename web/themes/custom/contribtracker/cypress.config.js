@@ -17,7 +17,7 @@ export default defineConfig({
   experimentalStudio: true,
   trashAssetsBeforeRuns: false,
   video: process.env.CYPRESS_VIDEO !== 'false', // Defaults to true unless explicitly set to 'false'
-  experimentalShadowDomSupport: true,
+  includeShadowDom: true,
   e2e: {
     async setupNodeEvents(on, config) {
       const version = config.env.version || 'dev';

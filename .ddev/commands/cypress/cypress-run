@@ -2,7 +2,11 @@
 ## Description: Use Cypress in "runner" mode.
 ##
 ## Usage: cypress-run [arguments]
-## Example: "ddev cypress-run --browser chrome"
-## Below executes only the functional test cases on chrome browser
+## Example: "ddev cypress-run"
+## This executes only the functional test cases using Electron.
 
-DISPLAY= cypress run --spec "cypress/e2e/Functional_tasks/*.cy.js" --browser chrome "$@"
+# We set the default CYPRESS_ADMIN_USERNAME and CYPRESS_ADMIN_PASSWORD
+# in `docker-composer.cypress.yaml`. On command-line environments where
+# this is not set, reset your admin password using drush like so:
+# `ddev drush upwd ct-admin ct-admin`
+DISPLAY= cypress run "$@"

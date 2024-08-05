@@ -10,8 +10,8 @@ services:
       - CYPRESS_BASE_URL=${DDEV_PRIMARY_URL}
       - DISPLAY=host.docker.internal:0
       # Pass in the admin details from CI environments
-      - CYPRESS_ADMIN_USERNAME
-      - CYPRESS_ADMIN_PASSWORD
+      - CYPRESS_ADMIN_USERNAME=${CYPRESS_ADMIN_USERNAME:-ct-admin}
+      - CYPRESS_ADMIN_PASSWORD=${CYPRESS_ADMIN_PASSWORD:-ct-admin}
       # For percy
       - PERCY_TOKEN
 
