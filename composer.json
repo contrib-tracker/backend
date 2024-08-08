@@ -39,7 +39,7 @@
         "drupal/ckeditor": "^1.0",
         "drupal/cookies": "^1.2",
         "drupal/core": "^10.1",
-        "drupal/core-composer-scaffold": "^10.1",
+        "drupal/core-composer-scaffold": "^11.0",
         "drupal/do_username": "^2.0",
         "drupal/field_permissions": "^1.0.0",
         "drupal/fixed_block_content": "^1.1",
