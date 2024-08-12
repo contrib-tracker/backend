@@ -68,6 +68,10 @@ jobs:
       CYPRESS_ADMIN_USERNAME: ct-admin
       CYPRESS_ADMIN_PASSWORD: ct-admin
     steps:
+
+      - name: Check size
+        run: df -h
+
       - name: Check out repository code
         uses: actions/checkout@v4
 
@@ -207,6 +211,9 @@ jobs:
             web/themes/custom/contribtracker/cypress/screenshots
             web/themes/custom/contribtracker/cypress/videos
           retention-days: 3
+
+      - name: Check size 1
+        run: df -h
 
   deploy:
     environment:
