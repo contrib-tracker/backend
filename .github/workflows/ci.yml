@@ -111,7 +111,10 @@ jobs:
         uses: ScribeMD/docker-cache@0.5.0
         with:
           key: ddev-images-${{ runner.os }}-${{ steps.ddev_version.outputs.ddev_version }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
-          read-only: ${{ github.event_name == 'pull_request' }}
+          # This disables the cache for PRs and tag events.
+          # If your branch name is different, please adjust it accordingly.
+          # For a multi-branch setup, include all branches in the condition, e.g., `github.ref_name != 'main' && github.ref_name != 'develop'`.
+          read-only: ${{ github.ref_name != 'main' }}
 
 
       - name: Set the platform.sh token
