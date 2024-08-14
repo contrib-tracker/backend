@@ -112,9 +112,7 @@ jobs:
         with:
           key: ddev-images-${{ runner.os }}-${{ steps.ddev_version.outputs.ddev_version }}-${{ hashFiles('.ddev/config.yaml', '.ddev/docker-compose.cypress.yaml', '.ddev/docker-compose.redis.yaml') }}
           # This disables the cache for PRs and tag events.
-          # If your branch name is different, please adjust it accordingly.
-          # For a multi-branch setup, include all branches in the condition, e.g., `github.ref_name != 'main' && github.ref_name != 'develop'`.
-          read-only: ${{ github.ref_name != 'main' }}
+          read-only: ${{ github.event_name == 'pull_request' || github.ref_type == 'tag' }}
 
 
       - name: Set the platform.sh token
