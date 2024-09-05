@@ -475,6 +475,7 @@ display:
                   collapsible: false
                   is_secondary: false
                   collapsible_disable_automatic_open: false
+                  hide_label: false
               field_contribution_technology_target_id:
                 plugin_id: default
                 advanced:
@@ -485,6 +486,7 @@ display:
                   collapsible: false
                   is_secondary: false
                   collapsible_disable_automatic_open: false
+                  hide_label: false
               title:
                 plugin_id: default
                 advanced:
@@ -492,6 +494,7 @@ display:
                   collapsible: false
                   is_secondary: false
                   collapsible_disable_automatic_open: false
+                  hide_label: false
               uid:
                 plugin_id: default
                 advanced:
@@ -502,12 +505,14 @@ display:
                   collapsible: false
                   is_secondary: false
                   collapsible_disable_automatic_open: false
+                  hide_label: false
               field_contribution_date_value:
                 plugin_id: bef_datepicker
                 advanced:
                   collapsible: false
                   is_secondary: false
                   collapsible_disable_automatic_open: false
+                  hide_label: false
             type:
               bef_format: default
               more_options:
