@@ -35,7 +35,7 @@
         "cweagans/composer-patches": "^1.7.0",
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.0.0",
-        "drupal/better_exposed_filters": "^6.0",
+        "drupal/better_exposed_filters": "^7.0",
         "drupal/ckeditor": "^1.0",
         "drupal/cookies": "^1.2",
         "drupal/core": "^10.1",
