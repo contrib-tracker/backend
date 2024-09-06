@@ -12,6 +12,8 @@ describe('Main Page Sublinks Response Code Validation', () => {
 
   // Test case to validate the response codes for main content links
   it('should validate the response codes for main links', () => {
+    //Login to check admin accessibile pages
+    cy.login('admin');
     validateResponseCodes('main a');
   });
 
