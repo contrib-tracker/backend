@@ -23,8 +23,11 @@ switch ($infra) {
 
   case 'platform':
     $env_type = getenv('PLATFORM_ENVIRONMENT_TYPE');
-    $env = getenv('PLATFORM_BRANCH');
-    $env = $env == 'main' ? 'production' : $env;
+    $branch = getenv('PLATFORM_BRANCH');
+    $env = $branch == 'main'
+      ? 'production'
+      : preg_replace('/[^A-Za-z0-9]/', '-', $branch);
+
     // While this can help us classify builds, it is difficult to use
     // to figure out which commit is deployed. But this is the best we
     // have right now.
@@ -42,3 +45,4 @@ switch ($infra) {
 // Use these variables to set whatever needs setting.
 $_SERVER['SENTRY_ENVIRONMENT'] = $env;
 $_SERVER['SENTRY_RELEASE'] = $release;
+$config['environment_indicator.indicator']['name'] = $env;
