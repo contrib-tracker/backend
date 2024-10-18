@@ -29,12 +29,14 @@ switch ($infra) {
     // to figure out which commit is deployed. But this is the best we
     // have right now.
     $release = getenv('PLATFORM_TREE_ID');
+    break;
 
   case 'pantheon':
     $env_type = getenv('PANTHEON_ENVIRONMENT');
     $env = $env_type;
     // TODO This needs investigation to see if it is possible.
     $release = '';
+    break;
 }
 
 // Use these variables to set whatever needs setting.
