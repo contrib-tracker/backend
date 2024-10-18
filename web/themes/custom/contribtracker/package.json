@@ -19,7 +19,7 @@
     "@types/select2": "^4.0.63",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "breakpoint-sass": "^3.0.0",
     "browser-sync": "^3.0.2",
     "cypress": "13.12.0",
