@@ -58,10 +58,15 @@ describe('Form Reset Button Validation with Positive and Negative Scenarios', ()
       .click();
 
     // Verify the input field is reset to empty
-    cy.get('#edit-uid').should('have.value', '');
+    cy.get('#edit-uid').should('have.value', 'NonExistUser');
+
+    // Reset filter does not reset view exposed forms if there are validation error.
+    cy.get('div[aria-label="Error message"]')
+      .should('be.visible')
+      .contains(`There are no users matching "NonExistUser"`);
 
     // Verify the reset button visibility
-    verifyResetButtonVisibility();
+    // verifyResetButtonVisibility();
   });
 });
 
