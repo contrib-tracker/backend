@@ -26,7 +26,7 @@ describe('XSS Attack Simulation in Form Fields Verification', () => {
 
     // After submitting, check if alert was triggered
     cy.then(() => {
-      if (!alertTriggered) {
+      if (alertTriggered) {
         throw new Error(
           'XSS payload was not executed, no alert was triggered.',
         );
