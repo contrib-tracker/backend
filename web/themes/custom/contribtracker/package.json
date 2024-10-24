@@ -3,9 +3,9 @@
     "build": "gulp",
     "lint": "CI=true gulp lint",
     "vr": "percy exec -- cypress run",
-    "cypress-open": "cypress open --env version=prod --browser chrome",
-    "cypress-run": "cypress run --env version=prod --browser chrome",
-    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run --env version=prod"
+    "cypress-open": "cypress open --browser chrome",
+    "cypress-run": "cypress run --browser chrome",
+    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run"
   },
   "devDependencies": {
     "@percy/cli": "^1.29.0",
@@ -23,6 +23,7 @@
     "breakpoint-sass": "^3.0.0",
     "browser-sync": "^3.0.2",
     "cypress": "13.12.0",
+    "cypress-real-events": "^1.13.0",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
