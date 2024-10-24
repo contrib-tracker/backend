@@ -3,8 +3,9 @@
 // First, try to determine where we are running.
 $infra = match(true) {
   getenv('IS_DDEV_PROJECT') == 'true' => 'ddev',
-  !empty($_ENV['PLATFORM_VARIABLES']) => 'platform',
+  !empty($_ENV['AH_SITE_ENVIRONMENT']) => 'acquia',
   !empty($_ENV['PANTHEON_ENVIRONMENT']) => 'pantheon',
+  !empty($_ENV['PLATFORM_VARIABLES']) => 'platform',
 };
 
 // Based on where we are running, find out the environment.
@@ -21,6 +22,20 @@ switch ($infra) {
     $release = '';
     break;
 
+  case 'acquia':
+    $env_type = getenv('AH_SITE_ENVIRONMENT');
+    $env = $env_type;
+    // TODO This needs investigation to see if it is possible.
+    $release = '';
+    break;
+
+  case 'pantheon':
+    $env_type = getenv('PANTHEON_ENVIRONMENT');
+    $env = $env_type;
+    // TODO This needs investigation to see if it is possible.
+    $release = '';
+    break;
+
   case 'platform':
     $env_type = getenv('PLATFORM_ENVIRONMENT_TYPE');
     $branch = getenv('PLATFORM_BRANCH');
@@ -32,13 +47,6 @@ switch ($infra) {
     // to figure out which commit is deployed. But this is the best we
     // have right now.
     $release = getenv('PLATFORM_TREE_ID');
-    break;
-
-  case 'pantheon':
-    $env_type = getenv('PANTHEON_ENVIRONMENT');
-    $env = $env_type;
-    // TODO This needs investigation to see if it is possible.
-    $release = '';
     break;
 }
 
