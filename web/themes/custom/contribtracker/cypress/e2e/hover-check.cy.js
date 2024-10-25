@@ -35,9 +35,8 @@ describe('Hover Actions Verification', () => {
   // Test case for verifying hover actions on the "Login with Google" link
   it('should change the element style on hover for login with google link', () => {
     // Assert the initial color of the element before hover
-    cy.get('.nav__auth-link')
-      .eq(1)
-      .then(($element) => {
+    cy.xpath('(//a[@class="link nav__auth-link auth-link"])[2]').then(
+      ($element) => {
         cy.wrap($element).then(() => {
           cy.wrap($element).should(
             'have.css',
@@ -45,12 +44,12 @@ describe('Hover Actions Verification', () => {
             'rgba(236, 75, 6, 0.933)', // Example: color before hover (RGBA format)
           );
         });
-      });
+      },
+    );
 
     // Perform hover action and then verify the style changes
-    cy.get('.nav__auth-link')
-      .eq(1)
-      .then(($element) => {
+    cy.xpath('(//a[@class="link nav__auth-link auth-link"])[2]').then(
+      ($element) => {
         cy.wrap($element)
           .realHover()
           .then(() => {
@@ -67,6 +66,7 @@ describe('Hover Actions Verification', () => {
               'rgba(236, 75, 6, 0.933)', // Example: background color changes after hover (RGBA format)
             );
           });
-      });
+      },
+    );
   });
 });
