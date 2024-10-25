@@ -3,9 +3,6 @@
     "build": "gulp",
     "lint": "CI=true gulp lint",
     "vr": "percy exec -- cypress run",
-    "cypress-open": "cypress open --browser chrome",
-    "cypress-run": "cypress run --browser chrome",
-    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run",
     "cypress-open": "cypress open --env version=prod --browser chrome",
     "cypress-run": "cypress run --env version=prod --browser chrome",
     "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run --env version=prod",
@@ -14,6 +11,7 @@
     "test:expensive": "cypress run --env grepTags=expensive"
   },
   "devDependencies": {
+    "@cypress/grep": "^4.1.0",
     "@percy/cli": "^1.29.0",
     "@percy/cypress": "^3.1.2",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
@@ -30,7 +28,6 @@
     "browser-sync": "^3.0.2",
     "cypress": "13.12.0",
     "cypress-real-events": "^1.13.0",
-    "cypress-grep": "^3.0.4",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",

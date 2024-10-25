@@ -1,5 +1,5 @@
 import { defineConfig } from 'cypress';
-
+import grepPlugin from '@cypress/grep/src/plugin';
 export default defineConfig({
   projectId: 'contrib-tracker',
   chromeWebSecurity: false, // To Bypass Same-Origin Policy - Useful for social-media-link-check test
@@ -7,7 +7,11 @@ export default defineConfig({
   e2e: {
     baseUrl: process.env.CYPRESS_BASE_URL || 'https://contrib.axelerant.com', // Default to prod url if no base URL is set
     env: {
-      grepTags: ''
-    }
+      grepTags: 'expensive'
+    },
+    setupNodeEvents(on, config) {
+      grepPlugin(config); // Use the imported plugin directly
+      return config;
+    },
   },
 });
