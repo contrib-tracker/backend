@@ -8,6 +8,7 @@ use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Config\ConfigFactory;
 use Github\AuthMethod;
 use Github\Client;
+use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 
 /**
  * Github Query Class.
@@ -31,7 +32,7 @@ class GithubQuery {
    * @var \Drupal\Core\Cache\CacheBackendInterface
    */
   protected $cache;
-
+  protected $logger;
   /**
    * Set authentication token to access GitHub API.
    *
@@ -40,13 +41,14 @@ class GithubQuery {
    * @param \Drupal\Core\Cache\CacheBackendInterface $cacheBackend
    *   The injected cache backend service.
    */
-  public function __construct(ConfigFactory $config_factory, CacheBackendInterface $cacheBackend) {
+  public function __construct(ConfigFactory $config_factory, CacheBackendInterface $cacheBackend,  LoggerChannelFactoryInterface $loggerFactory) {
     $config = $config_factory->get('ct_github.settings');
     $token = $config->get('github_auth_token');
     $client = new Client();
     $client->authenticate($token, NULL, AuthMethod::ACCESS_TOKEN);
     $this->client = $client;
     $this->cache = $cacheBackend;
+    $this->logger = $loggerFactory->get('ct_github'); // Assigning the logger channel directly here
   }
 
   /**
@@ -131,7 +133,34 @@ class GithubQuery {
    */
   public function getUserContributions(string $username) {
     $query = $this->getQuery($username);
-    return $this->client->api('graphql')->execute($query);
-  }
+    $maxRetries = 5;
+    $retryCount = 0;
+    $waitTime = 1; // Initial wait time in seconds for backoff
 
+    while ($retryCount < $maxRetries) {
+      try {
+        return $this->client->api('graphql')->execute($query);
+      } catch (Github\Exception\RuntimeException $e) {
+        // Check if the error is due to bad credentials
+        if ($e->getMessage() === 'Bad credentials') {
+          $this->logger->error('GitHub API error: Bad credentials. Please check the credentials.');
+          return NULL;
+        }
+
+        // Handle other errors with backoff
+        $retryCount++;
+        $this->logger->warning("GitHub API request failed. Retry $retryCount/$maxRetries. Error: " . $e->getMessage());
+
+        // Stop retries if max retries reached
+        if ($retryCount >= $maxRetries) {
+          $this->logger->error("GitHub API request failed after $maxRetries attempts.");
+          return NULL;
+        }
+
+        // Wait before retrying with exponential backoff
+        sleep($waitTime);
+        $waitTime *= 2; // Double the wait time for exponential backoff
+      }
+    }
+  }
 }
