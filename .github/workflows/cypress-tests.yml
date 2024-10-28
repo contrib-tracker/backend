@@ -1,0 +1,62 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'  # Nightly at midnight
+    - cron: '0 0 * * 0'  # Weekly on Sunday midnight
+
+jobs:
+  cypress_tests:
+    runs-on: ubuntu-latest
+
+    env:
+      CYPRESS_ADMIN_USERNAME: ct-admin
+      CYPRESS_ADMIN_PASSWORD: ct-admin
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          autostart: false
+
+      - name: Set the platform.sh token
+        run: |
+          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
+          ddev start
+
+      - name: Install dependencies
+        run: |
+          ddev composer install
+          ddev pull platform -y
+          cd web/themes/custom/contribtracker
+          npm ci --prefer-offline --no-audit
+
+      - name: Change admin password for Cypress
+        run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
+
+      - name: Run smoke tests
+        run: ddev cypress-run --env grepTags=smoke
+
+      - name: Run regression tests (nightly)
+        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * *'
+        run: ddev cypress-run --env grepTags=regression
+
+      - name: Run expensive tests (weekly)
+        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+        run: ddev cypress-run --env grepTags=expensive
+
+      - name: Save Cypress recordings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-recordings
+          path: |
+            web/themes/custom/contribtracker/cypress/screenshots
+            web/themes/custom/contribtracker/cypress/videos
+          retention-days: 3

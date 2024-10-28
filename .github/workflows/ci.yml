@@ -6,9 +6,9 @@ on:
     tags:
       - "*"
   pull_request:
-  schedule:   # Scheduled nightly and weekly jobs
-    - cron: '0 0 * * *'  # Nightly at midnight
-    - cron: '0 0 * * 0'  # Weekly on Sunday midnight
+  #schedule:   # Scheduled nightly and weekly jobs
+  #  - cron: '0 0 * * *'  # Nightly at midnight
+  #  - cron: '0 0 * * 0'  # Weekly on Sunday midnight
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
@@ -65,10 +65,10 @@ jobs:
     permissions:
       pull-requests: write
       contents: read
-    env:
+    #env:
       # For Cypress.
-      CYPRESS_ADMIN_USERNAME: ct-admin
-      CYPRESS_ADMIN_PASSWORD: ct-admin
+      # CYPRESS_ADMIN_USERNAME: ct-admin
+      # CYPRESS_ADMIN_PASSWORD: ct-admin
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -197,29 +197,29 @@ jobs:
           ddev phpunit --testsuite unit
           ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
 
-      - name: Change admin password to make it easier for Cypress tests
-        run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
+      #- name: Change admin password to make it easier for Cypress tests
+      #  run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
 
-      - name: Run smoke tests
-        run: ddev cypress-run --env grepTags=smoke
+      #- name: Run smoke tests
+      #  run: ddev cypress-run --env grepTags=smoke
       
-      - name: Run regression tests (nightly)
-        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * *'
-        run: ddev cypress-run --env grepTags=regression
+      #- name: Run regression tests (nightly)
+      #  if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * *'
+      #  run: ddev cypress-run --env grepTags=regression
       
-      - name: Run expensive tests (weekly)
-        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
-        run: ddev cypress-run --env grepTags=expensive
+      #- name: Run expensive tests (weekly)
+      #  if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+      #  run: ddev cypress-run --env grepTags=expensive
 
-      - name: Save Cypress recordings
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cypress-recordings
-          path: |
-            web/themes/custom/contribtracker/cypress/screenshots
-            web/themes/custom/contribtracker/cypress/videos
-          retention-days: 3
+      # - name: Save Cypress recordings
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: cypress-recordings
+      #     path: |
+      #       web/themes/custom/contribtracker/cypress/screenshots
+      #       web/themes/custom/contribtracker/cypress/videos
+      #     retention-days: 3
 
   deploy:
     environment:
