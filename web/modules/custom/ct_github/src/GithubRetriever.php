@@ -65,10 +65,12 @@ class GithubRetriever {
    */
   public function getIssues() {
     $userContributions = $this->getUserContributions($this->username);
+
+    if($userContributions){
     $issues = array_map(function ($issue) {
        return new Issue($issue['title'], $issue['url']);
     }, $userContributions['data']['user']['issues']['nodes']);
-    return $issues;
+    return $issues;}
   }
 
   /**
@@ -78,6 +80,9 @@ class GithubRetriever {
     $userContributions = $this->getUserContributions($this->username);
     $codeContribution = [];
     // Get all commits associated with the user and set the title accodingly.
+    if(!$userContributions){
+      return NULL;
+    }
     foreach ($userContributions['data']['user']['pullRequests']['nodes'] as $data) {
       foreach ($data['commits']['nodes'] as $node) {
         if ($node['commit']['authoredByCommitter']) {
