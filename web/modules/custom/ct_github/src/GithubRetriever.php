@@ -65,6 +65,9 @@ class GithubRetriever {
    */
   public function getIssues() {
     $userContributions = $this->getUserContributions($this->username);
+    if(!$userContributions){
+      return NULL;
+    }
     $issues = array_map(function ($issue) {
        return new Issue($issue['title'], $issue['url']);
     }, $userContributions['data']['user']['issues']['nodes']);
@@ -76,6 +79,9 @@ class GithubRetriever {
    */
   public function getCodeContributions() {
     $userContributions = $this->getUserContributions($this->username);
+    if(!$userContributions){
+      return NULL;
+    }
     $codeContribution = [];
     // Get all commits associated with the user and set the title accodingly.
     foreach ($userContributions['data']['user']['pullRequests']['nodes'] as $data) {
