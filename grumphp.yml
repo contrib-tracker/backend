@@ -34,9 +34,9 @@ grumphp:
       standard:
         - phpcs.xml
       ignore_patterns:
-        - .github
-        - .gitlab
-        - .ddev
+        - /\.github
+        - /\.gitlab
+        - /\.ddev
         - /config
         - /drush
         - /web/robots.txt

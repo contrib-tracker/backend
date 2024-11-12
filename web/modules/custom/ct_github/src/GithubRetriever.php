@@ -65,7 +65,7 @@ class GithubRetriever {
    */
   public function getIssues() {
     $userContributions = $this->getUserContributions($this->username);
-    if(!$userContributions){
+    if (!$userContributions) {
       return NULL;
     }
     $issues = array_map(function ($issue) {
@@ -79,7 +79,7 @@ class GithubRetriever {
    */
   public function getCodeContributions() {
     $userContributions = $this->getUserContributions($this->username);
-    if(!$userContributions){
+    if (!$userContributions) {
       return NULL;
     }
     $codeContribution = [];
