@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Based on Examples for Developers phpcs.xml.dist. Modified for use for Drupal
   projects. See https://git.drupalcode.org/project/examples/blob/HEAD/phpcs.xml.dist
@@ -6,41 +6,14 @@
 -->
 <ruleset name="AxelerantDrupal">
   <description>Axelerant baseline rules for PHP CodeSniffer</description>
-
-  <!--Exclude folders used by common frontend tools.-->
-  <exclude-pattern>*/bower_components/*</exclude-pattern>
-  <exclude-pattern>*/node_modules/*</exclude-pattern>
-  <!--Exclude third party code.-->
-  <exclude-pattern>./assets/vendor/*</exclude-pattern>
-
   <file>.</file>
-
-  <!-- PHPCS Arguments -->
-  <arg name="extensions" value="inc,yml,install,module,php,profile,test,theme" />
-  <arg name="colors" />
-
-  <!--Allow global variables in settings file.-->
-  <rule ref="DrupalPractice.CodeAnalysis.VariableAnalysis.UndefinedVariable">
-    <exclude-pattern>settings(\.[a-zA-Z0-9]+)?\.php</exclude-pattern>
-  </rule>
-
-  <!--Allow section separators in settings.php file.-->
-  <rule ref="DrupalPractice.Commenting.CommentEmptyLine.SpacingAfter">
-    <exclude-pattern>settings(\.[a-zA-Z0-9]+)?\.php</exclude-pattern>
-  </rule>
-  <rule ref="Drupal.Commenting.InlineComment.InvalidEndChar">
-    <exclude-pattern>settings(\.[a-zA-Z0-9]+)?\.php</exclude-pattern>
-  </rule>
-  <rule ref="Drupal.Commenting.InlineComment.NoSpaceBefore">
-    <exclude-pattern>settings(\.[a-zA-Z0-9]+)?\.php</exclude-pattern>
-  </rule>
-  <rule ref="Drupal.Commenting.InlineComment.SpacingAfter">
-    <exclude-pattern>settings(\.[a-zA-Z0-9]+)?\.php</exclude-pattern>
-  </rule>
-
+  <!-- Only include specific sniffs that pass. This ensures that, if new sniffs are added, HEAD does not fail.-->
   <!-- Drupal sniffs -->
+  <rule ref="Drupal"/>
   <rule ref="Drupal.Arrays.Array">
     <!-- Sniff for these errors: CommaLastItem -->
+    <exclude name="Drupal.Arrays.Array.ArrayClosingIndentation"/>
+    <exclude name="Drupal.Arrays.Array.ArrayIndentation"/>
     <exclude name="Drupal.Arrays.Array.LongLineDeclaration"/>
   </rule>
   <rule ref="Drupal.Classes.ClassCreateInstance"/>
@@ -48,7 +21,6 @@
   <rule ref="Drupal.Classes.FullyQualifiedNamespace"/>
   <rule ref="Drupal.Classes.InterfaceName"/>
   <rule ref="Drupal.Classes.UnusedUseStatement"/>
-  <rule ref="Drupal.Classes.UseGlobalClass"/>
   <rule ref="Drupal.Classes.UseLeadingBackslash"/>
   <rule ref="Drupal.CSS.ClassDefinitionNameSpacing"/>
   <rule ref="Drupal.CSS.ColourDefinition"/>
@@ -342,17 +314,8 @@
   <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing" />
   <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
   <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
-  <rule ref="Squiz.WhiteSpace.OperatorSpacing">
-    <properties>
-      <property name="ignoreNewlines" value="true"/>
-    </properties>
-  </rule>
 
   <!-- Zend sniffs -->
   <rule ref="Zend.Files.ClosingTag"/>
-
-  <!-- sniffs from https://github.com/acquia/coding-standards-php -->
-  <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
-  <rule ref="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable" />
 
 </ruleset>
