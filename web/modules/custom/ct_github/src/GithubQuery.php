@@ -43,8 +43,7 @@ class GithubQuery {
   public function __construct(ConfigFactory $config_factory, CacheBackendInterface $cacheBackend) {
     $config = $config_factory->get('ct_github.settings');
     $token = $config->get('github_auth_token');
-    $client = new Client();
-    $client->authenticate($token, NULL, AuthMethod::ACCESS_TOKEN);
+    $client = (strlen($token) >= 40) ? (new Client())->authenticate($token, NULL, AuthMethod::ACCESS_TOKEN) : NULL;
     $this->client = $client;
     $this->cache = $cacheBackend;
   }
@@ -113,6 +112,9 @@ class GithubQuery {
    */
   public function isUserValid(string $username): bool {
     $cid = 'ct_github:user:' . $username;
+    if ($this->client === NULL) {
+      return FALSE;
+    }
     $cache = $this->cache->get($cid);
     if ($cache) {
       return $cache->data == 'valid';
@@ -130,6 +132,9 @@ class GithubQuery {
    * API request to get user contributions.
    */
   public function getUserContributions(string $username) {
+    if ($this->client === NULL) {
+      return NULL;
+    }
     $query = $this->getQuery($username);
     return $this->client->api('graphql')->execute($query);
   }
