@@ -94,6 +94,8 @@ class GithubContribution extends PluginBase implements ContributionSourceInterfa
    * Get all users with github username.
    */
   public function getUsers() {
+    // Return nothing because we can't do anything with any users if we
+    // don't have a valid token.
     if (!$this->tokenValid) {
       return [];
     }
