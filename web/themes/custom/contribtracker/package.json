@@ -3,9 +3,9 @@
     "build": "gulp",
     "lint": "CI=true gulp lint",
     "vr": "percy exec -- cypress run",
-    "cypress-open": "cypress open --env version=prod --browser chrome",
-    "cypress-run": "cypress run --env version=prod --browser chrome",
-    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run --env version=prod",
+    "cypress-open": "cypress open --env --browser chrome",
+    "cypress-run": "cypress run --env --browser chrome",
+    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run --env",
     "test:smoke": "cypress run --env grepTags=smoke",
     "test:regression": "cypress run --env grepTags=regression",
     "test:expensive": "cypress run --env grepTags=expensive"
