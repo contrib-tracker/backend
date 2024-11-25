@@ -6,9 +6,9 @@
     "cypress:open": "cypress open --browser chrome",
     "cypress:run": "cypress run --browser chrome",
     "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run",
-    "test:smoke": "cypress run --env grepTags=smoke",
-    "test:regression": "cypress run --env grepTags=regression",
-    "test:expensive": "cypress run --env grepTags=expensive"
+    "cypress:run:smoke": "cypress run --env grepTags=smoke",
+    "cypress:run:regression": "cypress run --env grepTags=regression",
+    "cypress:run:expensive": "cypress run --env grepTags=expensive"
   },
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
