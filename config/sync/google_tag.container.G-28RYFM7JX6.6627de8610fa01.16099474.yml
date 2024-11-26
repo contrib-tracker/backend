@@ -8,9 +8,18 @@ id: G-28RYFM7JX6.6627de8610fa01.16099474
 label: G-28RYFM7JX6
 weight: 0
 tag_container_ids:
-  - G-28RYFM7JX6
+  - GTM-WKJR964D
 advanced_settings:
   consent_mode: true
+  gtm:
+    GTM-WKJR964D:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
 dimensions_metrics: {  }
 conditions:
   user_role:
