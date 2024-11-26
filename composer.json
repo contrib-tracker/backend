@@ -62,7 +62,7 @@
         "geocoder-php/nominatim-provider": "^5.2",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "platformsh/config-reader": "^2.3.1",
+        "platformsh/config-reader": "^3.0.0",
         "vlucas/phpdotenv": "^5.2"
     },
     "require-dev": {
