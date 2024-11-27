@@ -1,5 +1,5 @@
 // Describe the test suite for Main Page Sublinks Response Code Validation
-describe('Main Page Sublinks Response Code Validation', { tags: ['expensive'] }, () => {
+describe('Main Page Sublinks Response Code Validation', { tags: ['expensive','critical-path'] }, () => {
   // Before each test, visit the main page
   beforeEach(() => {
     cy.visit('/');

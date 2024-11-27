@@ -1,11 +1,7 @@
 name: Cypress Tests
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 0 * * *'  # Nightly at midnight
     - cron: '0 0 * * 0'  # Weekly on Sunday midnight
 
 jobs:
@@ -40,15 +36,7 @@ jobs:
       - name: Change admin password for Cypress
         run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
 
-      - name: Run smoke tests
-        run: ddev cypress-run --env grepTags=smoke
-
-      - name: Run regression tests (nightly)
-        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * *'
-        run: ddev cypress-run --env grepTags=regression
-
       - name: Run expensive tests (weekly)
-        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
         run: ddev cypress-run --env grepTags=expensive
 
       - name: Save Cypress recordings

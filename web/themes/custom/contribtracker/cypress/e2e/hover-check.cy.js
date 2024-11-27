@@ -1,5 +1,5 @@
 // Describe the test suite for Hover Actions Verification
-describe('Hover Actions Verification', () => {
+describe('Hover Actions Verification', { tags: ['critical-path'] }, () => {
   // Before each test, visit the base URL
   beforeEach(() => {
     cy.viewport('macbook-13');
