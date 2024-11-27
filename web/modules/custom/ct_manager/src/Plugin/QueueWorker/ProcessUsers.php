@@ -90,13 +90,15 @@ class ProcessUsers extends QueueWorkerBase implements ContainerFactoryPluginInte
     /** @var \Drupal\ct_manager\ContributionSourceInterface $plugin_instance */
     $plugin_instance = $this->pluginManager->createInstance($plugin_id);
     if (!($plugin_instance->isUserValid($user))) {
-      $this->logger->error('@plugin username for @username is invalid.', ['@plugin' => $plugin_id, '@username' => $user->getAccountName()]);
+      $this->logger->notice('@plugin username for @username is invalid.', ['@plugin' => $plugin_id, '@username' => $user->getAccountName()]);
       return;
     }
 
     $issues = $plugin_instance->getUserIssues($user);
     $comments = $plugin_instance->getUserCodeContributions($user);
-
+    if (!$issues) {
+      return;
+    }
     $this->logger->notice('Saving @plugin issues for @user', ['@plugin' => $plugin_id, '@user' => $user->getAccountName()]);
     /** @var \Drupal\ct_manager\Data\Issue $issue */
     foreach ($issues as $issue) {

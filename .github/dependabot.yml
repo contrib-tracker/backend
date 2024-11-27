@@ -23,7 +23,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/web/themes/custom/contribtracker/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     commit-message:
       prefix: "npm"
     groups:

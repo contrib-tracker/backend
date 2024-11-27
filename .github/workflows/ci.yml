@@ -175,7 +175,7 @@ jobs:
         if: ${{ !contains(steps.validate_config.outputs.status_output, 'No differences') }}
         run: |
           echo "::warning::Config export has differences"
-          echo ${{ steps.validate_config.outputs.status_output }}
+          echo "${{ steps.validate_config.outputs.status_output }}"
 
       - name: Deploy the site
         run: |

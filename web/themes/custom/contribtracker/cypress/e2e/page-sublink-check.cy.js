@@ -18,8 +18,12 @@ describe('Main Page Sublinks Response Code Validation', { tags: ['expensive', 'c
   });
 
   // Test case to validate the response codes for footer links
+  // Social links were excluded from this test because they often lead to external sites
+  // (e.g., social media platforms) that may have restrictions or security policies
+  // (like CORS or bot detection) that can result in 400/500 response codes.
+  // Such restrictions are beyond our control and do not indicate issues with our site’s functionality.
   it('should validate the response codes for footer links', () => {
-    validateResponseCodes('footer a');
+    validateResponseCodes('footer a:not(.social__sharing a)');
   });
 
   // Function to validate response codes for links in the given section
