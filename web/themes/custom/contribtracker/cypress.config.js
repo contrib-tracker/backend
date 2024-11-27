@@ -7,7 +7,7 @@ export default defineConfig({
   e2e: {
     baseUrl: process.env.CYPRESS_BASE_URL || 'https://contrib.axelerant.com', // Default to prod url if no base URL is set
     env: {
-      grepTags: ''
+      grepTags: '',
     },
     setupNodeEvents(on, config) {
       grepPlugin(config); // Use the imported plugin directly
