@@ -1,7 +1,7 @@
 // Importing the fixture containing URLs
 import pageUrls from '../fixtures/page-check-urls.json';
 
-describe('Visual Testing', () => {
+describe('Visual Testing', { tags: ['critical-path'] }, () => {
   Object.keys(pageUrls).forEach((key) => {
     const url = pageUrls[key].url;
     const userType = pageUrls[key].hasOwnProperty('userType')

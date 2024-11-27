@@ -1,5 +1,5 @@
 // Describe the test suite for Pagination Handling and Validation
-describe('Pagination Handling and Validation', () => {
+describe('Pagination Handling and Validation', { tags: ['critical-path'] }, () => {
   // Define the test case
   it('should filter results with selected contribution type on each page', () => {
     // Visit the page with the form

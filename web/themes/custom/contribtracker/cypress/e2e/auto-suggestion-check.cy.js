@@ -1,5 +1,5 @@
 // Describe the test suite for Form Auto-Suggestions Validation with Extracted User Name
-describe('Form Auto-Suggestions Validation with Extracted User Name', () => {
+describe('Form Auto-Suggestions Validation with Extracted User Name', { tags: ['critical-path'] }, () => {
   it('should show auto-suggestions when typing the first user name', () => {
     // Visit the page with the form
     cy.visit('/');

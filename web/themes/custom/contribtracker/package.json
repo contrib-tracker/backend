@@ -3,11 +3,15 @@
     "build": "gulp",
     "lint": "CI=true gulp lint",
     "vr": "percy exec -- cypress run",
-    "cypress-open": "cypress open --browser chrome",
-    "cypress-run": "cypress run --browser chrome",
-    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run"
+    "cypress:open": "cypress open --browser chrome",
+    "cypress:run": "cypress run --browser chrome",
+    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run",
+    "cypress:run:critical-path": "cypress run --env grepTags=critical-path",
+    "cypress:run:security": "cypress run --env grepTags=security",
+    "cypress:run:expensive": "cypress run --env grepTags=expensive"
   },
   "devDependencies": {
+    "@cypress/grep": "^4.1.0",
     "@percy/cli": "^1.30.2",
     "@percy/cypress": "^3.1.2",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",

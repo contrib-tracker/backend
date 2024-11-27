@@ -1,5 +1,5 @@
 // Describe the test suite for XSS Attack Simulation in Form Fields Verification
-describe('XSS Attack Simulation in Form Fields Verification', () => {
+describe('XSS Attack Simulation in Form Fields Verification', { tags: ['security', 'critical-path'] }, () => {
   before(() => {
     // Visit the page with the form
     cy.visit('/');
