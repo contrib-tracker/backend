@@ -64,16 +64,6 @@ This project aims to facilitate automated functional and visual regression check
 
    * **performance**: For tests measuring system performance under various conditions.
 
-   **Recommended Tags**
-
-   We recommend the following commonly used tags:
-
-   * **critical-path**: Tests that verify core functionalities essential for system stability.
-   * **security**: Tests that validate security mechanisms, such as input sanitization and access control.
-   * **expensive**: Resource-intensive tests requiring selective execution.
-   * **regression**: Tests to ensure existing features remain functional after changes.
-   * **performance**: Tests that validate system performance under various conditions.
-
    **Adding Tags to Test Scripts**
 
    To add tags to your test scripts, use the `tags` property in the test definition:
