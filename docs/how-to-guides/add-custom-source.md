@@ -5,7 +5,7 @@ The Contribution Tracker supports tracking contributions from various data sourc
 ## Steps to Add and Customize a Contribution Source
 
 1. **Understand the Contribution Plugin System**  
-   - Contribution sources are implemented as plugins of type `ContributionSource` in the Contribution Plugin Manager.  
+   - Contribution sources are implemented as plugins of type `ContributionSource` in the [Contribution Plugin Manager](../../web/modules/custom/ct_manager).  
    - Each plugin retrieves and processes contributions for its source during cron runs.  
 
 2. **Configure the New Data Source**  

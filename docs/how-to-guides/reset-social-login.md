@@ -12,7 +12,7 @@
 ## Steps for Resetting
 
 1. **Reconfigure OAuth Settings**:  
-   - Update client ID and secret in `settings.php`.  
+   - Update the client ID and secret using environment variables in Platform.sh. Ensure the correct values are set for your project’s environment configuration.
 
 2. **Re-test Integration**:  
-   - Use the testing steps from the *Setting Up Social Login Integration* guide to confirm fixes.
+   - Follow the testing steps outlined in the [Setting Up Social Login Integration guide](setting-up-social-login.md) to confirm that the changes are working correctly.

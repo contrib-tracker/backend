@@ -8,13 +8,13 @@ The Contribution Tracking System monitors and analyzes contributions across proj
 
 Major tools that are required for setting up the site. It is recommended to use the latest version or at least the minimum version as mentioned below. It is mandatory to add [your SSH key to your GitHub account settings](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
+- [OrbStack](https://orbstack.dev/) or [Docker](https://docs.docker.com/install/)
+
 - [Composer](https://getcomposer.org/download/) (optional if used via DDEV)
 
-- [Docker](https://docs.docker.com/install/) or [OrbStack](https://orbstack.dev/)
+- [DDEV](https://ddev.com/get-started/) - v1.23.3 and above.
 
-- [DDEV](https://ddev.com/get-started/) - v1.22.0
-
-- [NodeJs](https://nodejs.org/en/download)
+- [NodeJs](https://nodejs.org/en/download) (optional if used via DDEV)
 
 ## Local environment setup
 
