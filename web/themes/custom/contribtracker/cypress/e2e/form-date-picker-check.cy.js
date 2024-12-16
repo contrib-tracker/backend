@@ -1,5 +1,5 @@
 // Describe the test suite for Date Picker Validation with Random Date Selection
-describe('Date Picker Filter Validation with Random Date Selection', () => {
+describe('Date Picker Filter Validation with Random Date Selection', { tags: ['critical-path'] }, () => {
   // Before test, visit the base URL
   before(() => {
     cy.visit('/');

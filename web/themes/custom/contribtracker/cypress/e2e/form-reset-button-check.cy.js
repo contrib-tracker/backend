@@ -1,5 +1,5 @@
 // Describe the test suite for verifying form reset functionality with positive and negative scenarios
-describe('Form Reset Button Validation with Positive and Negative Scenarios', () => {
+describe('Form Reset Button Validation with Positive and Negative Scenarios', { tags: ['critical-path'] }, () => {
   // Before each test, visit the page containing the form
   beforeEach(() => {
     cy.visit('/');

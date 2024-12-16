@@ -1,5 +1,5 @@
 // Describe the test suite for Form Filter Validation with Positive and Negative Scenarios
-describe('Form Filter Validation with Positive and Negative Scenarios', () => {
+describe('Form Filter Validation with Positive and Negative Scenarios', { tags: ['critical-path'] }, () => {
   // Before each test, visit the base URL to ensure a fresh start
   beforeEach(() => {
     cy.visit('/');
