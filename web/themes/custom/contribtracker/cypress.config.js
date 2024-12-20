@@ -1,5 +1,5 @@
 import { defineConfig } from 'cypress';
-import grepPlugin from '@cypress/grep/src/plugin';
+import grepPlugin from '@cypress/grep/src/plugin.js';
 export default defineConfig({
   projectId: 'contrib-tracker',
   chromeWebSecurity: false, // To Bypass Same-Origin Policy - Useful for social-media-link-check test
