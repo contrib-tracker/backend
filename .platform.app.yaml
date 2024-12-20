@@ -160,4 +160,9 @@ hooks:
 crons:
     drupal:
         spec: '*/20 * * * *'
-        cmd: 'cd web ; drush core-cron'
+        commands:
+            start: |
+              # only run for the production environment, aka main branch
+              if [ "$PLATFORM_ENVIRONMENT_TYPE" = "production" ]; then
+                cd web ; drush core-cron
+              fi
