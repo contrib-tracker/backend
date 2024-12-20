@@ -1,7 +1,7 @@
-describe('Accessibility Testing for All Pages', { tags: ['expensive'] }, () => {
-    // Import the list of pages and their URLs from a fixture file
-    const pages = require('../fixtures/page-check-urls.json');
-  
+// Import the list of pages and their URLs from a fixture file
+import pages from '../fixtures/page-check-urls.json';
+
+describe('Accessibility Testing for All Pages', { tags: ['expensive'] }, () => {  
     // Iterate over each page in the `pages` object
     Object.entries(pages).forEach(([pageName, pageData]) => {
       it(`Validates accessibility for ${pageName} page`, () => {
