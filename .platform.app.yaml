@@ -140,7 +140,7 @@ hooks:
     build: |
       set -e
       # Install the latest lts
-      n lts
+      n 20
       # Reset the location hash to recognize the newly installed version
       hash -r
 
