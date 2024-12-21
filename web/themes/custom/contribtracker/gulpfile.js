@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import config from './gulp-tasks/config.js';
 
 import scss from './gulp-tasks/scss.js';
-import ts from './gulp-tasks/ts.js'
+import ts from './gulp-tasks/ts.js';
 import svg from './gulp-tasks/svg.js';
 import pretty from './gulp-tasks/prettier.js';
 import lint from './gulp-tasks/lint.js';
