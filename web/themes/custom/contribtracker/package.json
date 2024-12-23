@@ -48,9 +48,9 @@
     "prettier": "^3.4.1",
     "sass": "^1.81.0",
     "sass-toolkit": "^2.10.2",
-    "stylelint": "^15.11.0",
-    "stylelint-prettier": "^4.1.0",
-    "stylelint-scss": "5.0",
+    "stylelint": "^16.12.0",
+    "stylelint-prettier": "^5.0.2",
+    "stylelint-scss": "6.10",
     "typescript": "^5.7.2",
     "uuid": "^11.0.3"
   },
