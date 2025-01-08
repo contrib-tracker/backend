@@ -3,7 +3,8 @@ describe('Social Media Icons Redirection Validation', { tags: ['critical-path'] 
   // List of social media icons with their selectors
   const socialMediaLinks = [
     { selector: '.icon-facebook' },
-    { selector: '.icon-twitter' },
+    // See https://github.com/contrib-tracker/backend/pull/716
+    // { selector: '.icon-twitter' },
     { selector: '.icon-linkedin' },
   ];
 
