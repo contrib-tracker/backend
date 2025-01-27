@@ -1,0 +1,3 @@
+[submodule ".phpdoc/themes/phpdoc-backstage-markdown-theme"]
+	path = .phpdoc/themes/phpdoc-backstage-markdown-theme
+	url = git@github.com:axelerant/phpdoc-backstage-markdown-theme.git
