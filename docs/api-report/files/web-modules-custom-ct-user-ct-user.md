@@ -1,0 +1,163 @@
+
+
+
+
+### ## ct_user.module
+
+
+
+
+
+
+
+### Tags
+
+- **file**
+            - Contains ct_user.module.
+
+  
+
+
+
+
+
+### Table of Contents
+
+
+
+
+
+
+
+
+
+
+
+#### Functions
+
+- **[ct_user_theme()](../namespaces/default.md#function_ct_user_theme)**
+           : `mixed`
+
+
+- **[ct_user_help()](../namespaces/default.md#function_ct_user_help)**
+           : `mixed`
+*Implements hook_help().*
+
+
+- **[ct_user_form_alter()](../namespaces/default.md#function_ct_user_form_alter)**
+           : `mixed`
+*Implements hook_form_alter().*
+
+
+- **[ct_user_user_login_form_validate()](../namespaces/default.md#function_ct_user_user_login_form_validate)**
+           : `mixed`
+*Custom validation function for the user login form.*
+
+
+
+
+
+
+
+### Functions
+
+#### ct_user_theme()
+
+
+[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 11
+
+
+
+```php
+ct_user_theme() :mixed
+```
+
+
+
+
+
+
+
+
+
+#### ct_user_help()
+
+
+[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 22
+
+*Implements hook_help().*
+
+
+```php
+ct_user_help(mixed  $route_name, <abbr title="\Drupal\Core\Routing\RouteMatchInterface">RouteMatchInterface</abbr>  $route_match) :mixed
+```
+
+
+#### Parameters
+
+- **$route_name**: mixed
+    
+- **$route_match**: &lt;abbr title=&quot;\Drupal\Core\Routing\RouteMatchInterface&quot;&gt;RouteMatchInterface&lt;/abbr&gt;
+    
+
+
+
+
+
+
+
+#### ct_user_form_alter()
+
+
+[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 38
+
+*Implements hook_form_alter().*
+
+
+```php
+ct_user_form_alter(mixed  & $form, mixed  $form_state, mixed  $form_id) :mixed
+```
+
+
+#### Parameters
+
+- **$form**: mixed
+    
+- **$form_state**: mixed
+    
+- **$form_id**: mixed
+    
+
+
+
+
+
+
+
+#### ct_user_user_login_form_validate()
+
+
+[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 49
+
+*Custom validation function for the user login form.*
+
+
+```php
+ct_user_user_login_form_validate(mixed  & $form, mixed  $form_state) :mixed
+```
+
+
+#### Parameters
+
+- **$form**: mixed
+    
+- **$form_state**: mixed
+    
+
+
+
+
+
+
+
+

@@ -1,0 +1,183 @@
+
+
+- [Drupal](../namespaces/drupal.md)
+- [ct_reports](../namespaces/drupal-ct-reports.md)
+- [Controller](../namespaces/drupal-ct-reports-controller.md)
+
+
+### 
+## ContributionCountController
+
+- **Extends**: `[ControllerBase](../\Drupal\Core\Controller\ControllerBase)`
+
+- **In Package**:
+    - [Application](../packages/Application.md)
+  
+
+
+---
+
+
+
+
+
+
+[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 12
+
+*A controller to display contribution statistics.*
+
+
+
+
+
+
+
+
+
+
+
+### Table of Contents
+
+
+
+
+
+
+
+
+
+#### Properties
+
+- **[$contribStats](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#property_contribStats)**
+         : `<abbr title="\Drupal\contrib_tracker\ContributionStatistics">ContributionStatistics</abbr>`  
+*Contribution statistics instance.*
+
+
+#### Methods
+
+- **[__construct()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#method___construct)**
+           : `mixed`
+*Constructs a new GeofieldMapGeocoder object.*
+
+
+- **[content()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#method_content)**
+           : `mixed`
+*Returns a render-able array with contribution statistics.*
+
+
+- **[create()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#method_create)**
+           : `mixed`
+*{@inheritdoc}*
+
+
+
+
+
+
+
+### Properties
+
+#### $contribStats
+
+
+[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 19
+
+*Contribution statistics instance.*
+
+
+
+`protected [](../\Drupal\contrib_tracker\ContributionStatistics)|UTF-8 $contribStats`
+
+
+
+
+
+
+
+
+
+
+
+### Methods
+
+#### __construct()
+
+
+[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 26
+
+*Constructs a new GeofieldMapGeocoder object.*
+
+```php
+__construct(<abbr title="\Drupal\contrib_tracker\ContributionStatistics">ContributionStatistics</abbr>  $contrib_stats) :mixed
+```
+
+
+
+
+
+#### Parameters
+
+- **$contrib_stats**: &lt;abbr title=&quot;\Drupal\contrib_tracker\ContributionStatistics&quot;&gt;ContributionStatistics&lt;/abbr&gt;
+    
+
+
+
+
+
+
+
+
+
+#### content()
+
+
+[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 42
+
+*Returns a render-able array with contribution statistics.*
+
+```php
+content() :mixed
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### create()
+
+
+[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 33
+
+*{@inheritdoc}*
+
+```php
+static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>  $container) :mixed
+```
+
+
+
+
+
+#### Parameters
+
+- **$container**: &lt;abbr title=&quot;\Symfony\Component\DependencyInjection\ContainerInterface&quot;&gt;ContainerInterface&lt;/abbr&gt;
+    
+
+
+
+
+
+
+
+
+
+

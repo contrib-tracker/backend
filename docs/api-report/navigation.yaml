@@ -1,0 +1,14 @@
+nav:
+  - Version latest:
+      - Namespaces:
+          - Drupal: namespaces/drupal.md
+      - Packages:
+          - Application: packages/Application.md
+
+  - Reports:
+      - Deprecated: reports/deprecated.md
+      - Errors: reports/errors.md
+      - Markers: reports/markers.md
+
+  - Indices:
+      - Files: indices/files.md
