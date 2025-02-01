@@ -14,7 +14,7 @@
     "@cypress/grep": "^4.1.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.8.0",
-    "@percy/cli": "^1.30.3",
+    "@percy/cli": "^1.30.7",
     "@percy/cypress": "^3.1.2",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
     "@types/gulp": "^4.0.17",
