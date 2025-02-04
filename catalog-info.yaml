@@ -10,6 +10,7 @@ metadata:
     newrelic.com/dashboard-guid: NDE5NjkxMXxBUE18QVBQTElDQVRJT058NTU4MDEwNzY0
     jira/project-key: CONT
     backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-phpdoc-opt-in: 'true'
     platform.sh/project-id: brbqplxd7ycq6
 spec:
   type: website
