@@ -1,10 +1,8 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 
 
-### ##ct_drupal
-
+## ct_drupal
 
 
 

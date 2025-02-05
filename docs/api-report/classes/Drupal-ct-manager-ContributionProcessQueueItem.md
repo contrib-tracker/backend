@@ -1,10 +1,8 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_manager](../namespaces/drupal-ct-manager.md)
 
 
-### 
 ## ContributionProcessQueueItem
 
 
@@ -19,12 +17,9 @@
 
 
 
-
 [ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 12
 
 *Creates a value object with user and plugin id.*
-
-
 
 
 
@@ -45,28 +40,23 @@
 
 
 #### Properties
-
-- **[$plugin_id](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#property_plugin_id)**
+- **[$plugin_id](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#plugin_id)**
          : `string`  
 
-
-- **[$user](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#property_user)**
-         : `<abbr title="\Drupal\user\Entity\User">User</abbr>`  
+- **[$user](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#user)**
+         : `[User](# \Drupal\user\Entity\User)`  
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#__construct)**
            : `mixed`
 *User value object constructor.*
 
-
-- **[getPluginId()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#method_getPluginId)**
+- **[getPluginId()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#getpluginid)**
            : `string`
 
-
-- **[getUser()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#method_getUser)**
-           : `<abbr title="\Drupal\user\Entity\User">User</abbr>`
+- **[getUser()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#getuser)**
+           : `[User](# \Drupal\user\Entity\User)`
 
 
 
@@ -78,13 +68,11 @@
 
 #### $plugin_id
 
-
 [ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 17
 
 
 
-
-`protected [](../string)|UTF-8 $plugin_id`
+`protected string $plugin_id`
 
 
 Plugin ID.
@@ -94,20 +82,16 @@ Plugin ID.
 
 
 
-
 #### $user
-
 
 [ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 22
 
 
 
-
-`protected [](../\Drupal\user\Entity\User)|UTF-8 $user`
+`protected [User](# \Drupal\user\Entity\User) $user`
 
 
 User to be processed.
-
 
 
 
@@ -120,26 +104,24 @@ User to be processed.
 
 #### __construct()
 
-
 [ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 32
 
 *User value object constructor.*
 
 ```php
-__construct(string  $plugin_id, <abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :mixed
+__construct(string $plugin_id, [User](# \Drupal\user\Entity\User) $user) :mixed
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$plugin_id**: string
     
 The plugin id.
 
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
 The user object.
 
@@ -150,10 +132,7 @@ The user object.
 
 
 
-
-
 #### getPluginId()
-
 
 [ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 37
 
@@ -170,10 +149,7 @@ getPluginId() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
@@ -181,12 +157,11 @@ string
 
 #### getUser()
 
-
 [ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 41
 
 
 ```php
-getUser() :<abbr title="\Drupal\user\Entity\User">User</abbr>
+getUser() :[User](# \Drupal\user\Entity\User)
 ```
 
 
@@ -197,12 +172,9 @@ getUser() :<abbr title="\Drupal\user\Entity\User">User</abbr>
 
 
 
+**Return Values**
 
-
-
-#### Return Values
-
-<abbr title="\Drupal\user\Entity\User">User</abbr>
+[User](# \Drupal\user\Entity\User)
 
 
 

@@ -1,25 +1,22 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_manager](../namespaces/drupal-ct-manager.md)
 - [Plugin](../namespaces/drupal-ct-manager-plugin.md)
 - [QueueWorker](../namespaces/drupal-ct-manager-plugin-queueworker.md)
 
 
-### 
 ## ProcessUsers
 
-- **Extends**: `[QueueWorkerBase](../\Drupal\Core\Queue\QueueWorkerBase)`
+- **extends**: `[QueueWorkerBase](# \Drupal\Core\Queue\QueueWorkerBase)`
 
 - **In Package**:
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    `[ContainerFactoryPluginInterface](../\Drupal\Core\Plugin\ContainerFactoryPluginInterface)`
+    `[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)`
   
 
 ---
-
 
 
 
@@ -32,17 +29,15 @@
 
 
 
-
 ### Tags
 
 - **QueueWorker**
-            - (
+  - (
   id = "ct_manager_process_users",
   title = @Translation("Process users for each plugin implementation of
   ct_manager"), cron = {"time" = 600}
 )
 
-  
 
 
 
@@ -53,7 +48,7 @@
 
 
 #### Interfaces
-- **[ContainerFactoryPluginInterface](../\Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
+- **[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
 
 
 
@@ -61,40 +56,33 @@
 
 
 #### Properties
-
-- **[$contribStorage](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#property_contribStorage)**
-         : `<a href="classes/Drupal-ct-manager-ContributionTrackerStorage.html"><abbr title="\Drupal\ct_manager\ContributionTrackerStorage">ContributionTrackerStorage</abbr></a>`  
+- **[$contribStorage](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#contribstorage)**
+         : `[ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)`  
 *Contribution manager service.*
 
-
-- **[$logger](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#property_logger)**
-         : `<abbr title="\Drupal\Core\Logger\LoggerChannelInterface">LoggerChannelInterface</abbr>`  
+- **[$logger](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#logger)**
+         : `[LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)`  
 *The logger interface.*
 
-
-- **[$pluginManager](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#property_pluginManager)**
-         : `<a href="classes/Drupal-ct-manager-ContributionSourcePluginManager.html"><abbr title="\Drupal\ct_manager\ContributionSourcePluginManager">ContributionSourcePluginManager</abbr></a>`  
+- **[$pluginManager](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#pluginmanager)**
+         : `[ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md)`  
 *Contribution plugin manager.*
 
-
-- **[$slackService](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#property_slackService)**
-         : `<abbr title="\Drupal\slack\Slack">Slack</abbr>`  
+- **[$slackService](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#slackservice)**
+         : `[Slack](# \Drupal\slack\Slack)`  
 *Slack service.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#__construct)**
            : `mixed`
 *{@inheritdoc}*
 
-
-- **[create()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#method_create)**
+- **[create()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#create)**
            : `mixed`
 *{@inheritdoc}*
 
-
-- **[processItem()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#method_processItem)**
+- **[processItem()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#processitem)**
            : `mixed`
 *Collects user contribution and stores it.*
 
@@ -108,15 +96,12 @@
 
 #### $contribStorage
 
-
 [ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 39
 
 *Contribution manager service.*
 
 
-
-`protected [](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)|UTF-8 $contribStorage`
-
+`protected [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage`
 
 
 
@@ -127,15 +112,12 @@
 
 #### $logger
 
-
 [ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 46
 
 *The logger interface.*
 
 
-
-`protected [](../\Drupal\Core\Logger\LoggerChannelInterface)|UTF-8 $logger`
-
+`protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger`
 
 
 
@@ -146,15 +128,12 @@
 
 #### $pluginManager
 
-
 [ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 32
 
 *Contribution plugin manager.*
 
 
-
-`protected [](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md)|UTF-8 $pluginManager`
-
+`protected [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager`
 
 
 
@@ -165,15 +144,12 @@
 
 #### $slackService
 
-
 [ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 53
 
 *Slack service.*
 
 
-
-`protected [](../\Drupal\slack\Slack)|UTF-8 $slackService`
-
+`protected [Slack](# \Drupal\slack\Slack) $slackService`
 
 
 
@@ -188,37 +164,33 @@
 
 #### __construct()
 
-
 [ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 58
 
 *{@inheritdoc}*
 
 ```php
-__construct(array&lt;string|int, mixed&gt;  $configuration, mixed  $pluginId, mixed  $pluginDefinition, <a href="classes/Drupal-ct-manager-ContributionSourcePluginManager.html"><abbr title="\Drupal\ct_manager\ContributionSourcePluginManager">ContributionSourcePluginManager</abbr></a>  $pluginManager, <a href="classes/Drupal-ct-manager-ContributionTrackerStorage.html"><abbr title="\Drupal\ct_manager\ContributionTrackerStorage">ContributionTrackerStorage</abbr></a>  $contribStorage, <abbr title="\Drupal\Core\Logger\LoggerChannelInterface">LoggerChannelInterface</abbr>  $logger, <abbr title="\Drupal\slack\Slack">Slack</abbr>  $slackService) :mixed
+__construct(array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition, [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger, [Slack](# \Drupal\slack\Slack) $slackService) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$configuration**: array&amp;lt;string|int, mixed&amp;gt;
+- **$configuration**: array&lt;string|int, mixed&gt;
     
 - **$pluginId**: mixed
     
 - **$pluginDefinition**: mixed
     
-- **$pluginManager**: &lt;a href=&quot;classes/Drupal-ct-manager-ContributionSourcePluginManager.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\ContributionSourcePluginManager&quot;&gt;ContributionSourcePluginManager&lt;/abbr&gt;&lt;/a&gt;
+- **$pluginManager**: [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md)
     
-- **$contribStorage**: &lt;a href=&quot;classes/Drupal-ct-manager-ContributionTrackerStorage.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\ContributionTrackerStorage&quot;&gt;ContributionTrackerStorage&lt;/abbr&gt;&lt;/a&gt;
+- **$contribStorage**: [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)
     
-- **$logger**: &lt;abbr title=&quot;\Drupal\Core\Logger\LoggerChannelInterface&quot;&gt;LoggerChannelInterface&lt;/abbr&gt;
+- **$logger**: [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)
     
-- **$slackService**: &lt;abbr title=&quot;\Drupal\slack\Slack&quot;&gt;Slack&lt;/abbr&gt;
+- **$slackService**: [Slack](# \Drupal\slack\Slack)
     
-
-
 
 
 
@@ -228,24 +200,22 @@ __construct(array&lt;string|int, mixed&gt;  $configuration, mixed  $pluginId, mi
 
 #### create()
 
-
 [ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 70
 
 *{@inheritdoc}*
 
 ```php
-static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>  $container, array&lt;string|int, mixed&gt;  $configuration, mixed  $pluginId, mixed  $pluginDefinition) :mixed
+static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$container**: &lt;abbr title=&quot;\Symfony\Component\DependencyInjection\ContainerInterface&quot;&gt;ContainerInterface&lt;/abbr&gt;
+- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
     
-- **$configuration**: array&amp;lt;string|int, mixed&amp;gt;
+- **$configuration**: array&lt;string|int, mixed&gt;
     
 - **$pluginId**: mixed
     
@@ -258,29 +228,23 @@ static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInter
 
 
 
-
-
 #### processItem()
-
 
 [ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 85
 
 *Collects user contribution and stores it.*
 
 ```php
-processItem(mixed  $data) :mixed
+processItem(mixed $data) :mixed
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$data**: mixed
     
-
-
 
 
 

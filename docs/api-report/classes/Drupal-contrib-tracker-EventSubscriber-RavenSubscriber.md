@@ -1,11 +1,9 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [contrib_tracker](../namespaces/drupal-contrib-tracker.md)
 - [EventSubscriber](../namespaces/drupal-contrib-tracker-eventsubscriber.md)
 
 
-### 
 ## RavenSubscriber
 
 
@@ -13,7 +11,7 @@
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    `[EventSubscriberInterface](../\Symfony\Component\EventDispatcher\EventSubscriberInterface)`
+    `[EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)`
   
 
 ---
@@ -23,9 +21,7 @@
 
 
 
-
 [RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 14
-
 
 
 
@@ -34,9 +30,8 @@
 ### Tags
 
 - **todo**
-            - Add description for this subscriber.
+  - Add description for this subscriber.
 
-  
 
 
 
@@ -47,7 +42,7 @@
 
 
 #### Interfaces
-- **[EventSubscriberInterface](../\Symfony\Component\EventDispatcher\EventSubscriberInterface)**
+- **[EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)**
 
 
 
@@ -56,13 +51,11 @@
 
 
 #### Methods
-
-- **[getSubscribedEvents()](../classes/Drupal-contrib-tracker-EventSubscriber-RavenSubscriber.md#method_getSubscribedEvents)**
+- **[getSubscribedEvents()](../classes/Drupal-contrib-tracker-EventSubscriber-RavenSubscriber.md#getsubscribedevents)**
            : `array&lt;string|int, mixed&gt;`
 *{@inheritdoc}*
 
-
-- **[onRavenOptionsAlter()](../classes/Drupal-contrib-tracker-EventSubscriber-RavenSubscriber.md#method_onRavenOptionsAlter)**
+- **[onRavenOptionsAlter()](../classes/Drupal-contrib-tracker-EventSubscriber-RavenSubscriber.md#onravenoptionsalter)**
            : `void`
 
 
@@ -76,7 +69,6 @@
 ### Methods
 
 #### getSubscribedEvents()
-
 
 [RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 28
 
@@ -94,10 +86,7 @@ static getSubscribedEvents() :array&lt;string|int, mixed&gt;
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 array&lt;string|int, mixed&gt;
 
@@ -105,24 +94,20 @@ array&lt;string|int, mixed&gt;
 
 #### onRavenOptionsAlter()
 
-
 [RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 16
 
 
 ```php
-onRavenOptionsAlter(<abbr title="\Drupal\raven\Event\OptionsAlter">OptionsAlter</abbr>  $optionsAlter) :void
+onRavenOptionsAlter([OptionsAlter](# \Drupal\raven\Event\OptionsAlter) $optionsAlter) :void
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$optionsAlter**: &lt;abbr title=&quot;\Drupal\raven\Event\OptionsAlter&quot;&gt;OptionsAlter&lt;/abbr&gt;
+- **$optionsAlter**: [OptionsAlter](# \Drupal\raven\Event\OptionsAlter)
     
-
-
 
 
 

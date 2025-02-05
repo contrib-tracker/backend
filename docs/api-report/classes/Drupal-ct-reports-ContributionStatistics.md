@@ -1,10 +1,8 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_reports](../namespaces/drupal-ct-reports.md)
 
 
-### 
 ## ContributionStatistics
 
 
@@ -19,12 +17,9 @@
 
 
 
-
 [ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 13
 
 *Class to calcluate contribution statistics.*
-
-
 
 
 
@@ -45,35 +40,29 @@
 
 
 #### Properties
-
-- **[$database](../classes/Drupal-ct-reports-ContributionStatistics.md#property_database)**
-         : `<abbr title="\Drupal\Core\Database\Connection">Connection</abbr>`  
+- **[$database](../classes/Drupal-ct-reports-ContributionStatistics.md#database)**
+         : `[Connection](# \Drupal\Core\Database\Connection)`  
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
-
-- **[$nodeStorage](../classes/Drupal-ct-reports-ContributionStatistics.md#property_nodeStorage)**
-         : `<abbr title="\Drupal\node\NodeStorageInterface">NodeStorageInterface</abbr>`  
+- **[$nodeStorage](../classes/Drupal-ct-reports-ContributionStatistics.md#nodestorage)**
+         : `[NodeStorageInterface](# \Drupal\node\NodeStorageInterface)`  
 *Node storage controller.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-reports-ContributionStatistics.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-reports-ContributionStatistics.md#__construct)**
            : `mixed`
 *Contribution storage constructor.*
 
-
-- **[codeContributions()](../classes/Drupal-ct-reports-ContributionStatistics.md#method_codeContributions)**
+- **[codeContributions()](../classes/Drupal-ct-reports-ContributionStatistics.md#codecontributions)**
            : `int`
 *Calcuate total contributions with patches.*
 
-
-- **[totalContributions()](../classes/Drupal-ct-reports-ContributionStatistics.md#method_totalContributions)**
+- **[totalContributions()](../classes/Drupal-ct-reports-ContributionStatistics.md#totalcontributions)**
            : `int`
 *Calcuates total contributions.*
 
-
-- **[totalContributors()](../classes/Drupal-ct-reports-ContributionStatistics.md#method_totalContributors)**
+- **[totalContributors()](../classes/Drupal-ct-reports-ContributionStatistics.md#totalcontributors)**
            : `int`
 *Calcuate total number of contributors.*
 
@@ -87,15 +76,12 @@
 
 #### $database
 
-
 [ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 27
 
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
 
-
-`protected [](../\Drupal\Core\Database\Connection)|UTF-8 $database`
-
+`protected [Connection](# \Drupal\Core\Database\Connection) $database`
 
 
 
@@ -106,15 +92,12 @@
 
 #### $nodeStorage
 
-
 [ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 20
 
 *Node storage controller.*
 
 
-
-`protected [](../\Drupal\node\NodeStorageInterface)|UTF-8 $nodeStorage`
-
+`protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStorage`
 
 
 
@@ -129,27 +112,23 @@
 
 #### __construct()
 
-
 [ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 32
 
 *Contribution storage constructor.*
 
 ```php
-__construct(<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>  $entityTypeManager, <abbr title="\Drupal\Core\Database\Connection">Connection</abbr>  $database) :mixed
+__construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [Connection](# \Drupal\Core\Database\Connection) $database) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$entityTypeManager**: &lt;abbr title=&quot;\Drupal\Core\Entity\EntityTypeManagerInterface&quot;&gt;EntityTypeManagerInterface&lt;/abbr&gt;
+- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
     
-- **$database**: &lt;abbr title=&quot;\Drupal\Core\Database\Connection&quot;&gt;Connection&lt;/abbr&gt;
+- **$database**: [Connection](# \Drupal\Core\Database\Connection)
     
-
-
 
 
 
@@ -158,7 +137,6 @@ __construct(<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityT
 
 
 #### codeContributions()
-
 
 [ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 52
 
@@ -176,17 +154,13 @@ codeContributions() :int
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 int
 
 
 
 #### totalContributions()
-
 
 [ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 40
 
@@ -204,17 +178,13 @@ totalContributions() :int
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 int
 
 
 
 #### totalContributors()
-
 
 [ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 65
 
@@ -232,10 +202,7 @@ totalContributors() :int
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 int
 

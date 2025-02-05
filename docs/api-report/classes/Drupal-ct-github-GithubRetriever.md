@@ -1,10 +1,8 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_github](../namespaces/drupal-ct-github.md)
 
 
-### 
 ## GithubRetriever
 
 
@@ -14,7 +12,6 @@
 
 
 ---
-
 
 
 
@@ -34,8 +31,6 @@ provide methods to return information relevant to the application.
 
 
 
-
-
 ### Table of Contents
 
 
@@ -47,40 +42,33 @@ provide methods to return information relevant to the application.
 
 
 #### Properties
-
-- **[$query](../classes/Drupal-ct-github-GithubRetriever.md#property_query)**
-         : `<a href="classes/Drupal-ct-github-GithubQuery.html"><abbr title="\Drupal\ct_github\GithubQuery">GithubQuery</abbr></a>`  
+- **[$query](../classes/Drupal-ct-github-GithubRetriever.md#query)**
+         : `[GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)`  
 *Github query.*
 
-
-- **[$userContributions](../classes/Drupal-ct-github-GithubRetriever.md#property_userContributions)**
+- **[$userContributions](../classes/Drupal-ct-github-GithubRetriever.md#usercontributions)**
          : `array&lt;string|int, mixed&gt;`  
 *User Entity Storage.*
 
-
-- **[$username](../classes/Drupal-ct-github-GithubRetriever.md#property_username)**
+- **[$username](../classes/Drupal-ct-github-GithubRetriever.md#username)**
          : `string`  
 *Github username.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-github-GithubRetriever.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-github-GithubRetriever.md#__construct)**
            : `mixed`
 *ContributionRetriever constructor.*
 
-
-- **[getCodeContributions()](../classes/Drupal-ct-github-GithubRetriever.md#method_getCodeContributions)**
+- **[getCodeContributions()](../classes/Drupal-ct-github-GithubRetriever.md#getcodecontributions)**
            : `mixed`
 *Get PR commits and issue comments for user.*
 
-
-- **[getIssues()](../classes/Drupal-ct-github-GithubRetriever.md#method_getIssues)**
+- **[getIssues()](../classes/Drupal-ct-github-GithubRetriever.md#getissues)**
            : `mixed`
 *Get issues for user.*
 
-
-- **[getUserContributions()](../classes/Drupal-ct-github-GithubRetriever.md#method_getUserContributions)**
+- **[getUserContributions()](../classes/Drupal-ct-github-GithubRetriever.md#getusercontributions)**
            : `mixed`
 *Returns user&#039;s contribution.*
 
@@ -94,15 +82,12 @@ provide methods to return information relevant to the application.
 
 #### $query
 
-
 [GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 30
 
 *Github query.*
 
 
-
-`protected [](../classes/Drupal-ct-github-GithubQuery.md)|UTF-8 $query`
-
+`protected [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query`
 
 
 
@@ -113,15 +98,12 @@ provide methods to return information relevant to the application.
 
 #### $userContributions
 
-
 [GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 23
 
 *User Entity Storage.*
 
 
-
-`protected [](../array&amp;lt;string|int, mixed&amp;gt;)|UTF-8 $userContributions`
-
+`protected array&lt;string|int, mixed&gt; $userContributions`
 
 
 
@@ -132,15 +114,12 @@ provide methods to return information relevant to the application.
 
 #### $username
 
-
 [GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 37
 
 *Github username.*
 
 
-
-`protected [](../string)|UTF-8 $username`
-
+`protected string $username`
 
 
 
@@ -155,22 +134,20 @@ provide methods to return information relevant to the application.
 
 #### __construct()
 
-
 [GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 47
 
 *ContributionRetriever constructor.*
 
 ```php
-__construct(<a href="classes/Drupal-ct-github-GithubQuery.html"><abbr title="\Drupal\ct_github\GithubQuery">GithubQuery</abbr></a>  $query, string  $user) :mixed
+__construct([GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, string $user) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$query**: &lt;a href=&quot;classes/Drupal-ct-github-GithubQuery.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_github\GithubQuery&quot;&gt;GithubQuery&lt;/abbr&gt;&lt;/a&gt;
+- **$query**: [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)
     
 The github query service.
 
@@ -185,10 +162,7 @@ The user name.
 
 
 
-
-
 #### getCodeContributions()
-
 
 [GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 80
 
@@ -208,11 +182,7 @@ getCodeContributions() :mixed
 
 
 
-
-
-
 #### getIssues()
-
 
 [GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 66
 
@@ -232,30 +202,23 @@ getIssues() :mixed
 
 
 
-
-
-
 #### getUserContributions()
-
 
 [GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 55
 
 *Returns user&#039;s contribution.*
 
 ```php
-getUserContributions(mixed  $username) :mixed
+getUserContributions(mixed $username) :mixed
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$username**: mixed
     
-
-
 
 
 

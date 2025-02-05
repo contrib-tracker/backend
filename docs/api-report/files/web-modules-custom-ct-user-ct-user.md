@@ -1,9 +1,7 @@
 
 
 
-
-### ## ct_user.module
-
+## ct_user.module
 
 
 
@@ -13,9 +11,8 @@
 ### Tags
 
 - **file**
-            - Contains ct_user.module.
+  - Contains ct_user.module.
 
-  
 
 
 
@@ -34,22 +31,18 @@
 
 
 #### Functions
-
-- **[ct_user_theme()](../namespaces/default.md#function_ct_user_theme)**
+- **[ct_user_theme()](../namespaces/default.md#ct_user_theme)**
            : `mixed`
 
-
-- **[ct_user_help()](../namespaces/default.md#function_ct_user_help)**
+- **[ct_user_help()](../namespaces/default.md#ct_user_help)**
            : `mixed`
 *Implements hook_help().*
 
-
-- **[ct_user_form_alter()](../namespaces/default.md#function_ct_user_form_alter)**
+- **[ct_user_form_alter()](../namespaces/default.md#ct_user_form_alter)**
            : `mixed`
 *Implements hook_form_alter().*
 
-
-- **[ct_user_user_login_form_validate()](../namespaces/default.md#function_ct_user_user_login_form_validate)**
+- **[ct_user_user_login_form_validate()](../namespaces/default.md#ct_user_user_login_form_validate)**
            : `mixed`
 *Custom validation function for the user login form.*
 
@@ -62,7 +55,6 @@
 ### Functions
 
 #### ct_user_theme()
-
 
 [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 11
 
@@ -77,11 +69,8 @@ ct_user_theme() :mixed
 
 
 
-
-
-
+---
 #### ct_user_help()
-
 
 [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 22
 
@@ -89,25 +78,22 @@ ct_user_theme() :mixed
 
 
 ```php
-ct_user_help(mixed  $route_name, <abbr title="\Drupal\Core\Routing\RouteMatchInterface">RouteMatchInterface</abbr>  $route_match) :mixed
+ct_user_help(mixed $route_name, [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface) $route_match) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$route_name**: mixed
     
-- **$route_match**: &lt;abbr title=&quot;\Drupal\Core\Routing\RouteMatchInterface&quot;&gt;RouteMatchInterface&lt;/abbr&gt;
+- **$route_match**: [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface)
     
 
 
 
 
 
-
-
+---
 #### ct_user_form_alter()
-
 
 [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 38
 
@@ -115,11 +101,10 @@ ct_user_help(mixed  $route_name, <abbr title="\Drupal\Core\Routing\RouteMatchInt
 
 
 ```php
-ct_user_form_alter(mixed  & $form, mixed  $form_state, mixed  $form_id) :mixed
+ct_user_form_alter(mixed  &$form, mixed $form_state, mixed $form_id) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$form**: mixed
     
@@ -132,10 +117,8 @@ ct_user_form_alter(mixed  & $form, mixed  $form_state, mixed  $form_id) :mixed
 
 
 
-
-
+---
 #### ct_user_user_login_form_validate()
-
 
 [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 49
 
@@ -143,11 +126,10 @@ ct_user_form_alter(mixed  & $form, mixed  $form_state, mixed  $form_id) :mixed
 
 
 ```php
-ct_user_user_login_form_validate(mixed  & $form, mixed  $form_state) :mixed
+ct_user_user_login_form_validate(mixed  &$form, mixed $form_state) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$form**: mixed
     
@@ -158,6 +140,5 @@ ct_user_user_login_form_validate(mixed  & $form, mixed  $form_state) :mixed
 
 
 
-
-
+---
 

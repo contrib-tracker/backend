@@ -1,10 +1,7 @@
 
 
 
-
-### ## DrupalContribution.php
-
-
+## DrupalContribution.php
 
 
 

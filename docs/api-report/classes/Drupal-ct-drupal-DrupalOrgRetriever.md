@@ -1,10 +1,8 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_drupal](../namespaces/drupal-ct-drupal.md)
 
 
-### 
 ## DrupalOrgRetriever
 
 
@@ -21,7 +19,6 @@
 
 
 
-
 [DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 21
 
 *DrupalOrg Contribution retriever service class.*
@@ -32,13 +29,11 @@ the drupal.org client service. It provides methods to return information
 relevant to the application.
 
 
-
 ### Tags
 
 - **SuppressWarnings**
-            - (PHPMD)
+  - (PHPMD)
 
-  
 
 
 
@@ -58,41 +53,34 @@ relevant to the application.
 
 
 #### Properties
-
-- **[$cache](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#property_cache)**
-         : `<abbr title="\Drupal\Core\Cache\CacheBackendInterface">CacheBackendInterface</abbr>`  
+- **[$cache](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#cache)**
+         : `[CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)`  
 *Cache backend service.*
 
-
-- **[$client](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#property_client)**
-         : `<abbr title="\Drupal\ct_drupal\DrupalOrg\Client">Client</abbr>`  
+- **[$client](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#client)**
+         : `[Client](# \Drupal\ct_drupal\DrupalOrg\Client)`  
 *Drupal.org client service.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#__construct)**
            : `mixed`
 *ContributionRetriever constructor.*
 
-
-- **[getCommentsByAuthor()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#method_getCommentsByAuthor)**
-           : `<abbr title="\Hussainweb\DrupalApi\Entity\Collection\CommentCollection">CommentCollection</abbr>`
+- **[getCommentsByAuthor()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getcommentsbyauthor)**
+           : `[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)`
 *Get comments by an user on drupal.org.*
 
-
-- **[getDrupalOrgNode()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#method_getDrupalOrgNode)**
-           : `<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>`
+- **[getDrupalOrgNode()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getdrupalorgnode)**
+           : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`
 *Get node data from drupal.org.*
 
-
-- **[getDrupalOrgNodeFromApi()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#method_getDrupalOrgNodeFromApi)**
-           : `<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>`
+- **[getDrupalOrgNodeFromApi()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getdrupalorgnodefromapi)**
+           : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`
 *Get node data from drupal.org.*
 
-
-- **[getFile()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#method_getFile)**
-           : `<abbr title="\Hussainweb\DrupalApi\Entity\File">File</abbr>`
+- **[getFile()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getfile)**
+           : `[File](# \Hussainweb\DrupalApi\Entity\File)`
 *Get file data from drupal.org.*
 
 
@@ -105,15 +93,12 @@ relevant to the application.
 
 #### $cache
 
-
 [DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 35
 
 *Cache backend service.*
 
 
-
-`protected [](../\Drupal\Core\Cache\CacheBackendInterface)|UTF-8 $cache`
-
+`protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache`
 
 
 
@@ -124,15 +109,12 @@ relevant to the application.
 
 #### $client
 
-
 [DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 28
 
 *Drupal.org client service.*
 
 
-
-`protected [](../\Drupal\ct_drupal\DrupalOrg\Client)|UTF-8 $client`
-
+`protected [Client](# \Drupal\ct_drupal\DrupalOrg\Client) $client`
 
 
 
@@ -147,26 +129,24 @@ relevant to the application.
 
 #### __construct()
 
-
 [DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 45
 
 *ContributionRetriever constructor.*
 
 ```php
-__construct(<a href="classes/Drupal-ct-drupal-Client.html"><abbr title="\Drupal\ct_drupal\Client">Client</abbr></a>  $client, <abbr title="\Drupal\Core\Cache\CacheBackendInterface">CacheBackendInterface</abbr>  $cacheBackend) :mixed
+__construct([Client](../classes/Drupal-ct-drupal-Client.md) $client, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cacheBackend) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$client**: &lt;a href=&quot;classes/Drupal-ct-drupal-Client.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_drupal\Client&quot;&gt;Client&lt;/abbr&gt;&lt;/a&gt;
+- **$client**: [Client](../classes/Drupal-ct-drupal-Client.md)
     
 The injected drupal.org client.
 
-- **$cacheBackend**: &lt;abbr title=&quot;\Drupal\Core\Cache\CacheBackendInterface&quot;&gt;CacheBackendInterface&lt;/abbr&gt;
+- **$cacheBackend**: [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)
     
 The injected cache backend service.
 
@@ -177,24 +157,20 @@ The injected cache backend service.
 
 
 
-
-
 #### getCommentsByAuthor()
-
 
 [DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 78
 
 *Get comments by an user on drupal.org.*
 
 ```php
-getCommentsByAuthor(mixed  $uid) :<abbr title="\Hussainweb\DrupalApi\Entity\Collection\CommentCollection">CommentCollection</abbr>
+getCommentsByAuthor(mixed $uid) :[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$uid**: mixed
     
@@ -205,11 +181,9 @@ The user ID of the author.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Hussainweb\DrupalApi\Entity\Collection\CommentCollection">CommentCollection</abbr>
+[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
 
 
 List of comments from drupal.org.
@@ -218,20 +192,18 @@ List of comments from drupal.org.
 
 #### getDrupalOrgNode()
 
-
 [DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 53
 
 *Get node data from drupal.org.*
 
 ```php
-getDrupalOrgNode(mixed  $nid, mixed  $cacheExpiry = Cache::PERMANENT) :<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>
+getDrupalOrgNode(mixed $nid, mixed $cacheExpiry = Cache::PERMANENT) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$nid**: mixed
     
@@ -247,11 +219,9 @@ The cache expiry for the item.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>
+[Node](# \Hussainweb\DrupalApi\Entity\Node)
 
 
 The node data from drupal.org.
@@ -260,20 +230,18 @@ The node data from drupal.org.
 
 #### getDrupalOrgNodeFromApi()
 
-
 [DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 70
 
 *Get node data from drupal.org.*
 
 ```php
-getDrupalOrgNodeFromApi(mixed  $nid) :<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>
+getDrupalOrgNodeFromApi(mixed $nid) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$nid**: mixed
     
@@ -284,11 +252,9 @@ The nid of the node on drupal.org.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>
+[Node](# \Hussainweb\DrupalApi\Entity\Node)
 
 
 The node data from drupal.org.
@@ -297,20 +263,18 @@ The node data from drupal.org.
 
 #### getFile()
 
-
 [DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 115
 
 *Get file data from drupal.org.*
 
 ```php
-getFile(int  $fid) :<abbr title="\Hussainweb\DrupalApi\Entity\File">File</abbr>
+getFile(int $fid) :[File](# \Hussainweb\DrupalApi\Entity\File)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$fid**: int
     
@@ -321,11 +285,9 @@ The fid of the file on drupal.org.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Hussainweb\DrupalApi\Entity\File">File</abbr>
+[File](# \Hussainweb\DrupalApi\Entity\File)
 
 
 The file data from drupal.org.

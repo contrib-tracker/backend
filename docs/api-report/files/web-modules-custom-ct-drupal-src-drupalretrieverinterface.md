@@ -1,10 +1,7 @@
 
 
 
-
-### ## DrupalRetrieverInterface.php
-
-
+## DrupalRetrieverInterface.php
 
 
 

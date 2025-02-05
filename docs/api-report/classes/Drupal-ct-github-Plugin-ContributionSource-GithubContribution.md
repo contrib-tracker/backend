@@ -1,26 +1,23 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_github](../namespaces/drupal-ct-github.md)
 - [Plugin](../namespaces/drupal-ct-github-plugin.md)
 - [ContributionSource](../namespaces/drupal-ct-github-plugin-contributionsource.md)
 
 
-### 
 ## GithubContribution
 
-- **Extends**: `[PluginBase](../\Drupal\Component\Plugin\PluginBase)`
+- **extends**: `[PluginBase](# \Drupal\Component\Plugin\PluginBase)`
 
 - **In Package**:
     - [Application](../packages/Application.md)
   
 - **Implements**:
     `[ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md), `
-    `[ContainerFactoryPluginInterface](../\Drupal\Core\Plugin\ContainerFactoryPluginInterface)`
+    `[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)`
   
 
 ---
-
 
 
 
@@ -33,16 +30,14 @@
 
 
 
-
 ### Tags
 
 - **ContributionSource**
-            - (
+  - (
   id = "github",
   description = @Translation("Retrieve and store contribution data from github."),
 )
 
-  
 
 
 
@@ -55,7 +50,7 @@
 #### Interfaces
 - **[ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md)**
   An interface for all Contribution type plugins.
-- **[ContainerFactoryPluginInterface](../\Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
+- **[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
 
 
 
@@ -63,66 +58,54 @@
 
 
 #### Properties
-
-- **[$entityTypeManager](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#property_entityTypeManager)**
-         : `<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>`  
+- **[$entityTypeManager](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#entitytypemanager)**
+         : `[EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)`  
 *Entity type manager.*
 
-
-- **[$query](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#property_query)**
-         : `<a href="classes/Drupal-ct-github-GithubQuery.html"><abbr title="\Drupal\ct_github\GithubQuery">GithubQuery</abbr></a>`  
+- **[$query](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#query)**
+         : `[GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)`  
 *Github request query.*
 
-
-- **[$retriever](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#property_retriever)**
-         : `array&lt;string|int, <a href="classes/Drupal-ct-github-GithubRetriever.html"><abbr title="\Drupal\ct_github\GithubRetriever">GithubRetriever</abbr></a>&gt;`  
+- **[$retriever](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#retriever)**
+         : `[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)`  
 *Retrievers for each user.*
 
-
-- **[$tokenValid](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#property_tokenValid)**
+- **[$tokenValid](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#tokenvalid)**
          : `bool`  
 *GitHub Token Validity*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#__construct)**
            : `mixed`
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
-
-- **[create()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#method_create)**
+- **[create()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#create)**
            : `mixed`
 *{@inheritdoc}*
 
-
-- **[getNotificationMessage()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#method_getNotificationMessage)**
+- **[getNotificationMessage()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getnotificationmessage)**
            : `string`
 *Get message for notification.*
 
-
-- **[getUserCodeContributions()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#method_getUserCodeContributions)**
+- **[getUserCodeContributions()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getusercodecontributions)**
            : `mixed`
 *Get comments from the total contribution data.*
 
-
-- **[getUserIssues()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#method_getUserIssues)**
+- **[getUserIssues()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getuserissues)**
            : `mixed`
 *Get issues from the total contribution data.*
 
-
-- **[getUsers()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#method_getUsers)**
+- **[getUsers()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getusers)**
            : `mixed`
 *Get all users with github username.*
 
-
-- **[isUserValid()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#method_isUserValid)**
+- **[isUserValid()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#isuservalid)**
            : `bool`
 *Get user contributions from the platform.*
 
-
-- **[getOrCreateRetriever()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#method_getOrCreateRetriever)**
-           : `<a href="classes/Drupal-ct-github-GithubRetriever.html"><abbr title="\Drupal\ct_github\GithubRetriever">GithubRetriever</abbr></a>`
+- **[getOrCreateRetriever()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getorcreateretriever)**
+           : `[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)`
 *Returns a user retriever object.*
 
 
@@ -135,15 +118,12 @@
 
 #### $entityTypeManager
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 33
 
 *Entity type manager.*
 
 
-
-`protected [](../\Drupal\Core\Entity\EntityTypeManagerInterface)|UTF-8 $entityTypeManager`
-
+`protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager`
 
 
 
@@ -154,15 +134,12 @@
 
 #### $query
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 47
 
 *Github request query.*
 
 
-
-`protected [](../classes/Drupal-ct-github-GithubQuery.md)|UTF-8 $query`
-
+`protected [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query`
 
 
 
@@ -173,15 +150,12 @@
 
 #### $retriever
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 40
 
 *Retrievers for each user.*
 
 
-
-`protected [](../array&amp;lt;string|int, classes/Drupal-ct-github-GithubRetriever.md&amp;gt;)|UTF-8 $retriever = []`
-
+`protected [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md) $retriever = []`
 
 
 
@@ -192,15 +166,12 @@
 
 #### $tokenValid
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 51
 
 *GitHub Token Validity*
 
 
-
-`protected [](../bool)|UTF-8 $tokenValid`
-
+`protected bool $tokenValid`
 
 
 
@@ -215,22 +186,20 @@
 
 #### __construct()
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 67
 
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
 ```php
-__construct(array&lt;string|int, mixed&gt;  $configuration, string  $plugin_id, mixed  $plugin_definition, <abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>  $entityTypeManager, <a href="classes/Drupal-ct-github-GithubQuery.html"><abbr title="\Drupal\ct_github\GithubQuery">GithubQuery</abbr></a>  $query, <abbr title="\Drupal\Core\Config\ConfigFactoryInterface">ConfigFactoryInterface</abbr>  $configFactory) :mixed
+__construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, [ConfigFactoryInterface](# \Drupal\Core\Config\ConfigFactoryInterface) $configFactory) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$configuration**: array&amp;lt;string|int, mixed&amp;gt;
+- **$configuration**: array&lt;string|int, mixed&gt;
     
 A configuration array containing information about the plugin instance.
 
@@ -242,18 +211,16 @@ The plugin_id for the plugin instance.
     
 The plugin_definition for the plugin instance.
 
-- **$entityTypeManager**: &lt;abbr title=&quot;\Drupal\Core\Entity\EntityTypeManagerInterface&quot;&gt;EntityTypeManagerInterface&lt;/abbr&gt;
+- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
     
 The injected entity type manager service.
 
-- **$query**: &lt;a href=&quot;classes/Drupal-ct-github-GithubQuery.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_github\GithubQuery&quot;&gt;GithubQuery&lt;/abbr&gt;&lt;/a&gt;
+- **$query**: [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)
     
 The injected github query service.
 
-- **$configFactory**: &lt;abbr title=&quot;\Drupal\Core\Config\ConfigFactoryInterface&quot;&gt;ConfigFactoryInterface&lt;/abbr&gt;
+- **$configFactory**: [ConfigFactoryInterface](# \Drupal\Core\Config\ConfigFactoryInterface)
     
-
-
 
 
 
@@ -263,24 +230,22 @@ The injected github query service.
 
 #### create()
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 82
 
 *{@inheritdoc}*
 
 ```php
-static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>  $container, array&lt;string|int, mixed&gt;  $configuration, mixed  $plugin_id, mixed  $plugin_definition) :mixed
+static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$container**: &lt;abbr title=&quot;\Symfony\Component\DependencyInjection\ContainerInterface&quot;&gt;ContainerInterface&lt;/abbr&gt;
+- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
     
-- **$configuration**: array&amp;lt;string|int, mixed&amp;gt;
+- **$configuration**: array&lt;string|int, mixed&gt;
     
 - **$plugin_id**: mixed
     
@@ -293,37 +258,31 @@ static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInter
 
 
 
-
-
 #### getNotificationMessage()
-
 
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 160
 
 *Get message for notification.*
 
 ```php
-getNotificationMessage(<a href="classes/Drupal-ct-manager-Data-CodeContribution.html"><abbr title="\Drupal\ct_manager\Data\CodeContribution">CodeContribution</abbr></a>  $contribution, <abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :string
+getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$contribution**: &lt;a href=&quot;classes/Drupal-ct-manager-Data-CodeContribution.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\Data\CodeContribution&quot;&gt;CodeContribution&lt;/abbr&gt;&lt;/a&gt;
+- **$contribution**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
     
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
 
 
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 string
 
@@ -331,25 +290,21 @@ string
 
 #### getUserCodeContributions()
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 150
 
 *Get comments from the total contribution data.*
 
 ```php
-getUserCodeContributions(<abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :mixed
+getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
-
-
 
 
 
@@ -359,22 +314,20 @@ getUserCodeContributions(<abbr title="\Drupal\user\Entity\User">User</abbr>  $us
 
 #### getUserIssues()
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 140
 
 *Get issues from the total contribution data.*
 
 ```php
-getUserIssues(<abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :mixed
+getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
 
 
@@ -383,10 +336,7 @@ getUserIssues(<abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :mixed
 
 
 
-
-
 #### getUsers()
-
 
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 96
 
@@ -406,36 +356,29 @@ getUsers() :mixed
 
 
 
-
-
-
 #### isUserValid()
-
 
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 114
 
 *Get user contributions from the platform.*
 
 ```php
-isUserValid(<abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :bool
+isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
 
 
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 bool
 
@@ -443,33 +386,29 @@ bool
 
 #### getOrCreateRetriever()
 
-
 [GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 125
 
 *Returns a user retriever object.*
 
 ```php
-getOrCreateRetriever(<abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :<a href="classes/Drupal-ct-github-GithubRetriever.html"><abbr title="\Drupal\ct_github\GithubRetriever">GithubRetriever</abbr></a>
+getOrCreateRetriever([User](# \Drupal\user\Entity\User) $user) :[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
 
 
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<a href="classes/Drupal-ct-github-GithubRetriever.html"><abbr title="\Drupal\ct_github\GithubRetriever">GithubRetriever</abbr></a>
+[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
 
 
 

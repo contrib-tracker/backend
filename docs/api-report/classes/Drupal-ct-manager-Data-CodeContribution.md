@@ -1,11 +1,9 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_manager](../namespaces/drupal-ct-manager.md)
 - [Data](../namespaces/drupal-ct-manager-data.md)
 
 
-### 
 ## CodeContribution
 
 
@@ -21,10 +19,7 @@
 
 
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 7
-
-
 
 
 
@@ -46,142 +41,108 @@
 
 
 #### Properties
-
-- **[$accountUrl](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_accountUrl)**
+- **[$accountUrl](../classes/Drupal-ct-manager-Data-CodeContribution.md#accounturl)**
          : `string`  
 
+- **[$date](../classes/Drupal-ct-manager-Data-CodeContribution.md#date)**
+         : `[DateTimeImmutable](# \DateTimeImmutable)`  
 
-- **[$date](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_date)**
-         : `<abbr title="\DateTimeImmutable">DateTimeImmutable</abbr>`  
-
-
-- **[$description](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_description)**
+- **[$description](../classes/Drupal-ct-manager-Data-CodeContribution.md#description)**
          : `string`  
 
-
-- **[$filesCount](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_filesCount)**
+- **[$filesCount](../classes/Drupal-ct-manager-Data-CodeContribution.md#filescount)**
          : `int`  
 
+- **[$issue](../classes/Drupal-ct-manager-Data-CodeContribution.md#issue)**
+         : `[Issue](../classes/Drupal-ct-manager-Data-Issue.md)`  
 
-- **[$issue](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_issue)**
-         : `<a href="classes/Drupal-ct-manager-Data-Issue.html"><abbr title="\Drupal\ct_manager\Data\Issue">Issue</abbr></a>`  
-
-
-- **[$patchCount](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_patchCount)**
+- **[$patchCount](../classes/Drupal-ct-manager-Data-CodeContribution.md#patchcount)**
          : `int`  
 
-
-- **[$project](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_project)**
+- **[$project](../classes/Drupal-ct-manager-Data-CodeContribution.md#project)**
          : `string`  
 
-
-- **[$projectUrl](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_projectUrl)**
+- **[$projectUrl](../classes/Drupal-ct-manager-Data-CodeContribution.md#projecturl)**
          : `string`  
 
-
-- **[$status](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_status)**
+- **[$status](../classes/Drupal-ct-manager-Data-CodeContribution.md#status)**
          : `string`  
 
-
-- **[$technology](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_technology)**
+- **[$technology](../classes/Drupal-ct-manager-Data-CodeContribution.md#technology)**
          : `string`  
 
-
-- **[$title](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_title)**
+- **[$title](../classes/Drupal-ct-manager-Data-CodeContribution.md#title)**
          : `string`  
 
-
-- **[$url](../classes/Drupal-ct-manager-Data-CodeContribution.md#property_url)**
+- **[$url](../classes/Drupal-ct-manager-Data-CodeContribution.md#url)**
          : `string`  
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-manager-Data-CodeContribution.md#__construct)**
            : `mixed`
 
-
-- **[getAccountUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getAccountUrl)**
+- **[getAccountUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getaccounturl)**
            : `string`
 
+- **[getDate()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getdate)**
+           : `[DateTimeImmutable](# \DateTimeImmutable)`
 
-- **[getDate()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getDate)**
-           : `<abbr title="\DateTimeImmutable">DateTimeImmutable</abbr>`
-
-
-- **[getDescription()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getDescription)**
+- **[getDescription()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getdescription)**
            : `string`
 
-
-- **[getFilesCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getFilesCount)**
+- **[getFilesCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getfilescount)**
            : `int`
 
+- **[getIssue()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getissue)**
+           : `[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null`
 
-- **[getIssue()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getIssue)**
-           : `<a href="classes/Drupal-ct-manager-Data-Issue.html"><abbr title="\Drupal\ct_manager\Data\Issue">Issue</abbr></a>|null`
-
-
-- **[getPatchCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getPatchCount)**
+- **[getPatchCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getpatchcount)**
            : `int`
 
-
-- **[getProject()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getProject)**
+- **[getProject()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getproject)**
            : `string`
 
-
-- **[getProjectUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getProjectUrl)**
+- **[getProjectUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getprojecturl)**
            : `string`
 
-
-- **[getStatus()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getStatus)**
+- **[getStatus()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getstatus)**
            : `string`
 
-
-- **[getTechnology()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getTechnology)**
+- **[getTechnology()](../classes/Drupal-ct-manager-Data-CodeContribution.md#gettechnology)**
            : `string`
 
-
-- **[getTitle()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getTitle)**
+- **[getTitle()](../classes/Drupal-ct-manager-Data-CodeContribution.md#gettitle)**
            : `string`
 
-
-- **[getUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_getUrl)**
+- **[getUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#geturl)**
            : `string`
 
-
-- **[setAccountUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setAccountUrl)**
+- **[setAccountUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setaccounturl)**
            : `self`
 
-
-- **[setDescription()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setDescription)**
+- **[setDescription()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setdescription)**
            : `self`
 
-
-- **[setFilesCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setFilesCount)**
+- **[setFilesCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setfilescount)**
            : `self`
 
-
-- **[setIssue()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setIssue)**
+- **[setIssue()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setissue)**
            : `self`
 
-
-- **[setPatchCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setPatchCount)**
+- **[setPatchCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setpatchcount)**
            : `self`
 
-
-- **[setProject()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setProject)**
+- **[setProject()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setproject)**
            : `self`
 
-
-- **[setProjectUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setProjectUrl)**
+- **[setProjectUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setprojecturl)**
            : `self`
 
-
-- **[setStatus()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setStatus)**
+- **[setStatus()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setstatus)**
            : `self`
 
-
-- **[setTechnology()](../classes/Drupal-ct-manager-Data-CodeContribution.md#method_setTechnology)**
+- **[setTechnology()](../classes/Drupal-ct-manager-Data-CodeContribution.md#settechnology)**
            : `self`
 
 
@@ -194,13 +155,11 @@
 
 #### $accountUrl
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 27
 
 
 
-
-`protected [](../string)|UTF-8 $accountUrl`
+`protected string $accountUrl`
 
 
 URL of user account on the platform.
@@ -210,16 +169,13 @@ URL of user account on the platform.
 
 
 
-
 #### $date
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 17
 
 
 
-
-`protected [](../\DateTimeImmutable)|UTF-8 $date`
+`protected [DateTimeImmutable](# \DateTimeImmutable) $date`
 
 
 Date of the contribution.
@@ -229,16 +185,13 @@ Date of the contribution.
 
 
 
-
 #### $description
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 32
 
 
 
-
-`protected [](../string)|UTF-8 $description = &#039;&#039;`
+`protected string $description = &#039;&#039;`
 
 
 Description.
@@ -248,16 +201,13 @@ Description.
 
 
 
-
 #### $filesCount
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 52
 
 
 
-
-`protected [](../int)|UTF-8 $filesCount = 0`
+`protected int $filesCount = 0`
 
 
 File count.
@@ -267,16 +217,13 @@ File count.
 
 
 
-
 #### $issue
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 67
 
 
 
-
-`protected [](../classes/Drupal-ct-manager-Data-Issue.md)|UTF-8 $issue = NULL`
+`protected [Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue = NULL`
 
 
 Related issue.
@@ -286,16 +233,13 @@ Related issue.
 
 
 
-
 #### $patchCount
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 47
 
 
 
-
-`protected [](../int)|UTF-8 $patchCount = 0`
+`protected int $patchCount = 0`
 
 
 Patch count.
@@ -305,16 +249,13 @@ Patch count.
 
 
 
-
 #### $project
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 37
 
 
 
-
-`protected [](../string)|UTF-8 $project = &#039;&#039;`
+`protected string $project = &#039;&#039;`
 
 
 Project.
@@ -324,16 +265,13 @@ Project.
 
 
 
-
 #### $projectUrl
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 42
 
 
 
-
-`protected [](../string)|UTF-8 $projectUrl = &#039;&#039;`
+`protected string $projectUrl = &#039;&#039;`
 
 
 ProjectUrl.
@@ -343,16 +281,13 @@ ProjectUrl.
 
 
 
-
 #### $status
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 57
 
 
 
-
-`protected [](../string)|UTF-8 $status = &#039;&#039;`
+`protected string $status = &#039;&#039;`
 
 
 Status.
@@ -362,16 +297,13 @@ Status.
 
 
 
-
 #### $technology
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 62
 
 
 
-
-`protected [](../string)|UTF-8 $technology = &#039;&#039;`
+`protected string $technology = &#039;&#039;`
 
 
 Technology.
@@ -381,16 +313,13 @@ Technology.
 
 
 
-
 #### $title
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 12
 
 
 
-
-`protected [](../string)|UTF-8 $title`
+`protected string $title`
 
 
 Title.
@@ -400,20 +329,16 @@ Title.
 
 
 
-
 #### $url
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 22
 
 
 
-
-`protected [](../string)|UTF-8 $url`
+`protected string $url`
 
 
 URL of the contribution.
-
 
 
 
@@ -426,28 +351,24 @@ URL of the contribution.
 
 #### __construct()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 69
 
 
 ```php
-__construct(string  $title, string  $url, <abbr title="\DateTimeImmutable">DateTimeImmutable</abbr>  $date) :mixed
+__construct(string $title, string $url, [DateTimeImmutable](# \DateTimeImmutable) $date) :mixed
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$title**: string
     
 - **$url**: string
     
-- **$date**: &lt;abbr title=&quot;\DateTimeImmutable&quot;&gt;DateTimeImmutable&lt;/abbr&gt;
+- **$date**: [DateTimeImmutable](# \DateTimeImmutable)
     
-
-
 
 
 
@@ -456,7 +377,6 @@ __construct(string  $title, string  $url, <abbr title="\DateTimeImmutable">DateT
 
 
 #### getAccountUrl()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 87
 
@@ -473,10 +393,7 @@ getAccountUrl() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
@@ -484,12 +401,11 @@ string
 
 #### getDate()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 83
 
 
 ```php
-getDate() :<abbr title="\DateTimeImmutable">DateTimeImmutable</abbr>
+getDate() :[DateTimeImmutable](# \DateTimeImmutable)
 ```
 
 
@@ -500,17 +416,13 @@ getDate() :<abbr title="\DateTimeImmutable">DateTimeImmutable</abbr>
 
 
 
+**Return Values**
 
-
-
-#### Return Values
-
-<abbr title="\DateTimeImmutable">DateTimeImmutable</abbr>
+[DateTimeImmutable](# \DateTimeImmutable)
 
 
 
 #### getDescription()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 96
 
@@ -527,17 +439,13 @@ getDescription() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
 
 
 #### getFilesCount()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 141
 
@@ -554,10 +462,7 @@ getFilesCount() :int
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 int
 
@@ -565,12 +470,11 @@ int
 
 #### getIssue()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 123
 
 
 ```php
-getIssue() :<a href="classes/Drupal-ct-manager-Data-Issue.html"><abbr title="\Drupal\ct_manager\Data\Issue">Issue</abbr></a>|null
+getIssue() :[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 ```
 
 
@@ -581,17 +485,13 @@ getIssue() :<a href="classes/Drupal-ct-manager-Data-Issue.html"><abbr title="\Dr
 
 
 
+**Return Values**
 
-
-
-#### Return Values
-
-<a href="classes/Drupal-ct-manager-Data-Issue.html"><abbr title="\Drupal\ct_manager\Data\Issue">Issue</abbr></a>|null
+[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 
 
 
 #### getPatchCount()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 132
 
@@ -608,17 +508,13 @@ getPatchCount() :int
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 int
 
 
 
 #### getProject()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 105
 
@@ -635,17 +531,13 @@ getProject() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
 
 
 #### getProjectUrl()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 114
 
@@ -662,17 +554,13 @@ getProjectUrl() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
 
 
 #### getStatus()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 150
 
@@ -689,17 +577,13 @@ getStatus() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
 
 
 #### getTechnology()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 159
 
@@ -716,17 +600,13 @@ getTechnology() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
 
 
 #### getTitle()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 75
 
@@ -743,17 +623,13 @@ getTitle() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
 
 
 #### getUrl()
-
 
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 79
 
@@ -770,10 +646,7 @@ getUrl() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
@@ -781,19 +654,17 @@ string
 
 #### setAccountUrl()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 91
 
 
 ```php
-setAccountUrl(string  $accountUrl) :self
+setAccountUrl(string $accountUrl) :self
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$accountUrl**: string
     
@@ -802,9 +673,7 @@ setAccountUrl(string  $accountUrl) :self
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 
@@ -812,19 +681,17 @@ self
 
 #### setDescription()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 100
 
 
 ```php
-setDescription(string  $description) :self
+setDescription(string $description) :self
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$description**: string
     
@@ -833,9 +700,7 @@ setDescription(string  $description) :self
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 
@@ -843,19 +708,17 @@ self
 
 #### setFilesCount()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 145
 
 
 ```php
-setFilesCount(int  $filesCount) :self
+setFilesCount(int $filesCount) :self
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$filesCount**: int
     
@@ -864,9 +727,7 @@ setFilesCount(int  $filesCount) :self
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 
@@ -874,30 +735,26 @@ self
 
 #### setIssue()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 127
 
 
 ```php
-setIssue(<a href="classes/Drupal-ct-manager-Data-Issue.html"><abbr title="\Drupal\ct_manager\Data\Issue">Issue</abbr></a>  $issue) :self
+setIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :self
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$issue**: &lt;a href=&quot;classes/Drupal-ct-manager-Data-Issue.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\Data\Issue&quot;&gt;Issue&lt;/abbr&gt;&lt;/a&gt;
+- **$issue**: [Issue](../classes/Drupal-ct-manager-Data-Issue.md)
     
 
 
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 
@@ -905,19 +762,17 @@ self
 
 #### setPatchCount()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 136
 
 
 ```php
-setPatchCount(int  $patchCount) :self
+setPatchCount(int $patchCount) :self
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$patchCount**: int
     
@@ -926,9 +781,7 @@ setPatchCount(int  $patchCount) :self
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 
@@ -936,19 +789,17 @@ self
 
 #### setProject()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 109
 
 
 ```php
-setProject(string  $project) :self
+setProject(string $project) :self
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$project**: string
     
@@ -957,9 +808,7 @@ setProject(string  $project) :self
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 
@@ -967,19 +816,17 @@ self
 
 #### setProjectUrl()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 118
 
 
 ```php
-setProjectUrl(string  $projectUrl) :self
+setProjectUrl(string $projectUrl) :self
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$projectUrl**: string
     
@@ -988,9 +835,7 @@ setProjectUrl(string  $projectUrl) :self
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 
@@ -998,19 +843,17 @@ self
 
 #### setStatus()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 154
 
 
 ```php
-setStatus(string  $status) :self
+setStatus(string $status) :self
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$status**: string
     
@@ -1019,9 +862,7 @@ setStatus(string  $status) :self
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 
@@ -1029,19 +870,17 @@ self
 
 #### setTechnology()
 
-
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 163
 
 
 ```php
-setTechnology(string  $technology) :self
+setTechnology(string $technology) :self
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$technology**: string
     
@@ -1050,9 +889,7 @@ setTechnology(string  $technology) :self
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 self
 

@@ -1,12 +1,10 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_manager](../namespaces/drupal-ct-manager.md)
 - [Plugin](../namespaces/drupal-ct-manager-plugin.md)
 
 
-### ##QueueWorker
-
+## QueueWorker
 
 
 

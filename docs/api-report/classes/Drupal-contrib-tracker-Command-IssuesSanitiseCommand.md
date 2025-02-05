@@ -1,14 +1,12 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [contrib_tracker](../namespaces/drupal-contrib-tracker.md)
 - [Command](../namespaces/drupal-contrib-tracker-command.md)
 
 
-### 
 ## IssuesSanitiseCommand
 
-- **Extends**: `[Command](../\Drupal\Console\Core\Command\Command)`
+- **extends**: `[Command](# \Drupal\Console\Core\Command\Command)`
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -21,7 +19,6 @@
 
 
 
-
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 23
 
 *Detect duplicate issues and remove them.*
@@ -29,16 +26,14 @@
 
 
 
-
 ### Tags
 
 - **DrupalCommand**
-            - (
+  - (
     extension="contrib_tracker",
     extensionType="module"
 )
 
-  
 
 
 
@@ -55,50 +50,41 @@
 
 
 #### Properties
-
-- **[$contribTrackStorage](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#property_contribTrackStorage)**
-         : `<abbr title="\Drupal\contrib_tracker\ContributionStorageInterface">ContributionStorageInterface</abbr>`  
+- **[$contribTrackStorage](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#contribtrackstorage)**
+         : `[ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface)`  
 *Drupal\contrib_tracker\ContributionStorageInterface definition.*
 
-
-- **[$database](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#property_database)**
-         : `<abbr title="\Drupal\Core\Database\Connection">Connection</abbr>`  
+- **[$database](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#database)**
+         : `[Connection](# \Drupal\Core\Database\Connection)`  
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
-
-- **[$entityTypeManager](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#property_entityTypeManager)**
-         : `<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>`  
+- **[$entityTypeManager](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#entitytypemanager)**
+         : `[EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)`  
 *Drupal\Core\Entity\EntityTypeManagerInterface definition.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#method___construct)**
+- **[__construct()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#__construct)**
            : `mixed`
 *IssuesSanitiseCommand constructor.*
 
-
-- **[configure()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#method_configure)**
+- **[configure()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#configure)**
            : `mixed`
 *{@inheritdoc}*
 
-
-- **[execute()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#method_execute)**
+- **[execute()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#execute)**
            : `mixed`
 *{@inheritdoc}*
 
-
-- **[getDuplicateIssueDoIds()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#method_getDuplicateIssueDoIds)**
+- **[getDuplicateIssueDoIds()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#getduplicateissuedoids)**
            : `array&lt;string|int, string&gt;`
 *Get a list of IDs which are duplicated.*
 
-
-- **[getNidsForDoIssue()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#method_getNidsForDoIssue)**
+- **[getNidsForDoIssue()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#getnidsfordoissue)**
            : `array&lt;string|int, int&gt;`
 *Get node ids linked to a d.o issue.*
 
-
-- **[updateReferencesForIssueNid()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#method_updateReferencesForIssueNid)**
+- **[updateReferencesForIssueNid()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#updatereferencesforissuenid)**
            : `int`
 *Replace references to various node ids with a different node id.*
 
@@ -112,15 +98,12 @@
 
 #### $contribTrackStorage
 
-
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 30
 
 *Drupal\contrib_tracker\ContributionStorageInterface definition.*
 
 
-
-`protected [](../\Drupal\contrib_tracker\ContributionStorageInterface)|UTF-8 $contribTrackStorage`
-
+`protected [ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface) $contribTrackStorage`
 
 
 
@@ -131,15 +114,12 @@
 
 #### $database
 
-
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 44
 
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
 
-
-`protected [](../\Drupal\Core\Database\Connection)|UTF-8 $database`
-
+`protected [Connection](# \Drupal\Core\Database\Connection) $database`
 
 
 
@@ -150,15 +130,12 @@
 
 #### $entityTypeManager
 
-
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 37
 
 *Drupal\Core\Entity\EntityTypeManagerInterface definition.*
 
 
-
-`protected [](../\Drupal\Core\Entity\EntityTypeManagerInterface)|UTF-8 $entityTypeManager`
-
+`protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager`
 
 
 
@@ -173,30 +150,28 @@
 
 #### __construct()
 
-
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 56
 
 *IssuesSanitiseCommand constructor.*
 
 ```php
-__construct(<abbr title="\Drupal\contrib_tracker\ContributionStorageInterface">ContributionStorageInterface</abbr>  $ctStorage, <abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>  $entityTypeManager, <abbr title="\Drupal\Core\Database\Connection">Connection</abbr>  $database) :mixed
+__construct([ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface) $ctStorage, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [Connection](# \Drupal\Core\Database\Connection) $database) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$ctStorage**: &lt;abbr title=&quot;\Drupal\contrib_tracker\ContributionStorageInterface&quot;&gt;ContributionStorageInterface&lt;/abbr&gt;
+- **$ctStorage**: [ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface)
     
 The contrib tracker storage service.
 
-- **$entityTypeManager**: &lt;abbr title=&quot;\Drupal\Core\Entity\EntityTypeManagerInterface&quot;&gt;EntityTypeManagerInterface&lt;/abbr&gt;
+- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
     
 The entity type manager service.
 
-- **$database**: &lt;abbr title=&quot;\Drupal\Core\Database\Connection&quot;&gt;Connection&lt;/abbr&gt;
+- **$database**: [Connection](# \Drupal\Core\Database\Connection)
     
 The database connection.
 
@@ -207,10 +182,7 @@ The database connection.
 
 
 
-
-
 #### configure()
-
 
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 66
 
@@ -230,32 +202,25 @@ configure() :mixed
 
 
 
-
-
-
 #### execute()
-
 
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 76
 
 *{@inheritdoc}*
 
 ```php
-execute(<abbr title="\Symfony\Component\Console\Input\InputInterface">InputInterface</abbr>  $input, <abbr title="\Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr>  $output) :mixed
+execute([InputInterface](# \Symfony\Component\Console\Input\InputInterface) $input, [OutputInterface](# \Symfony\Component\Console\Output\OutputInterface) $output) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$input**: &lt;abbr title=&quot;\Symfony\Component\Console\Input\InputInterface&quot;&gt;InputInterface&lt;/abbr&gt;
+- **$input**: [InputInterface](# \Symfony\Component\Console\Input\InputInterface)
     
-- **$output**: &lt;abbr title=&quot;\Symfony\Component\Console\Output\OutputInterface&quot;&gt;OutputInterface&lt;/abbr&gt;
+- **$output**: [OutputInterface](# \Symfony\Component\Console\Output\OutputInterface)
     
-
-
 
 
 
@@ -264,7 +229,6 @@ execute(<abbr title="\Symfony\Component\Console\Input\InputInterface">InputInter
 
 
 #### getDuplicateIssueDoIds()
-
 
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 127
 
@@ -282,10 +246,7 @@ getDuplicateIssueDoIds() :array&lt;string|int, string&gt;
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 array&lt;string|int, string&gt;
 
@@ -296,20 +257,18 @@ Array of IDs which are duplicated.
 
 #### getNidsForDoIssue()
 
-
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 144
 
 *Get node ids linked to a d.o issue.*
 
 ```php
-getNidsForDoIssue(string  $issueId) :array&lt;string|int, int&gt;
+getNidsForDoIssue(string $issueId) :array&lt;string|int, int&gt;
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$issueId**: string
     
@@ -320,9 +279,7 @@ The d.o issue ID.
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 array&lt;string|int, int&gt;
 
@@ -333,26 +290,24 @@ Array of node ids.
 
 #### updateReferencesForIssueNid()
 
-
 [IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 169
 
 *Replace references to various node ids with a different node id.*
 
 ```php
-updateReferencesForIssueNid(array&lt;string|int, int&gt;  $issueNids, array&lt;string|int, int&gt;  $originalNid) :int
+updateReferencesForIssueNid(array&lt;string|int, int&gt; $issueNids, array&lt;string|int, int&gt; $originalNid) :int
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$issueNids**: array&amp;lt;string|int, int&amp;gt;
+- **$issueNids**: array&lt;string|int, int&gt;
     
 The node ids to be searched and replaced.
 
-- **$originalNid**: array&amp;lt;string|int, int&amp;gt;
+- **$originalNid**: array&lt;string|int, int&gt;
     
 The updated node id value.
 
@@ -361,9 +316,7 @@ The updated node id value.
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 int
 

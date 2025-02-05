@@ -1,12 +1,10 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_github](../namespaces/drupal-ct-github.md)
 - [Plugin](../namespaces/drupal-ct-github-plugin.md)
 
 
-### ##ContributionSource
-
+## ContributionSource
 
 
 

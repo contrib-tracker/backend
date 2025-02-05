@@ -1,10 +1,8 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_drupal](../namespaces/drupal-ct-drupal.md)
 
 
-### 
 ## CommentDetails
 
 
@@ -14,7 +12,6 @@
 
 
 ---
-
 
 
 
@@ -34,8 +31,6 @@ every Issue node.
 
 
 
-
-
 ### Table of Contents
 
 
@@ -47,90 +42,73 @@ every Issue node.
 
 
 #### Properties
-
-- **[$comment](../classes/Drupal-ct-drupal-CommentDetails.md#property_comment)**
-         : `<abbr title="\Hussainweb\DrupalApi\Entity\Comment">Comment</abbr>`  
+- **[$comment](../classes/Drupal-ct-drupal-CommentDetails.md#comment)**
+         : `[Comment](# \Hussainweb\DrupalApi\Entity\Comment)`  
 *Comment details from d.o.*
 
-
-- **[$commentProcessed](../classes/Drupal-ct-drupal-CommentDetails.md#property_commentProcessed)**
+- **[$commentProcessed](../classes/Drupal-ct-drupal-CommentDetails.md#commentprocessed)**
          : `bool`  
 *Is the comment processed?*
 
-
-- **[$contribRetriever](../classes/Drupal-ct-drupal-CommentDetails.md#property_contribRetriever)**
-         : `<a href="classes/Drupal-ct-drupal-DrupalRetrieverInterface.html"><abbr title="\Drupal\ct_drupal\DrupalRetrieverInterface">DrupalRetrieverInterface</abbr></a>`  
+- **[$contribRetriever](../classes/Drupal-ct-drupal-CommentDetails.md#contribretriever)**
+         : `[DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)`  
 *Contribution retriever service.*
 
-
-- **[$issueData](../classes/Drupal-ct-drupal-CommentDetails.md#property_issueData)**
-         : `<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>`  
+- **[$issueData](../classes/Drupal-ct-drupal-CommentDetails.md#issuedata)**
+         : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`  
 *Node details from d.o.*
 
-
-- **[$issueStatus](../classes/Drupal-ct-drupal-CommentDetails.md#property_issueStatus)**
+- **[$issueStatus](../classes/Drupal-ct-drupal-CommentDetails.md#issuestatus)**
          : `string`  
 *Issue status.*
 
-
-- **[$patchFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#property_patchFilesCount)**
+- **[$patchFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#patchfilescount)**
          : `int`  
 *Number of patches attached to the comment.*
 
-
-- **[$timeService](../classes/Drupal-ct-drupal-CommentDetails.md#property_timeService)**
-         : `<abbr title="\Drupal\Component\Datetime\TimeInterface">TimeInterface</abbr>`  
+- **[$timeService](../classes/Drupal-ct-drupal-CommentDetails.md#timeservice)**
+         : `[TimeInterface](# \Drupal\Component\Datetime\TimeInterface)`  
 *The datetime.time service.*
 
-
-- **[$totalFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#property_totalFilesCount)**
+- **[$totalFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#totalfilescount)**
          : `int`  
 *Number of all files attached to the comment.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-drupal-CommentDetails.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-drupal-CommentDetails.md#__construct)**
            : `mixed`
 *DrupalOrgCommentDetails constructor.*
 
-
-- **[getDescription()](../classes/Drupal-ct-drupal-CommentDetails.md#method_getDescription)**
+- **[getDescription()](../classes/Drupal-ct-drupal-CommentDetails.md#getdescription)**
            : `string`
 *Get comment Description.*
 
-
-- **[getIssueStatus()](../classes/Drupal-ct-drupal-CommentDetails.md#method_getIssueStatus)**
+- **[getIssueStatus()](../classes/Drupal-ct-drupal-CommentDetails.md#getissuestatus)**
            : `string`
 *Get the issue status.*
 
-
-- **[getPatchFilesCount()](../classes/Drupal-ct-drupal-CommentDetails.md#method_getPatchFilesCount)**
+- **[getPatchFilesCount()](../classes/Drupal-ct-drupal-CommentDetails.md#getpatchfilescount)**
            : `int`
 *Get the number of patch files in this comment.*
 
-
-- **[getTotalFilesCount()](../classes/Drupal-ct-drupal-CommentDetails.md#method_getTotalFilesCount)**
+- **[getTotalFilesCount()](../classes/Drupal-ct-drupal-CommentDetails.md#gettotalfilescount)**
            : `int`
 *Get the number of all files in this comment.*
 
-
-- **[determineIssueStatus()](../classes/Drupal-ct-drupal-CommentDetails.md#method_determineIssueStatus)**
+- **[determineIssueStatus()](../classes/Drupal-ct-drupal-CommentDetails.md#determineissuestatus)**
            : `void`
 *Determine the status of the issue.*
 
-
-- **[getStatusFromCode()](../classes/Drupal-ct-drupal-CommentDetails.md#method_getStatusFromCode)**
+- **[getStatusFromCode()](../classes/Drupal-ct-drupal-CommentDetails.md#getstatusfromcode)**
            : `string`
 *Translate the status id to text.*
 
-
-- **[isPatchFile()](../classes/Drupal-ct-drupal-CommentDetails.md#method_isPatchFile)**
+- **[isPatchFile()](../classes/Drupal-ct-drupal-CommentDetails.md#ispatchfile)**
            : `bool`
 *Determine if this is a patch file.*
 
-
-- **[processFileDetails()](../classes/Drupal-ct-drupal-CommentDetails.md#method_processFileDetails)**
+- **[processFileDetails()](../classes/Drupal-ct-drupal-CommentDetails.md#processfiledetails)**
            : `void`
 *Check the type and number of files attached to a comment under a issue.*
 
@@ -144,15 +122,12 @@ every Issue node.
 
 #### $comment
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 29
 
 *Comment details from d.o.*
 
 
-
-`protected [](../\Hussainweb\DrupalApi\Entity\Comment)|UTF-8 $comment`
-
+`protected [Comment](# \Hussainweb\DrupalApi\Entity\Comment) $comment`
 
 
 
@@ -163,15 +138,12 @@ every Issue node.
 
 #### $commentProcessed
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 64
 
 *Is the comment processed?*
 
 
-
-`protected [](../bool)|UTF-8 $commentProcessed = FALSE`
-
+`protected bool $commentProcessed = FALSE`
 
 
 
@@ -182,15 +154,12 @@ every Issue node.
 
 #### $contribRetriever
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 22
 
 *Contribution retriever service.*
 
 
-
-`protected [](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)|UTF-8 $contribRetriever`
-
+`protected [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $contribRetriever`
 
 
 
@@ -201,15 +170,12 @@ every Issue node.
 
 #### $issueData
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 36
 
 *Node details from d.o.*
 
 
-
-`protected [](../\Hussainweb\DrupalApi\Entity\Node)|UTF-8 $issueData = NULL`
-
+`protected [Node](# \Hussainweb\DrupalApi\Entity\Node) $issueData = NULL`
 
 
 
@@ -220,15 +186,12 @@ every Issue node.
 
 #### $issueStatus
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 57
 
 *Issue status.*
 
 
-
-`protected [](../string)|UTF-8 $issueStatus`
-
+`protected string $issueStatus`
 
 
 
@@ -239,15 +202,12 @@ every Issue node.
 
 #### $patchFilesCount
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 43
 
 *Number of patches attached to the comment.*
 
 
-
-`protected [](../int)|UTF-8 $patchFilesCount`
-
+`protected int $patchFilesCount`
 
 
 
@@ -258,15 +218,12 @@ every Issue node.
 
 #### $timeService
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 71
 
 *The datetime.time service.*
 
 
-
-`protected [](../\Drupal\Component\Datetime\TimeInterface)|UTF-8 $timeService`
-
+`protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService`
 
 
 
@@ -277,15 +234,12 @@ every Issue node.
 
 #### $totalFilesCount
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 50
 
 *Number of all files attached to the comment.*
 
 
-
-`protected [](../int)|UTF-8 $totalFilesCount`
-
+`protected int $totalFilesCount`
 
 
 
@@ -300,30 +254,28 @@ every Issue node.
 
 #### __construct()
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 83
 
 *DrupalOrgCommentDetails constructor.*
 
 ```php
-__construct(<a href="classes/Drupal-ct-drupal-DrupalRetrieverInterface.html"><abbr title="\Drupal\ct_drupal\DrupalRetrieverInterface">DrupalRetrieverInterface</abbr></a>  $retriever, <abbr title="\Hussainweb\DrupalApi\Entity\Comment">Comment</abbr>  $comment, <abbr title="\Drupal\Component\Datetime\TimeInterface">TimeInterface</abbr>  $time_service) :mixed
+__construct([DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $retriever, [Comment](# \Hussainweb\DrupalApi\Entity\Comment) $comment, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $time_service) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$retriever**: &lt;a href=&quot;classes/Drupal-ct-drupal-DrupalRetrieverInterface.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_drupal\DrupalRetrieverInterface&quot;&gt;DrupalRetrieverInterface&lt;/abbr&gt;&lt;/a&gt;
+- **$retriever**: [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)
     
 The injected contribution retriever service.
 
-- **$comment**: &lt;abbr title=&quot;\Hussainweb\DrupalApi\Entity\Comment&quot;&gt;Comment&lt;/abbr&gt;
+- **$comment**: [Comment](# \Hussainweb\DrupalApi\Entity\Comment)
     
 The comment data from drupal.org.
 
-- **$time_service**: &lt;abbr title=&quot;\Drupal\Component\Datetime\TimeInterface&quot;&gt;TimeInterface&lt;/abbr&gt;
+- **$time_service**: [TimeInterface](# \Drupal\Component\Datetime\TimeInterface)
     
 The datetime.time service.
 
@@ -334,10 +286,7 @@ The datetime.time service.
 
 
 
-
-
 #### getDescription()
-
 
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 130
 
@@ -356,17 +305,13 @@ Fix for relative user url used in comment section.
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
 
 
 #### getIssueStatus()
-
 
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 116
 
@@ -384,17 +329,13 @@ getIssueStatus() :string
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 string
 
 
 
 #### getPatchFilesCount()
-
 
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 92
 
@@ -412,17 +353,13 @@ getPatchFilesCount() :int
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 int
 
 
 
 #### getTotalFilesCount()
-
 
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 104
 
@@ -440,17 +377,13 @@ getTotalFilesCount() :int
 
 
 
-
-
-
-#### Return Values
+**Return Values**
 
 int
 
 
 
 #### determineIssueStatus()
-
 
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 173
 
@@ -470,25 +403,20 @@ determineIssueStatus() :void
 
 
 
-
-
-
 #### getStatusFromCode()
-
 
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 199
 
 *Translate the status id to text.*
 
 ```php
-getStatusFromCode(int  $statusId) :string
+getStatusFromCode(int $statusId) :string
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$statusId**: int
     
@@ -499,9 +427,7 @@ Issue status id.
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 string
 
@@ -512,22 +438,20 @@ Readable text corresponding to the status id.
 
 #### isPatchFile()
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 228
 
 *Determine if this is a patch file.*
 
 ```php
-isPatchFile(<abbr title="\Hussainweb\DrupalApi\Entity\File">File</abbr>  $fileRecord) :bool
+isPatchFile([File](# \Hussainweb\DrupalApi\Entity\File) $fileRecord) :bool
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$fileRecord**: &lt;abbr title=&quot;\Hussainweb\DrupalApi\Entity\File&quot;&gt;File&lt;/abbr&gt;
+- **$fileRecord**: [File](# \Hussainweb\DrupalApi\Entity\File)
     
 The file data returned from API.
 
@@ -536,9 +460,7 @@ The file data returned from API.
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 bool
 
@@ -549,7 +471,6 @@ TRUE if this is a patch file, else FALSE.
 
 #### processFileDetails()
 
-
 [CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 142
 
 *Check the type and number of files attached to a comment under a issue.*
@@ -557,9 +478,6 @@ TRUE if this is a patch file, else FALSE.
 ```php
 processFileDetails() :void
 ```
-
-
-
 
 
 

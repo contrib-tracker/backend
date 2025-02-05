@@ -1,10 +1,7 @@
 
 
 
-
-### ## ContributionSourcePluginManager.php
-
-
+## ContributionSourcePluginManager.php
 
 
 

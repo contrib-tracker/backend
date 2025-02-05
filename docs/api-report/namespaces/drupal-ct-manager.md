@@ -1,10 +1,8 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 
 
-### ##ct_manager
-
+## ct_manager
 
 
 

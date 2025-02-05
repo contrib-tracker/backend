@@ -1,13 +1,11 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_drupal](../namespaces/drupal-ct-drupal.md)
 
 
-### 
 ## Client
 
-- **Extends**: `[Client](../\Hussainweb\DrupalApi\Client)`
+- **extends**: `[Client](# \Hussainweb\DrupalApi\Client)`
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -15,7 +13,6 @@
 
 
 ---
-
 
 
 
@@ -36,8 +33,6 @@ The decorator just adds a header to set User-Agent for this application.
 
 
 
-
-
 ### Table of Contents
 
 
@@ -50,8 +45,7 @@ The decorator just adds a header to set User-Agent for this application.
 
 
 #### Methods
-
-- **[getEntity()](../classes/Drupal-ct-drupal-Client.md#method_getEntity)**
+- **[getEntity()](../classes/Drupal-ct-drupal-Client.md#getentity)**
            : `mixed`
 *{@inheritdoc}*
 
@@ -67,25 +61,21 @@ The decorator just adds a header to set User-Agent for this application.
 
 #### getEntity()
 
-
 [Client.php](../files/web-modules-custom-ct-drupal-src-client.md) : Line 20
 
 *{@inheritdoc}*
 
 ```php
-getEntity(<abbr title="\Hussainweb\DrupalApi\Request\Request">Request</abbr>  $request) :mixed
+getEntity([Request](# \Hussainweb\DrupalApi\Request\Request) $request) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$request**: &lt;abbr title=&quot;\Hussainweb\DrupalApi\Request\Request&quot;&gt;Request&lt;/abbr&gt;
+- **$request**: [Request](# \Hussainweb\DrupalApi\Request\Request)
     
-
-
 
 
 

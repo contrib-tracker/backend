@@ -1,10 +1,8 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_manager](../namespaces/drupal-ct-manager.md)
 
 
-### 
 ## ContributionTrackerStorage
 
 
@@ -19,12 +17,9 @@
 
 
 
-
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 18
 
 *Class implementation of the storage utility.*
-
-
 
 
 
@@ -45,56 +40,46 @@
 
 
 #### Properties
-
-- **[$logger](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#property_logger)**
-         : `<abbr title="\Drupal\taxonomy\TermStorageInterface">TermStorageInterface</abbr>`  
+- **[$logger](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#logger)**
+         : `[TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface)`  
 *Logger.*
 
-
-- **[$nodeStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#property_nodeStorage)**
-         : `<abbr title="\Drupal\node\NodeStorageInterface">NodeStorageInterface</abbr>`  
+- **[$nodeStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#nodestorage)**
+         : `[NodeStorageInterface](# \Drupal\node\NodeStorageInterface)`  
 *Node storage controller.*
 
-
-- **[$termStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#property_termStorage)**
-         : `<abbr title="\Drupal\taxonomy\TermStorageInterface">TermStorageInterface</abbr>`  
+- **[$termStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#termstorage)**
+         : `[TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface)`  
 *Term storage controller.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#__construct)**
            : `mixed`
 *Contribution storage constructor.*
 
-
-- **[getNodeForCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#method_getNodeForCodeContribution)**
-           : `<abbr title="\Drupal\node\Entity\Node">Node</abbr>|null`
+- **[getNodeForCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getnodeforcodecontribution)**
+           : `[Node](# \Drupal\node\Entity\Node)|null`
 *Get node of type code_contribution.*
 
-
-- **[getNodeForIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#method_getNodeForIssue)**
-           : `<abbr title="\Drupal\node\Entity\Node">Node</abbr>|null`
+- **[getNodeForIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getnodeforissue)**
+           : `[Node](# \Drupal\node\Entity\Node)|null`
 *Get issue of type issue.*
 
-
-- **[getOrCreateIssueNode()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#method_getOrCreateIssueNode)**
-           : `<abbr title="\Drupal\node\Entity\Node">Node</abbr>`
+- **[getOrCreateIssueNode()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getorcreateissuenode)**
+           : `[Node](# \Drupal\node\Entity\Node)`
 *Retrieves the node detail for issues.*
 
-
-- **[saveCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#method_saveCodeContribution)**
-           : `<abbr title="\Drupal\node\Entity\Node">Node</abbr>`
+- **[saveCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#savecodecontribution)**
+           : `[Node](# \Drupal\node\Entity\Node)`
 *Save code contributions.*
 
-
-- **[saveIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#method_saveIssue)**
-           : `<abbr title="\Drupal\node\Entity\Node">Node</abbr>`
+- **[saveIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#saveissue)**
+           : `[Node](# \Drupal\node\Entity\Node)`
 *Save Issues.*
 
-
-- **[getOrCreateTerm()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#method_getOrCreateTerm)**
-           : `<abbr title="\Drupal\taxonomy\TermInterface">TermInterface</abbr>`
+- **[getOrCreateTerm()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getorcreateterm)**
+           : `[TermInterface](# \Drupal\taxonomy\TermInterface)`
 *Get (or create) a term in a specified vocabulary.*
 
 
@@ -107,15 +92,12 @@
 
 #### $logger
 
-
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 38
 
 *Logger.*
 
 
-
-`protected [](../\Drupal\taxonomy\TermStorageInterface)|UTF-8 $logger`
-
+`protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $logger`
 
 
 
@@ -126,15 +108,12 @@
 
 #### $nodeStorage
 
-
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 24
 
 *Node storage controller.*
 
 
-
-`protected [](../\Drupal\node\NodeStorageInterface)|UTF-8 $nodeStorage`
-
+`protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStorage`
 
 
 
@@ -145,15 +124,12 @@
 
 #### $termStorage
 
-
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 31
 
 *Term storage controller.*
 
 
-
-`protected [](../\Drupal\taxonomy\TermStorageInterface)|UTF-8 $termStorage`
-
+`protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termStorage`
 
 
 
@@ -168,27 +144,23 @@
 
 #### __construct()
 
-
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 43
 
 *Contribution storage constructor.*
 
 ```php
-__construct(<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>  $entityTypeManager, <abbr title="\Drupal\Core\Logger\LoggerChannelInterface">LoggerChannelInterface</abbr>  $loggerChannel) :mixed
+__construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$entityTypeManager**: &lt;abbr title=&quot;\Drupal\Core\Entity\EntityTypeManagerInterface&quot;&gt;EntityTypeManagerInterface&lt;/abbr&gt;
+- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
     
-- **$loggerChannel**: &lt;abbr title=&quot;\Drupal\Core\Logger\LoggerChannelInterface&quot;&gt;LoggerChannelInterface&lt;/abbr&gt;
+- **$loggerChannel**: [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)
     
-
-
 
 
 
@@ -198,20 +170,18 @@ __construct(<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityT
 
 #### getNodeForCodeContribution()
 
-
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 122
 
 *Get node of type code_contribution.*
 
 ```php
-getNodeForCodeContribution(string  $commentLink) :<abbr title="\Drupal\node\Entity\Node">Node</abbr>|null
+getNodeForCodeContribution(string $commentLink) :[Node](# \Drupal\node\Entity\Node)|null
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$commentLink**: string
     
@@ -220,30 +190,26 @@ getNodeForCodeContribution(string  $commentLink) :<abbr title="\Drupal\node\Enti
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Drupal\node\Entity\Node">Node</abbr>|null
+[Node](# \Drupal\node\Entity\Node)|null
 
 
 
 #### getNodeForIssue()
-
 
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 109
 
 *Get issue of type issue.*
 
 ```php
-getNodeForIssue(string  $issueLink) :<abbr title="\Drupal\node\Entity\Node">Node</abbr>|null
+getNodeForIssue(string $issueLink) :[Node](# \Drupal\node\Entity\Node)|null
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$issueLink**: string
     
@@ -252,130 +218,114 @@ getNodeForIssue(string  $issueLink) :<abbr title="\Drupal\node\Entity\Node">Node
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Drupal\node\Entity\Node">Node</abbr>|null
+[Node](# \Drupal\node\Entity\Node)|null
 
 
 
 #### getOrCreateIssueNode()
-
 
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 135
 
 *Retrieves the node detail for issues.*
 
 ```php
-getOrCreateIssueNode(<a href="classes/Drupal-ct-manager-Data-Issue.html"><abbr title="\Drupal\ct_manager\Data\Issue">Issue</abbr></a>  $issue) :<abbr title="\Drupal\node\Entity\Node">Node</abbr>
+getOrCreateIssueNode([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$issue**: &lt;a href=&quot;classes/Drupal-ct-manager-Data-Issue.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\Data\Issue&quot;&gt;Issue&lt;/abbr&gt;&lt;/a&gt;
+- **$issue**: [Issue](../classes/Drupal-ct-manager-Data-Issue.md)
     
 
 
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Drupal\node\Entity\Node">Node</abbr>
+[Node](# \Drupal\node\Entity\Node)
 
 
 
 #### saveCodeContribution()
-
 
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 70
 
 *Save code contributions.*
 
 ```php
-saveCodeContribution(<a href="classes/Drupal-ct-manager-Data-CodeContribution.html"><abbr title="\Drupal\ct_manager\Data\CodeContribution">CodeContribution</abbr></a>  $comment, <abbr title="\Drupal\node\Entity\Node">Node</abbr>  $issueNode, <abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :<abbr title="\Drupal\node\Entity\Node">Node</abbr>
+saveCodeContribution([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $comment, [Node](# \Drupal\node\Entity\Node) $issueNode, [User](# \Drupal\user\Entity\User) $user) :[Node](# \Drupal\node\Entity\Node)
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$comment**: &lt;a href=&quot;classes/Drupal-ct-manager-Data-CodeContribution.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\Data\CodeContribution&quot;&gt;CodeContribution&lt;/abbr&gt;&lt;/a&gt;
+- **$comment**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
     
-- **$issueNode**: &lt;abbr title=&quot;\Drupal\node\Entity\Node&quot;&gt;Node&lt;/abbr&gt;
+- **$issueNode**: [Node](# \Drupal\node\Entity\Node)
     
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
 
 
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Drupal\node\Entity\Node">Node</abbr>
+[Node](# \Drupal\node\Entity\Node)
 
 
 
 #### saveIssue()
-
 
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 52
 
 *Save Issues.*
 
 ```php
-saveIssue(<a href="classes/Drupal-ct-manager-Data-Issue.html"><abbr title="\Drupal\ct_manager\Data\Issue">Issue</abbr></a>  $issue) :<abbr title="\Drupal\node\Entity\Node">Node</abbr>
+saveIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$issue**: &lt;a href=&quot;classes/Drupal-ct-manager-Data-Issue.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\Data\Issue&quot;&gt;Issue&lt;/abbr&gt;&lt;/a&gt;
+- **$issue**: [Issue](../classes/Drupal-ct-manager-Data-Issue.md)
     
 
 
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Drupal\node\Entity\Node">Node</abbr>
+[Node](# \Drupal\node\Entity\Node)
 
 
 
 #### getOrCreateTerm()
-
 
 [ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 154
 
 *Get (or create) a term in a specified vocabulary.*
 
 ```php
-getOrCreateTerm(string  $termName, string  $vocabulary) :<abbr title="\Drupal\taxonomy\TermInterface">TermInterface</abbr>
+getOrCreateTerm(string $termName, string $vocabulary) :[TermInterface](# \Drupal\taxonomy\TermInterface)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$termName**: string
     
@@ -390,11 +340,9 @@ Machine name of the vocabulary.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Drupal\taxonomy\TermInterface">TermInterface</abbr>
+[TermInterface](# \Drupal\taxonomy\TermInterface)
 
 
 The term with the given name in the given vocabulary.

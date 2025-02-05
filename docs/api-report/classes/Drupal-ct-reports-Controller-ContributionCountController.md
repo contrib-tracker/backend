@@ -1,14 +1,12 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_reports](../namespaces/drupal-ct-reports.md)
 - [Controller](../namespaces/drupal-ct-reports-controller.md)
 
 
-### 
 ## ContributionCountController
 
-- **Extends**: `[ControllerBase](../\Drupal\Core\Controller\ControllerBase)`
+- **extends**: `[ControllerBase](# \Drupal\Core\Controller\ControllerBase)`
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -21,12 +19,9 @@
 
 
 
-
 [ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 12
 
 *A controller to display contribution statistics.*
-
-
 
 
 
@@ -47,25 +42,21 @@
 
 
 #### Properties
-
-- **[$contribStats](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#property_contribStats)**
-         : `<abbr title="\Drupal\contrib_tracker\ContributionStatistics">ContributionStatistics</abbr>`  
+- **[$contribStats](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#contribstats)**
+         : `[ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics)`  
 *Contribution statistics instance.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#__construct)**
            : `mixed`
 *Constructs a new GeofieldMapGeocoder object.*
 
-
-- **[content()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#method_content)**
+- **[content()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#content)**
            : `mixed`
 *Returns a render-able array with contribution statistics.*
 
-
-- **[create()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#method_create)**
+- **[create()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#create)**
            : `mixed`
 *{@inheritdoc}*
 
@@ -79,15 +70,12 @@
 
 #### $contribStats
 
-
 [ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 19
 
 *Contribution statistics instance.*
 
 
-
-`protected [](../\Drupal\contrib_tracker\ContributionStatistics)|UTF-8 $contribStats`
-
+`protected [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics) $contribStats`
 
 
 
@@ -102,22 +90,20 @@
 
 #### __construct()
 
-
 [ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 26
 
 *Constructs a new GeofieldMapGeocoder object.*
 
 ```php
-__construct(<abbr title="\Drupal\contrib_tracker\ContributionStatistics">ContributionStatistics</abbr>  $contrib_stats) :mixed
+__construct([ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics) $contrib_stats) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$contrib_stats**: &lt;abbr title=&quot;\Drupal\contrib_tracker\ContributionStatistics&quot;&gt;ContributionStatistics&lt;/abbr&gt;
+- **$contrib_stats**: [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics)
     
 
 
@@ -126,10 +112,7 @@ __construct(<abbr title="\Drupal\contrib_tracker\ContributionStatistics">Contrib
 
 
 
-
-
 #### content()
-
 
 [ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 42
 
@@ -149,30 +132,23 @@ content() :mixed
 
 
 
-
-
-
 #### create()
-
 
 [ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 33
 
 *{@inheritdoc}*
 
 ```php
-static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>  $container) :mixed
+static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$container**: &lt;abbr title=&quot;\Symfony\Component\DependencyInjection\ContainerInterface&quot;&gt;ContainerInterface&lt;/abbr&gt;
+- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
     
-
-
 
 
 

@@ -1,11 +1,9 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [Tests](../namespaces/drupal-tests.md)
 
 
-### ##ct_manager
-
+## ct_manager
 
 
 

@@ -1,26 +1,23 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_drupal](../namespaces/drupal-ct-drupal.md)
 - [Plugin](../namespaces/drupal-ct-drupal-plugin.md)
 - [ContributionSource](../namespaces/drupal-ct-drupal-plugin-contributionsource.md)
 
 
-### 
 ## DrupalContribution
 
-- **Extends**: `[PluginBase](../\Drupal\Component\Plugin\PluginBase)`
+- **extends**: `[PluginBase](# \Drupal\Component\Plugin\PluginBase)`
 
 - **In Package**:
     - [Application](../packages/Application.md)
   
 - **Implements**:
     `[ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md), `
-    `[ContainerFactoryPluginInterface](../\Drupal\Core\Plugin\ContainerFactoryPluginInterface)`
+    `[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)`
   
 
 ---
-
 
 
 
@@ -33,16 +30,14 @@
 
 
 
-
 ### Tags
 
 - **ContributionSource**
-            - (
+  - (
   id = "drupal",
   description = @Translation("Retrieve and store contribution data from drupal.org."),
 )
 
-  
 
 
 
@@ -55,7 +50,7 @@
 #### Interfaces
 - **[ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md)**
   An interface for all Contribution type plugins.
-- **[ContainerFactoryPluginInterface](../\Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
+- **[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
 
 
 
@@ -63,70 +58,57 @@
 
 
 #### Properties
-
-- **[$contributionStorage](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#property_contributionStorage)**
-         : `<a href="classes/Drupal-ct-manager-ContributionTrackerStorage.html"><abbr title="\Drupal\ct_manager\ContributionTrackerStorage">ContributionTrackerStorage</abbr></a>`  
+- **[$contributionStorage](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#contributionstorage)**
+         : `[ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)`  
 *Contribution Storage service.*
 
-
-- **[$doRetriever](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#property_doRetriever)**
-         : `<a href="classes/Drupal-ct-drupal-DrupalOrgRetriever.html"><abbr title="\Drupal\ct_drupal\DrupalOrgRetriever">DrupalOrgRetriever</abbr></a>`  
+- **[$doRetriever](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#doretriever)**
+         : `[DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md)`  
 *Retrievers for each user.*
 
-
-- **[$doUserInfoRetriever](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#property_doUserInfoRetriever)**
-         : `<abbr title="\Drupal\do_username\DOUserInfoRetriever">DOUserInfoRetriever</abbr>`  
+- **[$doUserInfoRetriever](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#douserinforetriever)**
+         : `[DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever)`  
 *do_username service.*
 
-
-- **[$entityTypeManager](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#property_entityTypeManager)**
-         : `<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>`  
+- **[$entityTypeManager](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#entitytypemanager)**
+         : `[EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)`  
 *Entity type manager.*
 
-
-- **[$logger](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#property_logger)**
-         : `<abbr title="\Drupal\Core\Logger\LoggerChannelInterface">LoggerChannelInterface</abbr>`  
+- **[$logger](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#logger)**
+         : `[LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)`  
 *Logger.*
 
-
-- **[$timeService](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#property_timeService)**
-         : `<abbr title="\Drupal\Component\Datetime\TimeInterface">TimeInterface</abbr>`  
+- **[$timeService](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#timeservice)**
+         : `[TimeInterface](# \Drupal\Component\Datetime\TimeInterface)`  
 *datetime.time service.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#__construct)**
            : `mixed`
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
-
-- **[create()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#method_create)**
+- **[create()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#create)**
            : `mixed`
 *{@inheritdoc}*
 
-
-- **[getNotificationMessage()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#method_getNotificationMessage)**
+- **[getNotificationMessage()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#getnotificationmessage)**
            : `string`
 *Get message for notification.*
 
-
-- **[getUserCodeContributions()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#method_getUserCodeContributions)**
+- **[getUserCodeContributions()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#getusercodecontributions)**
            : `mixed`
 *Get comments from the total contribution data.*
 
-
-- **[getUserIssues()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#method_getUserIssues)**
+- **[getUserIssues()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#getuserissues)**
            : `mixed`
 *Get issues from the total contribution data.*
 
-
-- **[getUsers()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#method_getUsers)**
+- **[getUsers()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#getusers)**
            : `mixed`
 *Get all users with drupal.org username.*
 
-
-- **[isUserValid()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#method_isUserValid)**
+- **[isUserValid()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#isuservalid)**
            : `bool`
 *Get user contributions from the platform.*
 
@@ -140,15 +122,12 @@
 
 #### $contributionStorage
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 58
 
 *Contribution Storage service.*
 
 
-
-`protected [](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)|UTF-8 $contributionStorage`
-
+`protected [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contributionStorage`
 
 
 
@@ -159,15 +138,12 @@
 
 #### $doRetriever
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 44
 
 *Retrievers for each user.*
 
 
-
-`protected [](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md)|UTF-8 $doRetriever`
-
+`protected [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md) $doRetriever`
 
 
 
@@ -178,15 +154,12 @@
 
 #### $doUserInfoRetriever
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 51
 
 *do_username service.*
 
 
-
-`protected [](../\Drupal\do_username\DOUserInfoRetriever)|UTF-8 $doUserInfoRetriever`
-
+`protected [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever) $doUserInfoRetriever`
 
 
 
@@ -197,15 +170,12 @@
 
 #### $entityTypeManager
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 37
 
 *Entity type manager.*
 
 
-
-`protected [](../\Drupal\Core\Entity\EntityTypeManagerInterface)|UTF-8 $entityTypeManager`
-
+`protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager`
 
 
 
@@ -216,15 +186,12 @@
 
 #### $logger
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 65
 
 *Logger.*
 
 
-
-`protected [](../\Drupal\Core\Logger\LoggerChannelInterface)|UTF-8 $logger`
-
+`protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger`
 
 
 
@@ -235,15 +202,12 @@
 
 #### $timeService
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 72
 
 *datetime.time service.*
 
 
-
-`protected [](../\Drupal\Component\Datetime\TimeInterface)|UTF-8 $timeService`
-
+`protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService`
 
 
 
@@ -258,22 +222,20 @@
 
 #### __construct()
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 96
 
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
 ```php
-__construct(array&lt;string|int, mixed&gt;  $configuration, string  $plugin_id, mixed  $plugin_definition, <abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>  $entityTypeManager, <a href="classes/Drupal-ct-drupal-DrupalOrgRetriever.html"><abbr title="\Drupal\ct_drupal\DrupalOrgRetriever">DrupalOrgRetriever</abbr></a>  $doRetriever, <abbr title="\Drupal\do_username\DOUserInfoRetriever">DOUserInfoRetriever</abbr>  $doUserInfoRetriever, <a href="classes/Drupal-ct-manager-ContributionTrackerStorage.html"><abbr title="\Drupal\ct_manager\ContributionTrackerStorage">ContributionTrackerStorage</abbr></a>  $contributionStorage, <abbr title="\Drupal\Core\Logger\LoggerChannelInterface">LoggerChannelInterface</abbr>  $loggerChannel, <abbr title="\Drupal\Component\Datetime\TimeInterface">TimeInterface</abbr>  $timeService) :mixed
+__construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md) $doRetriever, [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever) $doUserInfoRetriever, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contributionStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$configuration**: array&amp;lt;string|int, mixed&amp;gt;
+- **$configuration**: array&lt;string|int, mixed&gt;
     
 A configuration array containing information about the plugin instance.
 
@@ -285,27 +247,27 @@ The plugin_id for the plugin instance.
     
 The plugin_definition for the plugin instance.
 
-- **$entityTypeManager**: &lt;abbr title=&quot;\Drupal\Core\Entity\EntityTypeManagerInterface&quot;&gt;EntityTypeManagerInterface&lt;/abbr&gt;
+- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
     
 The injected entity type manager service.
 
-- **$doRetriever**: &lt;a href=&quot;classes/Drupal-ct-drupal-DrupalOrgRetriever.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_drupal\DrupalOrgRetriever&quot;&gt;DrupalOrgRetriever&lt;/abbr&gt;&lt;/a&gt;
+- **$doRetriever**: [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md)
     
 Wrapper for Drupal.org API.
 
-- **$doUserInfoRetriever**: &lt;abbr title=&quot;\Drupal\do_username\DOUserInfoRetriever&quot;&gt;DOUserInfoRetriever&lt;/abbr&gt;
+- **$doUserInfoRetriever**: [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever)
     
 The injected DO UserInfoRetriever service.
 
-- **$contributionStorage**: &lt;a href=&quot;classes/Drupal-ct-manager-ContributionTrackerStorage.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\ContributionTrackerStorage&quot;&gt;ContributionTrackerStorage&lt;/abbr&gt;&lt;/a&gt;
+- **$contributionStorage**: [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)
     
 The contribution storage service.
 
-- **$loggerChannel**: &lt;abbr title=&quot;\Drupal\Core\Logger\LoggerChannelInterface&quot;&gt;LoggerChannelInterface&lt;/abbr&gt;
+- **$loggerChannel**: [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)
     
 The logger service.
 
-- **$timeService**: &lt;abbr title=&quot;\Drupal\Component\Datetime\TimeInterface&quot;&gt;TimeInterface&lt;/abbr&gt;
+- **$timeService**: [TimeInterface](# \Drupal\Component\Datetime\TimeInterface)
     
 The datetime.time service.
 
@@ -316,28 +278,24 @@ The datetime.time service.
 
 
 
-
-
 #### create()
-
 
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 109
 
 *{@inheritdoc}*
 
 ```php
-static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>  $container, array&lt;string|int, mixed&gt;  $configuration, mixed  $plugin_id, mixed  $plugin_definition) :mixed
+static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$container**: &lt;abbr title=&quot;\Symfony\Component\DependencyInjection\ContainerInterface&quot;&gt;ContainerInterface&lt;/abbr&gt;
+- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
     
-- **$configuration**: array&amp;lt;string|int, mixed&amp;gt;
+- **$configuration**: array&lt;string|int, mixed&gt;
     
 - **$plugin_id**: mixed
     
@@ -350,37 +308,31 @@ static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInter
 
 
 
-
-
 #### getNotificationMessage()
-
 
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 224
 
 *Get message for notification.*
 
 ```php
-getNotificationMessage(<a href="classes/Drupal-ct-manager-Data-CodeContribution.html"><abbr title="\Drupal\ct_manager\Data\CodeContribution">CodeContribution</abbr></a>  $contribution, <abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :string
+getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$contribution**: &lt;a href=&quot;classes/Drupal-ct-manager-Data-CodeContribution.html&quot;&gt;&lt;abbr title=&quot;\Drupal\ct_manager\Data\CodeContribution&quot;&gt;CodeContribution&lt;/abbr&gt;&lt;/a&gt;
+- **$contribution**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
     
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
 
 
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 string
 
@@ -388,25 +340,21 @@ string
 
 #### getUserCodeContributions()
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 157
 
 *Get comments from the total contribution data.*
 
 ```php
-getUserCodeContributions(<abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :mixed
+getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
-
-
 
 
 
@@ -416,39 +364,34 @@ getUserCodeContributions(<abbr title="\Drupal\user\Entity\User">User</abbr>  $us
 
 #### getUserIssues()
 
-
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 150
 
 *Get issues from the total contribution data.*
 
 ```php
-getUserIssues(<abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :mixed
+getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
-
 
 
 ### Tags
 
 - **SuppressWarnings**
-            - (PHPMD.UnusedFormalParameter)
+  - (PHPMD.UnusedFormalParameter)
 
-  
 
 
 
 
 
 #### getUsers()
-
 
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 126
 
@@ -468,36 +411,29 @@ getUsers() :mixed
 
 
 
-
-
-
 #### isUserValid()
-
 
 [DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 139
 
 *Get user contributions from the platform.*
 
 ```php
-isUserValid(<abbr title="\Drupal\user\Entity\User">User</abbr>  $user) :bool
+isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$user**: &lt;abbr title=&quot;\Drupal\user\Entity\User&quot;&gt;User&lt;/abbr&gt;
+- **$user**: [User](# \Drupal\user\Entity\User)
     
 
 
 
 
 
-
-
-#### Return Values
+**Return Values**
 
 bool
 

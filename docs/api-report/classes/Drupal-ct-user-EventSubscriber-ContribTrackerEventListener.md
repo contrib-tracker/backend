@@ -1,11 +1,9 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_user](../namespaces/drupal-ct-user.md)
 - [EventSubscriber](../namespaces/drupal-ct-user-eventsubscriber.md)
 
 
-### 
 ## ContribTrackerEventListener
 
 
@@ -13,11 +11,10 @@
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    `[EventSubscriberInterface](../\Symfony\Component\EventDispatcher\EventSubscriberInterface)`
+    `[EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)`
   
 
 ---
-
 
 
 
@@ -35,14 +32,12 @@
 
 
 
-
-
 ### Table of Contents
 
 
 
 #### Interfaces
-- **[EventSubscriberInterface](../\Symfony\Component\EventDispatcher\EventSubscriberInterface)**
+- **[EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)**
 
 
 
@@ -50,25 +45,21 @@
 
 
 #### Properties
-
-- **[$loggerFactory](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#property_loggerFactory)**
-         : `<abbr title="\Drupal\Core\Logger\LoggerChannelInterface">LoggerChannelInterface</abbr>`  
+- **[$loggerFactory](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#loggerfactory)**
+         : `[LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)`  
 *The logger Channel Factory.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#__construct)**
            : `mixed`
 *ContribTrackerEventListener constructor.*
 
-
-- **[getSubscribedEvents()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#method_getSubscribedEvents)**
+- **[getSubscribedEvents()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#getsubscribedevents)**
            : `mixed`
 *Returns an array of event names this subscriber wants to listen to.*
 
-
-- **[onSocialAuthUserFieldEvent()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#method_onSocialAuthUserFieldEvent)**
+- **[onSocialAuthUserFieldEvent()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#onsocialauthuserfieldevent)**
            : `mixed`
 *Reacts to the event when users fields are being gathered via Social Auth.*
 
@@ -82,14 +73,12 @@
 
 #### $loggerFactory
 
-
 [ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 21
 
 *The logger Channel Factory.*
 
 
-
-`protected [](../\Drupal\Core\Logger\LoggerChannelInterface)|UTF-8 $loggerFactory`
+`protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerFactory`
 
 
 
@@ -102,27 +91,24 @@ The loggerFactory interface alias.
 
 
 
-
 ### Methods
 
 #### __construct()
-
 
 [ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 63
 
 *ContribTrackerEventListener constructor.*
 
 ```php
-__construct(<abbr title="\Drupal\Core\Logger\LoggerChannelFactoryInterface">LoggerChannelFactoryInterface</abbr>  $loggerChannelFactory) :mixed
+__construct([LoggerChannelFactoryInterface](# \Drupal\Core\Logger\LoggerChannelFactoryInterface) $loggerChannelFactory) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$loggerChannelFactory**: &lt;abbr title=&quot;\Drupal\Core\Logger\LoggerChannelFactoryInterface&quot;&gt;LoggerChannelFactoryInterface&lt;/abbr&gt;
+- **$loggerChannelFactory**: [LoggerChannelFactoryInterface](# \Drupal\Core\Logger\LoggerChannelFactoryInterface)
     
 Logger Channel Factory interface.
 
@@ -133,10 +119,7 @@ Logger Channel Factory interface.
 
 
 
-
-
 #### getSubscribedEvents()
-
 
 [ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 51
 
@@ -156,39 +139,32 @@ static getSubscribedEvents() :mixed
 
 
 
-
-
-
 #### onSocialAuthUserFieldEvent()
-
 
 [ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 31
 
 *Reacts to the event when users fields are being gathered via Social Auth.*
 
 ```php
-onSocialAuthUserFieldEvent(<abbr title="\Drupal\social_auth\Event\UserFieldsEvent">UserFieldsEvent</abbr>  $event) :mixed
+onSocialAuthUserFieldEvent([UserFieldsEvent](# \Drupal\social_auth\Event\UserFieldsEvent) $event) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$event**: &lt;abbr title=&quot;\Drupal\social_auth\Event\UserFieldsEvent&quot;&gt;UserFieldsEvent&lt;/abbr&gt;
+- **$event**: [UserFieldsEvent](# \Drupal\social_auth\Event\UserFieldsEvent)
     
 Object returned by UserEvent.
-
 
 
 
 ### Tags
 
 - **throws**
-      - Type: `[](../\Drupal\Core\Entity\EntityStorageException)|UTF-8`
-          - 
-  
+  - Type: `[EntityStorageException](# \Drupal\Core\Entity\EntityStorageException)`
+  - 
 
 
 

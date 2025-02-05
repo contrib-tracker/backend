@@ -1,10 +1,7 @@
 
 
 
-
-### ## GithubQuery.php
-
-
+## GithubQuery.php
 
 
 

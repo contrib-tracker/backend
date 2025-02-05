@@ -1,9 +1,7 @@
 
 
 
-
-### ## ct_reports.module
-
+## ct_reports.module
 
 
 
@@ -13,9 +11,8 @@
 ### Tags
 
 - **file**
-            - Module for contribution tracker reports module.
+  - Module for contribution tracker reports module.
 
-  
 
 
 
@@ -34,8 +31,7 @@
 
 
 #### Functions
-
-- **[ct_reports_theme()](../namespaces/default.md#function_ct_reports_theme)**
+- **[ct_reports_theme()](../namespaces/default.md#ct_reports_theme)**
            : `mixed`
 *Implements hook_theme().*
 
@@ -49,18 +45,16 @@
 
 #### ct_reports_theme()
 
-
 [ct_reports.module](../files/web-modules-custom-ct-reports-ct-reports.md) : Line 11
 
 *Implements hook_theme().*
 
 
 ```php
-ct_reports_theme(mixed  $existing) :mixed
+ct_reports_theme(mixed $existing) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$existing**: mixed
     
@@ -69,6 +63,5 @@ ct_reports_theme(mixed  $existing) :mixed
 
 
 
-
-
+---
 

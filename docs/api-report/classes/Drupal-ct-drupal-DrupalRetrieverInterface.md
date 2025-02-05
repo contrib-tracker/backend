@@ -1,23 +1,18 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_drupal](../namespaces/drupal-ct-drupal.md)
 
 
-### 
-## DrupalRetrieverInterface
+### ## DrupalRetrieverInterface
 
 
 - **In**:
     - [Application](../packages/Application.md)
   
 
-
 [DrupalRetrieverInterface.php](../files/web-modules-custom-ct-drupal-src-drupalretrieverinterface.md) : Line 11
 
 *Interface for Drupal Retriever service.*
-
-
 
 
 
@@ -39,24 +34,20 @@
 
 
 #### Methods
-
-- **[getCommentsByAuthor()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#method_getCommentsByAuthor)**
-           : `<abbr title="\Hussainweb\DrupalApi\Entity\Collection\CommentCollection">CommentCollection</abbr>`
+- **[getCommentsByAuthor()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getcommentsbyauthor)**
+           : `[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)`
 *Get comments by an user on drupal.org.*
 
-
-- **[getDrupalOrgNode()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#method_getDrupalOrgNode)**
-           : `<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>`
+- **[getDrupalOrgNode()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getdrupalorgnode)**
+           : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`
 *Get node data from drupal.org.*
 
-
-- **[getDrupalOrgNodeFromApi()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#method_getDrupalOrgNodeFromApi)**
-           : `<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>`
+- **[getDrupalOrgNodeFromApi()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getdrupalorgnodefromapi)**
+           : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`
 *Get node data from drupal.org.*
 
-
-- **[getFile()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#method_getFile)**
-           : `<abbr title="\Hussainweb\DrupalApi\Entity\File">File</abbr>`
+- **[getFile()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getfile)**
+           : `[File](# \Hussainweb\DrupalApi\Entity\File)`
 *Get file data from drupal.org.*
 
 
@@ -70,20 +61,18 @@
 
 #### getCommentsByAuthor()
 
-
 [DrupalRetrieverInterface.php](../files/web-modules-custom-ct-drupal-src-drupalretrieverinterface.md) : Line 46
 
 *Get comments by an user on drupal.org.*
 
 ```php
-getCommentsByAuthor(int  $uid) :<abbr title="\Hussainweb\DrupalApi\Entity\Collection\CommentCollection">CommentCollection</abbr>
+getCommentsByAuthor(int $uid) :[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$uid**: int
     
@@ -94,11 +83,9 @@ The user ID of the author.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Hussainweb\DrupalApi\Entity\Collection\CommentCollection">CommentCollection</abbr>
+[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
 
 
 List of comments from drupal.org.
@@ -107,20 +94,18 @@ List of comments from drupal.org.
 
 #### getDrupalOrgNode()
 
-
 [DrupalRetrieverInterface.php](../files/web-modules-custom-ct-drupal-src-drupalretrieverinterface.md) : Line 24
 
 *Get node data from drupal.org.*
 
 ```php
-getDrupalOrgNode(int  $nid, int  $cacheExpiry = Cache::PERMANENT) :<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>
+getDrupalOrgNode(int $nid, int $cacheExpiry = Cache::PERMANENT) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$nid**: int
     
@@ -136,11 +121,9 @@ The cache expiry for the item.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>
+[Node](# \Hussainweb\DrupalApi\Entity\Node)
 
 
 The node data from drupal.org.
@@ -149,20 +132,18 @@ The node data from drupal.org.
 
 #### getDrupalOrgNodeFromApi()
 
-
 [DrupalRetrieverInterface.php](../files/web-modules-custom-ct-drupal-src-drupalretrieverinterface.md) : Line 35
 
 *Get node data from drupal.org.*
 
 ```php
-getDrupalOrgNodeFromApi(int  $nid) :<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>
+getDrupalOrgNodeFromApi(int $nid) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$nid**: int
     
@@ -173,11 +154,9 @@ The nid of the node on drupal.org.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Hussainweb\DrupalApi\Entity\Node">Node</abbr>
+[Node](# \Hussainweb\DrupalApi\Entity\Node)
 
 
 The node data from drupal.org.
@@ -186,20 +165,18 @@ The node data from drupal.org.
 
 #### getFile()
 
-
 [DrupalRetrieverInterface.php](../files/web-modules-custom-ct-drupal-src-drupalretrieverinterface.md) : Line 57
 
 *Get file data from drupal.org.*
 
 ```php
-getFile(int  $fid) :<abbr title="\Hussainweb\DrupalApi\Entity\File">File</abbr>
+getFile(int $fid) :[File](# \Hussainweb\DrupalApi\Entity\File)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$fid**: int
     
@@ -210,11 +187,9 @@ The fid of the file on drupal.org.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Hussainweb\DrupalApi\Entity\File">File</abbr>
+[File](# \Hussainweb\DrupalApi\Entity\File)
 
 
 The file data from drupal.org.

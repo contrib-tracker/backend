@@ -1,5 +1,4 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [Tests](../namespaces/drupal-tests.md)
 - [ct_manager](../namespaces/drupal-tests-ct-manager.md)
@@ -7,10 +6,9 @@
 - [Data](../namespaces/drupal-tests-ct-manager-unit-data.md)
 
 
-### 
 ## CodeContributionTest
 
-- **Extends**: `[TestCase](../\PHPUnit\Framework\TestCase)`
+- **extends**: `[TestCase](# \PHPUnit\Framework\TestCase)`
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -23,9 +21,7 @@
 
 
 
-
 [CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 13
-
 
 
 
@@ -34,12 +30,11 @@
 ### Tags
 
 - **group**
-            - ct_manager
+  - ct_manager
 
-  - **coversDefaultClass**
-            - \Drupal\ct_manager\Data\CodeContribution
+- **coversDefaultClass**
+  - \Drupal\ct_manager\Data\CodeContribution
 
-  
 
 
 
@@ -57,12 +52,10 @@
 
 
 #### Methods
-
-- **[testChainedCodeContribution()](../classes/Drupal-Tests-ct-manager-Unit-Data-CodeContributionTest.md#method_testChainedCodeContribution)**
+- **[testChainedCodeContribution()](../classes/Drupal-Tests-ct-manager-Unit-Data-CodeContributionTest.md#testchainedcodecontribution)**
            : `mixed`
 
-
-- **[testCodeContributionCreation()](../classes/Drupal-Tests-ct-manager-Unit-Data-CodeContributionTest.md#method_testCodeContributionCreation)**
+- **[testCodeContributionCreation()](../classes/Drupal-Tests-ct-manager-Unit-Data-CodeContributionTest.md#testcodecontributioncreation)**
            : `mixed`
 *Test simple code contribution creation.*
 
@@ -77,7 +70,6 @@
 ### Methods
 
 #### testChainedCodeContribution()
-
 
 [CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 28
 
@@ -96,11 +88,7 @@ testChainedCodeContribution() :mixed
 
 
 
-
-
-
 #### testCodeContributionCreation()
-
 
 [CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 18
 
@@ -109,9 +97,6 @@ testChainedCodeContribution() :mixed
 ```php
 testCodeContributionCreation() :mixed
 ```
-
-
-
 
 
 

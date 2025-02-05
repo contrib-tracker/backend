@@ -1,11 +1,9 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [contrib_tracker](../namespaces/drupal-contrib-tracker.md)
 
 
-### ##EventSubscriber
-
+## EventSubscriber
 
 
 

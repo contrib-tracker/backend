@@ -1,14 +1,12 @@
 
-
 - [Drupal](../namespaces/drupal.md)
 - [ct_user](../namespaces/drupal-ct-user.md)
 - [Controller](../namespaces/drupal-ct-user-controller.md)
 
 
-### 
 ## GetUserPatchesController
 
-- **Extends**: `[ControllerBase](../\Drupal\Core\Controller\ControllerBase)`
+- **extends**: `[ControllerBase](# \Drupal\Core\Controller\ControllerBase)`
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -21,12 +19,9 @@
 
 
 
-
 [GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 14
 
 *A controller to get daily patches count for the last 1 year for each user.*
-
-
 
 
 
@@ -47,25 +42,21 @@
 
 
 #### Properties
-
-- **[$entityTypeManager](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#property_entityTypeManager)**
-         : `<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>`  
+- **[$entityTypeManager](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#entitytypemanager)**
+         : `[EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)`  
 *The entity type manager.*
 
 
 #### Methods
-
-- **[__construct()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#method___construct)**
+- **[__construct()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#__construct)**
            : `mixed`
 *Constructs a new GetUserPatchesController object.*
 
-
-- **[content()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#method_content)**
-           : `<abbr title="\Symfony\Component\HttpFoundation\JsonResponse">JsonResponse</abbr>`
+- **[content()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#content)**
+           : `[JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)`
 *Returns a JSON response with daily patches count.*
 
-
-- **[create()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#method_create)**
+- **[create()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#create)**
            : `mixed`
 *{@inheritdoc}*
 
@@ -79,15 +70,12 @@
 
 #### $entityTypeManager
 
-
 [GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 21
 
 *The entity type manager.*
 
 
-
-`protected [](../\Drupal\Core\Entity\EntityTypeManagerInterface)|UTF-8 $entityTypeManager`
-
+`protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager`
 
 
 
@@ -102,22 +90,20 @@
 
 #### __construct()
 
-
 [GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 29
 
 *Constructs a new GetUserPatchesController object.*
 
 ```php
-__construct(<abbr title="\Drupal\Core\Entity\EntityTypeManagerInterface">EntityTypeManagerInterface</abbr>  $entity_type_manager) :mixed
+__construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entity_type_manager) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$entity_type_manager**: &lt;abbr title=&quot;\Drupal\Core\Entity\EntityTypeManagerInterface&quot;&gt;EntityTypeManagerInterface&lt;/abbr&gt;
+- **$entity_type_manager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
     
 The entity type manager.
 
@@ -128,24 +114,20 @@ The entity type manager.
 
 
 
-
-
 #### content()
-
 
 [GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 49
 
 *Returns a JSON response with daily patches count.*
 
 ```php
-content(int  $current_user_id) :<abbr title="\Symfony\Component\HttpFoundation\JsonResponse">JsonResponse</abbr>
+content(int $current_user_id) :[JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)
 ```
 
 
 
 
-
-#### Parameters
+**Parameters**
 
 - **$current_user_id**: int
     
@@ -156,11 +138,9 @@ The user ID for which you want to retrieve patches.
 
 
 
+**Return Values**
 
-
-#### Return Values
-
-<abbr title="\Symfony\Component\HttpFoundation\JsonResponse">JsonResponse</abbr>
+[JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)
 
 
 The JSON response.
@@ -169,25 +149,21 @@ The JSON response.
 
 #### create()
 
-
 [GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 36
 
 *{@inheritdoc}*
 
 ```php
-static create(<abbr title="\Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>  $container) :mixed
+static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container) :mixed
 ```
 
 
 
 
+**Parameters**
 
-#### Parameters
-
-- **$container**: &lt;abbr title=&quot;\Symfony\Component\DependencyInjection\ContainerInterface&quot;&gt;ContainerInterface&lt;/abbr&gt;
+- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
     
-
-
 
 
 

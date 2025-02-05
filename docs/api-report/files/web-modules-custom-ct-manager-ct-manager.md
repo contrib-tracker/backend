@@ -1,9 +1,7 @@
 
 
 
-
-### ## ct_manager.module
-
+## ct_manager.module
 
 
 
@@ -13,9 +11,8 @@
 ### Tags
 
 - **file**
-            - Contribution manager module.
+  - Contribution manager module.
 
-  
 
 
 
@@ -34,8 +31,7 @@
 
 
 #### Functions
-
-- **[ct_manager_cron()](../namespaces/default.md#function_ct_manager_cron)**
+- **[ct_manager_cron()](../namespaces/default.md#ct_manager_cron)**
            : `mixed`
 *Implements hook_cron().*
 
@@ -48,7 +44,6 @@
 ### Functions
 
 #### ct_manager_cron()
-
 
 [ct_manager.module](../files/web-modules-custom-ct-manager-ct-manager.md) : Line 20
 
@@ -64,7 +59,5 @@ ct_manager_cron() :mixed
 
 
 
-
-
-
+---
 

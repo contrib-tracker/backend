@@ -2,9 +2,7 @@
 
 
 
-
-### ##Application
-
+### Application
 
 
 
@@ -68,61 +66,49 @@
 
 
 #### Functions
-
-- **[contrib_tracker_mail_alter()](../namespaces/default.md#function_contrib_tracker_mail_alter)**
+- **[contrib_tracker_mail_alter()](../namespaces/default.md#contrib_tracker_mail_alter)**
            : `mixed`
 *Implements hook_mail_alter().*
 
-
-- **[ct_manager_cron()](../namespaces/default.md#function_ct_manager_cron)**
+- **[ct_manager_cron()](../namespaces/default.md#ct_manager_cron)**
            : `mixed`
 *Implements hook_cron().*
 
-
-- **[ct_reports_theme()](../namespaces/default.md#function_ct_reports_theme)**
+- **[ct_reports_theme()](../namespaces/default.md#ct_reports_theme)**
            : `mixed`
 *Implements hook_theme().*
 
-
-- **[ct_user_theme()](../namespaces/default.md#function_ct_user_theme)**
+- **[ct_user_theme()](../namespaces/default.md#ct_user_theme)**
            : `mixed`
 
-
-- **[ct_user_help()](../namespaces/default.md#function_ct_user_help)**
+- **[ct_user_help()](../namespaces/default.md#ct_user_help)**
            : `mixed`
 *Implements hook_help().*
 
-
-- **[ct_user_form_alter()](../namespaces/default.md#function_ct_user_form_alter)**
+- **[ct_user_form_alter()](../namespaces/default.md#ct_user_form_alter)**
            : `mixed`
 *Implements hook_form_alter().*
 
-
-- **[ct_user_user_login_form_validate()](../namespaces/default.md#function_ct_user_user_login_form_validate)**
+- **[ct_user_user_login_form_validate()](../namespaces/default.md#ct_user_user_login_form_validate)**
            : `mixed`
 *Custom validation function for the user login form.*
 
-
-- **[contribtracker_theme_suggestions_block_alter()](../namespaces/default.md#function_contribtracker_theme_suggestions_block_alter)**
+- **[contribtracker_theme_suggestions_block_alter()](../namespaces/default.md#contribtracker_theme_suggestions_block_alter)**
            : `mixed`
 
-
-- **[contribtracker_theme_suggestions_form_alter()](../namespaces/default.md#function_contribtracker_theme_suggestions_form_alter)**
+- **[contribtracker_theme_suggestions_form_alter()](../namespaces/default.md#contribtracker_theme_suggestions_form_alter)**
            : `mixed`
 *Implements hook_theme_suggestions_form_alter().*
 
-
-- **[contribtracker_theme_suggestions_table_alter()](../namespaces/default.md#function_contribtracker_theme_suggestions_table_alter)**
+- **[contribtracker_theme_suggestions_table_alter()](../namespaces/default.md#contribtracker_theme_suggestions_table_alter)**
            : `mixed`
 *Implements hook_theme_suggestions_table_alter().*
 
-
-- **[contribtracker_theme_preprocess_page_alter()](../namespaces/default.md#function_contribtracker_theme_preprocess_page_alter)**
+- **[contribtracker_theme_preprocess_page_alter()](../namespaces/default.md#contribtracker_theme_preprocess_page_alter)**
            : `mixed`
 *Implements hook_theme_preprocess_page_alter().*
 
-
-- **[contribtracker_theme_suggestions_input_alter()](../namespaces/default.md#function_contribtracker_theme_suggestions_input_alter)**
+- **[contribtracker_theme_suggestions_input_alter()](../namespaces/default.md#contribtracker_theme_suggestions_input_alter)**
            : `mixed`
 *Implements hook_theme_suggestions_input_alter().*
 
@@ -135,14 +121,13 @@
 
 #### contrib_tracker_mail_alter()
 
-
 [contrib_tracker.module](../files/web-modules-custom-contrib-tracker-contrib-tracker.md) : Line 17
 
 *Implements hook_mail_alter().*
 
 
 ```php
-contrib_tracker_mail_alter(mixed  & $message) :mixed
+contrib_tracker_mail_alter(mixed  &$message) :mixed
 ```
 CONT-36 Disable all mails in non prod environments.
 
@@ -150,8 +135,7 @@ We ALLOW mail sending for non platformsh environments.
 We ALLOW mail for platformsh production envrionments.
 We DO NOT ALLOW mail sending for non production platformsh environments.
 
-
-#### Parameters
+**Parameters**
 
 - **$message**: mixed
     
@@ -160,10 +144,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 
 
-
-
+---
 #### ct_manager_cron()
-
 
 [ct_manager.module](../files/web-modules-custom-ct-manager-ct-manager.md) : Line 20
 
@@ -179,11 +161,8 @@ ct_manager_cron() :mixed
 
 
 
-
-
-
+---
 #### ct_reports_theme()
-
 
 [ct_reports.module](../files/web-modules-custom-ct-reports-ct-reports.md) : Line 11
 
@@ -191,11 +170,10 @@ ct_manager_cron() :mixed
 
 
 ```php
-ct_reports_theme(mixed  $existing) :mixed
+ct_reports_theme(mixed $existing) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$existing**: mixed
     
@@ -204,10 +182,8 @@ ct_reports_theme(mixed  $existing) :mixed
 
 
 
-
-
+---
 #### ct_user_theme()
-
 
 [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 11
 
@@ -222,11 +198,8 @@ ct_user_theme() :mixed
 
 
 
-
-
-
+---
 #### ct_user_help()
-
 
 [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 22
 
@@ -234,25 +207,22 @@ ct_user_theme() :mixed
 
 
 ```php
-ct_user_help(mixed  $route_name, <abbr title="\Drupal\Core\Routing\RouteMatchInterface">RouteMatchInterface</abbr>  $route_match) :mixed
+ct_user_help(mixed $route_name, [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface) $route_match) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$route_name**: mixed
     
-- **$route_match**: &lt;abbr title=&quot;\Drupal\Core\Routing\RouteMatchInterface&quot;&gt;RouteMatchInterface&lt;/abbr&gt;
+- **$route_match**: [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface)
     
 
 
 
 
 
-
-
+---
 #### ct_user_form_alter()
-
 
 [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 38
 
@@ -260,11 +230,10 @@ ct_user_help(mixed  $route_name, <abbr title="\Drupal\Core\Routing\RouteMatchInt
 
 
 ```php
-ct_user_form_alter(mixed  & $form, mixed  $form_state, mixed  $form_id) :mixed
+ct_user_form_alter(mixed  &$form, mixed $form_state, mixed $form_id) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$form**: mixed
     
@@ -277,10 +246,8 @@ ct_user_form_alter(mixed  & $form, mixed  $form_state, mixed  $form_id) :mixed
 
 
 
-
-
+---
 #### ct_user_user_login_form_validate()
-
 
 [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 49
 
@@ -288,11 +255,10 @@ ct_user_form_alter(mixed  & $form, mixed  $form_state, mixed  $form_id) :mixed
 
 
 ```php
-ct_user_user_login_form_validate(mixed  & $form, mixed  $form_state) :mixed
+ct_user_user_login_form_validate(mixed  &$form, mixed $form_state) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$form**: mixed
     
@@ -303,35 +269,30 @@ ct_user_user_login_form_validate(mixed  & $form, mixed  $form_state) :mixed
 
 
 
-
-
+---
 #### contribtracker_theme_suggestions_block_alter()
-
 
 [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 10
 
 
 
 ```php
-contribtracker_theme_suggestions_block_alter(array&lt;string|int, mixed&gt;  & $suggestions, array&lt;string|int, mixed&gt;  $variables) :mixed
+contribtracker_theme_suggestions_block_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 ```
 
+**Parameters**
 
-#### Parameters
-
-- **$suggestions**: array&amp;lt;string|int, mixed&amp;gt;
+- **$suggestions**: array&lt;string|int, mixed&gt;
     
-- **$variables**: array&amp;lt;string|int, mixed&amp;gt;
+- **$variables**: array&lt;string|int, mixed&gt;
     
 
 
 
 
 
-
-
+---
 #### contribtracker_theme_suggestions_form_alter()
-
 
 [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 20
 
@@ -339,25 +300,22 @@ contribtracker_theme_suggestions_block_alter(array&lt;string|int, mixed&gt;  & $
 
 
 ```php
-contribtracker_theme_suggestions_form_alter(array&lt;string|int, mixed&gt;  & $suggestions, array&lt;string|int, mixed&gt;  $variables) :mixed
+contribtracker_theme_suggestions_form_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 ```
 
+**Parameters**
 
-#### Parameters
-
-- **$suggestions**: array&amp;lt;string|int, mixed&amp;gt;
+- **$suggestions**: array&lt;string|int, mixed&gt;
     
-- **$variables**: array&amp;lt;string|int, mixed&amp;gt;
+- **$variables**: array&lt;string|int, mixed&gt;
     
 
 
 
 
 
-
-
+---
 #### contribtracker_theme_suggestions_table_alter()
-
 
 [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 29
 
@@ -365,25 +323,22 @@ contribtracker_theme_suggestions_form_alter(array&lt;string|int, mixed&gt;  & $s
 
 
 ```php
-contribtracker_theme_suggestions_table_alter(array&lt;string|int, mixed&gt;  & $suggestions, array&lt;string|int, mixed&gt;  $variables) :mixed
+contribtracker_theme_suggestions_table_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 ```
 
+**Parameters**
 
-#### Parameters
-
-- **$suggestions**: array&amp;lt;string|int, mixed&amp;gt;
+- **$suggestions**: array&lt;string|int, mixed&gt;
     
-- **$variables**: array&amp;lt;string|int, mixed&amp;gt;
+- **$variables**: array&lt;string|int, mixed&gt;
     
 
 
 
 
 
-
-
+---
 #### contribtracker_theme_preprocess_page_alter()
-
 
 [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 38
 
@@ -391,25 +346,22 @@ contribtracker_theme_suggestions_table_alter(array&lt;string|int, mixed&gt;  & $
 
 
 ```php
-contribtracker_theme_preprocess_page_alter(array&lt;string|int, mixed&gt;  & $suggestions, array&lt;string|int, mixed&gt;  $variables) :mixed
+contribtracker_theme_preprocess_page_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 ```
 
+**Parameters**
 
-#### Parameters
-
-- **$suggestions**: array&amp;lt;string|int, mixed&amp;gt;
+- **$suggestions**: array&lt;string|int, mixed&gt;
     
-- **$variables**: array&amp;lt;string|int, mixed&amp;gt;
+- **$variables**: array&lt;string|int, mixed&gt;
     
 
 
 
 
 
-
-
+---
 #### contribtracker_theme_suggestions_input_alter()
-
 
 [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 64
 
@@ -417,21 +369,19 @@ contribtracker_theme_preprocess_page_alter(array&lt;string|int, mixed&gt;  & $su
 
 
 ```php
-contribtracker_theme_suggestions_input_alter(mixed  & $suggestions, array&lt;string|int, mixed&gt;  $variables) :mixed
+contribtracker_theme_suggestions_input_alter(mixed  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 ```
 
-
-#### Parameters
+**Parameters**
 
 - **$suggestions**: mixed
     
-- **$variables**: array&amp;lt;string|int, mixed&amp;gt;
+- **$variables**: array&lt;string|int, mixed&gt;
     
 
 
 
 
 
-
-
+---
 

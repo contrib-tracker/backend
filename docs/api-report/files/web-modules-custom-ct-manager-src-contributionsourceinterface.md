@@ -1,10 +1,7 @@
 
 
 
-
-### ## ContributionSourceInterface.php
-
-
+## ContributionSourceInterface.php
 
 
 
