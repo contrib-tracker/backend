@@ -43,33 +43,33 @@ provide methods to return information relevant to the application.
 
 #### Properties
 - **[$query](../classes/Drupal-ct-github-GithubRetriever.md#query)**
-         : `[GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)`  
+         : [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)  
 *Github query.*
 
 - **[$userContributions](../classes/Drupal-ct-github-GithubRetriever.md#usercontributions)**
-         : `array&lt;string|int, mixed&gt;`  
+         : array&lt;string|int, mixed&gt;  
 *User Entity Storage.*
 
 - **[$username](../classes/Drupal-ct-github-GithubRetriever.md#username)**
-         : `string`  
+         : string  
 *Github username.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-github-GithubRetriever.md#__construct)**
-           : `mixed`
+           : mixed
 *ContributionRetriever constructor.*
 
 - **[getCodeContributions()](../classes/Drupal-ct-github-GithubRetriever.md#getcodecontributions)**
-           : `mixed`
+           : mixed
 *Get PR commits and issue comments for user.*
 
 - **[getIssues()](../classes/Drupal-ct-github-GithubRetriever.md#getissues)**
-           : `mixed`
+           : mixed
 *Get issues for user.*
 
 - **[getUserContributions()](../classes/Drupal-ct-github-GithubRetriever.md#getusercontributions)**
-           : `mixed`
+           : mixed
 *Returns user&#039;s contribution.*
 
 
@@ -87,8 +87,7 @@ provide methods to return information relevant to the application.
 *Github query.*
 
 
-`protected [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query`
-
+protected [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query
 
 
 
@@ -103,8 +102,7 @@ provide methods to return information relevant to the application.
 *User Entity Storage.*
 
 
-`protected array&lt;string|int, mixed&gt; $userContributions`
-
+protected array&lt;string|int, mixed&gt; $userContributions
 
 
 
@@ -119,8 +117,7 @@ provide methods to return information relevant to the application.
 *Github username.*
 
 
-`protected string $username`
-
+protected string $username
 
 
 

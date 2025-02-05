@@ -35,19 +35,19 @@
 
 #### Methods
 - **[getCommentsByAuthor()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getcommentsbyauthor)**
-           : `[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)`
+           : [CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
 *Get comments by an user on drupal.org.*
 
 - **[getDrupalOrgNode()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getdrupalorgnode)**
-           : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`
+           : [Node](# \Hussainweb\DrupalApi\Entity\Node)
 *Get node data from drupal.org.*
 
 - **[getDrupalOrgNodeFromApi()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getdrupalorgnodefromapi)**
-           : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`
+           : [Node](# \Hussainweb\DrupalApi\Entity\Node)
 *Get node data from drupal.org.*
 
 - **[getFile()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getfile)**
-           : `[File](# \Hussainweb\DrupalApi\Entity\File)`
+           : [File](# \Hussainweb\DrupalApi\Entity\File)
 *Get file data from drupal.org.*
 
 

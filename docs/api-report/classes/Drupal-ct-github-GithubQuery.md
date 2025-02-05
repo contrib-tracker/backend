@@ -44,29 +44,29 @@ Pull Requests.
 
 #### Properties
 - **[$cache](../classes/Drupal-ct-github-GithubQuery.md#cache)**
-         : `[CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)`  
+         : [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)  
 *Cache backend service.*
 
 - **[$client](../classes/Drupal-ct-github-GithubQuery.md#client)**
-         : `[Client](# \Github\Client)`  
+         : [Client](# \Github\Client)  
 *Establish connection to client.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-github-GithubQuery.md#__construct)**
-           : `mixed`
+           : mixed
 *Set authentication token to access GitHub API.*
 
 - **[getQuery()](../classes/Drupal-ct-github-GithubQuery.md#getquery)**
-           : `string`
+           : string
 *GraphQL query to get contributions associated with a user.*
 
 - **[getUserContributions()](../classes/Drupal-ct-github-GithubQuery.md#getusercontributions)**
-           : `mixed`
+           : mixed
 *API request to get user contributions.*
 
 - **[isUserValid()](../classes/Drupal-ct-github-GithubQuery.md#isuservalid)**
-           : `bool`
+           : bool
 *Check username validity.*
 
 
@@ -84,8 +84,7 @@ Pull Requests.
 *Cache backend service.*
 
 
-`protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache`
-
+protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache
 
 
 
@@ -100,8 +99,7 @@ Pull Requests.
 *Establish connection to client.*
 
 
-`protected [Client](# \Github\Client) $client`
-
+protected [Client](# \Github\Client) $client
 
 
 

@@ -41,22 +41,22 @@
 
 #### Properties
 - **[$plugin_id](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#plugin_id)**
-         : `string`  
+         : string  
 
 - **[$user](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#user)**
-         : `[User](# \Drupal\user\Entity\User)`  
+         : [User](# \Drupal\user\Entity\User)  
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#__construct)**
-           : `mixed`
+           : mixed
 *User value object constructor.*
 
 - **[getPluginId()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#getpluginid)**
-           : `string`
+           : string
 
 - **[getUser()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#getuser)**
-           : `[User](# \Drupal\user\Entity\User)`
+           : [User](# \Drupal\user\Entity\User)
 
 
 
@@ -72,8 +72,7 @@
 
 
 
-`protected string $plugin_id`
-
+protected string $plugin_id
 
 Plugin ID.
 
@@ -88,8 +87,7 @@ Plugin ID.
 
 
 
-`protected [User](# \Drupal\user\Entity\User) $user`
-
+protected [User](# \Drupal\user\Entity\User) $user
 
 User to be processed.
 

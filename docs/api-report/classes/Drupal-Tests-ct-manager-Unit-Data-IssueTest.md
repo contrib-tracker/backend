@@ -8,7 +8,7 @@
 
 ## IssueTest
 
-- **extends**: `[TestCase](# \PHPUnit\Framework\TestCase)`
+- **extends**: [TestCase](# \PHPUnit\Framework\TestCase)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -53,7 +53,7 @@
 
 #### Methods
 - **[testIssueCreation()](../classes/Drupal-Tests-ct-manager-Unit-Data-IssueTest.md#testissuecreation)**
-           : `mixed`
+           : mixed
 *Test simple issue creation.*
 
 

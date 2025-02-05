@@ -42,30 +42,30 @@
 
 #### Properties
 - **[$description](../classes/Drupal-ct-manager-Data-Issue.md#description)**
-         : `string`  
+         : string  
 
 - **[$title](../classes/Drupal-ct-manager-Data-Issue.md#title)**
-         : `string`  
+         : string  
 
 - **[$url](../classes/Drupal-ct-manager-Data-Issue.md#url)**
-         : `string`  
+         : string  
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-Data-Issue.md#__construct)**
-           : `mixed`
+           : mixed
 
 - **[getDescription()](../classes/Drupal-ct-manager-Data-Issue.md#getdescription)**
-           : `string`
+           : string
 
 - **[getTitle()](../classes/Drupal-ct-manager-Data-Issue.md#gettitle)**
-           : `string`
+           : string
 
 - **[getUrl()](../classes/Drupal-ct-manager-Data-Issue.md#geturl)**
-           : `string`
+           : string
 
 - **[setDescription()](../classes/Drupal-ct-manager-Data-Issue.md#setdescription)**
-           : `self`
+           : self
 
 
 
@@ -81,8 +81,7 @@
 
 
 
-`protected string $description = &#039;&#039;`
-
+protected string $description = &#039;&#039;
 
 Description.
 
@@ -97,8 +96,7 @@ Description.
 
 
 
-`protected string $title`
-
+protected string $title
 
 Title.
 
@@ -113,8 +111,7 @@ Title.
 
 
 
-`protected string $url`
-
+protected string $url
 
 URL of the contribution.
 

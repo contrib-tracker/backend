@@ -7,15 +7,13 @@
 
 ## GithubContribution
 
-- **extends**: `[PluginBase](# \Drupal\Component\Plugin\PluginBase)`
+- **extends**: [PluginBase](# \Drupal\Component\Plugin\PluginBase)
 
 - **In Package**:
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    `[ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md), `
-    `[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)`
-  
+    [ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md),     [ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)  
 
 ---
 
@@ -59,53 +57,53 @@
 
 #### Properties
 - **[$entityTypeManager](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#entitytypemanager)**
-         : `[EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)`  
+         : [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)  
 *Entity type manager.*
 
 - **[$query](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#query)**
-         : `[GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)`  
+         : [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)  
 *Github request query.*
 
 - **[$retriever](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#retriever)**
-         : `[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)`  
+         : [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)  
 *Retrievers for each user.*
 
 - **[$tokenValid](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#tokenvalid)**
-         : `bool`  
+         : bool  
 *GitHub Token Validity*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#__construct)**
-           : `mixed`
+           : mixed
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
 - **[create()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#create)**
-           : `mixed`
+           : mixed
 *{@inheritdoc}*
 
 - **[getNotificationMessage()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getnotificationmessage)**
-           : `string`
+           : string
 *Get message for notification.*
 
 - **[getUserCodeContributions()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getusercodecontributions)**
-           : `mixed`
+           : mixed
 *Get comments from the total contribution data.*
 
 - **[getUserIssues()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getuserissues)**
-           : `mixed`
+           : mixed
 *Get issues from the total contribution data.*
 
 - **[getUsers()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getusers)**
-           : `mixed`
+           : mixed
 *Get all users with github username.*
 
 - **[isUserValid()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#isuservalid)**
-           : `bool`
+           : bool
 *Get user contributions from the platform.*
 
 - **[getOrCreateRetriever()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getorcreateretriever)**
-           : `[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)`
+           : [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
 *Returns a user retriever object.*
 
 
@@ -123,8 +121,7 @@
 *Entity type manager.*
 
 
-`protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager`
-
+protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager
 
 
 
@@ -139,8 +136,7 @@
 *Github request query.*
 
 
-`protected [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query`
-
+protected [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query
 
 
 
@@ -155,8 +151,7 @@
 *Retrievers for each user.*
 
 
-`protected [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md) $retriever = []`
-
+protected [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md) $retriever = []
 
 
 
@@ -171,8 +166,7 @@
 *GitHub Token Validity*
 
 
-`protected bool $tokenValid`
-
+protected bool $tokenValid
 
 
 

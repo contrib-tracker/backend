@@ -42,108 +42,108 @@
 
 #### Properties
 - **[$accountUrl](../classes/Drupal-ct-manager-Data-CodeContribution.md#accounturl)**
-         : `string`  
+         : string  
 
 - **[$date](../classes/Drupal-ct-manager-Data-CodeContribution.md#date)**
-         : `[DateTimeImmutable](# \DateTimeImmutable)`  
+         : [DateTimeImmutable](# \DateTimeImmutable)  
 
 - **[$description](../classes/Drupal-ct-manager-Data-CodeContribution.md#description)**
-         : `string`  
+         : string  
 
 - **[$filesCount](../classes/Drupal-ct-manager-Data-CodeContribution.md#filescount)**
-         : `int`  
+         : int  
 
 - **[$issue](../classes/Drupal-ct-manager-Data-CodeContribution.md#issue)**
-         : `[Issue](../classes/Drupal-ct-manager-Data-Issue.md)`  
+         : [Issue](../classes/Drupal-ct-manager-Data-Issue.md)  
 
 - **[$patchCount](../classes/Drupal-ct-manager-Data-CodeContribution.md#patchcount)**
-         : `int`  
+         : int  
 
 - **[$project](../classes/Drupal-ct-manager-Data-CodeContribution.md#project)**
-         : `string`  
+         : string  
 
 - **[$projectUrl](../classes/Drupal-ct-manager-Data-CodeContribution.md#projecturl)**
-         : `string`  
+         : string  
 
 - **[$status](../classes/Drupal-ct-manager-Data-CodeContribution.md#status)**
-         : `string`  
+         : string  
 
 - **[$technology](../classes/Drupal-ct-manager-Data-CodeContribution.md#technology)**
-         : `string`  
+         : string  
 
 - **[$title](../classes/Drupal-ct-manager-Data-CodeContribution.md#title)**
-         : `string`  
+         : string  
 
 - **[$url](../classes/Drupal-ct-manager-Data-CodeContribution.md#url)**
-         : `string`  
+         : string  
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-Data-CodeContribution.md#__construct)**
-           : `mixed`
+           : mixed
 
 - **[getAccountUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getaccounturl)**
-           : `string`
+           : string
 
 - **[getDate()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getdate)**
-           : `[DateTimeImmutable](# \DateTimeImmutable)`
+           : [DateTimeImmutable](# \DateTimeImmutable)
 
 - **[getDescription()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getdescription)**
-           : `string`
+           : string
 
 - **[getFilesCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getfilescount)**
-           : `int`
+           : int
 
 - **[getIssue()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getissue)**
-           : `[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null`
+           : [Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 
 - **[getPatchCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getpatchcount)**
-           : `int`
+           : int
 
 - **[getProject()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getproject)**
-           : `string`
+           : string
 
 - **[getProjectUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getprojecturl)**
-           : `string`
+           : string
 
 - **[getStatus()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getstatus)**
-           : `string`
+           : string
 
 - **[getTechnology()](../classes/Drupal-ct-manager-Data-CodeContribution.md#gettechnology)**
-           : `string`
+           : string
 
 - **[getTitle()](../classes/Drupal-ct-manager-Data-CodeContribution.md#gettitle)**
-           : `string`
+           : string
 
 - **[getUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#geturl)**
-           : `string`
+           : string
 
 - **[setAccountUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setaccounturl)**
-           : `self`
+           : self
 
 - **[setDescription()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setdescription)**
-           : `self`
+           : self
 
 - **[setFilesCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setfilescount)**
-           : `self`
+           : self
 
 - **[setIssue()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setissue)**
-           : `self`
+           : self
 
 - **[setPatchCount()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setpatchcount)**
-           : `self`
+           : self
 
 - **[setProject()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setproject)**
-           : `self`
+           : self
 
 - **[setProjectUrl()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setprojecturl)**
-           : `self`
+           : self
 
 - **[setStatus()](../classes/Drupal-ct-manager-Data-CodeContribution.md#setstatus)**
-           : `self`
+           : self
 
 - **[setTechnology()](../classes/Drupal-ct-manager-Data-CodeContribution.md#settechnology)**
-           : `self`
+           : self
 
 
 
@@ -159,8 +159,7 @@
 
 
 
-`protected string $accountUrl`
-
+protected string $accountUrl
 
 URL of user account on the platform.
 
@@ -175,8 +174,7 @@ URL of user account on the platform.
 
 
 
-`protected [DateTimeImmutable](# \DateTimeImmutable) $date`
-
+protected [DateTimeImmutable](# \DateTimeImmutable) $date
 
 Date of the contribution.
 
@@ -191,8 +189,7 @@ Date of the contribution.
 
 
 
-`protected string $description = &#039;&#039;`
-
+protected string $description = &#039;&#039;
 
 Description.
 
@@ -207,8 +204,7 @@ Description.
 
 
 
-`protected int $filesCount = 0`
-
+protected int $filesCount = 0
 
 File count.
 
@@ -223,8 +219,7 @@ File count.
 
 
 
-`protected [Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue = NULL`
-
+protected [Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue = NULL
 
 Related issue.
 
@@ -239,8 +234,7 @@ Related issue.
 
 
 
-`protected int $patchCount = 0`
-
+protected int $patchCount = 0
 
 Patch count.
 
@@ -255,8 +249,7 @@ Patch count.
 
 
 
-`protected string $project = &#039;&#039;`
-
+protected string $project = &#039;&#039;
 
 Project.
 
@@ -271,8 +264,7 @@ Project.
 
 
 
-`protected string $projectUrl = &#039;&#039;`
-
+protected string $projectUrl = &#039;&#039;
 
 ProjectUrl.
 
@@ -287,8 +279,7 @@ ProjectUrl.
 
 
 
-`protected string $status = &#039;&#039;`
-
+protected string $status = &#039;&#039;
 
 Status.
 
@@ -303,8 +294,7 @@ Status.
 
 
 
-`protected string $technology = &#039;&#039;`
-
+protected string $technology = &#039;&#039;
 
 Technology.
 
@@ -319,8 +309,7 @@ Technology.
 
 
 
-`protected string $title`
-
+protected string $title
 
 Title.
 
@@ -335,8 +324,7 @@ Title.
 
 
 
-`protected string $url`
-
+protected string $url
 
 URL of the contribution.
 

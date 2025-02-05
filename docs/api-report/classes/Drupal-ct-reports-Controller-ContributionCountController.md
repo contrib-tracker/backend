@@ -6,7 +6,7 @@
 
 ## ContributionCountController
 
-- **extends**: `[ControllerBase](# \Drupal\Core\Controller\ControllerBase)`
+- **extends**: [ControllerBase](# \Drupal\Core\Controller\ControllerBase)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -43,21 +43,21 @@
 
 #### Properties
 - **[$contribStats](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#contribstats)**
-         : `[ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics)`  
+         : [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics)  
 *Contribution statistics instance.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#__construct)**
-           : `mixed`
+           : mixed
 *Constructs a new GeofieldMapGeocoder object.*
 
 - **[content()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#content)**
-           : `mixed`
+           : mixed
 *Returns a render-able array with contribution statistics.*
 
 - **[create()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#create)**
-           : `mixed`
+           : mixed
 *{@inheritdoc}*
 
 
@@ -75,8 +75,7 @@
 *Contribution statistics instance.*
 
 
-`protected [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics) $contribStats`
-
+protected [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics) $contribStats
 
 
 

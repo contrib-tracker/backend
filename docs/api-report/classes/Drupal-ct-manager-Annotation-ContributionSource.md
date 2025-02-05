@@ -6,7 +6,7 @@
 
 ## ContributionSource
 
-- **extends**: `[Plugin](# \Drupal\Component\Annotation\Plugin)`
+- **extends**: [Plugin](# \Drupal\Component\Annotation\Plugin)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -55,7 +55,7 @@ line in the docblock. It's used for discovery of Annotation definitions.
 
 #### Properties
 - **[$description](../classes/Drupal-ct-manager-Annotation-ContributionSource.md#description)**
-         : `[Translation](# \Drupal\Core\Annotation\Translation)`  
+         : [Translation](# \Drupal\Core\Annotation\Translation)  
 *A brief, human readable, description of the ContributionTracker type.*
 
 
@@ -74,8 +74,7 @@ line in the docblock. It's used for discovery of Annotation definitions.
 *A brief, human readable, description of the ContributionTracker type.*
 
 
-`public [Translation](# \Drupal\Core\Annotation\Translation) $description`
-
+public [Translation](# \Drupal\Core\Annotation\Translation) $description
 
 
 

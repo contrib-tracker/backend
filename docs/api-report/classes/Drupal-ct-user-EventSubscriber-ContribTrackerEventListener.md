@@ -11,8 +11,7 @@
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    `[EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)`
-  
+    [EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)  
 
 ---
 
@@ -46,21 +45,21 @@
 
 #### Properties
 - **[$loggerFactory](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#loggerfactory)**
-         : `[LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)`  
+         : [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)  
 *The logger Channel Factory.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#__construct)**
-           : `mixed`
+           : mixed
 *ContribTrackerEventListener constructor.*
 
 - **[getSubscribedEvents()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#getsubscribedevents)**
-           : `mixed`
+           : mixed
 *Returns an array of event names this subscriber wants to listen to.*
 
 - **[onSocialAuthUserFieldEvent()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#onsocialauthuserfieldevent)**
-           : `mixed`
+           : mixed
 *Reacts to the event when users fields are being gathered via Social Auth.*
 
 
@@ -78,8 +77,7 @@
 *The logger Channel Factory.*
 
 
-`protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerFactory`
-
+protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerFactory
 
 
 The loggerFactory interface alias.

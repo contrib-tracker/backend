@@ -11,8 +11,7 @@
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    `[EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)`
-  
+    [EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)  
 
 ---
 
@@ -52,11 +51,11 @@
 
 #### Methods
 - **[getSubscribedEvents()](../classes/Drupal-contrib-tracker-EventSubscriber-RavenSubscriber.md#getsubscribedevents)**
-           : `array&lt;string|int, mixed&gt;`
+           : array&lt;string|int, mixed&gt;
 *{@inheritdoc}*
 
 - **[onRavenOptionsAlter()](../classes/Drupal-contrib-tracker-EventSubscriber-RavenSubscriber.md#onravenoptionsalter)**
-           : `void`
+           : void
 
 
 

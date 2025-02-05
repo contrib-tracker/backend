@@ -8,7 +8,7 @@
 
 ## CodeContributionTest
 
-- **extends**: `[TestCase](# \PHPUnit\Framework\TestCase)`
+- **extends**: [TestCase](# \PHPUnit\Framework\TestCase)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -53,10 +53,10 @@
 
 #### Methods
 - **[testChainedCodeContribution()](../classes/Drupal-Tests-ct-manager-Unit-Data-CodeContributionTest.md#testchainedcodecontribution)**
-           : `mixed`
+           : mixed
 
 - **[testCodeContributionCreation()](../classes/Drupal-Tests-ct-manager-Unit-Data-CodeContributionTest.md#testcodecontributioncreation)**
-           : `mixed`
+           : mixed
 *Test simple code contribution creation.*
 
 

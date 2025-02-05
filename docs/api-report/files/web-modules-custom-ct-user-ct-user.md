@@ -32,18 +32,18 @@
 
 #### Functions
 - **[ct_user_theme()](../namespaces/default.md#ct_user_theme)**
-           : `mixed`
+           : mixed
 
 - **[ct_user_help()](../namespaces/default.md#ct_user_help)**
-           : `mixed`
+           : mixed
 *Implements hook_help().*
 
 - **[ct_user_form_alter()](../namespaces/default.md#ct_user_form_alter)**
-           : `mixed`
+           : mixed
 *Implements hook_form_alter().*
 
 - **[ct_user_user_login_form_validate()](../namespaces/default.md#ct_user_user_login_form_validate)**
-           : `mixed`
+           : mixed
 *Custom validation function for the user login form.*
 
 

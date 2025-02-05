@@ -41,45 +41,45 @@
 
 #### Properties
 - **[$logger](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#logger)**
-         : `[TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface)`  
+         : [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface)  
 *Logger.*
 
 - **[$nodeStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#nodestorage)**
-         : `[NodeStorageInterface](# \Drupal\node\NodeStorageInterface)`  
+         : [NodeStorageInterface](# \Drupal\node\NodeStorageInterface)  
 *Node storage controller.*
 
 - **[$termStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#termstorage)**
-         : `[TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface)`  
+         : [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface)  
 *Term storage controller.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#__construct)**
-           : `mixed`
+           : mixed
 *Contribution storage constructor.*
 
 - **[getNodeForCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getnodeforcodecontribution)**
-           : `[Node](# \Drupal\node\Entity\Node)|null`
+           : [Node](# \Drupal\node\Entity\Node)|null
 *Get node of type code_contribution.*
 
 - **[getNodeForIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getnodeforissue)**
-           : `[Node](# \Drupal\node\Entity\Node)|null`
+           : [Node](# \Drupal\node\Entity\Node)|null
 *Get issue of type issue.*
 
 - **[getOrCreateIssueNode()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getorcreateissuenode)**
-           : `[Node](# \Drupal\node\Entity\Node)`
+           : [Node](# \Drupal\node\Entity\Node)
 *Retrieves the node detail for issues.*
 
 - **[saveCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#savecodecontribution)**
-           : `[Node](# \Drupal\node\Entity\Node)`
+           : [Node](# \Drupal\node\Entity\Node)
 *Save code contributions.*
 
 - **[saveIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#saveissue)**
-           : `[Node](# \Drupal\node\Entity\Node)`
+           : [Node](# \Drupal\node\Entity\Node)
 *Save Issues.*
 
 - **[getOrCreateTerm()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getorcreateterm)**
-           : `[TermInterface](# \Drupal\taxonomy\TermInterface)`
+           : [TermInterface](# \Drupal\taxonomy\TermInterface)
 *Get (or create) a term in a specified vocabulary.*
 
 
@@ -97,8 +97,7 @@
 *Logger.*
 
 
-`protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $logger`
-
+protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $logger
 
 
 
@@ -113,8 +112,7 @@
 *Node storage controller.*
 
 
-`protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStorage`
-
+protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStorage
 
 
 
@@ -129,8 +127,7 @@
 *Term storage controller.*
 
 
-`protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termStorage`
-
+protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termStorage
 
 
 

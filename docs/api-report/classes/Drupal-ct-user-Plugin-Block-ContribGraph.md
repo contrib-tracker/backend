@@ -7,7 +7,7 @@
 
 ## ContribGraph
 
-- **extends**: `[BlockBase](# \Drupal\Core\Block\BlockBase)`
+- **extends**: [BlockBase](# \Drupal\Core\Block\BlockBase)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -54,7 +54,7 @@
 
 #### Methods
 - **[build()](../classes/Drupal-ct-user-Plugin-Block-ContribGraph.md#build)**
-           : `mixed`
+           : mixed
 *{@inheritdoc}*
 
 

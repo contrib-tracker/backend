@@ -7,14 +7,13 @@
 
 ## ProcessUsers
 
-- **extends**: `[QueueWorkerBase](# \Drupal\Core\Queue\QueueWorkerBase)`
+- **extends**: [QueueWorkerBase](# \Drupal\Core\Queue\QueueWorkerBase)
 
 - **In Package**:
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    `[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)`
-  
+    [ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)  
 
 ---
 
@@ -57,33 +56,33 @@
 
 #### Properties
 - **[$contribStorage](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#contribstorage)**
-         : `[ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)`  
+         : [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)  
 *Contribution manager service.*
 
 - **[$logger](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#logger)**
-         : `[LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)`  
+         : [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)  
 *The logger interface.*
 
 - **[$pluginManager](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#pluginmanager)**
-         : `[ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md)`  
+         : [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md)  
 *Contribution plugin manager.*
 
 - **[$slackService](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#slackservice)**
-         : `[Slack](# \Drupal\slack\Slack)`  
+         : [Slack](# \Drupal\slack\Slack)  
 *Slack service.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#__construct)**
-           : `mixed`
+           : mixed
 *{@inheritdoc}*
 
 - **[create()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#create)**
-           : `mixed`
+           : mixed
 *{@inheritdoc}*
 
 - **[processItem()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#processitem)**
-           : `mixed`
+           : mixed
 *Collects user contribution and stores it.*
 
 
@@ -101,8 +100,7 @@
 *Contribution manager service.*
 
 
-`protected [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage`
-
+protected [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage
 
 
 
@@ -117,8 +115,7 @@
 *The logger interface.*
 
 
-`protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger`
-
+protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger
 
 
 
@@ -133,8 +130,7 @@
 *Contribution plugin manager.*
 
 
-`protected [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager`
-
+protected [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager
 
 
 
@@ -149,8 +145,7 @@
 *Slack service.*
 
 
-`protected [Slack](# \Drupal\slack\Slack) $slackService`
-
+protected [Slack](# \Drupal\slack\Slack) $slackService
 
 
 

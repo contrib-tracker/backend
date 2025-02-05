@@ -6,7 +6,7 @@
 
 ## GetUserPatchesController
 
-- **extends**: `[ControllerBase](# \Drupal\Core\Controller\ControllerBase)`
+- **extends**: [ControllerBase](# \Drupal\Core\Controller\ControllerBase)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -43,21 +43,21 @@
 
 #### Properties
 - **[$entityTypeManager](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#entitytypemanager)**
-         : `[EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)`  
+         : [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)  
 *The entity type manager.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#__construct)**
-           : `mixed`
+           : mixed
 *Constructs a new GetUserPatchesController object.*
 
 - **[content()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#content)**
-           : `[JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)`
+           : [JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)
 *Returns a JSON response with daily patches count.*
 
 - **[create()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#create)**
-           : `mixed`
+           : mixed
 *{@inheritdoc}*
 
 
@@ -75,8 +75,7 @@
 *The entity type manager.*
 
 
-`protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager`
-
+protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager
 
 
 

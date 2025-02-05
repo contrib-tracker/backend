@@ -5,7 +5,7 @@
 
 ## Client
 
-- **extends**: `[Client](# \Hussainweb\DrupalApi\Client)`
+- **extends**: [Client](# \Hussainweb\DrupalApi\Client)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -46,7 +46,7 @@ The decorator just adds a header to set User-Agent for this application.
 
 #### Methods
 - **[getEntity()](../classes/Drupal-ct-drupal-Client.md#getentity)**
-           : `mixed`
+           : mixed
 *{@inheritdoc}*
 
 

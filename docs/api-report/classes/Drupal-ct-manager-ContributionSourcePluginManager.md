@@ -5,7 +5,7 @@
 
 ## ContributionSourcePluginManager
 
-- **extends**: `[DefaultPluginManager](# \Drupal\Core\Plugin\DefaultPluginManager)`
+- **extends**: [DefaultPluginManager](# \Drupal\Core\Plugin\DefaultPluginManager)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -43,7 +43,7 @@
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md#__construct)**
-           : `mixed`
+           : mixed
 *Creates the discovery object.*
 
 

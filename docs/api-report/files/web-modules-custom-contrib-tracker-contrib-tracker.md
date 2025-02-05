@@ -32,7 +32,7 @@
 
 #### Functions
 - **[contrib_tracker_mail_alter()](../namespaces/default.md#contrib_tracker_mail_alter)**
-           : `mixed`
+           : mixed
 *Implements hook_mail_alter().*
 
 

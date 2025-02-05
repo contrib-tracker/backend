@@ -43,73 +43,73 @@ every Issue node.
 
 #### Properties
 - **[$comment](../classes/Drupal-ct-drupal-CommentDetails.md#comment)**
-         : `[Comment](# \Hussainweb\DrupalApi\Entity\Comment)`  
+         : [Comment](# \Hussainweb\DrupalApi\Entity\Comment)  
 *Comment details from d.o.*
 
 - **[$commentProcessed](../classes/Drupal-ct-drupal-CommentDetails.md#commentprocessed)**
-         : `bool`  
+         : bool  
 *Is the comment processed?*
 
 - **[$contribRetriever](../classes/Drupal-ct-drupal-CommentDetails.md#contribretriever)**
-         : `[DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)`  
+         : [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)  
 *Contribution retriever service.*
 
 - **[$issueData](../classes/Drupal-ct-drupal-CommentDetails.md#issuedata)**
-         : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`  
+         : [Node](# \Hussainweb\DrupalApi\Entity\Node)  
 *Node details from d.o.*
 
 - **[$issueStatus](../classes/Drupal-ct-drupal-CommentDetails.md#issuestatus)**
-         : `string`  
+         : string  
 *Issue status.*
 
 - **[$patchFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#patchfilescount)**
-         : `int`  
+         : int  
 *Number of patches attached to the comment.*
 
 - **[$timeService](../classes/Drupal-ct-drupal-CommentDetails.md#timeservice)**
-         : `[TimeInterface](# \Drupal\Component\Datetime\TimeInterface)`  
+         : [TimeInterface](# \Drupal\Component\Datetime\TimeInterface)  
 *The datetime.time service.*
 
 - **[$totalFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#totalfilescount)**
-         : `int`  
+         : int  
 *Number of all files attached to the comment.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-drupal-CommentDetails.md#__construct)**
-           : `mixed`
+           : mixed
 *DrupalOrgCommentDetails constructor.*
 
 - **[getDescription()](../classes/Drupal-ct-drupal-CommentDetails.md#getdescription)**
-           : `string`
+           : string
 *Get comment Description.*
 
 - **[getIssueStatus()](../classes/Drupal-ct-drupal-CommentDetails.md#getissuestatus)**
-           : `string`
+           : string
 *Get the issue status.*
 
 - **[getPatchFilesCount()](../classes/Drupal-ct-drupal-CommentDetails.md#getpatchfilescount)**
-           : `int`
+           : int
 *Get the number of patch files in this comment.*
 
 - **[getTotalFilesCount()](../classes/Drupal-ct-drupal-CommentDetails.md#gettotalfilescount)**
-           : `int`
+           : int
 *Get the number of all files in this comment.*
 
 - **[determineIssueStatus()](../classes/Drupal-ct-drupal-CommentDetails.md#determineissuestatus)**
-           : `void`
+           : void
 *Determine the status of the issue.*
 
 - **[getStatusFromCode()](../classes/Drupal-ct-drupal-CommentDetails.md#getstatusfromcode)**
-           : `string`
+           : string
 *Translate the status id to text.*
 
 - **[isPatchFile()](../classes/Drupal-ct-drupal-CommentDetails.md#ispatchfile)**
-           : `bool`
+           : bool
 *Determine if this is a patch file.*
 
 - **[processFileDetails()](../classes/Drupal-ct-drupal-CommentDetails.md#processfiledetails)**
-           : `void`
+           : void
 *Check the type and number of files attached to a comment under a issue.*
 
 
@@ -127,8 +127,7 @@ every Issue node.
 *Comment details from d.o.*
 
 
-`protected [Comment](# \Hussainweb\DrupalApi\Entity\Comment) $comment`
-
+protected [Comment](# \Hussainweb\DrupalApi\Entity\Comment) $comment
 
 
 
@@ -143,8 +142,7 @@ every Issue node.
 *Is the comment processed?*
 
 
-`protected bool $commentProcessed = FALSE`
-
+protected bool $commentProcessed = FALSE
 
 
 
@@ -159,8 +157,7 @@ every Issue node.
 *Contribution retriever service.*
 
 
-`protected [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $contribRetriever`
-
+protected [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $contribRetriever
 
 
 
@@ -175,8 +172,7 @@ every Issue node.
 *Node details from d.o.*
 
 
-`protected [Node](# \Hussainweb\DrupalApi\Entity\Node) $issueData = NULL`
-
+protected [Node](# \Hussainweb\DrupalApi\Entity\Node) $issueData = NULL
 
 
 
@@ -191,8 +187,7 @@ every Issue node.
 *Issue status.*
 
 
-`protected string $issueStatus`
-
+protected string $issueStatus
 
 
 
@@ -207,8 +202,7 @@ every Issue node.
 *Number of patches attached to the comment.*
 
 
-`protected int $patchFilesCount`
-
+protected int $patchFilesCount
 
 
 
@@ -223,8 +217,7 @@ every Issue node.
 *The datetime.time service.*
 
 
-`protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService`
-
+protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService
 
 
 
@@ -239,8 +232,7 @@ every Issue node.
 *Number of all files attached to the comment.*
 
 
-`protected int $totalFilesCount`
-
+protected int $totalFilesCount
 
 
 

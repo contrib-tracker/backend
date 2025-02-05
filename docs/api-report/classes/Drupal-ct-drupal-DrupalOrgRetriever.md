@@ -10,8 +10,7 @@
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    `[DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)`
-  
+    [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)  
 
 ---
 
@@ -54,33 +53,33 @@ relevant to the application.
 
 #### Properties
 - **[$cache](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#cache)**
-         : `[CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)`  
+         : [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)  
 *Cache backend service.*
 
 - **[$client](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#client)**
-         : `[Client](# \Drupal\ct_drupal\DrupalOrg\Client)`  
+         : [Client](# \Drupal\ct_drupal\DrupalOrg\Client)  
 *Drupal.org client service.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#__construct)**
-           : `mixed`
+           : mixed
 *ContributionRetriever constructor.*
 
 - **[getCommentsByAuthor()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getcommentsbyauthor)**
-           : `[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)`
+           : [CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
 *Get comments by an user on drupal.org.*
 
 - **[getDrupalOrgNode()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getdrupalorgnode)**
-           : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`
+           : [Node](# \Hussainweb\DrupalApi\Entity\Node)
 *Get node data from drupal.org.*
 
 - **[getDrupalOrgNodeFromApi()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getdrupalorgnodefromapi)**
-           : `[Node](# \Hussainweb\DrupalApi\Entity\Node)`
+           : [Node](# \Hussainweb\DrupalApi\Entity\Node)
 *Get node data from drupal.org.*
 
 - **[getFile()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getfile)**
-           : `[File](# \Hussainweb\DrupalApi\Entity\File)`
+           : [File](# \Hussainweb\DrupalApi\Entity\File)
 *Get file data from drupal.org.*
 
 
@@ -98,8 +97,7 @@ relevant to the application.
 *Cache backend service.*
 
 
-`protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache`
-
+protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache
 
 
 
@@ -114,8 +112,7 @@ relevant to the application.
 *Drupal.org client service.*
 
 
-`protected [Client](# \Drupal\ct_drupal\DrupalOrg\Client) $client`
-
+protected [Client](# \Drupal\ct_drupal\DrupalOrg\Client) $client
 
 
 

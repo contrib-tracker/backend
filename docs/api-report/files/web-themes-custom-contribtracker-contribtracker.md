@@ -32,22 +32,22 @@
 
 #### Functions
 - **[contribtracker_theme_suggestions_block_alter()](../namespaces/default.md#contribtracker_theme_suggestions_block_alter)**
-           : `mixed`
+           : mixed
 
 - **[contribtracker_theme_suggestions_form_alter()](../namespaces/default.md#contribtracker_theme_suggestions_form_alter)**
-           : `mixed`
+           : mixed
 *Implements hook_theme_suggestions_form_alter().*
 
 - **[contribtracker_theme_suggestions_table_alter()](../namespaces/default.md#contribtracker_theme_suggestions_table_alter)**
-           : `mixed`
+           : mixed
 *Implements hook_theme_suggestions_table_alter().*
 
 - **[contribtracker_theme_preprocess_page_alter()](../namespaces/default.md#contribtracker_theme_preprocess_page_alter)**
-           : `mixed`
+           : mixed
 *Implements hook_theme_preprocess_page_alter().*
 
 - **[contribtracker_theme_suggestions_input_alter()](../namespaces/default.md#contribtracker_theme_suggestions_input_alter)**
-           : `mixed`
+           : mixed
 *Implements hook_theme_suggestions_input_alter().*
 
 
