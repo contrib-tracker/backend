@@ -11,7 +11,7 @@
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    [EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)  
+    [EventSubscriberInterface](# &quot;\Symfony\Component\EventDispatcher\EventSubscriberInterface&quot;)  
 
 ---
 
@@ -41,7 +41,7 @@
 
 
 #### Interfaces
-- **[EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)**
+- **[EventSubscriberInterface](# &quot;\Symfony\Component\EventDispatcher\EventSubscriberInterface&quot;)**
 
 
 
@@ -96,14 +96,14 @@ array&lt;string|int, mixed&gt;
 
 
 !!! Signature
-    onRavenOptionsAlter([OptionsAlter](# \Drupal\raven\Event\OptionsAlter) $optionsAlter) :void
+    onRavenOptionsAlter([OptionsAlter](# "\Drupal\raven\Event\OptionsAlter") $optionsAlter) :void
 
 
 
 
 **Parameters**
 
-- **$optionsAlter**: [OptionsAlter](# \Drupal\raven\Event\OptionsAlter)
+- **$optionsAlter**: [OptionsAlter](# "\Drupal\raven\Event\OptionsAlter")
     
 
 

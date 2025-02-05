@@ -44,7 +44,7 @@
          : string  
 
 - **[$user](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#user)**
-         : [User](# \Drupal\user\Entity\User)  
+         : [User](# "\Drupal\user\Entity\User")  
 
 
 #### Methods
@@ -56,7 +56,7 @@
            : string
 
 - **[getUser()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#getuser)**
-           : [User](# \Drupal\user\Entity\User)
+           : [User](# "\Drupal\user\Entity\User")
 
 
 
@@ -87,7 +87,7 @@ Plugin ID.
 
 
 
-protected [User](# \Drupal\user\Entity\User) $user
+protected [User](# "\Drupal\user\Entity\User") $user
 
 User to be processed.
 
@@ -107,7 +107,7 @@ User to be processed.
 *User value object constructor.*
 
 !!! Signature
-    __construct(string $plugin_id, [User](# \Drupal\user\Entity\User) $user) :mixed
+    __construct(string $plugin_id, [User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
 
@@ -118,7 +118,7 @@ User to be processed.
     
 The plugin id.
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 The user object.
 
@@ -157,7 +157,7 @@ string
 
 
 !!! Signature
-    getUser() :[User](# \Drupal\user\Entity\User)
+    getUser() :[User](# "\Drupal\user\Entity\User")
 
 
 
@@ -169,7 +169,7 @@ string
 
 **Return Values**
 
-[User](# \Drupal\user\Entity\User)
+[User](# "\Drupal\user\Entity\User")
 
 
 

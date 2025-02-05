@@ -44,11 +44,11 @@ Pull Requests.
 
 #### Properties
 - **[$cache](../classes/Drupal-ct-github-GithubQuery.md#cache)**
-         : [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)  
+         : [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")  
 *Cache backend service.*
 
 - **[$client](../classes/Drupal-ct-github-GithubQuery.md#client)**
-         : [Client](# \Github\Client)  
+         : [Client](# "\Github\Client")  
 *Establish connection to client.*
 
 
@@ -84,7 +84,7 @@ Pull Requests.
 *Cache backend service.*
 
 
-protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache
+protected [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") $cache
 
 
 
@@ -99,7 +99,7 @@ protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $c
 *Establish connection to client.*
 
 
-protected [Client](# \Github\Client) $client
+protected [Client](# "\Github\Client") $client
 
 
 
@@ -118,18 +118,18 @@ protected [Client](# \Github\Client) $client
 *Set authentication token to access GitHub API.*
 
 !!! Signature
-    __construct([ConfigFactory](# \Drupal\Core\Config\ConfigFactory) $config_factory, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cacheBackend) :mixed
+    __construct([ConfigFactory](# "\Drupal\Core\Config\ConfigFactory") $config_factory, [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") $cacheBackend) :mixed
 
 
 
 
 **Parameters**
 
-- **$config_factory**: [ConfigFactory](# \Drupal\Core\Config\ConfigFactory)
+- **$config_factory**: [ConfigFactory](# "\Drupal\Core\Config\ConfigFactory")
     
 The config factory.
 
-- **$cacheBackend**: [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)
+- **$cacheBackend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
     
 The injected cache backend service.
 

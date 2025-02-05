@@ -11,7 +11,7 @@
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    [EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)  
+    [EventSubscriberInterface](# &quot;\Symfony\Component\EventDispatcher\EventSubscriberInterface&quot;)  
 
 ---
 
@@ -36,7 +36,7 @@
 
 
 #### Interfaces
-- **[EventSubscriberInterface](# \Symfony\Component\EventDispatcher\EventSubscriberInterface)**
+- **[EventSubscriberInterface](# &quot;\Symfony\Component\EventDispatcher\EventSubscriberInterface&quot;)**
 
 
 
@@ -45,7 +45,7 @@
 
 #### Properties
 - **[$loggerFactory](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#loggerfactory)**
-         : [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)  
+         : [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")  
 *The logger Channel Factory.*
 
 
@@ -77,7 +77,7 @@
 *The logger Channel Factory.*
 
 
-protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerFactory
+protected [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface") $loggerFactory
 
 
 The loggerFactory interface alias.
@@ -98,14 +98,14 @@ The loggerFactory interface alias.
 *ContribTrackerEventListener constructor.*
 
 !!! Signature
-    __construct([LoggerChannelFactoryInterface](# \Drupal\Core\Logger\LoggerChannelFactoryInterface) $loggerChannelFactory) :mixed
+    __construct([LoggerChannelFactoryInterface](# "\Drupal\Core\Logger\LoggerChannelFactoryInterface") $loggerChannelFactory) :mixed
 
 
 
 
 **Parameters**
 
-- **$loggerChannelFactory**: [LoggerChannelFactoryInterface](# \Drupal\Core\Logger\LoggerChannelFactoryInterface)
+- **$loggerChannelFactory**: [LoggerChannelFactoryInterface](# "\Drupal\Core\Logger\LoggerChannelFactoryInterface")
     
 Logger Channel Factory interface.
 
@@ -142,14 +142,14 @@ Logger Channel Factory interface.
 *Reacts to the event when users fields are being gathered via Social Auth.*
 
 !!! Signature
-    onSocialAuthUserFieldEvent([UserFieldsEvent](# \Drupal\social_auth\Event\UserFieldsEvent) $event) :mixed
+    onSocialAuthUserFieldEvent([UserFieldsEvent](# "\Drupal\social_auth\Event\UserFieldsEvent") $event) :mixed
 
 
 
 
 **Parameters**
 
-- **$event**: [UserFieldsEvent](# \Drupal\social_auth\Event\UserFieldsEvent)
+- **$event**: [UserFieldsEvent](# "\Drupal\social_auth\Event\UserFieldsEvent")
     
 Object returned by UserEvent.
 
@@ -158,7 +158,7 @@ Object returned by UserEvent.
 ### Tags
 
 - **throws**
-  - Type: [EntityStorageException](# \Drupal\Core\Entity\EntityStorageException)
+  - Type: [EntityStorageException](# "\Drupal\Core\Entity\EntityStorageException")
   - 
 
 

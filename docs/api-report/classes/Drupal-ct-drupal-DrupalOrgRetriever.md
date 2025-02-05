@@ -53,11 +53,11 @@ relevant to the application.
 
 #### Properties
 - **[$cache](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#cache)**
-         : [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)  
+         : [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")  
 *Cache backend service.*
 
 - **[$client](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#client)**
-         : [Client](# \Drupal\ct_drupal\DrupalOrg\Client)  
+         : [Client](# "\Drupal\ct_drupal\DrupalOrg\Client")  
 *Drupal.org client service.*
 
 
@@ -67,19 +67,19 @@ relevant to the application.
 *ContributionRetriever constructor.*
 
 - **[getCommentsByAuthor()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getcommentsbyauthor)**
-           : [CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
+           : [CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 *Get comments by an user on drupal.org.*
 
 - **[getDrupalOrgNode()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getdrupalorgnode)**
-           : [Node](# \Hussainweb\DrupalApi\Entity\Node)
+           : [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 *Get node data from drupal.org.*
 
 - **[getDrupalOrgNodeFromApi()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getdrupalorgnodefromapi)**
-           : [Node](# \Hussainweb\DrupalApi\Entity\Node)
+           : [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 *Get node data from drupal.org.*
 
 - **[getFile()](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md#getfile)**
-           : [File](# \Hussainweb\DrupalApi\Entity\File)
+           : [File](# "\Hussainweb\DrupalApi\Entity\File")
 *Get file data from drupal.org.*
 
 
@@ -97,7 +97,7 @@ relevant to the application.
 *Cache backend service.*
 
 
-protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache
+protected [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") $cache
 
 
 
@@ -112,7 +112,7 @@ protected [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $c
 *Drupal.org client service.*
 
 
-protected [Client](# \Drupal\ct_drupal\DrupalOrg\Client) $client
+protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 
 
 
@@ -131,7 +131,7 @@ protected [Client](# \Drupal\ct_drupal\DrupalOrg\Client) $client
 *ContributionRetriever constructor.*
 
 !!! Signature
-    __construct([Client](../classes/Drupal-ct-drupal-Client.md) $client, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cacheBackend) :mixed
+    __construct([Client](../classes/Drupal-ct-drupal-Client.md) $client, [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") $cacheBackend) :mixed
 
 
 
@@ -142,7 +142,7 @@ protected [Client](# \Drupal\ct_drupal\DrupalOrg\Client) $client
     
 The injected drupal.org client.
 
-- **$cacheBackend**: [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)
+- **$cacheBackend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
     
 The injected cache backend service.
 
@@ -160,7 +160,7 @@ The injected cache backend service.
 *Get comments by an user on drupal.org.*
 
 !!! Signature
-    getCommentsByAuthor(mixed $uid) :[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
+    getCommentsByAuthor(mixed $uid) :[CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
 
 
@@ -178,7 +178,7 @@ The user ID of the author.
 
 **Return Values**
 
-[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
+[CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
 
 List of comments from drupal.org.
@@ -192,7 +192,7 @@ List of comments from drupal.org.
 *Get node data from drupal.org.*
 
 !!! Signature
-    getDrupalOrgNode(mixed $nid, mixed $cacheExpiry = Cache::PERMANENT) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
+    getDrupalOrgNode(mixed $nid, mixed $cacheExpiry = Cache::PERMANENT) :[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
 
@@ -215,7 +215,7 @@ The cache expiry for the item.
 
 **Return Values**
 
-[Node](# \Hussainweb\DrupalApi\Entity\Node)
+[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
 The node data from drupal.org.
@@ -229,7 +229,7 @@ The node data from drupal.org.
 *Get node data from drupal.org.*
 
 !!! Signature
-    getDrupalOrgNodeFromApi(mixed $nid) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
+    getDrupalOrgNodeFromApi(mixed $nid) :[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
 
@@ -247,7 +247,7 @@ The nid of the node on drupal.org.
 
 **Return Values**
 
-[Node](# \Hussainweb\DrupalApi\Entity\Node)
+[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
 The node data from drupal.org.
@@ -261,7 +261,7 @@ The node data from drupal.org.
 *Get file data from drupal.org.*
 
 !!! Signature
-    getFile(int $fid) :[File](# \Hussainweb\DrupalApi\Entity\File)
+    getFile(int $fid) :[File](# "\Hussainweb\DrupalApi\Entity\File")
 
 
 
@@ -279,7 +279,7 @@ The fid of the file on drupal.org.
 
 **Return Values**
 
-[File](# \Hussainweb\DrupalApi\Entity\File)
+[File](# "\Hussainweb\DrupalApi\Entity\File")
 
 
 The file data from drupal.org.

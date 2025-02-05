@@ -43,7 +43,7 @@ every Issue node.
 
 #### Properties
 - **[$comment](../classes/Drupal-ct-drupal-CommentDetails.md#comment)**
-         : [Comment](# \Hussainweb\DrupalApi\Entity\Comment)  
+         : [Comment](# "\Hussainweb\DrupalApi\Entity\Comment")  
 *Comment details from d.o.*
 
 - **[$commentProcessed](../classes/Drupal-ct-drupal-CommentDetails.md#commentprocessed)**
@@ -55,7 +55,7 @@ every Issue node.
 *Contribution retriever service.*
 
 - **[$issueData](../classes/Drupal-ct-drupal-CommentDetails.md#issuedata)**
-         : [Node](# \Hussainweb\DrupalApi\Entity\Node)  
+         : [Node](# "\Hussainweb\DrupalApi\Entity\Node")  
 *Node details from d.o.*
 
 - **[$issueStatus](../classes/Drupal-ct-drupal-CommentDetails.md#issuestatus)**
@@ -67,7 +67,7 @@ every Issue node.
 *Number of patches attached to the comment.*
 
 - **[$timeService](../classes/Drupal-ct-drupal-CommentDetails.md#timeservice)**
-         : [TimeInterface](# \Drupal\Component\Datetime\TimeInterface)  
+         : [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface")  
 *The datetime.time service.*
 
 - **[$totalFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#totalfilescount)**
@@ -127,7 +127,7 @@ every Issue node.
 *Comment details from d.o.*
 
 
-protected [Comment](# \Hussainweb\DrupalApi\Entity\Comment) $comment
+protected [Comment](# "\Hussainweb\DrupalApi\Entity\Comment") $comment
 
 
 
@@ -172,7 +172,7 @@ protected [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetriever
 *Node details from d.o.*
 
 
-protected [Node](# \Hussainweb\DrupalApi\Entity\Node) $issueData = NULL
+protected [Node](# "\Hussainweb\DrupalApi\Entity\Node") $issueData = NULL
 
 
 
@@ -217,7 +217,7 @@ protected int $patchFilesCount
 *The datetime.time service.*
 
 
-protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService
+protected [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $timeService
 
 
 
@@ -251,7 +251,7 @@ protected int $totalFilesCount
 *DrupalOrgCommentDetails constructor.*
 
 !!! Signature
-    __construct([DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $retriever, [Comment](# \Hussainweb\DrupalApi\Entity\Comment) $comment, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $time_service) :mixed
+    __construct([DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $retriever, [Comment](# "\Hussainweb\DrupalApi\Entity\Comment") $comment, [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $time_service) :mixed
 
 
 
@@ -262,11 +262,11 @@ protected int $totalFilesCount
     
 The injected contribution retriever service.
 
-- **$comment**: [Comment](# \Hussainweb\DrupalApi\Entity\Comment)
+- **$comment**: [Comment](# "\Hussainweb\DrupalApi\Entity\Comment")
     
 The comment data from drupal.org.
 
-- **$time_service**: [TimeInterface](# \Drupal\Component\Datetime\TimeInterface)
+- **$time_service**: [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface")
     
 The datetime.time service.
 
@@ -428,14 +428,14 @@ Readable text corresponding to the status id.
 *Determine if this is a patch file.*
 
 !!! Signature
-    isPatchFile([File](# \Hussainweb\DrupalApi\Entity\File) $fileRecord) :bool
+    isPatchFile([File](# "\Hussainweb\DrupalApi\Entity\File") $fileRecord) :bool
 
 
 
 
 **Parameters**
 
-- **$fileRecord**: [File](# \Hussainweb\DrupalApi\Entity\File)
+- **$fileRecord**: [File](# "\Hussainweb\DrupalApi\Entity\File")
     
 The file data returned from API.
 

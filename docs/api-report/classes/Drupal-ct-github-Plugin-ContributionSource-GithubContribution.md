@@ -7,13 +7,13 @@
 
 ## GithubContribution
 
-- **extends**: [PluginBase](# \Drupal\Component\Plugin\PluginBase)
+- **extends**: [PluginBase](# &quot;\Drupal\Component\Plugin\PluginBase&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    [ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md),     [ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)  
+    [ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md),     [ContainerFactoryPluginInterface](# &quot;\Drupal\Core\Plugin\ContainerFactoryPluginInterface&quot;)  
 
 ---
 
@@ -48,7 +48,7 @@
 #### Interfaces
 - **[ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md)**
   An interface for all Contribution type plugins.
-- **[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
+- **[ContainerFactoryPluginInterface](# &quot;\Drupal\Core\Plugin\ContainerFactoryPluginInterface&quot;)**
 
 
 
@@ -57,7 +57,7 @@
 
 #### Properties
 - **[$entityTypeManager](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#entitytypemanager)**
-         : [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)  
+         : [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")  
 *Entity type manager.*
 
 - **[$query](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#query)**
@@ -121,7 +121,7 @@
 *Entity type manager.*
 
 
-protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager
+protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager
 
 
 
@@ -185,7 +185,7 @@ protected bool $tokenValid
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
 !!! Signature
-    __construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, [ConfigFactoryInterface](# \Drupal\Core\Config\ConfigFactoryInterface) $configFactory) :mixed
+    __construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager, [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, [ConfigFactoryInterface](# "\Drupal\Core\Config\ConfigFactoryInterface") $configFactory) :mixed
 
 
 
@@ -204,7 +204,7 @@ The plugin_id for the plugin instance.
     
 The plugin_definition for the plugin instance.
 
-- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
+- **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
     
 The injected entity type manager service.
 
@@ -212,7 +212,7 @@ The injected entity type manager service.
     
 The injected github query service.
 
-- **$configFactory**: [ConfigFactoryInterface](# \Drupal\Core\Config\ConfigFactoryInterface)
+- **$configFactory**: [ConfigFactoryInterface](# "\Drupal\Core\Config\ConfigFactoryInterface")
     
 
 
@@ -228,14 +228,14 @@ The injected github query service.
 *{@inheritdoc}*
 
 !!! Signature
-    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
+    static create([ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface") $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
 
 
 
 
 **Parameters**
 
-- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
+- **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
     
 - **$configuration**: array&lt;string|int, mixed&gt;
     
@@ -257,7 +257,7 @@ The injected github query service.
 *Get message for notification.*
 
 !!! Signature
-    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
+    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# "\Drupal\user\Entity\User") $user) :string
 
 
 
@@ -266,7 +266,7 @@ The injected github query service.
 
 - **$contribution**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
     
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -286,14 +286,14 @@ string
 *Get comments from the total contribution data.*
 
 !!! Signature
-    getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
+    getUserCodeContributions([User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -309,14 +309,14 @@ string
 *Get issues from the total contribution data.*
 
 !!! Signature
-    getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
+    getUserIssues([User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -351,14 +351,14 @@ string
 *Get user contributions from the platform.*
 
 !!! Signature
-    isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
+    isUserValid([User](# "\Drupal\user\Entity\User") $user) :bool
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -378,14 +378,14 @@ bool
 *Returns a user retriever object.*
 
 !!! Signature
-    getOrCreateRetriever([User](# \Drupal\user\Entity\User) $user) :[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
+    getOrCreateRetriever([User](# "\Drupal\user\Entity\User") $user) :[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 

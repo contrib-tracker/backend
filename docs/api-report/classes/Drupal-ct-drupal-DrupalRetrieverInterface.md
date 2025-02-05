@@ -35,19 +35,19 @@
 
 #### Methods
 - **[getCommentsByAuthor()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getcommentsbyauthor)**
-           : [CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
+           : [CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 *Get comments by an user on drupal.org.*
 
 - **[getDrupalOrgNode()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getdrupalorgnode)**
-           : [Node](# \Hussainweb\DrupalApi\Entity\Node)
+           : [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 *Get node data from drupal.org.*
 
 - **[getDrupalOrgNodeFromApi()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getdrupalorgnodefromapi)**
-           : [Node](# \Hussainweb\DrupalApi\Entity\Node)
+           : [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 *Get node data from drupal.org.*
 
 - **[getFile()](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md#getfile)**
-           : [File](# \Hussainweb\DrupalApi\Entity\File)
+           : [File](# "\Hussainweb\DrupalApi\Entity\File")
 *Get file data from drupal.org.*
 
 
@@ -66,7 +66,7 @@
 *Get comments by an user on drupal.org.*
 
 !!! Signature
-    getCommentsByAuthor(int $uid) :[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
+    getCommentsByAuthor(int $uid) :[CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
 
 
@@ -84,7 +84,7 @@ The user ID of the author.
 
 **Return Values**
 
-[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
+[CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
 
 List of comments from drupal.org.
@@ -98,7 +98,7 @@ List of comments from drupal.org.
 *Get node data from drupal.org.*
 
 !!! Signature
-    getDrupalOrgNode(int $nid, int $cacheExpiry = Cache::PERMANENT) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
+    getDrupalOrgNode(int $nid, int $cacheExpiry = Cache::PERMANENT) :[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
 
@@ -121,7 +121,7 @@ The cache expiry for the item.
 
 **Return Values**
 
-[Node](# \Hussainweb\DrupalApi\Entity\Node)
+[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
 The node data from drupal.org.
@@ -135,7 +135,7 @@ The node data from drupal.org.
 *Get node data from drupal.org.*
 
 !!! Signature
-    getDrupalOrgNodeFromApi(int $nid) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
+    getDrupalOrgNodeFromApi(int $nid) :[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
 
@@ -153,7 +153,7 @@ The nid of the node on drupal.org.
 
 **Return Values**
 
-[Node](# \Hussainweb\DrupalApi\Entity\Node)
+[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
 The node data from drupal.org.
@@ -167,7 +167,7 @@ The node data from drupal.org.
 *Get file data from drupal.org.*
 
 !!! Signature
-    getFile(int $fid) :[File](# \Hussainweb\DrupalApi\Entity\File)
+    getFile(int $fid) :[File](# "\Hussainweb\DrupalApi\Entity\File")
 
 
 
@@ -185,7 +185,7 @@ The fid of the file on drupal.org.
 
 **Return Values**
 
-[File](# \Hussainweb\DrupalApi\Entity\File)
+[File](# "\Hussainweb\DrupalApi\Entity\File")
 
 
 The file data from drupal.org.

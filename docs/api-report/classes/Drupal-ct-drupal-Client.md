@@ -5,7 +5,7 @@
 
 ## Client
 
-- **extends**: [Client](# \Hussainweb\DrupalApi\Client)
+- **extends**: [Client](# &quot;\Hussainweb\DrupalApi\Client&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -66,14 +66,14 @@ The decorator just adds a header to set User-Agent for this application.
 *{@inheritdoc}*
 
 !!! Signature
-    getEntity([Request](# \Hussainweb\DrupalApi\Request\Request) $request) :mixed
+    getEntity([Request](# "\Hussainweb\DrupalApi\Request\Request") $request) :mixed
 
 
 
 
 **Parameters**
 
-- **$request**: [Request](# \Hussainweb\DrupalApi\Request\Request)
+- **$request**: [Request](# "\Hussainweb\DrupalApi\Request\Request")
     
 
 

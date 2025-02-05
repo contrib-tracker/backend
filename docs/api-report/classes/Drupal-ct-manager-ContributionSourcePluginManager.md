@@ -5,7 +5,7 @@
 
 ## ContributionSourcePluginManager
 
-- **extends**: [DefaultPluginManager](# \Drupal\Core\Plugin\DefaultPluginManager)
+- **extends**: [DefaultPluginManager](# &quot;\Drupal\Core\Plugin\DefaultPluginManager&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -63,23 +63,23 @@
 *Creates the discovery object.*
 
 !!! Signature
-    __construct([Traversable](# \Traversable) $namespaces, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache_backend, [ModuleHandlerInterface](# \Drupal\Core\Extension\ModuleHandlerInterface) $module_handler) :mixed
+    __construct([Traversable](# "\Traversable") $namespaces, [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") $cache_backend, [ModuleHandlerInterface](# "\Drupal\Core\Extension\ModuleHandlerInterface") $module_handler) :mixed
 
 
 
 
 **Parameters**
 
-- **$namespaces**: [Traversable](# \Traversable)
+- **$namespaces**: [Traversable](# "\Traversable")
     
 An object that implements \Traversable which contains the root paths
 keyed by the corresponding namespace to look for plugin implementations.
 
-- **$cache_backend**: [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface)
+- **$cache_backend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
     
 Cache backend instance to use.
 
-- **$module_handler**: [ModuleHandlerInterface](# \Drupal\Core\Extension\ModuleHandlerInterface)
+- **$module_handler**: [ModuleHandlerInterface](# "\Drupal\Core\Extension\ModuleHandlerInterface")
     
 The module handler to invoke the alter hook with.
 

@@ -6,7 +6,7 @@
 
 ## ContributionCountController
 
-- **extends**: [ControllerBase](# \Drupal\Core\Controller\ControllerBase)
+- **extends**: [ControllerBase](# &quot;\Drupal\Core\Controller\ControllerBase&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -43,7 +43,7 @@
 
 #### Properties
 - **[$contribStats](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#contribstats)**
-         : [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics)  
+         : [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatistics")  
 *Contribution statistics instance.*
 
 
@@ -75,7 +75,7 @@
 *Contribution statistics instance.*
 
 
-protected [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics) $contribStats
+protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatistics") $contribStats
 
 
 
@@ -94,14 +94,14 @@ protected [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatist
 *Constructs a new GeofieldMapGeocoder object.*
 
 !!! Signature
-    __construct([ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics) $contrib_stats) :mixed
+    __construct([ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatistics") $contrib_stats) :mixed
 
 
 
 
 **Parameters**
 
-- **$contrib_stats**: [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatistics)
+- **$contrib_stats**: [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatistics")
     
 
 
@@ -136,14 +136,14 @@ protected [ContributionStatistics](# \Drupal\contrib_tracker\ContributionStatist
 *{@inheritdoc}*
 
 !!! Signature
-    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container) :mixed
+    static create([ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface") $container) :mixed
 
 
 
 
 **Parameters**
 
-- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
+- **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
     
 
 

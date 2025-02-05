@@ -7,13 +7,13 @@
 
 ## ProcessUsers
 
-- **extends**: [QueueWorkerBase](# \Drupal\Core\Queue\QueueWorkerBase)
+- **extends**: [QueueWorkerBase](# &quot;\Drupal\Core\Queue\QueueWorkerBase&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    [ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)  
+    [ContainerFactoryPluginInterface](# &quot;\Drupal\Core\Plugin\ContainerFactoryPluginInterface&quot;)  
 
 ---
 
@@ -47,7 +47,7 @@
 
 
 #### Interfaces
-- **[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
+- **[ContainerFactoryPluginInterface](# &quot;\Drupal\Core\Plugin\ContainerFactoryPluginInterface&quot;)**
 
 
 
@@ -60,7 +60,7 @@
 *Contribution manager service.*
 
 - **[$logger](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#logger)**
-         : [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)  
+         : [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")  
 *The logger interface.*
 
 - **[$pluginManager](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#pluginmanager)**
@@ -68,7 +68,7 @@
 *Contribution plugin manager.*
 
 - **[$slackService](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#slackservice)**
-         : [Slack](# \Drupal\slack\Slack)  
+         : [Slack](# "\Drupal\slack\Slack")  
 *Slack service.*
 
 
@@ -115,7 +115,7 @@ protected [ContributionTrackerStorage](../classes/Drupal-ct-manager-Contribution
 *The logger interface.*
 
 
-protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger
+protected [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface") $logger
 
 
 
@@ -145,7 +145,7 @@ protected [ContributionSourcePluginManager](../classes/Drupal-ct-manager-Contrib
 *Slack service.*
 
 
-protected [Slack](# \Drupal\slack\Slack) $slackService
+protected [Slack](# "\Drupal\slack\Slack") $slackService
 
 
 
@@ -164,7 +164,7 @@ protected [Slack](# \Drupal\slack\Slack) $slackService
 *{@inheritdoc}*
 
 !!! Signature
-    __construct(array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition, [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger, [Slack](# \Drupal\slack\Slack) $slackService) :mixed
+    __construct(array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition, [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage, [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface") $logger, [Slack](# "\Drupal\slack\Slack") $slackService) :mixed
 
 
 
@@ -181,9 +181,9 @@ protected [Slack](# \Drupal\slack\Slack) $slackService
     
 - **$contribStorage**: [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)
     
-- **$logger**: [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)
+- **$logger**: [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")
     
-- **$slackService**: [Slack](# \Drupal\slack\Slack)
+- **$slackService**: [Slack](# "\Drupal\slack\Slack")
     
 
 
@@ -199,14 +199,14 @@ protected [Slack](# \Drupal\slack\Slack) $slackService
 *{@inheritdoc}*
 
 !!! Signature
-    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition) :mixed
+    static create([ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface") $container, array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition) :mixed
 
 
 
 
 **Parameters**
 
-- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
+- **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
     
 - **$configuration**: array&lt;string|int, mixed&gt;
     

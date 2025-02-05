@@ -41,11 +41,11 @@
 
 #### Properties
 - **[$database](../classes/Drupal-ct-reports-ContributionStatistics.md#database)**
-         : [Connection](# \Drupal\Core\Database\Connection)  
+         : [Connection](# "\Drupal\Core\Database\Connection")  
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
 - **[$nodeStorage](../classes/Drupal-ct-reports-ContributionStatistics.md#nodestorage)**
-         : [NodeStorageInterface](# \Drupal\node\NodeStorageInterface)  
+         : [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface")  
 *Node storage controller.*
 
 
@@ -81,7 +81,7 @@
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
 
-protected [Connection](# \Drupal\Core\Database\Connection) $database
+protected [Connection](# "\Drupal\Core\Database\Connection") $database
 
 
 
@@ -96,7 +96,7 @@ protected [Connection](# \Drupal\Core\Database\Connection) $database
 *Node storage controller.*
 
 
-protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStorage
+protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeStorage
 
 
 
@@ -115,16 +115,16 @@ protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStora
 *Contribution storage constructor.*
 
 !!! Signature
-    __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [Connection](# \Drupal\Core\Database\Connection) $database) :mixed
+    __construct([EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager, [Connection](# "\Drupal\Core\Database\Connection") $database) :mixed
 
 
 
 
 **Parameters**
 
-- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
+- **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
     
-- **$database**: [Connection](# \Drupal\Core\Database\Connection)
+- **$database**: [Connection](# "\Drupal\Core\Database\Connection")
     
 
 

@@ -41,15 +41,15 @@
 
 #### Properties
 - **[$logger](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#logger)**
-         : [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface)  
+         : [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface")  
 *Logger.*
 
 - **[$nodeStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#nodestorage)**
-         : [NodeStorageInterface](# \Drupal\node\NodeStorageInterface)  
+         : [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface")  
 *Node storage controller.*
 
 - **[$termStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#termstorage)**
-         : [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface)  
+         : [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface")  
 *Term storage controller.*
 
 
@@ -59,27 +59,27 @@
 *Contribution storage constructor.*
 
 - **[getNodeForCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getnodeforcodecontribution)**
-           : [Node](# \Drupal\node\Entity\Node)|null
+           : [Node](# "\Drupal\node\Entity\Node")|null
 *Get node of type code_contribution.*
 
 - **[getNodeForIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getnodeforissue)**
-           : [Node](# \Drupal\node\Entity\Node)|null
+           : [Node](# "\Drupal\node\Entity\Node")|null
 *Get issue of type issue.*
 
 - **[getOrCreateIssueNode()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getorcreateissuenode)**
-           : [Node](# \Drupal\node\Entity\Node)
+           : [Node](# "\Drupal\node\Entity\Node")
 *Retrieves the node detail for issues.*
 
 - **[saveCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#savecodecontribution)**
-           : [Node](# \Drupal\node\Entity\Node)
+           : [Node](# "\Drupal\node\Entity\Node")
 *Save code contributions.*
 
 - **[saveIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#saveissue)**
-           : [Node](# \Drupal\node\Entity\Node)
+           : [Node](# "\Drupal\node\Entity\Node")
 *Save Issues.*
 
 - **[getOrCreateTerm()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getorcreateterm)**
-           : [TermInterface](# \Drupal\taxonomy\TermInterface)
+           : [TermInterface](# "\Drupal\taxonomy\TermInterface")
 *Get (or create) a term in a specified vocabulary.*
 
 
@@ -97,7 +97,7 @@
 *Logger.*
 
 
-protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $logger
+protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $logger
 
 
 
@@ -112,7 +112,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $logge
 *Node storage controller.*
 
 
-protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStorage
+protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeStorage
 
 
 
@@ -127,7 +127,7 @@ protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStora
 *Term storage controller.*
 
 
-protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termStorage
+protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $termStorage
 
 
 
@@ -146,16 +146,16 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 *Contribution storage constructor.*
 
 !!! Signature
-    __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel) :mixed
+    __construct([EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager, [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface") $loggerChannel) :mixed
 
 
 
 
 **Parameters**
 
-- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
+- **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
     
-- **$loggerChannel**: [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)
+- **$loggerChannel**: [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")
     
 
 
@@ -171,7 +171,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 *Get node of type code_contribution.*
 
 !!! Signature
-    getNodeForCodeContribution(string $commentLink) :[Node](# \Drupal\node\Entity\Node)|null
+    getNodeForCodeContribution(string $commentLink) :[Node](# "\Drupal\node\Entity\Node")|null
 
 
 
@@ -187,7 +187,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 **Return Values**
 
-[Node](# \Drupal\node\Entity\Node)|null
+[Node](# "\Drupal\node\Entity\Node")|null
 
 
 
@@ -198,7 +198,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 *Get issue of type issue.*
 
 !!! Signature
-    getNodeForIssue(string $issueLink) :[Node](# \Drupal\node\Entity\Node)|null
+    getNodeForIssue(string $issueLink) :[Node](# "\Drupal\node\Entity\Node")|null
 
 
 
@@ -214,7 +214,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 **Return Values**
 
-[Node](# \Drupal\node\Entity\Node)|null
+[Node](# "\Drupal\node\Entity\Node")|null
 
 
 
@@ -225,7 +225,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 *Retrieves the node detail for issues.*
 
 !!! Signature
-    getOrCreateIssueNode([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
+    getOrCreateIssueNode([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# "\Drupal\node\Entity\Node")
 
 
 
@@ -241,7 +241,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 **Return Values**
 
-[Node](# \Drupal\node\Entity\Node)
+[Node](# "\Drupal\node\Entity\Node")
 
 
 
@@ -252,7 +252,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 *Save code contributions.*
 
 !!! Signature
-    saveCodeContribution([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $comment, [Node](# \Drupal\node\Entity\Node) $issueNode, [User](# \Drupal\user\Entity\User) $user) :[Node](# \Drupal\node\Entity\Node)
+    saveCodeContribution([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $comment, [Node](# "\Drupal\node\Entity\Node") $issueNode, [User](# "\Drupal\user\Entity\User") $user) :[Node](# "\Drupal\node\Entity\Node")
 
 
 
@@ -261,9 +261,9 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 - **$comment**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
     
-- **$issueNode**: [Node](# \Drupal\node\Entity\Node)
+- **$issueNode**: [Node](# "\Drupal\node\Entity\Node")
     
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -272,7 +272,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 **Return Values**
 
-[Node](# \Drupal\node\Entity\Node)
+[Node](# "\Drupal\node\Entity\Node")
 
 
 
@@ -283,7 +283,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 *Save Issues.*
 
 !!! Signature
-    saveIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
+    saveIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# "\Drupal\node\Entity\Node")
 
 
 
@@ -299,7 +299,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 **Return Values**
 
-[Node](# \Drupal\node\Entity\Node)
+[Node](# "\Drupal\node\Entity\Node")
 
 
 
@@ -310,7 +310,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 *Get (or create) a term in a specified vocabulary.*
 
 !!! Signature
-    getOrCreateTerm(string $termName, string $vocabulary) :[TermInterface](# \Drupal\taxonomy\TermInterface)
+    getOrCreateTerm(string $termName, string $vocabulary) :[TermInterface](# "\Drupal\taxonomy\TermInterface")
 
 
 
@@ -332,7 +332,7 @@ Machine name of the vocabulary.
 
 **Return Values**
 
-[TermInterface](# \Drupal\taxonomy\TermInterface)
+[TermInterface](# "\Drupal\taxonomy\TermInterface")
 
 
 The term with the given name in the given vocabulary.

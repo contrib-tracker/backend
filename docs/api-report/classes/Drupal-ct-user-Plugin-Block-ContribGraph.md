@@ -7,7 +7,7 @@
 
 ## ContribGraph
 
-- **extends**: [BlockBase](# \Drupal\Core\Block\BlockBase)
+- **extends**: [BlockBase](# &quot;\Drupal\Core\Block\BlockBase&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)

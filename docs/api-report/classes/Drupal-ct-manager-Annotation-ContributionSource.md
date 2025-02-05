@@ -6,7 +6,7 @@
 
 ## ContributionSource
 
-- **extends**: [Plugin](# \Drupal\Component\Annotation\Plugin)
+- **extends**: [Plugin](# &quot;\Drupal\Component\Annotation\Plugin&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -29,10 +29,10 @@
 ### Tags
 
 - **see**
-  - Reference: [ContributionTrackerPluginManager](# \Drupal\ct_manager\ContributionTrackerPluginManager)
+  - Reference: [ContributionTrackerPluginManager](# "\Drupal\ct_manager\ContributionTrackerPluginManager")
   - 
 - **see**
-  - Reference: [plugin_api](# \Drupal\ct_manager\Annotation\plugin_api)
+  - Reference: [plugin_api](# "\Drupal\ct_manager\Annotation\plugin_api")
   - Note that the "@ Annotation" line below is required and should be the last
 line in the docblock. It's used for discovery of Annotation definitions.
 
@@ -55,7 +55,7 @@ line in the docblock. It's used for discovery of Annotation definitions.
 
 #### Properties
 - **[$description](../classes/Drupal-ct-manager-Annotation-ContributionSource.md#description)**
-         : [Translation](# \Drupal\Core\Annotation\Translation)  
+         : [Translation](# "\Drupal\Core\Annotation\Translation")  
 *A brief, human readable, description of the ContributionTracker type.*
 
 
@@ -74,7 +74,7 @@ line in the docblock. It's used for discovery of Annotation definitions.
 *A brief, human readable, description of the ContributionTracker type.*
 
 
-public [Translation](# \Drupal\Core\Annotation\Translation) $description
+public [Translation](# "\Drupal\Core\Annotation\Translation") $description
 
 
 

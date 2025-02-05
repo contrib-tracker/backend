@@ -6,7 +6,7 @@
 
 ## IssuesSanitiseCommand
 
-- **extends**: [Command](# \Drupal\Console\Core\Command\Command)
+- **extends**: [Command](# &quot;\Drupal\Console\Core\Command\Command&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -51,15 +51,15 @@
 
 #### Properties
 - **[$contribTrackStorage](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#contribtrackstorage)**
-         : [ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface)  
+         : [ContributionStorageInterface](# "\Drupal\contrib_tracker\ContributionStorageInterface")  
 *Drupal\contrib_tracker\ContributionStorageInterface definition.*
 
 - **[$database](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#database)**
-         : [Connection](# \Drupal\Core\Database\Connection)  
+         : [Connection](# "\Drupal\Core\Database\Connection")  
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
 - **[$entityTypeManager](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#entitytypemanager)**
-         : [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)  
+         : [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")  
 *Drupal\Core\Entity\EntityTypeManagerInterface definition.*
 
 
@@ -103,7 +103,7 @@
 *Drupal\contrib_tracker\ContributionStorageInterface definition.*
 
 
-protected [ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface) $contribTrackStorage
+protected [ContributionStorageInterface](# "\Drupal\contrib_tracker\ContributionStorageInterface") $contribTrackStorage
 
 
 
@@ -118,7 +118,7 @@ protected [ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionS
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
 
-protected [Connection](# \Drupal\Core\Database\Connection) $database
+protected [Connection](# "\Drupal\Core\Database\Connection") $database
 
 
 
@@ -133,7 +133,7 @@ protected [Connection](# \Drupal\Core\Database\Connection) $database
 *Drupal\Core\Entity\EntityTypeManagerInterface definition.*
 
 
-protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager
+protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager
 
 
 
@@ -152,22 +152,22 @@ protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerIn
 *IssuesSanitiseCommand constructor.*
 
 !!! Signature
-    __construct([ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface) $ctStorage, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [Connection](# \Drupal\Core\Database\Connection) $database) :mixed
+    __construct([ContributionStorageInterface](# "\Drupal\contrib_tracker\ContributionStorageInterface") $ctStorage, [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager, [Connection](# "\Drupal\Core\Database\Connection") $database) :mixed
 
 
 
 
 **Parameters**
 
-- **$ctStorage**: [ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface)
+- **$ctStorage**: [ContributionStorageInterface](# "\Drupal\contrib_tracker\ContributionStorageInterface")
     
 The contrib tracker storage service.
 
-- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
+- **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
     
 The entity type manager service.
 
-- **$database**: [Connection](# \Drupal\Core\Database\Connection)
+- **$database**: [Connection](# "\Drupal\Core\Database\Connection")
     
 The database connection.
 
@@ -204,16 +204,16 @@ The database connection.
 *{@inheritdoc}*
 
 !!! Signature
-    execute([InputInterface](# \Symfony\Component\Console\Input\InputInterface) $input, [OutputInterface](# \Symfony\Component\Console\Output\OutputInterface) $output) :mixed
+    execute([InputInterface](# "\Symfony\Component\Console\Input\InputInterface") $input, [OutputInterface](# "\Symfony\Component\Console\Output\OutputInterface") $output) :mixed
 
 
 
 
 **Parameters**
 
-- **$input**: [InputInterface](# \Symfony\Component\Console\Input\InputInterface)
+- **$input**: [InputInterface](# "\Symfony\Component\Console\Input\InputInterface")
     
-- **$output**: [OutputInterface](# \Symfony\Component\Console\Output\OutputInterface)
+- **$output**: [OutputInterface](# "\Symfony\Component\Console\Output\OutputInterface")
     
 
 

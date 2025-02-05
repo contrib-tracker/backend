@@ -8,7 +8,7 @@
 
 ## CodeContributionTest
 
-- **extends**: [TestCase](# \PHPUnit\Framework\TestCase)
+- **extends**: [TestCase](# &quot;\PHPUnit\Framework\TestCase&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)

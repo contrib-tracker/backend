@@ -45,7 +45,7 @@
          : string  
 
 - **[$date](../classes/Drupal-ct-manager-Data-CodeContribution.md#date)**
-         : [DateTimeImmutable](# \DateTimeImmutable)  
+         : [DateTimeImmutable](# "\DateTimeImmutable")  
 
 - **[$description](../classes/Drupal-ct-manager-Data-CodeContribution.md#description)**
          : string  
@@ -86,7 +86,7 @@
            : string
 
 - **[getDate()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getdate)**
-           : [DateTimeImmutable](# \DateTimeImmutable)
+           : [DateTimeImmutable](# "\DateTimeImmutable")
 
 - **[getDescription()](../classes/Drupal-ct-manager-Data-CodeContribution.md#getdescription)**
            : string
@@ -174,7 +174,7 @@ URL of user account on the platform.
 
 
 
-protected [DateTimeImmutable](# \DateTimeImmutable) $date
+protected [DateTimeImmutable](# "\DateTimeImmutable") $date
 
 Date of the contribution.
 
@@ -343,7 +343,7 @@ URL of the contribution.
 
 
 !!! Signature
-    __construct(string $title, string $url, [DateTimeImmutable](# \DateTimeImmutable) $date) :mixed
+    __construct(string $title, string $url, [DateTimeImmutable](# "\DateTimeImmutable") $date) :mixed
 
 
 
@@ -354,7 +354,7 @@ URL of the contribution.
     
 - **$url**: string
     
-- **$date**: [DateTimeImmutable](# \DateTimeImmutable)
+- **$date**: [DateTimeImmutable](# "\DateTimeImmutable")
     
 
 
@@ -391,7 +391,7 @@ string
 
 
 !!! Signature
-    getDate() :[DateTimeImmutable](# \DateTimeImmutable)
+    getDate() :[DateTimeImmutable](# "\DateTimeImmutable")
 
 
 
@@ -403,7 +403,7 @@ string
 
 **Return Values**
 
-[DateTimeImmutable](# \DateTimeImmutable)
+[DateTimeImmutable](# "\DateTimeImmutable")
 
 
 

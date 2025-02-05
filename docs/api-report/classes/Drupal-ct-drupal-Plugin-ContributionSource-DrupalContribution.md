@@ -7,13 +7,13 @@
 
 ## DrupalContribution
 
-- **extends**: [PluginBase](# \Drupal\Component\Plugin\PluginBase)
+- **extends**: [PluginBase](# &quot;\Drupal\Component\Plugin\PluginBase&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
   
 - **Implements**:
-    [ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md),     [ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)  
+    [ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md),     [ContainerFactoryPluginInterface](# &quot;\Drupal\Core\Plugin\ContainerFactoryPluginInterface&quot;)  
 
 ---
 
@@ -48,7 +48,7 @@
 #### Interfaces
 - **[ContributionSourceInterface](../classes/Drupal-ct-manager-ContributionSourceInterface.md)**
   An interface for all Contribution type plugins.
-- **[ContainerFactoryPluginInterface](# \Drupal\Core\Plugin\ContainerFactoryPluginInterface)**
+- **[ContainerFactoryPluginInterface](# &quot;\Drupal\Core\Plugin\ContainerFactoryPluginInterface&quot;)**
 
 
 
@@ -65,19 +65,19 @@
 *Retrievers for each user.*
 
 - **[$doUserInfoRetriever](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#douserinforetriever)**
-         : [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever)  
+         : [DOUserInfoRetriever](# "\Drupal\do_username\DOUserInfoRetriever")  
 *do_username service.*
 
 - **[$entityTypeManager](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#entitytypemanager)**
-         : [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)  
+         : [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")  
 *Entity type manager.*
 
 - **[$logger](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#logger)**
-         : [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)  
+         : [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")  
 *Logger.*
 
 - **[$timeService](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#timeservice)**
-         : [TimeInterface](# \Drupal\Component\Datetime\TimeInterface)  
+         : [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface")  
 *datetime.time service.*
 
 
@@ -155,7 +155,7 @@ protected [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md
 *do_username service.*
 
 
-protected [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever) $doUserInfoRetriever
+protected [DOUserInfoRetriever](# "\Drupal\do_username\DOUserInfoRetriever") $doUserInfoRetriever
 
 
 
@@ -170,7 +170,7 @@ protected [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever) $doUs
 *Entity type manager.*
 
 
-protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager
+protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager
 
 
 
@@ -185,7 +185,7 @@ protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerIn
 *Logger.*
 
 
-protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger
+protected [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface") $logger
 
 
 
@@ -200,7 +200,7 @@ protected [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)
 *datetime.time service.*
 
 
-protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService
+protected [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $timeService
 
 
 
@@ -219,7 +219,7 @@ protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeServi
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
 !!! Signature
-    __construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md) $doRetriever, [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever) $doUserInfoRetriever, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contributionStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService) :mixed
+    __construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager, [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md) $doRetriever, [DOUserInfoRetriever](# "\Drupal\do_username\DOUserInfoRetriever") $doUserInfoRetriever, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contributionStorage, [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface") $loggerChannel, [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $timeService) :mixed
 
 
 
@@ -238,7 +238,7 @@ The plugin_id for the plugin instance.
     
 The plugin_definition for the plugin instance.
 
-- **$entityTypeManager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
+- **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
     
 The injected entity type manager service.
 
@@ -246,7 +246,7 @@ The injected entity type manager service.
     
 Wrapper for Drupal.org API.
 
-- **$doUserInfoRetriever**: [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever)
+- **$doUserInfoRetriever**: [DOUserInfoRetriever](# "\Drupal\do_username\DOUserInfoRetriever")
     
 The injected DO UserInfoRetriever service.
 
@@ -254,11 +254,11 @@ The injected DO UserInfoRetriever service.
     
 The contribution storage service.
 
-- **$loggerChannel**: [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface)
+- **$loggerChannel**: [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")
     
 The logger service.
 
-- **$timeService**: [TimeInterface](# \Drupal\Component\Datetime\TimeInterface)
+- **$timeService**: [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface")
     
 The datetime.time service.
 
@@ -276,14 +276,14 @@ The datetime.time service.
 *{@inheritdoc}*
 
 !!! Signature
-    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
+    static create([ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface") $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
 
 
 
 
 **Parameters**
 
-- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
+- **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
     
 - **$configuration**: array&lt;string|int, mixed&gt;
     
@@ -305,7 +305,7 @@ The datetime.time service.
 *Get message for notification.*
 
 !!! Signature
-    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
+    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# "\Drupal\user\Entity\User") $user) :string
 
 
 
@@ -314,7 +314,7 @@ The datetime.time service.
 
 - **$contribution**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
     
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -334,14 +334,14 @@ string
 *Get comments from the total contribution data.*
 
 !!! Signature
-    getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
+    getUserCodeContributions([User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -357,14 +357,14 @@ string
 *Get issues from the total contribution data.*
 
 !!! Signature
-    getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
+    getUserIssues([User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -404,14 +404,14 @@ string
 *Get user contributions from the platform.*
 
 !!! Signature
-    isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
+    isUserValid([User](# "\Drupal\user\Entity\User") $user) :bool
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 

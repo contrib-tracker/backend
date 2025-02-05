@@ -6,7 +6,7 @@
 
 ## GetUserPatchesController
 
-- **extends**: [ControllerBase](# \Drupal\Core\Controller\ControllerBase)
+- **extends**: [ControllerBase](# &quot;\Drupal\Core\Controller\ControllerBase&quot;)
 
 - **In Package**:
     - [Application](../packages/Application.md)
@@ -43,7 +43,7 @@
 
 #### Properties
 - **[$entityTypeManager](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#entitytypemanager)**
-         : [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)  
+         : [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")  
 *The entity type manager.*
 
 
@@ -53,7 +53,7 @@
 *Constructs a new GetUserPatchesController object.*
 
 - **[content()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#content)**
-           : [JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)
+           : [JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
 *Returns a JSON response with daily patches count.*
 
 - **[create()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#create)**
@@ -75,7 +75,7 @@
 *The entity type manager.*
 
 
-protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager
+protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager
 
 
 
@@ -94,14 +94,14 @@ protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerIn
 *Constructs a new GetUserPatchesController object.*
 
 !!! Signature
-    __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entity_type_manager) :mixed
+    __construct([EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entity_type_manager) :mixed
 
 
 
 
 **Parameters**
 
-- **$entity_type_manager**: [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface)
+- **$entity_type_manager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
     
 The entity type manager.
 
@@ -119,7 +119,7 @@ The entity type manager.
 *Returns a JSON response with daily patches count.*
 
 !!! Signature
-    content(int $current_user_id) :[JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)
+    content(int $current_user_id) :[JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
 
 
 
@@ -137,7 +137,7 @@ The user ID for which you want to retrieve patches.
 
 **Return Values**
 
-[JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)
+[JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
 
 
 The JSON response.
@@ -151,14 +151,14 @@ The JSON response.
 *{@inheritdoc}*
 
 !!! Signature
-    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container) :mixed
+    static create([ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface") $container) :mixed
 
 
 
 
 **Parameters**
 
-- **$container**: [ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface)
+- **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
     
 
 

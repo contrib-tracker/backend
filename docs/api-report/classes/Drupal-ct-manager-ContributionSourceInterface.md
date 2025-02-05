@@ -70,7 +70,7 @@
 *Get message for notification.*
 
 !!! Signature
-    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
+    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# "\Drupal\user\Entity\User") $user) :string
 
 
 
@@ -79,7 +79,7 @@
 
 - **$contribution**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
     
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -99,14 +99,14 @@ string
 *Get comments from the total contribution data.*
 
 !!! Signature
-    getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
+    getUserCodeContributions([User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -122,14 +122,14 @@ string
 *Get issues from the total contribution data.*
 
 !!! Signature
-    getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
+    getUserIssues([User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 
@@ -164,14 +164,14 @@ string
 *Get user contributions from the platform.*
 
 !!! Signature
-    isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
+    isUserValid([User](# "\Drupal\user\Entity\User") $user) :bool
 
 
 
 
 **Parameters**
 
-- **$user**: [User](# \Drupal\user\Entity\User)
+- **$user**: [User](# "\Drupal\user\Entity\User")
     
 
 

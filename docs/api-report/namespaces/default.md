@@ -161,14 +161,14 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 
 !!! Signature
-    ct_user_help(mixed $route_name, [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface) $route_match) :mixed
+    ct_user_help(mixed $route_name, [RouteMatchInterface](# "\Drupal\Core\Routing\RouteMatchInterface") $route_match) :mixed
 
 
 **Parameters**
 
 - **$route_name**: mixed
     
-- **$route_match**: [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface)
+- **$route_match**: [RouteMatchInterface](# "\Drupal\Core\Routing\RouteMatchInterface")
     
 
 
