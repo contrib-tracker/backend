@@ -72,7 +72,7 @@
 
 *Test simple issue creation.*
 
-!!! info
+!!! Signature
     testIssueCreation() :mixed
 
 

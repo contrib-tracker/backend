@@ -79,7 +79,7 @@
 *Implements hook_mail_alter().*
 
 
-!!! Info
+!!! Signature
     contrib_tracker_mail_alter(mixed  &$message) :mixed
 
 CONT-36 Disable all mails in non prod environments.
@@ -105,7 +105,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Implements hook_cron().*
 
 
-!!! Info
+!!! Signature
     ct_manager_cron() :mixed
 
 
@@ -122,7 +122,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Implements hook_theme().*
 
 
-!!! Info
+!!! Signature
     ct_reports_theme(mixed $existing) :mixed
 
 
@@ -142,7 +142,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 
 
-!!! Info
+!!! Signature
     ct_user_theme() :mixed
 
 
@@ -159,7 +159,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Implements hook_help().*
 
 
-!!! Info
+!!! Signature
     ct_user_help(mixed $route_name, [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface) $route_match) :mixed
 
 
@@ -182,7 +182,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Implements hook_form_alter().*
 
 
-!!! Info
+!!! Signature
     ct_user_form_alter(mixed  &$form, mixed $form_state, mixed $form_id) :mixed
 
 
@@ -207,7 +207,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Custom validation function for the user login form.*
 
 
-!!! Info
+!!! Signature
     ct_user_user_login_form_validate(mixed  &$form, mixed $form_state) :mixed
 
 
@@ -229,7 +229,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_suggestions_block_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 
@@ -252,7 +252,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Implements hook_theme_suggestions_form_alter().*
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_suggestions_form_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 
@@ -275,7 +275,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Implements hook_theme_suggestions_table_alter().*
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_suggestions_table_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 
@@ -298,7 +298,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Implements hook_theme_preprocess_page_alter().*
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_preprocess_page_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 
@@ -321,7 +321,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 *Implements hook_theme_suggestions_input_alter().*
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_suggestions_input_alter(mixed  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 

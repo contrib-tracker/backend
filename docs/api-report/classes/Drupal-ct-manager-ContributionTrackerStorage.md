@@ -145,7 +145,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 *Contribution storage constructor.*
 
-!!! info
+!!! Signature
     __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel) :mixed
 
 
@@ -170,7 +170,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 *Get node of type code_contribution.*
 
-!!! info
+!!! Signature
     getNodeForCodeContribution(string $commentLink) :[Node](# \Drupal\node\Entity\Node)|null
 
 
@@ -197,7 +197,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 *Get issue of type issue.*
 
-!!! info
+!!! Signature
     getNodeForIssue(string $issueLink) :[Node](# \Drupal\node\Entity\Node)|null
 
 
@@ -224,7 +224,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 *Retrieves the node detail for issues.*
 
-!!! info
+!!! Signature
     getOrCreateIssueNode([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
 
 
@@ -251,7 +251,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 *Save code contributions.*
 
-!!! info
+!!! Signature
     saveCodeContribution([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $comment, [Node](# \Drupal\node\Entity\Node) $issueNode, [User](# \Drupal\user\Entity\User) $user) :[Node](# \Drupal\node\Entity\Node)
 
 
@@ -282,7 +282,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 *Save Issues.*
 
-!!! info
+!!! Signature
     saveIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
 
 
@@ -309,7 +309,7 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 *Get (or create) a term in a specified vocabulary.*
 
-!!! info
+!!! Signature
     getOrCreateTerm(string $termName, string $vocabulary) :[TermInterface](# \Drupal\taxonomy\TermInterface)
 
 

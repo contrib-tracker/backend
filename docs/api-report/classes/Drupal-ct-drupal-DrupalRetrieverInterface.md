@@ -65,7 +65,7 @@
 
 *Get comments by an user on drupal.org.*
 
-!!! info
+!!! Signature
     getCommentsByAuthor(int $uid) :[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
 
 
@@ -97,7 +97,7 @@ List of comments from drupal.org.
 
 *Get node data from drupal.org.*
 
-!!! info
+!!! Signature
     getDrupalOrgNode(int $nid, int $cacheExpiry = Cache::PERMANENT) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
 
 
@@ -134,7 +134,7 @@ The node data from drupal.org.
 
 *Get node data from drupal.org.*
 
-!!! info
+!!! Signature
     getDrupalOrgNodeFromApi(int $nid) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
 
 
@@ -166,7 +166,7 @@ The node data from drupal.org.
 
 *Get file data from drupal.org.*
 
-!!! info
+!!! Signature
     getFile(int $fid) :[File](# \Hussainweb\DrupalApi\Entity\File)
 
 

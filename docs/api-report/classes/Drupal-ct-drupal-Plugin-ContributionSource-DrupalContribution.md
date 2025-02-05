@@ -218,7 +218,7 @@ protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeServi
 
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
-!!! info
+!!! Signature
     __construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md) $doRetriever, [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever) $doUserInfoRetriever, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contributionStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService) :mixed
 
 
@@ -275,7 +275,7 @@ The datetime.time service.
 
 *{@inheritdoc}*
 
-!!! info
+!!! Signature
     static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
 
 
@@ -304,7 +304,7 @@ The datetime.time service.
 
 *Get message for notification.*
 
-!!! info
+!!! Signature
     getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
 
 
@@ -333,7 +333,7 @@ string
 
 *Get comments from the total contribution data.*
 
-!!! info
+!!! Signature
     getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 
 
@@ -356,7 +356,7 @@ string
 
 *Get issues from the total contribution data.*
 
-!!! info
+!!! Signature
     getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 
 
@@ -384,7 +384,7 @@ string
 
 *Get all users with drupal.org username.*
 
-!!! info
+!!! Signature
     getUsers() :mixed
 
 
@@ -403,7 +403,7 @@ string
 
 *Get user contributions from the platform.*
 
-!!! info
+!!! Signature
     isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
 
 

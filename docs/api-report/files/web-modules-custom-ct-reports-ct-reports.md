@@ -50,7 +50,7 @@
 *Implements hook_theme().*
 
 
-!!! Info
+!!! Signature
     ct_reports_theme(mixed $existing) :mixed
 
 

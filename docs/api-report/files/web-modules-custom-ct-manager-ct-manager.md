@@ -50,7 +50,7 @@
 *Implements hook_cron().*
 
 
-!!! Info
+!!! Signature
     ct_manager_cron() :mixed
 
 

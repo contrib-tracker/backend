@@ -97,7 +97,7 @@ The loggerFactory interface alias.
 
 *ContribTrackerEventListener constructor.*
 
-!!! info
+!!! Signature
     __construct([LoggerChannelFactoryInterface](# \Drupal\Core\Logger\LoggerChannelFactoryInterface) $loggerChannelFactory) :mixed
 
 
@@ -122,7 +122,7 @@ Logger Channel Factory interface.
 
 *Returns an array of event names this subscriber wants to listen to.*
 
-!!! info
+!!! Signature
     static getSubscribedEvents() :mixed
 
 
@@ -141,7 +141,7 @@ Logger Channel Factory interface.
 
 *Reacts to the event when users fields are being gathered via Social Auth.*
 
-!!! info
+!!! Signature
     onSocialAuthUserFieldEvent([UserFieldsEvent](# \Drupal\social_auth\Event\UserFieldsEvent) $event) :mixed
 
 

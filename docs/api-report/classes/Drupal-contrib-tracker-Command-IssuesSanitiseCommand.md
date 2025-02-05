@@ -151,7 +151,7 @@ protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerIn
 
 *IssuesSanitiseCommand constructor.*
 
-!!! info
+!!! Signature
     __construct([ContributionStorageInterface](# \Drupal\contrib_tracker\ContributionStorageInterface) $ctStorage, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [Connection](# \Drupal\Core\Database\Connection) $database) :mixed
 
 
@@ -184,7 +184,7 @@ The database connection.
 
 *{@inheritdoc}*
 
-!!! info
+!!! Signature
     configure() :mixed
 
 
@@ -203,7 +203,7 @@ The database connection.
 
 *{@inheritdoc}*
 
-!!! info
+!!! Signature
     execute([InputInterface](# \Symfony\Component\Console\Input\InputInterface) $input, [OutputInterface](# \Symfony\Component\Console\Output\OutputInterface) $output) :mixed
 
 
@@ -228,7 +228,7 @@ The database connection.
 
 *Get a list of IDs which are duplicated.*
 
-!!! info
+!!! Signature
     getDuplicateIssueDoIds() :array&lt;string|int, string&gt;
 
 
@@ -254,7 +254,7 @@ Array of IDs which are duplicated.
 
 *Get node ids linked to a d.o issue.*
 
-!!! info
+!!! Signature
     getNidsForDoIssue(string $issueId) :array&lt;string|int, int&gt;
 
 
@@ -286,7 +286,7 @@ Array of node ids.
 
 *Replace references to various node ids with a different node id.*
 
-!!! info
+!!! Signature
     updateReferencesForIssueNid(array&lt;string|int, int&gt; $issueNids, array&lt;string|int, int&gt; $originalNid) :int
 
 

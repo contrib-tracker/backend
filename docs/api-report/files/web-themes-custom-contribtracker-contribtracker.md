@@ -64,7 +64,7 @@
 
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_suggestions_block_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 
@@ -87,7 +87,7 @@
 *Implements hook_theme_suggestions_form_alter().*
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_suggestions_form_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 
@@ -110,7 +110,7 @@
 *Implements hook_theme_suggestions_table_alter().*
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_suggestions_table_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 
@@ -133,7 +133,7 @@
 *Implements hook_theme_preprocess_page_alter().*
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_preprocess_page_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 
@@ -156,7 +156,7 @@
 *Implements hook_theme_suggestions_input_alter().*
 
 
-!!! Info
+!!! Signature
     contribtracker_theme_suggestions_input_alter(mixed  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
 
 

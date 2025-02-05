@@ -129,7 +129,7 @@ URL of the contribution.
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 24
 
 
-!!! info
+!!! Signature
     __construct(string $title, string $url) :mixed
 
 
@@ -153,7 +153,7 @@ URL of the contribution.
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 37
 
 
-!!! info
+!!! Signature
     getDescription() :string
 
 
@@ -175,7 +175,7 @@ string
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 29
 
 
-!!! info
+!!! Signature
     getTitle() :string
 
 
@@ -197,7 +197,7 @@ string
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 33
 
 
-!!! info
+!!! Signature
     getUrl() :string
 
 
@@ -219,7 +219,7 @@ string
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 41
 
 
-!!! info
+!!! Signature
     setDescription(string $description) :self
 
 
