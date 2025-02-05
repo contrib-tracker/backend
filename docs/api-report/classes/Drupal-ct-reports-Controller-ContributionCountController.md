@@ -93,7 +93,7 @@ protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatis
 
 *Constructs a new GeofieldMapGeocoder object.*
 
-!!! Signature
+!!! note ""
     __construct([ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatistics") $contrib_stats) :mixed
 
 
@@ -116,7 +116,7 @@ protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatis
 
 *Returns a render-able array with contribution statistics.*
 
-!!! Signature
+!!! note ""
     content() :mixed
 
 
@@ -135,7 +135,7 @@ protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatis
 
 *{@inheritdoc}*
 
-!!! Signature
+!!! note ""
     static create([ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface") $container) :mixed
 
 

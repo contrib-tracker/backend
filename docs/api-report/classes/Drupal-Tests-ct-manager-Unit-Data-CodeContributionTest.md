@@ -74,7 +74,7 @@
 [CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 28
 
 
-!!! Signature
+!!! note ""
     testChainedCodeContribution() :mixed
 
 
@@ -93,7 +93,7 @@
 
 *Test simple code contribution creation.*
 
-!!! Signature
+!!! note ""
     testCodeContributionCreation() :mixed
 
 

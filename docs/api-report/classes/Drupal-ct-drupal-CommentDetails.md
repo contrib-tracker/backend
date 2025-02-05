@@ -250,7 +250,7 @@ protected int $totalFilesCount
 
 *DrupalOrgCommentDetails constructor.*
 
-!!! Signature
+!!! note ""
     __construct([DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $retriever, [Comment](# "\Hussainweb\DrupalApi\Entity\Comment") $comment, [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $time_service) :mixed
 
 
@@ -283,7 +283,7 @@ The datetime.time service.
 
 *Get comment Description.*
 
-!!! Signature
+!!! note ""
     getDescription() :string
 
 
@@ -307,7 +307,7 @@ string
 
 *Get the issue status.*
 
-!!! Signature
+!!! note ""
     getIssueStatus() :string
 
 
@@ -330,7 +330,7 @@ string
 
 *Get the number of patch files in this comment.*
 
-!!! Signature
+!!! note ""
     getPatchFilesCount() :int
 
 
@@ -353,7 +353,7 @@ int
 
 *Get the number of all files in this comment.*
 
-!!! Signature
+!!! note ""
     getTotalFilesCount() :int
 
 
@@ -376,7 +376,7 @@ int
 
 *Determine the status of the issue.*
 
-!!! Signature
+!!! note ""
     determineIssueStatus() :void
 
 
@@ -395,7 +395,7 @@ int
 
 *Translate the status id to text.*
 
-!!! Signature
+!!! note ""
     getStatusFromCode(int $statusId) :string
 
 
@@ -427,7 +427,7 @@ Readable text corresponding to the status id.
 
 *Determine if this is a patch file.*
 
-!!! Signature
+!!! note ""
     isPatchFile([File](# "\Hussainweb\DrupalApi\Entity\File") $fileRecord) :bool
 
 
@@ -459,7 +459,7 @@ TRUE if this is a patch file, else FALSE.
 
 *Check the type and number of files attached to a comment under a issue.*
 
-!!! Signature
+!!! note ""
     processFileDetails() :void
 
 

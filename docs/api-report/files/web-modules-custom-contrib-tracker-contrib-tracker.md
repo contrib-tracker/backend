@@ -50,7 +50,7 @@
 *Implements hook_mail_alter().*
 
 
-!!! Signature
+!!! note ""
     contrib_tracker_mail_alter(mixed  &$message) :mixed
 
 CONT-36 Disable all mails in non prod environments.

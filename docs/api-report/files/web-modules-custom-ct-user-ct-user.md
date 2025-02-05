@@ -60,7 +60,7 @@
 
 
 
-!!! Signature
+!!! note ""
     ct_user_theme() :mixed
 
 
@@ -77,7 +77,7 @@
 *Implements hook_help().*
 
 
-!!! Signature
+!!! note ""
     ct_user_help(mixed $route_name, [RouteMatchInterface](# "\Drupal\Core\Routing\RouteMatchInterface") $route_match) :mixed
 
 
@@ -100,7 +100,7 @@
 *Implements hook_form_alter().*
 
 
-!!! Signature
+!!! note ""
     ct_user_form_alter(mixed  &$form, mixed $form_state, mixed $form_id) :mixed
 
 
@@ -125,7 +125,7 @@
 *Custom validation function for the user login form.*
 
 
-!!! Signature
+!!! note ""
     ct_user_user_login_form_validate(mixed  &$form, mixed $form_state) :mixed
 
 

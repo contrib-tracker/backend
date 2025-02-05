@@ -145,7 +145,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 *Contribution storage constructor.*
 
-!!! Signature
+!!! note ""
     __construct([EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager, [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface") $loggerChannel) :mixed
 
 
@@ -170,7 +170,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 *Get node of type code_contribution.*
 
-!!! Signature
+!!! note ""
     getNodeForCodeContribution(string $commentLink) :[Node](# "\Drupal\node\Entity\Node")|null
 
 
@@ -197,7 +197,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 *Get issue of type issue.*
 
-!!! Signature
+!!! note ""
     getNodeForIssue(string $issueLink) :[Node](# "\Drupal\node\Entity\Node")|null
 
 
@@ -224,7 +224,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 *Retrieves the node detail for issues.*
 
-!!! Signature
+!!! note ""
     getOrCreateIssueNode([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# "\Drupal\node\Entity\Node")
 
 
@@ -251,7 +251,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 *Save code contributions.*
 
-!!! Signature
+!!! note ""
     saveCodeContribution([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $comment, [Node](# "\Drupal\node\Entity\Node") $issueNode, [User](# "\Drupal\user\Entity\User") $user) :[Node](# "\Drupal\node\Entity\Node")
 
 
@@ -282,7 +282,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 *Save Issues.*
 
-!!! Signature
+!!! note ""
     saveIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# "\Drupal\node\Entity\Node")
 
 
@@ -309,7 +309,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 *Get (or create) a term in a specified vocabulary.*
 
-!!! Signature
+!!! note ""
     getOrCreateTerm(string $termName, string $vocabulary) :[TermInterface](# "\Drupal\taxonomy\TermInterface")
 
 

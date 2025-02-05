@@ -73,7 +73,7 @@
 
 *{@inheritdoc}*
 
-!!! Signature
+!!! note ""
     static getSubscribedEvents() :array&lt;string|int, mixed&gt;
 
 
@@ -95,7 +95,7 @@ array&lt;string|int, mixed&gt;
 [RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 16
 
 
-!!! Signature
+!!! note ""
     onRavenOptionsAlter([OptionsAlter](# "\Drupal\raven\Event\OptionsAlter") $optionsAlter) :void
 
 

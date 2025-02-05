@@ -135,7 +135,7 @@ protected string $username
 
 *ContributionRetriever constructor.*
 
-!!! Signature
+!!! note ""
     __construct([GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, string $user) :mixed
 
 
@@ -164,7 +164,7 @@ The user name.
 
 *Get PR commits and issue comments for user.*
 
-!!! Signature
+!!! note ""
     getCodeContributions() :mixed
 
 
@@ -183,7 +183,7 @@ The user name.
 
 *Get issues for user.*
 
-!!! Signature
+!!! note ""
     getIssues() :mixed
 
 
@@ -202,7 +202,7 @@ The user name.
 
 *Returns user&#039;s contribution.*
 
-!!! Signature
+!!! note ""
     getUserContributions(mixed $username) :mixed
 
 

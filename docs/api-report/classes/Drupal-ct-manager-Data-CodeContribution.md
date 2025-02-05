@@ -342,7 +342,7 @@ URL of the contribution.
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 69
 
 
-!!! Signature
+!!! note ""
     __construct(string $title, string $url, [DateTimeImmutable](# "\DateTimeImmutable") $date) :mixed
 
 
@@ -368,7 +368,7 @@ URL of the contribution.
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 87
 
 
-!!! Signature
+!!! note ""
     getAccountUrl() :string
 
 
@@ -390,7 +390,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 83
 
 
-!!! Signature
+!!! note ""
     getDate() :[DateTimeImmutable](# "\DateTimeImmutable")
 
 
@@ -412,7 +412,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 96
 
 
-!!! Signature
+!!! note ""
     getDescription() :string
 
 
@@ -434,7 +434,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 141
 
 
-!!! Signature
+!!! note ""
     getFilesCount() :int
 
 
@@ -456,7 +456,7 @@ int
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 123
 
 
-!!! Signature
+!!! note ""
     getIssue() :[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 
 
@@ -478,7 +478,7 @@ int
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 132
 
 
-!!! Signature
+!!! note ""
     getPatchCount() :int
 
 
@@ -500,7 +500,7 @@ int
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 105
 
 
-!!! Signature
+!!! note ""
     getProject() :string
 
 
@@ -522,7 +522,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 114
 
 
-!!! Signature
+!!! note ""
     getProjectUrl() :string
 
 
@@ -544,7 +544,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 150
 
 
-!!! Signature
+!!! note ""
     getStatus() :string
 
 
@@ -566,7 +566,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 159
 
 
-!!! Signature
+!!! note ""
     getTechnology() :string
 
 
@@ -588,7 +588,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 75
 
 
-!!! Signature
+!!! note ""
     getTitle() :string
 
 
@@ -610,7 +610,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 79
 
 
-!!! Signature
+!!! note ""
     getUrl() :string
 
 
@@ -632,7 +632,7 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 91
 
 
-!!! Signature
+!!! note ""
     setAccountUrl(string $accountUrl) :self
 
 
@@ -658,7 +658,7 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 100
 
 
-!!! Signature
+!!! note ""
     setDescription(string $description) :self
 
 
@@ -684,7 +684,7 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 145
 
 
-!!! Signature
+!!! note ""
     setFilesCount(int $filesCount) :self
 
 
@@ -710,7 +710,7 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 127
 
 
-!!! Signature
+!!! note ""
     setIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :self
 
 
@@ -736,7 +736,7 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 136
 
 
-!!! Signature
+!!! note ""
     setPatchCount(int $patchCount) :self
 
 
@@ -762,7 +762,7 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 109
 
 
-!!! Signature
+!!! note ""
     setProject(string $project) :self
 
 
@@ -788,7 +788,7 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 118
 
 
-!!! Signature
+!!! note ""
     setProjectUrl(string $projectUrl) :self
 
 
@@ -814,7 +814,7 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 154
 
 
-!!! Signature
+!!! note ""
     setStatus(string $status) :self
 
 
@@ -840,7 +840,7 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 163
 
 
-!!! Signature
+!!! note ""
     setTechnology(string $technology) :self
 
 

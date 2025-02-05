@@ -62,7 +62,7 @@
 
 *Creates the discovery object.*
 
-!!! Signature
+!!! note ""
     __construct([Traversable](# "\Traversable") $namespaces, [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") $cache_backend, [ModuleHandlerInterface](# "\Drupal\Core\Extension\ModuleHandlerInterface") $module_handler) :mixed
 
 

@@ -106,7 +106,7 @@ User to be processed.
 
 *User value object constructor.*
 
-!!! Signature
+!!! note ""
     __construct(string $plugin_id, [User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
@@ -134,7 +134,7 @@ The user object.
 [ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 37
 
 
-!!! Signature
+!!! note ""
     getPluginId() :string
 
 
@@ -156,7 +156,7 @@ string
 [ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 41
 
 
-!!! Signature
+!!! note ""
     getUser() :[User](# "\Drupal\user\Entity\User")
 
 

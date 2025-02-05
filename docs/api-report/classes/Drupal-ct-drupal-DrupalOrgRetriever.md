@@ -130,7 +130,7 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 
 *ContributionRetriever constructor.*
 
-!!! Signature
+!!! note ""
     __construct([Client](../classes/Drupal-ct-drupal-Client.md) $client, [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") $cacheBackend) :mixed
 
 
@@ -159,7 +159,7 @@ The injected cache backend service.
 
 *Get comments by an user on drupal.org.*
 
-!!! Signature
+!!! note ""
     getCommentsByAuthor(mixed $uid) :[CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
 
@@ -191,7 +191,7 @@ List of comments from drupal.org.
 
 *Get node data from drupal.org.*
 
-!!! Signature
+!!! note ""
     getDrupalOrgNode(mixed $nid, mixed $cacheExpiry = Cache::PERMANENT) :[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
@@ -228,7 +228,7 @@ The node data from drupal.org.
 
 *Get node data from drupal.org.*
 
-!!! Signature
+!!! note ""
     getDrupalOrgNodeFromApi(mixed $nid) :[Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
 
@@ -260,7 +260,7 @@ The node data from drupal.org.
 
 *Get file data from drupal.org.*
 
-!!! Signature
+!!! note ""
     getFile(int $fid) :[File](# "\Hussainweb\DrupalApi\Entity\File")
 
 

@@ -69,7 +69,7 @@
 
 *Get message for notification.*
 
-!!! Signature
+!!! note ""
     getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# "\Drupal\user\Entity\User") $user) :string
 
 
@@ -98,7 +98,7 @@ string
 
 *Get comments from the total contribution data.*
 
-!!! Signature
+!!! note ""
     getUserCodeContributions([User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
@@ -121,7 +121,7 @@ string
 
 *Get issues from the total contribution data.*
 
-!!! Signature
+!!! note ""
     getUserIssues([User](# "\Drupal\user\Entity\User") $user) :mixed
 
 
@@ -144,7 +144,7 @@ string
 
 *Get users which can be processed by this plugin.*
 
-!!! Signature
+!!! note ""
     getUsers() :mixed
 
 
@@ -163,7 +163,7 @@ string
 
 *Get user contributions from the platform.*
 
-!!! Signature
+!!! note ""
     isUserValid([User](# "\Drupal\user\Entity\User") $user) :bool
 
 

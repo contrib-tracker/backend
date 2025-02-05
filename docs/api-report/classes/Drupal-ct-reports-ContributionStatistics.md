@@ -114,7 +114,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 *Contribution storage constructor.*
 
-!!! Signature
+!!! note ""
     __construct([EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface") $entityTypeManager, [Connection](# "\Drupal\Core\Database\Connection") $database) :mixed
 
 
@@ -139,7 +139,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 *Calcuate total contributions with patches.*
 
-!!! Signature
+!!! note ""
     codeContributions() :int
 
 
@@ -162,7 +162,7 @@ int
 
 *Calcuates total contributions.*
 
-!!! Signature
+!!! note ""
     totalContributions() :int
 
 
@@ -185,7 +185,7 @@ int
 
 *Calcuate total number of contributors.*
 
-!!! Signature
+!!! note ""
     totalContributors() :int
 
 

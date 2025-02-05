@@ -163,7 +163,7 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 
 *{@inheritdoc}*
 
-!!! Signature
+!!! note ""
     __construct(array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition, [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage, [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface") $logger, [Slack](# "\Drupal\slack\Slack") $slackService) :mixed
 
 
@@ -198,7 +198,7 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 
 *{@inheritdoc}*
 
-!!! Signature
+!!! note ""
     static create([ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface") $container, array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition) :mixed
 
 
@@ -227,7 +227,7 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 
 *Collects user contribution and stores it.*
 
-!!! Signature
+!!! note ""
     processItem(mixed $data) :mixed
 
 
