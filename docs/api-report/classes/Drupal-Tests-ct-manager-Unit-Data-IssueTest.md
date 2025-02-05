@@ -72,9 +72,8 @@
 
 *Test simple issue creation.*
 
-```php
-testIssueCreation() :mixed
-```
+!!! info
+    testIssueCreation() :mixed
 
 
 

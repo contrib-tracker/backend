@@ -50,9 +50,9 @@
 *Implements hook_theme().*
 
 
-```php
-ct_reports_theme(mixed $existing) :mixed
-```
+!!! Info
+    ct_reports_theme(mixed $existing) :mixed
+
 
 **Parameters**
 

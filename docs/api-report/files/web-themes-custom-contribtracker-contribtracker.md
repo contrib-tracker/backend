@@ -64,9 +64,9 @@
 
 
 
-```php
-contribtracker_theme_suggestions_block_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
-```
+!!! Info
+    contribtracker_theme_suggestions_block_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
+
 
 **Parameters**
 
@@ -87,9 +87,9 @@ contribtracker_theme_suggestions_block_alter(array&lt;string|int, mixed&gt;  &$s
 *Implements hook_theme_suggestions_form_alter().*
 
 
-```php
-contribtracker_theme_suggestions_form_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
-```
+!!! Info
+    contribtracker_theme_suggestions_form_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
+
 
 **Parameters**
 
@@ -110,9 +110,9 @@ contribtracker_theme_suggestions_form_alter(array&lt;string|int, mixed&gt;  &$su
 *Implements hook_theme_suggestions_table_alter().*
 
 
-```php
-contribtracker_theme_suggestions_table_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
-```
+!!! Info
+    contribtracker_theme_suggestions_table_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
+
 
 **Parameters**
 
@@ -133,9 +133,9 @@ contribtracker_theme_suggestions_table_alter(array&lt;string|int, mixed&gt;  &$s
 *Implements hook_theme_preprocess_page_alter().*
 
 
-```php
-contribtracker_theme_preprocess_page_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
-```
+!!! Info
+    contribtracker_theme_preprocess_page_alter(array&lt;string|int, mixed&gt;  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
+
 
 **Parameters**
 
@@ -156,9 +156,9 @@ contribtracker_theme_preprocess_page_alter(array&lt;string|int, mixed&gt;  &$sug
 *Implements hook_theme_suggestions_input_alter().*
 
 
-```php
-contribtracker_theme_suggestions_input_alter(mixed  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
-```
+!!! Info
+    contribtracker_theme_suggestions_input_alter(mixed  &$suggestions, array&lt;string|int, mixed&gt; $variables) :mixed
+
 
 **Parameters**
 

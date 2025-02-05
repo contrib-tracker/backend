@@ -114,9 +114,8 @@ protected [NodeStorageInterface](# \Drupal\node\NodeStorageInterface) $nodeStora
 
 *Contribution storage constructor.*
 
-```php
-__construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [Connection](# \Drupal\Core\Database\Connection) $database) :mixed
-```
+!!! info
+    __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [Connection](# \Drupal\Core\Database\Connection) $database) :mixed
 
 
 
@@ -140,9 +139,8 @@ __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManager
 
 *Calcuate total contributions with patches.*
 
-```php
-codeContributions() :int
-```
+!!! info
+    codeContributions() :int
 
 
 
@@ -164,9 +162,8 @@ int
 
 *Calcuates total contributions.*
 
-```php
-totalContributions() :int
-```
+!!! info
+    totalContributions() :int
 
 
 
@@ -188,9 +185,8 @@ int
 
 *Calcuate total number of contributors.*
 
-```php
-totalContributors() :int
-```
+!!! info
+    totalContributors() :int
 
 
 

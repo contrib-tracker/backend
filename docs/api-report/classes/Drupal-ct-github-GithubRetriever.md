@@ -135,9 +135,8 @@ protected string $username
 
 *ContributionRetriever constructor.*
 
-```php
-__construct([GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, string $user) :mixed
-```
+!!! info
+    __construct([GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, string $user) :mixed
 
 
 
@@ -165,9 +164,8 @@ The user name.
 
 *Get PR commits and issue comments for user.*
 
-```php
-getCodeContributions() :mixed
-```
+!!! info
+    getCodeContributions() :mixed
 
 
 
@@ -185,9 +183,8 @@ getCodeContributions() :mixed
 
 *Get issues for user.*
 
-```php
-getIssues() :mixed
-```
+!!! info
+    getIssues() :mixed
 
 
 
@@ -205,9 +202,8 @@ getIssues() :mixed
 
 *Returns user&#039;s contribution.*
 
-```php
-getUserContributions(mixed $username) :mixed
-```
+!!! info
+    getUserContributions(mixed $username) :mixed
 
 
 

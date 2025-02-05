@@ -50,9 +50,9 @@
 *Implements hook_mail_alter().*
 
 
-```php
-contrib_tracker_mail_alter(mixed  &$message) :mixed
-```
+!!! Info
+    contrib_tracker_mail_alter(mixed  &$message) :mixed
+
 CONT-36 Disable all mails in non prod environments.
 
 We ALLOW mail sending for non platformsh environments.

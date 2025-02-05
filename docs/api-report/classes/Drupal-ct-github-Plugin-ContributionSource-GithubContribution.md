@@ -184,9 +184,8 @@ protected bool $tokenValid
 
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
-```php
-__construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, [ConfigFactoryInterface](# \Drupal\Core\Config\ConfigFactoryInterface) $configFactory) :mixed
-```
+!!! info
+    __construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query, [ConfigFactoryInterface](# \Drupal\Core\Config\ConfigFactoryInterface) $configFactory) :mixed
 
 
 
@@ -228,9 +227,8 @@ The injected github query service.
 
 *{@inheritdoc}*
 
-```php
-static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
-```
+!!! info
+    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
 
 
 
@@ -258,9 +256,8 @@ static create([ContainerInterface](# \Symfony\Component\DependencyInjection\Cont
 
 *Get message for notification.*
 
-```php
-getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
-```
+!!! info
+    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
 
 
 
@@ -288,9 +285,8 @@ string
 
 *Get comments from the total contribution data.*
 
-```php
-getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
-```
+!!! info
+    getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 
 
 
@@ -312,9 +308,8 @@ getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 
 *Get issues from the total contribution data.*
 
-```php
-getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
-```
+!!! info
+    getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 
 
 
@@ -336,9 +331,8 @@ getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 
 *Get all users with github username.*
 
-```php
-getUsers() :mixed
-```
+!!! info
+    getUsers() :mixed
 
 
 
@@ -356,9 +350,8 @@ getUsers() :mixed
 
 *Get user contributions from the platform.*
 
-```php
-isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
-```
+!!! info
+    isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
 
 
 
@@ -384,9 +377,8 @@ bool
 
 *Returns a user retriever object.*
 
-```php
-getOrCreateRetriever([User](# \Drupal\user\Entity\User) $user) :[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
-```
+!!! info
+    getOrCreateRetriever([User](# \Drupal\user\Entity\User) $user) :[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
 
 
 

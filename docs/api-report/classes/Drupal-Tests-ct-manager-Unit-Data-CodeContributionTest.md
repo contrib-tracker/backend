@@ -74,9 +74,8 @@
 [CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 28
 
 
-```php
-testChainedCodeContribution() :mixed
-```
+!!! info
+    testChainedCodeContribution() :mixed
 
 
 
@@ -94,9 +93,8 @@ testChainedCodeContribution() :mixed
 
 *Test simple code contribution creation.*
 
-```php
-testCodeContributionCreation() :mixed
-```
+!!! info
+    testCodeContributionCreation() :mixed
 
 
 

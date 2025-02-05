@@ -97,9 +97,8 @@ The loggerFactory interface alias.
 
 *ContribTrackerEventListener constructor.*
 
-```php
-__construct([LoggerChannelFactoryInterface](# \Drupal\Core\Logger\LoggerChannelFactoryInterface) $loggerChannelFactory) :mixed
-```
+!!! info
+    __construct([LoggerChannelFactoryInterface](# \Drupal\Core\Logger\LoggerChannelFactoryInterface) $loggerChannelFactory) :mixed
 
 
 
@@ -123,9 +122,8 @@ Logger Channel Factory interface.
 
 *Returns an array of event names this subscriber wants to listen to.*
 
-```php
-static getSubscribedEvents() :mixed
-```
+!!! info
+    static getSubscribedEvents() :mixed
 
 
 
@@ -143,9 +141,8 @@ static getSubscribedEvents() :mixed
 
 *Reacts to the event when users fields are being gathered via Social Auth.*
 
-```php
-onSocialAuthUserFieldEvent([UserFieldsEvent](# \Drupal\social_auth\Event\UserFieldsEvent) $event) :mixed
-```
+!!! info
+    onSocialAuthUserFieldEvent([UserFieldsEvent](# \Drupal\social_auth\Event\UserFieldsEvent) $event) :mixed
 
 
 
@@ -161,7 +158,7 @@ Object returned by UserEvent.
 ### Tags
 
 - **throws**
-  - Type: `[EntityStorageException](# \Drupal\Core\Entity\EntityStorageException)`
+  - Type: [EntityStorageException](# \Drupal\Core\Entity\EntityStorageException)
   - 
 
 

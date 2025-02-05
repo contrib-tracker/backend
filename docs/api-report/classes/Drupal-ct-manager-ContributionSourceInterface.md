@@ -69,9 +69,8 @@
 
 *Get message for notification.*
 
-```php
-getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
-```
+!!! info
+    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
 
 
 
@@ -99,9 +98,8 @@ string
 
 *Get comments from the total contribution data.*
 
-```php
-getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
-```
+!!! info
+    getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 
 
 
@@ -123,9 +121,8 @@ getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 
 *Get issues from the total contribution data.*
 
-```php
-getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
-```
+!!! info
+    getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 
 
 
@@ -147,9 +144,8 @@ getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 
 *Get users which can be processed by this plugin.*
 
-```php
-getUsers() :mixed
-```
+!!! info
+    getUsers() :mixed
 
 
 
@@ -167,9 +163,8 @@ getUsers() :mixed
 
 *Get user contributions from the platform.*
 
-```php
-isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
-```
+!!! info
+    isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
 
 
 

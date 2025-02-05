@@ -129,9 +129,8 @@ URL of the contribution.
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 24
 
 
-```php
-__construct(string $title, string $url) :mixed
-```
+!!! info
+    __construct(string $title, string $url) :mixed
 
 
 
@@ -154,9 +153,8 @@ __construct(string $title, string $url) :mixed
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 37
 
 
-```php
-getDescription() :string
-```
+!!! info
+    getDescription() :string
 
 
 
@@ -177,9 +175,8 @@ string
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 29
 
 
-```php
-getTitle() :string
-```
+!!! info
+    getTitle() :string
 
 
 
@@ -200,9 +197,8 @@ string
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 33
 
 
-```php
-getUrl() :string
-```
+!!! info
+    getUrl() :string
 
 
 
@@ -223,9 +219,8 @@ string
 [Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 41
 
 
-```php
-setDescription(string $description) :self
-```
+!!! info
+    setDescription(string $description) :self
 
 
 

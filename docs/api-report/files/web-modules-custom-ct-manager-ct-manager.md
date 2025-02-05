@@ -50,9 +50,9 @@
 *Implements hook_cron().*
 
 
-```php
-ct_manager_cron() :mixed
-```
+!!! Info
+    ct_manager_cron() :mixed
+
 
 
 

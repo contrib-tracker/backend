@@ -250,9 +250,8 @@ protected int $totalFilesCount
 
 *DrupalOrgCommentDetails constructor.*
 
-```php
-__construct([DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $retriever, [Comment](# \Hussainweb\DrupalApi\Entity\Comment) $comment, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $time_service) :mixed
-```
+!!! info
+    __construct([DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md) $retriever, [Comment](# \Hussainweb\DrupalApi\Entity\Comment) $comment, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $time_service) :mixed
 
 
 
@@ -284,9 +283,8 @@ The datetime.time service.
 
 *Get comment Description.*
 
-```php
-getDescription() :string
-```
+!!! info
+    getDescription() :string
 
 
 
@@ -309,9 +307,8 @@ string
 
 *Get the issue status.*
 
-```php
-getIssueStatus() :string
-```
+!!! info
+    getIssueStatus() :string
 
 
 
@@ -333,9 +330,8 @@ string
 
 *Get the number of patch files in this comment.*
 
-```php
-getPatchFilesCount() :int
-```
+!!! info
+    getPatchFilesCount() :int
 
 
 
@@ -357,9 +353,8 @@ int
 
 *Get the number of all files in this comment.*
 
-```php
-getTotalFilesCount() :int
-```
+!!! info
+    getTotalFilesCount() :int
 
 
 
@@ -381,9 +376,8 @@ int
 
 *Determine the status of the issue.*
 
-```php
-determineIssueStatus() :void
-```
+!!! info
+    determineIssueStatus() :void
 
 
 
@@ -401,9 +395,8 @@ determineIssueStatus() :void
 
 *Translate the status id to text.*
 
-```php
-getStatusFromCode(int $statusId) :string
-```
+!!! info
+    getStatusFromCode(int $statusId) :string
 
 
 
@@ -434,9 +427,8 @@ Readable text corresponding to the status id.
 
 *Determine if this is a patch file.*
 
-```php
-isPatchFile([File](# \Hussainweb\DrupalApi\Entity\File) $fileRecord) :bool
-```
+!!! info
+    isPatchFile([File](# \Hussainweb\DrupalApi\Entity\File) $fileRecord) :bool
 
 
 
@@ -467,9 +459,8 @@ TRUE if this is a patch file, else FALSE.
 
 *Check the type and number of files attached to a comment under a issue.*
 
-```php
-processFileDetails() :void
-```
+!!! info
+    processFileDetails() :void
 
 
 

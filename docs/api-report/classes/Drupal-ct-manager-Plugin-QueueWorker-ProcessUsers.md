@@ -163,9 +163,8 @@ protected [Slack](# \Drupal\slack\Slack) $slackService
 
 *{@inheritdoc}*
 
-```php
-__construct(array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition, [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger, [Slack](# \Drupal\slack\Slack) $slackService) :mixed
-```
+!!! info
+    __construct(array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition, [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md) $pluginManager, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contribStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $logger, [Slack](# \Drupal\slack\Slack) $slackService) :mixed
 
 
 
@@ -199,9 +198,8 @@ __construct(array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixe
 
 *{@inheritdoc}*
 
-```php
-static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition) :mixed
-```
+!!! info
+    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $pluginId, mixed $pluginDefinition) :mixed
 
 
 
@@ -229,9 +227,8 @@ static create([ContainerInterface](# \Symfony\Component\DependencyInjection\Cont
 
 *Collects user contribution and stores it.*
 
-```php
-processItem(mixed $data) :mixed
-```
+!!! info
+    processItem(mixed $data) :mixed
 
 
 

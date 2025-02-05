@@ -342,9 +342,8 @@ URL of the contribution.
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 69
 
 
-```php
-__construct(string $title, string $url, [DateTimeImmutable](# \DateTimeImmutable) $date) :mixed
-```
+!!! info
+    __construct(string $title, string $url, [DateTimeImmutable](# \DateTimeImmutable) $date) :mixed
 
 
 
@@ -369,9 +368,8 @@ __construct(string $title, string $url, [DateTimeImmutable](# \DateTimeImmutable
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 87
 
 
-```php
-getAccountUrl() :string
-```
+!!! info
+    getAccountUrl() :string
 
 
 
@@ -392,9 +390,8 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 83
 
 
-```php
-getDate() :[DateTimeImmutable](# \DateTimeImmutable)
-```
+!!! info
+    getDate() :[DateTimeImmutable](# \DateTimeImmutable)
 
 
 
@@ -415,9 +412,8 @@ getDate() :[DateTimeImmutable](# \DateTimeImmutable)
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 96
 
 
-```php
-getDescription() :string
-```
+!!! info
+    getDescription() :string
 
 
 
@@ -438,9 +434,8 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 141
 
 
-```php
-getFilesCount() :int
-```
+!!! info
+    getFilesCount() :int
 
 
 
@@ -461,9 +456,8 @@ int
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 123
 
 
-```php
-getIssue() :[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
-```
+!!! info
+    getIssue() :[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 
 
 
@@ -484,9 +478,8 @@ getIssue() :[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 132
 
 
-```php
-getPatchCount() :int
-```
+!!! info
+    getPatchCount() :int
 
 
 
@@ -507,9 +500,8 @@ int
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 105
 
 
-```php
-getProject() :string
-```
+!!! info
+    getProject() :string
 
 
 
@@ -530,9 +522,8 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 114
 
 
-```php
-getProjectUrl() :string
-```
+!!! info
+    getProjectUrl() :string
 
 
 
@@ -553,9 +544,8 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 150
 
 
-```php
-getStatus() :string
-```
+!!! info
+    getStatus() :string
 
 
 
@@ -576,9 +566,8 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 159
 
 
-```php
-getTechnology() :string
-```
+!!! info
+    getTechnology() :string
 
 
 
@@ -599,9 +588,8 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 75
 
 
-```php
-getTitle() :string
-```
+!!! info
+    getTitle() :string
 
 
 
@@ -622,9 +610,8 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 79
 
 
-```php
-getUrl() :string
-```
+!!! info
+    getUrl() :string
 
 
 
@@ -645,9 +632,8 @@ string
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 91
 
 
-```php
-setAccountUrl(string $accountUrl) :self
-```
+!!! info
+    setAccountUrl(string $accountUrl) :self
 
 
 
@@ -672,9 +658,8 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 100
 
 
-```php
-setDescription(string $description) :self
-```
+!!! info
+    setDescription(string $description) :self
 
 
 
@@ -699,9 +684,8 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 145
 
 
-```php
-setFilesCount(int $filesCount) :self
-```
+!!! info
+    setFilesCount(int $filesCount) :self
 
 
 
@@ -726,9 +710,8 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 127
 
 
-```php
-setIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :self
-```
+!!! info
+    setIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :self
 
 
 
@@ -753,9 +736,8 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 136
 
 
-```php
-setPatchCount(int $patchCount) :self
-```
+!!! info
+    setPatchCount(int $patchCount) :self
 
 
 
@@ -780,9 +762,8 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 109
 
 
-```php
-setProject(string $project) :self
-```
+!!! info
+    setProject(string $project) :self
 
 
 
@@ -807,9 +788,8 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 118
 
 
-```php
-setProjectUrl(string $projectUrl) :self
-```
+!!! info
+    setProjectUrl(string $projectUrl) :self
 
 
 
@@ -834,9 +814,8 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 154
 
 
-```php
-setStatus(string $status) :self
-```
+!!! info
+    setStatus(string $status) :self
 
 
 
@@ -861,9 +840,8 @@ self
 [CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 163
 
 
-```php
-setTechnology(string $technology) :self
-```
+!!! info
+    setTechnology(string $technology) :self
 
 
 

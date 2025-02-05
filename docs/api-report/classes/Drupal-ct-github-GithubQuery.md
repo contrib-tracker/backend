@@ -117,9 +117,8 @@ protected [Client](# \Github\Client) $client
 
 *Set authentication token to access GitHub API.*
 
-```php
-__construct([ConfigFactory](# \Drupal\Core\Config\ConfigFactory) $config_factory, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cacheBackend) :mixed
-```
+!!! info
+    __construct([ConfigFactory](# \Drupal\Core\Config\ConfigFactory) $config_factory, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cacheBackend) :mixed
 
 
 
@@ -147,9 +146,8 @@ The injected cache backend service.
 
 *GraphQL query to get contributions associated with a user.*
 
-```php
-getQuery(string $username) :string
-```
+!!! info
+    getQuery(string $username) :string
 
 
 
@@ -180,9 +178,8 @@ Github Graphql query object
 
 *API request to get user contributions.*
 
-```php
-getUserContributions(string $username) :mixed
-```
+!!! info
+    getUserContributions(string $username) :mixed
 
 
 
@@ -204,9 +201,8 @@ getUserContributions(string $username) :mixed
 
 *Check username validity.*
 
-```php
-isUserValid(string $username) :bool
-```
+!!! info
+    isUserValid(string $username) :bool
 
 
 

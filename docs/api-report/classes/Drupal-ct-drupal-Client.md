@@ -65,9 +65,8 @@ The decorator just adds a header to set User-Agent for this application.
 
 *{@inheritdoc}*
 
-```php
-getEntity([Request](# \Hussainweb\DrupalApi\Request\Request) $request) :mixed
-```
+!!! info
+    getEntity([Request](# \Hussainweb\DrupalApi\Request\Request) $request) :mixed
 
 
 

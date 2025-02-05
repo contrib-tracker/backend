@@ -145,9 +145,8 @@ protected [TermStorageInterface](# \Drupal\taxonomy\TermStorageInterface) $termS
 
 *Contribution storage constructor.*
 
-```php
-__construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel) :mixed
-```
+!!! info
+    __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel) :mixed
 
 
 
@@ -171,9 +170,8 @@ __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManager
 
 *Get node of type code_contribution.*
 
-```php
-getNodeForCodeContribution(string $commentLink) :[Node](# \Drupal\node\Entity\Node)|null
-```
+!!! info
+    getNodeForCodeContribution(string $commentLink) :[Node](# \Drupal\node\Entity\Node)|null
 
 
 
@@ -199,9 +197,8 @@ getNodeForCodeContribution(string $commentLink) :[Node](# \Drupal\node\Entity\No
 
 *Get issue of type issue.*
 
-```php
-getNodeForIssue(string $issueLink) :[Node](# \Drupal\node\Entity\Node)|null
-```
+!!! info
+    getNodeForIssue(string $issueLink) :[Node](# \Drupal\node\Entity\Node)|null
 
 
 
@@ -227,9 +224,8 @@ getNodeForIssue(string $issueLink) :[Node](# \Drupal\node\Entity\Node)|null
 
 *Retrieves the node detail for issues.*
 
-```php
-getOrCreateIssueNode([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
-```
+!!! info
+    getOrCreateIssueNode([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
 
 
 
@@ -255,9 +251,8 @@ getOrCreateIssueNode([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue)
 
 *Save code contributions.*
 
-```php
-saveCodeContribution([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $comment, [Node](# \Drupal\node\Entity\Node) $issueNode, [User](# \Drupal\user\Entity\User) $user) :[Node](# \Drupal\node\Entity\Node)
-```
+!!! info
+    saveCodeContribution([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $comment, [Node](# \Drupal\node\Entity\Node) $issueNode, [User](# \Drupal\user\Entity\User) $user) :[Node](# \Drupal\node\Entity\Node)
 
 
 
@@ -287,9 +282,8 @@ saveCodeContribution([CodeContribution](../classes/Drupal-ct-manager-Data-CodeCo
 
 *Save Issues.*
 
-```php
-saveIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
-```
+!!! info
+    saveIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# \Drupal\node\Entity\Node)
 
 
 
@@ -315,9 +309,8 @@ saveIssue([Issue](../classes/Drupal-ct-manager-Data-Issue.md) $issue) :[Node](# 
 
 *Get (or create) a term in a specified vocabulary.*
 
-```php
-getOrCreateTerm(string $termName, string $vocabulary) :[TermInterface](# \Drupal\taxonomy\TermInterface)
-```
+!!! info
+    getOrCreateTerm(string $termName, string $vocabulary) :[TermInterface](# \Drupal\taxonomy\TermInterface)
 
 
 

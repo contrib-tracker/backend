@@ -93,9 +93,8 @@ protected [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerIn
 
 *Constructs a new GetUserPatchesController object.*
 
-```php
-__construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entity_type_manager) :mixed
-```
+!!! info
+    __construct([EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entity_type_manager) :mixed
 
 
 
@@ -119,9 +118,8 @@ The entity type manager.
 
 *Returns a JSON response with daily patches count.*
 
-```php
-content(int $current_user_id) :[JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)
-```
+!!! info
+    content(int $current_user_id) :[JsonResponse](# \Symfony\Component\HttpFoundation\JsonResponse)
 
 
 
@@ -152,9 +150,8 @@ The JSON response.
 
 *{@inheritdoc}*
 
-```php
-static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container) :mixed
-```
+!!! info
+    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container) :mixed
 
 
 

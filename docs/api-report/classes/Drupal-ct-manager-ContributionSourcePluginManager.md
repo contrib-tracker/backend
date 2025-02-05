@@ -62,9 +62,8 @@
 
 *Creates the discovery object.*
 
-```php
-__construct([Traversable](# \Traversable) $namespaces, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache_backend, [ModuleHandlerInterface](# \Drupal\Core\Extension\ModuleHandlerInterface) $module_handler) :mixed
-```
+!!! info
+    __construct([Traversable](# \Traversable) $namespaces, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cache_backend, [ModuleHandlerInterface](# \Drupal\Core\Extension\ModuleHandlerInterface) $module_handler) :mixed
 
 
 

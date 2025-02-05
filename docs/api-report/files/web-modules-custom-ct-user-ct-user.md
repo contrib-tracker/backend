@@ -60,9 +60,9 @@
 
 
 
-```php
-ct_user_theme() :mixed
-```
+!!! Info
+    ct_user_theme() :mixed
+
 
 
 
@@ -77,9 +77,9 @@ ct_user_theme() :mixed
 *Implements hook_help().*
 
 
-```php
-ct_user_help(mixed $route_name, [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface) $route_match) :mixed
-```
+!!! Info
+    ct_user_help(mixed $route_name, [RouteMatchInterface](# \Drupal\Core\Routing\RouteMatchInterface) $route_match) :mixed
+
 
 **Parameters**
 
@@ -100,9 +100,9 @@ ct_user_help(mixed $route_name, [RouteMatchInterface](# \Drupal\Core\Routing\Rou
 *Implements hook_form_alter().*
 
 
-```php
-ct_user_form_alter(mixed  &$form, mixed $form_state, mixed $form_id) :mixed
-```
+!!! Info
+    ct_user_form_alter(mixed  &$form, mixed $form_state, mixed $form_id) :mixed
+
 
 **Parameters**
 
@@ -125,9 +125,9 @@ ct_user_form_alter(mixed  &$form, mixed $form_state, mixed $form_id) :mixed
 *Custom validation function for the user login form.*
 
 
-```php
-ct_user_user_login_form_validate(mixed  &$form, mixed $form_state) :mixed
-```
+!!! Info
+    ct_user_user_login_form_validate(mixed  &$form, mixed $form_state) :mixed
+
 
 **Parameters**
 

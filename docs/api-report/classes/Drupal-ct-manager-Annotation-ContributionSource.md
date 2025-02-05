@@ -29,10 +29,10 @@
 ### Tags
 
 - **see**
-  - Reference: `[ContributionTrackerPluginManager](# \Drupal\ct_manager\ContributionTrackerPluginManager)`
+  - Reference: [ContributionTrackerPluginManager](# \Drupal\ct_manager\ContributionTrackerPluginManager)
   - 
 - **see**
-  - Reference: `[plugin_api](# \Drupal\ct_manager\Annotation\plugin_api)`
+  - Reference: [plugin_api](# \Drupal\ct_manager\Annotation\plugin_api)
   - Note that the "@ Annotation" line below is required and should be the last
 line in the docblock. It's used for discovery of Annotation definitions.
 

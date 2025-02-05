@@ -130,9 +130,8 @@ protected [Client](# \Drupal\ct_drupal\DrupalOrg\Client) $client
 
 *ContributionRetriever constructor.*
 
-```php
-__construct([Client](../classes/Drupal-ct-drupal-Client.md) $client, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cacheBackend) :mixed
-```
+!!! info
+    __construct([Client](../classes/Drupal-ct-drupal-Client.md) $client, [CacheBackendInterface](# \Drupal\Core\Cache\CacheBackendInterface) $cacheBackend) :mixed
 
 
 
@@ -160,9 +159,8 @@ The injected cache backend service.
 
 *Get comments by an user on drupal.org.*
 
-```php
-getCommentsByAuthor(mixed $uid) :[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
-```
+!!! info
+    getCommentsByAuthor(mixed $uid) :[CommentCollection](# \Hussainweb\DrupalApi\Entity\Collection\CommentCollection)
 
 
 
@@ -193,9 +191,8 @@ List of comments from drupal.org.
 
 *Get node data from drupal.org.*
 
-```php
-getDrupalOrgNode(mixed $nid, mixed $cacheExpiry = Cache::PERMANENT) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
-```
+!!! info
+    getDrupalOrgNode(mixed $nid, mixed $cacheExpiry = Cache::PERMANENT) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
 
 
 
@@ -231,9 +228,8 @@ The node data from drupal.org.
 
 *Get node data from drupal.org.*
 
-```php
-getDrupalOrgNodeFromApi(mixed $nid) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
-```
+!!! info
+    getDrupalOrgNodeFromApi(mixed $nid) :[Node](# \Hussainweb\DrupalApi\Entity\Node)
 
 
 
@@ -264,9 +260,8 @@ The node data from drupal.org.
 
 *Get file data from drupal.org.*
 
-```php
-getFile(int $fid) :[File](# \Hussainweb\DrupalApi\Entity\File)
-```
+!!! info
+    getFile(int $fid) :[File](# \Hussainweb\DrupalApi\Entity\File)
 
 
 

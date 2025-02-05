@@ -73,9 +73,8 @@
 
 *{@inheritdoc}*
 
-```php
-build() :mixed
-```
+!!! info
+    build() :mixed
 
 
 

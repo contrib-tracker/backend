@@ -218,9 +218,8 @@ protected [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeServi
 
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
-```php
-__construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md) $doRetriever, [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever) $doUserInfoRetriever, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contributionStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService) :mixed
-```
+!!! info
+    __construct(array&lt;string|int, mixed&gt; $configuration, string $plugin_id, mixed $plugin_definition, [EntityTypeManagerInterface](# \Drupal\Core\Entity\EntityTypeManagerInterface) $entityTypeManager, [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md) $doRetriever, [DOUserInfoRetriever](# \Drupal\do_username\DOUserInfoRetriever) $doUserInfoRetriever, [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md) $contributionStorage, [LoggerChannelInterface](# \Drupal\Core\Logger\LoggerChannelInterface) $loggerChannel, [TimeInterface](# \Drupal\Component\Datetime\TimeInterface) $timeService) :mixed
 
 
 
@@ -276,9 +275,8 @@ The datetime.time service.
 
 *{@inheritdoc}*
 
-```php
-static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
-```
+!!! info
+    static create([ContainerInterface](# \Symfony\Component\DependencyInjection\ContainerInterface) $container, array&lt;string|int, mixed&gt; $configuration, mixed $plugin_id, mixed $plugin_definition) :mixed
 
 
 
@@ -306,9 +304,8 @@ static create([ContainerInterface](# \Symfony\Component\DependencyInjection\Cont
 
 *Get message for notification.*
 
-```php
-getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
-```
+!!! info
+    getNotificationMessage([CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md) $contribution, [User](# \Drupal\user\Entity\User) $user) :string
 
 
 
@@ -336,9 +333,8 @@ string
 
 *Get comments from the total contribution data.*
 
-```php
-getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
-```
+!!! info
+    getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 
 
 
@@ -360,9 +356,8 @@ getUserCodeContributions([User](# \Drupal\user\Entity\User) $user) :mixed
 
 *Get issues from the total contribution data.*
 
-```php
-getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
-```
+!!! info
+    getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 
 
 
@@ -389,9 +384,8 @@ getUserIssues([User](# \Drupal\user\Entity\User) $user) :mixed
 
 *Get all users with drupal.org username.*
 
-```php
-getUsers() :mixed
-```
+!!! info
+    getUsers() :mixed
 
 
 
@@ -409,9 +403,8 @@ getUsers() :mixed
 
 *Get user contributions from the platform.*
 
-```php
-isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
-```
+!!! info
+    isUserValid([User](# \Drupal\user\Entity\User) $user) :bool
 
 
 
