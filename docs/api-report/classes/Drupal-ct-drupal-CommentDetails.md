@@ -273,11 +273,17 @@ protected int $totalFilesCount
 **Parameters**
 
 - **$retriever**: [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)
-    The injected contribution retriever service.
+  
+  *The injected contribution retriever service.*
+
 - **$comment**: [Comment](# "\Hussainweb\DrupalApi\Entity\Comment")
-    The comment data from drupal.org.
+  
+  *The comment data from drupal.org.*
+
 - **$time_service**: [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface")
-    The datetime.time service.
+  
+  *The datetime.time service.*
+
 
 
 
@@ -411,7 +417,9 @@ Fix for relative user url used in comment section.
 **Parameters**
 
 - **$statusId**: int
-    Issue status id.
+  
+  *Issue status id.*
+
 
 
 
@@ -439,7 +447,9 @@ Fix for relative user url used in comment section.
 **Parameters**
 
 - **$fileRecord**: [File](# "\Hussainweb\DrupalApi\Entity\File")
-    The file data returned from API.
+  
+  *The file data returned from API.*
+
 
 
 

@@ -76,7 +76,9 @@
 **Parameters**
 
 - **$uid**: int
-    The user ID of the author.
+  
+  *The user ID of the author.*
+
 
 
 
@@ -104,10 +106,14 @@
 **Parameters**
 
 - **$nid**: int
-    The nid of the node on drupal.org.
+  
+  *The nid of the node on drupal.org.*
+
 - **$cacheExpiry**: int
-    - Default: `Cache::PERMANENT`
-    The cache expiry for the item.
+    **Default:** `Cache::PERMANENT`
+  
+  *The cache expiry for the item.*
+
 
 
 
@@ -135,7 +141,9 @@
 **Parameters**
 
 - **$nid**: int
-    The nid of the node on drupal.org.
+  
+  *The nid of the node on drupal.org.*
+
 
 
 
@@ -163,7 +171,9 @@
 **Parameters**
 
 - **$fid**: int
-    The fid of the file on drupal.org.
+  
+  *The fid of the file on drupal.org.*
+
 
 
 

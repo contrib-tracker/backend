@@ -129,9 +129,13 @@ protected [Client](# "\Github\Client") $client
 **Parameters**
 
 - **$config_factory**: [ConfigFactory](# "\Drupal\Core\Config\ConfigFactory")
-    The config factory.
+  
+  *The config factory.*
+
 - **$cacheBackend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
-    The injected cache backend service.
+  
+  *The injected cache backend service.*
+
 
 
 
@@ -154,7 +158,9 @@ protected [Client](# "\Github\Client") $client
 **Parameters**
 
 - **$username**: string
-    The Github username.
+  
+  *The Github username.*
+
 
 
 
@@ -182,7 +188,9 @@ protected [Client](# "\Github\Client") $client
 **Parameters**
 
 - **$username**: string
-    
+  
+  **
+
 
 
 
@@ -205,7 +213,9 @@ protected [Client](# "\Github\Client") $client
 **Parameters**
 
 - **$username**: string
-    
+  
+  **
+
 
 
 

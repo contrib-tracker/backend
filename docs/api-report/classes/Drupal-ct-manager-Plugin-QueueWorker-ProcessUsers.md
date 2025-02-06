@@ -174,19 +174,33 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 **Parameters**
 
 - **$configuration**: array&lt;string|int, mixed&gt;
-    
+  
+  **
+
 - **$pluginId**: mixed
-    
+  
+  **
+
 - **$pluginDefinition**: mixed
-    
+  
+  **
+
 - **$pluginManager**: [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md)
-    
+  
+  **
+
 - **$contribStorage**: [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)
-    
+  
+  **
+
 - **$logger**: [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")
-    
+  
+  **
+
 - **$slackService**: [Slack](# "\Drupal\slack\Slack")
-    
+  
+  **
+
 
 
 
@@ -209,13 +223,21 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 **Parameters**
 
 - **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
-    
+  
+  **
+
 - **$configuration**: array&lt;string|int, mixed&gt;
-    
+  
+  **
+
 - **$pluginId**: mixed
-    
+  
+  **
+
 - **$pluginDefinition**: mixed
-    
+  
+  **
+
 
 
 
@@ -238,7 +260,9 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 **Parameters**
 
 - **$data**: mixed
-    
+  
+  **
+
 
 
 

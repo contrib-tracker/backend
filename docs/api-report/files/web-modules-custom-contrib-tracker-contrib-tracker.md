@@ -61,7 +61,9 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$message**: mixed
-    
+  
+  **
+
 
 
 

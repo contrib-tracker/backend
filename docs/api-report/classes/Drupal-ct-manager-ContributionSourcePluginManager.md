@@ -70,12 +70,18 @@
 **Parameters**
 
 - **$namespaces**: [Traversable](# "\Traversable")
-    An object that implements \Traversable which contains the root paths
-keyed by the corresponding namespace to look for plugin implementations.
+  
+  *An object that implements \Traversable which contains the root paths
+keyed by the corresponding namespace to look for plugin implementations.*
+
 - **$cache_backend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
-    Cache backend instance to use.
+  
+  *Cache backend instance to use.*
+
 - **$module_handler**: [ModuleHandlerInterface](# "\Drupal\Core\Extension\ModuleHandlerInterface")
-    The module handler to invoke the alter hook with.
+  
+  *The module handler to invoke the alter hook with.*
+
 
 
 

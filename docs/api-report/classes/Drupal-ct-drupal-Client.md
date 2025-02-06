@@ -72,7 +72,9 @@ The decorator just adds a header to set User-Agent for this application.
 **Parameters**
 
 - **$request**: [Request](# "\Hussainweb\DrupalApi\Request\Request")
-    
+  
+  **
+
 
 
 

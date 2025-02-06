@@ -112,9 +112,13 @@ User to be processed.
 **Parameters**
 
 - **$plugin_id**: string
-    The plugin id.
+  
+  *The plugin id.*
+
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    The user object.
+  
+  *The user object.*
+
 
 
 
