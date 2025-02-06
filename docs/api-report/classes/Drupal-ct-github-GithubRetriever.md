@@ -28,7 +28,6 @@ provide methods to return information relevant to the application.
 
 
 
-
 ### Table of Contents
 
 
@@ -149,13 +148,9 @@ protected string $username
 **Parameters**
 
 - **$query**: [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)
-    
-The github query service.
-
+    The github query service.
 - **$user**: string
-    
-The user name.
-
+    The user name.
 
 
 

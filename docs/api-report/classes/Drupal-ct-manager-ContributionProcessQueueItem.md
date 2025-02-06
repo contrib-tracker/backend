@@ -79,7 +79,6 @@ Plugin ID.
 
 
 
-
 #### $user
 
 <small>[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 22</small>
@@ -89,7 +88,6 @@ Plugin ID.
 protected [User](# "\Drupal\user\Entity\User") $user
 
 User to be processed.
-
 
 
 
@@ -114,13 +112,9 @@ User to be processed.
 **Parameters**
 
 - **$plugin_id**: string
-    
-The plugin id.
-
+    The plugin id.
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    
-The user object.
-
+    The user object.
 
 
 

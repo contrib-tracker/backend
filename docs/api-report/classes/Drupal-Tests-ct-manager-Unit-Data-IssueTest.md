@@ -26,10 +26,8 @@
 
 - **group**
   - ct_manager
-
 - **coversDefaultClass**
   - \Drupal\ct_manager\Data\Issue
-
 
 
 

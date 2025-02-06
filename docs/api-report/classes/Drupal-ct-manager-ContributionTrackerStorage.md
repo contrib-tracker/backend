@@ -326,13 +326,9 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Parameters**
 
 - **$termName**: string
-    
-Name of the term to be retrieved or created.
-
+    Name of the term to be retrieved or created.
 - **$vocabulary**: string
-    
-Machine name of the vocabulary.
-
+    Machine name of the vocabulary.
 
 
 
@@ -342,9 +338,7 @@ Machine name of the vocabulary.
 
 - [TermInterface](# "\Drupal\taxonomy\TermInterface")
 
-
-The term with the given name in the given vocabulary.
-
+  *The term with the given name in the given vocabulary.*
 
 
 

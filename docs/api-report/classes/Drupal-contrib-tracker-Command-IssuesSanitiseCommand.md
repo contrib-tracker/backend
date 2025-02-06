@@ -35,7 +35,6 @@
 
 
 
-
 ### Table of Contents
 
 
@@ -166,17 +165,11 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$ctStorage**: [ContributionStorageInterface](# "\Drupal\contrib_tracker\ContributionStorageInterface")
-    
-The contrib tracker storage service.
-
+    The contrib tracker storage service.
 - **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
-    
-The entity type manager service.
-
+    The entity type manager service.
 - **$database**: [Connection](# "\Drupal\Core\Database\Connection")
-    
-The database connection.
-
+    The database connection.
 
 
 
@@ -249,9 +242,7 @@ The database connection.
 
 - array&lt;string|int, string&gt;
 
-
-Array of IDs which are duplicated.
-
+  *Array of IDs which are duplicated.*
 
 
 #### getNidsForDoIssue()
@@ -269,9 +260,7 @@ Array of IDs which are duplicated.
 **Parameters**
 
 - **$issueId**: string
-    
-The d.o issue ID.
-
+    The d.o issue ID.
 
 
 
@@ -281,9 +270,7 @@ The d.o issue ID.
 
 - array&lt;string|int, int&gt;
 
-
-Array of node ids.
-
+  *Array of node ids.*
 
 
 #### updateReferencesForIssueNid()
@@ -301,13 +288,9 @@ Array of node ids.
 **Parameters**
 
 - **$issueNids**: array&lt;string|int, int&gt;
-    
-The node ids to be searched and replaced.
-
+    The node ids to be searched and replaced.
 - **$originalNid**: array&lt;string|int, int&gt;
-    
-The updated node id value.
-
+    The updated node id value.
 
 
 
@@ -317,9 +300,7 @@ The updated node id value.
 
 - int
 
-
-Number of records updated.
-
+  *Number of records updated.*
 
 
 

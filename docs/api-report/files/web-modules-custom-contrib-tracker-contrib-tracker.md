@@ -17,7 +17,6 @@
 
 
 
-
 ### Table of Contents
 
 
@@ -59,7 +58,6 @@ CONT-36 Disable all mails in non prod environments.
 We ALLOW mail sending for non platformsh environments.
 We ALLOW mail for platformsh production envrionments.
 We DO NOT ALLOW mail sending for non production platformsh environments.
-
 **Parameters**
 
 - **$message**: mixed

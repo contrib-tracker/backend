@@ -32,7 +32,6 @@
   - Reference: [plugin_api](# "\Drupal\ct_manager\Annotation\plugin_api")
   - Note that the "@ Annotation" line below is required and should be the last
 line in the docblock. It's used for discovery of Annotation definitions.
-
 - **Annotation**
   - 
 
@@ -80,7 +79,6 @@ public [Translation](# "\Drupal\Core\Annotation\Translation") $description
 
 - **ingroup**
   - plugin_translatable
-
 
 
 

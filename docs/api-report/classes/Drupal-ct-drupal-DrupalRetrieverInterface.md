@@ -76,9 +76,7 @@
 **Parameters**
 
 - **$uid**: int
-    
-The user ID of the author.
-
+    The user ID of the author.
 
 
 
@@ -88,9 +86,7 @@ The user ID of the author.
 
 - [CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
-
-List of comments from drupal.org.
-
+  *List of comments from drupal.org.*
 
 
 #### getDrupalOrgNode()
@@ -108,14 +104,10 @@ List of comments from drupal.org.
 **Parameters**
 
 - **$nid**: int
-    
-The nid of the node on drupal.org.
-
+    The nid of the node on drupal.org.
 - **$cacheExpiry**: int
     - Default: `Cache::PERMANENT`
-    
-The cache expiry for the item.
-
+    The cache expiry for the item.
 
 
 
@@ -125,9 +117,7 @@ The cache expiry for the item.
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
-
-The node data from drupal.org.
-
+  *The node data from drupal.org.*
 
 
 #### getDrupalOrgNodeFromApi()
@@ -145,9 +135,7 @@ The node data from drupal.org.
 **Parameters**
 
 - **$nid**: int
-    
-The nid of the node on drupal.org.
-
+    The nid of the node on drupal.org.
 
 
 
@@ -157,9 +145,7 @@ The nid of the node on drupal.org.
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
-
-The node data from drupal.org.
-
+  *The node data from drupal.org.*
 
 
 #### getFile()
@@ -177,9 +163,7 @@ The node data from drupal.org.
 **Parameters**
 
 - **$fid**: int
-    
-The fid of the file on drupal.org.
-
+    The fid of the file on drupal.org.
 
 
 
@@ -189,9 +173,7 @@ The fid of the file on drupal.org.
 
 - [File](# "\Hussainweb\DrupalApi\Entity\File")
 
-
-The file data from drupal.org.
-
+  *The file data from drupal.org.*
 
 
 

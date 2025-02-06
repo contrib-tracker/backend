@@ -25,12 +25,10 @@ This class is responsible for retrieving data from drupal.org API's using
 the drupal.org client service. It provides methods to return information
 relevant to the application.
 
-
 ### Tags
 
 - **SuppressWarnings**
   - (PHPMD)
-
 
 
 
@@ -144,13 +142,9 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 **Parameters**
 
 - **$client**: [Client](../classes/Drupal-ct-drupal-Client.md)
-    
-The injected drupal.org client.
-
+    The injected drupal.org client.
 - **$cacheBackend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
-    
-The injected cache backend service.
-
+    The injected cache backend service.
 
 
 
@@ -173,9 +167,7 @@ The injected cache backend service.
 **Parameters**
 
 - **$uid**: mixed
-    
-The user ID of the author.
-
+    The user ID of the author.
 
 
 
@@ -185,9 +177,7 @@ The user ID of the author.
 
 - [CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
-
-List of comments from drupal.org.
-
+  *List of comments from drupal.org.*
 
 
 #### getDrupalOrgNode()
@@ -205,14 +195,10 @@ List of comments from drupal.org.
 **Parameters**
 
 - **$nid**: mixed
-    
-The nid of the node on drupal.org.
-
+    The nid of the node on drupal.org.
 - **$cacheExpiry**: mixed
     - Default: `Cache::PERMANENT`
-    
-The cache expiry for the item.
-
+    The cache expiry for the item.
 
 
 
@@ -222,9 +208,7 @@ The cache expiry for the item.
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
-
-The node data from drupal.org.
-
+  *The node data from drupal.org.*
 
 
 #### getDrupalOrgNodeFromApi()
@@ -242,9 +226,7 @@ The node data from drupal.org.
 **Parameters**
 
 - **$nid**: mixed
-    
-The nid of the node on drupal.org.
-
+    The nid of the node on drupal.org.
 
 
 
@@ -254,9 +236,7 @@ The nid of the node on drupal.org.
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
-
-The node data from drupal.org.
-
+  *The node data from drupal.org.*
 
 
 #### getFile()
@@ -274,9 +254,7 @@ The node data from drupal.org.
 **Parameters**
 
 - **$fid**: int
-    
-The fid of the file on drupal.org.
-
+    The fid of the file on drupal.org.
 
 
 
@@ -286,9 +264,7 @@ The fid of the file on drupal.org.
 
 - [File](# "\Hussainweb\DrupalApi\Entity\File")
 
-
-The file data from drupal.org.
-
+  *The file data from drupal.org.*
 
 
 

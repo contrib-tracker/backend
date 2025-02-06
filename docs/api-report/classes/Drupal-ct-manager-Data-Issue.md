@@ -86,7 +86,6 @@ Description.
 
 
 
-
 #### $title
 
 <small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 12</small>
@@ -101,7 +100,6 @@ Title.
 
 
 
-
 #### $url
 
 <small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 22</small>
@@ -111,7 +109,6 @@ Title.
 protected string $url
 
 URL of the contribution.
-
 
 
 

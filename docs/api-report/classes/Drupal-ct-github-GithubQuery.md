@@ -29,7 +29,6 @@ Pull Requests.
 
 
 
-
 ### Table of Contents
 
 
@@ -130,13 +129,9 @@ protected [Client](# "\Github\Client") $client
 **Parameters**
 
 - **$config_factory**: [ConfigFactory](# "\Drupal\Core\Config\ConfigFactory")
-    
-The config factory.
-
+    The config factory.
 - **$cacheBackend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
-    
-The injected cache backend service.
-
+    The injected cache backend service.
 
 
 
@@ -159,9 +154,7 @@ The injected cache backend service.
 **Parameters**
 
 - **$username**: string
-    
-The Github username.
-
+    The Github username.
 
 
 
@@ -171,9 +164,7 @@ The Github username.
 
 - string
 
-
-Github Graphql query object
-
+  *Github Graphql query object*
 
 
 #### getUserContributions()

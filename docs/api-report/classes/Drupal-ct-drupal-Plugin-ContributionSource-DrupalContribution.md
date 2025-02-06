@@ -36,7 +36,6 @@
 
 
 
-
 ### Table of Contents
 
 
@@ -236,41 +235,23 @@ protected [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $timeSer
 **Parameters**
 
 - **$configuration**: array&lt;string|int, mixed&gt;
-    
-A configuration array containing information about the plugin instance.
-
+    A configuration array containing information about the plugin instance.
 - **$plugin_id**: string
-    
-The plugin_id for the plugin instance.
-
+    The plugin_id for the plugin instance.
 - **$plugin_definition**: mixed
-    
-The plugin_definition for the plugin instance.
-
+    The plugin_definition for the plugin instance.
 - **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
-    
-The injected entity type manager service.
-
+    The injected entity type manager service.
 - **$doRetriever**: [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md)
-    
-Wrapper for Drupal.org API.
-
+    Wrapper for Drupal.org API.
 - **$doUserInfoRetriever**: [DOUserInfoRetriever](# "\Drupal\do_username\DOUserInfoRetriever")
-    
-The injected DO UserInfoRetriever service.
-
+    The injected DO UserInfoRetriever service.
 - **$contributionStorage**: [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)
-    
-The contribution storage service.
-
+    The contribution storage service.
 - **$loggerChannel**: [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")
-    
-The logger service.
-
+    The logger service.
 - **$timeService**: [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface")
-    
-The datetime.time service.
-
+    The datetime.time service.
 
 
 
@@ -381,7 +362,6 @@ The datetime.time service.
 
 - **SuppressWarnings**
   - (PHPMD.UnusedFormalParameter)
-
 
 
 

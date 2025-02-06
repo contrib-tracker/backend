@@ -164,7 +164,6 @@ URL of user account on the platform.
 
 
 
-
 #### $date
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 17</small>
@@ -174,7 +173,6 @@ URL of user account on the platform.
 protected [DateTimeImmutable](# "\DateTimeImmutable") $date
 
 Date of the contribution.
-
 
 
 
@@ -194,7 +192,6 @@ Description.
 
 
 
-
 #### $filesCount
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 52</small>
@@ -204,7 +201,6 @@ Description.
 protected int $filesCount = 0
 
 File count.
-
 
 
 
@@ -224,7 +220,6 @@ Related issue.
 
 
 
-
 #### $patchCount
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 47</small>
@@ -234,7 +229,6 @@ Related issue.
 protected int $patchCount = 0
 
 Patch count.
-
 
 
 
@@ -254,7 +248,6 @@ Project.
 
 
 
-
 #### $projectUrl
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 42</small>
@@ -264,7 +257,6 @@ Project.
 protected string $projectUrl = &#039;&#039;
 
 ProjectUrl.
-
 
 
 
@@ -284,7 +276,6 @@ Status.
 
 
 
-
 #### $technology
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 62</small>
@@ -294,7 +285,6 @@ Status.
 protected string $technology = &#039;&#039;
 
 Technology.
-
 
 
 
@@ -314,7 +304,6 @@ Title.
 
 
 
-
 #### $url
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 22</small>
@@ -324,7 +313,6 @@ Title.
 protected string $url
 
 URL of the contribution.
-
 
 
 

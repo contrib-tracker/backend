@@ -103,9 +103,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$entity_type_manager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
-    
-The entity type manager.
-
+    The entity type manager.
 
 
 
@@ -128,9 +126,7 @@ The entity type manager.
 **Parameters**
 
 - **$current_user_id**: int
-    
-The user ID for which you want to retrieve patches.
-
+    The user ID for which you want to retrieve patches.
 
 
 
@@ -140,9 +136,7 @@ The user ID for which you want to retrieve patches.
 
 - [JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
 
-
-The JSON response.
-
+  *The JSON response.*
 
 
 #### create()
