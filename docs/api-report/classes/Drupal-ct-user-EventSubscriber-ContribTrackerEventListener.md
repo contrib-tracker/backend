@@ -105,8 +105,10 @@ The loggerFactory interface alias.
 **Parameters**
 
 - **$loggerChannelFactory**: [LoggerChannelFactoryInterface](# "\Drupal\Core\Logger\LoggerChannelFactoryInterface")
-      *Logger Channel Factory interface.*
-  
+
+  *Logger Channel Factory interface.*
+
+
 
 
 
@@ -147,8 +149,10 @@ The loggerFactory interface alias.
 **Parameters**
 
 - **$event**: [UserFieldsEvent](# "\Drupal\social_auth\Event\UserFieldsEvent")
-      *Object returned by UserEvent.*
-  
+
+  *Object returned by UserEvent.*
+
+
 
 ### Tags
 

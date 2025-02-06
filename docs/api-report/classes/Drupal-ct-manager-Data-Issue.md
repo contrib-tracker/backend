@@ -132,8 +132,12 @@ URL of the contribution.
 **Parameters**
 
 - **$title**: string
-    - **$url**: string
-    
+
+
+- **$url**: string
+
+
+
 
 
 
@@ -220,7 +224,9 @@ URL of the contribution.
 **Parameters**
 
 - **$description**: string
-    
+
+
+
 
 
 

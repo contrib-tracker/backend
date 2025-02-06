@@ -142,10 +142,14 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 **Parameters**
 
 - **$client**: [Client](../classes/Drupal-ct-drupal-Client.md)
-      *The injected drupal.org client.*
-  - **$cacheBackend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
-      *The injected cache backend service.*
-  
+
+  *The injected drupal.org client.*
+
+- **$cacheBackend**: [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")
+
+  *The injected cache backend service.*
+
+
 
 
 
@@ -167,8 +171,10 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 **Parameters**
 
 - **$uid**: mixed
-      *The user ID of the author.*
-  
+
+  *The user ID of the author.*
+
+
 
 
 
@@ -195,11 +201,15 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 **Parameters**
 
 - **$nid**: mixed
-      *The nid of the node on drupal.org.*
-  - **$cacheExpiry**: mixed
-    **Default:** `Cache::PERMANENT`
-      *The cache expiry for the item.*
-  
+
+  *The nid of the node on drupal.org.*
+
+- **$cacheExpiry**: mixed
+
+  **Default:** `Cache::PERMANENT`
+  *The cache expiry for the item.*
+
+
 
 
 
@@ -226,8 +236,10 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 **Parameters**
 
 - **$nid**: mixed
-      *The nid of the node on drupal.org.*
-  
+
+  *The nid of the node on drupal.org.*
+
+
 
 
 
@@ -254,8 +266,10 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 **Parameters**
 
 - **$fid**: int
-      *The fid of the file on drupal.org.*
-  
+
+  *The fid of the file on drupal.org.*
+
+
 
 
 

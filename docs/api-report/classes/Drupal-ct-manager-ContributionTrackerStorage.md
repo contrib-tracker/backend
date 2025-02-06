@@ -162,8 +162,12 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Parameters**
 
 - **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
-    - **$loggerChannel**: [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")
-    
+
+
+- **$loggerChannel**: [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")
+
+
+
 
 
 
@@ -185,7 +189,9 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Parameters**
 
 - **$commentLink**: string
-    
+
+
+
 
 
 
@@ -211,7 +217,9 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Parameters**
 
 - **$issueLink**: string
-    
+
+
+
 
 
 
@@ -237,7 +245,9 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Parameters**
 
 - **$issue**: [Issue](../classes/Drupal-ct-manager-Data-Issue.md)
-    
+
+
+
 
 
 
@@ -263,9 +273,15 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Parameters**
 
 - **$comment**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
-    - **$issueNode**: [Node](# "\Drupal\node\Entity\Node")
-    - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+- **$issueNode**: [Node](# "\Drupal\node\Entity\Node")
+
+
+- **$user**: [User](# "\Drupal\user\Entity\User")
+
+
+
 
 
 
@@ -291,7 +307,9 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Parameters**
 
 - **$issue**: [Issue](../classes/Drupal-ct-manager-Data-Issue.md)
-    
+
+
+
 
 
 
@@ -317,10 +335,14 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Parameters**
 
 - **$termName**: string
-      *Name of the term to be retrieved or created.*
-  - **$vocabulary**: string
-      *Machine name of the vocabulary.*
-  
+
+  *Name of the term to be retrieved or created.*
+
+- **$vocabulary**: string
+
+  *Machine name of the vocabulary.*
+
+
 
 
 

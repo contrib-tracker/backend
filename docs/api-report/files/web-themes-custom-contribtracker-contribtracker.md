@@ -74,8 +74,12 @@
 **Parameters**
 
 - **$suggestions**: array&lt;string|int, mixed&gt;
-    - **$variables**: array&lt;string|int, mixed&gt;
-    
+
+
+- **$variables**: array&lt;string|int, mixed&gt;
+
+
+
 
 
 
@@ -95,8 +99,12 @@
 **Parameters**
 
 - **$suggestions**: array&lt;string|int, mixed&gt;
-    - **$variables**: array&lt;string|int, mixed&gt;
-    
+
+
+- **$variables**: array&lt;string|int, mixed&gt;
+
+
+
 
 
 
@@ -116,8 +124,12 @@
 **Parameters**
 
 - **$suggestions**: array&lt;string|int, mixed&gt;
-    - **$variables**: array&lt;string|int, mixed&gt;
-    
+
+
+- **$variables**: array&lt;string|int, mixed&gt;
+
+
+
 
 
 
@@ -137,8 +149,12 @@
 **Parameters**
 
 - **$suggestions**: array&lt;string|int, mixed&gt;
-    - **$variables**: array&lt;string|int, mixed&gt;
-    
+
+
+- **$variables**: array&lt;string|int, mixed&gt;
+
+
+
 
 
 
@@ -158,8 +174,12 @@
 **Parameters**
 
 - **$suggestions**: mixed
-    - **$variables**: array&lt;string|int, mixed&gt;
-    
+
+
+- **$variables**: array&lt;string|int, mixed&gt;
+
+
+
 
 
 

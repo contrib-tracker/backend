@@ -103,8 +103,10 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$entity_type_manager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
-      *The entity type manager.*
-  
+
+  *The entity type manager.*
+
+
 
 
 
@@ -126,8 +128,10 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$current_user_id**: int
-      *The user ID for which you want to retrieve patches.*
-  
+
+  *The user ID for which you want to retrieve patches.*
+
+
 
 
 
@@ -154,7 +158,9 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
-    
+
+
+
 
 
 

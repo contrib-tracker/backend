@@ -148,10 +148,14 @@ protected string $username
 **Parameters**
 
 - **$query**: [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)
-      *The github query service.*
-  - **$user**: string
-      *The user name.*
-  
+
+  *The github query service.*
+
+- **$user**: string
+
+  *The user name.*
+
+
 
 
 
@@ -211,7 +215,9 @@ protected string $username
 **Parameters**
 
 - **$username**: mixed
-    
+
+
+
 
 
 

@@ -127,8 +127,12 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 **Parameters**
 
 - **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
-    - **$database**: [Connection](# "\Drupal\Core\Database\Connection")
-    
+
+
+- **$database**: [Connection](# "\Drupal\Core\Database\Connection")
+
+
+
 
 
 

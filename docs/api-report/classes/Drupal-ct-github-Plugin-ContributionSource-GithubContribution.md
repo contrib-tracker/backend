@@ -200,17 +200,29 @@ protected bool $tokenValid
 **Parameters**
 
 - **$configuration**: array&lt;string|int, mixed&gt;
-      *A configuration array containing information about the plugin instance.*
-  - **$plugin_id**: string
-      *The plugin_id for the plugin instance.*
-  - **$plugin_definition**: mixed
-      *The plugin_definition for the plugin instance.*
-  - **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
-      *The injected entity type manager service.*
-  - **$query**: [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)
-      *The injected github query service.*
-  - **$configFactory**: [ConfigFactoryInterface](# "\Drupal\Core\Config\ConfigFactoryInterface")
-    
+
+  *A configuration array containing information about the plugin instance.*
+
+- **$plugin_id**: string
+
+  *The plugin_id for the plugin instance.*
+
+- **$plugin_definition**: mixed
+
+  *The plugin_definition for the plugin instance.*
+
+- **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
+
+  *The injected entity type manager service.*
+
+- **$query**: [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)
+
+  *The injected github query service.*
+
+- **$configFactory**: [ConfigFactoryInterface](# "\Drupal\Core\Config\ConfigFactoryInterface")
+
+
+
 
 
 
@@ -232,10 +244,18 @@ protected bool $tokenValid
 **Parameters**
 
 - **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
-    - **$configuration**: array&lt;string|int, mixed&gt;
-    - **$plugin_id**: mixed
-    - **$plugin_definition**: mixed
-    
+
+
+- **$configuration**: array&lt;string|int, mixed&gt;
+
+
+- **$plugin_id**: mixed
+
+
+- **$plugin_definition**: mixed
+
+
+
 
 
 
@@ -257,8 +277,12 @@ protected bool $tokenValid
 **Parameters**
 
 - **$contribution**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
-    - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+- **$user**: [User](# "\Drupal\user\Entity\User")
+
+
+
 
 
 
@@ -284,7 +308,9 @@ protected bool $tokenValid
 **Parameters**
 
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+
 
 
 
@@ -306,7 +332,9 @@ protected bool $tokenValid
 **Parameters**
 
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+
 
 
 
@@ -347,7 +375,9 @@ protected bool $tokenValid
 **Parameters**
 
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+
 
 
 
@@ -373,7 +403,9 @@ protected bool $tokenValid
 **Parameters**
 
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+
 
 
 

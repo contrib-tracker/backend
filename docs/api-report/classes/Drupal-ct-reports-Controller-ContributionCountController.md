@@ -103,7 +103,9 @@ protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatis
 **Parameters**
 
 - **$contrib_stats**: [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatistics")
-    
+
+
+
 
 
 
@@ -144,7 +146,9 @@ protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatis
 **Parameters**
 
 - **$container**: [ContainerInterface](# "\Symfony\Component\DependencyInjection\ContainerInterface")
-    
+
+
+
 
 
 

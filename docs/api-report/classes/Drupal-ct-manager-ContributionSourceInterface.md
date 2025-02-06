@@ -81,8 +81,12 @@
 **Parameters**
 
 - **$contribution**: [CodeContribution](../classes/Drupal-ct-manager-Data-CodeContribution.md)
-    - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+- **$user**: [User](# "\Drupal\user\Entity\User")
+
+
+
 
 
 
@@ -108,7 +112,9 @@
 **Parameters**
 
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+
 
 
 
@@ -130,7 +136,9 @@
 **Parameters**
 
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+
 
 
 
@@ -171,7 +179,9 @@
 **Parameters**
 
 - **$user**: [User](# "\Drupal\user\Entity\User")
-    
+
+
+
 
 
 

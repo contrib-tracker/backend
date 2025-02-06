@@ -336,9 +336,15 @@ URL of the contribution.
 **Parameters**
 
 - **$title**: string
-    - **$url**: string
-    - **$date**: [DateTimeImmutable](# "\DateTimeImmutable")
-    
+
+
+- **$url**: string
+
+
+- **$date**: [DateTimeImmutable](# "\DateTimeImmutable")
+
+
+
 
 
 
@@ -623,7 +629,9 @@ URL of the contribution.
 **Parameters**
 
 - **$accountUrl**: string
-    
+
+
+
 
 
 
@@ -648,7 +656,9 @@ URL of the contribution.
 **Parameters**
 
 - **$description**: string
-    
+
+
+
 
 
 
@@ -673,7 +683,9 @@ URL of the contribution.
 **Parameters**
 
 - **$filesCount**: int
-    
+
+
+
 
 
 
@@ -698,7 +710,9 @@ URL of the contribution.
 **Parameters**
 
 - **$issue**: [Issue](../classes/Drupal-ct-manager-Data-Issue.md)
-    
+
+
+
 
 
 
@@ -723,7 +737,9 @@ URL of the contribution.
 **Parameters**
 
 - **$patchCount**: int
-    
+
+
+
 
 
 
@@ -748,7 +764,9 @@ URL of the contribution.
 **Parameters**
 
 - **$project**: string
-    
+
+
+
 
 
 
@@ -773,7 +791,9 @@ URL of the contribution.
 **Parameters**
 
 - **$projectUrl**: string
-    
+
+
+
 
 
 
@@ -798,7 +818,9 @@ URL of the contribution.
 **Parameters**
 
 - **$status**: string
-    
+
+
+
 
 
 
@@ -823,7 +845,9 @@ URL of the contribution.
 **Parameters**
 
 - **$technology**: string
-    
+
+
+
 
 
 
