@@ -285,6 +285,8 @@ The injected github query service.
 
 - string
 
+
+
 #### getUserCodeContributions()
 
 <small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 150</small>
@@ -375,6 +377,8 @@ The injected github query service.
 
 - bool
 
+
+
 #### getOrCreateRetriever()
 
 <small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 125</small>
@@ -399,5 +403,7 @@ The injected github query service.
 **Return Values**
 
 - [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
+
+
 
 

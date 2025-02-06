@@ -139,7 +139,10 @@ The user ID for which you want to retrieve patches.
 **Return Values**
 
 - [JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
+
+
 The JSON response.
+
 
 
 #### create()

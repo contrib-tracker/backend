@@ -380,6 +380,8 @@ URL of the contribution.
 
 - string
 
+
+
 #### getDate()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 83</small>
@@ -399,6 +401,8 @@ URL of the contribution.
 **Return Values**
 
 - [DateTimeImmutable](# "\DateTimeImmutable")
+
+
 
 #### getDescription()
 
@@ -420,6 +424,8 @@ URL of the contribution.
 
 - string
 
+
+
 #### getFilesCount()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 141</small>
@@ -439,6 +445,8 @@ URL of the contribution.
 **Return Values**
 
 - int
+
+
 
 #### getIssue()
 
@@ -460,6 +468,8 @@ URL of the contribution.
 
 - [Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 
+
+
 #### getPatchCount()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 132</small>
@@ -479,6 +489,8 @@ URL of the contribution.
 **Return Values**
 
 - int
+
+
 
 #### getProject()
 
@@ -500,6 +512,8 @@ URL of the contribution.
 
 - string
 
+
+
 #### getProjectUrl()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 114</small>
@@ -519,6 +533,8 @@ URL of the contribution.
 **Return Values**
 
 - string
+
+
 
 #### getStatus()
 
@@ -540,6 +556,8 @@ URL of the contribution.
 
 - string
 
+
+
 #### getTechnology()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 159</small>
@@ -559,6 +577,8 @@ URL of the contribution.
 **Return Values**
 
 - string
+
+
 
 #### getTitle()
 
@@ -580,6 +600,8 @@ URL of the contribution.
 
 - string
 
+
+
 #### getUrl()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 79</small>
@@ -599,6 +621,8 @@ URL of the contribution.
 **Return Values**
 
 - string
+
+
 
 #### setAccountUrl()
 
@@ -624,6 +648,8 @@ URL of the contribution.
 
 - self
 
+
+
 #### setDescription()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 100</small>
@@ -647,6 +673,8 @@ URL of the contribution.
 **Return Values**
 
 - self
+
+
 
 #### setFilesCount()
 
@@ -672,6 +700,8 @@ URL of the contribution.
 
 - self
 
+
+
 #### setIssue()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 127</small>
@@ -695,6 +725,8 @@ URL of the contribution.
 **Return Values**
 
 - self
+
+
 
 #### setPatchCount()
 
@@ -720,6 +752,8 @@ URL of the contribution.
 
 - self
 
+
+
 #### setProject()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 109</small>
@@ -743,6 +777,8 @@ URL of the contribution.
 **Return Values**
 
 - self
+
+
 
 #### setProjectUrl()
 
@@ -768,6 +804,8 @@ URL of the contribution.
 
 - self
 
+
+
 #### setStatus()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 154</small>
@@ -792,6 +830,8 @@ URL of the contribution.
 
 - self
 
+
+
 #### setTechnology()
 
 <small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 163</small>
@@ -815,5 +855,7 @@ URL of the contribution.
 **Return Values**
 
 - self
+
+
 
 

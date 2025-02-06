@@ -248,7 +248,10 @@ The database connection.
 **Return Values**
 
 - array&lt;string|int, string&gt;
+
+
 Array of IDs which are duplicated.
+
 
 
 #### getNidsForDoIssue()
@@ -277,7 +280,10 @@ The d.o issue ID.
 **Return Values**
 
 - array&lt;string|int, int&gt;
+
+
 Array of node ids.
+
 
 
 #### updateReferencesForIssueNid()
@@ -310,7 +316,10 @@ The updated node id value.
 **Return Values**
 
 - int
+
+
 Number of records updated.
+
 
 
 

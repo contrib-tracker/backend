@@ -314,6 +314,8 @@ Fix for relative user url used in comment section.
 
 - string
 
+
+
 #### getIssueStatus()
 
 <small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 116</small>
@@ -334,6 +336,8 @@ Fix for relative user url used in comment section.
 **Return Values**
 
 - string
+
+
 
 #### getPatchFilesCount()
 
@@ -356,6 +360,8 @@ Fix for relative user url used in comment section.
 
 - int
 
+
+
 #### getTotalFilesCount()
 
 <small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 104</small>
@@ -376,6 +382,8 @@ Fix for relative user url used in comment section.
 **Return Values**
 
 - int
+
+
 
 #### determineIssueStatus()
 
@@ -422,7 +430,10 @@ Issue status id.
 **Return Values**
 
 - string
+
+
 Readable text corresponding to the status id.
+
 
 
 #### isPatchFile()
@@ -451,7 +462,10 @@ The file data returned from API.
 **Return Values**
 
 - bool
+
+
 TRUE if this is a patch file, else FALSE.
+
 
 
 #### processFileDetails()

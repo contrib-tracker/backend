@@ -170,7 +170,10 @@ The Github username.
 **Return Values**
 
 - string
+
+
 Github Graphql query object
+
 
 
 #### getUserContributions()
@@ -220,5 +223,7 @@ Github Graphql query object
 **Return Values**
 
 - bool
+
+
 
 

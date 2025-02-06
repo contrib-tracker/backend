@@ -148,6 +148,8 @@ The user object.
 
 - string
 
+
+
 #### getUser()
 
 <small>[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 41</small>
@@ -167,5 +169,7 @@ The user object.
 **Return Values**
 
 - [User](# "\Drupal\user\Entity\User")
+
+
 
 

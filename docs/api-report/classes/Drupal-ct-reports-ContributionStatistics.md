@@ -158,6 +158,8 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 - int
 
+
+
 #### totalContributions()
 
 <small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 40</small>
@@ -179,6 +181,8 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 - int
 
+
+
 #### totalContributors()
 
 <small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 65</small>
@@ -199,5 +203,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 **Return Values**
 
 - int
+
+
 
 

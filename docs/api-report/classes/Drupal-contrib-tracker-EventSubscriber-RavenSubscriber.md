@@ -86,6 +86,8 @@
 
 - array&lt;string|int, mixed&gt;
 
+
+
 #### onRavenOptionsAlter()
 
 <small>[RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 16</small>

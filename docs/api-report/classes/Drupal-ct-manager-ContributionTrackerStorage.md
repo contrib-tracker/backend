@@ -197,6 +197,8 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 - [Node](# "\Drupal\node\Entity\Node")|null
 
+
+
 #### getNodeForIssue()
 
 <small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 109</small>
@@ -222,6 +224,8 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 - [Node](# "\Drupal\node\Entity\Node")|null
 
+
+
 #### getOrCreateIssueNode()
 
 <small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 135</small>
@@ -246,6 +250,8 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Return Values**
 
 - [Node](# "\Drupal\node\Entity\Node")
+
+
 
 #### saveCodeContribution()
 
@@ -276,6 +282,8 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 - [Node](# "\Drupal\node\Entity\Node")
 
+
+
 #### saveIssue()
 
 <small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 52</small>
@@ -300,6 +308,8 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 **Return Values**
 
 - [Node](# "\Drupal\node\Entity\Node")
+
+
 
 #### getOrCreateTerm()
 
@@ -331,7 +341,10 @@ Machine name of the vocabulary.
 **Return Values**
 
 - [TermInterface](# "\Drupal\taxonomy\TermInterface")
+
+
 The term with the given name in the given vocabulary.
+
 
 
 

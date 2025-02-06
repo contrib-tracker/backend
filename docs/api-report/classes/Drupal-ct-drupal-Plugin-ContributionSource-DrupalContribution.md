@@ -334,6 +334,8 @@ The datetime.time service.
 
 - string
 
+
+
 #### getUserCodeContributions()
 
 <small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 157</small>
@@ -428,5 +430,7 @@ The datetime.time service.
 **Return Values**
 
 - bool
+
+
 
 

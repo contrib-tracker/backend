@@ -87,7 +87,10 @@ The user ID of the author.
 **Return Values**
 
 - [CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
+
+
 List of comments from drupal.org.
+
 
 
 #### getDrupalOrgNode()
@@ -121,7 +124,10 @@ The cache expiry for the item.
 **Return Values**
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
+
+
 The node data from drupal.org.
+
 
 
 #### getDrupalOrgNodeFromApi()
@@ -150,7 +156,10 @@ The nid of the node on drupal.org.
 **Return Values**
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
+
+
 The node data from drupal.org.
+
 
 
 #### getFile()
@@ -179,7 +188,10 @@ The fid of the file on drupal.org.
 **Return Values**
 
 - [File](# "\Hussainweb\DrupalApi\Entity\File")
+
+
 The file data from drupal.org.
+
 
 
 

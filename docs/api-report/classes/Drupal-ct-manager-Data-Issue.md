@@ -165,6 +165,8 @@ URL of the contribution.
 
 - string
 
+
+
 #### getTitle()
 
 <small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 29</small>
@@ -185,6 +187,8 @@ URL of the contribution.
 
 - string
 
+
+
 #### getUrl()
 
 <small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 33</small>
@@ -204,6 +208,8 @@ URL of the contribution.
 **Return Values**
 
 - string
+
+
 
 #### setDescription()
 
@@ -228,5 +234,7 @@ URL of the contribution.
 **Return Values**
 
 - self
+
+
 
 
