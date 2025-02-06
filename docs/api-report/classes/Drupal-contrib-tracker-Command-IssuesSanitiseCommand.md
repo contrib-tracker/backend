@@ -49,41 +49,41 @@
 #### Properties
 - **[$contribTrackStorage](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#contribtrackstorage)**
          : [ContributionStorageInterface](# "\Drupal\contrib_tracker\ContributionStorageInterface")  
-*Drupal\contrib_tracker\ContributionStorageInterface definition.*
+  *Drupal\contrib_tracker\ContributionStorageInterface definition.*
 
 - **[$database](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#database)**
          : [Connection](# "\Drupal\Core\Database\Connection")  
-*Drupal\Core\Database\Driver\mysql\Connection definition.*
+  *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
 - **[$entityTypeManager](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#entitytypemanager)**
          : [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")  
-*Drupal\Core\Entity\EntityTypeManagerInterface definition.*
+  *Drupal\Core\Entity\EntityTypeManagerInterface definition.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#__construct)**
            : mixed
-*IssuesSanitiseCommand constructor.*
+  *IssuesSanitiseCommand constructor.*
 
 - **[configure()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#configure)**
            : mixed
-*{@inheritdoc}*
+  *{@inheritdoc}*
 
 - **[execute()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#execute)**
            : mixed
-*{@inheritdoc}*
+  *{@inheritdoc}*
 
 - **[getDuplicateIssueDoIds()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#getduplicateissuedoids)**
            : array&lt;string|int, string&gt;
-*Get a list of IDs which are duplicated.*
+  *Get a list of IDs which are duplicated.*
 
 - **[getNidsForDoIssue()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#getnidsfordoissue)**
            : array&lt;string|int, int&gt;
-*Get node ids linked to a d.o issue.*
+  *Get node ids linked to a d.o issue.*
 
 - **[updateReferencesForIssueNid()](../classes/Drupal-contrib-tracker-Command-IssuesSanitiseCommand.md#updatereferencesforissuenid)**
            : int
-*Replace references to various node ids with a different node id.*
+  *Replace references to various node ids with a different node id.*
 
 
 

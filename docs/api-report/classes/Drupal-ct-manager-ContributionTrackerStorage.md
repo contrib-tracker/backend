@@ -40,45 +40,45 @@
 #### Properties
 - **[$logger](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#logger)**
          : [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface")  
-*Logger.*
+  *Logger.*
 
 - **[$nodeStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#nodestorage)**
          : [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface")  
-*Node storage controller.*
+  *Node storage controller.*
 
 - **[$termStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#termstorage)**
          : [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface")  
-*Term storage controller.*
+  *Term storage controller.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#__construct)**
            : mixed
-*Contribution storage constructor.*
+  *Contribution storage constructor.*
 
 - **[getNodeForCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getnodeforcodecontribution)**
            : [Node](# "\Drupal\node\Entity\Node")|null
-*Get node of type code_contribution.*
+  *Get node of type code_contribution.*
 
 - **[getNodeForIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getnodeforissue)**
            : [Node](# "\Drupal\node\Entity\Node")|null
-*Get issue of type issue.*
+  *Get issue of type issue.*
 
 - **[getOrCreateIssueNode()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getorcreateissuenode)**
            : [Node](# "\Drupal\node\Entity\Node")
-*Retrieves the node detail for issues.*
+  *Retrieves the node detail for issues.*
 
 - **[saveCodeContribution()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#savecodecontribution)**
            : [Node](# "\Drupal\node\Entity\Node")
-*Save code contributions.*
+  *Save code contributions.*
 
 - **[saveIssue()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#saveissue)**
            : [Node](# "\Drupal\node\Entity\Node")
-*Save Issues.*
+  *Save Issues.*
 
 - **[getOrCreateTerm()](../classes/Drupal-ct-manager-ContributionTrackerStorage.md#getorcreateterm)**
            : [TermInterface](# "\Drupal\taxonomy\TermInterface")
-*Get (or create) a term in a specified vocabulary.*
+  *Get (or create) a term in a specified vocabulary.*
 
 
 

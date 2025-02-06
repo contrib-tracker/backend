@@ -45,7 +45,7 @@ The decorator just adds a header to set User-Agent for this application.
 #### Methods
 - **[getEntity()](../classes/Drupal-ct-drupal-Client.md#getentity)**
            : mixed
-*{@inheritdoc}*
+  *{@inheritdoc}*
 
 
 

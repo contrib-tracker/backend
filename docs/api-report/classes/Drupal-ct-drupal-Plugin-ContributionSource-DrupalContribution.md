@@ -54,57 +54,57 @@
 #### Properties
 - **[$contributionStorage](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#contributionstorage)**
          : [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)  
-*Contribution Storage service.*
+  *Contribution Storage service.*
 
 - **[$doRetriever](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#doretriever)**
          : [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md)  
-*Retrievers for each user.*
+  *Retrievers for each user.*
 
 - **[$doUserInfoRetriever](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#douserinforetriever)**
          : [DOUserInfoRetriever](# "\Drupal\do_username\DOUserInfoRetriever")  
-*do_username service.*
+  *do_username service.*
 
 - **[$entityTypeManager](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#entitytypemanager)**
          : [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")  
-*Entity type manager.*
+  *Entity type manager.*
 
 - **[$logger](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#logger)**
          : [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")  
-*Logger.*
+  *Logger.*
 
 - **[$timeService](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#timeservice)**
          : [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface")  
-*datetime.time service.*
+  *datetime.time service.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#__construct)**
            : mixed
-*Constructs a Drupal\rest\Plugin\ResourceBase object.*
+  *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
 - **[create()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#create)**
            : mixed
-*{@inheritdoc}*
+  *{@inheritdoc}*
 
 - **[getNotificationMessage()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#getnotificationmessage)**
            : string
-*Get message for notification.*
+  *Get message for notification.*
 
 - **[getUserCodeContributions()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#getusercodecontributions)**
            : mixed
-*Get comments from the total contribution data.*
+  *Get comments from the total contribution data.*
 
 - **[getUserIssues()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#getuserissues)**
            : mixed
-*Get issues from the total contribution data.*
+  *Get issues from the total contribution data.*
 
 - **[getUsers()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#getusers)**
            : mixed
-*Get all users with drupal.org username.*
+  *Get all users with drupal.org username.*
 
 - **[isUserValid()](../classes/Drupal-ct-drupal-Plugin-ContributionSource-DrupalContribution.md#isuservalid)**
            : bool
-*Get user contributions from the platform.*
+  *Get user contributions from the platform.*
 
 
 

@@ -33,7 +33,7 @@
 #### Functions
 - **[ct_manager_cron()](../namespaces/default.md#ct_manager_cron)**
            : mixed
-*Implements hook_cron().*
+  *Implements hook_cron().*
 
 
 

@@ -49,7 +49,7 @@
 #### Methods
 - **[getSubscribedEvents()](../classes/Drupal-contrib-tracker-EventSubscriber-RavenSubscriber.md#getsubscribedevents)**
            : array&lt;string|int, mixed&gt;
-*{@inheritdoc}*
+  *{@inheritdoc}*
 
 - **[onRavenOptionsAlter()](../classes/Drupal-contrib-tracker-EventSubscriber-RavenSubscriber.md#onravenoptionsalter)**
            : void

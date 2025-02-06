@@ -43,21 +43,21 @@
 #### Properties
 - **[$loggerFactory](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#loggerfactory)**
          : [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")  
-*The logger Channel Factory.*
+  *The logger Channel Factory.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#__construct)**
            : mixed
-*ContribTrackerEventListener constructor.*
+  *ContribTrackerEventListener constructor.*
 
 - **[getSubscribedEvents()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#getsubscribedevents)**
            : mixed
-*Returns an array of event names this subscriber wants to listen to.*
+  *Returns an array of event names this subscriber wants to listen to.*
 
 - **[onSocialAuthUserFieldEvent()](../classes/Drupal-ct-user-EventSubscriber-ContribTrackerEventListener.md#onsocialauthuserfieldevent)**
            : mixed
-*Reacts to the event when users fields are being gathered via Social Auth.*
+  *Reacts to the event when users fields are being gathered via Social Auth.*
 
 
 
