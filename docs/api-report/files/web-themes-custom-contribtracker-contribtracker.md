@@ -62,10 +62,9 @@
 
 ### Functions
 
-|  |  |
-| --- | --- |
-| ####contribtracker_theme_suggestions_block_alter() | [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 10
- |
+<a name="contribtracker_theme_suggestions_block_alter"></a>
+#### contribtracker_theme_suggestions_block_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 10
+
 
 
 
@@ -85,10 +84,9 @@
 
 
 ---
-|  |  |
-| --- | --- |
-| ####contribtracker_theme_suggestions_form_alter() | [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 20
- |
+<a name="contribtracker_theme_suggestions_form_alter"></a>
+#### contribtracker_theme_suggestions_form_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 20
+
 
 *Implements hook_theme_suggestions_form_alter().*
 
@@ -109,10 +107,9 @@
 
 
 ---
-|  |  |
-| --- | --- |
-| ####contribtracker_theme_suggestions_table_alter() | [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 29
- |
+<a name="contribtracker_theme_suggestions_table_alter"></a>
+#### contribtracker_theme_suggestions_table_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 29
+
 
 *Implements hook_theme_suggestions_table_alter().*
 
@@ -133,10 +130,9 @@
 
 
 ---
-|  |  |
-| --- | --- |
-| ####contribtracker_theme_preprocess_page_alter() | [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 38
- |
+<a name="contribtracker_theme_preprocess_page_alter"></a>
+#### contribtracker_theme_preprocess_page_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 38
+
 
 *Implements hook_theme_preprocess_page_alter().*
 
@@ -157,10 +153,9 @@
 
 
 ---
-|  |  |
-| --- | --- |
-| ####contribtracker_theme_suggestions_input_alter() | [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 64
- |
+<a name="contribtracker_theme_suggestions_input_alter"></a>
+#### contribtracker_theme_suggestions_input_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 64
+
 
 *Implements hook_theme_suggestions_input_alter().*
 
