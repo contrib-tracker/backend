@@ -17,7 +17,7 @@
 
 
 
-[RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 14
+<small>[RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 14</small>
 
 
 
@@ -67,7 +67,7 @@
 
 #### getSubscribedEvents()
 
-[RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 28
+<small>[RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 28</small>
 
 *{@inheritdoc}*
 
@@ -83,14 +83,11 @@
 
 
 **Return Values**
-
-array&lt;string|int, mixed&gt;
-
-
+- array&lt;string|int, mixed&gt;
 
 #### onRavenOptionsAlter()
 
-[RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 16
+<small>[RavenSubscriber.php](../files/web-modules-custom-contrib-tracker-src-eventsubscriber-ravensubscriber.md) : Line 16</small>
 
 
 !!! note ""

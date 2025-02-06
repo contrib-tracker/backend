@@ -16,7 +16,7 @@
 
 
 
-[ContributionSource.php](../files/web-modules-custom-ct-manager-src-annotation-contributionsource.md) : Line 20
+<small>[ContributionSource.php](../files/web-modules-custom-ct-manager-src-annotation-contributionsource.md) : Line 20</small>
 
 *Defines a Contribution tracker annotation object.*
 
@@ -67,7 +67,7 @@ line in the docblock. It's used for discovery of Annotation definitions.
 
 #### $description
 
-[ContributionSource.php](../files/web-modules-custom-ct-manager-src-annotation-contributionsource.md) : Line 29
+<small>[ContributionSource.php](../files/web-modules-custom-ct-manager-src-annotation-contributionsource.md) : Line 29</small>
 
 *A brief, human readable, description of the ContributionTracker type.*
 

@@ -16,7 +16,7 @@
 
 
 
-[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 14
+<small>[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 14</small>
 
 *A controller to get daily patches count for the last 1 year for each user.*
 
@@ -71,7 +71,7 @@
 
 #### $entityTypeManager
 
-[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 21
+<small>[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 21</small>
 
 *The entity type manager.*
 
@@ -90,7 +90,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 
 #### __construct()
 
-[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 29
+<small>[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 29</small>
 
 *Constructs a new GetUserPatchesController object.*
 
@@ -115,7 +115,7 @@ The entity type manager.
 
 #### content()
 
-[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 49
+<small>[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 49</small>
 
 *Returns a JSON response with daily patches count.*
 
@@ -137,17 +137,13 @@ The user ID for which you want to retrieve patches.
 
 
 **Return Values**
-
-[JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
-
-
+- [JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
 The JSON response.
-
 
 
 #### create()
 
-[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 36
+<small>[GetUserPatchesController.php](../files/web-modules-custom-ct-user-src-controller-getuserpatchescontroller.md) : Line 36</small>
 
 *{@inheritdoc}*
 

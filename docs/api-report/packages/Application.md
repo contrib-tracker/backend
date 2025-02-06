@@ -130,8 +130,8 @@
 ### Functions
 
 #### contrib_tracker_mail_alter()
-<small>[contrib_tracker.module](../files/web-modules-custom-contrib-tracker-contrib-tracker.md) : Line 17
-</small>
+<small>[contrib_tracker.module](../files/web-modules-custom-contrib-tracker-contrib-tracker.md) : Line 17</small>
+
 
 *Implements hook_mail_alter().*
 
@@ -156,8 +156,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### ct_manager_cron()
-<small>[ct_manager.module](../files/web-modules-custom-ct-manager-ct-manager.md) : Line 20
-</small>
+<small>[ct_manager.module](../files/web-modules-custom-ct-manager-ct-manager.md) : Line 20</small>
+
 
 *Implements hook_cron().*
 
@@ -173,8 +173,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### ct_reports_theme()
-<small>[ct_reports.module](../files/web-modules-custom-ct-reports-ct-reports.md) : Line 11
-</small>
+<small>[ct_reports.module](../files/web-modules-custom-ct-reports-ct-reports.md) : Line 11</small>
+
 
 *Implements hook_theme().*
 
@@ -194,8 +194,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### ct_user_theme()
-<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 11
-</small>
+<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 11</small>
+
 
 
 
@@ -210,8 +210,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### ct_user_help()
-<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 22
-</small>
+<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 22</small>
+
 
 *Implements hook_help().*
 
@@ -233,8 +233,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### ct_user_form_alter()
-<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 38
-</small>
+<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 38</small>
+
 
 *Implements hook_form_alter().*
 
@@ -258,8 +258,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### ct_user_user_login_form_validate()
-<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 49
-</small>
+<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 49</small>
+
 
 *Custom validation function for the user login form.*
 
@@ -281,8 +281,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### contribtracker_theme_suggestions_block_alter()
-<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 10
-</small>
+<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 10</small>
+
 
 
 
@@ -303,8 +303,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### contribtracker_theme_suggestions_form_alter()
-<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 20
-</small>
+<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 20</small>
+
 
 *Implements hook_theme_suggestions_form_alter().*
 
@@ -326,8 +326,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### contribtracker_theme_suggestions_table_alter()
-<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 29
-</small>
+<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 29</small>
+
 
 *Implements hook_theme_suggestions_table_alter().*
 
@@ -349,8 +349,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### contribtracker_theme_preprocess_page_alter()
-<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 38
-</small>
+<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 38</small>
+
 
 *Implements hook_theme_preprocess_page_alter().*
 
@@ -372,8 +372,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 
 ---
 #### contribtracker_theme_suggestions_input_alter()
-<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 64
-</small>
+<small>[contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 64</small>
+
 
 *Implements hook_theme_suggestions_input_alter().*
 

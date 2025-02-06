@@ -16,7 +16,7 @@
 
 
 
-[ContribGraph.php](../files/web-modules-custom-ct-user-src-plugin-block-contribgraph.md) : Line 16
+<small>[ContribGraph.php](../files/web-modules-custom-ct-user-src-plugin-block-contribgraph.md) : Line 16</small>
 
 *Provides a block with a contribution commit graph.*
 
@@ -66,7 +66,7 @@
 
 #### build()
 
-[ContribGraph.php](../files/web-modules-custom-ct-user-src-plugin-block-contribgraph.md) : Line 21
+<small>[ContribGraph.php](../files/web-modules-custom-ct-user-src-plugin-block-contribgraph.md) : Line 21</small>
 
 *{@inheritdoc}*
 

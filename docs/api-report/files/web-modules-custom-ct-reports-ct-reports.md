@@ -45,8 +45,8 @@
 ### Functions
 
 #### ct_reports_theme()
-<small>[ct_reports.module](../files/web-modules-custom-ct-reports-ct-reports.md) : Line 11
-</small>
+<small>[ct_reports.module](../files/web-modules-custom-ct-reports-ct-reports.md) : Line 11</small>
+
 
 *Implements hook_theme().*
 

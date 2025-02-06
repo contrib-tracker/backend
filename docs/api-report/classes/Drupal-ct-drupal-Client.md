@@ -16,7 +16,7 @@
 
 
 
-[Client.php](../files/web-modules-custom-ct-drupal-src-client.md) : Line 15
+<small>[Client.php](../files/web-modules-custom-ct-drupal-src-client.md) : Line 15</small>
 
 *Drupal.org client service.*
 
@@ -60,7 +60,7 @@ The decorator just adds a header to set User-Agent for this application.
 
 #### getEntity()
 
-[Client.php](../files/web-modules-custom-ct-drupal-src-client.md) : Line 20
+<small>[Client.php](../files/web-modules-custom-ct-drupal-src-client.md) : Line 20</small>
 
 *{@inheritdoc}*
 

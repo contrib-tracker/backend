@@ -8,7 +8,7 @@
     - [Application](../packages/Application.md)
   
 
-[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 13
+<small>[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 13</small>
 
 *An interface for all Contribution type plugins.*
 
@@ -68,7 +68,7 @@
 
 #### getNotificationMessage()
 
-[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 38
+<small>[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 38</small>
 
 *Get message for notification.*
 
@@ -90,14 +90,11 @@
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getUserCodeContributions()
 
-[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 33
+<small>[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 33</small>
 
 *Get comments from the total contribution data.*
 
@@ -120,7 +117,7 @@ string
 
 #### getUserIssues()
 
-[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 28
+<small>[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 28</small>
 
 *Get issues from the total contribution data.*
 
@@ -143,7 +140,7 @@ string
 
 #### getUsers()
 
-[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 18
+<small>[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 18</small>
 
 *Get users which can be processed by this plugin.*
 
@@ -162,7 +159,7 @@ string
 
 #### isUserValid()
 
-[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 23
+<small>[ContributionSourceInterface.php](../files/web-modules-custom-ct-manager-src-contributionsourceinterface.md) : Line 23</small>
 
 *Get user contributions from the platform.*
 
@@ -182,9 +179,6 @@ string
 
 
 **Return Values**
-
-bool
-
-
+- bool
 
 

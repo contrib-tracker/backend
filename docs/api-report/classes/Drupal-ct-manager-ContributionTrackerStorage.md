@@ -15,7 +15,7 @@
 
 
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 18
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 18</small>
 
 *Class implementation of the storage utility.*
 
@@ -100,7 +100,7 @@
 
 #### $logger
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 38
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 38</small>
 
 *Logger.*
 
@@ -115,7 +115,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $log
 
 #### $nodeStorage
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 24
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 24</small>
 
 *Node storage controller.*
 
@@ -130,7 +130,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 #### $termStorage
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 31
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 31</small>
 
 *Term storage controller.*
 
@@ -149,7 +149,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 #### __construct()
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 43
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 43</small>
 
 *Contribution storage constructor.*
 
@@ -174,7 +174,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 #### getNodeForCodeContribution()
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 122
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 122</small>
 
 *Get node of type code_contribution.*
 
@@ -194,14 +194,11 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
-
-[Node](# "\Drupal\node\Entity\Node")|null
-
-
+- [Node](# "\Drupal\node\Entity\Node")|null
 
 #### getNodeForIssue()
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 109
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 109</small>
 
 *Get issue of type issue.*
 
@@ -221,14 +218,11 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
-
-[Node](# "\Drupal\node\Entity\Node")|null
-
-
+- [Node](# "\Drupal\node\Entity\Node")|null
 
 #### getOrCreateIssueNode()
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 135
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 135</small>
 
 *Retrieves the node detail for issues.*
 
@@ -248,14 +242,11 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
-
-[Node](# "\Drupal\node\Entity\Node")
-
-
+- [Node](# "\Drupal\node\Entity\Node")
 
 #### saveCodeContribution()
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 70
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 70</small>
 
 *Save code contributions.*
 
@@ -279,14 +270,11 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
-
-[Node](# "\Drupal\node\Entity\Node")
-
-
+- [Node](# "\Drupal\node\Entity\Node")
 
 #### saveIssue()
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 52
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 52</small>
 
 *Save Issues.*
 
@@ -306,14 +294,11 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
-
-[Node](# "\Drupal\node\Entity\Node")
-
-
+- [Node](# "\Drupal\node\Entity\Node")
 
 #### getOrCreateTerm()
 
-[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 154
+<small>[ContributionTrackerStorage.php](../files/web-modules-custom-ct-manager-src-contributiontrackerstorage.md) : Line 154</small>
 
 *Get (or create) a term in a specified vocabulary.*
 
@@ -339,12 +324,8 @@ Machine name of the vocabulary.
 
 
 **Return Values**
-
-[TermInterface](# "\Drupal\taxonomy\TermInterface")
-
-
+- [TermInterface](# "\Drupal\taxonomy\TermInterface")
 The term with the given name in the given vocabulary.
-
 
 
 

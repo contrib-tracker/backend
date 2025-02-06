@@ -17,7 +17,7 @@
 
 
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 30
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 30</small>
 
 *Retrieve and Store contributions from drupal.org.*
 
@@ -129,7 +129,7 @@
 
 #### $contributionStorage
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 58
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 58</small>
 
 *Contribution Storage service.*
 
@@ -144,7 +144,7 @@ protected [ContributionTrackerStorage](../classes/Drupal-ct-manager-Contribution
 
 #### $doRetriever
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 44
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 44</small>
 
 *Retrievers for each user.*
 
@@ -159,7 +159,7 @@ protected [DrupalOrgRetriever](../classes/Drupal-ct-drupal-DrupalOrgRetriever.md
 
 #### $doUserInfoRetriever
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 51
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 51</small>
 
 *do_username service.*
 
@@ -174,7 +174,7 @@ protected [DOUserInfoRetriever](# "\Drupal\do_username\DOUserInfoRetriever") $do
 
 #### $entityTypeManager
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 37
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 37</small>
 
 *Entity type manager.*
 
@@ -189,7 +189,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 
 #### $logger
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 65
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 65</small>
 
 *Logger.*
 
@@ -204,7 +204,7 @@ protected [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface
 
 #### $timeService
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 72
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 72</small>
 
 *datetime.time service.*
 
@@ -223,7 +223,7 @@ protected [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $timeSer
 
 #### __construct()
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 96
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 96</small>
 
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
@@ -280,7 +280,7 @@ The datetime.time service.
 
 #### create()
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 109
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 109</small>
 
 *{@inheritdoc}*
 
@@ -309,7 +309,7 @@ The datetime.time service.
 
 #### getNotificationMessage()
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 224
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 224</small>
 
 *Get message for notification.*
 
@@ -331,14 +331,11 @@ The datetime.time service.
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getUserCodeContributions()
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 157
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 157</small>
 
 *Get comments from the total contribution data.*
 
@@ -361,7 +358,7 @@ string
 
 #### getUserIssues()
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 150
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 150</small>
 
 *Get issues from the total contribution data.*
 
@@ -389,7 +386,7 @@ string
 
 #### getUsers()
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 126
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 126</small>
 
 *Get all users with drupal.org username.*
 
@@ -408,7 +405,7 @@ string
 
 #### isUserValid()
 
-[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 139
+<small>[DrupalContribution.php](../files/web-modules-custom-ct-drupal-src-plugin-contributionsource-drupalcontribution.md) : Line 139</small>
 
 *Get user contributions from the platform.*
 
@@ -428,9 +425,6 @@ string
 
 
 **Return Values**
-
-bool
-
-
+- bool
 
 

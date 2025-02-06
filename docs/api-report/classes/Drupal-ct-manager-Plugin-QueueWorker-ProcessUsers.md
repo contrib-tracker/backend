@@ -17,7 +17,7 @@
 
 
 
-[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 25
+<small>[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 25</small>
 
 *Processes users for individual plugin implementations.*
 
@@ -98,7 +98,7 @@
 
 #### $contribStorage
 
-[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 39
+<small>[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 39</small>
 
 *Contribution manager service.*
 
@@ -113,7 +113,7 @@ protected [ContributionTrackerStorage](../classes/Drupal-ct-manager-Contribution
 
 #### $logger
 
-[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 46
+<small>[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 46</small>
 
 *The logger interface.*
 
@@ -128,7 +128,7 @@ protected [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface
 
 #### $pluginManager
 
-[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 32
+<small>[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 32</small>
 
 *Contribution plugin manager.*
 
@@ -143,7 +143,7 @@ protected [ContributionSourcePluginManager](../classes/Drupal-ct-manager-Contrib
 
 #### $slackService
 
-[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 53
+<small>[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 53</small>
 
 *Slack service.*
 
@@ -162,7 +162,7 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 
 #### __construct()
 
-[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 58
+<small>[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 58</small>
 
 *{@inheritdoc}*
 
@@ -197,7 +197,7 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 
 #### create()
 
-[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 70
+<small>[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 70</small>
 
 *{@inheritdoc}*
 
@@ -226,7 +226,7 @@ protected [Slack](# "\Drupal\slack\Slack") $slackService
 
 #### processItem()
 
-[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 85
+<small>[ProcessUsers.php](../files/web-modules-custom-ct-manager-src-plugin-queueworker-processusers.md) : Line 85</small>
 
 *Collects user contribution and stores it.*
 

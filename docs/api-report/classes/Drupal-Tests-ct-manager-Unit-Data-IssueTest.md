@@ -16,7 +16,7 @@
 
 
 
-[IssueTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-issuetest.md) : Line 12
+<small>[IssueTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-issuetest.md) : Line 12</small>
 
 
 
@@ -64,7 +64,7 @@
 
 #### testIssueCreation()
 
-[IssueTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-issuetest.md) : Line 17
+<small>[IssueTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-issuetest.md) : Line 17</small>
 
 *Test simple issue creation.*
 

@@ -16,7 +16,7 @@
 
 
 
-[CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 13
+<small>[CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 13</small>
 
 
 
@@ -67,7 +67,7 @@
 
 #### testChainedCodeContribution()
 
-[CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 28
+<small>[CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 28</small>
 
 
 !!! note ""
@@ -85,7 +85,7 @@
 
 #### testCodeContributionCreation()
 
-[CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 18
+<small>[CodeContributionTest.php](../files/web-modules-custom-ct-manager-tests-src-unit-data-codecontributiontest.md) : Line 18</small>
 
 *Test simple code contribution creation.*
 

@@ -17,7 +17,7 @@
 
 
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 26
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 26</small>
 
 *Retrieve and Store contributions from github.com.*
 
@@ -124,7 +124,7 @@
 
 #### $entityTypeManager
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 33
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 33</small>
 
 *Entity type manager.*
 
@@ -139,7 +139,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 
 #### $query
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 47
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 47</small>
 
 *Github request query.*
 
@@ -154,7 +154,7 @@ protected [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query
 
 #### $retriever
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 40
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 40</small>
 
 *Retrievers for each user.*
 
@@ -169,7 +169,7 @@ protected [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md) $ret
 
 #### $tokenValid
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 51
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 51</small>
 
 *GitHub Token Validity*
 
@@ -188,7 +188,7 @@ protected bool $tokenValid
 
 #### __construct()
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 67
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 67</small>
 
 *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
@@ -231,7 +231,7 @@ The injected github query service.
 
 #### create()
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 82
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 82</small>
 
 *{@inheritdoc}*
 
@@ -260,7 +260,7 @@ The injected github query service.
 
 #### getNotificationMessage()
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 160
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 160</small>
 
 *Get message for notification.*
 
@@ -282,14 +282,11 @@ The injected github query service.
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getUserCodeContributions()
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 150
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 150</small>
 
 *Get comments from the total contribution data.*
 
@@ -312,7 +309,7 @@ string
 
 #### getUserIssues()
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 140
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 140</small>
 
 *Get issues from the total contribution data.*
 
@@ -335,7 +332,7 @@ string
 
 #### getUsers()
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 96
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 96</small>
 
 *Get all users with github username.*
 
@@ -354,7 +351,7 @@ string
 
 #### isUserValid()
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 114
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 114</small>
 
 *Get user contributions from the platform.*
 
@@ -374,14 +371,11 @@ string
 
 
 **Return Values**
-
-bool
-
-
+- bool
 
 #### getOrCreateRetriever()
 
-[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 125
+<small>[GithubContribution.php](../files/web-modules-custom-ct-github-src-plugin-contributionsource-githubcontribution.md) : Line 125</small>
 
 *Returns a user retriever object.*
 
@@ -401,9 +395,6 @@ bool
 
 
 **Return Values**
-
-[GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
-
-
+- [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
 
 

@@ -16,7 +16,7 @@
 
 
 
-[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 12
+<small>[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 12</small>
 
 *A controller to display contribution statistics.*
 
@@ -71,7 +71,7 @@
 
 #### $contribStats
 
-[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 19
+<small>[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 19</small>
 
 *Contribution statistics instance.*
 
@@ -90,7 +90,7 @@ protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatis
 
 #### __construct()
 
-[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 26
+<small>[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 26</small>
 
 *Constructs a new GeofieldMapGeocoder object.*
 
@@ -113,7 +113,7 @@ protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatis
 
 #### content()
 
-[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 42
+<small>[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 42</small>
 
 *Returns a render-able array with contribution statistics.*
 
@@ -132,7 +132,7 @@ protected [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatis
 
 #### create()
 
-[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 33
+<small>[ContributionCountController.php](../files/web-modules-custom-ct-reports-src-controller-contributioncountcontroller.md) : Line 33</small>
 
 *{@inheritdoc}*
 

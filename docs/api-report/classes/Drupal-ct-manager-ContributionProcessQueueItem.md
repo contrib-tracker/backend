@@ -15,7 +15,7 @@
 
 
 
-[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 12
+<small>[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 12</small>
 
 *Creates a value object with user and plugin id.*
 
@@ -67,7 +67,7 @@
 
 #### $plugin_id
 
-[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 17
+<small>[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 17</small>
 
 
 
@@ -82,7 +82,7 @@ Plugin ID.
 
 #### $user
 
-[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 22
+<small>[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 22</small>
 
 
 
@@ -101,7 +101,7 @@ User to be processed.
 
 #### __construct()
 
-[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 32
+<small>[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 32</small>
 
 *User value object constructor.*
 
@@ -130,7 +130,7 @@ The user object.
 
 #### getPluginId()
 
-[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 37
+<small>[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 37</small>
 
 
 !!! note ""
@@ -145,14 +145,11 @@ The user object.
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getUser()
 
-[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 41
+<small>[ContributionProcessQueueItem.php](../files/web-modules-custom-ct-manager-src-contributionprocessqueueitem.md) : Line 41</small>
 
 
 !!! note ""
@@ -167,9 +164,6 @@ string
 
 
 **Return Values**
-
-[User](# "\Drupal\user\Entity\User")
-
-
+- [User](# "\Drupal\user\Entity\User")
 
 

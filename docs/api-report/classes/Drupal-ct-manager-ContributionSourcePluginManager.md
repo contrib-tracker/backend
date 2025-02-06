@@ -16,7 +16,7 @@
 
 
 
-[ContributionSourcePluginManager.php](../files/web-modules-custom-ct-manager-src-contributionsourcepluginmanager.md) : Line 14
+<small>[ContributionSourcePluginManager.php](../files/web-modules-custom-ct-manager-src-contributionsourcepluginmanager.md) : Line 14</small>
 
 *A plugin manager for contribution tracking plugins.*
 
@@ -57,7 +57,7 @@
 
 #### __construct()
 
-[ContributionSourcePluginManager.php](../files/web-modules-custom-ct-manager-src-contributionsourcepluginmanager.md) : Line 27
+<small>[ContributionSourcePluginManager.php](../files/web-modules-custom-ct-manager-src-contributionsourcepluginmanager.md) : Line 27</small>
 
 *Creates the discovery object.*
 

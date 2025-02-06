@@ -16,7 +16,7 @@
 
 
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 23
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 23</small>
 
 *Detect duplicate issues and remove them.*
 
@@ -104,7 +104,7 @@
 
 #### $contribTrackStorage
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 30
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 30</small>
 
 *Drupal\contrib_tracker\ContributionStorageInterface definition.*
 
@@ -119,7 +119,7 @@ protected [ContributionStorageInterface](# "\Drupal\contrib_tracker\Contribution
 
 #### $database
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 44
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 44</small>
 
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
@@ -134,7 +134,7 @@ protected [Connection](# "\Drupal\Core\Database\Connection") $database
 
 #### $entityTypeManager
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 37
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 37</small>
 
 *Drupal\Core\Entity\EntityTypeManagerInterface definition.*
 
@@ -153,7 +153,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 
 #### __construct()
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 56
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 56</small>
 
 *IssuesSanitiseCommand constructor.*
 
@@ -186,7 +186,7 @@ The database connection.
 
 #### configure()
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 66
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 66</small>
 
 *{@inheritdoc}*
 
@@ -205,7 +205,7 @@ The database connection.
 
 #### execute()
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 76
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 76</small>
 
 *{@inheritdoc}*
 
@@ -230,7 +230,7 @@ The database connection.
 
 #### getDuplicateIssueDoIds()
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 127
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 127</small>
 
 *Get a list of IDs which are duplicated.*
 
@@ -246,17 +246,13 @@ The database connection.
 
 
 **Return Values**
-
-array&lt;string|int, string&gt;
-
-
+- array&lt;string|int, string&gt;
 Array of IDs which are duplicated.
-
 
 
 #### getNidsForDoIssue()
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 144
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 144</small>
 
 *Get node ids linked to a d.o issue.*
 
@@ -278,17 +274,13 @@ The d.o issue ID.
 
 
 **Return Values**
-
-array&lt;string|int, int&gt;
-
-
+- array&lt;string|int, int&gt;
 Array of node ids.
-
 
 
 #### updateReferencesForIssueNid()
 
-[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 169
+<small>[IssuesSanitiseCommand.php](../files/web-modules-custom-contrib-tracker-src-command-issuessanitisecommand.md) : Line 169</small>
 
 *Replace references to various node ids with a different node id.*
 
@@ -314,12 +306,8 @@ The updated node id value.
 
 
 **Return Values**
-
-int
-
-
+- int
 Number of records updated.
-
 
 
 

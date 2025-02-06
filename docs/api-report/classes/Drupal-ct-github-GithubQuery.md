@@ -15,7 +15,7 @@
 
 
 
-[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 19
+<small>[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 19</small>
 
 *Github Query Class.*
 
@@ -83,7 +83,7 @@ Pull Requests.
 
 #### $cache
 
-[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 33
+<small>[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 33</small>
 
 *Cache backend service.*
 
@@ -98,7 +98,7 @@ protected [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") 
 
 #### $client
 
-[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 26
+<small>[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 26</small>
 
 *Establish connection to client.*
 
@@ -117,7 +117,7 @@ protected [Client](# "\Github\Client") $client
 
 #### __construct()
 
-[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 43
+<small>[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 43</small>
 
 *Set authentication token to access GitHub API.*
 
@@ -146,7 +146,7 @@ The injected cache backend service.
 
 #### getQuery()
 
-[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 60
+<small>[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 60</small>
 
 *GraphQL query to get contributions associated with a user.*
 
@@ -168,17 +168,13 @@ The Github username.
 
 
 **Return Values**
-
-string
-
-
+- string
 Github Graphql query object
-
 
 
 #### getUserContributions()
 
-[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 134
+<small>[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 134</small>
 
 *API request to get user contributions.*
 
@@ -201,7 +197,7 @@ Github Graphql query object
 
 #### isUserValid()
 
-[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 113
+<small>[GithubQuery.php](../files/web-modules-custom-ct-github-src-githubquery.md) : Line 113</small>
 
 *Check username validity.*
 
@@ -221,9 +217,6 @@ Github Graphql query object
 
 
 **Return Values**
-
-bool
-
-
+- bool
 
 

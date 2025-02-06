@@ -15,7 +15,7 @@
 
 
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 15
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 15</small>
 
 *Instance of Drupal.org Comment.*
 
@@ -137,7 +137,7 @@ every Issue node.
 
 #### $comment
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 29
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 29</small>
 
 *Comment details from d.o.*
 
@@ -152,7 +152,7 @@ protected [Comment](# "\Hussainweb\DrupalApi\Entity\Comment") $comment
 
 #### $commentProcessed
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 64
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 64</small>
 
 *Is the comment processed?*
 
@@ -167,7 +167,7 @@ protected bool $commentProcessed = FALSE
 
 #### $contribRetriever
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 22
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 22</small>
 
 *Contribution retriever service.*
 
@@ -182,7 +182,7 @@ protected [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetriever
 
 #### $issueData
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 36
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 36</small>
 
 *Node details from d.o.*
 
@@ -197,7 +197,7 @@ protected [Node](# "\Hussainweb\DrupalApi\Entity\Node") $issueData = NULL
 
 #### $issueStatus
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 57
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 57</small>
 
 *Issue status.*
 
@@ -212,7 +212,7 @@ protected string $issueStatus
 
 #### $patchFilesCount
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 43
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 43</small>
 
 *Number of patches attached to the comment.*
 
@@ -227,7 +227,7 @@ protected int $patchFilesCount
 
 #### $timeService
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 71
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 71</small>
 
 *The datetime.time service.*
 
@@ -242,7 +242,7 @@ protected [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $timeSer
 
 #### $totalFilesCount
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 50
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 50</small>
 
 *Number of all files attached to the comment.*
 
@@ -261,7 +261,7 @@ protected int $totalFilesCount
 
 #### __construct()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 83
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 83</small>
 
 *DrupalOrgCommentDetails constructor.*
 
@@ -294,7 +294,7 @@ The datetime.time service.
 
 #### getDescription()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 130
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 130</small>
 
 *Get comment Description.*
 
@@ -311,14 +311,11 @@ Fix for relative user url used in comment section.
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getIssueStatus()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 116
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 116</small>
 
 *Get the issue status.*
 
@@ -334,14 +331,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getPatchFilesCount()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 92
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 92</small>
 
 *Get the number of patch files in this comment.*
 
@@ -357,14 +351,11 @@ string
 
 
 **Return Values**
-
-int
-
-
+- int
 
 #### getTotalFilesCount()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 104
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 104</small>
 
 *Get the number of all files in this comment.*
 
@@ -380,14 +371,11 @@ int
 
 
 **Return Values**
-
-int
-
-
+- int
 
 #### determineIssueStatus()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 173
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 173</small>
 
 *Determine the status of the issue.*
 
@@ -406,7 +394,7 @@ int
 
 #### getStatusFromCode()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 199
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 199</small>
 
 *Translate the status id to text.*
 
@@ -428,17 +416,13 @@ Issue status id.
 
 
 **Return Values**
-
-string
-
-
+- string
 Readable text corresponding to the status id.
-
 
 
 #### isPatchFile()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 228
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 228</small>
 
 *Determine if this is a patch file.*
 
@@ -460,17 +444,13 @@ The file data returned from API.
 
 
 **Return Values**
-
-bool
-
-
+- bool
 TRUE if this is a patch file, else FALSE.
-
 
 
 #### processFileDetails()
 
-[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 142
+<small>[CommentDetails.php](../files/web-modules-custom-ct-drupal-src-commentdetails.md) : Line 142</small>
 
 *Check the type and number of files attached to a comment under a issue.*
 

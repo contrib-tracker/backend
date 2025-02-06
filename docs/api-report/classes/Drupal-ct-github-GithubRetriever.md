@@ -15,7 +15,7 @@
 
 
 
-[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 16
+<small>[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 16</small>
 
 *Github retriever class.*
 
@@ -87,7 +87,7 @@ provide methods to return information relevant to the application.
 
 #### $query
 
-[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 30
+<small>[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 30</small>
 
 *Github query.*
 
@@ -102,7 +102,7 @@ protected [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md) $query
 
 #### $userContributions
 
-[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 23
+<small>[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 23</small>
 
 *User Entity Storage.*
 
@@ -117,7 +117,7 @@ protected array&lt;string|int, mixed&gt; $userContributions
 
 #### $username
 
-[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 37
+<small>[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 37</small>
 
 *Github username.*
 
@@ -136,7 +136,7 @@ protected string $username
 
 #### __construct()
 
-[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 47
+<small>[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 47</small>
 
 *ContributionRetriever constructor.*
 
@@ -165,7 +165,7 @@ The user name.
 
 #### getCodeContributions()
 
-[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 80
+<small>[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 80</small>
 
 *Get PR commits and issue comments for user.*
 
@@ -184,7 +184,7 @@ The user name.
 
 #### getIssues()
 
-[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 66
+<small>[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 66</small>
 
 *Get issues for user.*
 
@@ -203,7 +203,7 @@ The user name.
 
 #### getUserContributions()
 
-[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 55
+<small>[GithubRetriever.php](../files/web-modules-custom-ct-github-src-githubretriever.md) : Line 55</small>
 
 *Returns user&#039;s contribution.*
 

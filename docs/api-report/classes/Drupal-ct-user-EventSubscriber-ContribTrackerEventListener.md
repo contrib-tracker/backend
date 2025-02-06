@@ -16,7 +16,7 @@
 
 
 
-[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 13
+<small>[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 13</small>
 
 *Event subscriptions for events dispatched by Social Auth.*
 
@@ -73,7 +73,7 @@
 
 #### $loggerFactory
 
-[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 21
+<small>[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 21</small>
 
 *The logger Channel Factory.*
 
@@ -94,7 +94,7 @@ The loggerFactory interface alias.
 
 #### __construct()
 
-[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 63
+<small>[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 63</small>
 
 *ContribTrackerEventListener constructor.*
 
@@ -119,7 +119,7 @@ Logger Channel Factory interface.
 
 #### getSubscribedEvents()
 
-[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 51
+<small>[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 51</small>
 
 *Returns an array of event names this subscriber wants to listen to.*
 
@@ -138,7 +138,7 @@ Logger Channel Factory interface.
 
 #### onSocialAuthUserFieldEvent()
 
-[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 31
+<small>[ContribTrackerEventListener.php](../files/web-modules-custom-ct-user-src-eventsubscriber-contribtrackereventlistener.md) : Line 31</small>
 
 *Reacts to the event when users fields are being gathered via Social Auth.*
 

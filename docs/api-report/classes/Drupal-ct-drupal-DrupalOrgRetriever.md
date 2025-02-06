@@ -16,7 +16,7 @@
 
 
 
-[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 21
+<small>[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 21</small>
 
 *DrupalOrg Contribution retriever service class.*
 
@@ -97,7 +97,7 @@ relevant to the application.
 
 #### $cache
 
-[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 35
+<small>[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 35</small>
 
 *Cache backend service.*
 
@@ -112,7 +112,7 @@ protected [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface") 
 
 #### $client
 
-[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 28
+<small>[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 28</small>
 
 *Drupal.org client service.*
 
@@ -131,7 +131,7 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 
 #### __construct()
 
-[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 45
+<small>[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 45</small>
 
 *ContributionRetriever constructor.*
 
@@ -160,7 +160,7 @@ The injected cache backend service.
 
 #### getCommentsByAuthor()
 
-[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 78
+<small>[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 78</small>
 
 *Get comments by an user on drupal.org.*
 
@@ -182,17 +182,13 @@ The user ID of the author.
 
 
 **Return Values**
-
-[CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
-
-
+- [CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 List of comments from drupal.org.
-
 
 
 #### getDrupalOrgNode()
 
-[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 53
+<small>[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 53</small>
 
 *Get node data from drupal.org.*
 
@@ -219,17 +215,13 @@ The cache expiry for the item.
 
 
 **Return Values**
-
-[Node](# "\Hussainweb\DrupalApi\Entity\Node")
-
-
+- [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 The node data from drupal.org.
-
 
 
 #### getDrupalOrgNodeFromApi()
 
-[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 70
+<small>[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 70</small>
 
 *Get node data from drupal.org.*
 
@@ -251,17 +243,13 @@ The nid of the node on drupal.org.
 
 
 **Return Values**
-
-[Node](# "\Hussainweb\DrupalApi\Entity\Node")
-
-
+- [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 The node data from drupal.org.
-
 
 
 #### getFile()
 
-[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 115
+<small>[DrupalOrgRetriever.php](../files/web-modules-custom-ct-drupal-src-drupalorgretriever.md) : Line 115</small>
 
 *Get file data from drupal.org.*
 
@@ -283,12 +271,8 @@ The fid of the file on drupal.org.
 
 
 **Return Values**
-
-[File](# "\Hussainweb\DrupalApi\Entity\File")
-
-
+- [File](# "\Hussainweb\DrupalApi\Entity\File")
 The file data from drupal.org.
-
 
 
 

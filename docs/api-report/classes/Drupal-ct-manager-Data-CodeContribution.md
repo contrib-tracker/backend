@@ -16,7 +16,7 @@
 
 
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 7
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 7</small>
 
 
 
@@ -152,7 +152,7 @@
 
 #### $accountUrl
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 27
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 27</small>
 
 
 
@@ -167,7 +167,7 @@ URL of user account on the platform.
 
 #### $date
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 17
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 17</small>
 
 
 
@@ -182,7 +182,7 @@ Date of the contribution.
 
 #### $description
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 32
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 32</small>
 
 
 
@@ -197,7 +197,7 @@ Description.
 
 #### $filesCount
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 52
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 52</small>
 
 
 
@@ -212,7 +212,7 @@ File count.
 
 #### $issue
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 67
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 67</small>
 
 
 
@@ -227,7 +227,7 @@ Related issue.
 
 #### $patchCount
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 47
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 47</small>
 
 
 
@@ -242,7 +242,7 @@ Patch count.
 
 #### $project
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 37
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 37</small>
 
 
 
@@ -257,7 +257,7 @@ Project.
 
 #### $projectUrl
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 42
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 42</small>
 
 
 
@@ -272,7 +272,7 @@ ProjectUrl.
 
 #### $status
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 57
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 57</small>
 
 
 
@@ -287,7 +287,7 @@ Status.
 
 #### $technology
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 62
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 62</small>
 
 
 
@@ -302,7 +302,7 @@ Technology.
 
 #### $title
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 12
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 12</small>
 
 
 
@@ -317,7 +317,7 @@ Title.
 
 #### $url
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 22
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 22</small>
 
 
 
@@ -336,7 +336,7 @@ URL of the contribution.
 
 #### __construct()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 69
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 69</small>
 
 
 !!! note ""
@@ -362,7 +362,7 @@ URL of the contribution.
 
 #### getAccountUrl()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 87
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 87</small>
 
 
 !!! note ""
@@ -377,14 +377,11 @@ URL of the contribution.
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getDate()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 83
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 83</small>
 
 
 !!! note ""
@@ -399,14 +396,11 @@ string
 
 
 **Return Values**
-
-[DateTimeImmutable](# "\DateTimeImmutable")
-
-
+- [DateTimeImmutable](# "\DateTimeImmutable")
 
 #### getDescription()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 96
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 96</small>
 
 
 !!! note ""
@@ -421,14 +415,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getFilesCount()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 141
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 141</small>
 
 
 !!! note ""
@@ -443,14 +434,11 @@ string
 
 
 **Return Values**
-
-int
-
-
+- int
 
 #### getIssue()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 123
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 123</small>
 
 
 !!! note ""
@@ -465,14 +453,11 @@ int
 
 
 **Return Values**
-
-[Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
-
-
+- [Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 
 #### getPatchCount()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 132
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 132</small>
 
 
 !!! note ""
@@ -487,14 +472,11 @@ int
 
 
 **Return Values**
-
-int
-
-
+- int
 
 #### getProject()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 105
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 105</small>
 
 
 !!! note ""
@@ -509,14 +491,11 @@ int
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getProjectUrl()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 114
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 114</small>
 
 
 !!! note ""
@@ -531,14 +510,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getStatus()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 150
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 150</small>
 
 
 !!! note ""
@@ -553,14 +529,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getTechnology()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 159
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 159</small>
 
 
 !!! note ""
@@ -575,14 +548,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getTitle()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 75
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 75</small>
 
 
 !!! note ""
@@ -597,14 +567,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getUrl()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 79
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 79</small>
 
 
 !!! note ""
@@ -619,14 +586,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### setAccountUrl()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 91
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 91</small>
 
 
 !!! note ""
@@ -645,14 +609,11 @@ string
 
 
 **Return Values**
-
-self
-
-
+- self
 
 #### setDescription()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 100
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 100</small>
 
 
 !!! note ""
@@ -671,14 +632,11 @@ self
 
 
 **Return Values**
-
-self
-
-
+- self
 
 #### setFilesCount()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 145
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 145</small>
 
 
 !!! note ""
@@ -697,14 +655,11 @@ self
 
 
 **Return Values**
-
-self
-
-
+- self
 
 #### setIssue()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 127
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 127</small>
 
 
 !!! note ""
@@ -723,14 +678,11 @@ self
 
 
 **Return Values**
-
-self
-
-
+- self
 
 #### setPatchCount()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 136
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 136</small>
 
 
 !!! note ""
@@ -749,14 +701,11 @@ self
 
 
 **Return Values**
-
-self
-
-
+- self
 
 #### setProject()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 109
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 109</small>
 
 
 !!! note ""
@@ -775,14 +724,11 @@ self
 
 
 **Return Values**
-
-self
-
-
+- self
 
 #### setProjectUrl()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 118
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 118</small>
 
 
 !!! note ""
@@ -801,14 +747,11 @@ self
 
 
 **Return Values**
-
-self
-
-
+- self
 
 #### setStatus()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 154
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 154</small>
 
 
 !!! note ""
@@ -827,14 +770,11 @@ self
 
 
 **Return Values**
-
-self
-
-
+- self
 
 #### setTechnology()
 
-[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 163
+<small>[CodeContribution.php](../files/web-modules-custom-ct-manager-src-data-codecontribution.md) : Line 163</small>
 
 
 !!! note ""
@@ -853,9 +793,6 @@ self
 
 
 **Return Values**
-
-self
-
-
+- self
 
 

@@ -15,7 +15,7 @@
 
 
 
-[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 13
+<small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 13</small>
 
 *Class to calcluate contribution statistics.*
 
@@ -80,7 +80,7 @@
 
 #### $database
 
-[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 27
+<small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 27</small>
 
 *Drupal\Core\Database\Driver\mysql\Connection definition.*
 
@@ -95,7 +95,7 @@ protected [Connection](# "\Drupal\Core\Database\Connection") $database
 
 #### $nodeStorage
 
-[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 20
+<small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 20</small>
 
 *Node storage controller.*
 
@@ -114,7 +114,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 #### __construct()
 
-[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 32
+<small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 32</small>
 
 *Contribution storage constructor.*
 
@@ -139,7 +139,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 #### codeContributions()
 
-[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 52
+<small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 52</small>
 
 *Calcuate total contributions with patches.*
 
@@ -155,14 +155,11 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 
 **Return Values**
-
-int
-
-
+- int
 
 #### totalContributions()
 
-[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 40
+<small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 40</small>
 
 *Calcuates total contributions.*
 
@@ -178,14 +175,11 @@ int
 
 
 **Return Values**
-
-int
-
-
+- int
 
 #### totalContributors()
 
-[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 65
+<small>[ContributionStatistics.php](../files/web-modules-custom-ct-reports-src-contributionstatistics.md) : Line 65</small>
 
 *Calcuate total number of contributors.*
 
@@ -201,9 +195,6 @@ int
 
 
 **Return Values**
-
-int
-
-
+- int
 
 

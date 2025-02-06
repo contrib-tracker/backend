@@ -16,7 +16,7 @@
 
 
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 7
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 7</small>
 
 
 
@@ -74,7 +74,7 @@
 
 #### $description
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 17
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 17</small>
 
 
 
@@ -89,7 +89,7 @@ Description.
 
 #### $title
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 12
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 12</small>
 
 
 
@@ -104,7 +104,7 @@ Title.
 
 #### $url
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 22
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 22</small>
 
 
 
@@ -123,7 +123,7 @@ URL of the contribution.
 
 #### __construct()
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 24
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 24</small>
 
 
 !!! note ""
@@ -147,7 +147,7 @@ URL of the contribution.
 
 #### getDescription()
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 37
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 37</small>
 
 
 !!! note ""
@@ -162,14 +162,11 @@ URL of the contribution.
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getTitle()
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 29
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 29</small>
 
 
 !!! note ""
@@ -184,14 +181,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### getUrl()
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 33
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 33</small>
 
 
 !!! note ""
@@ -206,14 +200,11 @@ string
 
 
 **Return Values**
-
-string
-
-
+- string
 
 #### setDescription()
 
-[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 41
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 41</small>
 
 
 !!! note ""
@@ -232,9 +223,6 @@ string
 
 
 **Return Values**
-
-self
-
-
+- self
 
 
