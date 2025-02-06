@@ -166,7 +166,7 @@ protected [Client](# "\Github\Client") $client
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -219,7 +219,7 @@ protected [Client](# "\Github\Client") $client
 
 
 
-**Return Values**
+**Return Values:**
 
 - bool
 

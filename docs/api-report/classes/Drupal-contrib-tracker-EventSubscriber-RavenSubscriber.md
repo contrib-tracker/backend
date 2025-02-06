@@ -81,7 +81,7 @@
 
 
 
-**Return Values**
+**Return Values:**
 
 - array&lt;string|int, mixed&gt;
 

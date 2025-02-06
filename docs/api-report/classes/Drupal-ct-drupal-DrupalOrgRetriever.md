@@ -179,7 +179,7 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 
 
 
-**Return Values**
+**Return Values:**
 
 - [CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
@@ -206,7 +206,7 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 
 - **$cacheExpiry**: mixed
 
-  **Default:** `Cache::PERMANENT`
+  **Default:** Cache::PERMANENT
   *The cache expiry for the item.*
 
 
@@ -214,7 +214,7 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
@@ -244,7 +244,7 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
@@ -274,7 +274,7 @@ protected [Client](# "\Drupal\ct_drupal\DrupalOrg\Client") $client
 
 
 
-**Return Values**
+**Return Values:**
 
 - [File](# "\Hussainweb\DrupalApi\Entity\File")
 

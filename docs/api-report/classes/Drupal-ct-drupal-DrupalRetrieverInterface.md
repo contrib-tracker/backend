@@ -84,7 +84,7 @@
 
 
 
-**Return Values**
+**Return Values:**
 
 - [CommentCollection](# "\Hussainweb\DrupalApi\Entity\Collection\CommentCollection")
 
@@ -111,7 +111,7 @@
 
 - **$cacheExpiry**: int
 
-  **Default:** `Cache::PERMANENT`
+  **Default:** Cache::PERMANENT
   *The cache expiry for the item.*
 
 
@@ -119,7 +119,7 @@
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
@@ -149,7 +149,7 @@
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Hussainweb\DrupalApi\Entity\Node")
 
@@ -179,7 +179,7 @@
 
 
 
-**Return Values**
+**Return Values:**
 
 - [File](# "\Hussainweb\DrupalApi\Entity\File")
 

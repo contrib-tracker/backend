@@ -142,7 +142,7 @@ User to be processed.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -164,7 +164,7 @@ User to be processed.
 
 
 
-**Return Values**
+**Return Values:**
 
 - [User](# "\Drupal\user\Entity\User")
 

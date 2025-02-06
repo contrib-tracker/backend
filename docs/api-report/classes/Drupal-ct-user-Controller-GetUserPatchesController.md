@@ -136,7 +136,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 
 
 
-**Return Values**
+**Return Values:**
 
 - [JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
 

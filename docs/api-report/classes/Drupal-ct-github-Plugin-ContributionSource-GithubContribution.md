@@ -287,7 +287,7 @@ protected bool $tokenValid
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -382,7 +382,7 @@ protected bool $tokenValid
 
 
 
-**Return Values**
+**Return Values:**
 
 - bool
 
@@ -410,7 +410,7 @@ protected bool $tokenValid
 
 
 
-**Return Values**
+**Return Values:**
 
 - [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
 

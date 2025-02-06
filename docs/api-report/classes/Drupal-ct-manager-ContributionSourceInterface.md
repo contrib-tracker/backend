@@ -91,7 +91,7 @@
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -186,7 +186,7 @@
 
 
 
-**Return Values**
+**Return Values:**
 
 - bool
 

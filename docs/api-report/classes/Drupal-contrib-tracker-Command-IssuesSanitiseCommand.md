@@ -246,7 +246,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 
 
 
-**Return Values**
+**Return Values:**
 
 - array&lt;string|int, string&gt;
 
@@ -276,7 +276,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 
 
 
-**Return Values**
+**Return Values:**
 
 - array&lt;string|int, int&gt;
 
@@ -310,7 +310,7 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 
 
 
-**Return Values**
+**Return Values:**
 
 - int
 

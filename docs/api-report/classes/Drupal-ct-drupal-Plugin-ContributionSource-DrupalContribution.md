@@ -335,7 +335,7 @@ protected [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $timeSer
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -434,7 +434,7 @@ protected [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface") $timeSer
 
 
 
-**Return Values**
+**Return Values:**
 
 - bool
 

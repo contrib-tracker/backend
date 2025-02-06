@@ -196,7 +196,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Drupal\node\Entity\Node")|null
 
@@ -224,7 +224,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Drupal\node\Entity\Node")|null
 
@@ -252,7 +252,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Drupal\node\Entity\Node")
 
@@ -286,7 +286,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Drupal\node\Entity\Node")
 
@@ -314,7 +314,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Node](# "\Drupal\node\Entity\Node")
 
@@ -347,7 +347,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 
-**Return Values**
+**Return Values:**
 
 - [TermInterface](# "\Drupal\taxonomy\TermInterface")
 

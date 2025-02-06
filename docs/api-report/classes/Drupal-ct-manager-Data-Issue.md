@@ -160,7 +160,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -182,7 +182,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -204,7 +204,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -231,7 +231,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 

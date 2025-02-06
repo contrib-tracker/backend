@@ -308,7 +308,7 @@ Fix for relative user url used in comment section.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -331,7 +331,7 @@ Fix for relative user url used in comment section.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -354,7 +354,7 @@ Fix for relative user url used in comment section.
 
 
 
-**Return Values**
+**Return Values:**
 
 - int
 
@@ -377,7 +377,7 @@ Fix for relative user url used in comment section.
 
 
 
-**Return Values**
+**Return Values:**
 
 - int
 
@@ -425,7 +425,7 @@ Fix for relative user url used in comment section.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -455,7 +455,7 @@ Fix for relative user url used in comment section.
 
 
 
-**Return Values**
+**Return Values:**
 
 - bool
 

@@ -367,7 +367,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -389,7 +389,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - [DateTimeImmutable](# "\DateTimeImmutable")
 
@@ -411,7 +411,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -433,7 +433,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - int
 
@@ -455,7 +455,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - [Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 
@@ -477,7 +477,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - int
 
@@ -499,7 +499,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -521,7 +521,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -543,7 +543,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -565,7 +565,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -587,7 +587,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -609,7 +609,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - string
 
@@ -636,7 +636,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 
@@ -663,7 +663,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 
@@ -690,7 +690,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 
@@ -717,7 +717,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 
@@ -744,7 +744,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 
@@ -771,7 +771,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 
@@ -798,7 +798,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 
@@ -825,7 +825,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 
@@ -852,7 +852,7 @@ URL of the contribution.
 
 
 
-**Return Values**
+**Return Values:**
 
 - self
 

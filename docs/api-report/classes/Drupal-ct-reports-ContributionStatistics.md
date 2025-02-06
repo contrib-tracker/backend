@@ -156,7 +156,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 
 
-**Return Values**
+**Return Values:**
 
 - int
 
@@ -179,7 +179,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 
 
-**Return Values**
+**Return Values:**
 
 - int
 
@@ -202,7 +202,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 
 
-**Return Values**
+**Return Values:**
 
 - int
 
