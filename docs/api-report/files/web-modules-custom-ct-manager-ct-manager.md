@@ -44,7 +44,7 @@
 
 ### Functions
 
-<a name="ct_manager_cron"></a>
+<a id="ct_manager_cron"></a>
 #### ct_manager_cron() [ct_manager.module](../files/web-modules-custom-ct-manager-ct-manager.md) : Line 20
 
 

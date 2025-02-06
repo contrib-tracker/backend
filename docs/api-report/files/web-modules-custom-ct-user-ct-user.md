@@ -57,7 +57,7 @@
 
 ### Functions
 
-<a name="ct_user_theme"></a>
+<a id="ct_user_theme"></a>
 #### ct_user_theme() [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 11
 
 
@@ -73,7 +73,7 @@
 
 
 ---
-<a name="ct_user_help"></a>
+<a id="ct_user_help"></a>
 #### ct_user_help() [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 22
 
 
@@ -96,7 +96,7 @@
 
 
 ---
-<a name="ct_user_form_alter"></a>
+<a id="ct_user_form_alter"></a>
 #### ct_user_form_alter() [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 38
 
 
@@ -121,7 +121,7 @@
 
 
 ---
-<a name="ct_user_user_login_form_validate"></a>
+<a id="ct_user_user_login_form_validate"></a>
 #### ct_user_user_login_form_validate() [ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 49
 
 

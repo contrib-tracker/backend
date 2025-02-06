@@ -62,7 +62,7 @@
 
 ### Functions
 
-<a name="contribtracker_theme_suggestions_block_alter"></a>
+<a id="contribtracker_theme_suggestions_block_alter"></a>
 #### contribtracker_theme_suggestions_block_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 10
 
 
@@ -84,7 +84,7 @@
 
 
 ---
-<a name="contribtracker_theme_suggestions_form_alter"></a>
+<a id="contribtracker_theme_suggestions_form_alter"></a>
 #### contribtracker_theme_suggestions_form_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 20
 
 
@@ -107,7 +107,7 @@
 
 
 ---
-<a name="contribtracker_theme_suggestions_table_alter"></a>
+<a id="contribtracker_theme_suggestions_table_alter"></a>
 #### contribtracker_theme_suggestions_table_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 29
 
 
@@ -130,7 +130,7 @@
 
 
 ---
-<a name="contribtracker_theme_preprocess_page_alter"></a>
+<a id="contribtracker_theme_preprocess_page_alter"></a>
 #### contribtracker_theme_preprocess_page_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 38
 
 
@@ -153,7 +153,7 @@
 
 
 ---
-<a name="contribtracker_theme_suggestions_input_alter"></a>
+<a id="contribtracker_theme_suggestions_input_alter"></a>
 #### contribtracker_theme_suggestions_input_alter() [contribtracker.theme](../files/web-themes-custom-contribtracker-contribtracker.md) : Line 64
 
 
