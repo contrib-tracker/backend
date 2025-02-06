@@ -112,6 +112,7 @@
 - **$cacheExpiry**: int
 
   **Default:** Cache::PERMANENT
+
   *The cache expiry for the item.*
 
 
