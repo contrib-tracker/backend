@@ -1,8 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_user](../namespaces/drupal-ct-user.md)
-- [EventSubscriber](../namespaces/drupal-ct-user-eventsubscriber.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_user](../namespaces/drupal-ct-user.md) | [EventSubscriber](../namespaces/drupal-ct-user-eventsubscriber.md)
 
 ## ContribTrackerEventListener
 

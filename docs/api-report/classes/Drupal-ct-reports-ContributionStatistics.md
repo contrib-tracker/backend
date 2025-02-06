@@ -1,7 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_reports](../namespaces/drupal-ct-reports.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_reports](../namespaces/drupal-ct-reports.md)
 
 ## ContributionStatistics
 

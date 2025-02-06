@@ -1,9 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_user](../namespaces/drupal-ct-user.md)
-- [Plugin](../namespaces/drupal-ct-user-plugin.md)
-- [Block](../namespaces/drupal-ct-user-plugin-block.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_user](../namespaces/drupal-ct-user.md) | [Plugin](../namespaces/drupal-ct-user-plugin.md) | [Block](../namespaces/drupal-ct-user-plugin-block.md)
 
 ## ContribGraph
 

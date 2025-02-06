@@ -1,9 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_drupal](../namespaces/drupal-ct-drupal.md)
-- [Plugin](../namespaces/drupal-ct-drupal-plugin.md)
-- [ContributionSource](../namespaces/drupal-ct-drupal-plugin-contributionsource.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_drupal](../namespaces/drupal-ct-drupal.md) | [Plugin](../namespaces/drupal-ct-drupal-plugin.md) | [ContributionSource](../namespaces/drupal-ct-drupal-plugin-contributionsource.md)
 
 ## DrupalContribution
 

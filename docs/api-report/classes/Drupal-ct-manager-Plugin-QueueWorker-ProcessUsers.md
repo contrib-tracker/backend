@@ -1,9 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_manager](../namespaces/drupal-ct-manager.md)
-- [Plugin](../namespaces/drupal-ct-manager-plugin.md)
-- [QueueWorker](../namespaces/drupal-ct-manager-plugin-queueworker.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_manager](../namespaces/drupal-ct-manager.md) | [Plugin](../namespaces/drupal-ct-manager-plugin.md) | [QueueWorker](../namespaces/drupal-ct-manager-plugin-queueworker.md)
 
 ## ProcessUsers
 

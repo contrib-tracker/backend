@@ -1,8 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_reports](../namespaces/drupal-ct-reports.md)
-- [Controller](../namespaces/drupal-ct-reports-controller.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_reports](../namespaces/drupal-ct-reports.md) | [Controller](../namespaces/drupal-ct-reports-controller.md)
 
 ## ContributionCountController
 

@@ -1,7 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [contrib_tracker](../namespaces/drupal-contrib-tracker.md)
-
+[Drupal](../namespaces/drupal.md) | [contrib_tracker](../namespaces/drupal-contrib-tracker.md)
 
 ## Command
 

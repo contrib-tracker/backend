@@ -1,7 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_github](../namespaces/drupal-ct-github.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_github](../namespaces/drupal-ct-github.md)
 
 ## Plugin
 

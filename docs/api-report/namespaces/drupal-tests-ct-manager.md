@@ -1,7 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [Tests](../namespaces/drupal-tests.md)
-
+[Drupal](../namespaces/drupal.md) | [Tests](../namespaces/drupal-tests.md)
 
 ## ct_manager
 

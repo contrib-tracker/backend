@@ -1,6 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-
+[Drupal](../namespaces/drupal.md)
 
 ## Tests
 

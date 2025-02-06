@@ -1,8 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_user](../namespaces/drupal-ct-user.md)
-- [Controller](../namespaces/drupal-ct-user-controller.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_user](../namespaces/drupal-ct-user.md) | [Controller](../namespaces/drupal-ct-user-controller.md)
 
 ## GetUserPatchesController
 

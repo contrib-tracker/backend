@@ -1,8 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_manager](../namespaces/drupal-ct-manager.md)
-- [Data](../namespaces/drupal-ct-manager-data.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_manager](../namespaces/drupal-ct-manager.md) | [Data](../namespaces/drupal-ct-manager-data.md)
 
 ## Issue
 

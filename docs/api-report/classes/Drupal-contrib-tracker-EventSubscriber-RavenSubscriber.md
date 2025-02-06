@@ -1,8 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [contrib_tracker](../namespaces/drupal-contrib-tracker.md)
-- [EventSubscriber](../namespaces/drupal-contrib-tracker-eventsubscriber.md)
-
+[Drupal](../namespaces/drupal.md) | [contrib_tracker](../namespaces/drupal-contrib-tracker.md) | [EventSubscriber](../namespaces/drupal-contrib-tracker-eventsubscriber.md)
 
 ## RavenSubscriber
 

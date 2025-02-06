@@ -1,7 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_manager](../namespaces/drupal-ct-manager.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_manager](../namespaces/drupal-ct-manager.md)
 
 ## ContributionTrackerStorage
 

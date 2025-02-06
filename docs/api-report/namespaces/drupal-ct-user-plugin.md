@@ -1,7 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_user](../namespaces/drupal-ct-user.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_user](../namespaces/drupal-ct-user.md)
 
 ## Plugin
 

@@ -1,8 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [ct_manager](../namespaces/drupal-ct-manager.md)
-- [Annotation](../namespaces/drupal-ct-manager-annotation.md)
-
+[Drupal](../namespaces/drupal.md) | [ct_manager](../namespaces/drupal-ct-manager.md) | [Annotation](../namespaces/drupal-ct-manager-annotation.md)
 
 ## ContributionSource
 

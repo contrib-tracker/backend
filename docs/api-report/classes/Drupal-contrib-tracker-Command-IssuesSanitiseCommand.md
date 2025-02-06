@@ -1,8 +1,5 @@
 
-- [Drupal](../namespaces/drupal.md)
-- [contrib_tracker](../namespaces/drupal-contrib-tracker.md)
-- [Command](../namespaces/drupal-contrib-tracker-command.md)
-
+[Drupal](../namespaces/drupal.md) | [contrib_tracker](../namespaces/drupal-contrib-tracker.md) | [Command](../namespaces/drupal-contrib-tracker-command.md)
 
 ## IssuesSanitiseCommand
 
