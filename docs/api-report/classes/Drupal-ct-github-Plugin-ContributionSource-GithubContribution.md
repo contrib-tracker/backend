@@ -54,52 +54,64 @@
 #### Properties
 - **[$entityTypeManager](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#entitytypemanager)**
          : [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")  
+
   *Entity type manager.*
 
 - **[$query](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#query)**
          : [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)  
+
   *Github request query.*
 
 - **[$retriever](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#retriever)**
          : [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)  
+
   *Retrievers for each user.*
 
 - **[$tokenValid](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#tokenvalid)**
          : bool  
+
   *GitHub Token Validity*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#__construct)**
            : mixed
+
   *Constructs a Drupal\rest\Plugin\ResourceBase object.*
 
 - **[create()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#create)**
            : mixed
+
   *{@inheritdoc}*
 
 - **[getNotificationMessage()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getnotificationmessage)**
            : string
+
   *Get message for notification.*
 
 - **[getUserCodeContributions()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getusercodecontributions)**
            : mixed
+
   *Get comments from the total contribution data.*
 
 - **[getUserIssues()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getuserissues)**
            : mixed
+
   *Get issues from the total contribution data.*
 
 - **[getUsers()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getusers)**
            : mixed
+
   *Get all users with github username.*
 
 - **[isUserValid()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#isuservalid)**
            : bool
+
   *Get user contributions from the platform.*
 
 - **[getOrCreateRetriever()](../classes/Drupal-ct-github-Plugin-ContributionSource-GithubContribution.md#getorcreateretriever)**
            : [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
+
   *Returns a user retriever object.*
 
 

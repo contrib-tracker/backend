@@ -42,32 +42,39 @@ provide methods to return information relevant to the application.
 #### Properties
 - **[$query](../classes/Drupal-ct-github-GithubRetriever.md#query)**
          : [GithubQuery](../classes/Drupal-ct-github-GithubQuery.md)  
+
   *Github query.*
 
 - **[$userContributions](../classes/Drupal-ct-github-GithubRetriever.md#usercontributions)**
          : array&lt;string|int, mixed&gt;  
+
   *User Entity Storage.*
 
 - **[$username](../classes/Drupal-ct-github-GithubRetriever.md#username)**
          : string  
+
   *Github username.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-github-GithubRetriever.md#__construct)**
            : mixed
+
   *ContributionRetriever constructor.*
 
 - **[getCodeContributions()](../classes/Drupal-ct-github-GithubRetriever.md#getcodecontributions)**
            : mixed
+
   *Get PR commits and issue comments for user.*
 
 - **[getIssues()](../classes/Drupal-ct-github-GithubRetriever.md#getissues)**
            : mixed
+
   *Get issues for user.*
 
 - **[getUserContributions()](../classes/Drupal-ct-github-GithubRetriever.md#getusercontributions)**
            : mixed
+
   *Returns user&#039;s contribution.*
 
 

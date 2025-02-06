@@ -42,72 +42,89 @@ every Issue node.
 #### Properties
 - **[$comment](../classes/Drupal-ct-drupal-CommentDetails.md#comment)**
          : [Comment](# "\Hussainweb\DrupalApi\Entity\Comment")  
+
   *Comment details from d.o.*
 
 - **[$commentProcessed](../classes/Drupal-ct-drupal-CommentDetails.md#commentprocessed)**
          : bool  
+
   *Is the comment processed?*
 
 - **[$contribRetriever](../classes/Drupal-ct-drupal-CommentDetails.md#contribretriever)**
          : [DrupalRetrieverInterface](../classes/Drupal-ct-drupal-DrupalRetrieverInterface.md)  
+
   *Contribution retriever service.*
 
 - **[$issueData](../classes/Drupal-ct-drupal-CommentDetails.md#issuedata)**
          : [Node](# "\Hussainweb\DrupalApi\Entity\Node")  
+
   *Node details from d.o.*
 
 - **[$issueStatus](../classes/Drupal-ct-drupal-CommentDetails.md#issuestatus)**
          : string  
+
   *Issue status.*
 
 - **[$patchFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#patchfilescount)**
          : int  
+
   *Number of patches attached to the comment.*
 
 - **[$timeService](../classes/Drupal-ct-drupal-CommentDetails.md#timeservice)**
          : [TimeInterface](# "\Drupal\Component\Datetime\TimeInterface")  
+
   *The datetime.time service.*
 
 - **[$totalFilesCount](../classes/Drupal-ct-drupal-CommentDetails.md#totalfilescount)**
          : int  
+
   *Number of all files attached to the comment.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-drupal-CommentDetails.md#__construct)**
            : mixed
+
   *DrupalOrgCommentDetails constructor.*
 
 - **[getDescription()](../classes/Drupal-ct-drupal-CommentDetails.md#getdescription)**
            : string
+
   *Get comment Description.*
 
 - **[getIssueStatus()](../classes/Drupal-ct-drupal-CommentDetails.md#getissuestatus)**
            : string
+
   *Get the issue status.*
 
 - **[getPatchFilesCount()](../classes/Drupal-ct-drupal-CommentDetails.md#getpatchfilescount)**
            : int
+
   *Get the number of patch files in this comment.*
 
 - **[getTotalFilesCount()](../classes/Drupal-ct-drupal-CommentDetails.md#gettotalfilescount)**
            : int
+
   *Get the number of all files in this comment.*
 
 - **[determineIssueStatus()](../classes/Drupal-ct-drupal-CommentDetails.md#determineissuestatus)**
            : void
+
   *Determine the status of the issue.*
 
 - **[getStatusFromCode()](../classes/Drupal-ct-drupal-CommentDetails.md#getstatusfromcode)**
            : string
+
   *Translate the status id to text.*
 
 - **[isPatchFile()](../classes/Drupal-ct-drupal-CommentDetails.md#ispatchfile)**
            : bool
+
   *Determine if this is a patch file.*
 
 - **[processFileDetails()](../classes/Drupal-ct-drupal-CommentDetails.md#processfiledetails)**
            : void
+
   *Check the type and number of files attached to a comment under a issue.*
 
 

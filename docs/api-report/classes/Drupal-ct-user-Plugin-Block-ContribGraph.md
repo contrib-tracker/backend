@@ -51,6 +51,7 @@
 #### Methods
 - **[build()](../classes/Drupal-ct-user-Plugin-Block-ContribGraph.md#build)**
            : mixed
+
   *{@inheritdoc}*
 
 

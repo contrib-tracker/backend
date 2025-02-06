@@ -42,6 +42,7 @@
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md#__construct)**
            : mixed
+
   *Creates the discovery object.*
 
 

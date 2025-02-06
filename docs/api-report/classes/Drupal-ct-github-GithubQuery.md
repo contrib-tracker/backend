@@ -43,28 +43,34 @@ Pull Requests.
 #### Properties
 - **[$cache](../classes/Drupal-ct-github-GithubQuery.md#cache)**
          : [CacheBackendInterface](# "\Drupal\Core\Cache\CacheBackendInterface")  
+
   *Cache backend service.*
 
 - **[$client](../classes/Drupal-ct-github-GithubQuery.md#client)**
          : [Client](# "\Github\Client")  
+
   *Establish connection to client.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-github-GithubQuery.md#__construct)**
            : mixed
+
   *Set authentication token to access GitHub API.*
 
 - **[getQuery()](../classes/Drupal-ct-github-GithubQuery.md#getquery)**
            : string
+
   *GraphQL query to get contributions associated with a user.*
 
 - **[getUserContributions()](../classes/Drupal-ct-github-GithubQuery.md#getusercontributions)**
            : mixed
+
   *API request to get user contributions.*
 
 - **[isUserValid()](../classes/Drupal-ct-github-GithubQuery.md#isuservalid)**
            : bool
+
   *Check username validity.*
 
 

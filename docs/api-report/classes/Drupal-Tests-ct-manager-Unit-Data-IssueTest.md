@@ -49,6 +49,7 @@
 #### Methods
 - **[testIssueCreation()](../classes/Drupal-Tests-ct-manager-Unit-Data-IssueTest.md#testissuecreation)**
            : mixed
+
   *Test simple issue creation.*
 
 

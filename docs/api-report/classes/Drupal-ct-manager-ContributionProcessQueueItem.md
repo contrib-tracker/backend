@@ -48,6 +48,7 @@
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#__construct)**
            : mixed
+
   *User value object constructor.*
 
 - **[getPluginId()](../classes/Drupal-ct-manager-ContributionProcessQueueItem.md#getpluginid)**

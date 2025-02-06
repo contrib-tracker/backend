@@ -53,32 +53,39 @@
 #### Properties
 - **[$contribStorage](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#contribstorage)**
          : [ContributionTrackerStorage](../classes/Drupal-ct-manager-ContributionTrackerStorage.md)  
+
   *Contribution manager service.*
 
 - **[$logger](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#logger)**
          : [LoggerChannelInterface](# "\Drupal\Core\Logger\LoggerChannelInterface")  
+
   *The logger interface.*
 
 - **[$pluginManager](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#pluginmanager)**
          : [ContributionSourcePluginManager](../classes/Drupal-ct-manager-ContributionSourcePluginManager.md)  
+
   *Contribution plugin manager.*
 
 - **[$slackService](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#slackservice)**
          : [Slack](# "\Drupal\slack\Slack")  
+
   *Slack service.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#__construct)**
            : mixed
+
   *{@inheritdoc}*
 
 - **[create()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#create)**
            : mixed
+
   *{@inheritdoc}*
 
 - **[processItem()](../classes/Drupal-ct-manager-Plugin-QueueWorker-ProcessUsers.md#processitem)**
            : mixed
+
   *Collects user contribution and stores it.*
 
 

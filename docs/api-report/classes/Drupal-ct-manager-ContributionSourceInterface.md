@@ -34,22 +34,27 @@
 #### Methods
 - **[getNotificationMessage()](../classes/Drupal-ct-manager-ContributionSourceInterface.md#getnotificationmessage)**
            : string
+
   *Get message for notification.*
 
 - **[getUserCodeContributions()](../classes/Drupal-ct-manager-ContributionSourceInterface.md#getusercodecontributions)**
            : mixed
+
   *Get comments from the total contribution data.*
 
 - **[getUserIssues()](../classes/Drupal-ct-manager-ContributionSourceInterface.md#getuserissues)**
            : mixed
+
   *Get issues from the total contribution data.*
 
 - **[getUsers()](../classes/Drupal-ct-manager-ContributionSourceInterface.md#getusers)**
            : mixed
+
   *Get users which can be processed by this plugin.*
 
 - **[isUserValid()](../classes/Drupal-ct-manager-ContributionSourceInterface.md#isuservalid)**
            : bool
+
   *Get user contributions from the platform.*
 
 

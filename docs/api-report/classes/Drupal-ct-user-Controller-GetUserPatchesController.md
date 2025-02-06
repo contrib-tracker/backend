@@ -41,20 +41,24 @@
 #### Properties
 - **[$entityTypeManager](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#entitytypemanager)**
          : [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")  
+
   *The entity type manager.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#__construct)**
            : mixed
+
   *Constructs a new GetUserPatchesController object.*
 
 - **[content()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#content)**
            : [JsonResponse](# "\Symfony\Component\HttpFoundation\JsonResponse")
+
   *Returns a JSON response with daily patches count.*
 
 - **[create()](../classes/Drupal-ct-user-Controller-GetUserPatchesController.md#create)**
            : mixed
+
   *{@inheritdoc}*
 
 

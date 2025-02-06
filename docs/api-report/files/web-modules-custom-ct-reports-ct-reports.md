@@ -33,6 +33,7 @@
 #### Functions
 - **[ct_reports_theme()](../namespaces/default.md#ct_reports_theme)**
            : mixed
+
   *Implements hook_theme().*
 
 

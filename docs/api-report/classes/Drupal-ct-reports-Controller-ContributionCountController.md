@@ -41,20 +41,24 @@
 #### Properties
 - **[$contribStats](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#contribstats)**
          : [ContributionStatistics](# "\Drupal\contrib_tracker\ContributionStatistics")  
+
   *Contribution statistics instance.*
 
 
 #### Methods
 - **[__construct()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#__construct)**
            : mixed
+
   *Constructs a new GeofieldMapGeocoder object.*
 
 - **[content()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#content)**
            : mixed
+
   *Returns a render-able array with contribution statistics.*
 
 - **[create()](../classes/Drupal-ct-reports-Controller-ContributionCountController.md#create)**
            : mixed
+
   *{@inheritdoc}*
 
 
