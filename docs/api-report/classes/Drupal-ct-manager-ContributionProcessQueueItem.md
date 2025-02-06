@@ -145,6 +145,7 @@ The user object.
 
 
 **Return Values**
+
 - string
 
 #### getUser()
@@ -164,6 +165,7 @@ The user object.
 
 
 **Return Values**
+
 - [User](# "\Drupal\user\Entity\User")
 
 

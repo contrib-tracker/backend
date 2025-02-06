@@ -331,6 +331,7 @@ The datetime.time service.
 
 
 **Return Values**
+
 - string
 
 #### getUserCodeContributions()
@@ -425,6 +426,7 @@ The datetime.time service.
 
 
 **Return Values**
+
 - bool
 
 

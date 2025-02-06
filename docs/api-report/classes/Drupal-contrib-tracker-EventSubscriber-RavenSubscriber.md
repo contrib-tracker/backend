@@ -83,6 +83,7 @@
 
 
 **Return Values**
+
 - array&lt;string|int, mixed&gt;
 
 #### onRavenOptionsAlter()

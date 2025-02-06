@@ -155,6 +155,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 
 **Return Values**
+
 - int
 
 #### totalContributions()
@@ -175,6 +176,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 
 **Return Values**
+
 - int
 
 #### totalContributors()
@@ -195,6 +197,7 @@ protected [NodeStorageInterface](# "\Drupal\node\NodeStorageInterface") $nodeSto
 
 
 **Return Values**
+
 - int
 
 

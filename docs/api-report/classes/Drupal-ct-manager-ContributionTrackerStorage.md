@@ -194,6 +194,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
+
 - [Node](# "\Drupal\node\Entity\Node")|null
 
 #### getNodeForIssue()
@@ -218,6 +219,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
+
 - [Node](# "\Drupal\node\Entity\Node")|null
 
 #### getOrCreateIssueNode()
@@ -242,6 +244,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
+
 - [Node](# "\Drupal\node\Entity\Node")
 
 #### saveCodeContribution()
@@ -270,6 +273,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
+
 - [Node](# "\Drupal\node\Entity\Node")
 
 #### saveIssue()
@@ -294,6 +298,7 @@ protected [TermStorageInterface](# "\Drupal\taxonomy\TermStorageInterface") $ter
 
 
 **Return Values**
+
 - [Node](# "\Drupal\node\Entity\Node")
 
 #### getOrCreateTerm()
@@ -324,6 +329,7 @@ Machine name of the vocabulary.
 
 
 **Return Values**
+
 - [TermInterface](# "\Drupal\taxonomy\TermInterface")
 The term with the given name in the given vocabulary.
 

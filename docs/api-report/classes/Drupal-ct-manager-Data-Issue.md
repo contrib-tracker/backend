@@ -162,6 +162,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getTitle()
@@ -181,6 +182,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getUrl()
@@ -200,6 +202,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### setDescription()
@@ -223,6 +226,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 

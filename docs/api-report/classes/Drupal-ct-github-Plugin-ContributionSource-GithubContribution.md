@@ -282,6 +282,7 @@ The injected github query service.
 
 
 **Return Values**
+
 - string
 
 #### getUserCodeContributions()
@@ -371,6 +372,7 @@ The injected github query service.
 
 
 **Return Values**
+
 - bool
 
 #### getOrCreateRetriever()
@@ -395,6 +397,7 @@ The injected github query service.
 
 
 **Return Values**
+
 - [GithubRetriever](../classes/Drupal-ct-github-GithubRetriever.md)
 
 

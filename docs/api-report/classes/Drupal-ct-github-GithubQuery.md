@@ -168,6 +168,7 @@ The Github username.
 
 
 **Return Values**
+
 - string
 Github Graphql query object
 
@@ -217,6 +218,7 @@ Github Graphql query object
 
 
 **Return Values**
+
 - bool
 
 

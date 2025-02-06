@@ -90,6 +90,7 @@
 
 
 **Return Values**
+
 - string
 
 #### getUserCodeContributions()
@@ -179,6 +180,7 @@
 
 
 **Return Values**
+
 - bool
 
 

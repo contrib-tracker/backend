@@ -377,6 +377,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getDate()
@@ -396,6 +397,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - [DateTimeImmutable](# "\DateTimeImmutable")
 
 #### getDescription()
@@ -415,6 +417,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getFilesCount()
@@ -434,6 +437,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - int
 
 #### getIssue()
@@ -453,6 +457,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - [Issue](../classes/Drupal-ct-manager-Data-Issue.md)|null
 
 #### getPatchCount()
@@ -472,6 +477,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - int
 
 #### getProject()
@@ -491,6 +497,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getProjectUrl()
@@ -510,6 +517,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getStatus()
@@ -529,6 +537,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getTechnology()
@@ -548,6 +557,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getTitle()
@@ -567,6 +577,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### getUrl()
@@ -586,6 +597,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - string
 
 #### setAccountUrl()
@@ -609,6 +621,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 #### setDescription()
@@ -632,6 +645,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 #### setFilesCount()
@@ -655,6 +669,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 #### setIssue()
@@ -678,6 +693,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 #### setPatchCount()
@@ -701,6 +717,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 #### setProject()
@@ -724,6 +741,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 #### setProjectUrl()
@@ -747,6 +765,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 #### setStatus()
@@ -770,6 +789,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 #### setTechnology()
@@ -793,6 +813,7 @@ URL of the contribution.
 
 
 **Return Values**
+
 - self
 
 

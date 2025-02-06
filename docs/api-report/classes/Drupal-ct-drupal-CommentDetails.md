@@ -311,6 +311,7 @@ Fix for relative user url used in comment section.
 
 
 **Return Values**
+
 - string
 
 #### getIssueStatus()
@@ -331,6 +332,7 @@ Fix for relative user url used in comment section.
 
 
 **Return Values**
+
 - string
 
 #### getPatchFilesCount()
@@ -351,6 +353,7 @@ Fix for relative user url used in comment section.
 
 
 **Return Values**
+
 - int
 
 #### getTotalFilesCount()
@@ -371,6 +374,7 @@ Fix for relative user url used in comment section.
 
 
 **Return Values**
+
 - int
 
 #### determineIssueStatus()
@@ -416,6 +420,7 @@ Issue status id.
 
 
 **Return Values**
+
 - string
 Readable text corresponding to the status id.
 
@@ -444,6 +449,7 @@ The file data returned from API.
 
 
 **Return Values**
+
 - bool
 TRUE if this is a patch file, else FALSE.
 
