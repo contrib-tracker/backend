@@ -101,10 +101,7 @@
 **Parameters**
 
 - **$optionsAlter**: [OptionsAlter](# "\Drupal\raven\Event\OptionsAlter")
-  
-  **
-
-
+    
 
 
 

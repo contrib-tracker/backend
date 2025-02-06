@@ -165,18 +165,12 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$ctStorage**: [ContributionStorageInterface](# "\Drupal\contrib_tracker\ContributionStorageInterface")
+      *The contrib tracker storage service.*
+  - **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
+      *The entity type manager service.*
+  - **$database**: [Connection](# "\Drupal\Core\Database\Connection")
+      *The database connection.*
   
-  *The contrib tracker storage service.*
-
-- **$entityTypeManager**: [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerInterface")
-  
-  *The entity type manager service.*
-
-- **$database**: [Connection](# "\Drupal\Core\Database\Connection")
-  
-  *The database connection.*
-
-
 
 
 
@@ -217,14 +211,8 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$input**: [InputInterface](# "\Symfony\Component\Console\Input\InputInterface")
-  
-  **
-
-- **$output**: [OutputInterface](# "\Symfony\Component\Console\Output\OutputInterface")
-  
-  **
-
-
+    - **$output**: [OutputInterface](# "\Symfony\Component\Console\Output\OutputInterface")
+    
 
 
 
@@ -270,10 +258,8 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$issueId**: string
+      *The d.o issue ID.*
   
-  *The d.o issue ID.*
-
-
 
 
 
@@ -300,14 +286,10 @@ protected [EntityTypeManagerInterface](# "\Drupal\Core\Entity\EntityTypeManagerI
 **Parameters**
 
 - **$issueNids**: array&lt;string|int, int&gt;
+      *The node ids to be searched and replaced.*
+  - **$originalNid**: array&lt;string|int, int&gt;
+      *The updated node id value.*
   
-  *The node ids to be searched and replaced.*
-
-- **$originalNid**: array&lt;string|int, int&gt;
-  
-  *The updated node id value.*
-
-
 
 
 

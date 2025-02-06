@@ -100,10 +100,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$message**: mixed
-  
-  **
-
-
+    
 
 
 
@@ -140,10 +137,7 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$existing**: mixed
-  
-  **
-
-
+    
 
 
 
@@ -179,14 +173,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$route_name**: mixed
-  
-  **
-
-- **$route_match**: [RouteMatchInterface](# "\Drupal\Core\Routing\RouteMatchInterface")
-  
-  **
-
-
+    - **$route_match**: [RouteMatchInterface](# "\Drupal\Core\Routing\RouteMatchInterface")
+    
 
 
 
@@ -206,18 +194,9 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$form**: mixed
-  
-  **
-
-- **$form_state**: mixed
-  
-  **
-
-- **$form_id**: mixed
-  
-  **
-
-
+    - **$form_state**: mixed
+    - **$form_id**: mixed
+    
 
 
 
@@ -237,14 +216,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$form**: mixed
-  
-  **
-
-- **$form_state**: mixed
-  
-  **
-
-
+    - **$form_state**: mixed
+    
 
 
 
@@ -263,14 +236,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$suggestions**: array&lt;string|int, mixed&gt;
-  
-  **
-
-- **$variables**: array&lt;string|int, mixed&gt;
-  
-  **
-
-
+    - **$variables**: array&lt;string|int, mixed&gt;
+    
 
 
 
@@ -290,14 +257,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$suggestions**: array&lt;string|int, mixed&gt;
-  
-  **
-
-- **$variables**: array&lt;string|int, mixed&gt;
-  
-  **
-
-
+    - **$variables**: array&lt;string|int, mixed&gt;
+    
 
 
 
@@ -317,14 +278,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$suggestions**: array&lt;string|int, mixed&gt;
-  
-  **
-
-- **$variables**: array&lt;string|int, mixed&gt;
-  
-  **
-
-
+    - **$variables**: array&lt;string|int, mixed&gt;
+    
 
 
 
@@ -344,14 +299,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$suggestions**: array&lt;string|int, mixed&gt;
-  
-  **
-
-- **$variables**: array&lt;string|int, mixed&gt;
-  
-  **
-
-
+    - **$variables**: array&lt;string|int, mixed&gt;
+    
 
 
 
@@ -371,14 +320,8 @@ We DO NOT ALLOW mail sending for non production platformsh environments.
 **Parameters**
 
 - **$suggestions**: mixed
-  
-  **
-
-- **$variables**: array&lt;string|int, mixed&gt;
-  
-  **
-
-
+    - **$variables**: array&lt;string|int, mixed&gt;
+    
 
 
 
