@@ -58,7 +58,8 @@
 ### Functions
 
 #### ct_user_theme()
-[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 11
+<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 11
+</small>
 
 
 
@@ -73,7 +74,8 @@
 
 ---
 #### ct_user_help()
-[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 22
+<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 22
+</small>
 
 *Implements hook_help().*
 
@@ -95,7 +97,8 @@
 
 ---
 #### ct_user_form_alter()
-[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 38
+<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 38
+</small>
 
 *Implements hook_form_alter().*
 
@@ -119,7 +122,8 @@
 
 ---
 #### ct_user_user_login_form_validate()
-[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 49
+<small>[ct_user.module](../files/web-modules-custom-ct-user-ct-user.md) : Line 49
+</small>
 
 *Custom validation function for the user login form.*
 

@@ -45,7 +45,8 @@
 ### Functions
 
 #### ct_manager_cron()
-[ct_manager.module](../files/web-modules-custom-ct-manager-ct-manager.md) : Line 20
+<small>[ct_manager.module](../files/web-modules-custom-ct-manager-ct-manager.md) : Line 20
+</small>
 
 *Implements hook_cron().*
 
