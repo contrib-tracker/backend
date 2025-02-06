@@ -44,8 +44,10 @@
 
 ### Functions
 
-#### contrib_tracker_mail_alter() [contrib_tracker.module](../files/web-modules-custom-contrib-tracker-contrib-tracker.md) : Line 17
-
+|  |  |
+| --- | --- |
+| ####contrib_tracker_mail_alter() | [contrib_tracker.module](../files/web-modules-custom-contrib-tracker-contrib-tracker.md) : Line 17
+ |
 
 *Implements hook_mail_alter().*
 
