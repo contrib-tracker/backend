@@ -52,7 +52,7 @@
         "drupal/new_relic_rpm": "^2.0",
         "drupal/raven": "^6.0",
         "drupal/redis": "^1.4.0",
-        "drupal/select2": "^1.13",
+        "drupal/select2": "^2.0",
         "drupal/slack": "^1.2.0",
         "drupal/social_auth": "^4.0",
         "drupal/social_auth_google": "^4.0",
