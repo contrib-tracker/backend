@@ -1,19 +1,33 @@
 const fs = require('fs-extra');
 const path = require('path');
-const yaml = require('js-yaml');
+yaml = require('js-yaml');
 const { readFileIfExists } = require('./fileUtils');
+const { generateAiEnhancedReadme } = require('./aiUtils');
 
-function analyzeModuleCode(modulePath) {
+const API_REPORT_DIR = path.resolve(process.cwd(), '../docs/api-report');
+const TEMP_DIR = path.resolve(process.cwd(), '../docs/temp');
+fs.ensureDirSync(TEMP_DIR);
+
+function findApiDocumentation(moduleName) {
+    const normalizedModuleName = moduleName.replace(/_/g, '-');
+    const possibleFiles = fs.readdirSync(API_REPORT_DIR).filter(file =>
+        file.includes(moduleName) || file.includes(normalizedModuleName)
+    );
+    
+    if (possibleFiles.length > 0) {
+        return readFileIfExists(path.join(API_REPORT_DIR, possibleFiles[0]));
+    }
+    return '';
+}
+
+function analyzeModuleFiles(modulePath) {
     let details = {
-        dependencies: [],
         services: [],
-        hooks: [],
-        classes: [],
-        functions: [],
-        plugins: [],
         routes: [],
         permissions: [],
-        schema: []
+        schema: [],
+        dependencies: [],
+        analyzedFiles: []
     };
 
     function walk(dir) {
@@ -23,27 +37,29 @@ function analyzeModuleCode(modulePath) {
             const fullPath = path.join(dir, file);
             if (fs.statSync(fullPath).isDirectory()) {
                 walk(fullPath);
-            } else if (fullPath.endsWith('.php') || fullPath.endsWith('.module')) {
-                const content = readFileIfExists(fullPath);
-                if (/hook_/.test(content)) {
-                    details.hooks.push(fullPath.replace(modulePath + '/', ''));
+            } else {
+                details.analyzedFiles.push(fullPath.replace(modulePath + '/', ''));
+                if (fullPath.endsWith('.routing.yml')) {
+                    details.routes.push(fullPath.replace(modulePath + '/', ''));
+                } else if (fullPath.endsWith('.permissions.yml')) {
+                    details.permissions.push(fullPath.replace(modulePath + '/', ''));
+                } else if (fullPath.endsWith('.schema.yml')) {
+                    details.schema.push(fullPath.replace(modulePath + '/', ''));
+                } else if (fullPath.endsWith('.services.yml')) {
+                    try {
+                        const serviceData = yaml.load(readFileIfExists(fullPath));
+                        details.services = Object.keys(serviceData || {});
+                    } catch (error) {
+                        console.error(`Error parsing services YAML: ${error.message}`);
+                    }
+                } else if (fullPath.endsWith('composer.json')) {
+                    try {
+                        const composerData = JSON.parse(readFileIfExists(fullPath));
+                        details.dependencies = Object.keys(composerData.require || {});
+                    } catch (error) {
+                        console.error(`Error parsing composer.json: ${error.message}`);
+                    }
                 }
-                const classMatches = content.match(/class\s+([A-Za-z0-9_]+)/g);
-                if (classMatches) {
-                    classMatches.forEach(cls => details.classes.push(cls.replace('class ', '')));
-                }
-                const functionMatches = content.match(/function\s+([A-Za-z0-9_]+)/g);
-                if (functionMatches) {
-                    functionMatches.forEach(fn => details.functions.push(fn.replace('function ', '')));
-                }
-            } else if (fullPath.endsWith('.routing.yml')) {
-                details.routes.push(fullPath.replace(modulePath + '/', ''));
-            } else if (fullPath.endsWith('.permissions.yml')) {
-                details.permissions.push(fullPath.replace(modulePath + '/', ''));
-            } else if (fullPath.includes('/src/Plugin/')) {
-                details.plugins.push(fullPath.replace(modulePath + '/', ''));
-            } else if (fullPath.endsWith('.schema.yml')) {
-                details.schema.push(fullPath.replace(modulePath + '/', ''));
             }
         }
     }
@@ -51,18 +67,18 @@ function analyzeModuleCode(modulePath) {
     return details;
 }
 
-function generateReadme(directory, category) {
+async function generateReadme(directory) {
     if (!fs.existsSync(directory)) return [];
     let generatedDocs = [];
     
-    fs.readdirSync(directory).forEach(module => {
+    fs.readdirSync(directory).forEach(async (module) => {
         const modulePath = path.join(directory, module);
         if (fs.statSync(modulePath).isDirectory()) {
             const infoFile = path.join(modulePath, `${module}.info.yml`);
-            const servicesFile = path.join(modulePath, `${module}.services.yml`);
             const composerFile = path.join(modulePath, 'composer.json');
-            const packageFile = path.join(modulePath, 'package.json');
-            const readmeFile = path.join(modulePath, 'README.md');
+            const apiDocumentation = findApiDocumentation(module);
+            const tempFile = path.join(TEMP_DIR, `${module}.txt`);
+            const readmeFile = path.join(API_REPORT_DIR, `${module}-README.md`);
             
             let moduleInfo = {};
             if (fs.existsSync(infoFile)) {
@@ -73,42 +89,27 @@ function generateReadme(directory, category) {
                 }
             }
             
-            let services = [];
-            if (fs.existsSync(servicesFile)) {
-                try {
-                    const serviceData = yaml.load(readFileIfExists(servicesFile));
-                    services = Object.keys(serviceData || {});
-                } catch (error) {
-                    console.error(`Error parsing services YAML: ${error.message}`);
-                }
-            }
+            const moduleDetails = analyzeModuleFiles(modulePath);
             
-            let dependencies = [];
-            if (fs.existsSync(composerFile)) {
-                try {
-                    const composerData = JSON.parse(readFileIfExists(composerFile));
-                    dependencies.push(...Object.keys(composerData.dependencies || {}));
-                } catch (error) {
-                    console.error(`Error parsing composer.json: ${error.message}`);
-                }
-            }
+            const combinedContent = `Module: ${moduleInfo.name || module}\n\n` +
+                `Description: ${moduleInfo.description || 'No description available.'}\n\n` +
+                `API Documentation:\n\n${apiDocumentation}\n\n` +
+                `## Services\n${moduleDetails.services.length ? moduleDetails.services.map(srv => `- ${srv}`).join('\n') : 'No services defined.'}\n\n` +
+                `## Routes\n${moduleDetails.routes.length ? moduleDetails.routes.map(r => `- ${r}`).join('\n') : 'No routes found.'}\n\n` +
+                `## Permissions\n${moduleDetails.permissions.length ? moduleDetails.permissions.map(p => `- ${p}`).join('\n') : 'No permissions found.'}\n\n` +
+                `## Database Schema\n${moduleDetails.schema.length ? moduleDetails.schema.map(s => `- ${s}`).join('\n') : 'No schema defined.'}\n\n` +
+                `## Dependencies\n${moduleDetails.dependencies.length ? moduleDetails.dependencies.map(dep => `- ${dep}`).join('\n') : 'No dependencies found.'}\n\n`;
             
-            if (fs.existsSync(packageFile)) {
-                try {
-                    const packageData = JSON.parse(readFileIfExists(packageFile));
-                    dependencies.push(...Object.keys(packageData.dependencies || {}));
-                } catch (error) {
-                    console.error(`Error parsing package.json: ${error.message}`);
-                }
-            }
+            fs.writeFileSync(tempFile, combinedContent);
+            console.log(`Generated temporary file for ${module}`);
             
-            const codeAnalysis = analyzeModuleCode(modulePath);
-            
-            const readmeContent = `# ${moduleInfo.name || module} Module\n\n## Description\n${moduleInfo.description || 'No description available.'}\n\n## Dependencies\n${dependencies.length ? dependencies.map(dep => `- ${dep}`).join('\n') : 'No dependencies found.'}\n\n## Services\n${services.length ? services.map(srv => `- ${srv}`).join('\n') : 'No services defined.'}\n\n## Hooks Implemented\n${codeAnalysis.hooks.length ? codeAnalysis.hooks.map(h => `- ${h}`).join('\n') : 'No custom hooks implemented.'}\n\n## Main Classes & Implementations\n${codeAnalysis.classes.length ? codeAnalysis.classes.map(c => `- ${c}`).join('\n') : 'No specific classes detected.'}\n\n## Functions\n${codeAnalysis.functions.length ? codeAnalysis.functions.map(f => `- ${f}`).join('\n') : 'No specific functions detected.'}\n\n## Plugins\n${codeAnalysis.plugins.length ? codeAnalysis.plugins.map(p => `- ${p}`).join('\n') : 'No plugins found.'}\n\n## Routes\n${codeAnalysis.routes.length ? codeAnalysis.routes.map(r => `- ${r}`).join('\n') : 'No routes defined.'}\n\n## Permissions\n${codeAnalysis.permissions.length ? codeAnalysis.permissions.map(p => `- ${p}`).join('\n') : 'No permissions found.'}\n\n## Database Schema\n${codeAnalysis.schema.length ? codeAnalysis.schema.map(s => `- ${s}`).join('\n') : 'No schema defined.'}\n\n## Example Usage\nHere’s an example of how this module works:\n\n\`\`\`php\n// Example usage of the module functionality\ndrush en ${module};\ndrush cr;\n\`\`\`\n\nRefer to the documentation for more details.`;
-            
-            fs.writeFileSync(readmeFile, readmeContent);
+            const structuredDocumentation = await generateAiEnhancedReadme(combinedContent, [
+                "Installation", "Usage", "Configuration", "API", "Examples",
+                "Dependencies", "Known Issues", "Contributing", "Changelog", "License"
+            ]);
+            fs.writeFileSync(readmeFile, structuredDocumentation);
             generatedDocs.push(module);
-            console.log(`Generated README for ${category}: ${module}`);
+            console.log(`Generated README for ${module} under api-report`);
         }
     });
     
