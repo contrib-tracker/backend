@@ -38,10 +38,11 @@ ${content}`;
         return 'Error generating documentation.';
     }
 }
-
+// Function to generate Diátaxis-based structured documentation
 async function generateDiataxisContent(content) {
     try {
-        const formattedPrompt = `You are an expert documentation generator following the Diátaxis framework. Generate documentation based on the following content:
+        const formattedPrompt = `You are an expert documentation generator following the Diátaxis framework (Tutorials, How-To Guides, Reference, Explanation).
+Generate well-structured documentation based on the following content:
 
 Content:
 ${content}`;
@@ -66,9 +67,43 @@ ${content}`;
 
         return response.data.choices[0].message.content.trim();
     } catch (error) {
-        console.error('Error generating Diátaxis documentation:', error.response?.data || error.message);
+        console.error('❌ Error generating Diátaxis documentation:', error.response?.data || error.message);
         return 'Error generating Diátaxis documentation.';
     }
 }
 
-module.exports = { generateAiEnhancedReadme, generateDiataxisContent };
+// AI function to extract key points from a file
+async function generateCorePoints(fileName, content) {
+    try {
+        const formattedPrompt = `You are an expert in extracting only relevant key points for documentation.
+        Given the content of the file "${fileName}", extract only the most useful core points for documentation.
+        
+        Content:
+        ${content}`;
+
+        const response = await axios.post(
+            API_BASE_URL,
+            {
+                model: MODEL,
+                messages: [
+                    { role: 'system', content: 'You are an AI that extracts core documentation points from files.' },
+                    { role: 'user', content: formattedPrompt }
+                ],
+                max_tokens: 1000
+            },
+            {
+                headers: {
+                    'Authorization': `Bearer ${API_KEY}`,
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+
+        return response.data.choices[0].message.content.trim();
+    } catch (error) {
+        console.error(`❌ Error extracting core points from ${fileName}:`, error.response?.data || error.message);
+        return 'Error extracting core points.';
+    }
+}
+
+module.exports = { generateAiEnhancedReadme, generateDiataxisContent, generateCorePoints };

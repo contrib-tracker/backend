@@ -1,45 +1,89 @@
 const fs = require('fs-extra');
 const path = require('path');
-const { readFileIfExists, ensureDirectories } = require('./fileUtils');
 const { generateDiataxisContent } = require('./aiUtils');
 
-const OUTPUT_DIRS = {
-    'Tutorial': 'docs3/tutorials',
-    'How-To': 'docs3/how-to',
-    'Reference': 'docs3/reference',
-    'Explanation': 'docs3/explanation',
-    'Index': 'docs3'
+const CORE_INFO_FILE = 'core_info.json';
+const OUTPUT_DIR = 'docs';
+
+// Ensure the `docs/` directory exists
+fs.ensureDirSync(OUTPUT_DIR);
+
+// **Mapping core points to meaningful documentation files**
+const DOC_STRUCTURE = {
+    "tools-and-prerequisites.md": ["Tools and Pre-requisites"],
+    "local-environment-setup.md": ["Local Environment Setup"],
+    "how-to-work-on-project.md": ["How to Work on This Project"],
+    "content-structure.md": ["Content Structure"],
+    "custom-modules-and-themes.md": ["Custom Modules and Themes"],
+    "testing-strategy.md": ["Testing"],
+    "monitoring-and-logging.md": ["Monitoring and Logging"],
+    "ci-cd-process.md": ["CI/CD"]
 };
 
-function extractProjectDetails(rootReadme, configFiles) {
-    let details = { overview: '', tools: [], setup: '', workflow: '', testing: '', monitoring: '', ci_cd: '' };
-    const readmeContent = readFileIfExists(rootReadme);
+// Decide which documentation files to create based on extracted core points
+function determineDocumentationFiles(coreInfo) {
+    let documentationFiles = {};
 
-    if (readmeContent) {
-        details.overview = readmeContent.split('\\n')[0];
-        details.setup = readmeContent.match(/## Local Environment Setup[\\s\\S]*?(?=##|$)/gi)?.[0] || '';
-        details.workflow = readmeContent.match(/## How to work on the project[\\s\\S]*?(?=##|$)/gi)?.[0] || '';
-        details.testing = readmeContent.match(/## Testing[\\s\\S]*?(?=##|$)/gi)?.[0] || '';
-        details.monitoring = readmeContent.match(/## Monitoring and Logging[\\s\\S]*?(?=##|$)/gi)?.[0] || '';
-        details.ci_cd = readmeContent.match(/## CI\/CD[\s\S]*?(?=##|$)/gi)?.[0] || '';
+    Object.entries(DOC_STRUCTURE).forEach(([docFile, categories]) => {
+        let content = `# ${docFile.replace(/-/g, ' ').replace('.md', '')}\n\n`;
 
+        categories.forEach(category => {
+            if (coreInfo[category]) {
+                coreInfo[category].forEach(item => {
+                    content += `### From ${item.file}\n${item.extractedPoints}\n\n`;
+                });
+            }
+        });
 
+        documentationFiles[docFile] = content;
+    });
 
+    return documentationFiles;
+}
+
+// Create meaningful documentation files with extracted content
+function createDocumentationFiles(documentationFiles) {
+    Object.entries(documentationFiles).forEach(([fileName, content]) => {
+        const filePath = path.join(OUTPUT_DIR, fileName);
+        fs.writeFileSync(filePath, content);
+        console.log(`📄 Created: ${filePath}`);
+    });
+}
+
+// Refine documentation files using AI
+async function refineDocumentationWithAI() {
+    const files = fs.readdirSync(OUTPUT_DIR);
+    for (const file of files) {
+        const filePath = path.join(OUTPUT_DIR, file);
+        let content = fs.readFileSync(filePath, 'utf8');
+
+        console.log(`🧠 Enhancing ${filePath} with AI...`);
+        const enhancedContent = await generateDiataxisContent(content);
+
+        fs.writeFileSync(filePath, enhancedContent);
+        console.log(`✅ AI-enhanced content saved: ${filePath}`);
+    }
+}
+
+// Main function to generate documentation
+async function generateDocs() {
+    if (!fs.existsSync(CORE_INFO_FILE)) {
+        console.error(`❌ Missing core information file: ${CORE_INFO_FILE}`);
+        return;
     }
 
-    return details;
+    const coreInfo = JSON.parse(fs.readFileSync(CORE_INFO_FILE, 'utf8'));
+
+    console.log("📄 Determining meaningful documentation files...");
+    const documentationFiles = determineDocumentationFiles(coreInfo);
+
+    console.log("📝 Creating structured documentation files...");
+    createDocumentationFiles(documentationFiles);
+
+    console.log("🚀 Enhancing documentation using AI...");
+    await refineDocumentationWithAI();
+
+    console.log("🎉 Project documentation successfully generated and refined.");
 }
 
-async function generateDiataxisDocs(rootReadme, configFiles) {
-    ensureDirectories(Object.values(OUTPUT_DIRS));
-
-    const projectDetails = extractProjectDetails(rootReadme, configFiles);
-    const structuredDocs = await generateDiataxisContent(JSON.stringify(projectDetails, null, 2));
-
-    const indexContent = `# Project Documentation Index\\n\\n## Introduction\\n${projectDetails.overview}\\n\\n## Tools Used\\n${projectDetails.tools.join(', ')}\\n\\n## Setup\\n${projectDetails.setup}\\n\\n## CI/CD\\n${projectDetails.ci_cd}\\n\\n## Available Modules and Themes:\\n`;
-
-    fs.writeFileSync(path.join(OUTPUT_DIRS.Index, 'index.md'), indexContent);
-    console.log('Diátaxis-based documentation with AI-enhanced insights generated.');
-}
-
-module.exports = { generateDiataxisDocs };
+generateDocs();
