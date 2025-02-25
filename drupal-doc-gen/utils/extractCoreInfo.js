@@ -2,22 +2,59 @@ const fs = require('fs-extra');
 const path = require('path');
 const glob = require('glob');
 const { readFileIfExists } = require('./fileUtils');
-const { generateCorePoints } = require('./aiUtils'); // New AI function
+const { generateCorePoints } = require('./aiUtils');
 
 const OUTPUT_FILE = 'core_info.json';
 
 const FILE_SOURCES = {
-    "Tools and Pre-requisites": ["README.md", "composer.json", ".lando.yml", "docker-compose.yml", ".github/workflows/*.yml"],
-    "Local Environment Setup": ["README.md", ".lando.yml", "docker-compose.yml", "web/sites/example.settings.local.php"],
-    "How to Work on This Project": ["README.md", "CONTRIBUTING.md", ".github/workflows/*.yml"],
-    "Content Structure": ["/config/sync/*", "web/modules/custom/*/README.md", "web/themes/custom/*/README.md"],
-    "Custom Modules and Themes": ["web/modules/custom/*/README.md", "web/themes/custom/*/README.md", "composer.json"],
-    "Testing": ["/tests/*", "/core/tests/*", ".github/workflows/*.yml"],
-    "Monitoring and Logging": ["/config/sync/system.logging.yml", "web/sites/default/settings.php", "web/sites/default/settings.local.php", "sentry.settings.yml"],
-    "CI/CD": [".github/workflows/*.yml", ".gitlab-ci.yml", "Jenkinsfile", "bitbucket-pipelines.yml"]
+    "Tools and Pre-requisites": [
+        "README.md",
+        "composer.json",
+        ".lando.yml",
+        ".ddev/config.yaml",
+        "docker-compose.yml",
+        ".github/workflows/*.yml",
+        "web/themes/custom/*/package.json"
+    ],
+    "Local Environment Setup": [
+        "README.md",
+        ".lando.yml",
+        ".ddev/config.yaml",
+        "docker-compose.yml",
+        "web/sites/example.settings.local.php"
+    ],
+    "How to Work on This Project": [
+        "README.md",
+        "CONTRIBUTING.md",
+        ".github/workflows/*.yml"
+    ],
+    "Content Structure": [
+        "/config/sync/*",
+        "web/modules/custom/*/README.md",
+        "web/themes/custom/*/README.md"
+    ],
+    "Custom Modules and Themes": [
+        "web/modules/custom/*/README.md",
+        "web/themes/custom/*/README.md",
+        "composer.json",
+        "docs/**/*README*.md"
+    ],
+    "Testing": [
+        "/tests/*",
+        "/core/tests/*",
+        ".github/workflows/*.yml"
+    ],
+    "Monitoring and Logging": [
+        "/config/sync/system.logging.yml",
+        "web/sites/default/settings.php",
+        "web/sites/default/settings.local.php"
+    ],
+    "CI/CD": [
+        ".github/workflows/*.yml"
+    ]
 };
 
-// Extract core points using AI
+// **Extract Core Points with AI**
 async function extractProjectDetails() {
     let details = {};
     let missingFiles = [];
@@ -36,8 +73,8 @@ async function extractProjectDetails() {
                 const content = readFileIfExists(file);
                 if (!content.trim()) continue;
 
-                console.log(`🧠 Extracting core points from ${file} using AI...`);
-                const extractedPoints = await generateCorePoints(file, content);
+                console.log(`🧠 Extracting core points from ${file} under category "${category}" using AI...`);
+                const extractedPoints = await generateCorePoints(category, file, content);
                 
                 if (extractedPoints) {
                     details[category].push({ file, extractedPoints });
@@ -53,7 +90,7 @@ async function extractProjectDetails() {
     return details;
 }
 
-// Save extracted details into core_info.json
+// **Save Extracted Details**
 async function saveExtractedInfo() {
     const projectDetails = await extractProjectDetails();
 

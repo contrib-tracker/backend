@@ -73,12 +73,21 @@ ${content}`;
 }
 
 // AI function to extract key points from a file
-async function generateCorePoints(fileName, content) {
+async function generateCorePoints(category, fileName, content) {
     try {
-        const formattedPrompt = `You are an expert in extracting only relevant key points for documentation.
-        Given the content of the file "${fileName}", extract only the most useful core points for documentation.
+        const formattedPrompt = `
+        You are extracting documentation core points for software engineers onboarding to the project.
+        The category of information we need is: **"${category}"**.
         
-        Content:
+        **Extract only relevant details that engineers need for this category**:
+        - **Explain how this file is related to "${category}"**.
+        - **Ignore unrelated details**.
+        - **Summarize only the key configurations, dependencies, or services that engineers should know**.
+        - **List important tools, environment variables, or settings relevant to "${category}"**.
+        - **If the file has no relevant details for "${category}", return "No relevant information"**.
+
+        **Processing File: ${fileName}**
+        **File Content:**
         ${content}`;
 
         const response = await axios.post(
@@ -86,10 +95,10 @@ async function generateCorePoints(fileName, content) {
             {
                 model: MODEL,
                 messages: [
-                    { role: 'system', content: 'You are an AI that extracts core documentation points from files.' },
+                    { role: 'system', content: 'You extract category-specific documentation core points for engineers.' },
                     { role: 'user', content: formattedPrompt }
                 ],
-                max_tokens: 1000
+                max_tokens: 1200
             },
             {
                 headers: {
@@ -99,7 +108,11 @@ async function generateCorePoints(fileName, content) {
             }
         );
 
-        return response.data.choices[0].message.content.trim();
+        const extractedText = response.data.choices[0].message.content.trim();
+
+        // Return "No relevant information" if AI couldn't extract anything useful
+        return extractedText.includes("No relevant information") ? null : extractedText;
+
     } catch (error) {
         console.error(`❌ Error extracting core points from ${fileName}:`, error.response?.data || error.message);
         return 'Error extracting core points.';

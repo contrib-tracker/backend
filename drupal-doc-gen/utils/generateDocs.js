@@ -1,11 +1,11 @@
 const fs = require('fs-extra');
 const path = require('path');
-const { generateDiataxisContent } = require('./aiUtils');
+const { generateDiataxisContent } = require('./utils/aiUtils');
 
 const CORE_INFO_FILE = 'core_info.json';
 const OUTPUT_DIR = 'docs';
 
-// Ensure the `docs/` directory exists
+// Ensure `docs/` directory exists
 fs.ensureDirSync(OUTPUT_DIR);
 
 // **Mapping core points to meaningful documentation files**
@@ -20,7 +20,7 @@ const DOC_STRUCTURE = {
     "ci-cd-process.md": ["CI/CD"]
 };
 
-// Decide which documentation files to create based on extracted core points
+// **Determine Documentation Files Based on Extracted Core Points**
 function determineDocumentationFiles(coreInfo) {
     let documentationFiles = {};
 
@@ -30,7 +30,8 @@ function determineDocumentationFiles(coreInfo) {
         categories.forEach(category => {
             if (coreInfo[category]) {
                 coreInfo[category].forEach(item => {
-                    content += `### From ${item.file}\n${item.extractedPoints}\n\n`;
+                    content += `### Extracted Information from ${item.file}\n\n`;
+                    content += `${item.extractedPoints}\n\n`;
                 });
             }
         });
@@ -41,7 +42,7 @@ function determineDocumentationFiles(coreInfo) {
     return documentationFiles;
 }
 
-// Create meaningful documentation files with extracted content
+// **Create Initial Documentation Files**
 function createDocumentationFiles(documentationFiles) {
     Object.entries(documentationFiles).forEach(([fileName, content]) => {
         const filePath = path.join(OUTPUT_DIR, fileName);
@@ -50,7 +51,27 @@ function createDocumentationFiles(documentationFiles) {
     });
 }
 
-// Refine documentation files using AI
+// **Generate Index File with Summary and Links**
+function generateIndexFile(documentationFiles) {
+    let indexContent = `# Project Documentation Index\n\n`;
+    indexContent += `Welcome to the project documentation. Below is a summary of key sections and links to detailed pages.\n\n`;
+
+    Object.entries(documentationFiles).forEach(([fileName, content]) => {
+        const sectionTitle = fileName.replace(/-/g, ' ').replace('.md', '');
+        indexContent += `## [${sectionTitle}](./${fileName})\n\n`;
+
+        // Extract first few lines as a summary
+        const summary = content.split("\n").slice(0, 5).join(" ");
+        indexContent += `${summary}...\n\n`;
+    });
+
+    // Save the index file
+    const indexPath = path.join(OUTPUT_DIR, 'index.md');
+    fs.writeFileSync(indexPath, indexContent);
+    console.log(`📄 Created: ${indexPath}`);
+}
+
+// **Refine Documentation Using AI**
 async function refineDocumentationWithAI() {
     const files = fs.readdirSync(OUTPUT_DIR);
     for (const file of files) {
@@ -65,7 +86,7 @@ async function refineDocumentationWithAI() {
     }
 }
 
-// Main function to generate documentation
+// **Main Function to Generate Documentation**
 async function generateDocs() {
     if (!fs.existsSync(CORE_INFO_FILE)) {
         console.error(`❌ Missing core information file: ${CORE_INFO_FILE}`);
@@ -79,6 +100,9 @@ async function generateDocs() {
 
     console.log("📝 Creating structured documentation files...");
     createDocumentationFiles(documentationFiles);
+
+    console.log("📌 Generating index file...");
+    generateIndexFile(documentationFiles);
 
     console.log("🚀 Enhancing documentation using AI...");
     await refineDocumentationWithAI();
