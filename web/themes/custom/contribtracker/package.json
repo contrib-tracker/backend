@@ -43,7 +43,7 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-svgstore": "^9.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
-    "postcss": "^8.4.40",
+    "postcss": "^8.5.3",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.4.1",
     "sass": "^1.81.0",
