@@ -15,7 +15,7 @@ concurrency:
 jobs:
 
   vr_test:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     env:
       # For Cypress.
       CYPRESS_ADMIN_USERNAME: ct-admin
@@ -31,7 +31,7 @@ jobs:
         run: |
           echo "composer-dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
           echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v4
+      - uses: useblacksmith/cache@v5
         with:
           path: |
             vendor
@@ -43,7 +43,7 @@ jobs:
           key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
-      - uses: actions/cache@v4
+      - uses: useblacksmith/cache@v5
         with:
           path: |
             **/node_modules
