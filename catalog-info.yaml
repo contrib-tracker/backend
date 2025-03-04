@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: contrib-tracker
+  name: contrib-tracker-phpdoc-testing
   description: Axelerant Contribution Tracker
-  title: Contrib Tracker
+  title: Contrib Tracker - Phpdoc Testing
   annotations:
     github.com/project-slug: contrib-tracker/backend
     sentry.io/project-slug: contrib-tracker
