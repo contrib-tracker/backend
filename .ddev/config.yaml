@@ -18,7 +18,6 @@ web_environment:
     - PLATFORM_PROJECT=brbqplxd7ycq6
 corepack_enable: false
 ddev_version_constraint: ">= 1.23.3" # We need this for MariaDB 11.4 compatibility.
-nodejs_version: "20"
 
 # Key features of DDEV's config.yaml:
 
