@@ -1,75 +1,185 @@
-# Custom Modules and Themes
+# Contrib Tracker Project - Custom Modules Documentation
 
-## Custom Modules
+This document provides detailed information about the custom modules developed for the Contrib Tracker project. It serves as a guide for developers looking to understand, maintain, or extend the functionality of these modules.
 
-The custom modules used for this project are:
+## Module Overview
 
-### [Contribution Plugin Manager](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_manager)
+The Contrib Tracker project includes the following custom modules:
 
-- The Contribution Plugin Manager module (ct_manager)  is designed to manage and track user contributions from various sources through a plugin-based system. Its primary purpose is to process contributions asynchronously and efficiently using Drupal's queue system and send notifications for recent contributions.
+1.  [Contrib Tracker Module (`contrib_tracker`)](#1-contrib-tracker-module-contrib_tracker)
+2.  [Contrib Tracker Users Module (`ct_user`)](#2-contrib-tracker-users-module-ct_user)
+3.  [Contrib Tracker Reports Module (`ct_reports`)](#3-contrib-tracker-reports-module-ct_reports)
+4.  [Contribution Tracker Manager Module (`ct_manager`)](#4-contribution-tracker-manager-module-ct_manager)
+5.  [Github Contribution Tracker Module (`ct_github`)](#5-github-contribution-tracker-module-ct_github)
+6.  [Drupal.org Contribution Tracker Module (`ct_drupal`)](#6-drupalorg-contribution-tracker-module-ct_drupal)
 
-- This module provides functionality to create custom plugins of type `ContributionSource`, which allows for tracking and storing contributions from different sources. When Drupal's cron runs, the module looks for `ContributionSource` plugins, creates instances of each, and processes the associated users. Each user's contributions are tracked, stored in the database, and notifications are sent to a Slack channel for contributions posted within the last hour. The `ContributionSource` plugin is also implemented by `ct_drupal` and `ct_github`.
+---
 
-- To add a new contribution source, we can create a plugin with the ContributionSource annotation, implementing the `ContributionSourceInterface` and its methods as needed. The main components of this module include `ct_manager.module`, which executes actions during cron runs, creating instances of plugins and queuing users for processing; `ContributionSourceInterface`, which defines the functions for the plugins; and `ProcessUsers`, which handles the tracking and storage of contributions and sends Slack notifications.
+## 1. Contrib Tracker Module (`contrib_tracker`)
 
-- To send Slack notifications, it uses the contributed module - [Slack](https://www.drupal.org/slack).
+### Description
 
-### [Drupal Contribution Tracker](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_drupal)
+This module provides core functionality for tracking contributions within the Contrib Tracker project.
 
-The Drupal.org Contribution Tracker module (ct_drupal) integrates with the ct_manager module to automate tracking user contributions made specifically on the Drupal.org platform. ct_manager acts as a central coordinator for various contribution tracking plugins, including ct_drupal.
+### Functionality
 
-Here's how `ct_drupal` leverages `ct_manager` for contribution tracking:
+*   **Email Management:** In non-production Platform.sh environments, this module disables email sending using `hook_mail_alter()`. Refer to [`contrib_tracker.module`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/contrib_tracker/contrib_tracker.module) for implementation details.
 
-- It utilizes a `ContributionSource` plugin named `DrupalContribution.php`. This plugin interacts with the Drupal.org API via a wrapper module built around Guzzle 6 for efficient communication.
+### Services
 
-- To track contributions, `ct_drupal` relies on the `do_username` dependency, which manages a dedicated field where users enter their Drupal.org usernames.
+The following services are defined by this module:
 
-- During cron runs, the `ct_manager` module triggers the `ct_drupal` plugin's functionality. ct_drupal then fetches contributions for all users with a populated Drupal.org username field, retrieving the latest 100 code contributions and 100 issues for each user. All the fetched data is passed backed to `ct_manager` to decide the storing process.
+*   **`logger.channel.contrib_tracker`**: Provides a dedicated logging channel for events related to the `contrib_tracker` module.
+*   **`contrib_tracker.event_subscriber`**: Registers `Drupal\contrib_tracker\EventSubscriber\RavenSubscriber` as an event subscriber, likely for error tracking and reporting purposes (e.g., using Sentry/Raven).
 
-### [GitHub Contribution Tracker](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_github)
+### Drush Commands
 
-The GitHub Contribution Tracker module (ct_github) automates tracking user contributions made on Github, specifically issues and code contributions. Here's how it works:
+*   **`contrib_tracker.contrib_tracker_issues_sanitise`**:  Implements a Drush command (`Drupal\contrib_tracker\Command\IssuesSanitiseCommand`) for sanitizing issues. This command leverages the following services via dependency injection:
+    *   `contrib_tracker_storage`
+    *   `entity_type.manager`
+    *   `database`
 
-- It utilizes a `ContributionSource` plugin named `GithubContribution.php` to interact with the Github GraphQL API.
+### Configuration
 
-- This module requires each user's Github username to be filled in a dedicated field.
+The module utilizes the following configuration files:
 
-- It requires a secure [GitHub personal access token](https://github.com/settings/tokens) stored in an environment variable or through other secure means and load it in `settings.php`.
+*   **[`contrib_tracker.info.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/contrib_tracker/contrib_tracker.info.yml)**: Defines the module's metadata, including its name, type, description, core version requirement, and package.
+*   **[`contrib_tracker.services.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/contrib_tracker/contrib_tracker.services.yml)**: Declares the services utilized by the module.
+*   **[`console.services.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/contrib_tracker/console.services.yml)**: Defines the service for the Drush command.
 
-- During cron runs, the `ct_manager` module triggers the `ct_github` plugin's functionality. `ct_github` then fetches contributions for users with populated Github username fields, retrieving the latest 100 issues and 100 code contributions for each user. All the fetched data is passed backed to `ct_manager` to decide the storing process.
+---
 
-In essence, this module simplifies tracking user activity on Github by offering an automated solution that integrates with existing Drupal functionalities and leverages the `ct_manager` module's infrastructure for processing and storage.
+## 2. Contrib Tracker Users Module (`ct_user`)
 
-### [Contribution Tracker Reports](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_reports)
+### Description
 
-The Contribution Tracker Reports module (ct_reports) provides functionality to generate reports based on contribution data.
+This module handles user-related functionalities within the Contrib Tracker system.
 
-- The Contribution Tracker Reports module builds upon the existing Contribution Tracker functionality in Drupal by providing tools to analyze and visualize contribution data. The report can be generated based on multiple parameters such as Contribution Type, Technology, Title, Name and Contribution Date.
+### Functionality
 
-- The module offers functionalities to generate reports based on the contribution data collected by the core Contribution Tracker modules (e.g., Drupal.org Contribution Tracker or Github Contribution Tracker).
+*   **User Contribution Graph Route:** Defines a route (`/user/{current_user_id}/graph`) to display the contribution count for a specific user. See [`ct_user.routing.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_user/ct_user.routing.yml) for details.
+*   **Theming:** Implements `hook_theme()` to define the `contrib_graph` theme, used for rendering the contribution graph.
+*   **Help Text:** Implements `hook_help()` to provide help text for the module within the Drupal administration interface.
+*   **User Login Form Alter:** Implements `hook_form_alter()` to add custom validation to the user login form, enhancing security or enforcing specific login requirements.  See [`ct_user.module`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_user/ct_user.module) for details.
 
-- It provides a dedicated "Contribution Count" report accessible at the `/contribution-count` path. This report displays key metrics like total contributions, code contributions, and the total number of contributors.
+### Dependencies
 
-Overall, the Contribution Tracker Reports module empowers users to leverage the contribution data for better insights into user activity and potentially identify trends or areas of focus within their Drupal community.
+*   `social_auth`:  This module is dependent on the `social_auth` module, suggesting integration with social login providers.
 
-### [Contrib Tracker Users](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_user)
+### Services
 
-The Contribution Tracker User module (ct_user) focuses on managing user login activities within the Contrib Tracker system.
+*   **`ct_user.ct_user_social_event_listener`**: Registers `Drupal\ct_user\EventSubscriber\ContribTrackerEventListener` as an event subscriber.  This subscriber likely reacts to social authentication events. It injects the `logger.factory` service for logging.
 
-- It leverages the `social_auth` module, suggesting a focus on social login functionalities for Contrib Tracker.
+### Configuration
 
-- The module alters the user login form (`user_login_form`) and implements a custom validation function (`ct_user_user_login_form_validate`). This function checks if a logging-in user has an associated social login profile.
+*   **[`ct_user.info.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_user/ct_user.info.yml)**: Defines the module's metadata and lists `social_auth` as a dependency.
+*   **[`ct_user.routing.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_user/ct_user.routing.yml)**: Defines the route for displaying the user contribution graph.
+*   **[`ct_user.services.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_user/ct_user.services.yml)**: Defines the services provided by the module.
 
-- If a user has a social login profile linked to their account, the module redirects them to the social login provider's login page (e.g., `/user/login/google`) instead of allowing a traditional username/password login. This might be to enforce social login for specific users or enforce a specific login flow within Contrib Tracker.
+---
 
-Overall, the Contribution Tracker User module appears to manage user login activities in Contrib Tracker, potentially prioritizing social login methods for certain users.
+## 3. Contrib Tracker Reports Module (`ct_reports`)
 
-## Custom Theme
+### Description
 
-[contribtracker theme](https://github.com/contrib-tracker/backend/tree/main/web/themes/custom/contribtracker): custom theme created specifically for Contrib Tracker.
+This module is responsible for generating reports based on contribution data.
 
-- Various Drupal Core views are customized by Twig.
+### Functionality
 
-- The ContribTracker custom Drupal theme employs several front-end technologies to ensure a robust and maintainable user interface. It utilizes SCSS for modular and advanced CSS styling, JavaScript, and TypeScript for dynamic and type-safe scripting, respectively. Gulp is used as a task runner to automate build processes, while Prettier and ESLint are used for code formatting and linting JavaScript code. Stylelint ensures consistent styling for CSS/Sass. These technologies together create an efficient and cohesive front-end development environment.
+*   **Contribution Count Route:** Defines a route (`/contribution-count`) to display contribution counts.  See [`ct_reports.routing.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_reports/ct_reports.routing.yml) for details.
+*   **Theming:** implements `hook_theme()` for the `ct_reports_contribution_count` theme. See [`ct_reports.module`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_reports/ct_reports.module) for details.
 
-[Gin](https://www.drupal.org/project/gin/releases/8.x-3.0-rc8) is a contributed theme used as an administration theme.
+### Services
+
+*   **`ct_reports.statistics`**: Provides the `Drupal\ct_reports\ContributionStatistics` service for calculating contribution statistics.  This service injects the `entity_type.manager` and `database` services to access and process data.
+
+### Configuration
+
+*   **[`ct_reports.info.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_reports/ct_reports.info.yml)**: Defines the module's metadata.
+*   **[`ct_reports.routing.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_reports/ct_reports.routing.yml)**: Defines the route for contribution count reports.
+*   **[`ct_reports.services.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_reports/ct_reports.services.yml)**: Defines the module's services.
+*   **[`ct_reports.libraries.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_reports/ct_reports.libraries.yml)**: Defines the `ct-style` library, which contains `css/ct-style.css` for styling.
+
+---
+
+## 4. Contribution Tracker Manager Module (`ct_manager`)
+
+### Description
+
+This module acts as a central manager for tracking contributions from various external sources by using a plugin system.
+
+### Functionality
+
+*   **Contribution Source Plugin System:** Provides a plugin system allowing the integration of different contribution sources.
+*   **Cron Processing:** Implements `hook_cron()` to process users for each registered contribution source plugin and queue them for further processing. See [`ct_manager.module`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_manager/ct_manager.module) for the cron implementation.
+
+### Services
+
+*   **`logger.channel.ct_manager`**: Provides a dedicated logging channel for events related to the `ct_manager` module.
+*   **`plugin.manager.contribution_plugin_manager`**: Manages the available contribution source plugins, enabling discovery and instantiation.
+*   **`ct_manager.contribution_storage`**: Provides storage for contributions. It injects `entity_type.manager` and `logger.channel.ct_manager` services.
+
+### Configuration
+
+*   **[`ct_manager.info.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_manager/ct_manager.info.yml)**: Defines the module's metadata.
+*   **[`ct_manager.services.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_manager/ct_manager.services.yml)**: Defines the services provided by the module.
+
+### README
+
+*   **[`README.md`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_manager/README.md)**: Explains how to create and implement a `ContributionSource` plugin to enable integration with new contribution platforms.  This is crucial for extending the system.
+
+---
+
+## 5. Github Contribution Tracker Module (`ct_github`)
+
+### Description
+
+This module tracks issue and pull request contributions on GitHub, leveraging the GitHub GraphQL API.
+
+### Dependencies
+
+*   `ct_manager`:  This module depends on `ct_manager` to leverage the plugin system for contribution source management.
+
+### Functionality
+
+*   **GitHub Contribution Source Plugin:** implements a `ContributionSource` plugin for tracking contributions on GitHub.
+*   **GitHub Username Storage:** Stores users' GitHub usernames on their user entities, enabling the association of contributions with Drupal user accounts.  This requires users to populate their GitHub usernames.
+
+### Services
+
+*   **`ct_github.query`**: Provides the `Drupal\ct_github\GithubQuery` service for interacting with the GitHub GraphQL API. It injects the `config.factory` and `cache.data` services for configuration and caching.
+*   **`ct_github.loggerChannel`**: Provides a dedicated logging channel for events related to the `ct_github` module.
+
+### Configuration
+
+*   **[`ct_github.info.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_github/ct_github.info.yml)**: Defines the module's metadata and declares its dependency on `ct_manager`.
+*   **[`ct_github.services.yml`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_github/ct_github.services.yml)**: Defines the services used by the module.
+*   **[`composer.json`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_github/composer.json)**: Declares a dependency to `knplabs/github-api` PHP library, which facilitates interaction with the GitHub API.
+
+### README
+
+*   **[`README.md`](/tmp/241d7549-58bf-4e39-a985-b28fa7448747/repo-dir/web/modules/custom/ct_github/README.md)**: Explains the module's functionality and how to use it.
+
+---
+
+## 6. Drupal.org Contribution Tracker Module (`ct_drupal`)
+
+### Description
+
+This module tracks contributions on Drupal.org.
+
+### Dependencies
+
+*   `ct_manager`: This module relies on the `ct_manager` module for the contribution source plugin system.
+*   `do_username`: This module depends on the `do_username` module.
+
+### Functionality
+
+*   **Drupal.org Contribution Source Plugin:** Implements a `ContributionSource` plugin for tracking contributions on Drupal.org using the Drupal.org API.
+*   **Drupal.org Username Storage:** Stores Drupal.org usernames on user entities, leveraging the `do_username` module.  This requires users to provide their Drupal.org usernames.
+
+### Services
+
+*   **`logger.channel.ct_drupal`**: Provides a dedicated logging channel for the `ct_drupal` module.
+*   **`ct_drupal.client`**: Provides a custom client service (`Drupal\ct_drupal\Client`) to communicate with Drupal.org.
+*   **`ct_drupal.http_adapter`**: Defines the HTTP adapter (`Http\Adapter\Guzzle
