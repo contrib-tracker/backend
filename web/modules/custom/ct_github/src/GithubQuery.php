@@ -43,8 +43,11 @@ class GithubQuery {
   public function __construct(ConfigFactory $config_factory, CacheBackendInterface $cacheBackend) {
     $config = $config_factory->get('ct_github.settings');
     $token = $config->get('github_auth_token');
-    $client = (strlen($token) >= 40) ? (new Client())->authenticate($token, NULL, AuthMethod::ACCESS_TOKEN) : NULL;
-    $this->client = $client;
+    $this->client = NULL;
+    if (strlen($token) >= 40) {
+      $this->client = new Client();
+      $this->client->authenticate(tokenOrLogin: $token, authMethod: AuthMethod::ACCESS_TOKEN);
+    }
     $this->cache = $cacheBackend;
   }
 
