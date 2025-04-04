@@ -12,6 +12,16 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     backstage.io/techdocs-phpdoc: 'true'
     platform.sh/project-id: brbqplxd7ycq6
+  links:
+    - url: https://axelerant.slack.com/archives/C1S0VA60P
+      title: Slack Channel
+      icon: chat
+    - url: https://github.com/contrib-tracker/backend
+      title: Github Repo
+      icon: github
+    - url: https://axelerant.atlassian.net/jira/software/c/projects/CONT/boards/204
+      title: JIRA Board
+      icon: dashboard
 spec:
   type: website
   owner: platform_engineering
