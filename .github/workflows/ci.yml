@@ -35,7 +35,7 @@ jobs:
 
   frontend_codequality:
     runs-on: ubuntu-latest
-    container: node:20
+    container: node:18
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -184,8 +184,8 @@ jobs:
       - name: Build front-end
         run: |
           cd web/themes/custom/contribtracker
-          npm ci  --prefer-offline --no-audit
-          gulp
+          ddev npm ci  --prefer-offline --no-audit
+          ddev npm run build
 
       - name: Run phpstan
         run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
