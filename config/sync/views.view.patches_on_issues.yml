@@ -147,8 +147,8 @@ display:
           settings:
             thousand_separator: ''
             prefix_suffix: true
-          group_column: null
-          group_columns: null
+          group_column: value
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
