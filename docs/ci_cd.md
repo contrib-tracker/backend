@@ -1,60 +1,105 @@
-# Continuous Integration and Deployment
+# CI/CD Configuration
 
-This GitHub Actions workflow automates testing, code quality checks, and deployment to platform.sh.
+This document outlines the Continuous Integration and Continuous Delivery (CI/CD) workflows implemented in this project using GitHub Actions. These workflows automate essential tasks such as code quality checks, visual regression testing, end-to-end testing, and environment cleanup, ensuring a consistent and reliable development process.
 
-## Trigger
+## Workflow Overview
 
-The CI workflow is triggered by:
+The project leverages several GitHub Actions workflows to automate the following stages of the CI/CD pipeline:
 
-- Push events to the `main` branch.
-- Push events creating new tags.
-- Pull request events.
+*   **Code Quality Checks:**  Ensures code meets defined style and quality standards.
+*   **Visual Regression Testing:**  Detects unintended UI changes.
+*   **End-to-End (E2E) Testing:**  Verifies the application's functionality.
+*   **Environment Cleanup:**  Removes temporary environments after use.
 
-## Concurrency Control
+## Workflow Details
 
-The workflow ensures concurrency control, allowing only one workflow run per branch/tag. It cancels in-progress runs if a new run is triggered.
+### 1. CI Workflow (`/.github/workflows/ci.yml`)
 
-## Jobs
+*   **Name:** CI
+*   **Purpose:** Performs continuous integration tasks, including code quality checks for both Drupal (backend) and frontend code.
+*   **Triggers:**
+    *   `push` events on the `main` branch and tags.
+    *   `pull_request` events.
+*   **Concurrency:**  Ensures that only one CI workflow runs per branch at a time. If a new workflow is triggered while another is in progress, the in-progress run is canceled. This prevents resource contention and ensures the latest code is being tested.
+*   **Jobs:**
+    *   `drupal_codequality`:
+        *   **Description:** Runs Drupal-specific code quality checks.
+        *   **Action:** Uses the [`hussainweb/drupalqa-action@v2`](https://github.com/hussainweb/drupalqa-action) action.
+        *   **Linting Tools:** Includes: `phplint`, `yamllint`, `jsonlint`, `phpcs`, `phpmd`, and `twigcs`.
+        *   **PHP Version:**  Uses PHP 8.2.
+    *   `frontend_codequality`:
+        *   **Description:**  Runs frontend code quality checks using ESLint.
+        *   **Node.js Version:** Uses Node.js version 20 within a container.
 
-Each job checks out the repository code using [actions/checkout](https://github.com/actions/checkout) and performs caching with [actions/cache](https://github.com/actions/cache) to optimize subsequent runs.
+### 2. Visual Regression (VR) Workflow (`/.github/workflows/vr.yml`)
 
-### 1. Drupal Code Quality (`drupal_codequality`)
+*   **Name:** VR
+*   **Purpose:** Executes visual regression tests to catch unintended UI changes.
+*   **Triggers:**
+    *   `push` events on tags.
+    *   Manual `workflow_dispatch` events (allows triggering the workflow on demand).
+    *   Scheduled execution via cron (`0 0 * * MON`). This runs the tests every Monday at midnight.
+*   **Concurrency:**  Manages concurrent VR tests based on the Git ref (branch or tag). Cancels in-progress runs when a new VR workflow is triggered for the same ref.
+*   **Jobs:**
+    *   `vr_test`:
+        *   **Description:** Executes the visual regression tests.
+        *   **Operating System:** Uses Ubuntu.
+        *   **Environment Variables:**
+            *   `CYPRESS_ADMIN_USERNAME`: Username for the admin user in the Cypress test environment.
+            *   `CYPRESS_ADMIN_PASSWORD`: Password for the admin user in the Cypress test environment.
+            *   `PERCY_TOKEN`:  API token for Percy, the visual regression testing platform.
+        *   **Caching:** Caches `composer` and `npm` dependencies to speed up subsequent runs.
 
-**Intent:** Ensure Drupal code quality.
+### 3. Cypress Tests Workflow (`/.github/workflows/cypress-tests.yml`)
 
-**Description:** Uses GrumPHP to perform code quality checks on the Drupal codebase, ensuring adherence to our predefined standards. We use [axelerant/drupal-quality-checker](https://github.com/axelerant/drupal-quality-checker) for local checks, so we apply the same configuration in CI to maintain consistency.
+*   **Name:** Cypress Tests
+*   **Purpose:**  Runs Cypress end-to-end (E2E) tests to verify application functionality.
+*   **Triggers:** Scheduled execution via cron (`0 0 * * 0`). This runs the tests every Sunday at midnight.
+*   **Jobs:**
+    *   `cypress_tests`:
+        *   **Description:** Executes the Cypress E2E tests.
+        *   **Operating System:** Uses Ubuntu.
+        *   **Environment Variables:**
+            *   `CYPRESS_ADMIN_USERNAME`: Username for the admin user in the Cypress test environment.
+            *   `CYPRESS_ADMIN_PASSWORD`: Password for the admin user in the Cypress test environment.
+        *   **Setup:**
+            *   Sets up DDEV for the test environment.
+            *   Configures the Platform.sh token for interacting with the Platform.sh environment.
+            *   Installs dependencies using Composer.
+            *   Performs additional configuration steps as required by the tests.
 
-### 2. Frontend Code Quality (`frontend_codequality`)
+### 4. PR Close Workflow (`/.github/workflows/pr-close.yml`)
 
-**Intent:** Ensure frontend code quality.
+*   **Name:** Clean Platform.sh env on PR Close
+*   **Purpose:**  Automatically cleans up Platform.sh environments associated with closed pull requests, preventing resource exhaustion and unnecessary costs.
+*   **Triggers:** `pull_request` events of type `closed`.
+*   **Jobs:**
+    *   `on-pr-close`:
+        *   **Description:** Deletes the Platform.sh environment associated with the closed pull request.
+        *   **Action:** Uses the [`axelerant/platformsh-action@v1`](https://github.com/axelerant/platformsh-action) with the `clean-pr-env` action.
+        *   **Required Parameters:**
+            *   `project-id`:  The Platform.sh project ID.
+            *   `cli-token`:  A Platform.sh CLI token with appropriate permissions.  This should be stored as a GitHub secret.
 
-**Description:** This job runs linting checks on JavaScript and other frontend code to maintain code quality and consistency.
+## Dependencies and Secrets
 
-### 3. Drupal Test (`drupal_test`)
+The workflows rely on the following actions, secrets, and environment variables:
 
-**Intent:** Run comprehensive tests on the Drupal site.
+*   **GitHub Actions:**
+    *   [`actions/checkout@v4`](https://github.com/actions/checkout):  Used to checkout the repository code.
+    *   [`hussainweb/drupalqa-action@v2`](https://github.com/hussainweb/drupalqa-action):  Used for Drupal code quality checks.
+    *   [`ddev/github-action-setup-ddev@v1`](https://github.com/ddev/github-action-setup-ddev): Used to setup a `ddev` environment.
+    *   [`axelerant/platformsh-action@v1`](https://github.com/axelerant/platformsh-action):  Used for interacting with Platform.sh, specifically for cleaning up PR environments.
+*   **GitHub Secrets:**
+    *   `PERCY_TOKEN`:  API token for Percy visual regression testing.  Stored as a GitHub secret for security.
+    *   `PLATFORMSH_CLI_TOKEN`: Platform.sh CLI token.  Stored as a GitHub secret for security.
+*   **Environment Variables:**
+    *   `CYPRESS_ADMIN_USERNAME`: Username for the admin user in the Cypress test environment.
+    *   `CYPRESS_ADMIN_PASSWORD`: Password for the admin user in the Cypress test environment.
 
-**Description:** This job sets up the ddev environment in CI to replicate the local development environment. It performs the following tests:
-- **Unit Tests with DTT:** Ensures individual units of code work as expected.
-- **PHPStan Checks:** Static analysis to find errors in code without running it.
-- **Cypress Tests:** End-to-end testing to ensure functionalities work. Integrated with Percy for Visual Testing.
+## Workflow Interactions
 
-**Note:**
-- We spin up ddev in CI to ensure a consistent environment with our local development setup. This is necessary because we need a site running for Cypress tests and Drupal test traits.
-- PHPStan checks are included in this job and not part of the `drupal_codequality` job because it requires all dependencies to be present.
-
-### 4. Deploy (`deploy`)
-
-**Intent:** Deploy code to platform.sh.
-
-**Description:** This job deploys code to platform.sh based on the branch (`main` for production, others for feature environments). It ensures that only code passing the `drupal_codequality` and `drupal_test` jobs is deployed. Dependabot PRs are excluded from deployment.
-
-## References
-
-- [Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
-- [Caching dependencies](https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows)
-- [Drupal Quality Checker](https://github.com/axelerant/drupal-quality-checker)
-- [Defining outputs for jobs](https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs)
-- [Storing workflow data as artifacts](https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts)
-- [Using Secrets in GitHub Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
-- [Example Workflows](https://github.com/actions/starter-workflows)
+*   **CI Workflow:**  Provides immediate feedback to developers on code quality issues by running checks on every push to the `main` branch, tags, and pull requests.
+*   **VR Workflow:**  Ensures UI consistency across deployments to different environments (dev, staging, production) by running visual regression tests on tags, manual dispatch or a schedule.
+*   **Cypress Tests Workflow:** Verifies critical application functionality by running end-to-end tests on a weekly schedule. `ddev` allows to run tests in a local environment similar to production.
+*   **PR Close Workflow:** Prevents resource exhaustion on Platform.sh by automatically cleaning up environments associated with closed pull requests.  This is especially important for projects with many contributors and frequent pull requests.

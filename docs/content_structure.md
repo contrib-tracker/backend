@@ -1,84 +1,145 @@
-# Content Structure
+# Project Content Structure Documentation
 
-## Content Types
+This document details the content structure of the Drupal project. It covers content types, taxonomies, views, user roles, and module dependencies, providing a comprehensive overview for developers.
 
-ContribTracker project contains the following content types:
+## Node Types (Content Types)
 
-### Basic page
+The project defines the following content types to structure and manage different kinds of content:
 
-- **Description**: Use the Basic page content type for static content such as 'About us' pages, providing essential, unchanging information about organization or website purpose.
-- **Fields Used**: the most common field body is used.
+*   **Basic page:** (`node.type.page.yml`)
+    *   Purpose: For static, informational content, such as "About Us" or "Contact" pages.
 
-### Code contributions
+*   **Non Code Contributions:** (`node.type.non_code_contribution.yml`)
+    *   Purpose: Captures contributions that don't involve direct code changes.
+    *   Key fields:
+        *   `field_non_code_contribution_type`:  Categorizes the non-code contribution (e.g., Blog Post, Stack Overflow Answer, Localization).
+        *   `field_non_code_*`: Other fields related to specific non-code contribution details (e.g., URL to the blog post).
+        *   Profile Link: A link to the contributor's profile.
+        *   Credit: Details about who should be credited for the contribution.
 
-- **Description**: Use the Code contributions content type to document various code-related contributions, capturing patches, code updates, and improvements made by contributors.
-- **Fields used**:
-  - Contribution Author (field_contribution_author): References the user who authored the contribution.
-  - Contribution Date (field_contribution_date): The date the contribution was made.
-  - Contribution Details (field_contribution_description): A long, formatted text field describing the contribution.
-  - Contribution Issue Link (field_code_contrib_issue_link): References the related issue content type for the contribution.
-  - Contribution Link (field_code_contrib_link): A URL link associated with the contribution.
-  - Contribution Project (field_code_contrib_project): References the project taxonomy term associated with the contribution.
-  - Contribution Type (field_contribution_type): References the contribution type from the Contribution Type taxonomy.
-  - Files Count (field_code_contrib_files_count): Number of files included in the contribution.
-  - Issue Status (field_code_contrib_issue_status): Text list field indicating the current status of the related issue.
-  - Moderator Comments (field_contrib_moderator_comment): Formatted text field for comments by the moderator.
-  - Patches Count (field_code_contrib_patches_count): Number of patches included in the contribution.
-  - Technology (field_contribution_technology): References the technology taxonomy term related to the contribution.
+*   **Issue:** (`node.type.issue.yml`)
+    *   Purpose: Represents issues in projects (bugs, tasks, or feature requests). Often linked to code contributions that address these issues.
 
-### Event
+*   **Event Contributions:** (`node.type.event_contribution.yml`)
+    *   Purpose: Records contributions made during specific events.
+    *    Key fields:
+        * `field_event`: Reference to the event node to which the contribution belongs.
+	    * `field_event_contribution_type`: Type of event contribution (e.g., Session Speaker, Volunteer).
+        *   `field_contribution_technology`: Technology involved in the contribution.
 
-- **Description**: Use the Event content type to create and manage events, specifying details like date, location, and description for organizational or community activities.
-- **Fields used**:
-  - Active Event (field_event_active): Indicates whether the event is currently active or inactive (Boolean).
-  - Description (body): A detailed, formatted text field with a summary to describe the event.
-  - Event Additional Links (field_event_additional_links): URLs for additional information or resources related to the event.
-  - Event Address (field_event_address): The physical address where the event will take place.
-  - Event Dates (field_event_dates): The start and end dates (and times) for the event.
-  - Event Link (field_event_link): A primary URL link associated with the event.
-  - Event Location (field_event_location): Geographical coordinates (latitude and longitude) of the event’s location.
-  - Event Type (field_event_contrib_event_type): References the type of event, categorized by terms from the Event Type taxonomy.
+*   **Event:** (`node.type.event.yml`)
+    *   Purpose: Represents events such as DrupalCamps, DrupalCons, and local Meetups.  Stores information related to the event.
 
-### Event Contribution
+*   **Code contributions:** (`node.type.code_contribution.yml`)
+    *   Purpose: Documents code contributions to open-source projects.
+    *   Key fields:
+        *   `field_code_contrib_project`:  The project to which the code contribution was made.
+        *   `field_code_contrib_patches_count`: Number of patches included in the contribution.
+        *   `field_code_contrib_issue_link`:  Link to the issue the contribution addresses.
+        *   *... and more...* Other fields capture details specific to code contributions.
 
-- **Description**: Use the Event contributions content type to document contributions made during events, including presentations, workshops, or collaborative efforts.
-- **Fields used**:
-  - Contributor (field_contribution_author): References the user who submitted the contribution.
-  - Contribution Details (field_contribution_comments): Allows detailed explanations about the contribution using formatted text.
-  - Submission Date (field_contribution_date): Records the date and time the contribution was submitted.
-  - Contribution Type (field_event_contribution_type): Categorizes the contribution using predefined types from the "Event Contribution Type" vocabulary (e.g., Bug Fix, Feature Request).
-  - Linked Event (field_event): References the specific event this contribution is associated with.
-  - External Link (field_event_contribution_link): (Optional) Provides a link to an external resource related to the contribution (e.g., code repository, documentation).
-  - Moderator Notes (field_contrib_moderator_comment): Allows moderators to leave feedback on the contribution using formatted text.
-  - Technology Used (field_contribution_technology): Tags the contribution with relevant technologies (e.g., Programming Language, Framework) using terms from the "Technology" vocabulary.
+## Taxonomies
 
-### Issue
+Taxonomies provide a way to categorize and organize content within the project:
 
-- **Description**: Use the Issue content type to create and track new issues, including bugs, tasks, and feature requests, facilitating project management and problem resolution.
-- **Fields used**:
-  - Issue Description (body): A long, formatted text field with a summary for describing the issue.
-  - Link (field_issue_link): A URL link associated with the issue.
+*   **Technology:** (`taxonomy.vocabulary.technology.yml`)
+    *   Purpose:  Lists different technologies used in contributions (e.g., Drupal, PHP, JavaScript).
 
-### Non Code Contributions
+*   **Tags:** (`taxonomy.vocabulary.tags.yml`)
+    *   Purpose: Provides free-form tagging for grouping content by related topics.
 
-- **Description**: Use the Non code contributions content type to capture and recognize contributions that are not code-related, such as documentation, design, or community support.
-- **Fields used**:
-  - Contribution Author (field_contribution_author): References the user who authored the contribution.
-  - Contribution Comments (field_contribution_comments): A long, formatted text field for comments on the contribution.
-  - Contribution Date (field_contribution_date): The date the contribution was made.
-  - Credit (field_non_code_contrib_credit): Integer field indicating the amount of credit for the contribution.
-  - Moderator Comments (field_contrib_moderator_comment): Formatted text field for comments by the moderator.
-  - Profile (field_non_code_contrib_profile): A URL link to the contributor's profile.
-  - Technology (field_contribution_technology): References the technology taxonomy term related to the contribution.
-  - Type (field_non_code_contribution_type): Text list field indicating the type of non-code contribution.
+*   **Project:** (`taxonomy.vocabulary.project.yml`)
+    *   Purpose: Lists the various projects to which community members contribute.
 
-## Taxonomy
+*   **Event Type:** (`taxonomy.vocabulary.event_type.yml`)
+    *   Purpose:  Defines the different types of events (e.g., DrupalCamp, DrupalCon, Meetup).
 
-ContribTracker project possesses the following taxonomy vocabularies/terms:
+*   **Event Contribution Type:** (`taxonomy.vocabulary.event_contribution_type.yml`)
+    *   Purpose:  Categorizes the types of contributions made at an event (e.g., Session Speaking, Volunteering).
 
-- **Contribution Type**: This vocabulary stores various contribution types, such as submitting patches, porting modules, to categorize and manage different forms of contributions efficiently.
-- **Event Contribution Type**: This vocabulary stores types of event contributions, like sessions, volunteering, and training, to classify and organize different activities and roles within events.
-- **Event Type**: This vocabulary categorizes event types, such as DrupalCamps, DrupalCons, and meetups, to help organize and differentiate between various kinds of events.
-- **Project**: Stores projects related to community contributions, allowing for the organization and classification of different community-driven initiatives and development efforts.
-- **Tags**: Use tags to categorize articles on similar topics, facilitating easy grouping and retrieval of related content across the site.
-- **Technology**: This vocabulary stores various technologies used in contributions, aiding in the classification and organization of contributions by the technology they involve.
+*   **Contribution Type:** (`taxonomy.vocabulary.contribution_type.yml`)
+    *   Purpose:  Classifies the different methods of contribution (e.g., Submitting a Patch, Porting a Module).
+
+## Views
+
+Views are used to create dynamic listings and displays of content.
+
+*   `views.view.who_s_online.yml`: Shows currently online users.
+*   `views.view.who_s_new.yml`: Shows newest user accounts.
+*   `views.view.user_admin_people.yml`:  Lists people, facilitating user management.
+*   `views.view.taxonomy_term.yml`: Displays content belonging to a specific taxonomy term.
+*   `views.view.patches_on_issues.yml`: Lists patches on issues.
+*   `views.view.patches.yml`: Lists code patches.
+*   `views.view.non_code_contributions.yml`: Lists non-code contributions.
+*   `views.view.glossary.yml`: Displays all content in a glossary format.
+*   `views.view.frontpage.yml`: Defines the front page content.
+*   `views.view.files.yml`: Lists and manages files.
+*   `views.view.event_contributions.yml`: Lists event contributions.
+*   `views.view.content_recent.yml`: Lists recent content.
+*   `views.view.content.yml`: Lists and manages content.
+*   `views.view.code_contributions.yml`: Lists code contributions.
+*   `views.view.block_content.yml`: Lists content blocks.
+*   `views.view.archive.yml`: Creates a monthly archive of content.
+*   `views.view.all_contributions.yml`: Lists all contributions.
+
+**Base Tables:** These views primarily use the following base tables to retrieve and display data:
+
+*   `node_field_data`: Main table for node (content) data.
+*   `users_field_data`: Main table for user account data.
+*   `file_managed`: Main table for managed files.
+*   `block_content_field_data`:  Main table for custom blocks.
+
+## User Roles
+
+User roles define the permissions and access levels for different users:
+
+*   **Anonymous user:** (`user.role.anonymous.yml`)
+    *   Purpose:  Provides basic access for users who are not logged in.
+
+*   **Authenticated user:** (`user.role.authenticated.yml`)
+    *   Purpose: Defines permissions for logged-in users, including content creation and other basic site functionalities.
+
+*   **API basic read:** (`user.role.api_basic_read.yml`)
+    *   Purpose: Grants API users read-only access to content.
+
+*   **Contribution Moderator:** (`user.role.contribution_moderator.yml`)
+    *   Purpose: Allows users to moderate content associated with contributions (code, events, etc.).
+
+*   **Administrator:** (`user.role.administrator.yml`)
+    *   Purpose:  Provides full administrative privileges, including managing users, content, and site configuration.
+
+## Fields
+
+Custom fields extend the base content types to store specific data.  Here are some examples:
+
+*   **`node.type.code_contribution`**:
+    *   `field_code_contrib_project`:  Reference to the project the contribution belongs to (Taxonomy Term).
+    *   `field_code_contrib_patches_count`: Number of patches included in the contribution.
+    *   `field_code_contrib_issue_link`: Link to the related issue.
+
+*   **`node.type.non_code_contribution`**:
+    *   `field_non_code_contribution_type`:  Type of non-code contribution (Taxonomy Term).
+    *   `field_non_code_*`: Other fields to store specific data about the contribution.
+
+*   **`node.type.event_contribution`**:
+    *   `field_event`: Reference to the event.
+    *   `field_event_contribution_type`: Type of contribution given to a certain event (Taxonomy Term).
+    *   `field_contribution_technology`: Technology used in the event contribution (Taxonomy Term).
+
+**Field Storage and Display:**
+
+Field storage settings are defined in `field.storage.*` configuration files.
+Field display settings (how fields are rendered) are defined in `core.entity_view_display.*` configuration files.
+
+## Modules
+
+The project utilizes the following modules:
+
+*   **ct_github:**
+    *   Purpose: Tracks GitHub contributions.
+    *   Functionality: Uses the `field_github_username` field and the GitHub GraphQL API to fetch contribution data.
+
+*   **ct_drupal:**
+    *   Purpose: Tracks Drupal.org contributions.
+    *   Dependency: Requires the `do_username` module.
+    *   Functionality: Uses the `field_do_username` field to associate users with their Drupal.org profiles and track their contributions.
