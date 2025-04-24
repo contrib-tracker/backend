@@ -1,4 +1,4 @@
-site_name: Contrib Tracker
+site_name: target-dir
 docs_dir: docs
 plugins:
   - techdocs-core
@@ -9,8 +9,8 @@ nav:
   - Local Environment Setup: 'local_setup.md'
   - How to work on this project: 'how_to_work.md'
   - Content Structure: 'content_structure.md'
-  - Custom Modules and Themes: 'custom_modules.md'
-  - Testing: 'testing.md'
+  - Custom Modules: 'custom_modules.md'
+  - Custom Themes: 'custom_themes.md'
+  - Testing: 'functional_testing.md'
   - Monitoring and Logging: 'monitoring.md'
   - CI/CD: 'ci_cd.md'
-  - Functional Testing with Cypress: 'func_testing.md'
