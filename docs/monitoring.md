@@ -1,11 +1,21 @@
-# Monitoring and Logging
+# Monitoring and Logging Configuration
 
-We have used monitoring and performance management tools.
+This document details the configuration related to monitoring and logging within the Drupal project.
 
-## Debugging
+## `system.logging.yml`
 
-- [Sentry](https://axelerant.sentry.io/projects/contrib-tracker/?project=1275643)
+This YAML file (`config/sync/system.logging.yml`) configures the core Drupal logging system.  It defines how Drupal handles and displays error messages.
 
-## Observability
+*   **File Path:** `config/sync/system.logging.yml`
+*   **Description:** Configuration for Drupal's core logging functionality.
+*   **Key Configuration:**
+    *   `error_level`:  Set to `"hide"`. This setting disables the display of error messages in the user interface.  This is likely intended for a production environment to prevent potentially sensitive information from being exposed to end-users.
 
-- [NewRelic](https://one.newrelic.com/nr1-core/apm/overview/NDE5NjkxMXxBUE18QVBQTElDQVRJT058NTU4MDEwNzY0?account=4196911&duration=1800000&state=4bfccb86-3294-34ae-3558-149f0e919cb2)
+## `settings.php`
+
+The `settings.php` file (`web/sites/default/settings.php`) serves as Drupal's primary configuration file. While the provided extract doesn't offer direct logging configuration within this file, its role in defining the environment and including conditionally loaded configuration files impacts overall logging behavior.
+
+*   **File Path:** `web/sites/default/settings.php`
+*   **Description:**  Drupal's primary configuration file, responsible for bootstrapping the application and defining environment-specific settings.
+*   **Relevance to Logging:**
+    *   `settings.php` determines which configuration files are loaded, allowing for different logging configurations across various environments (e.g., development, staging, production). Logging behavior can be altered by modifying or extending environment-specific includes, allowing customized error handling and debugging features for each environment.

@@ -1,84 +1,148 @@
-# Content Structure
+# Content Structure Documentation
+
+This documentation outlines the content structure of the Drupal project, focusing on content types and their configurations, to help manage and display content effectively.
 
 ## Content Types
 
-ContribTracker project contains the following content types:
+The project utilizes several content types to represent different kinds of contributions and site content. Each content type definition includes a description of its purpose and a list of Drupal configuration files that define its structure and behavior.
 
-### Basic page
+### 1. Basic Page
 
-- **Description**: Use the Basic page content type for static content such as 'About us' pages, providing essential, unchanging information about organization or website purpose.
-- **Fields Used**: the most common field body is used.
+*   **Purpose:** For static content such as "About Us" pages.
+*   **Description:** This content type is designed for creating standard informational pages that are not dynamically updated.
+*   **Configuration Files:**
+    *   `config/sync/node.type.page.yml`: Defines the content type itself.
+    *   `config/sync/core.entity_view_display.node.page.default.yml`: Defines the default view display of the content type.
+    *   `config/sync/core.entity_view_display.node.page.teaser.yml`: Defines the teaser view display of the content type.
+    *   `config/sync/core.entity_form_display.node.page.default.yml`: Defines the default form display for creating/editing content of this type.
+    *   `config/sync/core.base_field_override.node.page.promote.yml`: Overrides the base field settings for the 'promote to front page' option.
 
-### Code contributions
+### 2. Non-Code Contributions
 
-- **Description**: Use the Code contributions content type to document various code-related contributions, capturing patches, code updates, and improvements made by contributors.
-- **Fields used**:
-  - Contribution Author (field_contribution_author): References the user who authored the contribution.
-  - Contribution Date (field_contribution_date): The date the contribution was made.
-  - Contribution Details (field_contribution_description): A long, formatted text field describing the contribution.
-  - Contribution Issue Link (field_code_contrib_issue_link): References the related issue content type for the contribution.
-  - Contribution Link (field_code_contrib_link): A URL link associated with the contribution.
-  - Contribution Project (field_code_contrib_project): References the project taxonomy term associated with the contribution.
-  - Contribution Type (field_contribution_type): References the contribution type from the Contribution Type taxonomy.
-  - Files Count (field_code_contrib_files_count): Number of files included in the contribution.
-  - Issue Status (field_code_contrib_issue_status): Text list field indicating the current status of the related issue.
-  - Moderator Comments (field_contrib_moderator_comment): Formatted text field for comments by the moderator.
-  - Patches Count (field_code_contrib_patches_count): Number of patches included in the contribution.
-  - Technology (field_contribution_technology): References the technology taxonomy term related to the contribution.
+*   **Purpose:** Captures contributions not involving code.
+*   **Description:** This content type is designed for tracking contributions to the project that do not involve writing code, such as writing blog posts, answering questions on Stack Overflow, or contributing to localization efforts.
+*   **Fields:**
+    *   Contribution Type (blog, Stack Overflow, localization)
+    *   Author
+    *   Technology
+    *   Date
+    *   Comments
+    *   Profile Link
+    *   Credit
+*   **Configuration Files:**
+    *   `config/sync/node.type.non_code_contribution.yml`: Defines the content type itself.
+    *   `config/sync/field.storage.node.field_non_code_contribution_type.yml`: Defines the storage for the Contribution Type field.
+    *   `config/sync/field.storage.node.field_non_code_contrib_profile.yml`: Defines the storage for the Profile Link field.
+    *   `config/sync/field.storage.node.field_non_code_contrib_credit.yml`: Defines the storage for the Credit field.
+    *   `config/sync/field.field.node.non_code_contribution.field_non_code_contribution_type.yml`: Defines the field settings for the Contribution Type field.
+    *   `config/sync/field.field.node.non_code_contribution.field_non_code_contrib_profile.yml`: Defines the field settings for the Profile Link field.
+    *   `config/sync/field.field.node.non_code_contribution.field_non_code_contrib_credit.yml`: Defines the field settings for the Credit field.
+    *   `config/sync/core.entity_view_display.node.non_code_contribution.default.yml`: Defines the default view display.
+    *   `config/sync/core.entity_view_display.node.non_code_contribution.teaser.yml`: Defines the teaser view display.
+    *   `config/sync/core.entity_form_display.node.non_code_contribution.default.yml`: Defines the default form display.
+    *   `config/sync/core.base_field_override.node.non_code_contribution.promote.yml`: Overrides the base field settings for the 'promote to front page' option.
 
-### Event
+### 3. Issue
 
-- **Description**: Use the Event content type to create and manage events, specifying details like date, location, and description for organizational or community activities.
-- **Fields used**:
-  - Active Event (field_event_active): Indicates whether the event is currently active or inactive (Boolean).
-  - Description (body): A detailed, formatted text field with a summary to describe the event.
-  - Event Additional Links (field_event_additional_links): URLs for additional information or resources related to the event.
-  - Event Address (field_event_address): The physical address where the event will take place.
-  - Event Dates (field_event_dates): The start and end dates (and times) for the event.
-  - Event Link (field_event_link): A primary URL link associated with the event.
-  - Event Location (field_event_location): Geographical coordinates (latitude and longitude) of the event’s location.
-  - Event Type (field_event_contrib_event_type): References the type of event, categorized by terms from the Event Type taxonomy.
+*   **Purpose:** Represents bugs, tasks, or feature requests, mainly for linking to code contributions.
+*   **Description:** This content type is designed to track and manage issues related to the project, and is often linked to specific code contributions that address these issues.
+*   **Fields:**
+    *   Link to the issue
+    *   Description
+*   **Configuration Files:**
+    *   `config/sync/node.type.issue.yml`: Defines the content type itself.
+    *   `config/sync/field.storage.node.field_issue_link.yml`: Defines the storage for the Issue Link field.
+    *   `config/sync/field.field.node.issue.field_issue_link.yml`: Defines the field settings for the Issue Link field.
+    *   `config/sync/field.field.node.issue.body.yml`: Defines the field settings for the body (description) field.
+    *   `config/sync/core.entity_view_display.node.issue.default.yml`: Defines the default view display.
+    *   `config/sync/core.entity_view_display.node.issue.teaser.yml`: Defines the teaser view display.
+    *   `config/sync/core.entity_form_display.node.issue.default.yml`: Defines the default form display.
+    *   `config/sync/core.base_field_override.node.issue.promote.yml`: Overrides the base field settings for the 'promote to front page' option.
+	*   `config/sync/core.entity_form_mode.node.inline_issue_create.yml`: Defines the form mode for inline issue creation.
+	*	`config/sync/core.entity_form_display.node.issue.inline_issue_create.yml`: Defines the form display for the inline issue creation form mode.
 
-### Event Contribution
+### 4. Event Contributions
 
-- **Description**: Use the Event contributions content type to document contributions made during events, including presentations, workshops, or collaborative efforts.
-- **Fields used**:
-  - Contributor (field_contribution_author): References the user who submitted the contribution.
-  - Contribution Details (field_contribution_comments): Allows detailed explanations about the contribution using formatted text.
-  - Submission Date (field_contribution_date): Records the date and time the contribution was submitted.
-  - Contribution Type (field_event_contribution_type): Categorizes the contribution using predefined types from the "Event Contribution Type" vocabulary (e.g., Bug Fix, Feature Request).
-  - Linked Event (field_event): References the specific event this contribution is associated with.
-  - External Link (field_event_contribution_link): (Optional) Provides a link to an external resource related to the contribution (e.g., code repository, documentation).
-  - Moderator Notes (field_contrib_moderator_comment): Allows moderators to leave feedback on the contribution using formatted text.
-  - Technology Used (field_contribution_technology): Tags the contribution with relevant technologies (e.g., Programming Language, Framework) using terms from the "Technology" vocabulary.
+*   **Purpose:** Captures contributions made during events.
+*   **Description:** Used to document contributions, such as code sprints or documentation sessions, that occur at specific events.
+*   **Fields:**
+    *   Contribution Type
+    *   Author
+    *   Technology
+    *   Event
+    *   Event Contribution Link
+    *   Date
+*   **Configuration Files:**
+    *   `config/sync/node.type.event_contribution.yml`: Defines the content type itself.
+    *   `config/sync/field.storage.node.field_event_contribution_type.yml`: Defines the storage for the Contribution Type field.
+    *   `config/sync/field.storage.node.field_event_contribution_link.yml`: Defines the storage for the Event Contribution Link field.
+    *   `config/sync/field.field.node.event_contribution.field_event_contribution_type.yml`: Defines the field settings for the Contribution Type field.
+    *   `config/sync/field.field.node.event_contribution.field_event_contribution_link.yml`: Defines the field settings for the Event Contribution Link field.
+	*   `config/sync/field.field.node.event_contribution.field_event.yml`: Defines the field settings for the Event reference field.
+    *   `config/sync/core.entity_view_display.node.event_contribution.default.yml`: Defines the default view display.
+    *   `config/sync/core.entity_view_display.node.event_contribution.teaser.yml`: Defines the teaser view display.
+    *   `config/sync/core.entity_form_display.node.event_contribution.default.yml`: Defines the default form display.
+    *   `config/sync/core.base_field_override.node.event_contribution.title.yml`: Overrides the base field settings for the title field.
+    *   `config/sync/core.base_field_override.node.event_contribution.promote.yml`: Overrides the base field settings for the 'promote to front page' option.
+	*   `config/sync/field.field.node.event_contribution.field_contrib_moderator_comment.yml`: Defines the field for moderator comments.
+	*   `config/sync/field.field.node.event_contribution.field_contribution_author.yml`: Defines the field for the contribution author.
+	*   `config/sync/field.field.node.event_contribution.field_contribution_comments.yml`: Defines the field for contribution comments.
+	*   `config/sync/field.field.node.event_contribution.field_contribution_date.yml`: Defines the field for the contribution date.
+	*   `config/sync/field.field.node.event_contribution.field_contribution_technology.yml`: Defines the field for the contribution technology.
 
-### Issue
 
-- **Description**: Use the Issue content type to create and track new issues, including bugs, tasks, and feature requests, facilitating project management and problem resolution.
-- **Fields used**:
-  - Issue Description (body): A long, formatted text field with a summary for describing the issue.
-  - Link (field_issue_link): A URL link associated with the issue.
+### 5. Event
 
-### Non Code Contributions
+*   **Purpose:** Represents events that can be referenced by Event Contributions.
+*   **Description:** Used to store information about events, such as conferences, workshops, or meetups. This allows Event Contribution nodes to easily link and refer to specific events.
+*   **Fields:**
+    *   Event Dates
+    *   Address
+    *   Link
+	*   Event Type
+    *   Active Status
+*   **Configuration Files:**
+    *   `config/sync/node.type.event.yml`: Defines the content type itself.
+    *   `config/sync/field.storage.node.field_event_dates.yml`: Defines the storage for the Event Dates field.
+    *   `config/sync/field.storage.node.field_event_address.yml`: Defines the storage for the Event Address field.
+    *   `config/sync/field.field.node.event.field_event_dates.yml`: Defines the field settings for the Event Dates field.
+    *   `config/sync/field.field.node.event.field_event_address.yml`: Defines the field settings for the Event Address field.
+    *   `config/sync/core.entity_view_display.node.event.default.yml`: Defines the default view display.
+    *   `config/sync/core.entity_view_display.node.event.teaser.yml`: Defines the teaser view display.
+    *   `config/sync/core.entity_form_display.node.event.default.yml`: Defines the default form display.
+    *   `config/sync/core.base_field_override.node.event.promote.yml`: Overrides the base field settings for the 'promote to front page' option.
+	*    `config/sync/field.storage.node.field_event_link.yml`: Defines the storage for the Event Link field.
+	*    `config/sync/field.storage.node.field_event_contrib_event_type.yml`: Defines the storage for the Event Type field.
+	*    `config/sync/field.storage.node.field_event_additional_links.yml`: Defines the storage for additional links related to the event.
+	*    `config/sync/field.storage.node.field_event_location.yml`: Defines the storage for the Event Location field.
+	*    `config/sync/field.field.node.event.field_event_link.yml`: Defines the field settings for the Event Link field.
+	*    `config/sync/field.field.node.event.field_event_contrib_event_type.yml`: Defines the field settings for the Event Type field.
+	*    `config/sync/field.field.node.event.field_event_additional_links.yml`: Defines the field settings for the Additional Event Links field.
+	*    `config/sync/field.field.node.event.field_event_location.yml`: Defines the field settings for the Event Location field.
+	*    `config/sync/field.storage.node.field_event_active.yml`: Defines the storage for the active status of the event.
+	*    `config/sync/field.field.node.event.field_event_active.yml`: Defines the field settings for the Event Active field.
+	*    `config/sync/field.field.node.event.body.yml`: Defines the field settings for the body (description) field.
 
-- **Description**: Use the Non code contributions content type to capture and recognize contributions that are not code-related, such as documentation, design, or community support.
-- **Fields used**:
-  - Contribution Author (field_contribution_author): References the user who authored the contribution.
-  - Contribution Comments (field_contribution_comments): A long, formatted text field for comments on the contribution.
-  - Contribution Date (field_contribution_date): The date the contribution was made.
-  - Credit (field_non_code_contrib_credit): Integer field indicating the amount of credit for the contribution.
-  - Moderator Comments (field_contrib_moderator_comment): Formatted text field for comments by the moderator.
-  - Profile (field_non_code_contrib_profile): A URL link to the contributor's profile.
-  - Technology (field_contribution_technology): References the technology taxonomy term related to the contribution.
-  - Type (field_non_code_contribution_type): Text list field indicating the type of non-code contribution.
+### 6. Code Contributions
 
-## Taxonomy
-
-ContribTracker project possesses the following taxonomy vocabularies/terms:
-
-- **Contribution Type**: This vocabulary stores various contribution types, such as submitting patches, porting modules, to categorize and manage different forms of contributions efficiently.
-- **Event Contribution Type**: This vocabulary stores types of event contributions, like sessions, volunteering, and training, to classify and organize different activities and roles within events.
-- **Event Type**: This vocabulary categorizes event types, such as DrupalCamps, DrupalCons, and meetups, to help organize and differentiate between various kinds of events.
-- **Project**: Stores projects related to community contributions, allowing for the organization and classification of different community-driven initiatives and development efforts.
-- **Tags**: Use tags to categorize articles on similar topics, facilitating easy grouping and retrieval of related content across the site.
-- **Technology**: This vocabulary stores various technologies used in contributions, aiding in the classification and organization of contributions by the technology they involve.
+*   **Purpose:** For capturing code contributions.
+*   **Description:**  Designed to record and manage contributions specifically related to code development, such as patches, modules, or themes.
+*   **Fields:**
+    *   Contribution Link
+    *   Issue Link
+    *   Project
+    *   Technology
+    *   Patches/Files Count
+    *   Issue Status
+    *   Description
+*   **Configuration Files:**
+    *   `config/sync/node.type.code_contribution.yml`: Defines the content type itself.
+    *   `config/sync/field.storage.node.field_code_contrib_link.yml`: Defines the storage for the Contribution Link field.
+    *   `config/sync/field.field.node.code_contribution.field_code_contrib_link.yml`: Defines the field settings for the Contribution Link field.
+    *   `config/sync/core.entity_view_display.node.code_contribution.default.yml`: Defines the default view display.
+    *   `config/sync/core.entity_view_display.node.code_contribution.teaser.yml`: Defines the teaser view display.
+    *   `config/sync/core.entity_form_display.node.code_contribution.default.yml`: Defines the default form display.
+    *   `config/sync/core.base_field_override.node.code_contribution.promote.yml`: Overrides the base field settings for the 'promote to front page' option.
+	*   `config/sync/field.storage.node.field_code_contrib_issue_link.yml`: Defines the storage for the Issue Link field.
+	*   `config/sync/field.field.node.code_contribution.field_code_contrib_issue_link.yml`: Defines the field settings for the Issue Link field.
+	*   `config/sync/core.entity_form_mode.node.inline_issue_create.yml`: Defines the form mode for inline issue creation.
