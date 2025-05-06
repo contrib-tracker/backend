@@ -34,3 +34,5 @@
 node_modules
 /web/themes/custom/contribtracker/dist/
 .DS_Store
+
+.phpdoc/cache
