@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Deploy to platform.sh
-        uses: axelerant/platformsh-action@issue-75
+        uses: axelerant/platformsh-action@issue75
         with:
           action: 'deploy'
           project-id: "brbqplxd7ycq6"
