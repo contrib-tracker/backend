@@ -14,7 +14,7 @@ concurrency:
 jobs:
   deploy:
     environment:
-      name: ${{ github.ref_name == 'main' && 'production' || 'feature' }}
+      name: ${{ github.ref_name == 'main' && 'production' || 'dev' }}
     runs-on: ubuntu-latest
     # Dependabot PR's can't access secrets, so we can't deploy.
     if: github.actor != 'dependabot[bot]'
