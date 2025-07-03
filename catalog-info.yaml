@@ -12,6 +12,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     backstage.io/techdocs-phpdoc: 'true'
     platform.sh/project-id: brbqplxd7ycq6
+    axelerant.com/drupal-project: https://contrib.axelerant.com
   links:
     - url: https://axelerant.slack.com/archives/C1S0VA60P
       title: Slack Channel
