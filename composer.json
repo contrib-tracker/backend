@@ -25,12 +25,17 @@
         {
             "type": "path",
             "url": "web/modules/custom/ct_github"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/axl-testing-grounds/drupal-insight-backstage"
         }
     ],
     "require": {
         "php": ">=8.2",
         "axelerant/ct_drupal": "*",
         "axelerant/ct_github": "*",
+        "axelerant/drupal-insight-backstage": "dev-main",
         "composer/installers": "^2.1",
         "cweagans/composer-patches": "^1.7.0",
         "drupal/address": "^2.0",

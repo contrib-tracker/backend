@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33e5cefc2c7e3b1092f3377064727d04",
+    "content-hash": "5b391f3a8d77ccb48e0e58597ff3b347",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,7 +64,7 @@
         },
         {
             "name": "axelerant/ct_drupal",
-            "version": "dev-main",
+            "version": "dev-integration-drupal-insight-backstage-module",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/ct_drupal",
@@ -86,7 +86,7 @@
         },
         {
             "name": "axelerant/ct_github",
-            "version": "dev-main",
+            "version": "dev-integration-drupal-insight-backstage-module",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/ct_github",
@@ -100,6 +100,38 @@
             "transport-options": {
                 "relative": true
             }
+        },
+        {
+            "name": "axelerant/drupal-insight-backstage",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/axl-testing-grounds/drupal-insight-backstage.git",
+                "reference": "7a009b262464e2deebff3b994699f9df71b20215"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axl-testing-grounds/drupal-insight-backstage/zipball/7a009b262464e2deebff3b994699f9df71b20215",
+                "reference": "7a009b262464e2deebff3b994699f9df71b20215",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "zeshanziya",
+                    "email": "zeshan.ziya@axelerant.com"
+                }
+            ],
+            "description": "A module to provide info to backstage.io",
+            "support": {
+                "source": "https://github.com/axl-testing-grounds/drupal-insight-backstage/tree/main",
+                "issues": "https://github.com/axl-testing-grounds/drupal-insight-backstage/issues"
+            },
+            "time": "2025-07-03T09:34:16+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -13202,6 +13234,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "axelerant/drupal-insight-backstage": 20,
         "drupal/gin": 15
     },
     "prefer-stable": true,
@@ -13209,6 +13242,6 @@
     "platform": {
         "php": ">=8.2"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
