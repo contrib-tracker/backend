@@ -107,12 +107,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/axl-testing-grounds/drupal-insight-backstage.git",
-                "reference": "7a009b262464e2deebff3b994699f9df71b20215"
+                "reference": "48b57b768ec16eda7e3ce728e393e8ef9f084a84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/axl-testing-grounds/drupal-insight-backstage/zipball/7a009b262464e2deebff3b994699f9df71b20215",
-                "reference": "7a009b262464e2deebff3b994699f9df71b20215",
+                "url": "https://api.github.com/repos/axl-testing-grounds/drupal-insight-backstage/zipball/48b57b768ec16eda7e3ce728e393e8ef9f084a84",
+                "reference": "48b57b768ec16eda7e3ce728e393e8ef9f084a84",
                 "shasum": ""
             },
             "default-branch": true,
@@ -131,7 +131,7 @@
                 "source": "https://github.com/axl-testing-grounds/drupal-insight-backstage/tree/main",
                 "issues": "https://github.com/axl-testing-grounds/drupal-insight-backstage/issues"
             },
-            "time": "2025-07-03T09:34:16+00:00"
+            "time": "2025-07-03T10:21:21+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
