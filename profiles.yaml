@@ -13,9 +13,15 @@ default:
   backup:
     source-relative: true
 
+  # We will get the access keys from 1Password using its CLI.
+  # However, to be able to use this in CI systems and other servers,
+  # we can also set environment variables as follows. In that case,
+  # it will bypass calling the 1Password CLI.
+  # - ASSETS_AWS_ACCESS_KEY_ID
+  # - ASSETS_AWS_SECRET_ACCESS_KEY
   run-before:
-    - 'echo "AWS_ACCESS_KEY_ID=$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/username")" >> "{{env}}"'
-    - 'echo "AWS_SECRET_ACCESS_KEY=$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/credential")" >> "{{env}}"'
+    - 'echo "AWS_ACCESS_KEY_ID=${ASSETS_AWS_ACCESS_KEY_ID:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/username")}" >> "{{env}}"'
+    - 'echo "AWS_SECRET_ACCESS_KEY=${ASSETS_AWS_SECRET_ACCESS_KEY:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/credential")}" >> "{{env}}"'
 
   env:
     TMPDIR: /tmp
