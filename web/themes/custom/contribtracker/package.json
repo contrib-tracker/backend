@@ -13,7 +13,7 @@
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.8.0",
+    "@eslint/js": "^9.32.0",
     "@percy/cli": "^1.30.11",
     "@percy/cypress": "^3.1.6",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
