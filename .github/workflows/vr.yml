@@ -24,7 +24,7 @@ jobs:
       PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get Cache Directories
         id: cache-dir
