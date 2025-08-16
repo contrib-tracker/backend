@@ -1,0 +1,240 @@
+
+[Drupal](../namespaces/drupal.md) | [ct_manager](../namespaces/drupal-ct-manager.md) | [Data](../namespaces/drupal-ct-manager-data.md)
+
+## Issue
+
+
+- **In Package**:
+    - [Application](../packages/Application.md)
+  
+
+
+---
+
+
+- **Final**: Yes
+
+
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 7</small>
+
+
+
+
+
+
+
+
+
+
+### Table of Contents
+
+
+
+
+
+
+
+
+
+#### Properties
+- **[$description](../classes/Drupal-ct-manager-Data-Issue.md#description)**
+         : string  
+
+- **[$title](../classes/Drupal-ct-manager-Data-Issue.md#title)**
+         : string  
+
+- **[$url](../classes/Drupal-ct-manager-Data-Issue.md#url)**
+         : string  
+
+
+#### Methods
+- **[__construct()](../classes/Drupal-ct-manager-Data-Issue.md#__construct)**
+           : mixed
+
+- **[getDescription()](../classes/Drupal-ct-manager-Data-Issue.md#getdescription)**
+           : string
+
+- **[getTitle()](../classes/Drupal-ct-manager-Data-Issue.md#gettitle)**
+           : string
+
+- **[getUrl()](../classes/Drupal-ct-manager-Data-Issue.md#geturl)**
+           : string
+
+- **[setDescription()](../classes/Drupal-ct-manager-Data-Issue.md#setdescription)**
+           : self
+
+
+
+
+
+
+
+### Properties
+
+#### $description
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 17</small>
+
+
+
+protected string $description = &#039;&#039;
+
+Description.
+
+
+
+
+
+#### $title
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 12</small>
+
+
+
+protected string $title
+
+Title.
+
+
+
+
+
+#### $url
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 22</small>
+
+
+
+protected string $url
+
+URL of the contribution.
+
+
+
+
+
+
+
+### Methods
+
+#### __construct()
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 24</small>
+
+
+!!! note ""
+    __construct(string $title, string $url) :mixed
+
+
+
+
+**Parameters**
+
+- **$title**: string
+
+
+- **$url**: string
+
+
+
+
+
+
+
+
+
+#### getDescription()
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 37</small>
+
+
+!!! note ""
+    getDescription() :string
+
+
+
+
+
+
+
+
+
+**Return Values:**
+
+- string
+
+
+
+#### getTitle()
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 29</small>
+
+
+!!! note ""
+    getTitle() :string
+
+
+
+
+
+
+
+
+
+**Return Values:**
+
+- string
+
+
+
+#### getUrl()
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 33</small>
+
+
+!!! note ""
+    getUrl() :string
+
+
+
+
+
+
+
+
+
+**Return Values:**
+
+- string
+
+
+
+#### setDescription()
+
+<small>[Issue.php](../files/web-modules-custom-ct-manager-src-data-issue.md) : Line 41</small>
+
+
+!!! note ""
+    setDescription(string $description) :self
+
+
+
+
+**Parameters**
+
+- **$description**: string
+
+
+
+
+
+
+
+**Return Values:**
+
+- self
+
+
+
+
