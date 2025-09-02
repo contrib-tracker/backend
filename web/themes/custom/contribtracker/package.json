@@ -29,7 +29,7 @@
     "breakpoint-sass": "^3.0.0",
     "browser-sync": "^3.0.4",
     "cypress": "13.17.0",
-    "cypress-real-events": "^1.13.0",
+    "cypress-real-events": "^1.14.0",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
