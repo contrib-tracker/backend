@@ -1,5 +1,5 @@
 mysqldb:
-    type: mariadb:11.2
+    type: mariadb:11.8
     disk: 3584
 
 rediscache:
