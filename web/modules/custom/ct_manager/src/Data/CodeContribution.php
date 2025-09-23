@@ -47,8 +47,8 @@ final class CodeContribution {
   protected int $patchCount = 0;
 
   /**
-  * @var int File count.
-  */
+   * @var int File count.
+   */
   protected int $filesCount = 0;
 
   /**
