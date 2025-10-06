@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 
 test.describe('Pagination Handling and Validation @medium', () => {
   test('should filter results with selected contribution type on each page', async ({ page }) => {
@@ -18,7 +18,7 @@ test.describe('Pagination Handling and Validation @medium', () => {
   });
 });
 
-async function filterAssertion(page: import('@playwright/test').Page) {
+async function filterAssertion(page: Page) {
   const selected = (await page.locator('.select2-selection__choice__display').allTextContents()).join('').trim();
   const types = page.locator('.contrib__card_type');
   const count = await types.count();
@@ -28,7 +28,7 @@ async function filterAssertion(page: import('@playwright/test').Page) {
   }
 }
 
-async function clickNextButton(page: import('@playwright/test').Page) {
+async function clickNextButton(page: Page) {
   const nextCount = await page.locator('.pager__item--next').count();
   if (nextCount > 0) {
     await page.locator('.pager__item--next').first().click();
@@ -38,5 +38,3 @@ async function clickNextButton(page: import('@playwright/test').Page) {
     expect(await page.locator('.pager__item--next').count()).toBe(0);
   }
 }
-
-
