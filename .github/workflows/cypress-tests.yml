@@ -33,18 +33,30 @@ jobs:
           cd web/themes/custom/contribtracker
           npm ci --prefer-offline --no-audit
 
-      - name: Change admin password for Cypress
-        run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
+      - name: Setup node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: 'npm'
+          cache-dependency-path: 'test/playwright/package-lock.json'
 
-      - name: Run expensive tests (weekly)
-        run: ddev cypress-run --env grepTags=expensive
+      - name: Install Playwright
+        run: |
+          cd test/playwright
+          npm ci --prefer-offline --no-audit
+          npx playwright install --with-deps
 
-      - name: Save Cypress recordings
+      - name: Run Playwright tests
+        run: |
+          cd test/playwright
+          npm run test
+
+      - name: Save playwright report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-recordings
+          name: playwright-report
           path: |
-            web/themes/custom/contribtracker/cypress/screenshots
-            web/themes/custom/contribtracker/cypress/videos
+            test/playwright/playwright-report
+            test/playwright/tests/visual
           retention-days: 3
