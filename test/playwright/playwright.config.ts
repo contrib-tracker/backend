@@ -1,4 +1,6 @@
+/// <reference types="node" />
 import { defineConfig, devices } from '@playwright/test';
+import * as path from 'path';
 
 /**
  * Read environment variables from file.
@@ -13,6 +15,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+  globalSetup: './global-setup',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -43,6 +46,7 @@ export default defineConfig({
     viewport: { width: 1280, height: 800 },
 
     ignoreHTTPSErrors: true,
+    storageState: path.resolve(__dirname, 'playwright/.auth/cookie-consent.json'),
   },
 
   /* Configure projects for major browsers */
