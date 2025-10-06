@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --project=smoke-desktop",
+    "test:core": "playwright test --project=core-desktop",
+    "test:nightly": "playwright test --project=regression-chromium --project=regression-webkit",
+    "test:percy": "percy exec -- playwright test --project=percy",
+    "codegen": "playwright codegen",
+    "report": "playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

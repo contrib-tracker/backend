@@ -195,20 +195,37 @@ jobs:
           ddev phpunit --testsuite unit
           ddev phpunit --bootstrap=./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php --configuration ./phpunit.xml --testsuite existing-site
 
-      - name: Change admin password to make it easier for Cypress tests
-        run: ddev drush upwd "$CYPRESS_ADMIN_USERNAME" "$CYPRESS_ADMIN_PASSWORD"
+      - name: Setup node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: 'npm'
+          cache-dependency-path: 'test/playwright/package-lock.json'
 
-      - name: Cypress Test (excluding expensive tests)
-        run: ddev cypress-run --env grepTags=-expensive
+      - name: Install playwright
+        run: |
+          cd test/playwright
+          npm ci --prefer-offline --no-audit
+          npx playwright install --with-deps --only-shell chromium webkit
 
-      - name: Save Cypress recordings
+      - name: Run playwright smoke tests
+        run: |
+          cd test/playwright
+          npm run test:smoke
+
+      - name: Run playwright core tests
+        run: |
+          cd test/playwright
+          npm run test:core
+
+      - name: Save playwright report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-recordings
+          name: playwright-report
           path: |
-            web/themes/custom/contribtracker/cypress/screenshots
-            web/themes/custom/contribtracker/cypress/videos
+            test/playwright/playwright-report
+            test/playwright/tests/visual
           retention-days: 3
 
   deploy:
