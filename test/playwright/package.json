@@ -1,0 +1,17 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@percy/cli": "^1.31.2",
+    "@percy/playwright": "^1.0.9",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0"
+  }
+}

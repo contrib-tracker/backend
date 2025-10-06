@@ -1,0 +1,79 @@
+---
+alwaysApply: true
+---
+
+# Playwright tests
+
+The testing suite is implemented using Playwright and tests a Drupal website. There are utilities and helpers in the `utils/` directory for common tasks such as login, enabling modules, etc. Also use the Playwright MCP tools when necessary to generate the tests.
+
+## High-level conventions
+
+- Use Playwright Test (@playwright/test) with TypeScript.
+- Place new tests under `tests/` using the folder taxonomy:
+  - `smoke/`, `public-nav/`, `content/{type}/`, `authoring/`, `permissions/`, `integrations/`, `visual/`, `regression/`
+- Prefer **anonymous** tests in `smoke/`. Use logged-in roles only when necessary.
+- Always add **grep-able tags** at the end of the test title:
+  - Cost cadence: @fast @medium @slow @expensive
+  - Intent: @smoke @regression @visual @accessibility
+  - Area: @navigation @forms @editorial @media @auth @roles @cache
+  - Behavior: @mutates @readOnly @flaky
+- Tests that change content MUST include @mutates.
+
+## Selectors & stability
+
+- Prefer `getByRole`, `getByLabel`, `getByPlaceholder` and accessible roles/labels.
+- Avoid brittle CSS chains; do not depend on layout or nth-child.
+- Disable/avoid animations when feasible; rely on deterministic data.
+
+## Auth & fixtures
+
+- Reuse storage states:
+  - editor: `test.use({ storageState: 'storage/editor.json' })`
+  - admin:  `test.use({ storageState: 'storage/admin.json' })`
+- Import the shared fixtures when you need API seeding: `import { test, expect } from '../../fixtures/drupal'`
+
+## Data setup
+
+- Prefer JSON:API for setup. Use UI only for flows you explicitly test.
+- Use fixed titles/ids (e.g., 'Playwright Article') so expectations are deterministic.
+
+## Visual tests
+
+- Use `expect(page).toHaveScreenshot('name.png')` with masking for timestamps and rotating content.
+- Tag visual tests with @visual @expensive and keep them sparse.
+= Add integration with Percy in visual tests (using the `percySnapshot` function).
+
+## Examples to imitate
+
+### Smoke example
+
+```ts
+test('homepage shows header and nav works @smoke @public @fast', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('header')).toBeVisible();
+  await page.getByRole('link', { name: /Articles|Blog/i }).first().click();
+  await expect(page).toHaveURL(/\/(articles|blog)/i);
+});
+```
+
+### Authoring example (editor)
+
+```ts
+import { test, expect } from '../../fixtures/drupal';
+test.use({ storageState: 'storage/editor.json' });
+test('editor can create article @authoring @roles @medium @mutates', async ({ page }) => {
+  await page.goto('/node/add/article');
+  await page.getByLabel(/Title/i).fill('Cursor Generated Article');
+  await page.getByRole('button', { name: /Save|Publish/i }).click();
+  await expect(page.getByRole('heading', { name: /Cursor Generated Article/i })).toBeVisible();
+});
+```
+
+## Do / Don’t
+
+- DO tag tests appropriately; DO choose the narrowest stable locator.
+- DO keep smoke tests fast and anonymous.
+- DO ensure elements are unique before calling toBeVisible or similar functions.
+- DON'T use absolute URLs in tests. Only use relative URLs even if an absolute URL is specified.
+- DON’T introduce random data unless masked or asserted.
+- DON’T add visual checks to smoke or core suites; keep them in visual/ regression with @visual.
