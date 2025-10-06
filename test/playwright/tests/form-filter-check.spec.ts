@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 
 test.describe('Form Filter Validation with Positive and Negative Scenarios @fast @smoke', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await acceptCookiesIfBanner(page).catch(() => {});
   });
 
   test('should show right results on name input', async ({ page }) => {
