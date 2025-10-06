@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 
 type DateParts = { day: string; month: string; year: number; formatted: string };
 
@@ -37,6 +38,7 @@ function parseDisplayedDate(dayText: string, monthYearText: string): Date {
 test.describe('Date Picker Filter Validation with Random Date Selection @medium', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await acceptCookiesIfBanner(page).catch(() => {});
   });
 
   test('should show right results on date selection', async ({ page }) => {

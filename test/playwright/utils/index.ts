@@ -12,5 +12,7 @@ export {
 
 export { default as drush } from './drush';
 
+export { acceptCookiesIfBanner } from './cookies';
+
 // Export types
 export type { DrushCommandOptions, DrushStatusResponse, DdevContext } from './types';

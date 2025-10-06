@@ -1,9 +1,11 @@
 import { test, expect } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 
 test.describe('Hover Actions Verification @fast', () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 800 });
     await page.goto('/');
+    await acceptCookiesIfBanner(page).catch(() => {});
   });
 
   test('should change the element style on hover for contrib tracker logo', async ({ page }) => {

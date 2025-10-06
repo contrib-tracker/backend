@@ -1,6 +1,11 @@
 import { test, expect } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 
 test.describe('Form Auto-Suggestions Validation with Extracted User Name @fast', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/');
+    await acceptCookiesIfBanner(page).catch(() => {});
+  });
   test('should show auto-suggestions when typing the first user name', async ({ page }) => {
     await page.goto('/');
 

@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 
 test.describe('Form Reset Button Validation with Positive and Negative Scenarios @medium', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await acceptCookiesIfBanner(page).catch(() => {});
   });
 
   test('should reset the form with valid data entry', async ({ page }) => {

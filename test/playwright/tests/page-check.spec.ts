@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 import urls from '../fixtures/page-check-urls.json';
 
 test.describe('Visual Testing @percy', () => {
@@ -19,6 +20,7 @@ test.describe('Visual Testing @percy', () => {
       });
 
       await page.goto(url);
+      await acceptCookiesIfBanner(page).catch(() => {});
 
       await page.evaluate(() => (window as any).beforeReload);
       // Scroll to trigger lazy components

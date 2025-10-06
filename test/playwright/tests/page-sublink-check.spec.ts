@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 
 test.describe('Main Page Sublinks Response Code Validation @expensive', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await acceptCookiesIfBanner(page).catch(() => {});
   });
 
   test('should validate the response codes for header links', async ({ page }) => {

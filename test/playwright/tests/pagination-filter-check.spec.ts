@@ -1,6 +1,11 @@
 import { test, expect, Page } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 
 test.describe('Pagination Handling and Validation @medium', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/');
+    await acceptCookiesIfBanner(page).catch(() => {});
+  });
   test('should filter results with selected contribution type on each page', async ({ page }) => {
     await page.goto('/');
 

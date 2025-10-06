@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
+import { acceptCookiesIfBanner } from '../utils';
 
 test.describe('XSS Attack Simulation in Form Fields Verification @security', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await acceptCookiesIfBanner(page).catch(() => {});
   });
 
   test('should not execute XSS payload in form fields', async ({ page }) => {
