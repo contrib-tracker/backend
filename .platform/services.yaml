@@ -3,4 +3,4 @@ mysqldb:
     disk: 3584
 
 rediscache:
-    type: redis:6.0
+    type: redis:8.0
