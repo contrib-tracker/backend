@@ -3,3 +3,4 @@ _core:
 geocoder_presave_disabled: false
 cache: true
 plugins_options: {  }
+queue: false
