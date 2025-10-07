@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33e5cefc2c7e3b1092f3377064727d04",
+    "content-hash": "6b921f28ba58adf2d7c9bd8782f0c8b3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2205,17 +2205,17 @@
         },
         {
             "name": "drupal/flag",
-            "version": "4.0.0-beta7",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/flag.git",
-                "reference": "8.x-4.0-beta7"
+                "reference": "5.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/flag-8.x-4.0-beta7.zip",
-                "reference": "8.x-4.0-beta7",
-                "shasum": "6f74fcaec0db3c54934cdf8f25acb67c0c2d7f07"
+                "url": "https://ftp.drupal.org/files/projects/flag-5.0.1.zip",
+                "reference": "5.0.1",
+                "shasum": "8487a0d34b3c52f47d8af1631e1947497057f500"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11"
@@ -2223,11 +2223,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.0-beta7",
-                    "datestamp": "1743851261",
+                    "version": "5.0.1",
+                    "datestamp": "1757658472",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
