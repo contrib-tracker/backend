@@ -1,21 +1,11 @@
 {
   "scripts": {
     "build": "gulp",
-    "lint": "CI=true gulp lint",
-    "vr": "percy exec -- cypress run",
-    "cypress:open": "cypress open --browser chrome",
-    "cypress:run": "cypress run --browser chrome",
-    "cypress:run:without-video": "CYPRESS_VIDEO=false cypress run",
-    "cypress:run:critical-path": "cypress run --env grepTags=critical-path",
-    "cypress:run:security": "cypress run --env grepTags=security",
-    "cypress:run:expensive": "cypress run --env grepTags=expensive"
+    "lint": "CI=true gulp lint"
   },
   "devDependencies": {
-    "@cypress/grep": "^4.1.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.34.0",
-    "@percy/cli": "^1.30.11",
-    "@percy/cypress": "^3.1.6",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
     "@types/gulp": "^4.0.17",
     "@types/gulp-sass": "^5.0.4",
@@ -28,8 +18,6 @@
     "autoprefixer": "^10.4.21",
     "breakpoint-sass": "^3.0.0",
     "browser-sync": "^3.0.4",
-    "cypress": "13.17.0",
-    "cypress-real-events": "^1.13.0",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
