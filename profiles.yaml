@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=https://creativeprojects.github.io/resticprofile/jsonschema/config-1.json
+
+version: "1"
+
+groups:
+  ddev:
+    - ddev-db
+    - ddev-files
+
+default:
+  repository: "s3:blr1.digitaloceanspaces.com/axl-backup-contrib-tracker/{{ .Profile.Name }}"
+  insecure-no-password: true
+  backup:
+    source-relative: true
+
+  # We will get the access keys from 1Password using its CLI.
+  # However, to be able to use this in CI systems and other servers,
+  # we can also set environment variables as follows. In that case,
+  # it will bypass calling the 1Password CLI.
+  # - ASSETS_AWS_ACCESS_KEY_ID
+  # - ASSETS_AWS_SECRET_ACCESS_KEY
+  run-before:
+    - 'echo "AWS_ACCESS_KEY_ID=${ASSETS_AWS_ACCESS_KEY_ID:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/username")}" >> "{{env}}"'
+    - 'echo "AWS_SECRET_ACCESS_KEY=${ASSETS_AWS_SECRET_ACCESS_KEY:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/credential")}" >> "{{env}}"'
+
+  env:
+    TMPDIR: /tmp
+
+# We need to have two profiles: one for db and other for files.
+# This is because the paths are different for both.
+# And we want to use `delete` with the files profile.
+# Setting `delete` on a base path will delete everything
+# in that directory. The common base directory here is
+# the project directory and using `delete` for this will
+# delete all the source files, not just the ones backed up.
+ddev-db:
+  inherit: default
+  backup:
+    run-before:
+      - mkdir -p .ddev/.downloads
+      - ddev export-db --file=.ddev/.downloads/db-{{ .Profile.Name }}.sql.gz
+    run-after:
+      - rm .ddev/.downloads/db-{{ .Profile.Name }}.sql.gz
+    source-base: "{{ .ConfigDir }}"
+    source:
+      - ".ddev/.downloads/db-{{ .Profile.Name }}.sql.gz"
+
+  restore:
+    target: "{{ .ConfigDir }}"
+    run-after:
+      - ddev import-db --file=.ddev/.downloads/db-{{ .Profile.Name }}.sql.gz
+      - rm .ddev/.downloads/db-{{ .Profile.Name }}.sql.gz
+
+ddev-files:
+  inherit: default
+  backup:
+    source-base: "{{ .ConfigDir }}/web/sites/default/files"
+    source: "."
+
+  restore:
+    delete: true
+    target: "{{ .ConfigDir }}/web/sites/default/files"
+
+# TODO: Sections for platform (just backup) and platform-to-ddev (special case)
