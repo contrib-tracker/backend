@@ -1,16 +1,12 @@
-name: Cypress Tests
+name: Playwright Tests
 
 on:
   schedule:
     - cron: '0 0 * * 0'  # Weekly on Sunday midnight
 
 jobs:
-  cypress_tests:
+  playwright_tests:
     runs-on: ubuntu-latest
-
-    env:
-      CYPRESS_ADMIN_USERNAME: ct-admin
-      CYPRESS_ADMIN_PASSWORD: ct-admin
 
     steps:
       - name: Check out repository code
