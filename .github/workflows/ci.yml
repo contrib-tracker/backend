@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Drupal Code Quality
-        uses: hussainweb/drupalqa-action@v2
+        uses: hussainweb/drupalqa-action@v3
         id: drupalqa
         with:
           php-version: 8.2
