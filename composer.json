@@ -32,7 +32,7 @@
         "axelerant/ct_drupal": "*",
         "axelerant/ct_github": "*",
         "composer/installers": "^2.1",
-        "cweagans/composer-patches": "^1.7.0",
+        "cweagans/composer-patches": "^2.0.0",
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.0.0",
         "drupal/better_exposed_filters": "^7.0",
