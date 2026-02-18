@@ -32,18 +32,14 @@ grumphp:
         - profiles/contrib
     phpcs:
       standard:
-        - phpcs.xml
+        - phpcs.xml.dist
       ignore_patterns:
         - /\.github
         - /\.gitlab
         - /\.ddev
-        - /config
+        - /^config\/(.*)/
         - /drush
-        - /web/robots.txt
-        - /web/sites/default
-        - bower_components
-        - node_modules
-        - /vendor
+        - /^web\/sites\/default/
       triggered_by:
         - php
         - module
@@ -54,30 +50,25 @@ grumphp:
         - theme
         - css
         - info
-        - txt
     phpmd:
       whitelist_patterns:
         - /^web\/modules\/custom\/(.*)/
         - /^web\/themes\/custom\/(.*)/
       ruleset:
-        - phpmd.xml
+        - phpmd.xml.dist
       triggered_by:
         - php
         - module
         - theme
     phpstan:
-      configuration: phpstan.neon
+      configuration: phpstan.neon.dist
       ignore_patterns:
-        - .github
-        - .gitlab
-        - .ddev
-        - /config
+        - /\.github
+        - /\.gitlab
+        - /\.ddev
+        - /^config\/(.*)/
         - /drush
-        - /web/robots.txt
-        - /web/sites/default
-        - bower_components
-        - node_modules
-        - /vendor
+        - /^web\/sites\/default/
       triggered_by:
         - php
         - module
@@ -85,9 +76,3 @@ grumphp:
         - inc
       memory_limit: "-1"
       use_grumphp_paths: true
-    npm_script:
-      script: lint
-      triggered_by: [js, jsx, ts, scss, css]
-      working_directory: web/themes/custom/contribtracker
-      is_run_task: true
-      silent: false

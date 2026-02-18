@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1eea8432a696f24ab5fda998b6b291c8",
+    "content-hash": "a500eac80c448226b81b756c544a8718",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,7 +64,7 @@
         },
         {
             "name": "axelerant/ct_drupal",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/ct_drupal",
@@ -86,7 +86,7 @@
         },
         {
             "name": "axelerant/ct_github",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/ct_github",
@@ -13421,5 +13421,5 @@
         "php": ">=8.2"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

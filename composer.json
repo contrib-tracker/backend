@@ -67,7 +67,7 @@
     },
     "require-dev": {
         "axelerant/db-docker": "^1.1",
-        "axelerant/drupal-quality-checker": "^1.4",
+        "axelerant/drupal-quality-checker": "^1.5",
         "behat/mink": "^1.10",
         "behat/mink-browserkit-driver": "^2.1",
         "phpunit/phpunit": "^9.0",
