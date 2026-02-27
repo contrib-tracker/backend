@@ -1,0 +1,15 @@
+nav:
+  - API Reports:
+    - Overview: api-reports/index.md
+    - Namespaces:
+        - Drupal: api-reports/namespaces/drupal.md
+    - Packages:
+        - Application: api-reports/packages/Application.md
+
+    - Reports:
+        - Deprecated: api-reports/reports/deprecated.md
+        - Errors: api-reports/reports/errors.md
+        - Markers: api-reports/reports/markers.md
+
+    - Indices:
+        - Files: api-reports/indices/files.md

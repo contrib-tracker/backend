@@ -1,0 +1,6 @@
+[submodule ".phpdoc/themes/phpdoc-backstage-markdown-theme"]
+	path = .phpdoc/themes/phpdoc-backstage-markdown-theme
+	url = git@github.com:axelerant/phpdoc-backstage-markdown-theme.git
+[submodule ".phpdoc/extensions/phpdoc-backstage-markdown-extension"]
+	path = .phpdoc/extensions/phpdoc-backstage-markdown-extension
+	url = git@github.com:axelerant/phpdoc-backstage-markdown-extension.git
