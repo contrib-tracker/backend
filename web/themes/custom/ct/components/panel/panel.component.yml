@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Panel
+status: stable
+description: A white rounded container for detail content, such as a contribution or a user profile. Fields inside are laid out as label and value rows on wider screens.
+props:
+  type: object
+  properties:
+    tag:
+      type: string
+      title: HTML element
+      enum: [div, article, section]
+      default: article
+slots:
+  content:
+    title: Content

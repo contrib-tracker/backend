@@ -1,0 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Tabs
+status: stable
+description: A row of pill-shaped links, used for the local tasks of a page.
+slots:
+  items:
+    title: Items
+    description: List items, each containing a link.

@@ -1,0 +1,25 @@
+.message {
+  margin: 0 16px;
+  padding: 16px 0 16px 16px;
+  border-radius: 4px;
+  background-color: var(--c-white);
+
+  @media (width >= 1025px) {
+    width: var(--width);
+    max-width: calc(100% - var(--gutter) * 2);
+    margin: 20px auto;
+    padding: 16px;
+  }
+}
+
+.message--status {
+  border-inline-start: 4px solid var(--c-message-status);
+}
+
+.message--warning {
+  border-inline-start: 4px solid var(--c-message-warning);
+}
+
+.message--error {
+  border-inline-start: 4px solid var(--c-message-error);
+}

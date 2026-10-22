@@ -1,0 +1,4 @@
+{% set tag = tag|default('article') %}
+<{{ tag }}{{ attributes.addClass('panel') }}>
+  {% block content %}{{ content }}{% endblock %}
+</{{ tag }}>

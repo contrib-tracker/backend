@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * The "Login with" links of the social auth modules.
+ */
+#}
+{% for network in networks %}
+  {% set options = destination ? {query: {destination: destination}} : {} %}
+  {% set short_name = network.getPluginDefinition.short_network %}
+  {% set button = {
+    url: network.getRedirectUrl(options).toString,
+    label: 'Login with @social_network_name'|t({'@social_network_name': network.getPluginDefinition.social_network}),
+    variant: 'outline',
+  } %}
+  {{ include('ct:button', short_name == 'google' ? button|merge({icon: 'google'}) : button, with_context=false) }}
+{% endfor %}

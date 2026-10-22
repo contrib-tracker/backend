@@ -1,0 +1,78 @@
+.panel {
+  position: relative;
+  width: calc(100% - var(--gutter) * 2);
+  max-width: var(--width);
+  margin: 45px auto 100px;
+  padding: 24px;
+  border-end-start-radius: 4px;
+  border-end-end-radius: 4px;
+  background-color: var(--c-white);
+
+  @media (width >= 1025px) {
+    margin: 0 auto 85px;
+  }
+
+  /* Hidden: the approval flag is only for moderators. */
+  & .flag-contribution-approval {
+    display: none;
+  }
+
+  & .field {
+    font-family: var(--f-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+
+    & a {
+      color: var(--c-link-code);
+      overflow-wrap: break-word;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  & .field__label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+}
+
+/* Each field is a label and a value. */
+.panel__body > div {
+  display: block;
+  margin-bottom: 30px;
+
+  @media (width >= 1025px) {
+    display: grid;
+    grid-template-columns: 200px auto;
+    margin-bottom: 15px;
+  }
+
+  & .label {
+    margin-top: 0;
+  }
+}
+
+.panel .field--type-image {
+  width: 100%;
+  max-width: var(--width);
+  margin: auto;
+
+  & a {
+    display: block;
+    width: 100%;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(33 33 33 / 15%);
+    text-align: center;
+  }
+
+  & img {
+    width: 100px;
+    height: 100px;
+    border: 5px solid var(--c-white);
+    border-radius: 50%;
+    box-shadow: 0 1px 4px var(--c-border);
+  }
+}

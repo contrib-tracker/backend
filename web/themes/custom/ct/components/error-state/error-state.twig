@@ -1,0 +1,6 @@
+<div class="error-state">
+  <img src="{{ image }}" class="error-state__image" alt="" width="520" height="360">
+  <p class="error-state__heading">{{ heading }}</p>
+  <p class="error-state__text">{{ text }}</p>
+  {{ include('ct:button', {url: home_url, label: home_label, icon: 'home'}, with_context=false) }}
+</div>
