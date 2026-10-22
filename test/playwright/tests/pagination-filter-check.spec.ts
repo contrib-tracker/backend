@@ -25,7 +25,7 @@ test.describe('Pagination Handling and Validation @medium', () => {
 
 async function filterAssertion(page: Page) {
   const selected = (await page.locator('.select2-selection__choice__display').allTextContents()).join('').trim();
-  const types = page.locator('.contrib__card_type');
+  const types = page.locator('.contribution-card__badges .badge');
   const count = await types.count();
   for (let i = 0; i < count; i++) {
     const txt = (await types.nth(i).textContent())?.trim() || '';

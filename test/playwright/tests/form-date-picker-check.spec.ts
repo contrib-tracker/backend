@@ -58,12 +58,12 @@ test.describe('Date Picker Filter Validation with Random Date Selection @medium'
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
 
-    const cards = page.locator('.contrib__card_date');
+    const cards = page.locator('.contribution-card__date');
     const count = await cards.count();
     for (let i = 0; i < count; i++) {
       const card = cards.nth(i);
-      const dayText = (await card.locator('.contrib__card_date__day').textContent())?.trim() || '';
-      const monthYearText = (await card.locator('.contrib__card_date__month--year').textContent())?.trim() || '';
+      const dayText = (await card.locator('.contribution-card__day').textContent())?.trim() || '';
+      const monthYearText = (await card.locator('.contribution-card__month').textContent())?.trim() || '';
       const displayedDate = parseDisplayedDate(dayText, monthYearText);
       const minDateObj = new Date(Date.UTC(minDate.year, Number(minDate.month) - 1, Number(minDate.day)));
       const maxDateObj = new Date(Date.UTC(maxDate.year, Number(maxDate.month) - 1, Number(maxDate.day)));

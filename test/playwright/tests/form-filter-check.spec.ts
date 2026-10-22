@@ -8,7 +8,7 @@ test.describe('Form Filter Validation with Positive and Negative Scenarios @fast
   });
 
   test('should show right results on name input', async ({ page }) => {
-    const firstContributor = page.locator('.contrib__card_contributer').first();
+    const firstContributor = page.locator('.contribution-card__contributor').first();
     const text = (await firstContributor.textContent())?.trim() || '';
     expect(text.length).toBeGreaterThan(0);
 
@@ -16,7 +16,7 @@ test.describe('Form Filter Validation with Positive and Negative Scenarios @fast
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
 
-    const contributors = page.locator('.contrib__card_contributer');
+    const contributors = page.locator('.contribution-card__contributor');
     await expect(contributors.first()).toBeVisible();
     const count = await contributors.count();
     for (let i = 0; i < count; i++) {
@@ -28,7 +28,7 @@ test.describe('Form Filter Validation with Positive and Negative Scenarios @fast
     await page.locator('#edit-uid').fill('NonExistentName');
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
-    await expect(page.locator('.contrib__card_contributer')).toHaveCount(0);
+    await expect(page.locator('.contribution-card__contributor')).toHaveCount(0);
   });
 
   test('should show no results for excessively long name input', async ({ page }) => {
@@ -36,25 +36,25 @@ test.describe('Form Filter Validation with Positive and Negative Scenarios @fast
     await page.locator('#edit-uid').fill(longName);
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
-    await expect(page.locator('.contrib__card_contributer')).toHaveCount(0);
+    await expect(page.locator('.contribution-card__contributor')).toHaveCount(0);
   });
 
   test('should show no results for numerical name input', async ({ page }) => {
     await page.locator('#edit-uid').fill('1234567890');
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
-    await expect(page.locator('.contrib__card_contributer')).toHaveCount(0);
+    await expect(page.locator('.contribution-card__contributor')).toHaveCount(0);
   });
 
   test('should show no results for special characters in name input', async ({ page }) => {
     await page.locator('#edit-uid').fill('!@#$%^&*()');
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
-    await expect(page.locator('.contrib__card_contributer')).toHaveCount(0);
+    await expect(page.locator('.contribution-card__contributor')).toHaveCount(0);
   });
 
   test('should show right results on title input', async ({ page }) => {
-    const firstTitle = page.locator('.contrib__card_title>a').first();
+    const firstTitle = page.locator('.contribution-card__title > a').first();
     const text = (await firstTitle.textContent())?.trim() || '';
     expect(text.length).toBeGreaterThan(0);
 
@@ -62,7 +62,7 @@ test.describe('Form Filter Validation with Positive and Negative Scenarios @fast
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
 
-    const titles = page.locator('.contrib__card_title>a');
+    const titles = page.locator('.contribution-card__title > a');
     await expect(titles.first()).toBeVisible();
     const count = await titles.count();
     for (let i = 0; i < count; i++) {
@@ -74,21 +74,21 @@ test.describe('Form Filter Validation with Positive and Negative Scenarios @fast
     await page.locator('#edit-title').fill('NonExistentTitle');
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
-    await expect(page.locator('.contrib__card_title>a')).toHaveCount(0);
+    await expect(page.locator('.contribution-card__title > a')).toHaveCount(0);
   });
 
   test('should show no results for special characters in title input', async ({ page }) => {
     await page.locator('#edit-title').fill('!@#$%^&*()');
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
-    await expect(page.locator('.contrib__card_title>a')).toHaveCount(0);
+    await expect(page.locator('.contribution-card__title > a')).toHaveCount(0);
   });
 
   test('should show no results for numerical title input', async ({ page }) => {
     await page.locator('#edit-title').fill('1234567890');
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
-    await expect(page.locator('.contrib__card_title>a')).toHaveCount(0);
+    await expect(page.locator('.contribution-card__title > a')).toHaveCount(0);
   });
 
   test('should show right results on technology selection', async ({ page }) => {
@@ -101,7 +101,7 @@ test.describe('Form Filter Validation with Positive and Negative Scenarios @fast
       .locator("[class*='contribution-technology'] .select2-selection__rendered")
       .getAttribute('title');
 
-    const tagText = (await page.locator('.contrib__card_tags > a').first().textContent())?.trim();
+    const tagText = (await page.locator('.contribution-card__tags a').first().textContent())?.trim();
     expect(selectedTitle).toBe(tagText);
   });
 });
