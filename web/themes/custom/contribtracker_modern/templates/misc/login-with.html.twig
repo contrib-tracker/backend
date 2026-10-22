@@ -1,0 +1,14 @@
+{% set module = 'link nav__auth-link' %}
+
+{{ attach_library('social_auth/auth-icons') }}
+
+{% for network in networks %}
+  {% if destination %}
+    {% set options = {'query': {'destination': destination}} %}
+  {% else %}
+    {% set options = {} %}
+  {% endif %}
+  <a class="{{ module }} auth-link" href="{{ network.getRedirectUrl(options).toString }}">
+    <span class="icon-{{ network.getPluginDefinition.short_network }}"></span> {{ 'Login with @social_network_name'|t({'@social_network_name': network.getPluginDefinition.social_network}) }}
+  </a>
+{% endfor %}

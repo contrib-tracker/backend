@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the contribtracker_modern theme.
+ */
+
+/**
+ * Implements hook_theme_suggestions_form_alter().
+ */
+function contribtracker_modern_theme_suggestions_form_alter(array &$suggestions, array $variables): void {
+  if (!empty($variables['element']['#id'])) {
+    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_table_alter().
+ */
+function contribtracker_modern_theme_suggestions_table_alter(array &$suggestions, array $variables): void {
+  if (isset($variables['header']['id']) && isset($variables['header']['provider_user_id'])) {
+    $suggestions[] = 'table__social__auth';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_input_alter().
+ */
+function contribtracker_modern_theme_suggestions_input_alter(array &$suggestions, array $variables): void {
+  if (!empty($variables['element']['#id'])) {
+    $suggestions[] = 'input__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+}
