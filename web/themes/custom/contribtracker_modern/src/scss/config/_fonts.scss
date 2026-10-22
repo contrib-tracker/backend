@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'font-icons';
+  src:
+    url('../../../fonts/font-icons.woff') format('woff'),
+    url('../../../fonts/font-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+// Define fonts here.
+:root {
+  --f-primary: 'Roboto', sans-serif;
+  --f-secondary: 'Montserrat', sans-serif;
+}
+$f-icon: 'font-icons';

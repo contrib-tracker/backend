@@ -1,0 +1,20 @@
+@use 'sass:list';
+
+$mobile: 0 767px;
+$tablet: 768px 1024px;
+$upto-tablet: 0 1024px;
+$desktop: 1025px;
+$beyond-tablet: 768px;
+
+// A single value is a min-width; a pair is a min/max-width range.
+@mixin breakpoint($query) {
+  @if list.length($query) == 2 {
+    @media (min-width: #{list.nth($query, 1)}) and (max-width: #{list.nth($query, 2)}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$query}) {
+      @content;
+    }
+  }
+}
