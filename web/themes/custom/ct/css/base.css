@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+  background: var(--c-background);
+  color: var(--c-text);
+  font-family: var(--f-primary);
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: var(--c-link);
+}
+
+a.is-active {
+  color: var(--c-text-light);
+}
+
+/* Plain navigation link used by menus and footer. */
+.link {
+  color: var(--c-text-dark);
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: var(--c-text-light);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-blue-navy);
+  outline-offset: 2px;
+}
+
+main {
+  display: block;
+}
+
+/* The title of every page, from the page title block. */
+.page-title {
+  @media (width >= 1025px) {
+    width: calc(100% - var(--gutter) * 2);
+    max-width: var(--width);
+    margin: 40px auto;
+    border-radius: 4px;
+  }
+
+  & h1 {
+    margin: 40px 16px 24px;
+    color: var(--c-title);
+    font-family: var(--f-secondary);
+    font-size: 24px;
+
+    @media (width >= 1025px) {
+      max-width: 100%;
+      margin-inline: 0;
+    }
+  }
+}

@@ -1,0 +1,235 @@
+/* Form chrome shared by every form on the front end. */
+.form {
+  width: calc(100% - var(--gutter) * 2);
+  max-width: var(--width);
+  margin: 40px auto;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: var(--c-white);
+}
+
+.form-item {
+  margin-bottom: 24px;
+  color: var(--c-dim-grey);
+  font-family: var(--f-secondary);
+  font-size: 14px;
+}
+
+.form-required {
+  margin-bottom: 8px;
+  color: var(--c-dim-grey);
+  font-family: var(--f-secondary);
+  font-size: 14px;
+}
+
+.description {
+  margin-top: 8px;
+  color: var(--c-dim-grey);
+  font-size: 12px;
+
+  @media (width >= 1025px) {
+    max-width: 45%;
+  }
+}
+
+.form-wrapper {
+  color: var(--c-dim-grey);
+  font-family: var(--f-secondary);
+  font-size: 14px;
+}
+
+.form-text,
+.form-email {
+  width: auto;
+  max-width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  color: var(--c-border);
+}
+
+/* The label is a block above its field, which has its own top margin. */
+.form-item > label:not(.option) + .form-text {
+  margin-top: 0;
+}
+
+#edit-field-do-username-0-value {
+  width: 330px;
+  max-width: 100%;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+}
+
+/* Submit buttons rendered by Drupal. */
+.button {
+  width: fit-content;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: var(--c-brand);
+  color: var(--c-white);
+  font-family: var(--f-secondary);
+}
+
+.form-item-field-contribution-date-value-min,
+.form-item-field-contribution-date-value-max {
+  @media (width >= 1025px) {
+    width: 45%;
+  }
+}
+
+/* Contribution filters (exposed forms). */
+.contribution-filter-form {
+  @media (width >= 1025px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-content: start;
+  }
+
+  & input[type='date'],
+  & input[type='time'] {
+    appearance: none;
+  }
+
+  & .form-text {
+    width: 100%;
+    max-width: none;
+
+    @media (width >= 1025px) {
+      width: 80%;
+    }
+  }
+
+  & .form-actions {
+    grid-column-start: 1;
+  }
+
+  & #edit-reset {
+    margin-left: 16px;
+  }
+
+  & .fieldset-wrapper {
+    display: block;
+
+    @media (width >= 1025px) {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+    }
+  }
+
+  & .input--date {
+    width: 100%;
+  }
+
+  & .form-wrapper {
+    width: 100%;
+    padding: 0;
+    border: 0;
+
+    @media (width >= 1025px) {
+      width: 88%;
+    }
+  }
+
+  /* Select2 inside the filter form. */
+  & .select2-container {
+    width: 100% !important; /* Select2 sets an inline width. */
+    margin-top: 16px;
+
+    @media (width >= 1025px) {
+      width: 80% !important;
+    }
+  }
+
+  & .select2-selection {
+    border: 1px solid var(--c-border);
+  }
+
+  & .select2-selection--multiple {
+    padding: 4px 8px;
+  }
+
+  & .select2-selection__choice {
+    margin: 4px;
+  }
+
+  /* Select2's own selectors are specific, so these match them. */
+  & .select2-container--default .select2-selection--single {
+    height: auto;
+    padding: 8px 16px;
+
+    & .select2-selection__rendered {
+      line-height: inherit;
+    }
+
+    & .select2-selection__arrow {
+      top: 7px;
+      right: 8px;
+    }
+  }
+}
+
+.contributions__event .form-item-uid {
+  margin-top: 24px;
+}
+
+/* The contribution count report filter. */
+.count-filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (width < 768px) {
+    display: block;
+  }
+
+  & label {
+    display: block;
+  }
+
+  & .form-text {
+    max-width: 100%;
+    margin-right: 20px;
+  }
+
+  & .input-text {
+    margin-top: 0;
+  }
+
+  & #edit-actions {
+    padding-left: 10px;
+
+    & #edit-reset {
+      margin-left: 16px;
+    }
+  }
+
+  & .form-wrapper {
+    border: 0;
+  }
+
+  & .fieldset-wrapper {
+    display: block;
+
+    @media (width >= 768px) {
+      display: flex;
+    }
+  }
+
+  & .js-form-item-field-contribution-date-value-min,
+  & .js-form-item-field-contribution-date-value-max {
+    @media (width >= 1025px) {
+      width: 50%;
+    }
+
+    & input {
+      appearance: none;
+    }
+  }
+}

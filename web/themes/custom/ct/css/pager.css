@@ -1,0 +1,91 @@
+.pager__items {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0 80px;
+  list-style: none;
+
+  & li {
+    display: none;
+    border: 1px solid var(--c-background);
+    background: var(--c-white);
+
+    @media (width >= 768px) {
+      display: list-item;
+    }
+
+    &:first-child {
+      border-start-start-radius: 20px;
+      border-end-start-radius: 20px;
+    }
+
+    &:last-child {
+      border-start-end-radius: 20px;
+      border-end-end-radius: 20px;
+    }
+
+    &.is-active {
+      display: list-item;
+      background: var(--c-dim-grey);
+
+      & a {
+        color: var(--c-white);
+      }
+    }
+  }
+
+  & a {
+    display: block;
+    padding: 12px 14px;
+    color: var(--c-dim-grey);
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  & .pager__item--first,
+  & .pager__item--last {
+    display: none;
+  }
+
+  & .pager__item--ellipsis {
+    @media (width >= 768px) {
+      padding: 8px;
+    }
+  }
+
+  /* Previous and next are always shown, as arrows. */
+  & .pager__item--previous,
+  & .pager__item--next {
+    display: list-item;
+
+    & a {
+      font-size: 0;
+    }
+
+    & a::before {
+      content: '';
+      font-size: 16px;
+    }
+  }
+
+  & .pager__item--previous a::before {
+    --icon: var(--icon-caret-left);
+  }
+
+  & .pager__item--next a::before {
+    --icon: var(--icon-caret-right);
+  }
+
+  & .pager__item--previous a,
+  & .pager__item--next a {
+    /* Reuse the shared icon rendering. */
+    &::before {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background-color: currentcolor;
+      mask: var(--icon) center / contain no-repeat;
+      vertical-align: middle;
+    }
+  }
+}

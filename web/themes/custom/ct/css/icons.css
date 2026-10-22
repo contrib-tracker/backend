@@ -1,0 +1,56 @@
+/*
+ * Icons are SVG files in /icons painted with a mask, so they take the current
+ * text colour. Use `.icon-<name>` on an element, or add `.has-icon` and set
+ * `--icon` to draw one in the ::before of an element:
+ *
+ *   .something::before { --icon: var(--icon-home); }
+ */
+:root {
+  --icon-bin: url('/themes/custom/ct/icons/bin.svg');
+  --icon-caret-down: url('/themes/custom/ct/icons/caret-down.svg');
+  --icon-caret-left: url('/themes/custom/ct/icons/caret-left.svg');
+  --icon-caret-right: url('/themes/custom/ct/icons/caret-right.svg');
+  --icon-facebook: url('/themes/custom/ct/icons/facebook.svg');
+  --icon-google: url('/themes/custom/ct/icons/google.svg');
+  --icon-hamburger: url('/themes/custom/ct/icons/hamburger.svg');
+  --icon-home: url('/themes/custom/ct/icons/home.svg');
+  --icon-linkedin: url('/themes/custom/ct/icons/linkedin.svg');
+  --icon-logout: url('/themes/custom/ct/icons/logout.svg');
+  --icon-x: url('/themes/custom/ct/icons/x.svg');
+}
+
+[class^='icon-'],
+[class*=' icon-'],
+.has-icon::before {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: currentcolor;
+  mask: var(--icon) center / contain no-repeat;
+  vertical-align: middle;
+}
+
+.has-icon::before {
+  content: '';
+}
+
+.icon-facebook {
+  --icon: var(--icon-facebook);
+}
+
+.icon-twitter,
+.icon-x {
+  --icon: var(--icon-x);
+}
+
+.icon-linkedin {
+  --icon: var(--icon-linkedin);
+}
+
+.icon-google {
+  --icon: var(--icon-google);
+}
+
+.icon-home {
+  --icon: var(--icon-home);
+}
