@@ -47,3 +47,23 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "github-actions"
+
+  - package-ecosystem: "npm"
+    directory: "/web/themes/custom/contribtracker_modern/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "npm"
+    groups:
+      vite-plus:
+        patterns:
+          - "vite-plus"
+          - "vite"
+          - "vitest"
+      types:
+        patterns:
+          - "@types/*"
+      stylelint:
+        patterns:
+          - "stylelint*"
+          - "postcss-scss"
