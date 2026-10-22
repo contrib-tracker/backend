@@ -36,7 +36,6 @@
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.0.0",
         "drupal/better_exposed_filters": "^7.0",
-        "drupal/ckeditor": "^1.0",
         "drupal/cookies": "^1.2",
         "drupal/core": "^10.1",
         "drupal/core-composer-scaffold": "^10.1",
