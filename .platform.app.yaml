@@ -149,6 +149,15 @@ hooks:
       npm run build
       cd -
 
+      # contribtracker_modern uses Vite+, which needs Node 22.18 or newer.
+      n 24
+      hash -r
+
+      cd web/themes/custom/contribtracker_modern
+      npm ci --prefer-offline
+      npm run build
+      cd -
+
     # The deploy hook runs after your application has been deployed and started.
     deploy: |
       set -e
