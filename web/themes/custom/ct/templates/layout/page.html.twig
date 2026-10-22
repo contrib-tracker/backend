@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * The page layout. The header and footer are single directory components.
+ */
+#}
+{{ page.header }}
+{{ page.navigation }}
+
+<section class="precontent">
+  {{ page.precontent }}
+</section>
+
+<main role="main">
+  <a id="main-content" tabindex="-1"></a>
+  {{ page.content }}
+</main>
+
+{% if page.footer_primary or page.footer_secondary %}
+  {% embed 'ct:site-footer' with {primary: page.footer_primary, secondary: page.footer_secondary} only %}
+    {% block primary %}{{ primary }}{% endblock %}
+    {% block secondary %}{{ secondary }}{% endblock %}
+  {% endembed %}
+{% endif %}

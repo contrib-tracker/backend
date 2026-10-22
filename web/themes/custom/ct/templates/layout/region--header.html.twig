@@ -1,0 +1,6 @@
+{% if content %}
+  {% embed 'ct:site-header' with {branding: branding, navigation: navigation} only %}
+    {% block brand %}{{ branding }}{% endblock %}
+    {% block navigation %}{{ navigation }}{% endblock %}
+  {% endembed %}
+{% endif %}

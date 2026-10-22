@@ -1,0 +1,11 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Site footer
+status: stable
+description: "The page footer: link columns on white, and a coloured strip for legal text."
+slots:
+  primary:
+    title: Primary
+    description: Link columns, social links and logo.
+  secondary:
+    title: Secondary
+    description: Copyright and cookie controls.

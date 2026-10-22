@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  {% set primary_content %}{% block primary %}{{ primary }}{% endblock %}{% endset %}
+  {% set secondary_content %}{% block secondary %}{{ secondary }}{% endblock %}{% endset %}
+  {% if primary_content|trim %}
+    <div class="site-footer__primary">{{ primary_content }}</div>
+  {% endif %}
+  {% if secondary_content|trim %}
+    <div class="site-footer__secondary">{{ secondary_content }}</div>
+  {% endif %}
+</footer>

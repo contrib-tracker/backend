@@ -1,0 +1,26 @@
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('account-menu') }}>
+    {% else %}
+      <ul>
+    {% endif %}
+    {% for item in items %}
+      <li{{ item.attributes }}>
+        {% if item.url.routeName in ['user.login', 'user.logout'] %}
+          {{ include('ct:button', {url: item.url.toString, label: item.title, icon: 'logout'}, with_context=false) }}
+        {% else %}
+          {{ link(item.title, item.url, {'class': ['link']}) }}
+        {% endif %}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
