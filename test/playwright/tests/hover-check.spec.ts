@@ -9,14 +9,14 @@ test.describe('Hover Actions Verification @fast', () => {
   });
 
   test('should change the element style on hover for contrib tracker logo', async ({ page }) => {
-    const logo = page.locator('.nav__container a.link.branding__link');
+    const logo = page.locator('.site-header .branding__link');
     await expect(logo).toHaveCSS('color', 'rgba(236, 75, 6, 0.933)');
     await logo.hover();
     await expect(logo).toHaveCSS('color', 'rgb(109, 104, 104)');
   });
 
   test('should change the element style on hover for login with google link', async ({ page }) => {
-    const link = page.locator('.nav__auth-link').nth(1);
+    const link = page.locator('.ct-button--outline').first();
     await expect(link).toHaveCSS('color', 'rgba(236, 75, 6, 0.933)');
     await link.hover();
     await expect(link).toHaveCSS('color', 'rgb(255, 255, 255)');
