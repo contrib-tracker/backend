@@ -88,6 +88,6 @@ grumphp:
     npm_script:
       script: lint
       triggered_by: [js, jsx, ts, scss, css]
-      working_directory: web/themes/custom/contribtracker
+      working_directory: web/themes/custom/ct
       is_run_task: true
       silent: false

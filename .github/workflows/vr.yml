@@ -74,12 +74,6 @@ jobs:
           ddev pull platform -y
           ddev drush deploy -y
 
-      - name: Build front-end
-        run: |
-          cd web/themes/custom/contribtracker
-          npm ci  --prefer-offline --no-audit
-          gulp
-
       - name: Install Playwright
         run: |
           cd test/playwright
