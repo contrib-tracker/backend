@@ -49,7 +49,7 @@
         "drupal/google_tag": "^2.0",
         "drupal/inline_entity_form": "^3.0",
         "drupal/new_relic_rpm": "^2.0",
-        "drupal/raven": "^6.0",
+        "drupal/raven": "^7.7",
         "drupal/redis": "^1.4.0",
         "drupal/slack": "^1.2.0",
         "drupal/social_auth": "^4.0",

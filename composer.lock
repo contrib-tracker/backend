@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de9e3c461c9c921e3802dcaca2b9f9e9",
+    "content-hash": "4440680745e65341d1295a1cf1564bbe",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2887,33 +2887,33 @@
         },
         {
             "name": "drupal/raven",
-            "version": "6.0.17",
+            "version": "7.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/raven.git",
-                "reference": "6.0.17"
+                "reference": "7.7.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/raven-6.0.17.zip",
-                "reference": "6.0.17",
-                "shasum": "07a673654018a58754d4ab720feead28333e2ea1"
+                "url": "https://ftp.drupal.org/files/projects/raven-7.7.0.zip",
+                "reference": "7.7.0",
+                "shasum": "8c12e14a4af703f37d3a79858d2c95988aba9fbb"
             },
             "require": {
-                "drupal/core": "^10.2 || ^11",
-                "sentry/sentry": "^4.9"
+                "drupal/core": "^11.1",
+                "sentry/sentry": "^4.33"
             },
             "require-dev": {
                 "drupal/csp": "^1.17 || ^2.0",
                 "drupal/monitoring": "^1.13",
                 "drupal/seckit": "^2.0",
-                "drush/drush": "^11.0 || ^12.0 || ^13.0"
+                "drush/drush": "^13.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.17",
-                    "datestamp": "1786049671",
+                    "version": "7.7.0",
+                    "datestamp": "1791744700",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2941,6 +2941,10 @@
                 {
                     "type": "github",
                     "url": "https://github.com/sponsors/mfb"
+                },
+                {
+                    "type": "ko-fi",
+                    "url": "https://ko-fi.com/mfb"
                 },
                 {
                     "type": "patreon",
