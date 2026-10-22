@@ -149,6 +149,11 @@ hooks:
       npm run build
       cd -
 
+      # The ct theme has no build, only runtime dependencies (select2).
+      cd web/themes/custom/ct
+      npm ci --omit=dev --prefer-offline
+      cd -
+
     # The deploy hook runs after your application has been deployed and started.
     deploy: |
       set -e

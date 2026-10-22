@@ -186,6 +186,11 @@ jobs:
           ddev npm ci  --prefer-offline --no-audit
           ddev npm run build
 
+      - name: Install the ct theme dependencies
+        run: |
+          cd web/themes/custom/ct
+          ddev npm ci --omit=dev --prefer-offline --no-audit
+
       - name: Run phpstan
         run: ddev php ./vendor/bin/grumphp run --tasks=phpstan --no-interaction
 
