@@ -45,10 +45,22 @@ Clear the cache using drush
 ddev drush cr
 ```
 
-## Theme Build
+## Theme
+
+The default theme is still `contribtracker`, which is built with Vite:
 
 ```bash
-cd web/themes/custom/contribtracker && npm install && npm run build && ddev drush cr
+cd web/themes/custom/contribtracker && ddev npm install && ddev npm run build && ddev drush cr
 ```
+
+The `ct` theme will replace it. It is not installed yet. It has no build step: Drupal serves its CSS and JavaScript as written, so a `ddev drush cr` is enough after changing it. Its tools need Node 26 (see its `.node-version`), but DDEV stays on Node 18 until the switch because the old theme does not build on 26. Until then run them with a host Node 26:
+
+```bash
+npm --prefix web/themes/custom/ct ci
+npm --prefix web/themes/custom/ct run lint
+npm --prefix web/themes/custom/ct test
+```
+
+See the theme's [README](../web/themes/custom/ct/README.md).
 
 You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).

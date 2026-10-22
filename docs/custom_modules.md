@@ -66,7 +66,7 @@ Overall, the Contribution Tracker User module appears to manage user login activ
 
 ## Custom Theme
 
-[contribtracker theme](https://github.com/contrib-tracker/backend/tree/main/web/themes/custom/contribtracker): custom theme created specifically for Contrib Tracker.
+[ct theme](https://github.com/contrib-tracker/backend/tree/main/web/themes/custom/ct): custom theme created specifically for Contrib Tracker, built from single directory components and plain CSS.
 
 - Various Drupal Core views are customized by Twig.
 
