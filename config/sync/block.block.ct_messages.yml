@@ -1,0 +1,22 @@
+uuid: ddbccd35-178c-4dbc-9efb-b6498307dc23
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ct
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: ct_messages
+theme: ct
+region: header
+weight: 1
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

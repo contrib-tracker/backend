@@ -1,0 +1,35 @@
+# Files under dist/ are produced by `npm run build` (see vite.config.ts).
+global:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap:
+        { external: true }
+      dist/css/global.css: {}
+  js:
+    dist/js/navigation.js: { attributes: { type: module } }
+    dist/js/select2.js: { attributes: { type: module } }
+  dependencies:
+    - core/jquery
+    - ct/select2
+
+select2:
+  version: VERSION
+  css:
+    theme:
+      dist/vendor/select2/select2.min.css: {}
+  js:
+    dist/vendor/select2/select2.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+contrib-graph:
+  version: VERSION
+  css:
+    theme:
+      dist/css/contrib-graph.css: {}
+  js:
+    dist/js/contrib-graph.js: { attributes: { type: module } }
+  dependencies:
+    - core/drupal
+    - core/once

@@ -149,11 +149,11 @@ hooks:
       npm run build
       cd -
 
-      # contribtracker_modern uses Vite+, which needs Node 22.18 or newer.
+      # ct uses Vite+, which needs Node 22.18 or newer.
       n 24
       hash -r
 
-      cd web/themes/custom/contribtracker_modern
+      cd web/themes/custom/ct
       npm ci --prefer-offline
       npm run build
       cd -

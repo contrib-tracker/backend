@@ -1,0 +1,20 @@
+uuid: 011c020c-bb67-47d0-b655-89fd5d95d731
+langcode: en
+status: true
+dependencies:
+  module:
+    - cookies
+  theme:
+    - ct
+id: ct_cookiesui
+theme: ct
+region: footer_secondary
+weight: 0
+provider: null
+plugin: cookies_ui_block
+settings:
+  id: cookies_ui_block
+  label: 'Cookies UI'
+  label_display: visible
+  provider: cookies
+visibility: {  }

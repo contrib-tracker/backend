@@ -1,0 +1,23 @@
+uuid: 77ab9c35-38da-47a9-9f7a-47e44ee163d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.blog
+  module:
+    - fixed_block_content
+  theme:
+    - ct
+id: ct_blog
+theme: ct
+region: footer_primary
+weight: -7
+provider: null
+plugin: 'fixed_block_content:blog'
+settings:
+  id: 'fixed_block_content:blog'
+  label: BLOG
+  label_display: '0'
+  provider: fixed_block_content
+  view_mode: ''
+visibility: {  }

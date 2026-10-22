@@ -70,10 +70,10 @@ jobs:
         with:
           node-version: 24
           cache: 'npm'
-          cache-dependency-path: 'web/themes/custom/contribtracker_modern/package-lock.json'
+          cache-dependency-path: 'web/themes/custom/ct/package-lock.json'
 
-      - name: Frontend Code Quality (contribtracker_modern)
-        working-directory: web/themes/custom/contribtracker_modern
+      - name: Frontend Code Quality (ct)
+        working-directory: web/themes/custom/ct
         run: |
           npm ci --prefer-offline --no-audit
           npm run lint

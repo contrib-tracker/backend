@@ -1,0 +1,23 @@
+uuid: be62563e-f865-412d-ae38-d090b29e7e99
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.social_sharing
+  module:
+    - fixed_block_content
+  theme:
+    - ct
+id: ct_socialsharing
+theme: ct
+region: footer_primary
+weight: -6
+provider: null
+plugin: 'fixed_block_content:social_sharing'
+settings:
+  id: 'fixed_block_content:social_sharing'
+  label: 'SOCIAL SHARING'
+  label_display: '0'
+  provider: fixed_block_content
+  view_mode: ''
+visibility: {  }

@@ -49,7 +49,7 @@ updates:
       prefix: "github-actions"
 
   - package-ecosystem: "npm"
-    directory: "/web/themes/custom/contribtracker_modern/"
+    directory: "/web/themes/custom/ct/"
     schedule:
       interval: "monthly"
     commit-message:

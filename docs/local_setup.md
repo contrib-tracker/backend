@@ -51,15 +51,15 @@ ddev drush cr
 cd web/themes/custom/contribtracker && npm install && npm run build && ddev drush cr
 ```
 
-### Optional: contribtracker_modern theme
+### Optional: ct theme
 
-The `contribtracker_modern` theme is a Vite+ rebuild of the same design. It needs Node 22.18 or newer, which the DDEV container does not provide, so build it on the host:
+The `ct` theme is a Vite+ rebuild of the same design. It needs Node 22.18 or newer, which the DDEV container does not provide, so build it on the host:
 
 ```bash
-cd web/themes/custom/contribtracker_modern && npm ci && npm run build
-ddev drush config:set system.theme default contribtracker_modern -y && ddev drush cr
+cd web/themes/custom/ct && npm ci && npm run build
+ddev drush config:set system.theme default ct -y && ddev drush cr
 ```
 
-See the theme's [README](../web/themes/custom/contribtracker_modern/README.md) for details.
+See the theme's [README](../web/themes/custom/ct/README.md) for details.
 
 You can access the site at: [https://contribtracker.ddev.site/](https://contribtracker.ddev.site/).
