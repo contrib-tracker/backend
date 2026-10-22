@@ -13,11 +13,11 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 class ContributionStatistics {
 
   /**
-   * Node storage controller.
+   * Entity type manager.
    *
-   * @var \Drupal\node\NodeStorageInterface
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
-  protected $nodeStorage;
+  protected $entityTypeManager;
 
   /**
    * Drupal\Core\Database\Driver\mysql\Connection definition.
@@ -30,7 +30,7 @@ class ContributionStatistics {
    * Contribution storage constructor.
    */
   public function __construct(EntityTypeManagerInterface $entityTypeManager, Connection $database) {
-    $this->nodeStorage = $entityTypeManager->getStorage('node');
+    $this->entityTypeManager = $entityTypeManager;
     $this->database = $database;
   }
 
@@ -38,7 +38,7 @@ class ContributionStatistics {
    * Calcuates total contributions.
    */
   public function totalContributions(): int {
-    $query = $this->nodeStorage->getQuery();
+    $query = $this->entityTypeManager->getStorage('node')->getQuery();
     $nids = $query->condition('type', 'code_contribution')
       ->accessCheck(TRUE)
       ->condition('status', '1')
@@ -50,7 +50,7 @@ class ContributionStatistics {
    * Calcuate total contributions with patches.
    */
   public function codeContributions(): int {
-    $query = $this->nodeStorage->getQuery();
+    $query = $this->entityTypeManager->getStorage('node')->getQuery();
     $nids = $query->condition('type', 'code_contribution')
       ->accessCheck(TRUE)
       ->condition('field_code_contrib_patches_count', 0, '!=')

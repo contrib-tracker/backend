@@ -17,18 +17,11 @@ use Drupal\user\Entity\User;
  */
 class ContributionTrackerStorage {
   /**
-   * Node storage controller.
+   * Entity type manager.
    *
-   * @var \Drupal\node\NodeStorageInterface
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
-  protected $nodeStorage;
-
-  /**
-   * Term storage controller.
-   *
-   * @var \Drupal\taxonomy\TermStorageInterface
-   */
-  protected $termStorage;
+  protected $entityTypeManager;
 
   /**
    * Logger.
@@ -41,8 +34,7 @@ class ContributionTrackerStorage {
    * Contribution storage constructor.
    */
   public function __construct(EntityTypeManagerInterface $entityTypeManager, LoggerChannelInterface $loggerChannel) {
-    $this->nodeStorage = $entityTypeManager->getStorage('node');
-    $this->termStorage = $entityTypeManager->getStorage('taxonomy_term');
+    $this->entityTypeManager = $entityTypeManager;
     $this->logger = $loggerChannel;
   }
 
@@ -51,7 +43,7 @@ class ContributionTrackerStorage {
    */
   public function saveIssue(Issue $issue): Node {
     // Create an issue.
-    $node = $this->nodeStorage->create([
+    $node = $this->entityTypeManager->getStorage('node')->create([
       'type' => 'issue',
       'title' => $issue->getTitle() ?: '(not found)',
       'field_issue_link' => $issue->getUrl(),
@@ -82,7 +74,7 @@ class ContributionTrackerStorage {
       }
     }
 
-    $node = $this->nodeStorage->create([
+    $node = $this->entityTypeManager->getStorage('node')->create([
       'type' => 'code_contribution',
       'title' => $title,
       'field_code_contrib_link' => $comment->getUrl(),
@@ -107,26 +99,26 @@ class ContributionTrackerStorage {
    * Get issue of type issue.
    */
   public function getNodeForIssue(string $issueLink): ?Node {
-    $issues = $this->nodeStorage->getQuery()
+    $issues = $this->entityTypeManager->getStorage('node')->getQuery()
       ->accessCheck(TRUE)
       ->condition('type', 'issue')
       ->condition('field_issue_link', $issueLink)
       ->execute();
 
-    return (count($issues) > 0) ? $this->nodeStorage->load(reset($issues)) : NULL;
+    return (count($issues) > 0) ? $this->entityTypeManager->getStorage('node')->load(reset($issues)) : NULL;
   }
 
   /**
    * Get node of type code_contribution.
    */
   public function getNodeForCodeContribution(string $commentLink): ?Node {
-    $nodes = $this->nodeStorage->getQuery()
+    $nodes = $this->entityTypeManager->getStorage('node')->getQuery()
       ->accessCheck(TRUE)
       ->condition('type', 'code_contribution')
       ->condition('field_code_contrib_link', $commentLink)
       ->execute();
 
-    return (count($nodes) > 0) ? $this->nodeStorage->load(reset($nodes)) : NULL;
+    return (count($nodes) > 0) ? $this->entityTypeManager->getStorage('node')->load(reset($nodes)) : NULL;
   }
 
   /**
@@ -152,14 +144,14 @@ class ContributionTrackerStorage {
    *   The term with the given name in the given vocabulary.
    */
   protected function getOrCreateTerm(string $termName, string $vocabulary): Term {
-    $terms = $this->termStorage->getQuery()
+    $terms = $this->entityTypeManager->getStorage('taxonomy_term')->getQuery()
       ->accessCheck(TRUE)
       ->condition('name', $termName)
       ->condition('vid', $vocabulary)
       ->execute();
 
     if (count($terms) == 0) {
-      $term = $this->termStorage->create([
+      $term = $this->entityTypeManager->getStorage('taxonomy_term')->create([
         'name' => $termName,
         'vid' => $vocabulary,
       ]);
@@ -167,7 +159,7 @@ class ContributionTrackerStorage {
       return $term;
     }
 
-    return $this->termStorage->load(reset($terms));
+    return $this->entityTypeManager->getStorage('taxonomy_term')->load(reset($terms));
   }
 
 }
