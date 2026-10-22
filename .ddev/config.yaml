@@ -14,7 +14,7 @@ composer_version: ""
 web_environment:
     - PLATFORM_ENVIRONMENT=main
     - PLATFORM_PROJECT=brbqplxd7ycq6
-nodejs_version: "18"
+nodejs_version: "26"
 corepack_enable: false
 ddev_version_constraint: '>= 1.23.3'
 
