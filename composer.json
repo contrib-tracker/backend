@@ -64,7 +64,7 @@
         "vlucas/phpdotenv": "^5.2"
     },
     "require-dev": {
-        "axelerant/drupal-quality-checker": "^1.4",
+        "axelerant/drupal-quality-checker": "^2.0",
         "behat/mink": "^1.10",
         "behat/mink-browserkit-driver": "^2.1",
         "phpunit/phpunit": "^9.0",
