@@ -22,7 +22,8 @@ jobs:
         uses: hussainweb/drupalqa-action@v3
         id: drupalqa
         with:
-          php-version: 8.3
+          # The php8.3 image ships PHPMD 3, whose CLI breaks the grumphp phpmd task.
+          php-version: 8.2
           checks: |
             grumphp:
               tasks:
