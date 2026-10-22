@@ -1,4 +1,4 @@
-uuid: 3386a276-ce61-4856-a8dd-cd661690d3f7
+uuid: 2dba3685-8429-4af1-8fd1-d076db6fc5d1
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - fixed_block_content
   theme:
-    - contribtracker
-id: socialsharing
-theme: contribtracker
+    - ct
+id: ct_socialsharing
+theme: ct
 region: footer_primary
 weight: -6
 provider: null

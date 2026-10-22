@@ -1,13 +1,13 @@
-uuid: 66528133-4ca0-4444-bade-209f2c906ec9
+uuid: 656acff8-6008-4573-9c61-75ce97815313
 langcode: en
 status: true
 dependencies:
   module:
     - cookies
   theme:
-    - contribtracker
-id: contribtracker_cookiesui
-theme: contribtracker
+    - ct
+id: ct_cookiesui
+theme: ct
 region: footer_secondary
 weight: 0
 provider: null

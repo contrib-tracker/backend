@@ -1,17 +1,17 @@
-uuid: 5b2c6073-929a-4d53-8d5e-7028ae9b84b4
+uuid: cf4b229e-35d1-4a50-a5e9-475a756ab78b
 langcode: en
 status: false
 dependencies:
   module:
     - help
   theme:
-    - contribtracker
+    - ct
 _core:
   default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
-id: contribtracker_help
-theme: contribtracker
-region: header
-weight: -2
+id: ct_help
+theme: ct
+region: precontent
+weight: -4
 provider: null
 plugin: help_block
 settings:

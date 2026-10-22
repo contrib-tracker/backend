@@ -1,4 +1,4 @@
-uuid: f0a8ff45-8a79-419a-be95-8d732065f12c
+uuid: 72617507-fe13-4194-942f-a63dd5a815d8
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - fixed_block_content
   theme:
-    - contribtracker
-id: blog
-theme: contribtracker
+    - ct
+id: ct_blog
+theme: ct
 region: footer_primary
 weight: -7
 provider: null
