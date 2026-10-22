@@ -8,7 +8,7 @@ test.describe('Form Reset Button Validation with Positive and Negative Scenarios
   });
 
   test('should reset the form with valid data entry', async ({ page }) => {
-    const firstUser = page.locator('.contrib__card_contributer').first();
+    const firstUser = page.locator('.contribution-card__contributor').first();
     const userName = (await firstUser.textContent())?.trim() || '';
     expect(userName.length).toBeGreaterThan(0);
 
