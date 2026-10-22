@@ -1,0 +1,3 @@
+<div role="{{ type == 'error' ? 'alert' : 'status' }}" class="message message--{{ type|default('status') }}"{% if label %} aria-label="{{ label }}"{% endif %}>
+  {% block content %}{{ content }}{% endblock %}
+</div>

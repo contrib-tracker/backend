@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Error state
+status: stable
+description: The page shown for access denied and page not found, with an illustration and a way home.
+props:
+  type: object
+  required: [image, heading, text, home_url, home_label]
+  properties:
+    image:
+      type: string
+      title: Image URL
+    heading:
+      type: string
+      title: Heading
+    text:
+      type: string
+      title: Explanation
+    home_url:
+      type: string
+      title: Home URL
+    home_label:
+      type: string
+      title: Home button label

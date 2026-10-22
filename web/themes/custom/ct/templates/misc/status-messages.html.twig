@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Status messages.
+ *
+ * @see \Drupal\Core\Render\Element\StatusMessages
+ */
+#}
+<div data-drupal-messages>
+  {% for type, messages in message_list %}
+    {% embed 'ct:message' with {type: type, label: status_headings[type], messages: messages} only %}
+      {% block content %}
+        {% if label %}
+          <h2 class="visually-hidden">{{ label }}</h2>
+        {% endif %}
+        {% if messages|length > 1 %}
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          {{ messages|first }}
+        {% endif %}
+      {% endblock %}
+    {% endembed %}
+  {% endfor %}
+</div>
