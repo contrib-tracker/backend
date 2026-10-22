@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26725b6586144da9f309a0f16474fe84",
+    "content-hash": "48ecc538b42e94f81b5d07c6a38a53f2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,7 +64,7 @@
         },
         {
             "name": "axelerant/ct_drupal",
-            "version": "dev-chore/remove-select2-module",
+            "version": "dev-feat/select2-in-theme",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/ct_drupal",
@@ -86,7 +86,7 @@
         },
         {
             "name": "axelerant/ct_github",
-            "version": "dev-chore/remove-select2-module",
+            "version": "dev-feat/select2-in-theme",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/ct_github",
@@ -5121,18 +5121,6 @@
             "type": "npm-asset",
             "license": [
                 "Dual licensed under the MIT or GPL Version 2 licenses."
-            ]
-        },
-        {
-            "name": "npm-asset/select2",
-            "version": "4.1.0-RC.0",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.1.0-rc.0.tgz"
-            },
-            "type": "npm-asset",
-            "license": [
-                "MIT"
             ]
         },
         {

@@ -82,7 +82,7 @@ The default theme is still `contribtracker`, which is built with Vite:
 cd web/themes/custom/contribtracker && ddev npm install && ddev npm run build && ddev drush cr
 ```
 
-The `ct` theme will replace it. It is not installed yet. It has no build step: Drupal serves its CSS and JavaScript as written, so a `ddev drush cr` is enough after changing it. Its tools need Node 26 (see its `.node-version`), but DDEV stays on Node 18 until the switch because the old theme does not build on 26. Until then run them with a host Node 26:
+The `ct` theme will replace it. It is not installed yet. It has no build step: Drupal serves its CSS and JavaScript as written, so a `ddev drush cr` is enough after changing it. Its one runtime dependency, Select2, is installed from the theme's `package.json` with `npm ci --omit=dev` in the theme directory (CI and the platform build do this). Its tools need Node 26 (see its `.node-version`), but DDEV stays on Node 18 until the switch because the old theme does not build on 26. Until then run them with a host Node 26:
 
 ```bash
 npm --prefix web/themes/custom/ct ci

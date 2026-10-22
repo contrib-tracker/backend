@@ -17,12 +17,13 @@ global:
     - core/jquery
     - ct/select2
 
-# Select2 is installed in web/libraries by composer (npm-asset/select2).
+# Select2 comes from the theme's package.json: the platform build and CI run
+# `npm ci --omit=dev` in this directory.
 select2:
   css:
     component:
-      /libraries/select2/dist/css/select2.min.css: {}
+      node_modules/select2/dist/css/select2.min.css: {}
   js:
-    /libraries/select2/dist/js/select2.min.js: { minified: true }
+    node_modules/select2/dist/js/select2.min.js: { minified: true }
   dependencies:
     - core/jquery
