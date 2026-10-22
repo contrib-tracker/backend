@@ -1,15 +1,15 @@
-uuid: dd98c125-2265-4fac-a7c2-3f0c5b8b862f
+uuid: fc82761b-30ea-4b7b-b66d-ee2f603ca76e
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - contribtracker
+    - ct
 _core:
   default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
-id: contribtracker_page_title
-theme: contribtracker
+id: ct_page_title
+theme: ct
 region: content
 weight: -6
 provider: null

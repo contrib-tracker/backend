@@ -1,15 +1,15 @@
-uuid: c39b048a-9fde-4f63-ad5e-0d2a6c1c4adf
+uuid: 16fc295d-f267-4aeb-af5b-b190cce0dead
 langcode: en
 status: false
 dependencies:
   theme:
-    - contribtracker
+    - ct
 _core:
   default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
-id: contribtracker_local_actions
-theme: contribtracker
-region: header
-weight: 0
+id: ct_local_actions
+theme: ct
+region: precontent
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,4 +1,4 @@
-uuid: 6c160ff3-e74a-46fa-82ee-a4ff98af6353
+uuid: 0ab089c2-d1fc-43df-b9bc-cf7e4241afc8
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
     - system
     - user
   theme:
-    - contribtracker
-id: contribtracker_contributioncommitgraph
-theme: contribtracker
+    - ct
+id: ct_contributioncommitgraph
+theme: ct
 region: content
 weight: 0
 provider: null
