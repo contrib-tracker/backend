@@ -1,0 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Contribution graph
+status: stable
+description: A year of daily contribution counts for the user whose profile is shown. The data is fetched from /user/{uid}/graph by contribution-graph.js.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
