@@ -1,0 +1,23 @@
+uuid: c5d98ae5-82d6-436e-b112-7fca2d3debfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.quick_links
+  module:
+    - fixed_block_content
+  theme:
+    - contribtracker_modern
+id: contribtracker_modern_quicklinks
+theme: contribtracker_modern
+region: footer_primary
+weight: -8
+provider: null
+plugin: 'fixed_block_content:quick_links'
+settings:
+  id: 'fixed_block_content:quick_links'
+  label: 'QUICK LINKS'
+  label_display: '0'
+  provider: fixed_block_content
+  view_mode: ''
+visibility: {  }

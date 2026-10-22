@@ -1,0 +1,22 @@
+uuid: 1a6c30d4-18ab-431f-92f6-5c6c148f66c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - contribtracker_modern
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: contribtracker_modern_content
+theme: contribtracker_modern
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: ca4dc2fe-6039-4e98-94de-72c4ba3768e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - contribtracker_modern
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: contribtracker_modern_page_title
+theme: contribtracker_modern
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/taxonomy/term/*\r\n/node/*"

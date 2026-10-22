@@ -1,0 +1,22 @@
+uuid: ec0a07d2-0b65-4af7-8db3-1186006c3ca4
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - contribtracker_modern
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: contribtracker_modern_help
+theme: contribtracker_modern
+region: header
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
