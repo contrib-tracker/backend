@@ -9,6 +9,9 @@
     "fmt": "vp check --fix && stylelint \"**/*.css\" --fix",
     "test": "vp test run"
   },
+  "dependencies": {
+    "select2": "4.1.0-rc.0"
+  },
   "devDependencies": {
     "@types/jquery": "^4.0.1",
     "@types/node": "^22.20.5",
