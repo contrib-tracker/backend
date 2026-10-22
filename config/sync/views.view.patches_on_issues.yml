@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_code_contrib_patches_count
     - field.storage.node.field_code_contrib_project
     - field.storage.node.field_contribution_date
     - field.storage.node.field_contribution_technology
@@ -160,7 +159,7 @@ display:
           set_precision: false
           precision: 0
           decimal: .
-          format_plural: 0
+          format_plural: false
           format_plural_string: !!binary TVFOQVkyOTFiblE9Aw==
           prefix: ''
           suffix: ''
@@ -561,7 +560,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_code_contrib_patches_count'
         - 'config:field.storage.node.field_code_contrib_project'
         - 'config:field.storage.node.field_contribution_date'
         - 'config:field.storage.node.field_contribution_technology'
@@ -592,7 +590,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_code_contrib_patches_count'
         - 'config:field.storage.node.field_code_contrib_project'
         - 'config:field.storage.node.field_contribution_date'
         - 'config:field.storage.node.field_contribution_technology'
