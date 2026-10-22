@@ -1,0 +1,24 @@
+{{ page.header }}
+{{ page.navigation }}
+
+<section class="precontent">
+  {{ page.precontent }}
+</section>
+
+<main role="main">
+  <a id="main-content" tabindex="-1"></a>
+  {{ include('ct:error-state', {
+    image: base_path ~ directory ~ '/images/403.svg',
+    heading: 'Access denied/Forbidden!'|t,
+    text: 'The page you’re trying to reach is forbidden.'|t ~ ' ' ~ 'Click Home button to go back to homepage.'|t,
+    home_url: url('<front>'),
+    home_label: 'Home'|t,
+  }, with_context=false) }}
+</main>
+
+{% if page.footer_primary or page.footer_secondary %}
+  {% embed 'ct:site-footer' with {primary: page.footer_primary, secondary: page.footer_secondary} only %}
+    {% block primary %}{{ primary }}{% endblock %}
+    {% block secondary %}{{ secondary }}{% endblock %}
+  {% endembed %}
+{% endif %}

@@ -1,0 +1,9 @@
+<header role="banner" class="site-header" data-site-header>
+  <div class="site-header__bar">
+    <div class="site-header__brand">{% block brand %}{{ brand }}{% endblock %}</div>
+    <button type="button" class="site-header__toggle has-icon" aria-expanded="false" aria-controls="site-header-nav">
+      <span class="visually-hidden">{{ menu_label|default('Menu'|t) }}</span>
+    </button>
+    <div class="site-header__nav" id="site-header-nav">{% block navigation %}{{ navigation }}{% endblock %}</div>
+  </div>
+</header>

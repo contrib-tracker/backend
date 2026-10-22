@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Site header
+status: stable
+description: The site banner. Branding sits in the bar; navigation is inline on desktop and a panel opened by the menu button on small screens.
+props:
+  type: object
+  properties:
+    menu_label:
+      type: string
+      title: Menu button label
+      description: Accessible name of the button that opens the navigation on small screens.
+slots:
+  brand:
+    title: Brand
+    description: Logo and site name.
+  navigation:
+    title: Navigation
+    description: Menus and sign-in links.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
