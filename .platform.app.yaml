@@ -139,15 +139,10 @@ mounts:
 hooks:
     build: |
       set -e
-      # Install the latest lts
-      n 18
+      # Install Node 26, which the ct theme's tooling is pinned to
+      n 26
       # Reset the location hash to recognize the newly installed version
       hash -r
-
-      cd web/themes/custom/contribtracker
-      npm ci --prefer-offline
-      npm run build
-      cd -
 
       # The ct theme has no build, only runtime dependencies (select2).
       cd web/themes/custom/ct

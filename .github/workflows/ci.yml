@@ -36,28 +36,23 @@ jobs:
 
   frontend_codequality:
     runs-on: ubuntu-latest
-    container: node:18
     steps:
       - name: Check out repository code
         uses: actions/checkout@v6
 
-      - name: Get Cache Directories
-        id: cache-dir
-        run: echo "npm-dir=$(npm config get cache)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v5
+      - name: Setup node
+        uses: actions/setup-node@v6
         with:
-          path: |
-            **/node_modules
-            ${{ steps.cache-dir.outputs.npm-dir }}
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-
+          node-version-file: web/themes/custom/ct/.node-version
+          cache: npm
+          cache-dependency-path: web/themes/custom/ct/package-lock.json
 
       - name: Frontend Code Quality
+        working-directory: web/themes/custom/ct
         run: |
-          cd web/themes/custom/contribtracker
           npm ci --prefer-offline --no-audit
           npm run lint
+          npm test
 
   drupal_test:
     runs-on: ubuntu-latest
@@ -179,12 +174,6 @@ jobs:
       - name: Deploy the site
         run: |
           ddev drush deploy -y
-
-      - name: Build front-end
-        run: |
-          cd web/themes/custom/contribtracker
-          ddev npm ci  --prefer-offline --no-audit
-          ddev npm run build
 
       - name: Install the ct theme dependencies
         run: |
