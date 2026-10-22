@@ -1,0 +1,193 @@
+.contribution-graph {
+  --cell: 12px;
+  --cell-gap: 5px;
+
+  width: calc(100% - var(--gutter) * 2);
+  max-width: var(--width);
+  margin: 0 auto 100px;
+}
+
+.contribution-graph__title {
+  margin: 40px 16px 24px;
+  color: var(--c-title);
+  font-family: var(--f-secondary);
+  font-size: 24px;
+
+  @media (width >= 1025px) {
+    margin-inline: 0;
+  }
+}
+
+.contribution-graph__chart {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid var(--c-light-silver);
+  border-radius: 6px 6px 0;
+  background-color: var(--c-white);
+}
+
+.contribution-graph__scroller {
+  overflow: auto;
+}
+
+.contribution-graph__content {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 40px 90px;
+  font-size: 0.75rem;
+}
+
+/* Month labels sit on the week column where the month starts. */
+.contribution-graph__months {
+  display: grid;
+  grid-auto-columns: var(--cell);
+  grid-auto-flow: column;
+  gap: 0 var(--cell-gap);
+  min-height: 1.2em;
+  margin-bottom: 8px;
+  margin-inline-start: 46px;
+
+  & span {
+    overflow: visible;
+    white-space: nowrap;
+  }
+}
+
+.contribution-graph__body {
+  display: flex;
+  gap: 23px;
+}
+
+.contribution-graph__weekdays {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  /* Rows are Sunday first, so Mon, Wed and Fri are the 2nd, 4th and 6th. */
+  & li {
+    height: var(--cell);
+    line-height: var(--cell);
+  }
+
+  & li:nth-child(1) {
+    margin-top: calc(var(--cell) + var(--cell-gap));
+  }
+
+  & li:nth-child(n + 2) {
+    margin-top: calc((var(--cell) + var(--cell-gap)) * 2 - var(--cell));
+  }
+}
+
+.contribution-graph__days {
+  display: grid;
+  grid-auto-columns: var(--cell);
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, var(--cell));
+  gap: var(--cell-gap);
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contribution-graph__cell {
+  position: relative;
+  width: var(--cell);
+  height: var(--cell);
+  border-radius: 2px;
+  background: var(--c-heat-0);
+  outline: 1px solid rgb(27 31 35 / 6%);
+  list-style: none;
+
+  &[data-activity='1'] {
+    background: var(--c-heat-1);
+  }
+
+  &[data-activity='2'] {
+    background: var(--c-heat-2);
+  }
+
+  &[data-activity='3'] {
+    background: var(--c-heat-3);
+  }
+
+  &[data-activity='4'] {
+    background: var(--c-heat-4);
+  }
+
+  &[data-title] {
+    cursor: pointer;
+  }
+
+  /* A tooltip with the date and count. */
+  &[data-title]:hover,
+  &[data-title]:focus-visible {
+    z-index: 3;
+
+    &::after {
+      content: attr(data-title);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      width: max-content;
+      max-width: 200px;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.25rem;
+      background-color: var(--c-title);
+      color: var(--c-white);
+      font-size: 0.75rem;
+      text-align: center;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+  }
+}
+
+.contribution-graph__cell--blank {
+  background: none;
+  outline: none;
+}
+
+.contribution-graph__key {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.contribution-graph__legend {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Shown until the data arrives. */
+.skeleton {
+  width: 100%;
+  min-width: 896px;
+  height: 14px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--c-light-grey) 0, var(--c-white-smoke) 40px, var(--c-light-grey) 80px) 0 0 / 960px;
+  animation: skeleton 2s infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 0;
+  }
+
+  40%,
+  100% {
+    background-position: 920px;
+  }
+}

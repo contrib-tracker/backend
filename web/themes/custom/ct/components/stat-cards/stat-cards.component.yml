@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Stat cards
+status: stable
+description: A row of large numbers with labels, such as the totals on the contribution count page.
+props:
+  type: object
+  required: [items]
+  properties:
+    items:
+      type: array
+      title: Items
+      items:
+        type: object
+        required: [label, value]
+        properties:
+          label:
+            type: string
+          value:
+            type: string

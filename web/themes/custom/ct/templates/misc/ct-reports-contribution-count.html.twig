@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * The contribution count page. Overrides the ct_reports module template so the
+ * totals use the stat-cards component instead of the module's stylesheet.
+ */
+#}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
+  {% endif %}
+
+  {{ exposed }}
+  {{ attachment_before }}
+
+  {{ include('ct:stat-cards', {
+    items: [
+      {label: 'Total Contributions'|t, value: totalContributions|number_format},
+      {label: 'Code Contributions'|t, value: codeContributions|number_format},
+      {label: 'Total Contributors'|t, value: totalContributors|number_format},
+    ],
+  }, with_context=false) }}
+
+  {{ pager }}
+  {{ attachment_after }}
+  {{ more }}
+
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+
+  {{ feed_icons }}
+</div>

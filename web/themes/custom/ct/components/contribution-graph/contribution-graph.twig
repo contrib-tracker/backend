@@ -1,0 +1,39 @@
+<section class="contribution-graph" data-contribution-graph aria-labelledby="contribution-graph-title">
+  <h2 class="contribution-graph__title" id="contribution-graph-title">{{ 'Contribution Graph'|t }}</h2>
+  <div class="contribution-graph__chart">
+    <div class="contribution-graph__scroller">
+      <div class="contribution-graph__content">
+        <div class="contribution-graph__months" data-graph-months>
+          <div class="skeleton"></div>
+        </div>
+        <div class="contribution-graph__body">
+          <ol class="contribution-graph__weekdays">
+            <li>{{ 'Mon'|t }}</li>
+            <li>{{ 'Wed'|t }}</li>
+            <li>{{ 'Fri'|t }}</li>
+          </ol>
+          <div class="contribution-graph__days" data-graph-days>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+          </div>
+        </div>
+        <div class="contribution-graph__key">
+          <span>{{ 'Less'|t }}</span>
+          <ul class="contribution-graph__legend">
+            <li class="contribution-graph__cell" data-activity="0" data-title="{{ 'No Contributions'|t }}"></li>
+            <li class="contribution-graph__cell" data-activity="1" data-title="{{ '1 Contributions'|t }}"></li>
+            <li class="contribution-graph__cell" data-activity="2" data-title="{{ '2 Contributions'|t }}"></li>
+            <li class="contribution-graph__cell" data-activity="3" data-title="{{ '3 Contributions'|t }}"></li>
+            <li class="contribution-graph__cell" data-activity="4" data-title="{{ '4+ Contributions'|t }}"></li>
+          </ul>
+          <span>{{ 'More'|t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

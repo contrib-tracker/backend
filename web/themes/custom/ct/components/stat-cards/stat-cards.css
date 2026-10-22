@@ -1,0 +1,40 @@
+.stat-cards {
+  display: grid;
+  gap: 8px;
+  width: calc(100% - var(--gutter) * 2);
+  max-width: var(--width);
+  margin: 40px auto;
+
+  @media (width >= 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-cards__item {
+  position: relative;
+  min-height: 200px;
+  padding: 0 10px 40px;
+  border-radius: 4px;
+  background-color: var(--c-white);
+
+  @media (width >= 1025px) {
+    padding-inline-start: 32px;
+  }
+}
+
+.stat-cards__label {
+  margin: 0;
+  padding-top: 1em;
+  font-family: var(--f-secondary);
+  font-size: 16px;
+}
+
+.stat-cards__value {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  margin: 10px 0 0;
+  color: var(--c-brand);
+  font-size: 6rem;
+  line-height: 1;
+}
