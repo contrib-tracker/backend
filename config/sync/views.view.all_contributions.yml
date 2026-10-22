@@ -465,6 +465,8 @@ display:
               secondary_label: 'Advanced options'
               secondary_open: false
               autosubmit_textfield_minimum_length: 3
+              autosubmit_breakpoint: ''
+              auto_submit_sort_only: false
             filter:
               type:
                 plugin_id: default
@@ -477,6 +479,11 @@ display:
                   is_secondary: false
                   collapsible_disable_automatic_open: false
                   hide_label: false
+                  field_classes: ''
+                  no_reset: false
+                  open_by_default: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
               field_contribution_technology_target_id:
                 plugin_id: default
                 advanced:
@@ -488,6 +495,11 @@ display:
                   is_secondary: false
                   collapsible_disable_automatic_open: false
                   hide_label: false
+                  field_classes: ''
+                  no_reset: false
+                  open_by_default: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
               title:
                 plugin_id: default
                 advanced:
@@ -496,6 +508,11 @@ display:
                   is_secondary: false
                   collapsible_disable_automatic_open: false
                   hide_label: false
+                  field_classes: ''
+                  no_reset: false
+                  open_by_default: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
               uid:
                 plugin_id: default
                 advanced:
@@ -507,6 +524,11 @@ display:
                   is_secondary: false
                   collapsible_disable_automatic_open: false
                   hide_label: false
+                  field_classes: ''
+                  no_reset: false
+                  open_by_default: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
               field_contribution_date_value:
                 plugin_id: bef_datepicker
                 advanced:
@@ -514,6 +536,11 @@ display:
                   is_secondary: false
                   collapsible_disable_automatic_open: false
                   hide_label: false
+                  field_classes: ''
+                  no_reset: false
+                  open_by_default: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
             type:
               bef_format: default
               more_options:

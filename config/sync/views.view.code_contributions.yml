@@ -655,6 +655,8 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               autosubmit_textfield_minimum_length: 3
+              autosubmit_breakpoint: ''
+              auto_submit_sort_only: false
       access:
         type: perm
         options:
