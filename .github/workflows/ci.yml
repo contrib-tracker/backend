@@ -59,6 +59,27 @@ jobs:
           npm ci --prefer-offline --no-audit
           npm run lint
 
+  frontend_codequality_modern:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6
+
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: 'npm'
+          cache-dependency-path: 'web/themes/custom/contribtracker_modern/package-lock.json'
+
+      - name: Frontend Code Quality (contribtracker_modern)
+        working-directory: web/themes/custom/contribtracker_modern
+        run: |
+          npm ci --prefer-offline --no-audit
+          npm run lint
+          npm test
+          npm run build
+
   drupal_test:
     runs-on: ubuntu-latest
     permissions:
