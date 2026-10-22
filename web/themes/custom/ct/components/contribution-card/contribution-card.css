@@ -1,0 +1,149 @@
+/*
+ * The card lays itself out from the width of the list it sits in (see
+ * contribution-list), not from the viewport.
+ */
+.contribution-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 95px;
+  margin: 8px 16px;
+  padding: 16px;
+  border: 1px solid var(--c-white);
+  border-radius: 5px;
+  background: var(--c-white);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 15%);
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--c-hover);
+  }
+
+  & a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @container contribution-list (width >= 60rem) {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 6fr) minmax(0, 2fr) minmax(0, 2fr);
+    align-items: center;
+    gap: 0 16px;
+    max-width: var(--width);
+    min-height: 82px;
+    margin: 0 auto 8px;
+  }
+}
+
+.contribution-card__date {
+  display: flex;
+  align-items: center;
+  color: var(--c-text-dark);
+}
+
+.contribution-card__day {
+  width: 50px;
+  height: 40px;
+  font-family: var(--f-secondary);
+  font-size: 32px;
+}
+
+.contribution-card__month {
+  font-family: var(--f-primary);
+  font-size: 14px;
+
+  @container contribution-list (width >= 60rem) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contribution-card__title {
+  z-index: var(--z-card-title);
+  position: relative;
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: normal;
+
+  & a {
+    display: block;
+    padding: 12px 0;
+    color: var(--c-text);
+    font-family: var(--f-primary);
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  @container contribution-list (width >= 60rem) {
+    margin: 0;
+  }
+}
+
+.contribution-card__people,
+.contribution-card__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contribution-card__aside {
+  gap: 8px;
+  text-align: end;
+
+  @container contribution-list (width >= 60rem) {
+    margin-left: 0;
+  }
+}
+
+.contribution-card__contributor,
+.contribution-card__tags,
+.contribution-card__detail {
+  font-family: var(--f-secondary);
+  font-size: 12px;
+}
+
+/* Names are plain text; their links, and project names, use the brand colour. */
+.contribution-card__contributor a,
+.contribution-card__project,
+.contribution-card__detail,
+.contribution-card__detail a {
+  color: var(--c-brand);
+}
+
+.contribution-card__contributor a,
+.contribution-card__project,
+.contribution-card__detail {
+  text-transform: capitalize;
+}
+
+.contribution-card__tags a {
+  color: var(--c-blue-navy);
+}
+
+.contribution-card__badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+
+  @container contribution-list (width >= 60rem) {
+    min-height: 28px;
+    margin-top: 0;
+  }
+}
+
+/* An empty detail line keeps its gap in the stacked layout, as it did before. */
+.contribution-card__detail:empty {
+  @container contribution-list (width >= 60rem) {
+    display: none;
+  }
+}
+
+/* The gap after an empty badges area is the aside's own. */
+.contribution-card__badges:not(:has(*)) {
+  margin-top: 0;
+}

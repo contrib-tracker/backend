@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Contribution list
+status: stable
+description: A titled list of contribution cards. Establishes the container the cards size themselves against.
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Optional heading for the list.
+slots:
+  cards:
+    title: Cards
+    description: The rows, usually contribution cards.

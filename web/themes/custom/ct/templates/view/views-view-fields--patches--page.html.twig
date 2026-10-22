@@ -1,0 +1,18 @@
+{% set patches_count = fields.field_code_contrib_patches_count.content|striptags|trim %}
+{% set files_count = fields.field_code_contrib_files_count.content|striptags|trim %}
+{% embed 'ct:contribution-card' with {
+  date: fields.field_contribution_date.content|striptags|trim,
+  fields: fields,
+  patches_count: patches_count,
+  files_count: files_count,
+} only %}
+  {% block title %}{{ fields.title.content }}{% endblock %}
+  {% block contributor %}<span class="contribution-card__project">{{ fields.field_code_contrib_project.content }}</span>{% endblock %}
+  {% block tags %}{{ fields.field_contribution_technology.content }}{% endblock %}
+  {% block badges %}
+    {% set patches %}{% trans %}{{ patches_count }} Patch{% plural patches_count %}{{ patches_count }} Patches{% endtrans %}{% endset %}
+    {% set files %}{% trans %}{{ files_count }} File{% plural files_count %}{{ files_count }} Files{% endtrans %}{% endset %}
+    {% include 'ct:badge' with {content: patches} only %}
+    {% include 'ct:badge' with {variant: 'info', content: files} only %}
+  {% endblock %}
+{% endembed %}
