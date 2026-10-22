@@ -125,8 +125,10 @@ jobs:
       - name: Run updates and Validate Config
         id: validate_config
         run: |
-          # Rebuild cache so that config cache is not obsolete
-          ddev drush cache:rebuild -y
+          # Clear the config cache so that it is not obsolete. A full cache rebuild
+          # is not possible yet: the pulled database predates the core update,
+          # and rebuilding the router fails until the update hooks have run.
+          ddev drush cache:clear bin config
 
           # Identify set of configuration changes before running updatedb and store it in a text file.
           # awk NF is used to filter blank lines.
