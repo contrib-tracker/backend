@@ -1,4 +1,4 @@
-uuid: 8e176f24-8e16-461f-b044-cba8b6597eaf
+uuid: 57d29ca6-5d4a-437d-b4e4-76e887599ed1
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - fixed_block_content
   theme:
-    - contribtracker
-id: quicklinks
-theme: contribtracker
+    - ct
+id: ct_quicklinks
+theme: ct
 region: footer_primary
 weight: -8
 provider: null

@@ -1,4 +1,4 @@
-uuid: f30bfc9c-b6fe-4d52-a7a9-a4fb5bd2a541
+uuid: 375ab149-99f3-4ac1-825c-183a63179aeb
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - fixed_block_content
   theme:
-    - contribtracker
-id: axelerantfooter
-theme: contribtracker
+    - ct
+id: ct_axelerantfooter
+theme: ct
 region: footer_secondary
 weight: 0
 provider: null

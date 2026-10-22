@@ -1,4 +1,4 @@
-uuid: 2383cf3b-81fb-47ea-9b96-59e8c14175f1
+uuid: 38e43312-5e2e-4f72-9ad1-3440d67296e8
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,9 @@ dependencies:
     - social_auth
     - user
   theme:
-    - contribtracker
-id: contribtracker_socialauthlogin
-theme: contribtracker
+    - ct
+id: ct_socialauthlogin
+theme: ct
 region: header
 weight: -3
 provider: null
