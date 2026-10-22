@@ -1,0 +1,28 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap: { external: true }
+      css/tokens.css: {}
+      css/base.css: {}
+      css/icons.css: {}
+      css/forms.css: {}
+      css/pager.css: {}
+      css/content.css: {}
+  js:
+    js/select2.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/jquery
+    - ct/select2
+
+# Select2 is installed in web/libraries by composer (npm-asset/select2).
+select2:
+  css:
+    component:
+      /libraries/select2/dist/css/select2.min.css: {}
+  js:
+    /libraries/select2/dist/js/select2.min.js: { minified: true }
+  dependencies:
+    - core/jquery

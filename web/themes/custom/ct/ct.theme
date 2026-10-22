@@ -1,0 +1,113 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the ct theme.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ *
+ * The contribution listing views share one template.
+ */
+function ct_theme_suggestions_views_view_alter(array &$suggestions, array $variables): void {
+  $contribution_views = [
+    'all_contributions',
+    'code_contributions',
+    'event_contributions',
+    'non_code_contributions',
+    'patches',
+    'patches_on_issues',
+    'taxonomy_term',
+  ];
+  if (in_array($variables['view']->id(), $contribution_views, TRUE)) {
+    $suggestions[] = 'views_view__contribution_list';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_table_alter().
+ */
+function ct_theme_suggestions_table_alter(array &$suggestions, array $variables): void {
+  if (isset($variables['header']['id']) && isset($variables['header']['provider_user_id'])) {
+    $suggestions[] = 'table__social__auth';
+  }
+}
+
+/**
+ * Implements hook_preprocess_form().
+ *
+ * Every front-end form is a panel; the contribution filters get their layout
+ * classes here instead of in per-form templates.
+ */
+function ct_preprocess_form(array &$variables): void {
+  $variables['attributes']['class'][] = 'form';
+
+  $filter_forms = [
+    'views-exposed-form-all-contributions-allcontributions',
+    'views-exposed-form-code-contributions-page-1',
+    'views-exposed-form-event-contributions-page-1',
+    'views-exposed-form-non-code-contributions-page-1',
+  ];
+  $form_id = $variables['element']['#id'] ?? '';
+  if (in_array($form_id, $filter_forms, TRUE)) {
+    $variables['attributes']['class'][] = 'contribution-filter-form';
+  }
+  if ($form_id === 'views-exposed-form-event-contributions-page-1') {
+    $variables['attributes']['class'][] = 'contributions__event';
+  }
+  $count_forms = [
+    'views-exposed-form-contribution-count-contribution-report',
+    'views-exposed-form-patches-page',
+  ];
+  if (in_array($form_id, $count_forms, TRUE)) {
+    $variables['attributes']['class'][] = 'count-filter-form';
+  }
+}
+
+/**
+ * Implements hook_preprocess_input().
+ *
+ * The contribution date filters use the browser's native date picker.
+ */
+function ct_preprocess_input(array &$variables): void {
+  $variables['attributes']['class'][] = 'input-text';
+
+  $date_filters = [
+    'edit-field-contribution-date-value-min',
+    'edit-field-contribution-date-value-max',
+  ];
+  if (in_array($variables['element']['#id'] ?? '', $date_filters, TRUE)) {
+    $variables['attributes']['type'] = 'date';
+    $variables['attributes']['class'][] = 'input--date';
+  }
+}
+
+/**
+ * Implements hook_preprocess_region().
+ *
+ * The header region renders the site branding in the header bar and everything
+ * else in the navigation, so the two are separated here. The blocks have
+ * already been rendered at this point, so their markup is regrouped.
+ */
+function ct_preprocess_region(array &$variables): void {
+  if ($variables['region'] !== 'header') {
+    return;
+  }
+  $branding = '';
+  $navigation = '';
+  foreach (Element::children($variables['elements'], TRUE) as $block_id) {
+    $markup = (string) ($variables['elements'][$block_id]['#markup'] ?? '');
+    if (Block::load($block_id)?->getPluginId() === 'system_branding_block') {
+      $branding .= $markup;
+      continue;
+    }
+    $navigation .= $markup;
+  }
+  $variables['branding'] = Markup::create($branding);
+  $variables['navigation'] = Markup::create($navigation);
+}

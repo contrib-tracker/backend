@@ -1,0 +1,17 @@
+name: Contrib Tracker (CT)
+description: Contrib Tracker theme built from single directory components and plain modern CSS. Visually matches the original contribtracker theme.
+type: theme
+core_version_requirement: ^11.3
+base theme: stable
+
+regions:
+  header: Header
+  navigation: Navigation
+  precontent: Precontent
+  content: Content
+  footer_primary: Footer Primary
+  footer_secondary: Footer Secondary
+
+libraries:
+  - core/normalize
+  - ct/global
