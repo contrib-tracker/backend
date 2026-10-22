@@ -33,6 +33,7 @@
 /.drush/
 node_modules
 /web/themes/custom/contribtracker/dist/
+/web/themes/custom/contribtracker_modern/dist/
 .DS_Store
 
 # Beads / Dolt files (added by bd init)
