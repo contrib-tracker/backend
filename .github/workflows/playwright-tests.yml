@@ -26,8 +26,6 @@ jobs:
         run: |
           ddev composer install
           ddev pull platform -y
-          cd web/themes/custom/contribtracker
-          npm ci --prefer-offline --no-audit
 
       - name: Setup node
         uses: actions/setup-node@v6
