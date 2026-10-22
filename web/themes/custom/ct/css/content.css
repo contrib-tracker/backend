@@ -1,0 +1,63 @@
+/* Page-level pieces that are not worth a component of their own. */
+
+/* The "connected accounts" table of the social auth modules. */
+.social-profiles {
+  margin: 24px 16px;
+  overflow: auto;
+  padding: 16px;
+
+  @media (width >= 1025px) {
+    margin: 24px auto;
+  }
+
+  & table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    text-align: left;
+  }
+
+  & td {
+    padding-top: 10px;
+    padding-right: 20px;
+
+    &:nth-child(2) a {
+      color: var(--c-brand);
+      font-family: var(--f-secondary);
+      font-size: 0.75rem;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+
+  & .delete a {
+    font-size: 0;
+    text-decoration: none;
+
+    &::before {
+      --icon: var(--icon-bin);
+
+      margin-right: 5px;
+      color: var(--c-brand);
+      font-size: 1.25rem;
+    }
+  }
+}
+
+/* Footer logo: at the end of the row on wide screens. */
+.footer-logo {
+  @media (width >= 1025px) {
+    margin-inline-start: auto;
+  }
+
+  & svg {
+    display: block;
+    width: 134px;
+    height: auto;
+  }
+}
+
+/* Labels sit above their fields. */
+.form-item > label:not(.option) {
+  display: block;
+}
