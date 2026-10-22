@@ -1,0 +1,15 @@
+{% embed 'ct:contribution-card' with {
+  date: fields.field_contribution_date.content|striptags|trim,
+  fields: fields,
+} only %}
+  {% block title %}{{ fields.title.content }}{% endblock %}
+  {% block contributor %}{{ fields.field_contribution_author.content }}{% endblock %}
+  {% block tags %}{{ fields.field_contribution_technology.content }}{% endblock %}
+  {% block badges %}
+    {% if fields.field_non_code_contrib_credit.content %}
+      {% include 'ct:badge' with {variant: 'info', content: fields.field_non_code_contrib_credit.content} only %}
+    {% endif %}
+    {% include 'ct:badge' with {content: fields.field_non_code_contribution_type.content} only %}
+  {% endblock %}
+  {% block detail %}{{ fields.field_non_code_contrib_profile.content }}{% endblock %}
+{% endembed %}

@@ -1,0 +1,19 @@
+<article class="contribution-card">
+  <div class="contribution-card__date">
+    <span class="contribution-card__day">{{ date|date('d') }}</span>
+    <span class="contribution-card__month">{{ date|date('M Y') }}</span>
+  </div>
+  <h3 class="contribution-card__title">{% block title %}{{ title }}{% endblock %}</h3>
+  <div class="contribution-card__people">
+    <div class="contribution-card__contributor">{% block contributor %}{{ contributor }}{% endblock %}</div>
+    {% if show_tags is not same as(false) %}
+      <div class="contribution-card__tags">{% block tags %}{{ tags }}{% endblock %}</div>
+    {% endif %}
+  </div>
+  <div class="contribution-card__aside">
+    <div class="contribution-card__badges">{% block badges %}{{ badges }}{% endblock %}</div>
+    {% if show_detail is not same as(false) %}
+      <div class="contribution-card__detail">{% block detail %}{{ detail }}{% endblock %}</div>
+    {% endif %}
+  </div>
+</article>

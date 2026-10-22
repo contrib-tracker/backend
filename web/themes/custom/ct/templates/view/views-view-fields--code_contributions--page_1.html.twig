@@ -1,0 +1,15 @@
+{% embed 'ct:contribution-card' with {
+  date: fields.field_contribution_date.content|striptags|trim,
+  fields: fields,
+} only %}
+  {% block title %}{{ fields.title.content }}{% endblock %}
+  {% block contributor %}{{ fields.field_contribution_author.content }}{% endblock %}
+  {% block tags %}{{ fields.field_contribution_technology.content }}{% endblock %}
+  {% block badges %}
+    {% set status = fields.field_code_contrib_issue_status.content|striptags|trim %}
+    {% if status %}
+      {% include 'ct:badge' with {content: status} only %}
+    {% endif %}
+  {% endblock %}
+  {% block detail %}{{ fields.field_code_contrib_project.content|striptags|trim|truncate(25, true) }}{% endblock %}
+{% endembed %}

@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Shared template for the contribution listing views (see
+ * ct_theme_suggestions_views_view_alter()).
+ */
+#}
+{% set headings = {
+  'all_contributions': 'Recent Contributions',
+  'code_contributions': 'Recent Code Contributions',
+  'event_contributions': 'Recent Event Contributions',
+  'non_code_contributions': 'Recent Non-Code Contributions',
+  'patches': 'Patch Contributions',
+  'patches_on_issues': 'Patches on Issues',
+} %}
+{% set classes = [
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+] %}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
+  {% endif %}
+
+  {{ exposed }}
+  {{ attachment_before }}
+
+  {% embed 'ct:contribution-list' with {
+    title: headings[view.id()] ?? '',
+    rows: rows,
+    empty: empty,
+  } only %}
+    {% block cards %}
+      {% if rows -%}
+        {{ rows }}
+      {% elseif empty -%}
+        {{ empty }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
+
+  {{ pager }}
+  {{ attachment_after }}
+  {{ more }}
+
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+
+  {{ feed_icons }}
+</div>

@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Contribution card
+status: stable
+description: "One contribution in a listing: date, title, who and what, and status badges."
+props:
+  type: object
+  required: [date]
+  properties:
+    date:
+      type: string
+      title: Date
+      description: Any date string that Twig's date filter understands.
+    show_tags:
+      type: boolean
+      title: Show tags
+      description: Whether to render the tags area. Views without technology tags turn it off so no gap is left for it.
+      default: true
+    show_detail:
+      type: boolean
+      title: Show detail
+      description: Whether to render the detail area. Views without a project or link line turn it off so no gap is left for it.
+      default: true
+slots:
+  title:
+    title: Title
+    description: The contribution title, usually a link.
+  contributor:
+    title: Contributor
+    description: The author, or the project for patch listings.
+  tags:
+    title: Tags
+    description: Technology tags.
+  badges:
+    title: Badges
+    description: Status, type or count badges (see the badge component).
+  detail:
+    title: Detail
+    description: A project name or link shown under the badges.

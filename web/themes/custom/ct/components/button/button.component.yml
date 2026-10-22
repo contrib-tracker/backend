@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Button
+status: stable
+description: A pill-shaped link styled as a button, optionally with an icon.
+props:
+  type: object
+  required: [url, label]
+  properties:
+    url:
+      type: string
+      title: URL
+    label:
+      type: string
+      title: Label
+    variant:
+      type: string
+      title: Variant
+      enum: [solid, outline]
+      default: solid
+    icon:
+      type: string
+      title: Icon
+      description: Name of a file in the theme's icons folder, such as logout or home.
+      enum: [logout, google, home]

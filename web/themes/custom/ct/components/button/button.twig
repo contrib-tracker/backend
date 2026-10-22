@@ -1,0 +1,2 @@
+{% set icon_class = icon ? ' has-icon ct-button--' ~ icon : '' %}
+<a href="{{ url }}" class="ct-button ct-button--{{ variant|default('solid') }}{{ icon_class }}">{{ label }}</a>

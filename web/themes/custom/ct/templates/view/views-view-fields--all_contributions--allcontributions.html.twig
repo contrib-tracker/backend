@@ -1,0 +1,10 @@
+{% embed 'ct:contribution-card' with {
+  date: fields.field_contribution_date.content|striptags|trim,
+  fields: fields,
+  show_detail: false,
+} only %}
+  {% block title %}{{ fields.title.content }}{% endblock %}
+  {% block contributor %}{{ fields.field_contribution_author.content }}{% endblock %}
+  {% block tags %}{{ fields.field_contribution_technology.content }}{% endblock %}
+  {% block badges %}{% include 'ct:badge' with {content: fields.type.content} only %}{% endblock %}
+{% endembed %}

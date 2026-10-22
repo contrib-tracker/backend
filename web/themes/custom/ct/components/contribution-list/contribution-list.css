@@ -1,0 +1,20 @@
+.contribution-list {
+  container: contribution-list / inline-size;
+
+  @media (width >= 1025px) {
+    width: calc(100% - var(--gutter) * 2);
+    max-width: var(--width);
+    margin: 40px auto;
+  }
+}
+
+.contribution-list__title {
+  margin: 40px 16px 24px;
+  color: var(--c-title);
+  font-family: var(--f-secondary);
+  font-size: 24px;
+
+  @media (width >= 1025px) {
+    margin-inline: 0;
+  }
+}

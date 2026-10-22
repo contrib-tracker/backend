@@ -1,0 +1,15 @@
+{% set patches_count = fields.field_code_contrib_patches_count.content|striptags|trim %}
+{% embed 'ct:contribution-card' with {
+  date: fields.field_contribution_date.content|striptags|trim,
+  fields: fields,
+  show_detail: false,
+  patches_count: patches_count,
+} only %}
+  {% block title %}{{ fields.title.content }}{% endblock %}
+  {% block contributor %}<span class="contribution-card__project">{{ fields.field_code_contrib_project.content }}</span>{% endblock %}
+  {% block tags %}{{ fields.field_contribution_technology.content }}{% endblock %}
+  {% block badges %}
+    {% set patches %}{% trans %}{{ patches_count }} Patch{% plural patches_count %}{{ patches_count }} Patches{% endtrans %}{% endset %}
+    {% include 'ct:badge' with {content: patches} only %}
+  {% endblock %}
+{% endembed %}

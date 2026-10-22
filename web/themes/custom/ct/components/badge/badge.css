@@ -1,0 +1,16 @@
+.badge {
+  --badge-color: var(--c-aqua);
+
+  display: block;
+  width: fit-content;
+  padding: 6px;
+  border: 1px solid var(--badge-color);
+  border-radius: 14px;
+  color: var(--badge-color);
+  font-size: 12px;
+  text-align: center;
+}
+
+.badge--info {
+  --badge-color: var(--c-blue-navy);
+}

@@ -1,0 +1,6 @@
+<section class="contribution-list">
+  {% if title %}
+    <h2 class="contribution-list__title">{{ title }}</h2>
+  {% endif %}
+  {% block cards %}{{ cards }}{% endblock %}
+</section>
