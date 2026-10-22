@@ -1,0 +1,39 @@
+{% embed 'ct:panel' with {
+  attributes: attributes,
+  title_prefix: title_prefix,
+  title_suffix: title_suffix,
+  title_attributes: title_attributes,
+  page: page,
+  url: url,
+  label: label,
+  display_submitted: display_submitted,
+  author_picture: author_picture,
+  author_attributes: author_attributes,
+  author_name: author_name,
+  date: date,
+  metadata: metadata,
+  content_attributes: content_attributes,
+  content: content,
+} only %}
+  {% block content %}
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% if display_submitted %}
+      <footer>
+        {{ author_picture }}
+        <div{{ author_attributes }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+      </footer>
+    {% endif %}
+    <div{{ content_attributes.addClass('panel__body') }}>
+      {{ content }}
+    </div>
+  {% endblock %}
+{% endembed %}
