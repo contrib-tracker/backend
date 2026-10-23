@@ -19,11 +19,13 @@ Once DDEV has been set up successfully, it will display the links in the termina
 ddev composer install
 ```
 
-You can pull the database from the platform.sh directly. Make sure that the [PLATFORMSH_CLI_TOKEN is set](https://ddev.readthedocs.io/en/latest/users/providers/platform/).
+Restore the database and files from the S3 repository with [resticprofile](https://creativeprojects.github.io/resticprofile/). This is a limited, sanitized set of the production content. You need `restic`, `resticprofile` and the 1Password CLI (`op`) installed, and access to the `Contrib Tracker Assets Bucket on AWS` item in the `Project Contrib Tracker` vault. Without 1Password, set `ASSETS_AWS_ACCESS_KEY_ID` and `ASSETS_AWS_SECRET_ACCESS_KEY` instead.
 
 ```bash
-ddev pull platform
+resticprofile ddev.restore latest
 ```
+
+The entire production site is available in the same bucket through the `production` group (`resticprofile production.restore latest`). It holds unsanitized user data, so use it only when you need it.
 
 Make sure code changes are updated.
 

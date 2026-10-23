@@ -17,15 +17,19 @@ jobs:
         with:
           autostart: false
 
-      - name: Set the platform.sh token
-        run: |
-          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
-          ddev start
+      - name: Setup resticprofile
+        uses: axelerant/setup-resticprofile-action@v1
+
+      - name: Start DDEV
+        run: ddev start
 
       - name: Install dependencies
+        env:
+          ASSETS_AWS_ACCESS_KEY_ID: ${{ secrets.ASSETS_AWS_ACCESS_KEY_ID }}
+          ASSETS_AWS_SECRET_ACCESS_KEY: ${{ secrets.ASSETS_AWS_SECRET_ACCESS_KEY }}
         run: |
           ddev composer install
-          ddev pull platform -y
+          resticprofile ddev.restore latest
 
       - name: Setup node
         uses: actions/setup-node@v6
