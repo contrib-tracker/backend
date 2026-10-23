@@ -115,6 +115,8 @@ jobs:
       - name: Install the site
         run: |
           ddev composer install
+          # The composer cache restores packages that are already installed, which skips their patches.
+          ddev composer patches-repatch
           # Diagnostic: the pull resumes the environment when this is not "active".
           ddev exec "platform environment:info status -e main -p brbqplxd7ycq6" || true
           ddev pull platform -y
