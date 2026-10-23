@@ -2,7 +2,8 @@
 services:
   redis:
     container_name: ddev-${DDEV_SITENAME}-redis
-    image: ${REDIS_DOCKER_IMAGE:-redis:7}
+    image: ${REDIS_DOCKER_IMAGE:-redis:8}
+    hostname: ${REDIS_HOSTNAME:-redis}
     # These labels ensure this service is discoverable by ddev.
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
@@ -16,6 +17,11 @@ services:
       - "./redis:/etc/redis/conf"
       - "redis:/data"
     command: /etc/redis/conf/redis.conf
+    x-ddev:
+      describe-url-port: |
+        Backend: ${REDIS_DOCKER_IMAGE:-redis:8}
+      describe-info: |
+        Pass: <none>
 
 volumes:
   redis:
