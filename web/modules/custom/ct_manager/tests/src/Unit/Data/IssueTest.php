@@ -1,11 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\Tests\ct_manager\Unit\Data;
 
 use Drupal\ct_manager\Data\Issue;
 use PHPUnit\Framework\TestCase;
 
 /**
+ * Tests the issue value object.
+ *
  * @group ct_manager
  * @coversDefaultClass \Drupal\ct_manager\Data\Issue
  */

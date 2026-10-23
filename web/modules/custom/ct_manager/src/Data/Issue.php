@@ -4,20 +4,29 @@ declare(strict_types=1);
 
 namespace Drupal\ct_manager\Data;
 
+/**
+ * Value object for an issue related to a contribution.
+ */
 final class Issue {
 
   /**
-   * @var string Title.
+   * Title.
+   *
+   * @var string
    */
   protected string $title;
 
   /**
-   * @var string Description.
+   * Description.
+   *
+   * @var string
    */
   protected string $description = '';
 
   /**
-   * @var string URL of the contribution.
+   * URL of the contribution.
+   *
+   * @var string
    */
   protected string $url;
 
