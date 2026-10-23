@@ -102,9 +102,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/do_username": {
-                "PHP 8.4: mark the nullable $parent parameter explicitly": "patches/do_username-explicit-nullable-parent.patch"
-            },
             "drupal/google_tag": {
                 "PHP 8.5: replace the deprecated SplObjectStorage::contains()": "patches/google_tag-spl-object-storage-offsetexists.patch"
             },
