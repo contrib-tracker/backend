@@ -107,25 +107,28 @@ jobs:
           read-only: ${{ github.event_name == 'pull_request' || github.ref_type == 'tag' }}
 
 
-      - name: Set the platform.sh token
-        run: |
-          ddev config global --web-environment-add="PLATFORMSH_CLI_TOKEN=${{ secrets.PLATFORMSH_CLI_TOKEN }}"
-          ddev start
+      - name: Setup resticprofile
+        uses: axelerant/setup-resticprofile-action@v1
+
+      - name: Start DDEV
+        run: ddev start
 
       - name: Install the site
+        env:
+          ASSETS_AWS_ACCESS_KEY_ID: ${{ secrets.ASSETS_AWS_ACCESS_KEY_ID }}
+          ASSETS_AWS_SECRET_ACCESS_KEY: ${{ secrets.ASSETS_AWS_SECRET_ACCESS_KEY }}
         run: |
           ddev composer install
           # The composer cache restores packages that are already installed, which skips their patches.
           ddev composer patches-repatch
-          # Diagnostic: the pull resumes the environment when this is not "active".
-          ddev exec "platform environment:info status -e main -p brbqplxd7ycq6" || true
-          ddev pull platform -y
+          # Restore the limited set of content from the S3 repository.
+          resticprofile ddev.restore latest
 
       - name: Run updates and Validate Config
         id: validate_config
         run: |
           # Clear the config cache so that it is not obsolete. A full cache rebuild
-          # is not possible yet: the pulled database predates the core update,
+          # is not possible yet: the restored database predates the core update,
           # and rebuilding the router fails until the update hooks have run.
           ddev drush cache:clear bin config
 
