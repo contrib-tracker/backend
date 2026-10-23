@@ -26,8 +26,8 @@ default:
   # - ASSETS_AWS_ACCESS_KEY_ID
   # - ASSETS_AWS_SECRET_ACCESS_KEY
   run-before:
-    - 'echo "AWS_ACCESS_KEY_ID=${ASSETS_AWS_ACCESS_KEY_ID:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/username")}" >> "{{env}}"'
-    - 'echo "AWS_SECRET_ACCESS_KEY=${ASSETS_AWS_SECRET_ACCESS_KEY:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/credential")}" >> "{{env}}"'
+    - 'echo "AWS_ACCESS_KEY_ID=${ASSETS_AWS_ACCESS_KEY_ID:-$(op read "op://Project Contrib Tracker/Contrib Tracker Assets Bucket on AWS/username")}" >> "{{env}}"'
+    - 'echo "AWS_SECRET_ACCESS_KEY=${ASSETS_AWS_SECRET_ACCESS_KEY:-$(op read "op://Project Contrib Tracker/Contrib Tracker Assets Bucket on AWS/credential")}" >> "{{env}}"'
 
   env:
     TMPDIR: /tmp
