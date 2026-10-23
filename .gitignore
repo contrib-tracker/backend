@@ -40,3 +40,6 @@ node_modules
 .beads-credential-key
 .beads/proxieddb/
 *.gate.lock*
+
+# Ignore backups that Drush creates before updates
+/drush-backups/
