@@ -41,7 +41,6 @@ module:
   google_tag: 0
   hal: 0
   help: 0
-  history: 0
   image: 0
   inline_entity_form: 0
   jsonapi: 0
