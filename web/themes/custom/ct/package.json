@@ -10,7 +10,7 @@
     "test": "vp test run"
   },
   "dependencies": {
-    "select2": "4.1.0-rc.0"
+    "select2": "4.1.0"
   },
   "devDependencies": {
     "@types/jquery": "^4.0.1",
