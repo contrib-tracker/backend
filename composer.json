@@ -102,6 +102,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/google_tag": {
+                "PHP 8.5: replace the deprecated SplObjectStorage::contains()": "patches/google_tag-spl-object-storage-offsetexists.patch"
+            }
         },
         "installer-types": ["npm-asset", "bower-asset"],
         "installer-paths": {
