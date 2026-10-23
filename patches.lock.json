@@ -1,18 +1,6 @@
 {
-    "_hash": "264dfd932334fad77165aa6cb583905cbbc497782bd32d193716f0b8a1314149",
+    "_hash": "a606711a89d7561c71ddf1c55a44fa334054d218f5b9ae1d9ce0dfb48cd91525",
     "patches": {
-        "drupal/do_username": [
-            {
-                "package": "drupal/do_username",
-                "description": "PHP 8.4: mark the nullable $parent parameter explicitly",
-                "url": "patches/do_username-explicit-nullable-parent.patch",
-                "sha256": "166f74a4de0d327e1868ef0f7677fd13fbb6e48c87e975885edbf2150a8f81d5",
-                "depth": 1,
-                "extra": {
-                    "provenance": "root"
-                }
-            }
-        ],
         "drupal/google_tag": [
             {
                 "package": "drupal/google_tag",
