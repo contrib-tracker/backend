@@ -46,7 +46,7 @@ class GithubContribution extends PluginBase implements ContributionSourceInterfa
    */
   protected GithubQuery $query;
   /**
-   * GitHub Token Validity
+   * GitHub Token Validity.
    */
   protected bool $tokenValid;
 
@@ -63,6 +63,8 @@ class GithubContribution extends PluginBase implements ContributionSourceInterfa
    *   The injected entity type manager service.
    * @param \Drupal\ct_github\GithubQuery $query
    *   The injected github query service.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   The injected config factory service.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entityTypeManager, GithubQuery $query, ConfigFactoryInterface $configFactory) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);

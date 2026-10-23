@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace tests\ExistingSite;
 
 use weitzman\DrupalTestTraits\ExistingSiteBase;
@@ -15,21 +17,21 @@ class GeneralUrlTest extends ExistingSiteBase {
   public function testKeyPages() {
 
     $this->drupalGet('user');
-    $this->assertSession()->statusCodeEquals('200');
+    $this->assertSession()->statusCodeEquals(200);
     $this->drupalGet('user/login');
-    $this->assertSession()->statusCodeEquals('200');
+    $this->assertSession()->statusCodeEquals(200);
     $this->drupalGet('user/login/google');
-    $this->assertSession()->statusCodeEquals('200');
+    $this->assertSession()->statusCodeEquals(200);
     $this->drupalGet('all-contributions');
-    $this->assertSession()->statusCodeEquals('200');
+    $this->assertSession()->statusCodeEquals(200);
     $this->drupalGet('code-contributions');
-    $this->assertSession()->statusCodeEquals('200');
+    $this->assertSession()->statusCodeEquals(200);
     $this->drupalGet('event-contributions');
-    $this->assertSession()->statusCodeEquals('200');
+    $this->assertSession()->statusCodeEquals(200);
     $this->drupalGet('non-code-contributions');
-    $this->assertSession()->statusCodeEquals('200');
+    $this->assertSession()->statusCodeEquals(200);
     $this->drupalGet('contribution-count');
-    $this->assertSession()->statusCodeEquals('200');
+    $this->assertSession()->statusCodeEquals(200);
 
   }
 

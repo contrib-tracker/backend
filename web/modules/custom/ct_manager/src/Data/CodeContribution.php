@@ -4,65 +4,92 @@ declare(strict_types=1);
 
 namespace Drupal\ct_manager\Data;
 
+/**
+ * Value object for a code contribution.
+ */
 final class CodeContribution {
 
   /**
-   * @var string Title.
+   * Title.
+   *
+   * @var string
    */
   protected string $title;
 
   /**
-   * @var \DateTimeImmutable Date of the contribution.
+   * Date of the contribution.
+   *
+   * @var \DateTimeImmutable
    */
   protected \DateTimeImmutable $date;
 
   /**
-   * @var string URL of the contribution.
+   * URL of the contribution.
+   *
+   * @var string
    */
   protected string $url;
 
   /**
-   * @var string URL of user account on the platform.
+   * URL of user account on the platform.
+   *
+   * @var string
    */
   protected string $accountUrl;
 
   /**
-   * @var string Description.
+   * Description.
+   *
+   * @var string
    */
   protected string $description = '';
 
   /**
-   * @var string Project.
+   * Project.
+   *
+   * @var string
    */
   protected string $project = '';
 
   /**
-   * @var string ProjectUrl.
+   * ProjectUrl.
+   *
+   * @var string
    */
   protected string $projectUrl = '';
 
   /**
-   * @var int Patch count.
+   * Patch count.
+   *
+   * @var int
    */
   protected int $patchCount = 0;
 
   /**
-  * @var int File count.
-  */
+   * File count.
+   *
+   * @var int
+   */
   protected int $filesCount = 0;
 
   /**
-   * @var string Status.
+   * Status.
+   *
+   * @var string
    */
   protected string $status = '';
 
   /**
-   * @var string Technology.
+   * Technology.
+   *
+   * @var string
    */
   protected string $technology = '';
 
   /**
-   * @var \Drupal\ct_manager\Data\Issue Related issue.
+   * Related issue.
+   *
+   * @var \Drupal\ct_manager\Data\Issue
    */
   protected ?Issue $issue = NULL;
 

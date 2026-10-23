@@ -12,12 +12,16 @@ use Drupal\user\Entity\User;
 class ContributionProcessQueueItem {
 
   /**
-   * @var string Plugin ID.
+   * Plugin ID.
+   *
+   * @var string
    */
   protected string $plugin_id;
 
   /**
-   * @var \Drupal\user\Entity\User User to be processed.
+   * User to be processed.
+   *
+   * @var \Drupal\user\Entity\User
    */
   protected User $user;
 

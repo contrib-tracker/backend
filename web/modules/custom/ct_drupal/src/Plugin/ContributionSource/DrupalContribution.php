@@ -44,7 +44,7 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
   protected $doRetriever;
 
   /**
-   * do_username service.
+   * Do_username service.
    *
    * @var \Drupal\do_username\DOUserInfoRetriever
    */
@@ -65,7 +65,7 @@ class DrupalContribution extends PluginBase implements ContributionSourceInterfa
   protected $logger;
 
   /**
-   * datetime.time service.
+   * Datetime.time service.
    *
    * @var \Drupal\Component\Datetime\TimeInterface
    */

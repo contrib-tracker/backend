@@ -9,7 +9,7 @@ use Sentry\Event as SentryEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * @todo Add description for this subscriber.
+ * Drops noisy form validation messages from Raven error reports.
  */
 final class RavenSubscriber implements EventSubscriberInterface {
 
