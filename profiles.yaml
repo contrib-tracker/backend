@@ -1,0 +1,124 @@
+# yaml-language-server: $schema=https://creativeprojects.github.io/resticprofile/jsonschema/config-1.json
+
+version: "1"
+
+groups:
+  # The limited set used for development, testing and CI.
+  ddev:
+    - ddev-db
+    - ddev-files
+
+  # The entire production site.
+  production:
+    - production-db
+    - production-files
+
+default:
+  repository: "s3:s3.us-east-2.amazonaws.com/project-assets-contribtracker/{{ .Profile.Name }}"
+  backup:
+    source-relative: true
+
+  # We will get the access keys from 1Password using its CLI.
+  # However, to be able to use this in CI systems and other servers,
+  # we can also set environment variables as follows. In that case,
+  # it will bypass calling the 1Password CLI.
+  # - ASSETS_AWS_ACCESS_KEY_ID
+  # - ASSETS_AWS_SECRET_ACCESS_KEY
+  run-before:
+    - 'echo "AWS_ACCESS_KEY_ID=${ASSETS_AWS_ACCESS_KEY_ID:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/username")}" >> "{{env}}"'
+    - 'echo "AWS_SECRET_ACCESS_KEY=${ASSETS_AWS_SECRET_ACCESS_KEY:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/credential")}" >> "{{env}}"'
+
+  env:
+    TMPDIR: /tmp
+
+# Development, testing and CI.
+#
+# These repositories hold the limited set: a database and a files directory
+# that are safe to share with every developer and with CI. They have no
+# password because they must never contain unsanitized production data. Do not
+# back up production data into them.
+#
+# We need to have two profiles: one for db and other for files.
+# This is because the paths are different for both.
+# And we want to use `delete` with the files profile.
+# Setting `delete` on a base path will delete everything
+# in that directory. The common base directory here is
+# the project directory and using `delete` for this will
+# delete all the source files, not just the ones backed up.
+ddev-db:
+  inherit: default
+  insecure-no-password: true
+  backup:
+    run-before:
+      - mkdir -p tmp/restic
+      - ddev export-db --file=tmp/restic/db-{{ .Profile.Name }}.sql.gz
+    run-after:
+      - rm tmp/restic/db-{{ .Profile.Name }}.sql.gz
+    source-base: "{{ .ConfigDir }}"
+    source:
+      - "tmp/restic/db-{{ .Profile.Name }}.sql.gz"
+
+  restore:
+    target: "{{ .ConfigDir }}"
+    run-after:
+      - ddev import-db --file=tmp/restic/db-{{ .Profile.Name }}.sql.gz
+      - rm tmp/restic/db-{{ .Profile.Name }}.sql.gz
+
+ddev-files:
+  inherit: default
+  insecure-no-password: true
+  backup:
+    source-base: "{{ .ConfigDir }}/web/sites/default/files"
+    source: "."
+    # Drupal regenerates these, so they only make the limited set bigger.
+    exclude:
+      - styles
+      - css
+      - js
+      - php
+
+  restore:
+    delete: true
+    target: "{{ .ConfigDir }}/web/sites/default/files"
+
+# Production.
+#
+# These repositories hold real user data, so they need a password. It is read
+# from 1Password like the access keys, or from ASSETS_RESTIC_PASSWORD in CI
+# and on servers. The data is pulled from the Upsun production environment with
+# the Platform CLI inside DDEV (PLATFORMSH_CLI_TOKEN must be set in DDEV in CI).
+# TODO: Pull from Coolify instead once hosting moves there.
+production-db:
+  inherit: default
+  password-command: 'echo "${ASSETS_RESTIC_PASSWORD:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/restic-password")}"'
+  backup:
+    run-before:
+      - mkdir -p tmp/restic
+      - ddev exec platform db:dump -p brbqplxd7ycq6 -e main --gzip --yes --file=tmp/restic/db-{{ .Profile.Name }}.sql.gz
+    run-after:
+      - rm tmp/restic/db-{{ .Profile.Name }}.sql.gz
+    source-base: "{{ .ConfigDir }}"
+    source:
+      - "tmp/restic/db-{{ .Profile.Name }}.sql.gz"
+
+  restore:
+    target: "{{ .ConfigDir }}"
+    run-after:
+      - ddev import-db --file=tmp/restic/db-{{ .Profile.Name }}.sql.gz
+      - rm tmp/restic/db-{{ .Profile.Name }}.sql.gz
+
+production-files:
+  inherit: default
+  password-command: 'echo "${ASSETS_RESTIC_PASSWORD:-$(op read "op://Platform Engineering/Contrib Tracker S3 Backup/restic-password")}"'
+  backup:
+    run-before:
+      - mkdir -p tmp/restic/files
+      - ddev exec platform mount:download -p brbqplxd7ycq6 -e main --mount web/sites/default/files --target tmp/restic/files --yes
+    run-after:
+      - rm -rf tmp/restic/files
+    source-base: "{{ .ConfigDir }}/tmp/restic/files"
+    source: "."
+
+  restore:
+    delete: true
+    target: "{{ .ConfigDir }}/web/sites/default/files"
