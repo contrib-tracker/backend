@@ -1,12 +1,36 @@
 {
-    "_hash": "d978d216ddaed681d6fd1356acff33f0a11d4b3c04b283197a056191ed4dd90c",
+    "_hash": "264dfd932334fad77165aa6cb583905cbbc497782bd32d193716f0b8a1314149",
     "patches": {
+        "drupal/do_username": [
+            {
+                "package": "drupal/do_username",
+                "description": "PHP 8.4: mark the nullable $parent parameter explicitly",
+                "url": "patches/do_username-explicit-nullable-parent.patch",
+                "sha256": "166f74a4de0d327e1868ef0f7677fd13fbb6e48c87e975885edbf2150a8f81d5",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
         "drupal/google_tag": [
             {
                 "package": "drupal/google_tag",
                 "description": "PHP 8.5: replace the deprecated SplObjectStorage::contains()",
                 "url": "patches/google_tag-spl-object-storage-offsetexists.patch",
                 "sha256": "89d0166adf286802f8e96a84d02a04ae624e44adc5138a4ceb005ac13e750273",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/social_api": [
+            {
+                "package": "drupal/social_api",
+                "description": "PHP 8.4: mark the nullable $request parameter explicitly",
+                "url": "patches/social_api-explicit-nullable-request.patch",
+                "sha256": "ff3d358fe1bb354fe7a0e82d14a4f75db42e526e0468250d7b769ec08d97a087",
                 "depth": 1,
                 "extra": {
                     "provenance": "root"

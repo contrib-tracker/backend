@@ -1,0 +1,13 @@
+Mark the $parent parameter explicitly nullable, as implicit nullable types are deprecated in PHP 8.4.
+
+--- c/src/DOComputedFields.php
++++ d/src/DOComputedFields.php
+@@ -24,7 +24,7 @@
+   /**
+    * {@inheritdoc}
+    */
+-  public function __construct(DataDefinitionInterface $definition, $name = NULL, TypedDataInterface $parent = NULL) {
++  public function __construct(DataDefinitionInterface $definition, $name = NULL, ?TypedDataInterface $parent = NULL) {
+     parent::__construct($definition, $name, $parent);
+     $this->doUserService = \Drupal::service('do_username.user_service');
+   }
