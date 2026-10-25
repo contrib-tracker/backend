@@ -62,12 +62,16 @@ test.describe('Form Filter Validation with Positive and Negative Scenarios @fast
     await expect(page.locator('#edit-submit-all-contributions')).toHaveValue('Apply');
     await page.locator('#edit-submit-all-contributions').click();
 
+    // The results are replaced over AJAX, so read all the titles at once and
+    // retry until the filtered list has arrived.
     const titles = page.locator('.contribution-card__title > a');
-    await expect(titles.first()).toBeVisible();
-    const count = await titles.count();
-    for (let i = 0; i < count; i++) {
-      await expect(titles.nth(i)).toContainText(text, { ignoreCase: true });
-    }
+    await expect(async () => {
+      const all = await titles.allTextContents();
+      expect(all.length).toBeGreaterThan(0);
+      for (const title of all) {
+        expect(title.toLowerCase()).toContain(text.toLowerCase());
+      }
+    }).toPass({ timeout: 10_000 });
   });
 
   test('should show no results for incorrect title input', async ({ page }) => {
