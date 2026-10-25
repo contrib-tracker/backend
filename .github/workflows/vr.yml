@@ -78,6 +78,11 @@ jobs:
           resticprofile ddev.restore latest
           ddev drush deploy -y
 
+      - name: Install the ct theme dependencies
+        run: |
+          cd web/themes/custom/ct
+          ddev npm ci --omit=dev --prefer-offline --no-audit
+
       - name: Install Playwright
         run: |
           cd test/playwright
