@@ -32,6 +32,11 @@ jobs:
           ddev composer install
           resticprofile ddev.restore latest
 
+      - name: Install the ct theme dependencies
+        run: |
+          cd web/themes/custom/ct
+          ddev npm ci --omit=dev --prefer-offline --no-audit
+
       - name: Setup node
         uses: actions/setup-node@v6
         with:
