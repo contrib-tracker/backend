@@ -12,7 +12,7 @@ The custom modules used for this project are:
 
 - To add a new contribution source, we can create a plugin with the ContributionSource annotation, implementing the `ContributionSourceInterface` and its methods as needed. The main components of this module include `ct_manager.module`, which executes actions during cron runs, creating instances of plugins and queuing users for processing; `ContributionSourceInterface`, which defines the functions for the plugins; and `ProcessUsers`, which handles the tracking and storage of contributions and sends Slack notifications.
 
-- To send Slack notifications, it uses the contributed module - [Slack](https://www.drupal.org/slack).
+- To send Slack notifications, it uses its own `SlackNotifier` service (`ct_manager.slack_notifier`), which posts to a Slack incoming webhook. The webhook URL is read from the `slack.settings` configuration (`slack_webhook_url`); on Upsun it is set with a `drupalconfig:slack.settings:slack_webhook_url` variable.
 
 ### [Drupal Contribution Tracker](https://github.com/contrib-tracker/backend/tree/main/web/modules/custom/ct_drupal)
 

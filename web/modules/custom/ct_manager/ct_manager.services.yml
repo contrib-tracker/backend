@@ -8,3 +8,6 @@ services:
   ct_manager.contribution_storage:
     class: Drupal\ct_manager\ContributionTrackerStorage
     arguments: ['@entity_type.manager', '@logger.channel.ct_manager']
+  ct_manager.slack_notifier:
+    class: Drupal\ct_manager\Notification\SlackNotifier
+    arguments: ['@http_client', '@config.factory', '@logger.channel.ct_manager']

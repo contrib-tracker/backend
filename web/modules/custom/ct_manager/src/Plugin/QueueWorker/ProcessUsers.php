@@ -10,7 +10,7 @@ use Drupal\Core\Queue\QueueWorkerBase;
 use Drupal\ct_manager\ContributionSourcePluginManager;
 use Drupal\ct_manager\ContributionTrackerStorage;
 use Drupal\ct_manager\Data\Issue;
-use Drupal\slack\Slack;
+use Drupal\ct_manager\Notification\SlackNotifier;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -46,22 +46,22 @@ class ProcessUsers extends QueueWorkerBase implements ContainerFactoryPluginInte
   protected $logger;
 
   /**
-   * Slack service.
+   * Slack notifier.
    *
-   * @var \Drupal\slack\Slack
+   * @var \Drupal\ct_manager\Notification\SlackNotifier
    */
-  protected $slackService;
+  protected $slackNotifier;
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $pluginId, $pluginDefinition, ContributionSourcePluginManager $pluginManager, ContributionTrackerStorage $contribStorage, LoggerChannelInterface $logger, Slack $slackService) {
+  public function __construct(array $configuration, $pluginId, $pluginDefinition, ContributionSourcePluginManager $pluginManager, ContributionTrackerStorage $contribStorage, LoggerChannelInterface $logger, SlackNotifier $slackNotifier) {
     parent::__construct($configuration, $pluginId, $pluginDefinition);
 
     $this->pluginManager = $pluginManager;
     $this->contribStorage = $contribStorage;
     $this->logger = $logger;
-    $this->slackService = $slackService;
+    $this->slackNotifier = $slackNotifier;
   }
 
   /**
@@ -75,7 +75,7 @@ class ProcessUsers extends QueueWorkerBase implements ContainerFactoryPluginInte
       $container->get('plugin.manager.contribution_plugin_manager'),
       $container->get('ct_manager.contribution_storage'),
       $container->get('logger.channel.ct_manager'),
-      $container->get('slack.slack_service')
+      $container->get('ct_manager.slack_notifier')
     );
   }
 
@@ -121,7 +121,7 @@ class ProcessUsers extends QueueWorkerBase implements ContainerFactoryPluginInte
       $this->contribStorage->saveCodeContribution($comment, $issueNode, $user);
       if ($comment->getDate()->getTimestamp() >= time() - 3600) {
         $notificationMessage = $plugin_instance->getNotificationMessage($comment, $user);
-        $this->slackService->sendMessage($notificationMessage);
+        $this->slackNotifier->send($notificationMessage);
       }
     }
   }
