@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "prompt": "Run composer install in this project",
+    "expected_output": "When a .ddev directory exists, the agent should run `ddev composer install` instead of `composer install`. It should check for .ddev/ first, potentially run `ddev start` if needed, then execute `ddev composer install`.",
+    "assertions": [
+      "detects_ddev_directory",
+      "uses_ddev_composer_not_host_composer",
+      "checks_ddev_status_before_running"
+    ],
+    "files": []
+  },
+  {
+    "id": 2,
+    "prompt": "I need to add Redis caching to my DDEV project. How do I set that up?",
+    "expected_output": "The agent should recommend installing the ddev-redis add-on using `ddev add-on get ddev/ddev-redis`, then `ddev restart`. It should mention that the Redis service will be available at hostname `redis` inside the container and may reference the redis-insight add-on for a management UI.",
+    "assertions": [
+      "recommends_ddev_addon_get",
+      "mentions_ddev_restart_after_install",
+      "provides_correct_addon_name"
+    ],
+    "files": []
+  },
+  {
+    "id": 3,
+    "prompt": "Run the database migrations and clear the cache for this Drupal project",
+    "expected_output": "The agent should use `ddev drush updb -y` to run database updates and `ddev drush cr` to clear the cache. It should NOT run `drush` directly on the host. It should check for DDEV presence first.",
+    "assertions": [
+      "uses_ddev_drush_for_updb",
+      "uses_ddev_drush_for_cache_rebuild",
+      "does_not_run_drush_on_host"
+    ],
+    "files": []
+  }
+]

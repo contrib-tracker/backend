@@ -1,0 +1,30 @@
+{
+  "skill_name": "drupal-theme-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this Drupal theme JavaScript file for issues:\n\n```javascript\n// js/gallery.js\n(function ($) {\n  $(document).ready(function () {\n    $('.gallery-item').on('click', function () {\n      var src = $(this).data('src');\n      $('#lightbox img').attr('src', src);\n      $('#lightbox').show();\n    });\n\n    $('#lightbox .close').on('click', function () {\n      $('#lightbox').hide();\n    });\n  });\n}(jQuery));\n```\n\nAnd the accompanying libraries.yml entry:\n```yaml\ngallery:\n  js:\n    js/gallery.js: {}\n```",
+      "expected_output": "Review identifies: (1) use of $(document).ready() instead of Drupal.behaviors, (2) missing once() call which will cause duplicate event listeners after AJAX, (3) missing core/drupal and core/once and core/jquery dependencies in libraries.yml. Should provide corrected versions of both files.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Review this Twig template and preprocess function:\n\n```twig\n{# templates/content/node--article--teaser.html.twig #}\n<article class=\"node-teaser\">\n  <h2>{{ node.title.value }}</h2>\n  <div class=\"meta\">By {{ author_name|raw }} on {{ date }}</div>\n  <div class=\"body\">{{ content.body }}</div>\n  <div class=\"tags\">\n    {% for tag in tags %}\n      <span class=\"tag\">{{ tag }}</span>\n    {% endfor %}\n  </div>\n</article>\n```\n\n```php\n// In mytheme.theme\nfunction mytheme_preprocess_node(&$variables) {\n  $node = $variables['node'];\n  $author = $node->getOwner();\n  $variables['author_name'] = $author->getDisplayName();\n  $variables['date'] = date('F j, Y', $node->getCreatedTime());\n  \n  $tags = [];\n  foreach ($node->get('field_tags') as $tag) {\n    $tags[] = $tag->entity->getName();\n  }\n  $variables['tags'] = $tags;\n}\n```",
+"expected_output": "Review identifies: (1) |raw on author_name is dangerous — user display names are user-supplied input; (2) content.body and tags rendered without using content|without — breaks cache metadata bubbling; (3) the preprocess function lives in mytheme.theme, which is deprecated in Drupal 11.5 — it should be a #[Hook('preprocess_node')] method on a class in src/Hook/ with typed array &$variables and a void return type; (4) missing cache metadata for author and tag data in preprocess (owner and term entities are loaded but their cache tags never bubble); (5) date() instead of the injected date.formatter service. Corrected versions should use Twig auto-escaping, add cache metadata, use content|without, and show the OOP hook class.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I'm building a Single Directory Component for a hero banner. Here's what I have so far:\n\n```yaml\n# components/hero-banner/hero-banner.component.yml\nname: \"Hero Banner\"\nstatus: \"stable\"\nprops:\n  type: object\n  properties:\n    heading:\n      type: string\n    subheading:\n      type: string\n    background_image:\n      type: string\n    cta_label:\n      type: string\n    cta_url:\n      type: string\n```\n\n```twig\n{# components/hero-banner/hero-banner.html.twig #}\n<section class=\"hero-banner\" style=\"background-image: url('{{ background_image }}')\">\n  <div class=\"hero-banner__content\">\n    <h1>{{ heading }}</h1>\n    <p>{{ subheading }}</p>\n    <a href=\"{{ cta_url }}\">{{ cta_label }}</a>\n  </div>\n</section>\n```\n\nAnd it's used like this:\n```twig\n{{ include('mytheme:hero-banner', {\n  'heading': node.title.value,\n  'subheading': node.field_subheading.value,\n  'background_image': file_url(node.field_hero_image.entity.uri.value),\n  'cta_label': 'Learn More',\n  'cta_url': node.field_cta_url.value\n}, with_context = false) }}\n```",
+      "expected_output": "Review identifies: (1) inline style with background_image URL is an XSS vector if URL comes from user input — should validate or use data-attribute + JS; (2) hardcoded h1 is problematic — only one h1 per page, should be configurable heading level; (3) missing attributes variable in component template; (4) missing required fields in schema; (5) cta_url should be passed through url validation; (6) missing alt text for the background image (accessibility — decorative background images should have an accessible text alternative for the content area). Corrected SDC should use {{ attributes }}, proper schema, and safe URL handling.",
+      "files": []
+    }
+    ,
+    {
+      "id": 4,
+      "prompt": "Please review this Drupal Twig template:\n\n```twig\n{# templates/block/block--card-list.html.twig #}\n{% set items = content.field_items %}\n\n<div class=\"card-list\">\n  {% if items %}\n    {% for item in items['#items'] %}\n      <div class=\"card\">\n        <img src=\"{{ item.entity.field_image.entity.uri.value|image_style('card_thumb') }}\" alt=\"\">\n        <h3>{{ item.entity.title.value }}</h3>\n        <p>{{ item.entity.body.value|striptags|slice(0, 150) }}...</p>\n        <a href=\"/node/{{ item.entity.id() }}\">Read more</a>\n      </div>\n    {% endfor %}\n  {% else %}\n    <p>No items found.</p>\n  {% endif %}\n</div>\n```",
+      "expected_output": "Review identifies Twig-specific issues: (1) iterating content.field_items['#items'] directly bypasses the render system — should use content.field_items or items variable from preprocess; (2) null-unsafe chaining on item.entity.field_image.entity.uri.value — entity reference can be null; (3) body.value|striptags is unsafe — body.value is raw HTML, striptags doesn't sanitize properly for display; (4) hardcoded /node/{{ id() }} URL — should use path() Twig function; (5) empty alt on img is acceptable for decorative images but suspicious here since image seems content-relevant. Corrected template should use safe patterns for each.",
+      "files": []
+    }
+  ]
+}

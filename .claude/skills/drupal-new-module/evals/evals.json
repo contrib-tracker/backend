@@ -1,0 +1,23 @@
+{
+  "skill_name": "drupal-new-module",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a Drupal module called event_notifications that sends email notifications when new Event content is published. It needs a service for the notification logic, a hook for node insert, and a config form to set the recipient email address.",
+      "expected_output": "Generates: (1) event_notifications.info.yml with core_version_requirement ^11.5 || ^12 and no hooks_converted key; (2) event_notifications.services.yml with the notification service only (the hook class is auto-registered and must not be listed or tagged); (3) src/NotificationService.php using constructor property promotion and readonly, with injected mail_manager and config.factory; (4) src/Hook/EventNotificationsHooks.php with #[Hook('node_insert')] method and injected services; (5) src/Form/NotificationSettingsForm.php extending ConfigFormBase; (6) config/schema/event_notifications.schema.yml; (7) a route for the settings form, either event_notifications.routing.yml or a class-level #[Route] attribute. No event_notifications.module file. All PHP uses declare(strict_types=1), type declarations, PHP 8.5 patterns.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need a new module called featured_content that provides a Block plugin. The block should show the 5 most recent nodes tagged with a 'Featured' taxonomy term. Use dependency injection, not static calls.",
+      "expected_output": "Generates: (1) featured_content.info.yml with core_version_requirement ^11.5 || ^12 and no hooks_converted key; (2) featured_content.services.yml only if a service is needed; (3) src/Plugin/Block/FeaturedContentBlock.php with #[Block(...)] PHP attribute (not Doctrine annotation), implementing ContainerFactoryPluginInterface, using constructor property promotion, with injected entity_type.manager; (4) entity query with explicit accessCheck() and a render array with proper #cache tags (node_list or per-node tags) and contexts. No \\Drupal:: static calls anywhere, no .module file.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Scaffold a module named api_sync that has a Drush command to pull data from an external API and create/update nodes. It needs: a service for the API client, a Drush command, and a queue worker to process items in batches.",
+      "expected_output": "Generates: (1) api_sync.info.yml; (2) api_sync.services.yml with the API client service (no drush.services.yml, no hook class entry); (3) src/ApiClient.php with injected http_client and config.factory, using constructor property promotion; (4) src/Drush/Commands/ApiSyncCommands.php with #[CLI\\Command] attributes and AutowireTrait, optionally plus a core dr command in src/Command/ApiSyncCommand.php with #[AsCommand] and __invoke(); both delegate to the service; (5) src/Plugin/QueueWorker/ApiSyncWorker.php with #[QueueWorker(...)] PHP attribute; (6) config/schema if config is introduced. All modern PHP patterns, no .module file.",
+      "files": []
+    }
+  ]
+}

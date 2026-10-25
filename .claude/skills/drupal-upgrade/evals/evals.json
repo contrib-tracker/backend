@@ -1,0 +1,57 @@
+{
+  "skill_name": "drupal-upgrade",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're on Drupal 10.3.8 and need to upgrade to Drupal 11. Our site has 15 custom modules, uses Classy as a base theme, and we haven't run any deprecation scans yet. Where do we start?",
+      "expected_output": "Should walk through Phase 1 (Assess): update to latest 10.3.x patch, install upgrade_status, run PHPStan, check contrib readiness. Should flag Classy as a known blocker (removed in D11) and recommend Starterkit migration. Should NOT enumerate specific removed D11 modules from memory — should say upgrade_status will identify those.",
+      "assertions": [
+        "Recommends installing and running upgrade_status module as the first step",
+        "Recommends running PHPStan or drupal-check on custom code",
+        "Flags Classy base theme as needing migration",
+        "Suggests Starterkit theme generation as the replacement approach",
+        "Does NOT produce a hardcoded list of removed D11 modules — defers to upgrade_status",
+        "References the upgrade rule files from the rules library"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Drupal Rector fixed most of our deprecations but we still have some hook_form_alter and hook_node_presave functions in .module files. Are those going to break in the next major version?",
+      "expected_output": "Should explain the precise status: procedural hook_form_alter and hook_node_presave functions in the main .module file still run on Drupal 12, but the .module file is deprecated in 11.5 and will stop being autoloaded in Drupal 13; hooks in .inc files, hook_module_implements_alter() and hook_hook_info() are already gone in 12.0. Should reference 14-oop-hooks.md and 16-drupal-12-changes.md. Should recommend converting now (Rector hook converter) and deleting the .module file. Must not recommend a hooks_converted: true info.yml key; if it mentions the scan-skip optimisation at all it is the MODULE.skip_procedural_hook_scan services.yml parameter, which is irrelevant once the .module file is gone.",
+      "assertions": [
+        "Distinguishes between what still works on Drupal 12 (hooks in the main .module file) and what is already removed (hook_module_implements_alter, hook_hook_info, hooks in .inc files)",
+        "States that .module files are deprecated in 11.5 and stop loading in Drupal 13",
+        "References 14-oop-hooks.md from the rules library",
+        "Shows the #[Hook] attribute pattern as the replacement, with hook classes auto-registered from src/Hook/",
+        "Recommends converting now and deleting the .module file",
+        "Does not mention a hooks_converted info.yml key"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're on Drupal 11.3.12 with PHP 8.3. Our site uses Olivero with a custom sub-theme, the core Search and Toolbar modules, Claro as admin theme, 20 custom modules with PHPUnit tests, and Drush 13. What does the path to Drupal 12 look like and what will break?",
+      "expected_output": "Should lay out the sequence: update to 11.5 first (11.4.0 is the hard minimum because 12.0 removed older update hooks), move hosting to PHP 8.5, MariaDB 10.11 / PostgreSQL 18 if applicable; while on 11.5 require the contrib olivero, claro, search and toolbar projects (or switch to Default Admin, Navigation and a Starterkit theme) BEFORE updating core and never uninstall them afterwards; convert custom module hooks to #[Hook] classes and delete .module files; convert theme hooks to src/Hook/ and drop .theme/theme-settings.php; give every custom plugin manager an attribute class; convert tests to PHPUnit attributes with #[RunTestsInSeparateProcesses] and configure the DeprecationHandler; run upgrade_status and Rector with the Drupal 12 set; then composer require drupal/core-recommended:^12 with symfony/runtime allowed as a plugin. Should note Drush 13.x is current and Drush 14 is in development for Drupal 12, that argon2id becomes the default password hash and HTML5 form validation is disabled by default. Should still tell the user to run upgrade_status for their specific contrib list rather than guessing.",
+      "assertions": [
+        "States the site must reach Drupal 11.4 or later (recommends 11.5) before Drupal 12",
+        "States Drupal 12 requires PHP 8.5",
+        "Flags Olivero, Claro, Search and Toolbar as removed from core in 12.0 and tells the user to require the contrib versions or replacements before the core update",
+        "Covers hook conversion to src/Hook/ classes and the .module/.theme deprecation",
+        "Covers PHPUnit 12 attribute conversion and #[RunTestsInSeparateProcesses]",
+        "References 16-drupal-12-changes.md or 21-upgrade-workflow.md",
+        "Recommends running upgrade_status for the site's actual contrib inventory rather than enumerating contrib compatibility from memory"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our composer update to the next major version failed with dependency conflicts. How do we debug this?",
+      "expected_output": "Should recommend `composer why-not drupal/core:^NEXT` to identify what is blocking. Should explain that contrib modules pinning old core versions are the most common cause. Should suggest checking each blocking module for a compatible release, applying a patch, or finding an alternative.",
+      "assertions": [
+        "Recommends composer why-not as the diagnostic tool",
+        "Identifies contrib version constraints as the most common blocker",
+        "Suggests checking drupal.org for compatible releases",
+        "Mentions patching or finding alternatives as fallback options",
+        "Does not suggest force-overriding Composer constraints"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "ddev": {
+      "source": "hussainweb/skills",
+      "sourceType": "github",
+      "skillPath": "skills/tooling/ddev/SKILL.md",
+      "computedHash": "d9ed51736b763068ad93da491d42fbc69411fe7eaaad19d7013a0452de2f756b"
+    },
+    "drupal-new-module": {
+      "source": "hussainweb/skills",
+      "sourceType": "github",
+      "skillPath": "skills/drupal/drupal-new-module/SKILL.md",
+      "computedHash": "1c0950513c4d4d8175e8417f952d6223c10f89b105d1b3a642a65ad63c96be0d"
+    },
+    "drupal-review": {
+      "source": "hussainweb/skills",
+      "sourceType": "github",
+      "skillPath": "skills/drupal/drupal-review/SKILL.md",
+      "computedHash": "d0bea2cec649503ea518d9f73f2cd2652548c9f50f75163159efbb44a73f24d0"
+    },
+    "drupal-theme-review": {
+      "source": "hussainweb/skills",
+      "sourceType": "github",
+      "skillPath": "skills/drupal/drupal-theme-review/SKILL.md",
+      "computedHash": "b1d8b36094d27220a72e8ecb023fd24858c947b9a99f1f24f0439f76a9000305"
+    },
+    "drupal-upgrade": {
+      "source": "hussainweb/skills",
+      "sourceType": "github",
+      "skillPath": "skills/drupal/drupal-upgrade/SKILL.md",
+      "computedHash": "894e4321da171cb6b3e81c3978e0f37dce1cfd4d45bd1ad13a742b8e9a671b71"
+    }
+  }
+}
