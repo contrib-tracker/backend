@@ -3,7 +3,7 @@
   "CodeContributions": { "url": "/code-contributions" },
   "ContributionAuthor": { "url": "/user/2", "userType": "admin" },
   "ContributionCount": { "url": "/contribution-count" },
-  "ContributionDetails": { "url": "/node/79" },
+  "ContributionDetails": { "url": "/", "follow": ".contribution-card__title > a" },
   "ContributionTechnology": { "url": "/taxonomy/term/2" },
   "EventContributions": { "url": "/event-contributions" },
   "NonCodeContributions": { "url": "/non-code-contributions" },
