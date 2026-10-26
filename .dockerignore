@@ -1,0 +1,35 @@
+# Installed by composer and npm inside the image.
+vendor
+web/core
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/libraries
+**/node_modules
+
+# Runtime data lives on volumes, never in the image.
+web/sites/*/files
+web/sites/default/settings.local.php
+web/sites/default/settings.ddev*.php
+private
+tmp
+.drush
+drush-backups
+*.sql
+*.sql.gz
+.env
+
+# Development and tooling only.
+.git
+.github
+.ddev
+.beads
+.agents
+.claude
+.codex
+.cursor
+.vscode
+.idea
+test
+tests
+docs
