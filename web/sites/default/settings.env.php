@@ -6,6 +6,8 @@ $infra = match(true) {
   !empty($_ENV['AH_SITE_ENVIRONMENT']) => 'acquia',
   !empty($_ENV['PANTHEON_ENVIRONMENT']) => 'pantheon',
   !empty($_ENV['PLATFORM_VARIABLES']) => 'platform',
+  !empty(getenv('DRUPAL_ENVIRONMENT')) => 'container',
+  default => 'unknown',
 };
 
 // Based on where we are running, find out the environment.
@@ -47,6 +49,14 @@ switch ($infra) {
     // to figure out which commit is deployed. But this is the best we
     // have right now.
     $release = getenv('PLATFORM_TREE_ID');
+    break;
+
+  case 'container':
+    // The image built by CI and deployed on Coolify.
+    $env_type = getenv('DRUPAL_ENVIRONMENT');
+    $env = $env_type;
+    // The commit the image was built from.
+    $release = getenv('APP_RELEASE') ?: '';
     break;
 }
 
