@@ -873,8 +873,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
 
-// Automatic Platform.sh settings.
-if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
+// Automatic Platform.sh settings. Only on Platform.sh: elsewhere they would
+// allow every Host header.
+if (getenv('PLATFORM_RELATIONSHIPS')) {
   include $app_root . '/' . $site_path . '/settings.platformsh.php';
 }
 
