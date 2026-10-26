@@ -16,7 +16,9 @@ use GuzzleHttp\Exception\GuzzleException;
  * The webhook URL and the optional channel, username and icon overrides are
  * read from the `slack.settings` configuration. On Upsun the URL is set with a
  * `drupalconfig:slack.settings:slack_webhook_url` variable (see
- * settings.platformsh.php), so nothing secret lives in the exported config.
+ * settings.platformsh.php), and on Coolify with the SLACK_WEBHOOK_URL
+ * environment variable (see settings.container.php), so nothing secret lives
+ * in the exported config.
  */
 class SlackNotifier {
 

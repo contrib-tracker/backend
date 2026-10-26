@@ -879,6 +879,11 @@ if (getenv('PLATFORM_RELATIONSHIPS')) {
   include $app_root . '/' . $site_path . '/settings.platformsh.php';
 }
 
+// Settings for the container image on Coolify, read from the environment.
+if (getenv('DRUPAL_ENVIRONMENT')) {
+  include $app_root . '/' . $site_path . '/settings.container.php';
+}
+
 // Platform settings has already set some trusted host patterns. Add on to that.
 $settings['trusted_host_patterns'][] = '^(www\.)?contrib.axelerant.(com|dev)$';
 $settings['trusted_host_patterns'][] = '^contribtracker.lndo.site$';
