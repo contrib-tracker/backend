@@ -1,0 +1,72 @@
+# Deployed by Coolify; see docs/hosting.md. Coolify drops comments when it
+# re-serialises this file, so nothing here is visible on the server.
+#
+# Configured in Coolify rather than here: the web domain (port 80), the post-
+# deployment command (drush -y deploy, in web), the */20 cron scheduled task
+# (drush core:cron, in web) and the volume and database backups.
+
+services:
+  web:
+    image: ghcr.io/contrib-tracker/backend:${IMAGE_TAG:-latest}
+    restart: unless-stopped
+    environment:
+      - DRUPAL_ENVIRONMENT=${DRUPAL_ENVIRONMENT:-production}
+      - DB_HOST=${DB_HOST:-mariadb}
+      - DB_PORT=${DB_PORT:-3306}
+      - DB_NAME=${DB_NAME:-drupal}
+      - DB_USER=${DB_USER:-drupal}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - REDIS_HOST=${REDIS_HOST:-valkey}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+      - HASH_SALT=${HASH_SALT}
+      - TRUSTED_HOST_PATTERNS=${TRUSTED_HOST_PATTERNS:-}
+      - DRUSH_OPTIONS_URI=${DRUSH_OPTIONS_URI:-}
+      - HEALTHCHECK_HOST=${HEALTHCHECK_HOST:-}
+      - COOLIFY_FQDN=${COOLIFY_FQDN:-}
+      - SENTRY_DSN=${SENTRY_DSN:-}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL:-}
+      - PHP_MEMORY_LIMIT=${PHP_MEMORY_LIMIT:-512M}
+      - BASIC_AUTH_USER=${BASIC_AUTH_USER:-}
+      - BASIC_AUTH_PASSWORD=${BASIC_AUTH_PASSWORD:-}
+      - NOINDEX_SNIPPET=${NOINDEX_SNIPPET:-/etc/frankenphp/noindex/disabled.caddy}
+    volumes:
+      - drupal-files:/app/web/sites/default/files
+      - drupal-private:/app/private
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      valkey:
+        condition: service_healthy
+
+  mariadb:
+    image: mariadb:12.3
+    restart: unless-stopped
+    command: --max-allowed-packet=64M --transaction-isolation=READ-COMMITTED
+    environment:
+      - MARIADB_DATABASE=${DB_NAME:-drupal}
+      - MARIADB_USER=${DB_USER:-drupal}
+      - MARIADB_PASSWORD=${DB_PASSWORD}
+      - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  valkey:
+    image: valkey/valkey:8-alpine
+    restart: unless-stopped
+    command: valkey-server --maxmemory ${VALKEY_MAXMEMORY:-256mb} --maxmemory-policy allkeys-lru --save "" --appendonly no
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  drupal-files:
+  drupal-private:
+  mariadb-data:
