@@ -1,0 +1,78 @@
+{
+	frankenphp {
+		php_ini memory_limit {$PHP_MEMORY_LIMIT:128M}
+	}
+	order php_server before file_server
+	# Harmless unless the WAF snippet is enabled
+	order coraza_waf first
+	# Rate limiting runs before the WAF and basic auth, so floods and password
+	# guessing are cut off cheaply. Harmless unless its snippet is enabled.
+	order rate_limit before coraza_waf
+	servers {
+		# Proxies whose client IP headers are believed. None by default.
+		trusted_proxies static {$TRUSTED_PROXIES:}
+		# Read X-Forwarded-For from the right, skipping trusted proxies, so a
+		# client cannot pick its own address by sending the header itself.
+		trusted_proxies_strict
+		client_ip_headers {$CLIENT_IP_HEADERS:X-Forwarded-For}
+	}
+}
+
+:80 {
+	encode zstd br gzip
+	root * /app/web
+
+	# Opt-in features, off by default (see README). Noindex comes first so the
+	# 401 from basic auth carries the X-Robots-Tag header too.
+	import {$NOINDEX_SNIPPET:/etc/frankenphp/noindex/disabled.caddy}
+	import {$BASIC_AUTH_SNIPPET:/etc/frankenphp/basic-auth/disabled.caddy}
+	import {$WAF_SNIPPET:/etc/frankenphp/waf/disabled.caddy}
+	import {$RATE_LIMIT_SNIPPET:/etc/frankenphp/rate-limit/disabled.caddy}
+
+	# Project additions to the drupal-base Caddyfile, which this file copies;
+	# keep the rest in step with the base image.
+
+	# The installer is open on an empty database and advances on GET.
+	@installer path /core/install.php /core/install.php/*
+	error @installer 403
+
+	# No PHP runs from sites/, including files sitting directly in it.
+	@sitesPhp path_regexp ^/sites/.*\.php$
+	error @sitesPhp 403
+
+	# Spambot targets, refused without booting Drupal.
+	@spambots path /wp-login.php /xmlrpc.php
+	error @spambots 404
+
+	# Block hidden PHP files
+	@hiddenPhp path_regexp \..*/.*.php$
+	error @hiddenPhp 403
+
+	# Block PHP in vendor
+	@vendorPhp path_regexp /vendor/.*\.php$
+	error @vendorPhp 404
+
+	# Block PHP in files directories
+	@filesPhp path_regexp ^/sites/[^/]+/files/.*\.php$
+	error @filesPhp 404
+
+	# Block private directories
+	@private path_regexp ^/sites/.*/private/
+	error @private 403
+
+	# Block sensitive files (allow .well-known)
+	@protected {
+		not path /.well-known*
+		path_regexp \.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^/(\..+|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock)|web\.config|yarn\.lock|package\.json)$|^\/#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$
+	}
+	error @protected 403
+
+	# Static assets caching
+	@static {
+		file
+		path *.avif *.css *.eot *.gif *.gz *.ico *.jpg *.jpeg *.js *.otf *.pdf *.png *.svg *.ttf *.webp *.woff *.woff2
+	}
+	header @static Cache-Control "public, max-age=31536000, immutable"
+
+	php_server
+}
