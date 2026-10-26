@@ -54,7 +54,8 @@ class SlackNotifier {
 
     $payload = ['text' => $this->toSlackText($message)];
     foreach (['channel' => 'slack_channel', 'username' => 'slack_username'] as $field => $key) {
-      if ($value = $config->get($key)) {
+      $value = $config->get($key);
+      if ($value) {
         $payload[$field] = $value;
       }
     }
