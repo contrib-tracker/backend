@@ -13,4 +13,5 @@ nav:
   - Testing: 'testing.md'
   - Monitoring and Logging: 'monitoring.md'
   - CI/CD: 'ci_cd.md'
+  - Hosting on Coolify: 'hosting.md'
   - Functional Testing with Cypress: 'func_testing.md'
