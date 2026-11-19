@@ -102,9 +102,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/google_tag": {
-                "PHP 8.5: replace the deprecated SplObjectStorage::contains()": "patches/google_tag-spl-object-storage-offsetexists.patch"
-            },
             "drupal/social_api": {
                 "PHP 8.4: mark the nullable $request parameter explicitly": "patches/social_api-explicit-nullable-request.patch"
             }
