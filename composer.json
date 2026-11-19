@@ -68,7 +68,7 @@
         "behat/mink": "^1.10",
         "behat/mink-browserkit-driver": "^2.1",
         "phpunit/phpunit": "^9.0",
-        "symfony/browser-kit": "^7.0",
+        "symfony/browser-kit": "^8.1",
         "weitzman/drupal-test-traits": "^2.0"
     },
     "conflict": {
