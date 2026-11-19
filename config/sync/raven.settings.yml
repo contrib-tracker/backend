@@ -46,4 +46,60 @@ modules: false
 cron_monitor_id: ''
 profiles_sample_rate: null
 http_compression: true
+query_param_allow_list:
+  - _drupal_ajax
+  - _format
+  - _wrapper_format
+  - ajax_form
+  - ajax_page_state
+  - check_logged_in
+  - destination
+  - items_per_page
+  - op
+  - order
+  - page
+  - sort
+request_header_allow_list:
+  - accept
+  - cache-control
+  - connection
+  - content-encoding
+  - content-length
+  - content-type
+  - host
+  - if-modified-since
+  - if-none-match
+  - origin
+  - pragma
+  - priority
+  - referer
+  - sec-ch-ua
+  - sec-fetch
+  - upgrade-insecure-requests
+  - user-agent
+  - x-php-ob-level
+  - x-requested-with
+response_header_allow_list:
+  - access-control-allow-origin
+  - access-control-expose-headers
+  - age
+  - alt-svc
+  - cache-control
+  - connection
+  - content-encoding
+  - content-length
+  - content-type
+  - cross-origin-resource-policy
+  - date
+  - etag
+  - expires
+  - last-modified
+  - retry-after
+  - server
+  - strict-transport-security
+  - transfer-encoding
+  - upgrade
+  - vary
+  - via
+  - x-frame-options
 enable_logs: true
