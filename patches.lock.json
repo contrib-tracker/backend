@@ -1,18 +1,6 @@
 {
-    "_hash": "a606711a89d7561c71ddf1c55a44fa334054d218f5b9ae1d9ce0dfb48cd91525",
+    "_hash": "36873d0f157e614df9c9460ace2d5755334c94918aa8f43b30bad3f41a157393",
     "patches": {
-        "drupal/google_tag": [
-            {
-                "package": "drupal/google_tag",
-                "description": "PHP 8.5: replace the deprecated SplObjectStorage::contains()",
-                "url": "patches/google_tag-spl-object-storage-offsetexists.patch",
-                "sha256": "89d0166adf286802f8e96a84d02a04ae624e44adc5138a4ceb005ac13e750273",
-                "depth": 1,
-                "extra": {
-                    "provenance": "root"
-                }
-            }
-        ],
         "drupal/social_api": [
             {
                 "package": "drupal/social_api",
